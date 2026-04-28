@@ -1,0 +1,19 @@
+# Obsidian
+.obsidian/workspace*
+.obsidian/workspace-mobile*
+.obsidian/active-plugins.json
+.obsidian/core-plugins-migration.json
+.obsidian/types.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log

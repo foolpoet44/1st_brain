@@ -1,0 +1,21 @@
+{
+  "newFileLocation": "inbox/",
+  "newFileFolderPath": "inbox/",
+  "attachmentFolderPath": "inbox/attachments",
+  "useMarkdownLinks": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showLineNumber": false,
+  "spellcheck": false,
+  "readableLineLength": false,
+  "strictLineBreaks": false,
+  "showViewHeader": true,
+  "alwaysUpdateFiles": true,
+  "livePreview": true,
+  "tabSize": 2,
+  "autoPairBrackets": true,
+  "autoPairMarkdown": true,
+  "foldFile": true,
+  "legacyEditor": false,
+  "showRibbon": true
+}
