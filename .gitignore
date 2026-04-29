@@ -32,3 +32,13 @@ Desktop.ini
 # Temporary files
 *.tmp
 *.bak
+
+# Python virtualenv
+scripts/venv/
+scripts/__pycache__/
+scripts/output/
+*.pyc
+
+# Large data files
+*.json
+!manifest.json
