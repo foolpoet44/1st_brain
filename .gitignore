@@ -17,3 +17,11 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Large archives
+raw/archive/conversations/
+raw/archive/md/2024/
+raw/archive/md/2025/
+raw/archive/md/2026/01/
+raw/archive/md/2026/02/
+raw/archive/md/2026/03/
