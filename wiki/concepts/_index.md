@@ -30,6 +30,8 @@ tags: [index, wiki]
 ### 시스템 & 아키텍처
 - [[CSP Brain System]] — 공유 메모리 시스템
 - [[Data Sensing (L1/L2/L3 Architecture)]] — 3 단계 데이터 계층
+- [[EX Intelligence]] — 구성원 신호 → 조직 성과 전환 체계
+- [[Pulse Check]] — 월 1 회 상시 진단 설문
 
 ### 전략
 - [[Weak Signal Theory (Ansoff)]] — 약한 신호 포착 프레임워크
