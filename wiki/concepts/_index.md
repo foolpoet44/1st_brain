@@ -17,4 +17,19 @@ tags: [index, wiki]
 - 다른 문서들의 기초 구성 요소
 
 ## 링크 모음
-<!-- 여기에 개념 문서들이 생성되면 백링크가 자동으로 모입니다 -->
+
+### 조직심리학
+- [[Self-Determination Theory (자기결정이론)]] — 자율성, 유능감, 관계성
+- [[Leader-Member Exchange (LMX)]] — 리더 - 구성원 관계 이론
+
+### AI & 워크플로우
+- [[Vibe Coding]] — AI 와 함께하는 흐름 코딩
+- [[AX Internalization (AI Transformation)]] — AI 내재화 3 단계
+- [[Knowledge Capitalization (지식의 자산화)]] — 지식의 원자화와 자산화
+
+### 시스템 & 아키텍처
+- [[CSP Brain System]] — 공유 메모리 시스템
+- [[Data Sensing (L1/L2/L3 Architecture)]] — 3 단계 데이터 계층
+
+### 전략
+- [[Weak Signal Theory (Ansoff)]] — 약한 신호 포착 프레임워크
