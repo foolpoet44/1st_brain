@@ -1,0 +1,8 @@
+{
+  "defaultFramework": "palantir",
+  "dailyNotesFolder": "daily",
+  "outputFolder": "thinklog/output",
+  "language": "ko",
+  "showStreak": true,
+  "aiEnabled": false
+}

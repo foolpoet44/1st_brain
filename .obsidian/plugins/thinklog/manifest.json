@@ -1,0 +1,11 @@
+{
+  "id": "thinklog",
+  "name": "ThinkLog",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Transform daily thinking logs into structured consulting-grade reports",
+  "author": "ThinkLog",
+  "authorUrl": "https://github.com/thinklog",
+  "isDesktopOnly": false,
+  "fundingUrl": ""
+}

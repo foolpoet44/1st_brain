@@ -1,14 +1,1 @@
-{
-  "accentColor": "#7c3aed",
-  "cssTheme": "",
-  "enabledCssSnippets": [],
-  "interfaceFontFamily": "",
-  "textFontFamily": "",
-  "monospaceFontFamily": "",
-  "nativeMenus": false,
-  "showViewHeader": true,
-  "translucency": false,
-  "theme": "system",
-  "baseFontSize": 16,
-  "baseFontSizeAction": true
-}
+{}

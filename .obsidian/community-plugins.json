@@ -1,7 +1,7 @@
 [
-  "templater-obsidian",
   "dataview",
+  "templater-obsidian",
+  "obsidian-kanban",
   "obsidian-git",
-  "quickadd",
-  "obsidian-icon-folder"
+  "thinklog"
 ]

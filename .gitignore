@@ -25,3 +25,10 @@ raw/archive/md/2025/
 raw/archive/md/2026/01/
 raw/archive/md/2026/02/
 raw/archive/md/2026/03/
+
+# Windows
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
