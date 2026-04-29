@@ -20,10 +20,15 @@ aliases: [사용자, HR 전문가]
 
 **핵심 관심 영역**
 - AI/ML Automation in HR
-- Full-stack building (Vibe Coding)
+- Full-stack building ([[Vibe Coding]])
 - Psychologist-based AI algorithms
-- 조직심리학 (SDT, LMX, POS)
+- 조직심리학 ([[Self-Determination Theory (자기결정이론)|SDT]], [[Leader-Member Exchange (LMX)|LMX]], POS)
 - 경제적 자유 (한국 부동산, 채권/ETF, 한미 주식)
+
+**관련 프로젝트**
+
+- [[EX Intelligence]] — 조직 지능 구축
+- [[AX Internalization (AI Transformation)]] — AI 내재화 주도
 
 ---
 

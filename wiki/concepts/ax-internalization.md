@@ -27,6 +27,12 @@ aliases: [AI 내재화, AI Transformation]
 - **Knowledge Bridge**: 파편화된 개인/팀의 지식을 AI 가 학습 가능한 정형 데이터로 변환하여 '조직 지능 (Collective Intelligence)'을 구축함
 - **Cultural Change**: AI 와의 협업 경험을 누적시켜 AX 에 대한 심리적 저항을 낮춤
 
+**연결 개념**
+
+- [[Knowledge Capitalization]] — AX 의 핵심 원칙
+- [[Vibe Coding]] — AX 내재화의 실천 방식
+- [[CSP Brain System]] — AX 를 위한 인프라
+
 ---
 
 ## Timeline

@@ -27,6 +27,11 @@ aliases: [컨텍스트 복원, 세션 복원]
 - `outputs/weekly/` — 주간 활동 기록
 - `projects/*/README.md` — 프로젝트별 현황
 
+**관련 스킬**
+
+- [[Memory Save (대화 종료 기록)]] — 대화 종료 시 기록
+- [[Dream Cycle (주간 정리 루틴)]] — 주간 정리
+
 ---
 
 ## Timeline

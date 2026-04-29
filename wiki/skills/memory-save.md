@@ -26,6 +26,11 @@ aliases: [메모리 저장, 대화 저장]
 - Timeline 에는 항상 날짜와 함께 기록
 - Compiled Truth 는 필요한 경우에만 갱신 (매번 아님)
 
+**관련 스킬**
+
+- [[Context Restore (세션 복원)]] — 대화 시작 시 복원
+- [[Dream Cycle (주간 정리 루틴)]] — 주간 정리
+
 ---
 
 ## Timeline
