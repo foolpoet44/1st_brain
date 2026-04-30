@@ -59,6 +59,7 @@ projects/
 | `lint` | 위키 자가 점검 | `lint 해줘` |
 | `digest` | 주간 다이제스트 생성 | `이번 주 digest` |
 | `generate` | 콘텐츠 자동 생성 | `generate linkedin` |
+| `status` | 최근 변화 브리핑 | `bash scripts/status.sh` |
 | `harness` | Harness 구조 진단 | `harness-audit 해줘` |
 
 ### 작업 흐름 예시
@@ -105,6 +106,18 @@ projects/
 
 ## Git 워크플로우
 
+### 변경 기록 규칙
+
+의미 있는 변경 후에는 `_ops/change-log.md`에 네 가지를 남깁니다.
+
+```markdown
+### [변경 제목]
+- 무엇이 바뀌었나:
+- 왜 중요한가:
+- 영향 범위:
+- 다음 확인:
+```
+
 ### 커밋 규칙
 
 ```bash
@@ -113,6 +126,16 @@ git add -A
 git commit -m "무엇을 + 왜"
 git push
 ```
+
+### 커밋 접두어
+
+| 접두어 | 용도 |
+|:---|:---|
+| `knowledge:` | wiki 지식 변경 |
+| `project:` | 프로젝트 상태 변경 |
+| `ops:` | 운영 규칙, 스크립트, 템플릿 변경 |
+| `archive:` | raw, manifest 등 대량 원자료 변경 |
+| `content:` | 공유 글, 보고서, 초안 변경 |
 
 ### 커밋 메시지 예시
 

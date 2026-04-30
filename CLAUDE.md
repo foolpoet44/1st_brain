@@ -101,7 +101,7 @@ csp-brain/                     ← Obsidian Vault Root = Git Repo Root
 │   └── weekly/                ← 주간 다이제스트
 │
 ├── _ops/                      ← 운영 메타데이터 (로그)
-├── _templates/                ← 옵시디언 Templater 템플릿
+├── templates/                 ← 옵시디언/생성용 템플릿
 └── scripts/                   ← 자동화 스크립트
 ```
 
@@ -118,7 +118,48 @@ csp-brain/                     ← Obsidian Vault Root = Git Repo Root
 
 ---
 
-## 4. 문서 구조: Compiled Truth + Timeline
+## 4. 변경 가시성 원칙
+
+CSP의 가장 큰 페인포인트는 "무엇이 어떻게 바뀌고 있는지 잘 모르겠다"는 점이다. 따라서 모든 운영은 지식 축적보다 **변경 해석 가능성**을 우선한다.
+
+### Change Log 규칙
+
+`_ops/change-log.md`는 사용자가 매일 확인하는 통합 변경 관제판이다. 기능별 로그는 세부 증거이고, change-log는 해석된 변화 요약이다.
+
+다음 작업 후에는 반드시 `_ops/change-log.md`에 한 항목을 추가한다.
+
+- `ingest`: 새 자료가 wiki/project에 편입된 경우
+- `digest`: 주간 요약이 생성되거나 주요 변화가 확인된 경우
+- `generate`: 외부 공유물, 보고서, 초안 등 산출물이 생성된 경우
+- `wiki/`, `projects/`, `scripts/`, `CLAUDE.md`의 의미 있는 변경
+
+각 항목은 반드시 네 질문에 답한다.
+
+```markdown
+### [변경 제목]
+- 무엇이 바뀌었나:
+- 왜 중요한가:
+- 영향 범위:
+- 다음 확인:
+```
+
+### 커밋 분리 규칙
+
+Git은 백업 수단이 아니라 변화 이해 장치다. 의미가 다른 변경은 한 커밋에 섞지 않는다.
+
+| 접두어 | 용도 |
+|:---|:---|
+| `knowledge:` | wiki/concepts/frameworks 등 지식 내용 변경 |
+| `project:` | projects/의 상태, Timeline, Compiled Truth 변경 |
+| `ops:` | scripts, templates, CLAUDE.md, _ops 등 운영 체계 변경 |
+| `archive:` | raw, manifest, 변환 산출물 등 대량 원자료 변경 |
+| `content:` | sharing, outputs/drafts, 외부 공유 초안 변경 |
+
+대형 자동 산출물(`manifest.json`, 변환된 archive 등)은 지식 해석 변경과 같은 커밋에 섞지 않는다.
+
+---
+
+## 5. 문서 구조: Compiled Truth + Timeline
 
 모든 프로젝트와 위키 문서는 이 이중 구조를 따릅니다.
 
@@ -158,7 +199,7 @@ aliases: [대체명칭]
 
 ---
 
-## 5. 프로토콜
+## 6. 프로토콜
 
 ### Protocol 1: INGEST — 자료 수집 처리
 
@@ -173,6 +214,7 @@ aliases: [대체명칭]
    c) 여러 주제 → 분산 추가 + 교차 링크
 4. 처리 완료된 inbox 파일에 frontmatter 추가: processed: true
 5. _ops/ingest-log.md에 기록
+6. 의미 있는 편입이면 _ops/change-log.md에 변경 요약 기록
 ```
 
 ### Protocol 2: QUERY — 지식 질문 응답
@@ -185,6 +227,7 @@ aliases: [대체명칭]
 3. 답변 과정에서 발견한 빈틈이 있으면 보고
 4. 답변 결과가 새로운 인사이트를 담고 있으면 wiki에 편입 제안
 5. _ops/question-log.md에 질문-답변 기록
+6. 관점이 바뀌는 답변이면 _ops/change-log.md에 변경 요약 기록
 ```
 
 ### Protocol 3: LINT — 자가 점검
@@ -211,6 +254,7 @@ aliases: [대체명칭]
 4. 발견된 교차 연결 (의외의 관계)
 5. 다음 주 추천 탐구 주제
 6. outputs/weekly/YYYY-WXX.md에 저장
+7. _ops/change-log.md에 이번 주 핵심 변화 기록
 ```
 
 ### Protocol 5: BRIDGE — 노션 연동 (하이브리드)
@@ -245,12 +289,13 @@ AAA팀의 핵심 패턴을 CSP에 적용한 프로토콜.
    d) slide → 경영진 보고 슬라이드 (mckinsey-slide-generator 스킬 사용)
    e) brief → 1페이지 요약 브리프
 3. outputs/drafts/에 저장
-4. CSP 검토 후 최종 확정
+4. _ops/change-log.md에 산출물 생성 이유와 영향 기록
+5. CSP 검토 후 최종 확정
 ```
 
 ---
 
-## 6. Dream Cycle (매주 금요일)
+## 7. Dream Cycle (매주 금요일)
 
 ```
 1. INGEST  — inbox/ 정리 → wiki/ 통합
@@ -262,7 +307,7 @@ AAA팀의 핵심 패턴을 CSP에 적용한 프로토콜.
 
 ---
 
-## 7. 빠른 명령어
+## 8. 빠른 명령어
 
 | 명령어 | 프로토콜 | 설명 |
 |:---|:---|:---|
@@ -272,12 +317,12 @@ AAA팀의 핵심 패턴을 CSP에 적용한 프로토콜.
 | `digest` / `다이제스트` | DIGEST | 주간 지식 변화 요약 |
 | `sync` / `bridge` | BRIDGE | Notion 양방향 연동 |
 | `generate [유형]` | GENERATE | 콘텐츠 자동 생성 |
-| `status` | — | 위키 현황 통계 |
+| `status` | — | 최근 변화 브리핑 + 위키 현황 통계 |
 | `dream` | Dream Cycle | 전체 주간 루틴 실행 |
 
 ---
 
-## 8. 성장 단계
+## 9. 성장 단계
 
 | 단계 | wiki 문서 수 | 가능해지는 것 |
 |:---|:---|:---|

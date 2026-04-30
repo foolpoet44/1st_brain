@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSP-Brain Change Dashboard</title>
+  <style>
+    :root {
+      --bg: #f7f3ec;
+      --surface: #fffdf8;
+      --surface-2: #efe7da;
+      --border: rgba(54, 47, 39, 0.14);
+      --text: #2f2a24;
+      --text-dim: #71685c;
+      --accent: #9f3f22;
+      --accent-2: #587246;
+      --accent-3: #1f5f6f;
+      --warn: #b45309;
+      --ok: #48733f;
+      --shadow: 0 18px 50px rgba(66, 52, 34, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        linear-gradient(90deg, rgba(47, 42, 36, 0.035) 1px, transparent 1px),
+        linear-gradient(rgba(47, 42, 36, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at 12% 8%, rgba(159, 63, 34, 0.12), transparent 30%),
+        radial-gradient(circle at 82% 12%, rgba(88, 114, 70, 0.14), transparent 28%),
+        var(--bg);
+      background-size: 28px 28px, 28px 28px, auto, auto, auto;
+    }
+
+    .shell {
+      width: min(1180px, calc(100vw - 40px));
+      margin: 0 auto;
+      padding: 34px 0 48px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.5fr 0.9fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    .hero, .card {
+      background: rgba(255, 253, 248, 0.88);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+    }
+
+    .hero {
+      padding: 30px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .eyebrow {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 12px 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 6vw, 68px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    h3 { margin: 0 0 8px; font-size: 15px; }
+    p { color: var(--text-dim); line-height: 1.62; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      background: rgba(47, 42, 36, 0.06);
+      padding: 2px 5px;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+    }
+
+    .summary {
+      font-size: 17px;
+      max-width: 740px;
+    }
+
+    .scorecard {
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .metric {
+      padding: 15px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      margin-top: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 22px;
+    }
+
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 8px 0; color: var(--text-dim); }
+    .latest li {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .latest span {
+      color: var(--accent-3);
+      font-weight: 700;
+    }
+
+    .mini {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      background: rgba(255, 255, 255, 0.35);
+    }
+    .mini strong { color: var(--warn); }
+    .mini.ok strong { color: var(--ok); }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 52px;
+      gap: 10px;
+      align-items: center;
+      margin: 12px 0;
+      color: var(--text-dim);
+    }
+    .bar {
+      height: 11px;
+      border-radius: 999px;
+      background: rgba(47, 42, 36, 0.08);
+      overflow: hidden;
+    }
+    .bar i {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .timeline-item {
+      border-left: 3px solid var(--accent);
+      background: rgba(239, 231, 218, 0.55);
+      border-radius: 6px;
+      padding: 14px;
+    }
+    .timeline-item p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(159, 63, 34, 0.11);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .muted { color: var(--text-dim); }
+    .foot {
+      margin-top: 18px;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      header, .grid, .timeline {
+        grid-template-columns: 1fr;
+      }
+      .span-4, .span-5, .span-7, .span-8, .span-12 {
+        grid-column: span 1;
+      }
+      .scorecard {
+        grid-template-columns: 1fr;
+      }
+      .shell {
+        width: min(100vw - 24px, 1180px);
+        padding-top: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">CSP-Brain Change Dashboard · 2026-04-30</div>
+          <h1>오늘 무엇이 바뀌었나</h1>
+          <p class="summary">오늘의 핵심 변화는 CSP-Brain에 “무엇이 어떻게 바뀌는지 보이게 하는 운영층”이 새로 생겼다는 점이다. 저장소는 더 많은 지식을 담는 방향이 아니라, 변화의 의미를 매일 읽을 수 있는 방향으로 조정되었다. `_ops/change-log.md`가 새로 생겼다. 앞으로 의미 있는 변경은 단순 파일 목록이 아니라 “무엇이 바뀌었나 / 왜 중요한가 / 영향 범위 / 다음 확인” 네 질문으로 기록된다. 이는 Git이 보여주는 파일 변화와 사용자가 알고 싶은 의미 </p>
+        </div>
+        <div>
+          <span class="badge">확인 필요 · 작업트리 항목 13건</span>
+        </div>
+      </section>
+
+      <aside class="scorecard card">
+        <div class="metric"><span>Wiki</span><strong>27</strong></div>
+        <div class="metric"><span>Projects</span><strong>57</strong></div>
+        <div class="metric"><span>Outputs</span><strong>4</strong></div>
+        <div class="metric"><span>Inbox</span><strong>2</strong></div>
+      </aside>
+    </header>
+
+    <section class="grid">
+      <article class="card span-7">
+        <h2>주의할 변화</h2>
+        <h3>수정됨</h3>
+        <ul><li><code>M .obsidian/daily-notes.json</code></li>
+<li><code> M CLAUDE.md</code></li>
+<li><code> M _ops/onboarding.md</code></li>
+<li><code> M outputs/weekly/_index.md</code></li>
+<li><code> M scripts/generate_weekly.py</code></li>
+<li><code> M scripts/status.sh</code></li>
+<li><code> M templates/daily-note.md</code></li>
+<li><code> M templates/weekly-digest.md</code></li></ul>
+        <h3 style="margin-top:18px;">미추적</h3>
+        <ul><li><code>?? _ops/change-log.md</code></li>
+<li><code>?? dev/</code></li>
+<li><code>?? outputs/briefs/</code></li>
+<li><code>?? outputs/weekly/2026-W18.md</code></li>
+<li><code>?? scripts/generate_change_dashboard.py</code></li></ul>
+      </article>
+
+      <article class="card span-5">
+        <h2>운영 로그 건강도</h2>
+        <div class='mini ok'><span>_ops/change-log.md</span><strong>기록 있음</strong></div>
+<div class='mini warn'><span>_ops/ingest-log.md</span><strong>비어 있음</strong></div>
+<div class='mini warn'><span>_ops/lint-log.md</span><strong>비어 있음</strong></div>
+<div class='mini warn'><span>_ops/question-log.md</span><strong>비어 있음</strong></div>
+<div class='mini warn'><span>_ops/bridge-log.md</span><strong>비어 있음</strong></div>
+      </article>
+
+      <article class="card span-5">
+        <h2>주간 변경 영역</h2>
+        
+        <div class="bar-row">
+          <span>concepts</span>
+          <div class="bar"><i style="width:52%"></i></div>
+          <strong>235</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>projects</span>
+          <div class="bar"><i style="width:14%"></i></div>
+          <strong>64</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>raw</span>
+          <div class="bar"><i style="width:10%"></i></div>
+          <strong>46</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>wiki</span>
+          <div class="bar"><i style="width:7%"></i></div>
+          <strong>34</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>.obsidian</span>
+          <div class="bar"><i style="width:7%"></i></div>
+          <strong>33</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>scripts</span>
+          <div class="bar"><i style="width:4%"></i></div>
+          <strong>16</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>people</span>
+          <div class="bar"><i style="width:4%"></i></div>
+          <strong>16</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>root</span>
+          <div class="bar"><i style="width:2%"></i></div>
+          <strong>11</strong>
+        </div>
+        
+      </article>
+
+      <article class="card span-7">
+        <h2>최근 수정된 핵심 문서</h2>
+        <ul class="latest"><li><span>_ops</span><code>_ops/change-log.md</code></li>
+<li><span>wiki</span><code>wiki/tools/obsidian.md</code></li>
+<li><span>projects</span><code>projects/pulse-check/README.md</code></li>
+<li><span>outputs</span><code>outputs/briefs/2026-04-30-change-briefing.md</code></li>
+<li><span>weekly</span><code>weekly/주간업무계획(W50,12월2주차)_육성파트.docx.md</code></li>
+<li><span>templates</span><code>templates/daily-note.md</code></li>
+<li><span>scripts</span><code>scripts/harness-README.md</code></li></ul>
+      </article>
+
+      <article class="card span-12">
+        <h2>Change Log 최근 항목</h2>
+        <div class="timeline">
+        <article class="timeline-item">
+          <h3>Change Dashboard 생성기 추가</h3>
+          <p>무엇이 바뀌었나: `scripts/generate_change_dashboard.py`를 추가해 change-log, status 정보, weekly digest, daily briefing을 `outputs/briefs/change-dashboard.html` 한 화면으로 모으게 했다. 왜 중요한가: 사용자가 여러 Markdown과 Git 출력을 오가지 않고 오늘 봐야 할 변화만 한눈에 확</p>
+        </article>
+        
+
+        <article class="timeline-item">
+          <h3>오늘의 변화 브리핑 작성</h3>
+          <p>무엇이 바뀌었나: `outputs/briefs/2026-04-30-change-briefing.md`에 오늘의 변경 흐름과 주의 항목을 정리했다. 왜 중요한가: status 출력과 weekly digest를 사용자가 바로 읽을 수 있는 일일 해석 문서로 압축했다. 영향 범위: `outputs/briefs/2026-04-30-change-briefing.md`, `_ops/change-log.</p>
+        </article>
+        
+
+        <article class="timeline-item">
+          <h3>2026-W18 주간 변화 다이제스트 생성</h3>
+          <p>무엇이 바뀌었나: `scripts/generate_weekly.py --date 2026-04-30` 기준으로 `outputs/weekly/2026-W18.md`를 생성하고 weekly index에 등록했다. 왜 중요한가: 사용자가 이번 주 변경 흐름을 파일 목록이 아니라 해석된 브리핑으로 확인할 수 있게 되었다. 영향 범위: `outputs/weekly/2026-W18.md`, `outpu</p>
+        </article>
+        
+
+        <article class="timeline-item">
+          <h3>변경 가시성 개선 체계 도입</h3>
+          <p>무엇이 바뀌었나: 변경 해석을 위한 통합 로그, status 브리핑, weekly digest 생성 기준을 정비했다. 왜 중요한가: 기존 구조는 Git과 manifest에는 변화가 남았지만, 사용자가 바로 이해할 수 있는 변화 요약층이 약했다. 영향 범위: `CLAUDE.md`, `scripts/status.sh`, `scripts/generate_weekly.py`, `templates/d</p>
+        </article>
+        </div>
+      </article>
+
+      <article class="card span-4">
+        <h2>최근 커밋</h2>
+        <ul><li><code>1938b85 Add EX Intelligence concepts and complete LDS 360 documentation</code></li>
+<li><code>e567dac Import Zavis_Brain HR knowledge assets</code></li>
+<li><code>44f8bb9 Add Harness Engineering insights and audit skill</code></li>
+<li><code>64c46be Add LinkedIn post: Obsidian Graph RAG insight</code></li>
+<li><code>d8cf35c Add LinkedIn skill and Graph RAG backlink analysis</code></li></ul>
+      </article>
+
+      <article class="card span-4">
+        <h2>고립 문서 후보</h2>
+        <ul><li><code>wiki/frameworks/compiled-truth-timeline.md</code></li></ul>
+      </article>
+
+      <article class="card span-4">
+        <h2>다음 확인</h2>
+        <ul>
+          <li><code>dev/</code> 미추적 폴더 정책 결정</li>
+          <li>대량 archive 변경과 의미 변경 분리</li>
+          <li>비어 있는 운영 로그가 실제 프로토콜 실행 때 채워지는지 확인</li>
+        </ul>
+      </article>
+    </section>
+
+    <p class="foot">
+      Source: outputs/briefs/2026-04-30-change-briefing.md
+      · Generated by <code>scripts/generate_change_dashboard.py</code>
+    </p>
+  </main>
+</body>
+</html>
