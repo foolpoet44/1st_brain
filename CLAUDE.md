@@ -11,6 +11,7 @@ CSP는 17년차 HR 전문가이자 Vibe Coder입니다.
 SW 공학 백그라운드 없이, 심리학과 HR 경험을 코드로 변환하는 Creative Solution Provider.
 
 ### 핵심 관심 영역 (우선순위 순)
+
 1. AX 내재화 — AI 활용도 제고, Vibe Coding 교육, 워크플로우 재설계
 2. HR 자동화 & SaaS — EX Intelligence, ESCON, Pulse Check, LDS 360
 3. 조직심리학 — SDT, LMX, POS, Ansoff Weak Signal Theory
@@ -18,6 +19,7 @@ SW 공학 백그라운드 없이, 심리학과 HR 경험을 코드로 변환하�
 5. 경제적 자유 — 한국 부동산, 채권/ETF, 한미 주식
 
 ### 커뮤니케이션 규칙
+
 - 한국어로 응답
 - 에세이형 설명 > 불렛 리스트
 - 철학적/심리학적 유추 환영
@@ -107,14 +109,14 @@ csp-brain/                     ← Obsidian Vault Root = Git Repo Root
 
 ### 읽기/쓰기 규칙
 
-| 영역 | 인간(CSP) | AI(Claude) |
-|:---|:---|:---|
-| inbox/ | ✅ 자유롭게 던진다 | ✅ 읽기 + INGEST 처리 |
-| wiki/ | ❌ 직접 수정 금지 | ✅ 생성·수정·병합 |
+| 영역      | 인간(CSP)                    | AI(Claude)             |
+| :-------- | :--------------------------- | :--------------------- |
+| inbox/    | ✅ 자유롭게 던진다           | ✅ 읽기 + INGEST 처리  |
+| wiki/     | ❌ 직접 수정 금지            | ✅ 생성·수정·병합      |
 | projects/ | ✅ Timeline에 메모 추가 가능 | ✅ Compiled Truth 갱신 |
-| outputs/ | ✅ 읽기 | ✅ 생성 |
-| _ops/ | ❌ | ✅ 로그 기록 |
-| CLAUDE.md | ❌ | ✅ 유지보수 |
+| outputs/  | ✅ 읽기                      | ✅ 생성                |
+| \_ops/    | ❌                           | ✅ 로그 기록           |
+| CLAUDE.md | ❌                           | ✅ 유지보수            |
 
 ---
 
@@ -137,6 +139,7 @@ CSP의 가장 큰 페인포인트는 "무엇이 어떻게 바뀌고 있는지 �
 
 ```markdown
 ### [변경 제목]
+
 - 무엇이 바뀌었나:
 - 왜 중요한가:
 - 영향 범위:
@@ -147,13 +150,13 @@ CSP의 가장 큰 페인포인트는 "무엇이 어떻게 바뀌고 있는지 �
 
 Git은 백업 수단이 아니라 변화 이해 장치다. 의미가 다른 변경은 한 커밋에 섞지 않는다.
 
-| 접두어 | 용도 |
-|:---|:---|
-| `knowledge:` | wiki/concepts/frameworks 등 지식 내용 변경 |
-| `project:` | projects/의 상태, Timeline, Compiled Truth 변경 |
-| `ops:` | scripts, templates, CLAUDE.md, _ops 등 운영 체계 변경 |
-| `archive:` | raw, manifest, 변환 산출물 등 대량 원자료 변경 |
-| `content:` | sharing, outputs/drafts, 외부 공유 초안 변경 |
+| 접두어       | 용도                                                   |
+| :----------- | :----------------------------------------------------- |
+| `knowledge:` | wiki/concepts/frameworks 등 지식 내용 변경             |
+| `project:`   | projects/의 상태, Timeline, Compiled Truth 변경        |
+| `ops:`       | scripts, templates, CLAUDE.md, \_ops 등 운영 체계 변경 |
+| `archive:`   | raw, manifest, 변환 산출물 등 대량 원자료 변경         |
+| `content:`   | sharing, outputs/drafts, 외부 공유 초안 변경           |
 
 대형 자동 산출물(`manifest.json`, 변환된 archive 등)은 지식 해석 변경과 같은 커밋에 섞지 않는다.
 
@@ -167,14 +170,17 @@ Git은 백업 수단이 아니라 변화 이해 장치다. 의미가 다른 변�
 # [문서 제목]
 
 ## Compiled Truth
+
 현재 알고 있는 최선의 요약. 새 정보가 오면 이 섹션만 덮어쓴다.
 
 ---
 
 ## Timeline
+
 append-only 증거 기록. 절대 삭제/수정 금지.
 
 ### YYYY-MM-DD
+
 - 오늘 배운 것, 결정한 것, 변화한 것
 ```
 
@@ -193,6 +199,7 @@ aliases: [대체명칭]
 ```
 
 ### 백링크 규칙
+
 - 다른 wiki 문서 개념이 등장하면 반드시 `[[문서명]]`으로 링크
 - 한 문서에서 최소 2개 이상의 백링크 (고립 방지)
 - 백링크 0인 문서는 LINT에서 경고 대상
@@ -309,30 +316,30 @@ AAA팀의 핵심 패턴을 CSP에 적용한 프로토콜.
 
 ## 8. 빠른 명령어
 
-| 명령어 | 프로토콜 | 설명 |
-|:---|:---|:---|
-| `ingest` / `수집` | INGEST | inbox/ → wiki/ 통합 |
-| `query` / 질문 형태 | QUERY | 위키 기반 질문 응답 |
-| `lint` / `점검` | LINT | 위키 자가 점검 |
-| `digest` / `다이제스트` | DIGEST | 주간 지식 변화 요약 |
-| `sync` / `bridge` | BRIDGE | Notion 양방향 연동 |
-| `generate [유형]` | GENERATE | 콘텐츠 자동 생성 |
-| `status` | — | 최근 변화 브리핑 + 위키 현황 통계 |
-| `dream` | Dream Cycle | 전체 주간 루틴 실행 |
+| 명령어                  | 프로토콜    | 설명                              |
+| :---------------------- | :---------- | :-------------------------------- |
+| `ingest` / `수집`       | INGEST      | inbox/ → wiki/ 통합               |
+| `query` / 질문 형태     | QUERY       | 위키 기반 질문 응답               |
+| `lint` / `점검`         | LINT        | 위키 자가 점검                    |
+| `digest` / `다이제스트` | DIGEST      | 주간 지식 변화 요약               |
+| `sync` / `bridge`       | BRIDGE      | Notion 양방향 연동                |
+| `generate [유형]`       | GENERATE    | 콘텐츠 자동 생성                  |
+| `status`                | —           | 최근 변화 브리핑 + 위키 현황 통계 |
+| `dream`                 | Dream Cycle | 전체 주간 루틴 실행               |
 
 ---
 
 ## 9. 성장 단계
 
-| 단계 | wiki 문서 수 | 가능해지는 것 |
-|:---|:---|:---|
-| 씨앗 | 5~15개 | 개별 개념 정리, 단순 검색 |
-| 새싹 | 15~40개 | 개념 간 연결 발견, 비교 분석 |
-| 성장 | 40~80개 | 교차 도메인 인사이트, 트렌드 추적 |
-| 숲 | 80개+ | 자기 진화하는 지식 생태계 |
+| 단계 | wiki 문서 수 | 가능해지는 것                     |
+| :--- | :----------- | :-------------------------------- |
+| 씨앗 | 5~15개       | 개별 개념 정리, 단순 검색         |
+| 새싹 | 15~40개      | 개념 간 연결 발견, 비교 분석      |
+| 성장 | 40~80개      | 교차 도메인 인사이트, 트렌드 추적 |
+| 숲   | 80개+        | 자기 진화하는 지식 생태계         |
 
 ---
 
-*v2.0 — 2026-04-29 옵시디언 + GitHub 하이브리드 전환*
-*Based on: Karpathy LLM KB + gbrain Compiled Truth + SELFISH AAA Pipeline*
-*Architecture: Working Brain (Obsidian) + Archive Brain (Notion)*
+_v2.0 — 2026-04-29 옵시디언 + GitHub 하이브리드 전환_
+_Based on: Karpathy LLM KB + gbrain Compiled Truth + SELFISH AAA Pipeline_
+_Architecture: Working Brain (Obsidian) + Archive Brain (Notion)_
