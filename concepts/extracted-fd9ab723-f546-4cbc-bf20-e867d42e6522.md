@@ -64,7 +64,7 @@ def collect_news():
     for feed in feeds:
         data = feedparser.parse(feed)
         articles.extend(data.entries[:5])
-    
+
     # GitHub에 JSON 저장
     with open('daily_news.json', 'w') as f:
         json.dump(articles, f)
@@ -103,10 +103,10 @@ pip install selenium playwright
 
 ```text
 [출근길 지하철에서]
-당신: "오늘 LG 미팅에서 나온 리더십 평가 이슈, 
+당신: "오늘 LG 미팅에서 나온 리더십 평가 이슈,
      정량지표 vs 정성피드백 균형 다시 생각해봐야 할 듯"
-     
-Bot: ✅ 기록했습니다. 
+
+Bot: ✅ 기록했습니다.
      #리더십평가 #LG #정량정성균형
 ```
 
@@ -179,6 +179,7 @@ Bot: ✅ 기록했습니다.
 ## 🧠 오늘의 단상 (5개)
 
 ### 💼 업무 관련 (2개)
+
 - 10:23 | 우선순위: ⭐⭐⭐ | #리더십평가
   "정량지표 vs 정성피드백 균형 재검토 필요"
   → 📎 관련문서: [[2024 리더십평가 개선안]]
@@ -189,6 +190,7 @@ Bot: ✅ 기록했습니다.
   → 📎 관련프로젝트: [[HR 자동화 SaaS]]
 
 ### 📚 학습/아이디어 (2개)
+
 - 08:15 | 우선순위: ⭐ | #AI #트렌드
   "Gemini Flash가 생각보다 빠르고 괜찮네"
 
@@ -197,15 +199,18 @@ Bot: ✅ 기록했습니다.
   → 📎 관련: [[2024 투자 전략]]
 
 ### 🌟 개인 (1개)
+
 - 19:00 | 감정: 😊 | #일상
   "아이와 레고 조립하면서 든 생각..."
 
 ## 📊 오늘의 패턴
+
 - 주요 관심사: 리더십 평가 시스템 (3회 언급)
 - 에너지 레벨: 오전 ↑ 오후 →
 - 액션 필요: 2건
 
 ## ⚡ Next Actions
+
 - [ ] 정량/정성 평가 균형 리서치
 - [ ] 팔란티어 Q4 실적 확인
 ```
@@ -222,17 +227,17 @@ from datetime import datetime
 async def handle_message(update: Update, context):
     user_message = update.message.text
     timestamp = datetime.now().isoformat()
-    
+
     # 임시 저장
     thought = {
         "timestamp": timestamp,
         "content": user_message,
         "type": "telegram"
     }
-    
+
     with open(f'thoughts_{datetime.now().date()}.json', 'a') as f:
         f.write(json.dumps(thought, ensure_ascii=False) + '\n')
-    
+
     await update.message.reply_text("✅ 기록했습니다!")
 
 # Bot 실행
@@ -248,7 +253,7 @@ app.run_polling()
 name: Process Daily Thoughts
 on:
   schedule:
-    - cron: '0 15 * * *'  # 매일 밤 11시 (한국시간)
+    - cron: "0 15 * * *" # 매일 밤 11시 (한국시간)
 
 jobs:
   process:
@@ -271,13 +276,13 @@ import json
 def process_daily_thoughts():
     # 오늘 수집된 모든 단상 읽기
     thoughts = load_today_thoughts()
-    
+
     # Gemini로 일괄 분석
     prompt = f"""
     다음 일일 단상들을 분석해서 구조화해줘:
-    
+
     {thoughts}
-    
+
     다음 형식으로 JSON 반환:
     {{
       "categories": {{"work": [], "learning": [], "personal": []}},
@@ -287,16 +292,16 @@ def process_daily_thoughts():
       "action_items": ["실행 가능한 액션", ...]
     }}
     """
-    
+
     result = genai.GenerativeModel('gemini-1.5-flash').generate_content(prompt)
     structured = json.loads(result.text)
-    
+
     # ChromaDB에 벡터 저장
     save_to_chromadb(thoughts, structured)
-    
+
     # Notion에 정리된 페이지 생성
     create_notion_page(structured)
-    
+
     return structured
 ```
 
@@ -304,8 +309,8 @@ def process_daily_thoughts():
 
 ```text
 [Telegram Bot에 음성 메시지]
-"어제 본 Palantir Foundry 데모 영상이 
-우리 HR 온톨로지 구조랑 비슷한데, 
+"어제 본 Palantir Foundry 데모 영상이
+우리 HR 온톨로지 구조랑 비슷한데,
 스킬 관계 매트릭스 부분 참고할 만함"
 
 → 밤 11시: 자동으로 "HR 자동화 SaaS" 프로젝트에 링크됨
@@ -316,7 +321,7 @@ def process_daily_thoughts():
 
 ```text
 [Apple Notes에 빠르게]
-"김과장 피드백: 현장 리더들이 
+"김과장 피드백: 현장 리더들이
 평가 시스템 너무 복잡하다고 불만
 → UI 단순화 우선순위 상향"
 
@@ -344,17 +349,20 @@ def process_daily_thoughts():
 ## 이번 주 당신의 마음
 
 **최다 언급 키워드**
+
 1. 리더십 평가 (8회)
 2. AI 자동화 (6회)
 3. 온톨로지 (4회)
 
 **관심 패턴**
+
 - 월/화: 업무 시스템 개선에 집중
 - 수/목: 신기술 학습 (AI, LLM)
 - 금: 투자/재테크 관심 증가
 - 주말: 개인 성장, 독서
 
 **에너지 흐름**
+
 - 오전형 인간 (오전 단상 70%)
 - 저녁 9시 이후: 전략적/장기 사고
 
@@ -371,14 +379,17 @@ def process_daily_thoughts():
 ## 📌 다음 주 제안
 
 **집중 영역**
+
 1. 리더십 평가 시스템 개선안 구체화
 2. HR 온톨로지 MVP 스펙 작성
 
 **학습**
+
 - Palantir Foundry 케이스 스터디
 - Graph DB 기초 (Neo4j)
 
 **정리 필요**
+
 - 이번 주 수집한 AI 뉴스 18건 리뷰
 ```
 
@@ -387,6 +398,7 @@ def process_daily_thoughts():
 ```markdown
 목적: 모든 데이터 구조 정의
 내용:
+
 - JSON 스키마 (단상, 뉴스, 인사이트)
 - Notion 데이터베이스 스키마
 - ChromaDB 컬렉션 구조
@@ -399,6 +411,7 @@ def process_daily_thoughts():
 ```markdown
 목적: 제로부터 환경 구축
 내용:
+
 - 사전 요구사항
 - 계정 생성 (Telegram, GitHub, Google)
 - API 키 발급 방법
@@ -412,6 +425,7 @@ def process_daily_thoughts():
 ```markdown
 목적: 모든 외부 API 사용법
 내용:
+
 - Telegram Bot API 엔드포인트
 - Notion API 사용 예제
 - Gemini API 프롬프트 템플릿
@@ -424,6 +438,7 @@ def process_daily_thoughts():
 ```markdown
 목적: 모든 자동화 워크플로우 정의
 내용:
+
 - 일일 단상 수집 워크플로우 (step-by-step)
 - 밤 11시 자동 처리 워크플로우
 - 주간 리포트 생성 워크플로우

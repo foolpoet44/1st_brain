@@ -44,13 +44,13 @@ Step 5. Output Contract 형식으로 결과 반환
 async function injectSkillContext(userQuery: string, db: SupabaseClient) {
   // 1. 쿼리에서 스킬 엔티티 추출 (LLM 호출)
   const entities = await extractSkillEntities(userQuery);
-  
+
   // 2. Ontology에서 관련 노드 조회
   const skillNodes = await db
-    .from('skill_nodes')
-    .select('*, skill_edges(*)')
-    .in('name', entities);
-  
+    .from("skill_nodes")
+    .select("*, skill_edges(*)")
+    .in("name", entities);
+
   // 3. 컨텍스트 문자열로 변환
   return formatOntologyContext(skillNodes);
   // → "Python(LV1-4): 데이터 처리, ML 파이프라인, API 개발에 필요.
@@ -71,12 +71,12 @@ gap_analysis_contract:
     - gap_score: float (0.0-1.0)
     - priority_skills: array (max 3)
     - timeline_estimate: string ("3개월" | "6개월" | "12개월+")
-  
+
   validation_rules:
     - gap_score > 0.7 → escalate_to_mentoring: true
     - timeline_estimate == "12개월+" → split_into_phases: true
     - priority_skills.length == 0 → status: "no_gap_found"
-  
+
   dod_checklist:
     - [ ] 현재 레벨 근거 명시 (증거 기반)
     - [ ] 목표 역할 Ontology 노드와 매핑 완료
@@ -91,7 +91,7 @@ learning_path_contract:
         - skills: array
         - milestone: string (측정 가능한 성취 기준)
         - resources: array (최소 1개)
-  
+
   dod_checklist:
     - [ ] 각 Phase의 마일스톤이 측정 가능한가
     - [ ] 리소스가 실제 접근 가능한가 (내부/외부 구분)
@@ -105,15 +105,15 @@ gap_analysis_output:
   skill_node:
     id: string
     name: string
-    current_level: 0-4  # 0=미보유
+    current_level: 0-4 # 0=미보유
     required_level: 1-4
-    gap: integer         # required - current
-    evidence: string     # 보유 근거 (자격증, 프로젝트명)
-  
+    gap: integer # required - current
+    evidence: string # 보유 근거 (자격증, 프로젝트명)
+
   priority_ranking:
     basis: "business_impact | learning_efficiency | urgency"
     top_3: array[skill_node]
-  
+
   timeline:
     estimate: "3mo | 6mo | 12mo+"
     confidence: "high | medium | low"
@@ -128,27 +128,26 @@ gap_analysis_output:
 # =============================================
 
 gap_analysis:
-  
   meta:
     contract_version: "1.0"
     generated_at: ISO8601
-    target_role: string          # "Senior Production Engineer"
-    requestor_level: integer     # 현재 레벨 (0-4)
+    target_role: string # "Senior Production Engineer"
+    requestor_level: integer # 현재 레벨 (0-4)
 
   skill_gaps:
     type: array
-    max_items: 10                # 집중도 유지를 위한 상한
+    max_items: 10 # 집중도 유지를 위한 상한
     item_schema:
-      skill_id: string           # Ontology 노드 ID (e.g., "PE-ML-001")
+      skill_id: string # Ontology 노드 ID (e.g., "PE-ML-001")
       skill_name: string
-      cluster: string            # 상위 클러스터 (e.g., "Machine Learning")
-      current_level: 0-4         # 0 = 미보유
+      cluster: string # 상위 클러스터 (e.g., "Machine Learning")
+      current_level: 0-4 # 0 = 미보유
       required_level: 1-4
-      gap: integer               # required - current (1-4)
+      gap: integer # required - current (1-4)
       evidence:
-        type: string | null      # "자격증명 / 프로젝트명 / 자기평가"
+        type: string | null # "자격증명 / 프로젝트명 / 자기평가"
         source: "certificate | project | self_assessment | manager_eval"
-      prerequisite_met: boolean  # 선행 스킬 보유 여부
+      prerequisite_met: boolean # 선행 스킬 보유 여부
       learning_feasibility:
         timeline: "3mo | 6mo | 12mo+"
         confidence: "high | medium | low"
@@ -156,18 +155,18 @@ gap_analysis:
   priority_ranking:
     method: "business_impact × feasibility"
     top_3: array[skill_id]
-    rationale: string            # 우선순위 선정 이유 (1-2문장)
+    rationale: string # 우선순위 선정 이유 (1-2문장)
 
   escalation_flags:
-    needs_mentoring: boolean     # gap >= 2 시 true
-    needs_phased_plan: boolean   # timeline "12mo+" 항목 존재 시 true
+    needs_mentoring: boolean # gap >= 2 시 true
+    needs_phased_plan: boolean # timeline "12mo+" 항목 존재 시 true
     missing_prerequisites: array[skill_id]
 
   summary:
     total_gap_count: integer
-    critical_gaps: integer       # gap >= 2 인 항목 수
-    quick_wins: integer          # gap == 1 AND timeline == "3mo" 인 항목 수
-    overall_readiness: 0.0-1.0   # 목표 역할 대비 준비도 스코어
+    critical_gaps: integer # gap >= 2 인 항목 수
+    quick_wins: integer # gap == 1 AND timeline == "3mo" 인 항목 수
+    overall_readiness: 0.0-1.0 # 목표 역할 대비 준비도 스코어
 ```
 
 ### Extracted Code (yaml)
@@ -178,11 +177,10 @@ gap_analysis:
 # =============================================
 
 learning_path:
-
   meta:
     contract_version: "1.0"
     total_duration: "3mo | 6mo | 12mo"
-    target_skills: array[skill_id]  # 이 경로가 커버하는 스킬들
+    target_skills: array[skill_id] # 이 경로가 커버하는 스킬들
 
   phases:
     type: array
@@ -190,16 +188,16 @@ learning_path:
     max_items: 4
     item_schema:
       phase_number: integer
-      duration: string             # "4주" / "2개월"
+      duration: string # "4주" / "2개월"
       focus_skills: array[skill_id]
-      target_level: integer        # 이 Phase 완료 후 도달 레벨
-      
+      target_level: integer # 이 Phase 완료 후 도달 레벨
+
       milestone:
-        description: string        # 측정 가능한 성취 기준
+        description: string # 측정 가능한 성취 기준
         verification_method:
           type: "project | assessment | peer_review | certification"
-          detail: string           # "사내 프로젝트에 실제 적용" 등
-      
+          detail: string # "사내 프로젝트에 실제 적용" 등
+
       resources:
         type: array
         min_items: 1
@@ -207,12 +205,12 @@ learning_path:
         item_schema:
           name: string
           type: "internal | external | on_the_job"
-          access: string           # URL 또는 접근 방법
+          access: string # URL 또는 접근 방법
           estimated_hours: integer
 
   dependencies:
-    prerequisite_phases: array     # 선행 Phase 없으면 빈 배열
-    parallel_possible: boolean     # 병렬 진행 가능 여부
+    prerequisite_phases: array # 선행 Phase 없으면 빈 배열
+    parallel_possible: boolean # 병렬 진행 가능 여부
 ```
 
 ### Extracted Code (yaml)
@@ -223,9 +221,8 @@ learning_path:
 # =============================================
 
 skill_discovery:
+  query_context: string # 사용자 원본 질문 요약
 
-  query_context: string            # 사용자 원본 질문 요약
-  
   matched_skills:
     type: array
     max_items: 5
@@ -234,13 +231,13 @@ skill_discovery:
       skill_name: string
       cluster: string
       relevance_score: 0.0-1.0
-      level_descriptors:           # ← Skyhive에서 빌려온 핵심 개념
-        lv1: string                # "개념과 용어를 인지한다"
-        lv2: string                # "지도 하에 업무에 적용한다"
-        lv3: string                # "독립적으로 설계하고 타인을 가르친다"
-        lv4: string                # "조직 표준을 만들고 혁신한다"
-      adjacent_skills: array[skill_id]   # 연결 스킬 (그래프 탐색)
-      demand_signal: "high | medium | low"  # LG PRI 내부 수요
+      level_descriptors: # ← Skyhive에서 빌려온 핵심 개념
+        lv1: string # "개념과 용어를 인지한다"
+        lv2: string # "지도 하에 업무에 적용한다"
+        lv3: string # "독립적으로 설계하고 타인을 가르친다"
+        lv4: string # "조직 표준을 만들고 혁신한다"
+      adjacent_skills: array[skill_id] # 연결 스킬 (그래프 탐색)
+      demand_signal: "high | medium | low" # LG PRI 내부 수요
 
   ontology_path:
     from: skill_id | null
@@ -283,7 +280,7 @@ gap_analysis_dod:
 
   - id: GA-02
     check: "top_3 우선순위의 rationale이 1문장 이상인가"
-    auto_validatable: false   # LLM judge 필요
+    auto_validatable: false # LLM judge 필요
     judge_prompt: "이 rationale이 비즈니스 임팩트와 실행 가능성을 근거로 하는가?"
 
   - id: GA-03
@@ -369,16 +366,27 @@ escon/
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "escon:gap_analysis:v1",
   "type": "object",
-  "required": ["meta", "skill_gaps", "priority_ranking", "escalation_flags", "summary"],
+  "required": [
+    "meta",
+    "skill_gaps",
+    "priority_ranking",
+    "escalation_flags",
+    "summary"
+  ],
   "properties": {
     "meta": {
       "type": "object",
-      "required": ["contract_version", "generated_at", "target_role", "requestor_level"],
+      "required": [
+        "contract_version",
+        "generated_at",
+        "target_role",
+        "requestor_level"
+      ],
       "properties": {
         "contract_version": { "type": "string", "const": "1.0" },
-        "generated_at":     { "type": "string", "format": "date-time" },
-        "target_role":      { "type": "string", "minLength": 1 },
-        "requestor_level":  { "type": "integer", "minimum": 0, "maximum": 4 }
+        "generated_at": { "type": "string", "format": "date-time" },
+        "target_role": { "type": "string", "minLength": 1 },
+        "requestor_level": { "type": "integer", "minimum": 0, "maximum": 4 }
       }
     },
     "skill_gaps": {
@@ -386,22 +394,38 @@ escon/
       "maxItems": 10,
       "items": {
         "type": "object",
-        "required": ["skill_id", "skill_name", "cluster",
-                     "current_level", "required_level", "gap",
-                     "prerequisite_met", "learning_feasibility"],
+        "required": [
+          "skill_id",
+          "skill_name",
+          "cluster",
+          "current_level",
+          "required_level",
+          "gap",
+          "prerequisite_met",
+          "learning_feasibility"
+        ],
         "properties": {
-          "skill_id":         { "type": "string", "pattern": "^[A-Z]{2}-[A-Z]{2,4}-\\d{3}$" },
-          "skill_name":       { "type": "string" },
-          "cluster":          { "type": "string" },
-          "current_level":    { "type": "integer", "minimum": 0, "maximum": 4 },
-          "required_level":   { "type": "integer", "minimum": 1, "maximum": 4 },
-          "gap":              { "type": "integer", "minimum": 1, "maximum": 4 },
+          "skill_id": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}-[A-Z]{2,4}-\\d{3}$"
+          },
+          "skill_name": { "type": "string" },
+          "cluster": { "type": "string" },
+          "current_level": { "type": "integer", "minimum": 0, "maximum": 4 },
+          "required_level": { "type": "integer", "minimum": 1, "maximum": 4 },
+          "gap": { "type": "integer", "minimum": 1, "maximum": 4 },
           "evidence": {
             "type": "object",
             "properties": {
-              "type":   { "type": ["string", "null"] },
-              "source": { "enum": ["certificate", "project",
-                                   "self_assessment", "manager_eval"] }
+              "type": { "type": ["string", "null"] },
+              "source": {
+                "enum": [
+                  "certificate",
+                  "project",
+                  "self_assessment",
+                  "manager_eval"
+                ]
+              }
             }
           },
           "prerequisite_met": { "type": "boolean" },
@@ -409,7 +433,7 @@ escon/
             "type": "object",
             "required": ["timeline", "confidence"],
             "properties": {
-              "timeline":   { "enum": ["3mo", "6mo", "12mo+"] },
+              "timeline": { "enum": ["3mo", "6mo", "12mo+"] },
               "confidence": { "enum": ["high", "medium", "low"] }
             }
           }
@@ -420,28 +444,44 @@ escon/
       "type": "object",
       "required": ["method", "top_3", "rationale"],
       "properties": {
-        "method":    { "type": "string" },
-        "top_3":     { "type": "array", "maxItems": 3, "items": { "type": "string" } },
+        "method": { "type": "string" },
+        "top_3": {
+          "type": "array",
+          "maxItems": 3,
+          "items": { "type": "string" }
+        },
         "rationale": { "type": "string", "minLength": 10 }
       }
     },
     "escalation_flags": {
       "type": "object",
-      "required": ["needs_mentoring", "needs_phased_plan", "missing_prerequisites"],
+      "required": [
+        "needs_mentoring",
+        "needs_phased_plan",
+        "missing_prerequisites"
+      ],
       "properties": {
-        "needs_mentoring":        { "type": "boolean" },
-        "needs_phased_plan":      { "type": "boolean" },
-        "missing_prerequisites":  { "type": "array", "items": { "type": "string" } }
+        "needs_mentoring": { "type": "boolean" },
+        "needs_phased_plan": { "type": "boolean" },
+        "missing_prerequisites": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
       }
     },
     "summary": {
       "type": "object",
-      "required": ["total_gap_count", "critical_gaps", "quick_wins", "overall_readiness"],
+      "required": [
+        "total_gap_count",
+        "critical_gaps",
+        "quick_wins",
+        "overall_readiness"
+      ],
       "properties": {
-        "total_gap_count":   { "type": "integer", "minimum": 0 },
-        "critical_gaps":     { "type": "integer", "minimum": 0 },
-        "quick_wins":        { "type": "integer", "minimum": 0 },
-        "overall_readiness": { "type": "number",  "minimum": 0, "maximum": 1 }
+        "total_gap_count": { "type": "integer", "minimum": 0 },
+        "critical_gaps": { "type": "integer", "minimum": 0 },
+        "quick_wins": { "type": "integer", "minimum": 0 },
+        "overall_readiness": { "type": "number", "minimum": 0, "maximum": 1 }
       }
     }
   }
@@ -452,85 +492,87 @@ escon/
 
 ```typescript
 // lib/validator/ContractValidator.ts
-import Ajv from 'ajv'
-import addFormats from 'ajv-formats'
-import gapSchema from '../../contracts/schemas/gap_analysis.schema.json'
+import Ajv from "ajv";
+import addFormats from "ajv-formats";
+import gapSchema from "../../contracts/schemas/gap_analysis.schema.json";
 
-const ajv = new Ajv({ allErrors: true })
-addFormats(ajv)
+const ajv = new Ajv({ allErrors: true });
+addFormats(ajv);
 
 export type ValidationResult = {
-  passed: boolean
-  errors: DoDError[]
-  warnings: string[]
-  requiresJudge: string[]   // auto_validatable: false 항목 ID
-}
+  passed: boolean;
+  errors: DoDError[];
+  warnings: string[];
+  requiresJudge: string[]; // auto_validatable: false 항목 ID
+};
 
 export type DoDError = {
-  id: string
-  message: string
-  autoFixed?: boolean
-}
+  id: string;
+  message: string;
+  autoFixed?: boolean;
+};
 
 export class ContractValidator {
-
   validateGapAnalysis(data: unknown): ValidationResult {
-    const errors: DoDError[] = []
-    const requiresJudge: string[] = []
+    const errors: DoDError[] = [];
+    const requiresJudge: string[] = [];
 
     // C-01 ~ C-04: JSON Schema 검증 (자동)
-    const validate = ajv.compile(gapSchema)
+    const validate = ajv.compile(gapSchema);
     if (!validate(data)) {
-      validate.errors?.forEach(e => {
-        errors.push({ id: 'C-01', message: e.message ?? 'Schema violation' })
-      })
-      return { passed: false, errors, warnings: [], requiresJudge }
+      validate.errors?.forEach((e) => {
+        errors.push({ id: "C-01", message: e.message ?? "Schema violation" });
+      });
+      return { passed: false, errors, warnings: [], requiresJudge };
     }
 
-    const d = data as any
+    const d = data as any;
 
     // GA-01: self_assessment 단독 시 confidence는 'low'여야
     d.skill_gaps.forEach((gap: any) => {
-      if (gap.evidence?.source === 'self_assessment' &&
-          gap.learning_feasibility.confidence !== 'low') {
+      if (
+        gap.evidence?.source === "self_assessment" &&
+        gap.learning_feasibility.confidence !== "low"
+      ) {
         errors.push({
-          id: 'GA-01',
-          message: `${gap.skill_id}: self_assessment 근거인데 confidence가 low가 아닙니다.`
-        })
+          id: "GA-01",
+          message: `${gap.skill_id}: self_assessment 근거인데 confidence가 low가 아닙니다.`,
+        });
       }
-    })
+    });
 
     // GA-03: missing_prerequisites가 top_3에 포함되면 안 됨
-    const missingSet = new Set(d.escalation_flags.missing_prerequisites)
+    const missingSet = new Set(d.escalation_flags.missing_prerequisites);
     d.priority_ranking.top_3.forEach((skillId: string) => {
       if (missingSet.has(skillId)) {
         errors.push({
-          id: 'GA-03',
-          message: `${skillId}: 선행 스킬 미충족인데 top_3에 포함되어 있습니다.`
-        })
+          id: "GA-03",
+          message: `${skillId}: 선행 스킬 미충족인데 top_3에 포함되어 있습니다.`,
+        });
       }
-    })
+    });
 
     // GA-04: overall_readiness 수학적 일관성
-    const avgGap = d.skill_gaps.reduce((sum: number, g: any) => sum + g.gap, 0)
-                   / (d.skill_gaps.length || 1)
-    const expectedReadiness = Math.max(0, 1 - (avgGap / 4))
+    const avgGap =
+      d.skill_gaps.reduce((sum: number, g: any) => sum + g.gap, 0) /
+      (d.skill_gaps.length || 1);
+    const expectedReadiness = Math.max(0, 1 - avgGap / 4);
     if (Math.abs(d.summary.overall_readiness - expectedReadiness) > 0.15) {
       errors.push({
-        id: 'GA-04',
-        message: `overall_readiness(${d.summary.overall_readiness}) 값이 gap 데이터와 불일치합니다.`
-      })
+        id: "GA-04",
+        message: `overall_readiness(${d.summary.overall_readiness}) 값이 gap 데이터와 불일치합니다.`,
+      });
     }
 
     // GA-02: rationale 품질 → LLM judge 필요
-    requiresJudge.push('GA-02')
+    requiresJudge.push("GA-02");
 
     return {
       passed: errors.length === 0,
       errors,
       warnings: [],
-      requiresJudge
-    }
+      requiresJudge,
+    };
   }
 }
 ```
@@ -539,50 +581,55 @@ export class ContractValidator {
 
 ```typescript
 // lib/validator/DoDJudge.ts
-import Anthropic from '@anthropic-ai/sdk'
+import Anthropic from "@anthropic-ai/sdk";
 
-const client = new Anthropic()
+const client = new Anthropic();
 
 export class DoDJudge {
-
   async judgeRationale(rationale: string): Promise<{
-    passed: boolean
-    reason: string
+    passed: boolean;
+    reason: string;
   }> {
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-6',
+      model: "claude-sonnet-4-6",
       max_tokens: 200,
-      messages: [{
-        role: 'user',
-        content: `다음 우선순위 선정 rationale이 비즈니스 임팩트와 실행 가능성을 
+      messages: [
+        {
+          role: "user",
+          content: `다음 우선순위 선정 rationale이 비즈니스 임팩트와 실행 가능성을 
 근거로 하는지 판단하라. JSON으로만 응답: {"passed": true/false, "reason": "한 줄 이유"}
 
-Rationale: "${rationale}"`
-      }]
-    })
+Rationale: "${rationale}"`,
+        },
+      ],
+    });
 
-    const text = response.content[0].type === 'text' ? response.content[0].text : ''
-    return JSON.parse(text)
+    const text =
+      response.content[0].type === "text" ? response.content[0].text : "";
+    return JSON.parse(text);
   }
 
   async judgeDescriptors(descriptors: Record<string, string>): Promise<{
-    passed: boolean
-    failed_levels: string[]
+    passed: boolean;
+    failed_levels: string[];
   }> {
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-6',
+      model: "claude-sonnet-4-6",
       max_tokens: 200,
-      messages: [{
-        role: 'user',
-        content: `다음 스킬 레벨 descriptor들이 행동 동사로 시작하는지 확인하라.
+      messages: [
+        {
+          role: "user",
+          content: `다음 스킬 레벨 descriptor들이 행동 동사로 시작하는지 확인하라.
 JSON으로만 응답: {"passed": true/false, "failed_levels": ["lv1", ...]}
 
-Descriptors: ${JSON.stringify(descriptors)}`
-      }]
-    })
+Descriptors: ${JSON.stringify(descriptors)}`,
+        },
+      ],
+    });
 
-    const text = response.content[0].type === 'text' ? response.content[0].text : ''
-    return JSON.parse(text)
+    const text =
+      response.content[0].type === "text" ? response.content[0].text : "";
+    return JSON.parse(text);
   }
 }
 ```
@@ -597,18 +644,21 @@ Descriptors: ${JSON.stringify(descriptors)}`
 ESCON의 모든 AI 응답은 반드시 `contracts/schemas/` 의 JSON Schema를 통과해야 한다.
 
 ### 핵심 규칙
+
 - Gap Analysis 응답 → `gap_analysis.schema.json` 검증 필수
 - skill_id 형식은 반드시 `PE-XX-000` 패턴 준수 (e.g., `PE-ML-001`)
 - `ContractValidator.validateGapAnalysis()` 통과 후에만 사용자에게 반환
 - DoD 실패 시 max 3회 재생성, 그래도 실패 시 `partial_result_with_human_review_flag` 설정
 
 ### DoD 체크 순서
+
 1. JSON Schema 자동 검증 (C-01 ~ C-04)
 2. 비즈니스 규칙 검증 (GA-01 ~ GA-04)
 3. LLM Judge 검증 (GA-02: rationale 품질)
 4. 모두 통과 시에만 반환
 
 ### 금지 사항
+
 - Contract 검증 없이 AI 응답 직접 반환 금지
 - skill_id를 임의 문자열로 생성 금지 (Ontology DB 조회 후 사용)
 ```
@@ -617,51 +667,54 @@ ESCON의 모든 AI 응답은 반드시 `contracts/schemas/` 의 JSON Schema를 �
 
 ```typescript
 // app/api/gap-analysis/route.ts (Next.js App Router)
-import { ContractValidator } from '@/lib/validator/ContractValidator'
-import { DoDJudge } from '@/lib/validator/DoDJudge'
+import { ContractValidator } from "@/lib/validator/ContractValidator";
+import { DoDJudge } from "@/lib/validator/DoDJudge";
 
-const validator = new ContractValidator()
-const judge = new DoDJudge()
+const validator = new ContractValidator();
+const judge = new DoDJudge();
 
 export async function POST(req: Request) {
-  const { userId, targetRole } = await req.json()
+  const { userId, targetRole } = await req.json();
 
-  let result = null
-  let attempts = 0
-  const MAX_RETRY = 3
+  let result = null;
+  let attempts = 0;
+  const MAX_RETRY = 3;
 
   while (attempts < MAX_RETRY) {
     // 1. LLM으로 Gap Analysis 생성
-    result = await generateGapAnalysis(userId, targetRole)
+    result = await generateGapAnalysis(userId, targetRole);
 
     // 2. Contract 자동 검증
-    const validation = validator.validateGapAnalysis(result)
+    const validation = validator.validateGapAnalysis(result);
 
     if (!validation.passed) {
-      attempts++
-      continue  // 재생성
+      attempts++;
+      continue; // 재생성
     }
 
     // 3. LLM Judge 검증 (rationale 품질)
     const judgeResult = await judge.judgeRationale(
-      result.priority_ranking.rationale
-    )
+      result.priority_ranking.rationale,
+    );
 
     if (!judgeResult.passed) {
-      attempts++
-      continue
+      attempts++;
+      continue;
     }
 
     // 4. 모두 통과 → 반환
-    return Response.json({ success: true, data: result })
+    return Response.json({ success: true, data: result });
   }
 
   // max retry 초과
-  return Response.json({
-    success: false,
-    data: result,
-    flag: 'partial_result_with_human_review_flag'
-  }, { status: 206 })
+  return Response.json(
+    {
+      success: false,
+      data: result,
+      flag: "partial_result_with_human_review_flag",
+    },
+    { status: 206 },
+  );
 }
 ```
 
@@ -753,16 +806,27 @@ gap_analysis.schema.json 내용:
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "escon:gap_analysis:v1",
   "type": "object",
-  "required": ["meta", "skill_gaps", "priority_ranking", "escalation_flags", "summary"],
+  "required": [
+    "meta",
+    "skill_gaps",
+    "priority_ranking",
+    "escalation_flags",
+    "summary"
+  ],
   "properties": {
     "meta": {
       "type": "object",
-      "required": ["contract_version", "generated_at", "target_role", "requestor_level"],
+      "required": [
+        "contract_version",
+        "generated_at",
+        "target_role",
+        "requestor_level"
+      ],
       "properties": {
         "contract_version": { "type": "string", "const": "1.0" },
-        "generated_at":     { "type": "string", "format": "date-time" },
-        "target_role":      { "type": "string", "minLength": 1 },
-        "requestor_level":  { "type": "integer", "minimum": 0, "maximum": 4 }
+        "generated_at": { "type": "string", "format": "date-time" },
+        "target_role": { "type": "string", "minLength": 1 },
+        "requestor_level": { "type": "integer", "minimum": 0, "maximum": 4 }
       }
     },
     "skill_gaps": {
@@ -770,20 +834,38 @@ gap_analysis.schema.json 내용:
       "maxItems": 10,
       "items": {
         "type": "object",
-        "required": ["skill_id","skill_name","cluster","current_level",
-                     "required_level","gap","prerequisite_met","learning_feasibility"],
+        "required": [
+          "skill_id",
+          "skill_name",
+          "cluster",
+          "current_level",
+          "required_level",
+          "gap",
+          "prerequisite_met",
+          "learning_feasibility"
+        ],
         "properties": {
-          "skill_id":       { "type": "string", "pattern": "^[A-Z]{2}-[A-Z]{2,4}-\\d{3}$" },
-          "skill_name":     { "type": "string" },
-          "cluster":        { "type": "string" },
-          "current_level":  { "type": "integer", "minimum": 0, "maximum": 4 },
+          "skill_id": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}-[A-Z]{2,4}-\\d{3}$"
+          },
+          "skill_name": { "type": "string" },
+          "cluster": { "type": "string" },
+          "current_level": { "type": "integer", "minimum": 0, "maximum": 4 },
           "required_level": { "type": "integer", "minimum": 1, "maximum": 4 },
-          "gap":            { "type": "integer", "minimum": 1, "maximum": 4 },
+          "gap": { "type": "integer", "minimum": 1, "maximum": 4 },
           "evidence": {
             "type": "object",
             "properties": {
-              "type":   { "type": ["string", "null"] },
-              "source": { "enum": ["certificate","project","self_assessment","manager_eval"] }
+              "type": { "type": ["string", "null"] },
+              "source": {
+                "enum": [
+                  "certificate",
+                  "project",
+                  "self_assessment",
+                  "manager_eval"
+                ]
+              }
             }
           },
           "prerequisite_met": { "type": "boolean" },
@@ -791,8 +873,8 @@ gap_analysis.schema.json 내용:
             "type": "object",
             "required": ["timeline", "confidence"],
             "properties": {
-              "timeline":   { "enum": ["3mo","6mo","12mo+"] },
-              "confidence": { "enum": ["high","medium","low"] }
+              "timeline": { "enum": ["3mo", "6mo", "12mo+"] },
+              "confidence": { "enum": ["high", "medium", "low"] }
             }
           }
         }
@@ -802,28 +884,44 @@ gap_analysis.schema.json 내용:
       "type": "object",
       "required": ["method", "top_3", "rationale"],
       "properties": {
-        "method":    { "type": "string" },
-        "top_3":     { "type": "array", "maxItems": 3, "items": { "type": "string" } },
+        "method": { "type": "string" },
+        "top_3": {
+          "type": "array",
+          "maxItems": 3,
+          "items": { "type": "string" }
+        },
         "rationale": { "type": "string", "minLength": 10 }
       }
     },
     "escalation_flags": {
       "type": "object",
-      "required": ["needs_mentoring","needs_phased_plan","missing_prerequisites"],
+      "required": [
+        "needs_mentoring",
+        "needs_phased_plan",
+        "missing_prerequisites"
+      ],
       "properties": {
-        "needs_mentoring":       { "type": "boolean" },
-        "needs_phased_plan":     { "type": "boolean" },
-        "missing_prerequisites": { "type": "array", "items": { "type": "string" } }
+        "needs_mentoring": { "type": "boolean" },
+        "needs_phased_plan": { "type": "boolean" },
+        "missing_prerequisites": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
       }
     },
     "summary": {
       "type": "object",
-      "required": ["total_gap_count","critical_gaps","quick_wins","overall_readiness"],
+      "required": [
+        "total_gap_count",
+        "critical_gaps",
+        "quick_wins",
+        "overall_readiness"
+      ],
       "properties": {
-        "total_gap_count":   { "type": "integer", "minimum": 0 },
-        "critical_gaps":     { "type": "integer", "minimum": 0 },
-        "quick_wins":        { "type": "integer", "minimum": 0 },
-        "overall_readiness": { "type": "number",  "minimum": 0, "maximum": 1 }
+        "total_gap_count": { "type": "integer", "minimum": 0 },
+        "critical_gaps": { "type": "integer", "minimum": 0 },
+        "quick_wins": { "type": "integer", "minimum": 0 },
+        "overall_readiness": { "type": "number", "minimum": 0, "maximum": 1 }
       }
     }
   }
@@ -888,7 +986,7 @@ git push origin main
 
 ```text
 ajv를 ESM 방식으로 import하면 에러가 날 수 있어.
-import Ajv from 'ajv' 대신 
+import Ajv from 'ajv' 대신
 const Ajv = require('ajv'); const ajv = new Ajv();
 방식으로 바꿔줘.
 ```

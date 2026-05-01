@@ -14,6 +14,7 @@ tags: [project, hr, saas, ex, intelligence]
 Employee Experience Intelligence — 구성원 경험 데이터 플랫폼.
 
 **핵심 아키텍처**: [[Data Sensing (L1/L2/L3 Architecture)|3 단계 데이터 센싱]]
+
 - L1: 주간 펄스 체크 점수 (Declarative)
 - L2: 협업 툴 활동 로그 (Behavioral)
 - L3: 정성 피드백 의미 분석 (Contextual)
@@ -25,9 +26,11 @@ Employee Experience Intelligence — 구성원 경험 데이터 플랫폼.
 ## Timeline
 
 ### 2026-04-29
+
 - wiki 초기화와 함께 아키텍처 문서 연결
 - [[Data Sensing]], [[Weak Signal Theory]] 핵심 원리로 설정
 
 ### 2026-04-14
+
 - 데이터 센싱 설계 완료
 - 4 월 킥오프 대기

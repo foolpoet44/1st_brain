@@ -20,7 +20,9 @@ tags: [project, hr, saas, pulse, health]
 ## Timeline
 
 ### 2026-04-29
+
 - wiki 초기화와 함께 마이그레이션
 
 ### 2026-04-14
+
 - Supabase 스택 확정 및 스키마 설계 단계

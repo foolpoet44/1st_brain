@@ -23,7 +23,6 @@
      - 개념/이론 → `concepts/` 파일 생성
      - 결정 → `decisions/` 파일 생성
    - 처리 완료 항목 취소선 처리
-   
 2. **Compiled Truth 갱신**
    - 이번 주 변화가 있던 프로젝트 파악
    - 각 프로젝트 `README.md`의 Compiled Truth 업데이트

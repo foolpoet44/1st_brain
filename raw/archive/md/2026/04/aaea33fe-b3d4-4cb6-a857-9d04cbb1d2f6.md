@@ -307,9 +307,9 @@ find /Library/LaunchDaemons -name "*openclaw*" -o -name "*moltbot*" -o -name "*g
 
 ## Human (Message 19)
 
-(base) dkmac@MacBook-Air-3 openclaw % find ~/Library/LaunchAgents -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
-find /Library/LaunchAgents -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
-find /Library/LaunchDaemons -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
+(base) dkmac@MacBook-Air-3 openclaw % find ~/Library/LaunchAgents -name "_openclaw_" -o -name "_moltbot_" -o -name "_gateway_" 2>/dev/null
+find /Library/LaunchAgents -name "_openclaw_" -o -name "_moltbot_" -o -name "_gateway_" 2>/dev/null
+find /Library/LaunchDaemons -name "_openclaw_" -o -name "_moltbot_" -o -name "_gateway_" 2>/dev/null
 /Users/dkmac/Library/LaunchAgents/ai.openclaw.gateway.plist
 /Users/dkmac/Library/LaunchAgents/bot.molt.gateway.plist
 
@@ -385,9 +385,10 @@ Launching OpenClaw with deepseek-v3.1:671b-cloud...
 
 ## Claude (Message 24)
 
-🎉 성공입니다! 
+🎉 성공입니다!
 
 모든 서비스가 정상 기동됐어요:
+
 - gateway listening on ws://127.0.0.1:18789 ✅
 - browser control service ready ✅
 - telegram bot 연결 ✅
@@ -429,7 +430,7 @@ http://127.0.0.1:18789/__openclaw__/canvas/
 
 ## Human (Message 27)
 
-*(내용 없음)*
+_(내용 없음)_
 
 ## Claude (Message 28)
 
@@ -453,4 +454,4 @@ openclaw ui
 
 ---
 
-*Archived from: `aaea33fe-b3d4-4cb6-a857-9d04cbb1d2f6.json`*
+_Archived from: `aaea33fe-b3d4-4cb6-a857-9d04cbb1d2f6.json`_

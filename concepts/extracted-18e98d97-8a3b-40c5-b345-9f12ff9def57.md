@@ -103,40 +103,40 @@ class MSConnector:
     def __init__(self):
         self.credentials = (MS_CLIENT_ID, MS_CLIENT_SECRET)
         self.account = None
-        
+
     def authenticate(self):
         """Microsoft 인증"""
         try:
             self.account = Account(self.credentials)
-            
+
             if not self.account.is_authenticated:
                 # 브라우저 인증
                 self.account.authenticate(scopes=MS_SCOPES)
                 logger.info("MS 인증 성공")
-            
+
             return True
         except Exception as e:
             logger.error(f"MS 인증 실패: {e}")
             return False
-    
+
     def get_calendar_events(self, days=7):
         """Outlook 캘린더 이벤트 조회"""
         if not self.account:
             self.authenticate()
-        
+
         schedule = self.account.schedule()
         calendar = schedule.get_default_calendar()
-        
+
         from datetime import datetime, timedelta
         start = datetime.now()
         end = start + timedelta(days=days)
-        
+
         events = calendar.get_events(
             start=start,
             end=end,
             include_recurring=True
         )
-        
+
         return [{
             'id': event.object_id,
             'subject': event.subject,
@@ -147,33 +147,33 @@ class MSConnector:
             'attendees': [a.address for a in event.attendees],
             'source': 'microsoft'
         } for event in events]
-    
+
     def create_calendar_event(self, event_data):
         """Outlook 캘린더 이벤트 생성"""
         schedule = self.account.schedule()
         calendar = schedule.get_default_calendar()
-        
+
         event = calendar.new_event()
         event.subject = event_data['subject']
         event.start = event_data['start']
         event.end = event_data['end']
         event.location = event_data.get('location', '')
         event.body = event_data.get('body', '')
-        
+
         event.save()
         logger.info(f"MS 이벤트 생성: {event.subject}")
         return event.object_id
-    
+
     def get_onedrive_files(self, folder_path='root'):
         """OneDrive 파일 목록 조회"""
         storage = self.account.storage()
         drive = storage.get_default_drive()
-        
+
         if folder_path == 'root':
             folder = drive.get_root_folder()
         else:
             folder = drive.get_item_by_path(folder_path)
-        
+
         files = []
         for item in folder.get_items():
             files.append({
@@ -185,14 +185,14 @@ class MSConnector:
                 'web_url': item.web_url,
                 'source': 'onedrive'
             })
-        
+
         return files
-    
+
     def get_tasks(self, list_name='Tasks'):
         """MS To Do 작업 조회"""
         todo = self.account.tasks()
         task_list = todo.get_folder(folder_name=list_name)
-        
+
         tasks = []
         for task in task_list.get_tasks():
             tasks.append({
@@ -203,7 +203,7 @@ class MSConnector:
                 'created': task.created.isoformat(),
                 'source': 'ms_todo'
             })
-        
+
         return tasks
 ```
 
@@ -224,7 +224,7 @@ class GoogleConnector:
         self.calendar_service = None
         self.drive_service = None
         self.tasks_service = None
-        
+
     def authenticate(self):
         """Google 인증"""
         try:
@@ -232,7 +232,7 @@ class GoogleConnector:
                 self.creds = Credentials.from_authorized_user_file(
                     GOOGLE_TOKEN_FILE, GOOGLE_SCOPES
                 )
-            
+
             if not self.creds or not self.creds.valid:
                 if self.creds and self.creds.expired and self.creds.refresh_token:
                     self.creds.refresh(Request())
@@ -241,28 +241,28 @@ class GoogleConnector:
                         GOOGLE_CREDENTIALS_FILE, GOOGLE_SCOPES
                     )
                     self.creds = flow.run_local_server(port=0)
-                
+
                 with open(GOOGLE_TOKEN_FILE, 'w') as token:
                     token.write(self.creds.to_json())
-            
+
             self.calendar_service = build('calendar', 'v3', credentials=self.creds)
             self.drive_service = build('drive', 'v3', credentials=self.creds)
             self.tasks_service = build('tasks', 'v1', credentials=self.creds)
-            
+
             logger.info("Google 인증 성공")
             return True
-            
+
         except Exception as e:
             logger.error(f"Google 인증 실패: {e}")
             return False
-    
+
     def get_calendar_events(self, days=7):
         """Google 캘린더 이벤트 조회"""
         from datetime import datetime, timedelta
-        
+
         start_time = datetime.utcnow().isoformat() + 'Z'
         end_time = (datetime.utcnow() + timedelta(days=days)).isoformat() + 'Z'
-        
+
         events_result = self.calendar_service.events().list(
             calendarId='primary',
             timeMin=start_time,
@@ -270,9 +270,9 @@ class GoogleConnector:
             singleEvents=True,
             orderBy='startTime'
         ).execute()
-        
+
         events = events_result.get('items', [])
-        
+
         return [{
             'id': event['id'],
             'subject': event.get('summary', ''),
@@ -283,7 +283,7 @@ class GoogleConnector:
             'attendees': [a['email'] for a in event.get('attendees', [])],
             'source': 'google'
         } for event in events]
-    
+
     def create_calendar_event(self, event_data):
         """Google 캘린더 이벤트 생성"""
         event = {
@@ -299,27 +299,27 @@ class GoogleConnector:
                 'timeZone': 'Asia/Seoul',
             }
         }
-        
+
         created_event = self.calendar_service.events().insert(
             calendarId='primary',
             body=event
         ).execute()
-        
+
         logger.info(f"Google 이벤트 생성: {event['summary']}")
         return created_event['id']
-    
+
     def get_drive_files(self, folder_id='root'):
         """Google Drive 파일 목록 조회"""
         query = f"'{folder_id}' in parents and trashed=false"
-        
+
         results = self.drive_service.files().list(
             q=query,
             fields="files(id, name, mimeType, size, modifiedTime, webViewLink)",
             pageSize=100
         ).execute()
-        
+
         files = results.get('files', [])
-        
+
         return [{
             'id': f['id'],
             'name': f['name'],
@@ -329,15 +329,15 @@ class GoogleConnector:
             'web_url': f['webViewLink'],
             'source': 'google_drive'
         } for f in files]
-    
+
     def get_tasks(self, tasklist='@default'):
         """Google Tasks 조회"""
         results = self.tasks_service.tasks().list(
             tasklist=tasklist
         ).execute()
-        
+
         tasks = results.get('items', [])
-        
+
         return [{
             'id': task['id'],
             'title': task.get('title', ''),
@@ -358,28 +358,28 @@ from datetime import datetime
 
 class NotionHub:
     """Notion을 중앙 허브로 활용"""
-    
+
     def __init__(self):
         self.client = Client(auth=NOTION_TOKEN)
         self.database_id = NOTION_DATABASE_ID
-    
+
     def create_unified_record(self, data, record_type):
         """통합 레코드 생성"""
         try:
             properties = self._build_properties(data, record_type)
-            
+
             response = self.client.pages.create(
                 parent={"database_id": self.database_id},
                 properties=properties
             )
-            
+
             logger.info(f"Notion 레코드 생성: {data.get('name', data.get('subject', 'Unknown'))}")
             return response['id']
-            
+
         except Exception as e:
             logger.error(f"Notion 레코드 생성 실패: {e}")
             return None
-    
+
     def _build_properties(self, data, record_type):
         """Notion 속성 구성"""
         base_properties = {
@@ -406,25 +406,25 @@ class NotionHub:
                 }
             }
         }
-        
+
         # 타입별 추가 속성
         if record_type == '캘린더':
             base_properties["시작"] = {"date": {"start": data['start']}}
             base_properties["종료"] = {"date": {"start": data['end']}}
             if data.get('location'):
                 base_properties["위치"] = {"rich_text": [{"text": {"content": data['location']}}]}
-        
+
         elif record_type == '파일':
             base_properties["URL"] = {"url": data.get('web_url', '')}
             base_properties["크기"] = {"number": int(data.get('size', 0))}
-        
+
         elif record_type == '작업':
             base_properties["상태"] = {"select": {"name": data.get('status', '진행중')}}
             if data.get('due_date'):
                 base_properties["마감일"] = {"date": {"start": data['due_date']}}
-        
+
         return base_properties
-    
+
     def search_records(self, query, record_type=None):
         """Notion 검색"""
         filter_conditions = {
@@ -437,7 +437,7 @@ class NotionHub:
                 }
             ]
         }
-        
+
         if record_type:
             filter_conditions["and"].append({
                 "property": "타입",
@@ -445,12 +445,12 @@ class NotionHub:
                     "equals": record_type
                 }
             })
-        
+
         results = self.client.databases.query(
             database_id=self.database_id,
             filter=filter_conditions
         )
-        
+
         return results['results']
 ```
 
@@ -469,94 +469,94 @@ class SyncWorkflows:
         self.ms = MSConnector()
         self.google = GoogleConnector()
         self.notion = NotionHub()
-        
+
         # 인증
         self.ms.authenticate()
         self.google.authenticate()
-    
+
     def sync_calendars_to_notion(self):
         """양쪽 캘린더를 Notion에 통합"""
         logger.info("=== 캘린더 동기화 시작 ===")
-        
+
         # MS 캘린더
         ms_events = self.ms.get_calendar_events(days=7)
         for event in ms_events:
             self.notion.create_unified_record(event, '캘린더')
-        
+
         # Google 캘린더
         google_events = self.google.get_calendar_events(days=7)
         for event in google_events:
             self.notion.create_unified_record(event, '캘린더')
-        
+
         logger.info(f"동기화 완료: MS {len(ms_events)}개, Google {len(google_events)}개")
-        
+
         return {
             'ms_count': len(ms_events),
             'google_count': len(google_events),
             'timestamp': datetime.now().isoformat()
         }
-    
+
     def sync_files_to_notion(self):
         """양쪽 파일을 Notion에 통합"""
         logger.info("=== 파일 동기화 시작 ===")
-        
+
         # OneDrive
         onedrive_files = self.ms.get_onedrive_files()
         for file in onedrive_files[:50]:  # 최근 50개
             self.notion.create_unified_record(file, '파일')
-        
+
         # Google Drive
         drive_files = self.google.get_drive_files()
         for file in drive_files[:50]:  # 최근 50개
             self.notion.create_unified_record(file, '파일')
-        
+
         logger.info(f"파일 동기화 완료: OneDrive {len(onedrive_files)}개, Drive {len(drive_files)}개")
-        
+
         return {
             'onedrive_count': len(onedrive_files),
             'drive_count': len(drive_files),
             'timestamp': datetime.now().isoformat()
         }
-    
+
     def sync_tasks_to_notion(self):
         """양쪽 작업을 Notion에 통합"""
         logger.info("=== 작업 동기화 시작 ===")
-        
+
         # MS To Do
         ms_tasks = self.ms.get_tasks()
         for task in ms_tasks:
             self.notion.create_unified_record(task, '작업')
-        
+
         # Google Tasks
         google_tasks = self.google.get_tasks()
         for task in google_tasks:
             self.notion.create_unified_record(task, '작업')
-        
+
         logger.info(f"작업 동기화 완료: MS {len(ms_tasks)}개, Google {len(google_tasks)}개")
-        
+
         return {
             'ms_count': len(ms_tasks),
             'google_count': len(google_tasks),
             'timestamp': datetime.now().isoformat()
         }
-    
+
     def cross_platform_event_create(self, event_data, target='both'):
         """양쪽 캘린더에 동시 생성"""
         results = {}
-        
+
         if target in ['both', 'microsoft']:
             ms_id = self.ms.create_calendar_event(event_data)
             results['microsoft'] = ms_id
-        
+
         if target in ['both', 'google']:
             google_id = self.google.create_calendar_event(event_data)
             results['google'] = google_id
-        
+
         # Notion에도 기록
         self.notion.create_unified_record(event_data, '캘린더')
-        
+
         return results
-    
+
     def generate_daily_report(self):
         """일일 통합 리포트 생성"""
         report = {
@@ -565,11 +565,11 @@ class SyncWorkflows:
             'files': self.sync_files_to_notion(),
             'tasks': self.sync_tasks_to_notion()
         }
-        
+
         # JSON으로 저장
         with open(f"data/report_{report['date']}.json", 'w', encoding='utf-8') as f:
             json.dump(report, f, ensure_ascii=False, indent=2)
-        
+
         logger.info(f"일일 리포트 생성 완료: {report['date']}")
         return report
 ```
@@ -593,28 +593,28 @@ logger.add(
 def main():
     """메인 실행"""
     logger.info("=== MS-Google Bridge 시작 ===")
-    
+
     workflows = SyncWorkflows()
-    
+
     # 즉시 실행
     print("\n1. 캘린더 동기화 중...")
     workflows.sync_calendars_to_notion()
-    
+
     print("\n2. 파일 동기화 중...")
     workflows.sync_files_to_notion()
-    
+
     print("\n3. 작업 동기화 중...")
     workflows.sync_tasks_to_notion()
-    
+
     print("\n✅ 초기 동기화 완료!")
     print("\n자동화 스케줄 시작...")
-    
+
     # 스케줄 설정
     schedule.every().day.at("09:00").do(workflows.generate_daily_report)
     schedule.every(30).minutes.do(workflows.sync_calendars_to_notion)
     schedule.every(2).hours.do(workflows.sync_files_to_notion)
     schedule.every(1).hours.do(workflows.sync_tasks_to_notion)
-    
+
     # 무한 루프 실행
     while True:
         schedule.run_pending()
@@ -672,7 +672,7 @@ def sync_all():
 def create_event(title, date):
     """크로스 플랫폼 이벤트 생성"""
     from datetime import datetime
-    
+
     workflows = SyncWorkflows()
     event = {
         'subject': title,
@@ -706,7 +706,7 @@ CMD ["python", "main.py"]
 
 ```yaml
 # docker-compose.yml
-version: '3.8'
+version: "3.8"
 
 services:
   bridge:
@@ -732,26 +732,26 @@ from datetime import datetime, timedelta
 def show_today_schedule():
     print("\n📅 오늘의 통합 일정\n")
     print("=" * 50)
-    
+
     # MS 캘린더 (인증은 최초 1회만)
     ms_account = Account(('YOUR_CLIENT_ID', 'YOUR_SECRET'))
     if not ms_account.is_authenticated:
         ms_account.authenticate()
-    
+
     schedule = ms_account.schedule()
     calendar = schedule.get_default_calendar()
-    
+
     today = datetime.now()
     tomorrow = today + timedelta(days=1)
-    
+
     print("\n[MS Outlook 일정]")
     for event in calendar.get_events(start=today, end=tomorrow):
         print(f"  {event.start.strftime('%H:%M')} - {event.subject}")
-    
+
     # Google 캘린더
     creds = Credentials.from_authorized_user_file('token.json')
     service = build('calendar', 'v3', credentials=creds)
-    
+
     print("\n[Google 캘린더 일정]")
     events = service.events().list(
         calendarId='primary',
@@ -760,7 +760,7 @@ def show_today_schedule():
         singleEvents=True,
         orderBy='startTime'
     ).execute().get('items', [])
-    
+
     for event in events:
         start = event['start'].get('dateTime', event['start'].get('date'))
         print(f"  {start[11:16]} - {event['summary']}")

@@ -10,18 +10,18 @@ Sub SendAllEML()
     Dim fileName As String
     Dim olApp As Object
     Dim olMail As Object
-    
+
     folderPath = "C:\Users\YourName\Downloads\eml_output\" ' ← 압축 해제 경로로 수정
     fileName = Dir(folderPath & "*.eml")
-    
+
     Set olApp = CreateObject("Outlook.Application")
-    
+
     Do While fileName <> ""
         Set olMail = olApp.CreateItemFromTemplate(folderPath & fileName)
         olMail.Send
         fileName = Dir()
     Loop
-    
+
     MsgBox "발송 완료!"
 End Sub
 ```

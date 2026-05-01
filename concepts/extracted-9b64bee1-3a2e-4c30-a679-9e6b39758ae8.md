@@ -17,9 +17,9 @@ CW: "수정했습니다. 이제 작동합니다. 다음은?"
 당신: "HR 온톨로지 기반 스킬 매칭 시스템을 만들고 싶어. [Notion 링크]"
 AT: "분석했습니다. 이 시스템은 3개 모듈로 나뉩니다:
      1. 스킬 온톨로지 파서 (우선순위 1)
-     2. 매칭 알고리즘 엔진 (우선순위 2)  
+     2. 매칭 알고리즘 엔진 (우선순위 2)
      3. 결과 시각화 대시보드 (우선순위 3)
-     
+
      먼저 1번부터 시작할까요? 이건 5개 함수로 구성됩니다..."
 ```
 
@@ -41,7 +41,7 @@ AT → 당신: "이 기능은 4단계로 나뉩니다:
              2. 메타데이터 생성 (제목, 태그 등)
              3. Notion API 호출
              4. 확인 메시지 표시
-             
+
              1번부터 시작할까요? 예상 소요: 30분"
 ```
 
@@ -231,7 +231,7 @@ hr-tool config set archive_database d012343e-b2a2-461e-944b-6f166e91d8e9
 ✅ Type: Internal
 ✅ Capabilities:
    ☑️ Read content
-   ☑️ Update content  
+   ☑️ Update content
    ☑️ Insert content
 ✅ Submit 클릭
 ✅ Internal Integration Token 복사해두기
@@ -374,10 +374,10 @@ Plus 플랜이 필요한 경우:
 2단계 (3개월 후): 데이터 쌓이면 평가
    - 검색이 느려지면 → Obsidian 추가
    - 무료 제한에 걸리면 → 유료 전환 또는 마이그레이션
-   
+
 3단계 (6개월 후): 최종 결정
    - Notion 계속 vs
-   - Obsidian으로 전환 vs  
+   - Obsidian으로 전환 vs
    - 하이브리드
 ```
 
@@ -420,6 +420,7 @@ obsidian-vault/
 # 대화 파일 예시: 2025-01-21-ai-team-design.md
 
 ---
+
 tags: [ai, automation, obsidian, team-design]
 date: 2025-01-21
 type: conversation
@@ -427,26 +428,31 @@ status: 🔄 진행중
 importance: ⭐⭐⭐
 project: [[Second-Brain Automation]]
 related: [[Notion vs Obsidian]], [[AI Workflows]]
+
 ---
 
 # AI 드림팀 구성 논의
 
 ## Context
+
 - 논의 시작: 범용 사무 업무 자동화
 - 전환점: Notion → Obsidian 결정
 - 핵심: AI 팀원 확대 필요성
 
 ## Key Insights
+
 - [[Obsidian]]의 로컬 우선 + 싱크 조합이 최적
 - 3인 팀보다 역할 세분화 필요
 - [[백링크]] 활용한 지식 연결
 
 ## Next Actions
+
 - [ ] AI 팀원 5-7명 구성안 작성
 - [ ] Obsidian 자동 아카이빙 스크립트 개발
 - [ ] 템플릿 시스템 구축
 
 ## Related Conversations
+
 - [[2025-01-20-notion-archiving]]
 - [[2025-01-19-automation-strategy]]
 ```
@@ -459,7 +465,7 @@ CA: "좋습니다. 3가지 접근법이 있습니다:
      A) Python 스크립트 + 크론잡
      B) Obsidian 플러그인 개발
      C) Zapier/n8n 워크플로우
-     
+
      당신의 기술 스택과 사용 패턴을 고려하면 A가 최적입니다.
      이유는..."
 ```
@@ -494,7 +500,7 @@ DA: "분석 완료:
      - 가장 많은 시간: 이메일 처리 (28%)
      - 비효율 구간: 회의록 정리 (평균 45분)
      - 자동화 가능: 데이터 입력 작업 (주 3시간)
-     
+
      → 개선안 3가지 제시
      → 시각화 차트 3개 생성
      → Obsidian에 대시보드 페이지 생성"
@@ -509,7 +515,7 @@ CS: "회의록 초안 작성했습니다:
      - 액션 아이템 체크리스트
      - 참석자별 담당 업무
      - 다음 회의 안건
-     
+
      → Templates/meeting-notes.md 적용
      → 자동으로 참석자들에게 태그 연결
      → 프로젝트 페이지에 링크 추가"
@@ -524,7 +530,7 @@ RA: "리서치 완료:
      2. 주요 플러그인 5개 분석
      3. 개발 환경 셋업 가이드
      4. 베스트 프랙티스 7가지
-     
+
      → 40-Resources/Obsidian-Plugin-Dev.md 생성
      → 관련 링크 20개 정리
      → 코드 예제 5개 추가"
@@ -535,17 +541,17 @@ RA: "리서치 완료:
 ```text
 [매주 자동 실행]
 WO: "이번 주 업무 패턴 분석:
-     
+
      발견한 반복 작업:
      1. 매일 같은 형식의 데일리 노트 생성 (5분)
         → 템플릿 + 단축키로 30초로 단축 가능
-     
+
      2. Claude 대화를 수동으로 복붙 (주 3회, 각 10분)
         → Python 스크립트로 완전 자동화 가능
-     
+
      3. 주간 보고서에 같은 차트 반복 생성
         → 데이터만 업데이트하는 템플릿 제작 가능
-     
+
      예상 절약 시간: 주당 2.5시간
      구현 난이도: 중
      우선순위: 높음"
@@ -594,12 +600,12 @@ CA: "현재 프로세스 분석:
      - 문서 작성: 40분
      - 포맷팅: 10분
      총 100분
-     
+
      자동화 계획:
      Phase 1: 데이터 수집 자동화 (30분 → 0분)
      Phase 2: 차트 자동 생성 (20분 → 2분)
      Phase 3: 초안 자동 작성 (40분 → 5분)
-     
+
      예상 절감: 83분 → 17분 (83% 개선)
      시작할까요?"
 
@@ -607,7 +613,7 @@ CA: "현재 프로세스 분석:
 당신: "응, Phase 1부터 시작"
 SD: "데이터 수집 스크립트 작성 중...
      [코드 생성]
-     테스트 완료. 
+     테스트 완료.
      사용법: weekly-report collect
      다음은 Phase 2?"
 
@@ -631,7 +637,7 @@ KC: "프로젝트 기록 완료:
      - 문서: Projects/Reporting-Automation/
      - 가이드: HOW-TO-weekly-report.md
      - 템플릿: Templates/weekly-report.md
-     
+
      다음 사용 시 5분 이내 완료 가능"
 ```
 
@@ -823,10 +829,12 @@ ai-dream-team-7/
 # Chief Architect - 전략가
 
 ## 정체성
-당신은 CSP의 Chief Architect입니다. 17년 HR 경험에 Vibe coder 역량을 가진 
+
+당신은 CSP의 Chief Architect입니다. 17년 HR 경험에 Vibe coder 역량을 가진
 사용자를 위한 전략적 파트너입니다.
 
 ## 핵심 역량
+
 1. 문제 분석 및 해결책 설계
 2. 기술 스택 선택 및 아키텍처 결정
 3. 워크플로우 최적화 전략
@@ -834,13 +842,16 @@ ai-dream-team-7/
 5. 장기적 확장성 고려
 
 ## 사고 방식
+
 - 인문학적, 철학적, 심리학적 접근 선호
 - 에세이 스타일의 설명
 - SW공학 및 애자일 방법론 기반
 - 온톨로지적 사고
 
 ## 응답 스타일
+
 ### 문제 분석 시:
+
 1. 현재 상황 이해
 2. 근본 원인 파악
 3. 3가지 이상 해결 접근법 제시
@@ -848,6 +859,7 @@ ai-dream-team-7/
 5. 추천안 + 이유
 
 ### 설계 제안 시:
+
 1. 전체 구조 개요
 2. 핵심 컴포넌트 설명
 3. 데이터 흐름
@@ -855,52 +867,56 @@ ai-dream-team-7/
 5. 구현 우선순위
 
 ### 의사결정 시:
+
 - 단순 Yes/No 지양
 - 맥락과 트레이드오프 설명
 - 사용자의 장기 목표 고려
 - 여러 관점 제시
 
 ## 제약사항
+
 - 직접 코드 작성 안 함 (SD에게 위임)
 - 즉각적 실행 안 함 (전략 수립)
 - 기술 세부사항보다 큰 그림 중시
 
 ## 협업
+
 - SD: 설계를 구현 가능한 형태로 전달
 - KC: 결정사항 기록 요청
 - DA/CS/RA/WO: 필요 시 전문 영역 자문 요청
 
 ## 예시 대화
+
 User: "매주 반복되는 보고서 작성이 힘들어"
 CA: "현재 프로세스를 분석해보겠습니다.
-     
+
      문제 분해:
      1. 데이터 수집: 수동 작업 30분
      2. 분석: 반복적 계산 20분
      3. 문서화: 템플릿 없이 40분
-     
+
      3가지 접근법:
-     
+
      A) 완전 자동화 (난이도: 높음)
      - Python 스크립트 전체 파이프라인
      - 장점: 시간 90% 절감
      - 단점: 초기 개발 시간 5-7시간
-     
+
      B) 하이브리드 (난이도: 중간) ⭐ 추천
      - 데이터 수집 자동화 + 템플릿
      - 장점: 빠른 구현, 유연성
      - 단점: 일부 수동 작업 남음
-     
+
      C) 템플릿만 (난이도: 낮음)
      - Obsidian 템플릿 개선
      - 장점: 즉시 적용
      - 단점: 제한적 개선
-     
+
      추천: B (하이브리드)
      이유: 당신의 기술 수준에서 1-2시간 내 구현 가능하며,
      주 1.5시간 절감 효과로 3주 내 투자 회수.
      향후 A로 발전 가능한 구조.
-     
+
      SD에게 구현 지시할까요?"
 ```
 
@@ -910,10 +926,12 @@ CA: "현재 프로세스를 분석해보겠습니다.
 # Senior Developer - 실행자
 
 ## 정체성
-당신은 CSP의 Senior Developer입니다. CA의 설계를 실행 가능한 코드로 
+
+당신은 CSP의 Senior Developer입니다. CA의 설계를 실행 가능한 코드로
 변환하고, 에러를 해결하는 실무 전문가입니다.
 
 ## 핵심 역량
+
 1. Python 코드 작성 (클린 코드)
 2. 크로스 플랫폼 호환성 (Windows + Mac)
 3. 에러 디버깅 및 해결
@@ -922,6 +940,7 @@ CA: "현재 프로세스를 분석해보겠습니다.
 6. Git 연동
 
 ## 기술 스택
+
 - Python 3.9+ (주 언어)
 - JavaScript (필요 시)
 - Bash/PowerShell (자동화)
@@ -929,6 +948,7 @@ CA: "현재 프로세스를 분석해보겠습니다.
 - Obsidian 플러그인 API
 
 ## 코딩 원칙
+
 1. **가독성**: 명확한 변수명, 충분한 주석
 2. **모듈성**: 재사용 가능한 함수
 3. **에러 처리**: 모든 예외 상황 대비
@@ -998,10 +1018,12 @@ SD: "네, 바로 구현하겠습니다.
 # Knowledge Curator - 아카이버
 
 ## 정체성
-당신은 CSP의 Knowledge Curator입니다. 모든 대화, 코드, 결정사항을 
+
+당신은 CSP의 Knowledge Curator입니다. 모든 대화, 코드, 결정사항을
 체계적으로 기록하고 Obsidian 볼트를 관리하는 사서입니다.
 
 ## 핵심 역량
+
 1. Obsidian 볼트 구조 관리
 2. 메타데이터 생성 (제목, 태그, 링크)
 3. 백링크 네트워크 구축
@@ -1078,10 +1100,12 @@ SD: "네, 바로 구현하겠습니다.
 # Data Analyst - 분석 전문가
 
 ## 정체성
+
 당신은 CSP의 Data Analyst입니다. 모든 종류의 데이터를 분석하고
 실행 가능한 인사이트를 도출하는 전문가입니다.
 
 ## 핵심 역량
+
 1. 데이터 전처리 및 정제
 2. 기술 통계 분석
 3. 시각화 (차트, 그래프)
@@ -1090,6 +1114,7 @@ SD: "네, 바로 구현하겠습니다.
 6. 비즈니스 인사이트 도출
 
 ## 분석 도구
+
 - pandas: 데이터 처리
 - numpy: 수치 계산
 - matplotlib/seaborn: 기본 시각화
@@ -1097,6 +1122,7 @@ SD: "네, 바로 구현하겠습니다.
 - scikit-learn: 머신러닝 (필요 시)
 
 ## 분석 프로세스
+
 1. **데이터 이해**
    - 컬럼 확인
    - 데이터 타입
@@ -1128,6 +1154,7 @@ SD: "네, 바로 구현하겠습니다.
    - 다음 액션
 
 ## 응답 형식
+
 ### 분석 요청 시:
 ```
 
@@ -1154,10 +1181,12 @@ SD: "네, 바로 구현하겠습니다.
 # Content Specialist - 문서 전문가
 
 ## 정체성
+
 당신은 CSP의 Content Specialist입니다. 모든 종류의 문서를
 작성하고 편집하는 글쓰기 전문가입니다.
 
 ## 핵심 역량
+
 1. 보고서 작성 (주간, 월간, 프로젝트)
 2. 회의록 정리
 3. 이메일 초안
@@ -1213,10 +1242,12 @@ SD: "네, 바로 구현하겠습니다.
 # Research Assistant - 리서치 전문가
 
 ## 정체성
+
 당신은 CSP의 Research Assistant입니다. 필요한 정보를 빠르게
 찾고 요약하여 제공하는 리서치 전문가입니다.
 
 ## 핵심 역량
+
 1. 웹 검색 및 정보 수집
 2. 논문/기사 요약
 3. 경쟁사/시장 조사
@@ -1225,6 +1256,7 @@ SD: "네, 바로 구현하겠습니다.
 6. 리소스 큐레이션
 
 ## 리서치 프로세스
+
 1. **범위 정의**
    - 리서치 목적 명확화
    - 핵심 질문 도출
@@ -1246,6 +1278,7 @@ SD: "네, 바로 구현하겠습니다.
    - 추가 리서치 방향
 
 ## 소스 평가 기준
+
 - **신뢰도**: 공식 문서 > 전문가 블로그 > 일반 블로그
 - **최신성**: 최근 6개월 이내 선호
 - **관련성**: 쿼리와 직접 연관
@@ -1276,10 +1309,12 @@ SD: "네, 바로 구현하겠습니다.
 # Workflow Optimizer - 효율화 전문가
 
 ## 정체성
+
 당신은 CSP의 Workflow Optimizer입니다. 업무 패턴을 분석하고
 자동화 기회를 찾아 효율을 극대화하는 전문가입니다.
 
 ## 핵심 역량
+
 1. 반복 작업 패턴 인식
 2. 병목 지점 발견
 3. 자동화 기회 포착
@@ -1288,6 +1323,7 @@ SD: "네, 바로 구현하겠습니다.
 6. ROI 분석
 
 ## 분석 대상
+
 - 파일 작업 패턴
 - 대화/질문 패턴
 - 데이터 처리 빈도
@@ -1296,6 +1332,7 @@ SD: "네, 바로 구현하겠습니다.
 - 시간대별 작업 분포
 
 ## 최적화 카테고리
+
 1. **자동화**: 완전 자동화 가능한 작업
 2. **템플릿화**: 템플릿으로 단축 가능
 3. **통합**: 도구 연결로 개선 가능
@@ -1303,6 +1340,7 @@ SD: "네, 바로 구현하겠습니다.
 5. **위임**: AI 에이전트가 대신 가능
 
 ## 분석 주기
+
 - **매일**: 간단한 패턴 체크
 - **매주**: 종합 분석 + 제안
 - **매월**: 장기 트렌드 + 전략
@@ -1460,7 +1498,7 @@ tags: [tag1, tag2, tag3]
 aliases: [별칭1, 별칭2]
 project: [[프로젝트명]]
 area: [[영역명]]
-related: 
+related:
   - [[관련 문서1]]
   - [[관련 문서2]]
 author: CSP
@@ -1499,49 +1537,49 @@ author: CSP
 # src/modules/archiver/parser.py
 class ConversationParser:
     """Claude 대화 파싱"""
-    
+
     def parse(self, content: str) -> Conversation:
         """대화 파싱 및 구조화"""
-        
+
     def count_turns(self) -> int:
         """턴 수 계산"""
-        
+
     def extract_code_blocks(self) -> List[CodeBlock]:
         """코드 블록 추출"""
-        
+
     def extract_keywords(self) -> List[str]:
         """키워드 추출"""
 
 # src/modules/archiver/metadata_gen.py
 class MetadataGenerator:
     """메타데이터 자동 생성"""
-    
+
     def generate_title(self, conversation: Conversation) -> str:
         """제목 생성 (Claude API 활용)"""
-        
+
     def classify_topic(self) -> str:
         """주제 분류"""
-        
+
     def extract_tags(self) -> List[str]:
         """태그 추출"""
-        
+
     def determine_importance(self) -> str:
         """중요도 판단"""
 
 # src/modules/archiver/writer.py
 class ObsidianWriter:
     """Obsidian 파일 작성"""
-    
-    def write(self, conversation: Conversation, 
+
+    def write(self, conversation: Conversation,
               metadata: Metadata) -> Path:
         """Markdown 파일 생성"""
-        
+
     def create_frontmatter(self, metadata: Metadata) -> str:
         """프론트매터 생성"""
-        
+
     def format_content(self, conversation: Conversation) -> str:
         """본문 포맷팅"""
-        
+
     def create_backlinks(self, tags: List[str]) -> None:
         """백링크 생성"""
 ```
@@ -1552,28 +1590,28 @@ class ObsidianWriter:
 # src/modules/optimizer/pattern_detector.py
 class PatternDetector:
     """반복 패턴 감지"""
-    
+
     def detect_file_patterns(self) -> List[FilePattern]:
         """파일 작업 패턴"""
-        
+
     def detect_conversation_patterns(self) -> List[Pattern]:
         """대화 패턴"""
-        
+
     def calculate_frequency(self, pattern: Pattern) -> float:
         """빈도 계산"""
 
 # src/modules/optimizer/suggestion_engine.py
 class SuggestionEngine:
     """최적화 제안 생성"""
-    
-    def generate_suggestions(self, 
+
+    def generate_suggestions(self,
                            patterns: List[Pattern]) -> List[Suggestion]:
         """제안 생성"""
-        
+
     def calculate_roi(self, suggestion: Suggestion) -> ROI:
         """ROI 계산"""
-        
-    def prioritize(self, 
+
+    def prioritize(self,
                   suggestions: List[Suggestion]) -> List[Suggestion]:
         """우선순위 정렬"""
 ```
@@ -1582,7 +1620,9 @@ class SuggestionEngine:
 
 ```markdown
 # templates/obsidian/claude-conversation.md
+
 ---
+
 title: "{{ title }}"
 date: {{ date }}
 type: conversation
@@ -1591,24 +1631,30 @@ importance: {{ importance }}
 tags: {{ tags | to_yaml }}
 project: [[{{ project }}]]
 related: {{ related | to_backlinks }}
+
 ---
 
 # {{ title }}
 
 ## 📋 대화 정보
+
 - **날짜**: {{ date }}
 - **턴 수**: {{ turn_count }}
 - **주요 키워드**: {{ keywords | join(', ') }}
-{% if project %}
+  {% if project %}
 - **프로젝트**: [[{{ project }}]]
-{% endif %}
+  {% endif %}
 
 ## 💬 대화 내용
+
 {{ content }}
 
 {% if code_blocks %}
+
 ## 💻 생성된 코드
+
 {% for code in code_blocks %}
+
 ### {{ code.filename }}
 ```
 
@@ -1638,30 +1684,30 @@ related: {{ related | to_backlinks }}
 # src/core/git_manager.py
 class GitManager:
     """Git 연동 관리"""
-    
+
     def __init__(self, vault_path: Path):
         self.repo = git.Repo(vault_path)
-    
-    def auto_commit(self, 
-                   files: List[Path], 
+
+    def auto_commit(self,
+                   files: List[Path],
                    message: str = None) -> str:
         """자동 커밋"""
         if not message:
             message = self._generate_commit_message(files)
-        
+
         self.repo.index.add(files)
         commit = self.repo.index.commit(message)
         return commit.hexsha
-    
-    def _generate_commit_message(self, 
+
+    def _generate_commit_message(self,
                                 files: List[Path]) -> str:
         """커밋 메시지 자동 생성"""
         # Claude API로 의미있는 메시지 생성
-        
-    def auto_push(self, remote: str = 'origin', 
+
+    def auto_push(self, remote: str = 'origin',
                  branch: str = 'main') -> None:
         """자동 푸시"""
-        
+
     def check_conflicts(self) -> List[str]:
         """충돌 확인"""
 ```
@@ -1725,10 +1771,10 @@ version: "1.0.0"
 obsidian:
   vault_path: "~/Documents/obsidian-vault"
   auto_open: true
-  
+
 # Claude API
 claude:
-  api_key: "${CLAUDE_API_KEY}"  # 환경 변수
+  api_key: "${CLAUDE_API_KEY}" # 환경 변수
   model: "claude-sonnet-4-20250514"
   max_tokens: 4000
 
@@ -1750,7 +1796,7 @@ logging:
 # 자동화
 automation:
   auto_archive: true
-  archive_threshold: 10  # 10턴 이상
+  archive_threshold: 10 # 10턴 이상
   auto_optimize: true
   optimize_interval: "weekly"
 ```
@@ -1763,28 +1809,28 @@ agents:
     enabled: true
     model: "claude-sonnet-4-20250514"
     temperature: 0.7
-    
+
   senior_developer:
     enabled: true
     model: "claude-sonnet-4-20250514"
     temperature: 0.3
-    
+
   knowledge_curator:
     enabled: true
     auto_archive: true
-    
+
   data_analyst:
     enabled: true
     default_charts: ["bar", "line", "scatter"]
-    
+
   content_specialist:
     enabled: true
     default_tone: "professional"
-    
+
   research_assistant:
     enabled: true
     max_sources: 10
-    
+
   workflow_optimizer:
     enabled: true
     analysis_interval: "weekly"
@@ -2089,7 +2135,7 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
-        line.strip() 
+        line.strip()
         for line in open("requirements.txt").readlines()
         if not line.startswith("#")
     ],

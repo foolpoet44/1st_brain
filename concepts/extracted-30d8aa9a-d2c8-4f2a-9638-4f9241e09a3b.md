@@ -52,6 +52,7 @@ result = dispatcher.dispatch("pulse_check", {"team": "EXG", "period": "2026-Q1"}
 # CLAUDE.md (Orchestrator 역할)
 
 ## Dispatch Rules
+
 - 사용자 요청에 "설문", "참여율", "Well-Being" 포함 → pulse_check_agent 호출
 - 사용자 요청에 "스킬", "ESCO", "역량" 포함 → escon_agent 호출
 - 사용자 요청에 "평가", "리더십", "360" 포함 → leadership_agent 호출

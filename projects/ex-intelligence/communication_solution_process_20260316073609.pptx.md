@@ -20,7 +20,7 @@ AX 기반 시스템화를 통한 가치 창출 및 AI 자동 분석 프로세스
 구성원
 월 1회
 
- EX Intelligence 구축 프로세스
+EX Intelligence 구축 프로세스
 
 ![preencoded.png](Image2.jpg)
 
@@ -72,7 +72,7 @@ Risk Signal
 분기 1회
 
 ![preencoded.png](Image14.jpg)
- 전 프로세스를 통해 가치있는 Value 제공
+전 프로세스를 통해 가치있는 Value 제공
 "Executive Dashboard"
 
 ![preencoded.png](Image8.jpg)
@@ -99,17 +99,18 @@ AI 자동 분석 및 행동제안 프로세스 (Intervention Flow)
 ![preencoded.png](Image27.jpg)
 
 ![preencoded.png](Image16.jpg)
+
 1. Data Sensing
 2. Anomaly Detection
 3. Deep Dive
 4. Action
- 수치 기준 초과/미달
-자동 필터링
- 전월 대비 통계적
-유의미한 급락 감지
- Risk Flag 조직 대상
-AI 심층 인터뷰 판정
- 맞춤형 액션 실행
-및 솔루션 전개
+   수치 기준 초과/미달
+   자동 필터링
+   전월 대비 통계적
+   유의미한 급락 감지
+   Risk Flag 조직 대상
+   AI 심층 인터뷰 판정
+   맞춤형 액션 실행
+   및 솔루션 전개
 
 ### Notes:

@@ -7,12 +7,12 @@
 ```html
 <!-- Step 1: CSS 변수로 디자인 시스템 정의 -->
 <style>
-:root {
-  --primary-color: #2E86AB;
-  --text-color: #333333;
-  --heading-font: 'Arial', sans-serif;
-  --body-font: 'Helvetica', sans-serif;
-}
+  :root {
+    --primary-color: #2e86ab;
+    --text-color: #333333;
+    --heading-font: "Arial", sans-serif;
+    --body-font: "Helvetica", sans-serif;
+  }
 </style>
 
 <!-- Step 2: HTML로 슬라이드 구조 작성 -->
@@ -43,10 +43,14 @@ pptx.layout = "LAYOUT_16x9";
 const { slide, placeholders } = await html2pptx("slide1.html", pptx);
 
 // placeholder에 차트 추가
-slide.addChart(pptx.charts.BAR, [
-  { name: "Q1", labels: ["매출"], values: [120] },
-  { name: "Q2", labels: ["매출"], values: [150] },
-], placeholders[0]);
+slide.addChart(
+  pptx.charts.BAR,
+  [
+    { name: "Q1", labels: ["매출"], values: [120] },
+    { name: "Q2", labels: ["매출"], values: [150] },
+  ],
+  placeholders[0],
+);
 
 await pptx.writeFile("output.pptx");
 ```
@@ -97,10 +101,12 @@ python scripts/thumbnail.py template.pptx
 **슬라이드는 0부터 시작 (첫 슬라이드 = 0)**
 
 ## 인트로 슬라이드
+
 - Slide 0: Title Slide - 메인 제목, 부제목, 로고
 - Slide 1: Section Divider - 섹션 구분용
 
-## 콘텐츠 슬라이드  
+## 콘텐츠 슬라이드
+
 - Slide 2: Two Column - 왼쪽 텍스트, 오른쪽 이미지
 - Slide 3: Bullet Points - 제목 + 3개 불릿
 - Slide 4: Chart Layout - 차트용 레이아웃
@@ -118,7 +124,7 @@ python scripts/thumbnail.py template.pptx
       "placeholder_type": "TITLE"
     },
     "shape-1": {
-      "type": "TEXT_BOX", 
+      "type": "TEXT_BOX",
       "text": "부제목",
       "default_font_size": 24.0
     }
@@ -178,17 +184,20 @@ const chartData = [
   {
     name: "실제",
     labels: ["1월", "2월", "3월"],
-    values: [10, 20, 15]
+    values: [10, 20, 15],
   },
   {
     name: "목표",
     labels: ["1월", "2월", "3월"],
-    values: [12, 18, 20]
-  }
+    values: [12, 18, 20],
+  },
 ];
 
 slide.addChart(pptx.charts.LINE, chartData, {
-  x: 1, y: 2, w: 8, h: 4
+  x: 1,
+  y: 2,
+  w: 8,
+  h: 4,
 });
 ```
 
@@ -196,7 +205,8 @@ slide.addChart(pptx.charts.LINE, chartData, {
 
 ```html
 <!-- HTML 방식 -->
-<div style="background-image: url('chart.png'); 
-            width: 500px; height: 300px;">
-</div>
+<div
+  style="background-image: url('chart.png'); 
+            width: 500px; height: 300px;"
+></div>
 ```

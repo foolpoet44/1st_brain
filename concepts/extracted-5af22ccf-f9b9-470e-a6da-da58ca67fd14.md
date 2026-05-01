@@ -91,7 +91,7 @@ JSON:   420-514 KB  (3-4배 증가)
 ```text
 ✅ Excel + JSON 하이브리드
    Excel (Master) → JSON 자동 변환 → 웹앱 배포
-   
+
    빌드 파이프라인:
    1. Excel 읽기
    2. JSON 변환 (계층적 구조)
@@ -103,9 +103,9 @@ JSON:   420-514 KB  (3-4배 증가)
 
 ```text
 ✅ PostgreSQL + Redis + JSON
-   
+
    DB (Master) → Redis (캐시) → JSON (API export)
-   
+
    장점:
    • 대규모 트래픽 대응
    • 복잡한 쿼리 지원
@@ -135,7 +135,7 @@ Excel (문제은행_통합_최종결과_v2.xlsx)
   • 피벗 테이블, 필터 활용
   • 조건부 서식
   ↓
-[Production Database]  
+[Production Database]
 SQLite (question_bank.db)
   • 시험지 자동 생성 엔진
   • 출제 이력 자동 관리
@@ -282,10 +282,12 @@ questions ──1:N── exam_questions ──N:1── exam_papers
 # Sprint 1 (Week 1-2): 데이터 모델
 
 ## Goals
+
 - SQLite 스키마 생성
 - Excel → SQLite 동기화
 
 ## Tasks (from PRD Section 10)
+
 - [ ] questions 테이블 생성
 - [ ] exam_papers 테이블 생성
 - [ ] exam_questions 테이블 생성
@@ -294,6 +296,7 @@ questions ──1:N── exam_questions ──N:1── exam_papers
 - [ ] 동기화 스크립트
 
 ## Acceptance Criteria (from PRD Section 4)
+
 - ✅ 672개 문제 마이그레이션
 - ✅ 데이터 검증 통과
 - ✅ 쿼리 성능 < 1초

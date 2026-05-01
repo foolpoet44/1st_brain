@@ -9,8 +9,8 @@
 messages: [
   { role: "user", content: "안녕" },
   { role: "assistant", content: "안녕하세요" },
-  { 
-    role: "user", 
+  {
+    role: "user",
     content: [
       { type: "tool_result", tool_use_id: "toolu_xxx", content: "..." }
     ]
@@ -20,15 +20,15 @@ messages: [
 // ✅ 올바른 예시
 messages: [
   { role: "user", content: "안녕" },
-  { 
-    role: "assistant", 
+  {
+    role: "assistant",
     content: [
       { type: "text", text: "검색하겠습니다" },
       { type: "tool_use", id: "toolu_xxx", name: "web_search", input: {...} }
     ]
   },
-  { 
-    role: "user", 
+  {
+    role: "user",
     content: [
       { type: "tool_result", tool_use_id: "toolu_xxx", content: "..." }
     ]
@@ -51,22 +51,24 @@ const cleanMessages = messages.filter((msg, index) => {
 ```javascript
 function validateMessages(messages) {
   const toolUseIds = new Set();
-  
+
   for (let i = 0; i < messages.length; i++) {
     const msg = messages[i];
-    
+
     if (msg.role === "assistant") {
       // tool_use 수집
-      const toolUses = msg.content.filter(c => c.type === "tool_use");
-      toolUses.forEach(tu => toolUseIds.add(tu.id));
+      const toolUses = msg.content.filter((c) => c.type === "tool_use");
+      toolUses.forEach((tu) => toolUseIds.add(tu.id));
     }
-    
+
     if (msg.role === "user") {
       // tool_result 검증
-      const toolResults = msg.content.filter(c => c.type === "tool_result");
-      toolResults.forEach(tr => {
+      const toolResults = msg.content.filter((c) => c.type === "tool_result");
+      toolResults.forEach((tr) => {
         if (!toolUseIds.has(tr.tool_use_id)) {
-          console.error(`Orphan tool_result: ${tr.tool_use_id} at message ${i}`);
+          console.error(
+            `Orphan tool_result: ${tr.tool_use_id} at message ${i}`,
+          );
         }
       });
     }
@@ -87,11 +89,11 @@ const response = await fetch("https://api.anthropic.com/v1/messages", {
     model: "claude-sonnet-4-20250514",
     max_tokens: 1000,
     messages: [
-      { 
-        role: "user", 
-        content: "새로운 대화 시작" 
-      }
-    ]
-  })
+      {
+        role: "user",
+        content: "새로운 대화 시작",
+      },
+    ],
+  }),
 });
 ```

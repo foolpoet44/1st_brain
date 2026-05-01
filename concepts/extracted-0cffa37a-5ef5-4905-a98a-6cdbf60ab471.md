@@ -123,7 +123,7 @@ class PersonalAXCopilot:
         self.skill_level = user_profile.ax_maturity_level
         self.work_context = user_profile.department_workflows
         self.learning_style = user_profile.preferences
-    
+
     def recommend_next_action(self):
         """
         - 현재 업무 패턴 분석
@@ -137,7 +137,7 @@ class PersonalAXCopilot:
             return self.suggest_workflow_redesign()
         else:
             return self.suggest_innovation_projects()
-    
+
     def track_impact(self):
         """실시간으로 AI 도구 사용 효과 측정"""
         return {
@@ -175,16 +175,16 @@ class PersonalAXCopilot:
 const generateLearningPath = (user) => {
   const assessment = assessCurrentLevel(user);
   const goalAlignment = alignWithBusinessGoals(user.department);
-  
+
   return {
     week1_2: "Foundation - AI 기초 & 프롬프트 엔지니어링",
     week3_4: "Tools Mastery - Cursor/Replit 실습",
     week5_6: "First MVP - 본인 업무 자동화 도구 개발",
     week7_8: "Collaboration - 팀 프로젝트 참여",
     week9_10: "Production - 실제 배포 & 운영",
-    week11_12: "Teaching - 후배 멘토링"
-  }
-}
+    week11_12: "Teaching - 후배 멘토링",
+  };
+};
 ```
 
 ### Extracted Code (text)
@@ -233,14 +233,17 @@ Notion (학습 허브)
 ## 이번 주 (2026.02.10 - 02.14)
 
 ### P0 - 반드시 완료 (3개 이하로 제한)
+
 - [ ] Vibe Coding 플랫폼 선정 최종 확정
 - [ ] Physical AI 파일럿 라인 섭외 미팅
 
 ### P1 - 가능하면 완료
+
 - [ ] Skill Ontology 1차 구조 스케치
 - [ ] 공통업무 자동화 후보 3건 리스트업
 
 ### P2 - 시간 남으면
+
 - [ ] 벤치마킹 자료 읽기
 ```
 
@@ -250,24 +253,29 @@ Notion (학습 허브)
 # 2026년 6주차 회고 (2/10-2/14)
 
 ## 🎉 이번 주 Wins (자동 로드)
+
 1. Cursor 도입 결정 - 팀 미팅에서 만장일치
 2. 첫 Vibe Coding MVP: 휴가 신청 자동화 봇 완성
 3. Physical AI 컨퍼런스 참석 - 3개 인사이트 획득
 
 ## 📊 숫자로 보는 한 주
+
 - 완료한 작업: 7개
 - OKR 진척: +5%
 - 학습 시간: 3.5시간
 
 ## 🤔 What Went Well
+
 - Vibe Coding이 생각보다 쉬웠음
 - 동료들 반응이 긍정적
 
 ## 😅 What Could Be Better
+
 - Physical AI 파일럿 진행 늦어짐
 - 주말에 번아웃 느낌
 
 ## 🎯 다음 주 Focus (자동 로드)
+
 - P0 작업 3개
 ```
 
@@ -281,9 +289,11 @@ Notion (학습 허브)
 ## ⚡ Quick Check (매일 아침 5분)
 
 ### 오늘 해야 할 일 (P0만 자동 표시)
+
 @database(Tasks, filter: 담당주차=이번주 AND 우선순위=P0)
 
 ### 위험 신호 🚨
+
 @database(OKR Tracker, filter: 진척률 < 30% AND 분기 = Current)
 
 ---
@@ -291,31 +301,36 @@ Notion (학습 허브)
 ## 📈 진행 상황 (주간 업데이트)
 
 ### OKR 달성도
+
 @database(OKR Tracker, view: Progress Chart)
 
-| 목표 | 목표치 | 현재 | 진척률 | 상태 |
-|------|--------|------|--------|------|
-| Vibe Coding MVP | 5건 | 2건 | 40% | 🟡 |
-| Physical AI Pool | 30명 | 8명 | 27% | 🔴 |
-| 생산성 개선 | 10% | 3% | 30% | 🔴 |
+| 목표             | 목표치 | 현재 | 진척률 | 상태 |
+| ---------------- | ------ | ---- | ------ | ---- |
+| Vibe Coding MVP  | 5건    | 2건  | 40%    | 🟡   |
+| Physical AI Pool | 30명   | 8명  | 27%    | 🔴   |
+| 생산성 개선      | 10%    | 3%   | 30%    | 🔴   |
 
 **인사이트:**
+
 - Physical AI 육성이 병목 → Q2에 집중 투입 필요
 - Vibe Coding은 순조로움
 
 ---
 
 ## 🎯 이번 주 Sprint (자동 갱신)
+
 @database(Tasks, view: Weekly Sprint)
 
 ---
 
 ## 💡 최근 Wins (동기부여)
+
 @database(Wins Journal, limit: 5, sort: 날짜 desc)
 
 ---
 
 ## 📚 학습 대기열
+
 - [ ] Cursor 고급 기능 튜토리얼 (30분)
 - [ ] Physical AI 백서 읽기 (1시간)
 - [ ] Skill Ontology 설계 사례 연구
@@ -325,21 +340,25 @@ Notion (학습 허브)
 ## 🔄 주간 루틴 체크리스트
 
 ### 월요일 아침
+
 - [ ] 지난주 회고 작성
 - [ ] 이번주 P0 작업 3개 선정
 - [ ] OKR 진척률 업데이트
 
 ### 수요일 점심
+
 - [ ] Mid-week check: P0 진행 상황
 - [ ] 필요시 우선순위 재조정
 
 ### 금요일 오후
+
 - [ ] 완료한 작업 → Wins Journal 기록
 - [ ] 다음주 Backlog 정리
 
 ---
 
 ## 📞 Quick Links
+
 - [전사 AX 성숙도 Survey 폼]()
 - [Vibe Coding 플랫폼 비교표]()
 - [Physical AI 벤치마킹 자료]()
@@ -365,7 +384,7 @@ Notion API: OKR Tracker 조회
 ```text
 트리거: Notion Tasks DB의 상태가 "Done"으로 변경
 ↓
-Notion API: 
+Notion API:
   1. 관련 OKR의 "현재값" +1
   2. Wins Journal에 새 항목 생성
 ↓
@@ -380,7 +399,7 @@ Slack: 축하 메시지 + 🎉
 ```text
 트리거: 매주 금요일 오후 4시
 ↓
-Notion API: 
+Notion API:
   - 이번 주 완료한 Tasks 조회
   - Wins Journal 항목 조회
   - OKR 진척률 계산
@@ -397,9 +416,9 @@ Apple Notes: 같은 내용 백업
 
 ```text
 /template → Database → Full page
-   
+
    1️⃣ AX OKR Tracker
-   2️⃣ AX Tasks Pipeline  
+   2️⃣ AX Tasks Pipeline
    3️⃣ AX Wins Journal
 ```
 
@@ -409,11 +428,11 @@ Apple Notes: 같은 내용 백업
 목표 1: Vibe Coding MVP 5건 개발
    - 핵심지표: 5
    - 분기: Q1-Q2
-   
+
    목표 2: Physical AI Leader Pool 30명
    - 핵심지표: 30
    - 분기: Q2-Q3
-   
+
    목표 3: 생산성 10% 개선
    - 핵심지표: 10
    - 분기: Q1-Q4
@@ -426,7 +445,7 @@ You: "이번 주 계획 리뷰해줘"
 
 [Notion 대시보드 스크린샷 첨부]
 
-Claude: 
+Claude:
 - P0 작업이 3개인데 실현 가능해 보입니다
 - Physical AI 관련 작업이 없네요 - 의도적인가요?
 - 추천: Vibe Coding 플랫폼 선정 전에 벤치마킹 1개 추가
@@ -471,6 +490,7 @@ Claude:
 
 ```markdown
 ## 2월: 인프라 구축 (Week 1-4)
+
 - [ ] Vibe Coding 플랫폼 선정 (Cursor vs Replit vs Bolt)
 - [ ] 학습 커리큘럼 설계 (6주 과정)
 - [ ] 파일럿 그룹 10명 모집 (각 부서 2명씩)
@@ -478,33 +498,40 @@ Claude:
 - [ ] Quick Win 후보 업무 10개 리스트업
 
 ## 3월: 1차 교육 & 첫 MVP (Week 5-8)
+
 - [ ] Week 1-2: 기초 교육 (프롬프트 엔지니어링)
 - [ ] Week 3-4: 실습 (간단한 도구 만들기)
 - [ ] 🎯 **MVP 1: 휴가 신청 자동화 봇** (3월 말 완료)
 
 ## 4월: 2차 MVP 개발 (Week 9-13)
+
 - [ ] 파일럿 그룹 피드백 수렴
 - [ ] 2기 모집 (20명 추가)
 - [ ] 🎯 **MVP 2: 주간 보고서 자동 생성기** (4월 말 완료)
 
 ## 5월: 3차 MVP & 확산 (Week 14-17)
+
 - [ ] 성공 사례 전사 공유 (Town Hall)
 - [ ] 🎯 **MVP 3: 회의록 요약 AI** (5월 말 완료)
 - [ ] Code Library 구축 시작
 
 ## 6-8월: 심화 & 안정화
+
 - [ ] 기존 MVP 운영 최적화
 - [ ] 사용률 모니터링 & 개선
 
 ## 9월: 4차 MVP (Week 30-34)
+
 - [ ] 🎯 **MVP 4: 데이터 분석 대시보드 생성기**
 - [ ] 3기 모집 (심화 과정)
 
 ## 10-11월: 최종 MVP (Week 35-43)
+
 - [ ] 🎯 **MVP 5: 고객 문의 응답 템플릿 AI**
 - [ ] 전체 시민개발자 네트워크 구축
 
 ## 12월: 성과 측정 (Week 44-48)
+
 - [ ] 5개 MVP 사용 통계 집계
 - [ ] ROI 보고서 작성
 - [ ] 27년 로드맵 수립
@@ -514,6 +541,7 @@ Claude:
 
 ```markdown
 ## 2월: 후보군 발굴 & 체계 설계 (Week 1-4)
+
 - [ ] Physical AI Skill Ontology 정의
   - Technical: IoT, Digital Twin, 로봇 제어
   - Domain: 공정 지식, 품질 관리
@@ -523,50 +551,60 @@ Claude:
 - [ ] 파일럿 라인 선정 (자동화 효과 큰 곳)
 
 ## 3월: 1차 그룹 온보딩 (10명) (Week 5-8)
+
 - [ ] 선발 기준 확정 (현장 경험 + 학습 의지)
 - [ ] Onboarding Session (Physical AI 개요)
 - [ ] 🎯 **첫 10명 Pool 구축 완료**
 - [ ] Digital Twin 기초 교육 (Omniverse 소개)
 
 ## 4월: 실습 프로젝트 시작 (Week 9-13)
+
 - [ ] 파일럿 라인 현황 분석 (병목 지점 식별)
 - [ ] IoT 센서 데이터 수집 시작
 - [ ] Digital Twin 1차 모델링
 
 ## 5월: 2차 그룹 확대 (20명 누적) (Week 14-17)
+
 - [ ] 2차 모집 (10명 추가)
 - [ ] 🎯 **누적 20명 Pool 확보**
 - [ ] 1차 그룹 멘토-멘티 매칭
 
 ## 6월: 심화 교육 (Week 18-22)
+
 - [ ] AI 기반 예측 유지보수 교육
 - [ ] 로봇 자동화 워크샵
 - [ ] Digital Twin 고급 과정
 
 ## 7월: 파일럿 프로젝트 가동 (Week 23-26)
+
 - [ ] Smart Factory 파일럿 정식 가동
 - [ ] 실시간 모니터링 체계 구축
 - [ ] 🎯 **25명 Pool (5명 추가 모집)**
 
 ## 8월: 중간 평가 & 조정 (Week 27-30)
+
 - [ ] Skill Assessment (LV 측정)
 - [ ] 부족 영역 보충 교육
 - [ ] 성과 사례 문서화
 
 ## 9월: 최종 확대 (Week 31-35)
+
 - [ ] 3차 모집 (5명 추가)
 - [ ] 🎯 **목표 30명 달성**
 - [ ] 전문가 인증 체계 확립
 
 ## 10월: 실전 배치 (Week 36-39)
+
 - [ ] 각 전문가를 실제 프로젝트에 배치
 - [ ] 멘토링 체계 가동
 
 ## 11월: 지속가능성 확보 (Week 40-43)
+
 - [ ] 내부 교육 과정 정식화
 - [ ] Knowledge Base 구축
 
 ## 12월: 성과 측정 (Week 44-48)
+
 - [ ] 30명 최종 스킬 검증
 - [ ] Smart Factory 파일럿 성과 측정
 - [ ] 27년 확대 계획 수립
@@ -576,6 +614,7 @@ Claude:
 
 ```markdown
 ## 2월: Baseline 측정 (Week 1-4)
+
 - [ ] AX 성숙도 Survey 1차 실시 (전체 구성원)
 - [ ] 현재 생산성 Baseline 측정
   - 공통업무 소요 시간 추적 (보고서, 회의록, 데이터 입력)
@@ -583,6 +622,7 @@ Claude:
 - [ ] 🎯 **기준선 확정: 성숙도 X점, 생산성 Y시간**
 
 ## 3월: Quick Win & 개선과제 착수 (Week 5-8)
+
 - [ ] 5대 환경 개선과제 확정
   1. AI Tool 접근성
   2. 학습 콘텐츠 부족
@@ -593,6 +633,7 @@ Claude:
 - [ ] 공통업무 워크플로우 분석 착수
 
 ## 4월: 워크플로우 재설계 1차 (Week 9-13)
+
 - [ ] 보고서 작성 프로세스 재설계
   - AS-IS: 수작업 취합 → 검토 → 작성
   - TO-BE: AI 자동 취합 → 초안 생성 → 인간 검토
@@ -600,41 +641,49 @@ Claude:
 - [ ] 파일럿 부서 적용 (영업팀)
 
 ## 5월: 효과 측정 1차 (Week 14-17)
+
 - [ ] 파일럿 부서 생산성 측정
 - [ ] 개선 3: 성과 인정 체계 도입 (AX Champion 제도)
 - [ ] 워크플로우 재설계 2차 착수 (회의 프로세스)
 
 ## 6월: 중간 Survey (Week 18-22)
+
 - [ ] AX 성숙도 Survey 2차 (중간 점검)
 - [ ] 🎯 **목표 중간 점검: +5% 달성 확인**
 - [ ] 개선 4: 협업 플랫폼 통합 (Slack + Notion)
 
 ## 7월: 전사 확산 시작 (Week 23-26)
+
 - [ ] 재설계된 워크플로우 전사 확대
 - [ ] AI Agent 개발 착수 (반복 업무 자동화)
 - [ ] 개선 5: 기술 지원 데스크 운영
 
 ## 8월: AI Agent 적용 (Week 27-30)
+
 - [ ] AI Agent 1호: 데이터 입력 자동화
 - [ ] AI Agent 2호: 일정 관리 어시스턴트
 - [ ] 사용자 피드백 수집
 
 ## 9월: 최적화 (Week 31-35)
+
 - [ ] AI Agent 고도화
 - [ ] 워크플로우 미세 조정
 - [ ] 🎯 **생산성 +7% 확인**
 
 ## 10월: 공통 AX Tool 확정 (Week 36-39)
+
 - [ ] 검증된 Tool만 선별 (5-7개)
 - [ ] 전사 표준 Tool로 확정
 - [ ] 교육 자료 정비
 
 ## 11월: 최종 Survey 준비 (Week 40-43)
+
 - [ ] 개별 인터뷰 (정성적 피드백)
 - [ ] 사례 수집 (Before/After)
 - [ ] AX 성숙도 Survey 3차 (최종)
 
 ## 12월: 성과 측정 & 보고 (Week 44-48)
+
 - [ ] 🎯 **최종 측정: 성숙도 +15%, 생산성 +10%**
 - [ ] 경영진 보고서 작성
 - [ ] 성공 요인 / 실패 요인 분석
@@ -646,26 +695,26 @@ Claude:
 ```markdown
 ### P0 - 이번 주 반드시 (Week 2 기준)
 
-| 작업 | OKR | 카테고리 | 예상시간 | 상태 |
-|------|-----|----------|----------|------|
-| Cursor vs Replit 데모 테스트 | OKR1 | Vibe Coding | 3h | In Progress |
-| Physical AI 후보 10명 리스트 확정 | OKR2 | Physical AI | 2h | Todo |
-| AX 성숙도 Survey 문항 검토 | OKR3 | 환경개선 | 1h | Done ✅ |
+| 작업                              | OKR  | 카테고리    | 예상시간 | 상태        |
+| --------------------------------- | ---- | ----------- | -------- | ----------- |
+| Cursor vs Replit 데모 테스트      | OKR1 | Vibe Coding | 3h       | In Progress |
+| Physical AI 후보 10명 리스트 확정 | OKR2 | Physical AI | 2h       | Todo        |
+| AX 성숙도 Survey 문항 검토        | OKR3 | 환경개선    | 1h       | Done ✅     |
 
 ### P1 - 가능하면
 
-| 작업 | OKR | 카테고리 | 예상시간 | 상태 |
-|------|-----|----------|----------|------|
-| Notion Academy 페이지 구조 설계 | OKR1 | Vibe Coding | 2h | Todo |
-| Skill Ontology 1차 드래프트 | OKR2 | Physical AI | 4h | Todo |
-| 공통업무 시간 측정 도구 선정 | OKR3 | 환경개선 | 1h | Todo |
+| 작업                            | OKR  | 카테고리    | 예상시간 | 상태 |
+| ------------------------------- | ---- | ----------- | -------- | ---- |
+| Notion Academy 페이지 구조 설계 | OKR1 | Vibe Coding | 2h       | Todo |
+| Skill Ontology 1차 드래프트     | OKR2 | Physical AI | 4h       | Todo |
+| 공통업무 시간 측정 도구 선정    | OKR3 | 환경개선    | 1h       | Todo |
 
 ### P2 - 시간 나면
 
-| 작업 | OKR | 카테고리 | 예상시간 | 상태 |
-|------|-----|----------|----------|------|
-| AI 뉴스레터 구독 (Physical AI) | OKR2 | 학습 | 0.5h | Todo |
-| 벤치마킹 자료 읽기 | All | 학습 | 1h | Todo |
+| 작업                           | OKR  | 카테고리 | 예상시간 | 상태 |
+| ------------------------------ | ---- | -------- | -------- | ---- |
+| AI 뉴스레터 구독 (Physical AI) | OKR2 | 학습     | 0.5h     | Todo |
+| 벤치마킹 자료 읽기             | All  | 학습     | 1h       | Todo |
 ```
 
 ### Extracted Code (text)
@@ -675,7 +724,7 @@ Claude:
 ↓
 Notion API 호출:
   - OKR 1 진척률 조회
-  - OKR 2 진척률 조회  
+  - OKR 2 진척률 조회
   - OKR 3 진척률 조회
   - 이번 주 완료 Tasks 수
   - 이번 주 Wins 수
@@ -702,7 +751,7 @@ Slack DM 발송
   IF OKR 진척률 < (목표 / 남은 주수) THEN
     → ⚠️ 리스크 알림
 ↓
-Notion: 
+Notion:
   - OKR 카드에 🚨 이모지 추가
   - Status를 "위험"으로 변경
 ↓
@@ -722,7 +771,7 @@ Notion API:
   - OKR 진척률 업데이트
 ↓
 Claude API:
-  "이 성공을 한 줄로 축하해주고, 
+  "이 성공을 한 줄로 축하해주고,
   다음 마일스톤까지 무엇이 필요한지 제안해줘"
 ↓
 Slack: 축하 메시지 + 다음 액션 제안
@@ -736,7 +785,7 @@ Notion 앱 열기
 1. 대시보드 Quick Check
    → 오늘 할 P0 3개 확인
    → 🚨 위험 신호 있는지 체크
-   
+
 2. 멘탈 체크
    → "오늘은 어느 OKR에 집중할까?"
    → Vibe Coding 날 / Physical AI 날 / 환경개선 날
@@ -748,24 +797,27 @@ Notion 앱 열기
 # 🚀 2026 AX 프로젝트 통합 대시보드
 
 ## ⚡ Today's Focus (매일 아침 자동 갱신)
+
 **오늘은 [Vibe Coding / Physical AI / 환경개선] 날**
 
 ### 오늘 할 일 (P0만)
+
 - [ ] [자동 로드]
-- [ ] [자동 로드]  
+- [ ] [자동 로드]
 - [ ] [자동 로드]
 
 ---
 
 ## 📊 3-OKR 스코어보드 (실시간)
 
-| OKR | 목표 | 현재 | 진척 | 예상 | 상태 |
-|-----|------|------|------|------|------|
-| 1. Vibe Coding MVP | 5 | 2 | 40% | 45% | 🟢 |
-| 2. Physical AI Pool | 30 | 8 | 27% | 30% | 🟡 |
-| 3. AX 성숙도/생산성 | 15%/10% | 3%/2% | 20% | 25% | 🔴 |
+| OKR                 | 목표    | 현재  | 진척 | 예상 | 상태 |
+| ------------------- | ------- | ----- | ---- | ---- | ---- |
+| 1. Vibe Coding MVP  | 5       | 2     | 40%  | 45%  | 🟢   |
+| 2. Physical AI Pool | 30      | 8     | 27%  | 30%  | 🟡   |
+| 3. AX 성숙도/생산성 | 15%/10% | 3%/2% | 20%  | 25%  | 🔴   |
 
 **종합 건강도: 🟡 주의 필요**
+
 - ✅ OKR 1 순조로움
 - ⚠️ OKR 2 약간 느림
 - 🚨 OKR 3 집중 필요
@@ -775,31 +827,35 @@ Notion 앱 열기
 ## 🎯 이번 주 Sprint (Week 6: 2/10-2/14)
 
 ### OKR 1 관련
+
 @database(Tasks, filter: OKR=1 AND 주차=이번주)
 
-### OKR 2 관련  
+### OKR 2 관련
+
 @database(Tasks, filter: OKR=2 AND 주차=이번주)
 
 ### OKR 3 관련
+
 @database(Tasks, filter: OKR=3 AND 주차=이번주)
 
 ---
 
 ## 💡 이번 주 Wins (동기부여)
+
 @database(Wins Journal, limit: 5, sort: 날짜 desc)
 
 ---
 
 ## 📅 다가오는 마일스톤
 
-| 날짜 | OKR | 마일스톤 |
-|------|-----|----------|
-| 2/28 | OKR 1 | 플랫폼 선정 완료 |
-| 2/28 | OKR 2 | 1차 10명 Pool 확보 |
-| 2/28 | OKR 3 | Baseline 측정 완료 |
-| 3/31 | OKR 1 | 첫 MVP 완성 |
-| 6/30 | ALL | 중간 점검 (50% 달성) |
-| 12/31 | ALL | 최종 목표 달성 |
+| 날짜  | OKR   | 마일스톤             |
+| ----- | ----- | -------------------- |
+| 2/28  | OKR 1 | 플랫폼 선정 완료     |
+| 2/28  | OKR 2 | 1차 10명 Pool 확보   |
+| 2/28  | OKR 3 | Baseline 측정 완료   |
+| 3/31  | OKR 1 | 첫 MVP 완성          |
+| 6/30  | ALL   | 중간 점검 (50% 달성) |
+| 12/31 | ALL   | 최종 목표 달성       |
 
 ---
 
@@ -813,6 +869,7 @@ Notion 앱 열기
 ---
 
 ## 📈 Progress Chart
+
 @gallery(OKR Tracker, view: Progress Bar)
 ```
 
@@ -996,24 +1053,24 @@ CREATE TABLE weekly_reviews (
     year INTEGER NOT NULL,
     week_start_date DATE,
     week_end_date DATE,
-    
+
     -- 정량 데이터
     tasks_completed INTEGER,
     okr1_progress REAL,
     okr2_progress REAL,
     okr3_progress REAL,
     total_hours REAL,
-    
+
     -- 정성 데이터
     highlights TEXT,  -- JSON 배열
     went_well TEXT,
     could_be_better TEXT,
     next_week_focus TEXT,
-    
+
     -- AI 생성 인사이트
     ai_insights TEXT,
     ai_recommendations TEXT,
-    
+
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     UNIQUE(week_number, year)
 );
@@ -1110,19 +1167,19 @@ Advanced Features (Week 5-6)
 def render_dashboard():
     # 1. 오늘 P0 작업 로드
     today_tasks = get_today_p0_tasks()
-    
+
     # 2. OKR 현황 로드
     okr_status = calculate_okr_status()
-    
+
     # 3. 최근 Wins 로드
     recent_wins = get_recent_wins(limit=5)
-    
+
     # 4. 다음 마일스톤 계산
     upcoming = get_upcoming_milestones()
-    
+
     # 5. AI 인사이트 (캐시 활용)
     insights = get_cached_insights()
-    
+
     # 6. 렌더링
     st.metric("종합 진척률", f"{okr_status['overall']}%")
     # ...
@@ -1134,12 +1191,12 @@ def render_dashboard():
 def create_okr():
     with st.form("new_okr"):
         title = st.text_input("목표명")
-        category = st.selectbox("카테고리", 
+        category = st.selectbox("카테고리",
             ["Vibe Coding", "Physical AI", "AX Maturity"])
         target = st.number_input("목표값", min_value=0)
         unit = st.text_input("단위", value="건")
         quarter = st.multiselect("분기", ["Q1", "Q2", "Q3", "Q4"])
-        
+
         if st.form_submit_button("등록"):
             save_okr(title, category, target, unit, quarter)
             st.success("OKR이 등록되었습니다!")
@@ -1150,11 +1207,11 @@ def create_okr():
 ```python
 def update_okr_progress(okr_id):
     current = st.number_input("현재값", min_value=0)
-    
+
     # 자동 계산
     progress = (current / target) * 100
     status = get_status_by_progress(progress, weeks_left)
-    
+
     update_okr(okr_id, current, status)
 ```
 
@@ -1190,11 +1247,11 @@ def update_okr_progress(okr_id):
 ```python
 def create_task_with_ai():
     user_input = st.text_area("무엇을 해야 하나요?")
-    
+
     if st.button("AI 추천 받기"):
         # Claude API 호출
         suggestion = claude_suggest_task_details(user_input)
-        
+
         # 자동 채우기
         st.selectbox("우선순위", value=suggestion['priority'])
         st.number_input("예상 시간", value=suggestion['hours'])
@@ -1207,10 +1264,10 @@ def create_task_with_ai():
 def update_task_status():
     task_id = st.selectbox("Task", get_all_tasks())
     new_status = st.radio("상태", ["Backlog", "In Progress", "Done"])
-    
+
     if st.button("업데이트"):
         update_status(task_id, new_status)
-        
+
         # Done으로 변경 시 자동 처리
         if new_status == "Done":
             auto_create_win(task_id)
@@ -1222,14 +1279,14 @@ def update_task_status():
 ```python
 def show_weekly_sprint():
     current_week = get_current_week_number()
-    
+
     st.header(f"Week {current_week} Sprint")
-    
+
     # P0 작업 (3개 제한)
     p0_tasks = get_tasks_by_priority("P0", current_week)
     if len(p0_tasks) > 3:
         st.warning("⚠️ P0 작업이 3개를 초과했습니다!")
-    
+
     # P1, P2 작업
     # ...
 ```
@@ -1240,16 +1297,16 @@ def show_weekly_sprint():
 def quick_win_entry():
     with st.form("quick_win"):
         col1, col2 = st.columns([3, 1])
-        
+
         with col1:
             title = st.text_input("한 줄 요약")
         with col2:
-            impact = st.select_slider("임팩트", 
+            impact = st.select_slider("임팩트",
                 ["👍괜찮", "✨좋음", "🔥대박"])
-        
+
         content = st.text_area("무슨 일이 있었나요?")
         learning = st.text_area("배운 점")
-        
+
         if st.form_submit_button("기록"):
             save_win(title, impact, content, learning)
 ```
@@ -1259,7 +1316,7 @@ def quick_win_entry():
 ```python
 def show_wins_timeline():
     wins = get_all_wins_by_date()
-    
+
     for date, wins_on_date in wins.groupby('date'):
         st.markdown(f"### {date}")
         for win in wins_on_date:
@@ -1303,7 +1360,7 @@ def generate_ai_insights(week_data):
             "content": INSIGHT_PROMPT.format(**week_data)
         }]
     )
-    
+
     return parse_insights(response.content)
 ```
 
@@ -1317,17 +1374,17 @@ def generate_weekly_review():
         'okr_progress': get_okr_delta(),
         'blockers': get_blocked_tasks(),
     }
-    
+
     # AI가 회고 초안 작성
     draft = claude_generate_review(week_data)
-    
+
     # 사용자가 편집 가능
     with st.form("weekly_review"):
         highlights = st.text_area("하이라이트", value=draft['highlights'])
         went_well = st.text_area("잘한 점", value=draft['went_well'])
         to_improve = st.text_area("개선할 점", value=draft['to_improve'])
         next_focus = st.text_area("다음 주 Focus", value=draft['next_focus'])
-        
+
         if st.form_submit_button("저장"):
             save_review(highlights, went_well, to_improve, next_focus)
 ```
@@ -1407,29 +1464,27 @@ ax-project-manager/
 
 ```markdown
 ## Week 1: 기반 구축
+
 - [ ] Day 1-2: 프로젝트 셋업
   - 디렉토리 구조 생성
   - requirements.txt 작성
   - DB 스키마 설계 및 생성
-  
 - [ ] Day 3-4: 데이터 레이어
   - SQLite 연결 설정
   - OKR, Task 모델 정의
   - Repository 패턴 구현
-  
 - [ ] Day 5: 기본 UI
   - Streamlit 기본 레이아웃
   - 네비게이션 구조
 
 ## Week 2: 핵심 기능
+
 - [ ] Day 1-2: OKR 관리
   - OKR CRUD 구현
   - 진척률 계산 로직
-  
 - [ ] Day 3-4: Task 관리
   - Task CRUD 구현
   - Status 변경 기능
-  
 - [ ] Day 5: 대시보드 v1
   - 오늘 할 일 표시
   - OKR 현황 표시
@@ -1440,26 +1495,24 @@ ax-project-manager/
 
 ```markdown
 ## Week 3: AI 통합
+
 - [ ] Day 1-2: Claude API 연결
   - AI Service 클래스 구현
   - 인사이트 생성 로직
-  
 - [ ] Day 3-4: Wins Journal
   - Wins CRUD
   - Timeline 뷰
-  
 - [ ] Day 5: 테스트 & 리팩토링
 
 ## Week 4: 회고 & 고급 기능
+
 - [ ] Day 1-2: 주간 회고
   - 자동 데이터 집계
   - AI 회고 생성
-  
 - [ ] Day 3-4: 고급 차트
   - Progress Timeline
   - Category 분석
   - Burndown 차트
-  
 - [ ] Day 5: UX 개선
 ```
 
@@ -1467,11 +1520,13 @@ ax-project-manager/
 
 ```markdown
 ## Week 5: 자동화
+
 - [ ] 알림 시스템 (선택)
 - [ ] 데이터 Export (JSON/CSV)
 - [ ] 백업 기능
 
 ## Week 6: 배포 & 문서화
+
 - [ ] 배포 스크립트
 - [ ] 사용자 가이드
 - [ ] 비디오 튜토리얼 (선택)
@@ -1488,13 +1543,13 @@ def generate_insight(
 ) -> dict:
     """
     주간 데이터를 분석하여 AI 인사이트 생성
-    
+
     Args:
         week_number: 주차 번호
         okr_data: OKR 진척 데이터
         task_data: Task 완료 데이터
         wins_data: Wins 데이터
-    
+
     Returns:
         {
             'strength': '가장 잘하고 있는 점',
@@ -1510,10 +1565,10 @@ def generate_insight(
 def suggest_task_breakdown(task_description: str) -> list:
     """
     큰 작업을 작은 서브태스크로 분해 제안
-    
+
     Args:
         task_description: 작업 설명
-    
+
     Returns:
         [
             {'title': 'Subtask 1', 'hours': 2},
@@ -1526,30 +1581,30 @@ def suggest_task_breakdown(task_description: str) -> list:
 
 ```python
 def calculate_status(
-    okr_id: int, 
+    okr_id: int,
     current_week: int
 ) -> str:
     """
     OKR 상태 자동 계산
-    
+
     Logic:
     - 진척률이 예상보다 10% 이상 높음 → 'on_track' 🟢
     - 진척률이 예상 ±10% 범위 → 'at_risk' 🟡
     - 진척률이 예상보다 10% 이상 낮음 → 'off_track' 🔴
-    
+
     Returns:
         'on_track' | 'at_risk' | 'off_track'
     """
     target = get_okr_target(okr_id)
     current = get_okr_current(okr_id)
-    
+
     # 프로젝트 시작일부터 현재까지 경과 비율
     elapsed_ratio = (current_week - 1) / 48  # 1년 = 48주
     expected_progress = target * elapsed_ratio
     actual_progress = current
-    
+
     delta = (actual_progress - expected_progress) / target
-    
+
     if delta >= 0.1:
         return 'on_track'
     elif delta >= -0.1:
@@ -1619,41 +1674,45 @@ CMD ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.
 Claude Code에서:
 
 1. 프로젝트 생성
-"AX 프로젝트 관리 시스템을 만들고 싶어. 
-위 개발 문서의 Phase 1: MVP부터 시작하자.
-먼저 프로젝트 구조를 만들어줘."
+   "AX 프로젝트 관리 시스템을 만들고 싶어.
+   위 개발 문서의 Phase 1: MVP부터 시작하자.
+   먼저 프로젝트 구조를 만들어줘."
 
 2. 단계별 개발
-"database/init_db.sql 파일을 작성해줘. 
-OKRs, Tasks, Wins 테이블이 필요해."
+   "database/init_db.sql 파일을 작성해줘.
+   OKRs, Tasks, Wins 테이블이 필요해."
 
 3. 테스트
-"main.py에 간단한 대시보드 화면을 만들어줘.
-OKR 3개가 표시되고 진척률이 보이면 돼."
+   "main.py에 간단한 대시보드 화면을 만들어줘.
+   OKR 3개가 표시되고 진척률이 보이면 돼."
 
 4. 디버깅
-"OKR 진척률 계산이 안 되는데, 
-calculate_status 함수를 확인해줘."
+   "OKR 진척률 계산이 안 되는데,
+   calculate_status 함수를 확인해줘."
 ```
 
 ### Extracted Code (markdown)
 
 ```markdown
 ## 파일 생성 패턴
+
 "models/okr.py 파일을 만들어줘.
 Pydantic 모델로 OKR 클래스를 정의하고,
 id, title, target, current, status 필드가 필요해."
 
 ## 기능 구현 패턴
-"services/okr_service.py에 
+
+"services/okr_service.py에
 create_okr 함수를 추가해줘.
 입력 검증과 DB 저장을 포함해서."
 
 ## 디버깅 패턴
+
 "이 에러를 봐줘: [에러 메시지]
 okr_repository.py의 get_all 함수에서 발생했어."
 
 ## 리팩토링 패턴
+
 "task_service.py가 너무 길어졌어.
 공통 로직을 utils로 분리할 수 있을까?"
 ```
@@ -1662,20 +1721,24 @@ okr_repository.py의 get_all 함수에서 발생했어."
 
 ```markdown
 ## 아침 (30분)
+
 1. 오늘 개발할 기능 선정
 2. Claude Code에 "오늘은 [기능]을 만들 거야. 어떻게 시작하면 좋을까?" 물어보기
 3. 파일 구조 먼저 생성
 
 ## 점심 (1시간)
+
 4. 핵심 로직 구현
 5. 간단한 테스트 작성
 
 ## 저녁 (30분)
+
 6. UI 연결
 7. 실제 데이터로 테스트
 8. Git commit
 
 ## 주말 회고
+
 9. 이번 주 완성한 기능 정리
 10. 다음 주 계획 수립
 ```
@@ -1704,11 +1767,11 @@ init_database()
 with st.sidebar:
     st.title("🚀 AX Project")
     st.divider()
-    
+
     # 현재 주차 표시
     current_week = get_current_week()
     st.metric("현재", f"Week {current_week}")
-    
+
     # 빠른 액션
     st.subheader("Quick Actions")
     if st.button("✅ Win 기록"):
@@ -1745,7 +1808,7 @@ okr_data = []
 for okr in okrs:
     progress = (okr.current_value / okr.target_value) * 100
     status = get_status_emoji(okr.status)
-    
+
     okr_data.append({
         "OKR": okr.title[:20],
         "목표": okr.target_value,
@@ -1787,7 +1850,7 @@ client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
 def generate_weekly_insights(week_data: Dict) -> Dict:
     """주간 데이터로 AI 인사이트 생성"""
-    
+
     prompt = f"""
 당신은 프로젝트 관리 전문가입니다.
 
@@ -1807,17 +1870,17 @@ def generate_weekly_insights(week_data: Dict) -> Dict:
 JSON 형식으로 응답하세요:
 {{"strength": "...", "concern": "...", "action": "..."}}
 """
-    
+
     response = client.messages.create(
         model="claude-sonnet-4-20250514",
         max_tokens=300,
         messages=[{"role": "user", "content": prompt}]
     )
-    
+
     # JSON 파싱
     import json
     insight = json.loads(response.content[0].text)
-    
+
     return insight
 ```
 
@@ -1829,18 +1892,18 @@ from plotly.subplots import make_subplots
 
 def render_okr_progress_chart(okrs):
     """OKR 진척률 차트"""
-    
+
     fig = go.Figure()
-    
+
     categories = []
     current_values = []
     target_values = []
-    
+
     for okr in okrs:
         categories.append(okr.title[:15])
         current_values.append(okr.current_value)
         target_values.append(okr.target_value)
-    
+
     # 현재값
     fig.add_trace(go.Bar(
         name='현재',
@@ -1848,7 +1911,7 @@ def render_okr_progress_chart(okrs):
         y=current_values,
         marker_color='lightblue'
     ))
-    
+
     # 목표값
     fig.add_trace(go.Bar(
         name='목표',
@@ -1857,13 +1920,13 @@ def render_okr_progress_chart(okrs):
         marker_color='lightgray',
         opacity=0.5
     ))
-    
+
     fig.update_layout(
         title="OKR 진척 현황",
         barmode='overlay',
         height=400
     )
-    
+
     return fig
 ```
 

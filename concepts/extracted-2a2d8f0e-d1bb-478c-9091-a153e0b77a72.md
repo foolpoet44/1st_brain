@@ -5,7 +5,7 @@
 ### Extracted Code (text)
 
 ```text
-Claude 대화 
+Claude 대화
   ↓
 Notion 페이지 자동 생성 (notion-knowledge-capture 스킬)
   ↓
@@ -34,29 +34,34 @@ Obsidian Vault (세컨 브레인)
 
 ```markdown
 ---
-date: {{date}}
-tags: [claude, conversation, {{topic}}]
+date: { { date } }
+tags: [claude, conversation, { { topic } }]
 aliases: []
 ---
 
 # {{title}}
 
 ## 메타데이터
+
 - 날짜: {{date}}
 - 주제: {{topic}}
 - 키워드: {{keywords}}
 
 ## 대화 요약
+
 {{summary}}
 
 ## 주요 내용
+
 {{main_content}}
 
 ## 관련 링크
+
 - [[관련노트1]]
 - [[관련노트2]]
 
 ## 다음 액션
+
 - [ ] 항목1
 - [ ] 항목2
 ```

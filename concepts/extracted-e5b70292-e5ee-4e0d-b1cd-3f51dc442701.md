@@ -49,7 +49,7 @@ ibus-setup
 ```bash
 # 환경변수를 사용자 프로필에만 추가
 echo 'export GTK_IM_MODULE=ibus' >> ~/.bashrc
-echo 'export QT_IM_MODULE=ibus' >> ~/.bashrc  
+echo 'export QT_IM_MODULE=ibus' >> ~/.bashrc
 echo 'export XMODIFIERS=@im=ibus' >> ~/.bashrc
 
 # 현재 세션에 적용

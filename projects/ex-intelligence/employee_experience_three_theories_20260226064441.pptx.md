@@ -12,15 +12,15 @@ csp_insight: "자비스가 분석 대기 중인 문서입니다. (내용 기반 
 
 EX
 2026
- 직원경험
+직원경험
 (Employee Experience) 3대 핵심이론
 
 ![preencoded.png](Image3.jpg)
 
 ![preencoded.png](Image1.jpg)
 THEORY
- 학문적 근거를
- 실천 가능한 설계 포인트로 전환
+학문적 근거를
+실천 가능한 설계 포인트로 전환
 THREE CORE PILLARS
 HR Strategy & Organization Design
 
@@ -34,7 +34,7 @@ HR Strategy & Organization Design
 
 OVERVIEW & BACKGROUND
 
- 직원경험의
+직원경험의
 학술적 배경
 
 ![preencoded.png](Image0.jpg)
@@ -51,8 +51,8 @@ WHY
 ![preencoded.png](Image3.jpg)
 02
 인간-조직 적합성 (P-O Fit)
- "직원경험은 2016~2017년 HR 트렌드로 급부상했지만,
- 그 뿌리는 깊은 심리학과 조직행동론에 닿아 있습니다."
+"직원경험은 2016~2017년 HR 트렌드로 급부상했지만,
+그 뿌리는 깊은 심리학과 조직행동론에 닿아 있습니다."
 
 ![preencoded.png](Image4.jpg)
 WHO
@@ -93,7 +93,7 @@ Intrinsic Motivation
 
 ![preencoded.png](Image0.jpg)
 
- EX Research Connection
+EX Research Connection
 
 ![preencoded.png](Image4.jpg)
 
@@ -103,7 +103,7 @@ Zhang et al. (2025) 연구는 직원경험(EX)의 5가지 차원(업무 자체, 
 자율성 (Autonomy)
 
 ![preencoded.png](Image1.jpg)
- Practical Design Points
+Practical Design Points
 스스로 선택하고 결정한다는 느낌
 
 ![preencoded.png](Image5.jpg)
@@ -135,7 +135,7 @@ OKR 도입: 목표는 명확히, 달성 방법은 자율적으로
 유연 근무 및 장소 선택권 확대
 적절한 난이도의 과제 부여 (Flow)
 수평적 커뮤니티 및 소셜 활동 지원
- 충족 시 → 내재적 동기 & 몰입(Thriving)
+충족 시 → 내재적 동기 & 몰입(Thriving)
 
 ![preencoded.png](Image7.jpg)
 Metric: Autonomy Support
@@ -160,7 +160,7 @@ Complementary & Supplementary Fit
 
 ![preencoded.png](Image0.jpg)
 
- EX Research Connection
+EX Research Connection
 
 ![preencoded.png](Image1.jpg)
 Person × Environment
@@ -169,7 +169,7 @@ Grover & Chawla (2025)의 리뷰 연구는 HR 관행(채용, 개발 등)이 개�
 
 ![preencoded.png](Image11.jpg)
 
- Practical Design Points
+Practical Design Points
 
 ![preencoded.png](Image2.jpg)
 Person
@@ -214,7 +214,7 @@ Metric: Internal Mobility Rate
 
 ![preencoded.png](Image8.jpg)
 Metric: Role Clarity
- 적합 시 → 직무 만족 & 조직 몰입
+적합 시 → 직무 만족 & 조직 몰입
 
 ### Notes:
 
@@ -228,7 +228,7 @@ Experience Economy
 
 ![preencoded.png](Image0.jpg)
 
- From Customer to Employee
+From Customer to Employee
 
 ![preencoded.png](Image3.jpg)
 
@@ -240,7 +240,7 @@ Commodity/Good
 ![preencoded.png](Image12.jpg)
 
 기능적 효용 (Functional)
- Practical Design Points
+Practical Design Points
 
 ![preencoded.png](Image4.jpg)
 
@@ -276,7 +276,7 @@ Persona: 다양한 직원 유형별 니즈 구체화
 Peak-End Rule: 감정의 정점과 마지막 관리
 CES: 업무 수행의 고객(직원) 노력 점수
 Co-creation: 직원과 함께 솔루션 프로토타이핑
- Focus: 감정적 소비 & 여정(Journey)
+Focus: 감정적 소비 & 여정(Journey)
 
 ![preencoded.png](Image11.jpg)
 

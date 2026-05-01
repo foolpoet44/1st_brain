@@ -30,11 +30,11 @@ currency_flow_indicators = {
     "DXY": "달러 인덱스 (전체 자금 방향)",
     "USDKRW": "원달러 환율 (한국 유출입)",
     "USDJPY": "달러엔 (캐리트레이드 상태)",
-    
+
     # 간접 지표
     "VIX": "변동성 지수 (공포도)",
     "MOVE": "채권 변동성 (채권시장 스트레스)",
-    
+
     # 크로스 레이트
     "EURUSD": "유럽→미국 자금 흐름",
     "AUDUSD": "위험선호도 (호주달러=원자재 통화)",
@@ -95,13 +95,13 @@ data_sources = {
         "Investing.com": "글로벌 지수, 원자재",
         "TradingView": "기술적 지표, 차트",
     },
-    
+
     "기관급 데이터 (유료이지만 필수)": {
         "Bloomberg Terminal": "전방위 데이터 + 뉴스",
         "Refinitiv Eikon": "자금흐름 분석 특화",
         "FactSet": "ETF flow 데이터 최강",
     },
-    
+
     "대안 데이터 (엣지 확보)": {
         "Unusual Whales": "옵션 플로우",
         "Quiver Quantitative": "의회 거래, 내부자 거래",
@@ -148,35 +148,35 @@ class MoneyFlowScanner:
     """
     매 시간마다 자금 흐름 이상 징후 탐지
     """
-    
+
     def scan_anomalies(self):
         signals = []
-        
+
         # 1. 채권 시장 신호
         if self.treasury_yield_spike() > 2_std_deviation:
             signals.append("국채 급등락 - 유동성 경색 가능")
-        
+
         # 2. ETF 플로우 이상
         if self.etf_outflow(['SPY', 'QQQ']) > threshold:
             signals.append("주식형 ETF 대규모 유출")
-        
+
         # 3. 통화 압력
         if self.usdkrw_acceleration() > critical_level:
             signals.append("원화 약세 가속 - 외국인 이탈")
-        
+
         # 4. 크로스 체크
         if self.vix_spike() and self.hyg_spread_widening():
             signals.append("⚠️ 리스크오프 전환 신호")
-        
+
         return self.prioritize_signals(signals)
-    
+
     def predict_next_move(self):
         """
         과거 패턴 매칭 + 머신러닝 조합
         """
         current_state = self.get_market_state()
         historical_matches = self.find_similar_episodes()
-        
+
         # 과거 유사 상황에서 24-48시간 후 어떻게 됐나?
         return self.forecast_probability_distribution()
 ```
@@ -206,7 +206,7 @@ class MoneyFlowScanner:
 3. HYG(하이일드) 스프레드 확대
 4. 금 가격 상승 + 달러 강세 동시 발생
 
-[해석] 
+[해석]
 "퀄리티로의 도피" (Flight to Quality)
 → 주식 비중 축소
 → 현금/단기채 확보

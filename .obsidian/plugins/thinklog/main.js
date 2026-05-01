@@ -11,19 +11,23 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
+  if ((from && typeof from === "object") || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+        __defProp(to, key, {
+          get: () => from[key],
+          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
+        });
   }
   return to;
 };
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __toCommonJS = (mod) =>
+  __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/main.ts
 var main_exports = {};
 __export(main_exports, {
-  default: () => ThinkLogPlugin
+  default: () => ThinkLogPlugin,
 });
 module.exports = __toCommonJS(main_exports);
 var import_obsidian2 = require("obsidian");
@@ -38,9 +42,14 @@ var SECTIONS = [
     title: "Observations",
     titleKo: "\uAD00\uCC30",
     prompt: "\uC624\uB298 \uBB34\uC5C7\uC744 \uAD00\uCC30\uD588\uB098\uC694?",
-    prompts: ["\uBB34\uC5C7\uC744 \uBCF4\uACE0 \uB4E4\uC5C8\uB098\uC694?", "\uC5B4\uB5A4 \uC0AC\uC2E4\uC744 \uBC1C\uACAC\uD588\uB098\uC694?", "\uC624\uB298\uC758 \uD604\uC0C1\uC740?"],
-    placeholder: "\uC0AC\uC2E4 \uAE30\uBC18\uC758 \uAD00\uCC30\uC744 \uC801\uC5B4\uC8FC\uC138\uC694...",
-    color: "#3b82f6"
+    prompts: [
+      "\uBB34\uC5C7\uC744 \uBCF4\uACE0 \uB4E4\uC5C8\uB098\uC694?",
+      "\uC5B4\uB5A4 \uC0AC\uC2E4\uC744 \uBC1C\uACAC\uD588\uB098\uC694?",
+      "\uC624\uB298\uC758 \uD604\uC0C1\uC740?",
+    ],
+    placeholder:
+      "\uC0AC\uC2E4 \uAE30\uBC18\uC758 \uAD00\uCC30\uC744 \uC801\uC5B4\uC8FC\uC138\uC694...",
+    color: "#3b82f6",
   },
   {
     id: "thoughts",
@@ -48,9 +57,14 @@ var SECTIONS = [
     title: "Thoughts",
     titleKo: "\uC0DD\uAC01",
     prompt: "\uC5B4\uB5A4 \uC0DD\uAC01\uC774 \uB5A0\uC62C\uB790\uB098\uC694?",
-    prompts: ["\uC774\uAC83\uC5D0 \uB300\uD574 \uC5B4\uB5BB\uAC8C \uC0DD\uAC01\uD558\uC138\uC694?", "\uC5B4\uB5A4 \uC544\uC774\uB514\uC5B4\uAC00 \uC788\uB098\uC694?", "\uB290\uB080 \uC810\uC740?"],
-    placeholder: "\uB5A0\uC624\uB978 \uC544\uC774\uB514\uC5B4\uB098 \uC758\uACAC\uC744 \uC801\uC5B4\uC8FC\uC138\uC694...",
-    color: "#8b5cf6"
+    prompts: [
+      "\uC774\uAC83\uC5D0 \uB300\uD574 \uC5B4\uB5BB\uAC8C \uC0DD\uAC01\uD558\uC138\uC694?",
+      "\uC5B4\uB5A4 \uC544\uC774\uB514\uC5B4\uAC00 \uC788\uB098\uC694?",
+      "\uB290\uB080 \uC810\uC740?",
+    ],
+    placeholder:
+      "\uB5A0\uC624\uB978 \uC544\uC774\uB514\uC5B4\uB098 \uC758\uACAC\uC744 \uC801\uC5B4\uC8FC\uC138\uC694...",
+    color: "#8b5cf6",
   },
   {
     id: "questions",
@@ -58,10 +72,15 @@ var SECTIONS = [
     title: "Questions",
     titleKo: "\uC9C8\uBB38",
     prompt: "\uAD81\uAE08\uD55C \uC810\uC740?",
-    prompts: ["\uD655\uC778\uC774 \uD544\uC694\uD55C \uAC83\uC740?", "\uC544\uC9C1 \uBAA8\uB974\uB294 \uAC83\uC740?", "\uB354 \uC54C\uC544\uBD10\uC57C \uD560 \uAC83\uC740?"],
-    placeholder: "\uAD81\uAE08\uD55C \uC810\uC774\uB098 \uD655\uC778\uC774 \uD544\uC694\uD55C \uAC83...",
-    color: "#ec4899"
-  }
+    prompts: [
+      "\uD655\uC778\uC774 \uD544\uC694\uD55C \uAC83\uC740?",
+      "\uC544\uC9C1 \uBAA8\uB974\uB294 \uAC83\uC740?",
+      "\uB354 \uC54C\uC544\uBD10\uC57C \uD560 \uAC83\uC740?",
+    ],
+    placeholder:
+      "\uAD81\uAE08\uD55C \uC810\uC774\uB098 \uD655\uC778\uC774 \uD544\uC694\uD55C \uAC83...",
+    color: "#ec4899",
+  },
 ];
 var ThinkLogInputView = class extends import_obsidian.ItemView {
   constructor(leaf, plugin) {
@@ -89,7 +108,7 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
       questions: [],
       dataPoints: [],
       actions: [],
-      quickCapture: ""
+      quickCapture: "",
     };
   }
   async onOpen() {
@@ -110,19 +129,18 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
       if (file.path.includes(this.plugin.settings.dailyNotesFolder)) {
         const content = await this.app.vault.cachedRead(file);
         const theme = this.extractTheme(content);
-        if (theme)
-          themeSet.add(theme);
+        if (theme) themeSet.add(theme);
       }
     }
     this.themes = Array.from(themeSet).sort();
   }
   extractTheme(content) {
     const fmMatch = content.match(/^---\n[\s\S]*?theme:\s*(.+?)\n[\s\S]*?---/m);
-    if (fmMatch && fmMatch[1].trim())
-      return fmMatch[1].trim();
-    const sectionMatch = content.match(/##\s*(?:Theme|테마)[:\s]*(.+?)(?:\n|$)/i);
-    if (sectionMatch && sectionMatch[1].trim())
-      return sectionMatch[1].trim();
+    if (fmMatch && fmMatch[1].trim()) return fmMatch[1].trim();
+    const sectionMatch = content.match(
+      /##\s*(?:Theme|테마)[:\s]*(.+?)(?:\n|$)/i,
+    );
+    if (sectionMatch && sectionMatch[1].trim()) return sectionMatch[1].trim();
     return null;
   }
   async loadTodayLog() {
@@ -145,30 +163,49 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
   parseLogContent(content) {
     const data = this.getEmptyData();
     data.theme = this.extractTheme(content) || "";
-    data.observations = this.extractSection(content, "Observations|\uAD00\uCC30");
+    data.observations = this.extractSection(
+      content,
+      "Observations|\uAD00\uCC30",
+    );
     data.thoughts = this.extractSection(content, "Thoughts|\uC0DD\uAC01");
-    data.questions = this.extractSection(content, "Questions|\uC758\uBB38\uC810|\uC9C8\uBB38");
-    const dataSection = this.extractSection(content, "Data|\uB370\uC774\uD130|\uC218\uCE58");
+    data.questions = this.extractSection(
+      content,
+      "Questions|\uC758\uBB38\uC810|\uC9C8\uBB38",
+    );
+    const dataSection = this.extractSection(
+      content,
+      "Data|\uB370\uC774\uD130|\uC218\uCE58",
+    );
     data.dataPoints = dataSection.map((line) => {
       const parts = line.split(":");
-      return parts.length >= 2 ? { label: parts[0].trim(), value: parts.slice(1).join(":").trim() } : { label: line, value: "" };
+      return parts.length >= 2
+        ? { label: parts[0].trim(), value: parts.slice(1).join(":").trim() }
+        : { label: line, value: "" };
     });
-    const actionsMatch = content.match(/##\s*(?:Next Actions|Actions|액션|다음)[^#]*/i);
+    const actionsMatch = content.match(
+      /##\s*(?:Next Actions|Actions|액션|다음)[^#]*/i,
+    );
     if (actionsMatch) {
       const lines = actionsMatch[0].split("\n").slice(1);
-      data.actions = lines.filter((line) => line.trim().match(/^-\s*\[[ x]\]/)).map((line) => ({
-        text: line.replace(/^-\s*\[[ x]\]\s*/, "").trim(),
-        completed: line.includes("[x]")
-      }));
+      data.actions = lines
+        .filter((line) => line.trim().match(/^-\s*\[[ x]\]/))
+        .map((line) => ({
+          text: line.replace(/^-\s*\[[ x]\]\s*/, "").trim(),
+          completed: line.includes("[x]"),
+        }));
     }
     return data;
   }
   extractSection(content, sectionPattern) {
     const regex = new RegExp(`##\\s*(?:${sectionPattern})[^#]*`, "i");
     const match = content.match(regex);
-    if (!match)
-      return [];
-    return match[0].split("\n").slice(1).filter((line) => line.trim().startsWith("-")).map((line) => line.replace(/^-\s*/, "").trim()).filter((line) => line.length > 0);
+    if (!match) return [];
+    return match[0]
+      .split("\n")
+      .slice(1)
+      .filter((line) => line.trim().startsWith("-"))
+      .map((line) => line.replace(/^-\s*/, "").trim())
+      .filter((line) => line.length > 0);
   }
   render() {
     const container = this.containerEl.children[1];
@@ -179,7 +216,10 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     this.renderHeader(wrapper);
     this.renderThemeSelector(wrapper);
     this.renderQuickCapture(wrapper);
-    wrapper.createEl("div", { cls: "tl-divider", text: "or add to specific section" });
+    wrapper.createEl("div", {
+      cls: "tl-divider",
+      text: "or add to specific section",
+    });
     SECTIONS.forEach((section) => this.renderSection(wrapper, section));
     this.renderDataSection(wrapper);
     this.renderActionsSection(wrapper);
@@ -194,14 +234,17 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     const dateDisplay = header.createDiv({ cls: "tl-date-display" });
     dateDisplay.createSpan({
       text: (0, import_obsidian.moment)().format("MMM DD, YYYY"),
-      cls: "tl-date-badge"
+      cls: "tl-date-badge",
     });
     dateDisplay.createSpan({
       text: (0, import_obsidian.moment)().format("dddd"),
-      cls: "tl-date-relative"
+      cls: "tl-date-relative",
     });
     const actions = header.createDiv({ cls: "tl-header-actions" });
-    const saveBtn = actions.createEl("button", { cls: "tl-btn tl-btn-primary", text: "Save" });
+    const saveBtn = actions.createEl("button", {
+      cls: "tl-btn tl-btn-primary",
+      text: "Save",
+    });
     saveBtn.addEventListener("click", () => this.save());
   }
   renderThemeSelector(container) {
@@ -214,7 +257,7 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
       type: "text",
       cls: "tl-theme-input",
       placeholder: "Enter theme or select...",
-      value: this.data.theme
+      value: this.data.theme,
     });
     input.addEventListener("input", (e) => {
       this.data.theme = e.target.value;
@@ -227,10 +270,12 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     });
     input.setAttribute("list", "theme-suggestions");
     if (this.data.theme && this.themes.includes(this.data.theme)) {
-      const linkedCount = this.themes.filter((t) => t === this.data.theme).length;
+      const linkedCount = this.themes.filter(
+        (t) => t === this.data.theme,
+      ).length;
       section.createDiv({
         cls: "tl-theme-meta",
-        text: `Linked to previous logs with this theme`
+        text: `Linked to previous logs with this theme`,
       });
     }
   }
@@ -240,11 +285,12 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     header.createSpan({ text: "\u26A1 Quick Capture", cls: "tl-quick-title" });
     header.createSpan({
       text: "(AI will auto-categorize)",
-      cls: "tl-quick-subtitle"
+      cls: "tl-quick-subtitle",
     });
     const textarea = section.createEl("textarea", {
       cls: "tl-quick-textarea",
-      placeholder: "\uBB34\uC5C7\uC774\uB4E0 \uC801\uC5B4\uBCF4\uC138\uC694... \uB098\uC911\uC5D0 \uC139\uC158\uBCC4\uB85C \uC815\uB9AC\uD560 \uC218 \uC788\uC5B4\uC694."
+      placeholder:
+        "\uBB34\uC5C7\uC774\uB4E0 \uC801\uC5B4\uBCF4\uC138\uC694... \uB098\uC911\uC5D0 \uC139\uC158\uBCC4\uB85C \uC815\uB9AC\uD560 \uC218 \uC788\uC5B4\uC694.",
     });
     textarea.value = this.data.quickCapture;
     textarea.addEventListener("input", (e) => {
@@ -254,23 +300,29 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     });
     const parseBtn = section.createEl("button", {
       cls: "tl-btn tl-btn-secondary tl-parse-btn",
-      text: "\u2192 Categorize to sections"
+      text: "\u2192 Categorize to sections",
     });
     parseBtn.addEventListener("click", () => this.parseQuickCapture());
   }
   renderSection(container, config) {
-    const section = container.createDiv({ cls: `tl-section tl-section-${config.id}` });
+    const section = container.createDiv({
+      cls: `tl-section tl-section-${config.id}`,
+    });
     section.style.setProperty("--section-color", config.color);
     const header = section.createDiv({ cls: "tl-section-header" });
     const iconEl = header.createSpan({ cls: "tl-section-icon" });
     (0, import_obsidian.setIcon)(iconEl, config.icon);
     const titleGroup = header.createDiv({ cls: "tl-section-title-group" });
-    titleGroup.createDiv({ cls: "tl-section-title", text: `${config.titleKo} (${config.title})` });
-    const prompt = config.prompts[Math.floor(Math.random() * config.prompts.length)];
+    titleGroup.createDiv({
+      cls: "tl-section-title",
+      text: `${config.titleKo} (${config.title})`,
+    });
+    const prompt =
+      config.prompts[Math.floor(Math.random() * config.prompts.length)];
     titleGroup.createDiv({ cls: "tl-section-prompt", text: `"${prompt}"` });
     const count = header.createSpan({
       cls: "tl-section-count",
-      text: String(this.data[config.id].length)
+      text: String(this.data[config.id].length),
     });
     const addBtn = header.createEl("button", { cls: "tl-btn tl-btn-icon" });
     (0, import_obsidian.setIcon)(addBtn, "plus");
@@ -284,7 +336,7 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     const addInput = addNew.createEl("input", {
       type: "text",
       cls: "tl-add-input",
-      placeholder: config.placeholder
+      placeholder: config.placeholder,
     });
     addInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && e.target.value.trim()) {
@@ -299,7 +351,7 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     const input = item.createEl("input", {
       type: "text",
       cls: "tl-item-input",
-      value
+      value,
     });
     input.addEventListener("input", (e) => {
       this.data[sectionId][index] = e.target.value;
@@ -315,7 +367,9 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     });
     const deleteBtn = item.createEl("button", { cls: "tl-btn tl-btn-delete" });
     (0, import_obsidian.setIcon)(deleteBtn, "x");
-    deleteBtn.addEventListener("click", () => this.removeItem(sectionId, index));
+    deleteBtn.addEventListener("click", () =>
+      this.removeItem(sectionId, index),
+    );
   }
   renderDataSection(container) {
     const section = container.createDiv({ cls: "tl-section tl-section-data" });
@@ -324,8 +378,14 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     const iconEl = header.createSpan({ cls: "tl-section-icon" });
     (0, import_obsidian.setIcon)(iconEl, "bar-chart-2");
     const titleGroup = header.createDiv({ cls: "tl-section-title-group" });
-    titleGroup.createDiv({ cls: "tl-section-title", text: "\u{1F4CA} \uB370\uC774\uD130 (Data Points)" });
-    titleGroup.createDiv({ cls: "tl-section-prompt", text: '"\uAD00\uB828 \uC218\uCE58\uAC00 \uC788\uB098\uC694?"' });
+    titleGroup.createDiv({
+      cls: "tl-section-title",
+      text: "\u{1F4CA} \uB370\uC774\uD130 (Data Points)",
+    });
+    titleGroup.createDiv({
+      cls: "tl-section-prompt",
+      text: '"\uAD00\uB828 \uC218\uCE58\uAC00 \uC788\uB098\uC694?"',
+    });
     const addBtn = header.createEl("button", { cls: "tl-btn tl-btn-icon" });
     (0, import_obsidian.setIcon)(addBtn, "plus");
     addBtn.addEventListener("click", () => this.addDataPoint());
@@ -336,14 +396,14 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
         type: "text",
         cls: "tl-data-label",
         placeholder: "\uD56D\uBAA9\uBA85",
-        value: dp.label
+        value: dp.label,
       });
       item.createSpan({ cls: "tl-data-separator", text: ":" });
       const valueInput = item.createEl("input", {
         type: "text",
         cls: "tl-data-value",
         placeholder: "\uAC12",
-        value: dp.value
+        value: dp.value,
       });
       labelInput.addEventListener("input", (e) => {
         this.data.dataPoints[index].label = e.target.value;
@@ -353,7 +413,9 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
         this.data.dataPoints[index].value = e.target.value;
         this.scheduleAutosave();
       });
-      const deleteBtn = item.createEl("button", { cls: "tl-btn tl-btn-delete" });
+      const deleteBtn = item.createEl("button", {
+        cls: "tl-btn tl-btn-delete",
+      });
       (0, import_obsidian.setIcon)(deleteBtn, "x");
       deleteBtn.addEventListener("click", () => {
         this.data.dataPoints.splice(index, 1);
@@ -365,42 +427,48 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     const newLabel = addNew.createEl("input", {
       type: "text",
       cls: "tl-data-label",
-      placeholder: "\uC0C8 \uD56D\uBAA9..."
+      placeholder: "\uC0C8 \uD56D\uBAA9...",
     });
     addNew.createSpan({ cls: "tl-data-separator", text: ":" });
     const newValue = addNew.createEl("input", {
       type: "text",
       cls: "tl-data-value",
-      placeholder: "\uAC12"
+      placeholder: "\uAC12",
     });
     const handleAdd = () => {
       if (newLabel.value.trim()) {
         this.data.dataPoints.push({
           label: newLabel.value.trim(),
-          value: newValue.value.trim()
+          value: newValue.value.trim(),
         });
         this.render();
         this.scheduleAutosave();
       }
     };
     newLabel.addEventListener("keydown", (e) => {
-      if (e.key === "Enter")
-        handleAdd();
+      if (e.key === "Enter") handleAdd();
     });
     newValue.addEventListener("keydown", (e) => {
-      if (e.key === "Enter")
-        handleAdd();
+      if (e.key === "Enter") handleAdd();
     });
   }
   renderActionsSection(container) {
-    const section = container.createDiv({ cls: "tl-section tl-section-actions" });
+    const section = container.createDiv({
+      cls: "tl-section tl-section-actions",
+    });
     section.style.setProperty("--section-color", "#f59e0b");
     const header = section.createDiv({ cls: "tl-section-header" });
     const iconEl = header.createSpan({ cls: "tl-section-icon" });
     (0, import_obsidian.setIcon)(iconEl, "check-square");
     const titleGroup = header.createDiv({ cls: "tl-section-title-group" });
-    titleGroup.createDiv({ cls: "tl-section-title", text: "\u2705 \uB2E4\uC74C \uC561\uC158 (Next Actions)" });
-    titleGroup.createDiv({ cls: "tl-section-prompt", text: '"\uB2E4\uC74C\uC5D0 \uD574\uC57C \uD560 \uC77C\uC740?"' });
+    titleGroup.createDiv({
+      cls: "tl-section-title",
+      text: "\u2705 \uB2E4\uC74C \uC561\uC158 (Next Actions)",
+    });
+    titleGroup.createDiv({
+      cls: "tl-section-prompt",
+      text: '"\uB2E4\uC74C\uC5D0 \uD574\uC57C \uD560 \uC77C\uC740?"',
+    });
     const addBtn = header.createEl("button", { cls: "tl-btn tl-btn-icon" });
     (0, import_obsidian.setIcon)(addBtn, "plus");
     addBtn.addEventListener("click", () => this.addActionItem());
@@ -409,7 +477,7 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
       const item = body.createDiv({ cls: "tl-action-item" });
       const checkbox = item.createEl("input", {
         type: "checkbox",
-        cls: "tl-action-checkbox"
+        cls: "tl-action-checkbox",
       });
       checkbox.checked = action.completed;
       checkbox.addEventListener("change", (e) => {
@@ -419,15 +487,16 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
       const input = item.createEl("input", {
         type: "text",
         cls: "tl-action-input",
-        value: action.text
+        value: action.text,
       });
-      if (action.completed)
-        input.addClass("completed");
+      if (action.completed) input.addClass("completed");
       input.addEventListener("input", (e) => {
         this.data.actions[index].text = e.target.value;
         this.scheduleAutosave();
       });
-      const deleteBtn = item.createEl("button", { cls: "tl-btn tl-btn-delete" });
+      const deleteBtn = item.createEl("button", {
+        cls: "tl-btn tl-btn-delete",
+      });
       (0, import_obsidian.setIcon)(deleteBtn, "x");
       deleteBtn.addEventListener("click", () => {
         this.data.actions.splice(index, 1);
@@ -436,18 +505,21 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
       });
     });
     const addNew = body.createDiv({ cls: "tl-action-item tl-add-new" });
-    const newCheckbox = addNew.createEl("input", { type: "checkbox", cls: "tl-action-checkbox" });
+    const newCheckbox = addNew.createEl("input", {
+      type: "checkbox",
+      cls: "tl-action-checkbox",
+    });
     newCheckbox.disabled = true;
     const newInput = addNew.createEl("input", {
       type: "text",
       cls: "tl-action-input",
-      placeholder: "\uC0C8 \uC561\uC158 \uCD94\uAC00..."
+      placeholder: "\uC0C8 \uC561\uC158 \uCD94\uAC00...",
     });
     newInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && e.target.value.trim()) {
         this.data.actions.push({
           text: e.target.value.trim(),
-          completed: false
+          completed: false,
         });
         this.render();
         this.scheduleAutosave();
@@ -457,7 +529,12 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
   renderFooter(container) {
     const footer = container.createDiv({ cls: "tl-input-footer" });
     const stats = footer.createDiv({ cls: "tl-footer-stats" });
-    const totalItems = this.data.observations.length + this.data.thoughts.length + this.data.questions.length + this.data.dataPoints.length + this.data.actions.length;
+    const totalItems =
+      this.data.observations.length +
+      this.data.thoughts.length +
+      this.data.questions.length +
+      this.data.dataPoints.length +
+      this.data.actions.length;
     stats.createSpan({ text: `\u{1F4A1} Tip: Cmd+S to save | ` });
     stats.createSpan({ text: `${totalItems} items today` });
     const streakBadge = footer.createDiv({ cls: "tl-streak-badge" });
@@ -469,7 +546,9 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
     this.data[sectionId].push("");
     this.render();
     setTimeout(() => {
-      const inputs = this.containerEl.querySelectorAll(`.tl-section-${sectionId} .tl-item-input`);
+      const inputs = this.containerEl.querySelectorAll(
+        `.tl-section-${sectionId} .tl-item-input`,
+      );
       const lastInput = inputs[inputs.length - 1];
       lastInput == null ? void 0 : lastInput.focus();
     }, 10);
@@ -494,23 +573,37 @@ var ThinkLogInputView = class extends import_obsidian.ItemView {
   }
   parseQuickCapture() {
     const text = this.data.quickCapture.trim();
-    if (!text)
-      return;
+    if (!text) return;
     const lines = text.split("\n").filter((l) => l.trim());
     lines.forEach((line) => {
       const trimmed = line.trim();
-      if (trimmed.endsWith("?") || trimmed.includes("\uC5B4\uB5BB\uAC8C") || trimmed.includes("\uC65C")) {
+      if (
+        trimmed.endsWith("?") ||
+        trimmed.includes("\uC5B4\uB5BB\uAC8C") ||
+        trimmed.includes("\uC65C")
+      ) {
         this.data.questions.push(trimmed);
       } else if (trimmed.match(/\d+[%억원명개월]/) || trimmed.includes(":")) {
         const parts = trimmed.split(":");
         if (parts.length >= 2) {
-          this.data.dataPoints.push({ label: parts[0].trim(), value: parts.slice(1).join(":").trim() });
+          this.data.dataPoints.push({
+            label: parts[0].trim(),
+            value: parts.slice(1).join(":").trim(),
+          });
         } else {
           this.data.dataPoints.push({ label: trimmed, value: "" });
         }
-      } else if (trimmed.includes("\uD574\uC57C") || trimmed.includes("\uD544\uC694") || trimmed.includes("\uC608\uC815")) {
+      } else if (
+        trimmed.includes("\uD574\uC57C") ||
+        trimmed.includes("\uD544\uC694") ||
+        trimmed.includes("\uC608\uC815")
+      ) {
         this.data.actions.push({ text: trimmed, completed: false });
-      } else if (trimmed.includes("\uAC83 \uAC19") || trimmed.includes("\uC0DD\uAC01") || trimmed.includes("\uB290\uB08C")) {
+      } else if (
+        trimmed.includes("\uAC83 \uAC19") ||
+        trimmed.includes("\uC0DD\uAC01") ||
+        trimmed.includes("\uB290\uB08C")
+      ) {
         this.data.thoughts.push(trimmed);
       } else {
         this.data.observations.push(trimmed);
@@ -621,8 +714,7 @@ theme: ${this.data.theme}
   }
   injectStyles() {
     const styleId = "thinklog-input-styles";
-    if (document.getElementById(styleId))
-      return;
+    if (document.getElementById(styleId)) return;
     const style = document.createElement("style");
     style.id = styleId;
     style.textContent = INPUT_VIEW_STYLES;
@@ -1071,14 +1163,20 @@ var DEFAULT_SETTINGS = {
   outputFolder: "thinklog/output",
   language: "ko",
   showStreak: true,
-  aiEnabled: false
+  aiEnabled: false,
 };
 var VIEW_TYPE_THINKLOG = "thinklog-view";
 var ThinkLogPlugin = class extends import_obsidian2.Plugin {
   async onload() {
     await this.loadSettings();
-    this.registerView(VIEW_TYPE_THINKLOG, (leaf) => new ThinkLogView(leaf, this));
-    this.registerView(VIEW_TYPE_THINKLOG_INPUT, (leaf) => new ThinkLogInputView(leaf, this));
+    this.registerView(
+      VIEW_TYPE_THINKLOG,
+      (leaf) => new ThinkLogView(leaf, this),
+    );
+    this.registerView(
+      VIEW_TYPE_THINKLOG_INPUT,
+      (leaf) => new ThinkLogInputView(leaf, this),
+    );
     this.addRibbonIcon("edit-3", "ThinkLog Input", () => {
       this.activateInputView();
     });
@@ -1088,27 +1186,26 @@ var ThinkLogPlugin = class extends import_obsidian2.Plugin {
     this.addCommand({
       id: "open-thinklog",
       name: "Open ThinkLog Dashboard",
-      callback: () => this.activateView()
+      callback: () => this.activateView(),
     });
     this.addCommand({
       id: "open-thinklog-input",
       name: "Open ThinkLog Input (Quick Capture)",
       hotkeys: [{ modifiers: ["Mod", "Shift"], key: "t" }],
-      callback: () => this.activateInputView()
+      callback: () => this.activateInputView(),
     });
     this.addCommand({
       id: "new-thinklog-entry",
       name: "New ThinkLog Entry (Markdown)",
-      callback: () => this.createNewEntry()
+      callback: () => this.createNewEntry(),
     });
     this.addCommand({
       id: "generate-report",
       name: "Generate Report from Theme",
-      callback: () => this.showReportModal()
+      callback: () => this.showReportModal(),
     });
     this.addSettingTab(new ThinkLogSettingTab(this.app, this));
-    this.app.workspace.onLayoutReady(() => {
-    });
+    this.app.workspace.onLayoutReady(() => {});
   }
   async activateView() {
     const { workspace } = this.app;
@@ -1118,7 +1215,9 @@ var ThinkLogPlugin = class extends import_obsidian2.Plugin {
       leaf = leaves[0];
     } else {
       leaf = workspace.getRightLeaf(false);
-      await (leaf == null ? void 0 : leaf.setViewState({ type: VIEW_TYPE_THINKLOG, active: true }));
+      await (leaf == null
+        ? void 0
+        : leaf.setViewState({ type: VIEW_TYPE_THINKLOG, active: true }));
     }
     if (leaf) {
       workspace.revealLeaf(leaf);
@@ -1132,7 +1231,9 @@ var ThinkLogPlugin = class extends import_obsidian2.Plugin {
       leaf = leaves[0];
     } else {
       leaf = workspace.getLeaf("tab");
-      await (leaf == null ? void 0 : leaf.setViewState({ type: VIEW_TYPE_THINKLOG_INPUT, active: true }));
+      await (leaf == null
+        ? void 0
+        : leaf.setViewState({ type: VIEW_TYPE_THINKLOG_INPUT, active: true }));
     }
     if (leaf) {
       workspace.revealLeaf(leaf);
@@ -1224,8 +1325,7 @@ var ThinkLogView = class extends import_obsidian2.ItemView {
     await this.calculateStreak();
     this.render();
   }
-  async onClose() {
-  }
+  async onClose() {}
   async loadThemes() {
     const files = this.app.vault.getMarkdownFiles();
     const themeMap = /* @__PURE__ */ new Map();
@@ -1240,15 +1340,13 @@ var ThinkLogView = class extends import_obsidian2.ItemView {
               emoji: this.getThemeEmoji(theme),
               logCount: 0,
               startDate: file.basename,
-              lastLog: file.basename
+              lastLog: file.basename,
             });
           }
           const info = themeMap.get(theme);
           info.logCount++;
-          if (file.basename > info.lastLog)
-            info.lastLog = file.basename;
-          if (file.basename < info.startDate)
-            info.startDate = file.basename;
+          if (file.basename > info.lastLog) info.lastLog = file.basename;
+          if (file.basename < info.startDate) info.startDate = file.basename;
         }
       }
     }
@@ -1262,7 +1360,9 @@ var ThinkLogView = class extends import_obsidian2.ItemView {
     if (fmMatch && fmMatch[1].trim()) {
       return fmMatch[1].trim();
     }
-    const sectionMatch = content.match(/##\s*(?:Theme|테마)[:\s]*(.+?)(?:\n|$)/i);
+    const sectionMatch = content.match(
+      /##\s*(?:Theme|테마)[:\s]*(.+?)(?:\n|$)/i,
+    );
     if (sectionMatch && sectionMatch[1].trim()) {
       return sectionMatch[1].trim();
     }
@@ -1272,20 +1372,25 @@ var ThinkLogView = class extends import_obsidian2.ItemView {
     const emojiMap = {
       "\uB514\uC9C0\uD138": "\u{1F680}",
       "\uC804\uD658": "\u{1F504}",
-      "OKR": "\u{1F4CA}",
+      OKR: "\u{1F4CA}",
       "\uAE30\uD68D": "\u{1F4A1}",
       "\uAC1C\uBC1C": "\u{1F4BB}",
       "\uB9C8\uCF00\uD305": "\u{1F4E3}",
-      "\uC601\uC5C5": "\u{1F4BC}"
+      "\uC601\uC5C5": "\u{1F4BC}",
     };
     for (const [key, emoji] of Object.entries(emojiMap)) {
-      if (theme.includes(key))
-        return emoji;
+      if (theme.includes(key)) return emoji;
     }
     return "\u{1F4DD}";
   }
   async calculateStreak() {
-    const files = this.app.vault.getMarkdownFiles().filter((f) => f.path.includes(this.plugin.settings.dailyNotesFolder)).map((f) => f.basename).filter((n) => /^\d{4}-\d{2}-\d{2}$/.test(n)).sort().reverse();
+    const files = this.app.vault
+      .getMarkdownFiles()
+      .filter((f) => f.path.includes(this.plugin.settings.dailyNotesFolder))
+      .map((f) => f.basename)
+      .filter((n) => /^\d{4}-\d{2}-\d{2}$/.test(n))
+      .sort()
+      .reverse();
     let streak = 0;
     let checkDate = (0, import_obsidian2.moment)();
     for (const filename of files) {
@@ -1343,18 +1448,24 @@ var ThinkLogView = class extends import_obsidian2.ItemView {
         </div>
 
         <!-- Streak -->
-        ${this.plugin.settings.showStreak ? `
+        ${
+          this.plugin.settings.showStreak
+            ? `
         <div class="tl-streak-card">
           <div class="tl-streak-number">${this.streak}</div>
           <div class="tl-streak-label">Day Streak \u{1F525}</div>
         </div>
-        ` : ""}
+        `
+            : ""
+        }
 
         <!-- Theme Selector -->
         <div class="tl-section">
           <div class="tl-section-label">Current Theme</div>
           <div class="tl-theme-list">
-            ${this.themes.map((theme) => `
+            ${this.themes
+              .map(
+                (theme) => `
               <div class="tl-theme-option ${theme.name === this.selectedTheme ? "active" : ""}"
                    data-theme="${theme.name}">
                 <div class="tl-theme-icon">${theme.emoji}</div>
@@ -1363,7 +1474,9 @@ var ThinkLogView = class extends import_obsidian2.ItemView {
                   <div class="tl-theme-meta">${theme.logCount} logs \xB7 Started ${theme.startDate}</div>
                 </div>
               </div>
-            `).join("")}
+            `,
+              )
+              .join("")}
             <button class="tl-new-theme-btn" data-action="new-theme">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 5v14M5 12h14"/>
@@ -1491,7 +1604,10 @@ var ThinkLogView = class extends import_obsidian2.ItemView {
     new import_obsidian2.Notice(`Report generated: ${fileName}`);
   }
   async collectLogsForTheme(theme) {
-    const files = this.app.vault.getMarkdownFiles().filter((f) => f.path.includes(this.plugin.settings.dailyNotesFolder)).sort((a, b) => a.basename.localeCompare(b.basename));
+    const files = this.app.vault
+      .getMarkdownFiles()
+      .filter((f) => f.path.includes(this.plugin.settings.dailyNotesFolder))
+      .sort((a, b) => a.basename.localeCompare(b.basename));
     const logs = [];
     for (const file of files) {
       const content = await this.app.vault.read(file);
@@ -1510,24 +1626,32 @@ var ThinkLogView = class extends import_obsidian2.ItemView {
       thoughts: this.extractSection(content, "Thoughts|\uC0DD\uAC01"),
       questions: this.extractSection(content, "Questions|\uC758\uBB38\uC810"),
       dataPoints: this.extractDataPoints(content),
-      actions: this.extractActions(content)
+      actions: this.extractActions(content),
     };
     return entry;
   }
   extractSection(content, sectionPattern) {
     const regex = new RegExp(`##\\s*(?:${sectionPattern})[^#]*`, "i");
     const match = content.match(regex);
-    if (!match)
-      return [];
+    if (!match) return [];
     const lines = match[0].split("\n").slice(1);
-    return lines.filter((line) => line.trim().startsWith("-")).map((line) => line.replace(/^-\s*/, "").trim()).filter((line) => line.length > 0);
+    return lines
+      .filter((line) => line.trim().startsWith("-"))
+      .map((line) => line.replace(/^-\s*/, "").trim())
+      .filter((line) => line.length > 0);
   }
   extractDataPoints(content) {
-    const section = this.extractSection(content, "Data|\uB370\uC774\uD130|\uC218\uCE58");
+    const section = this.extractSection(
+      content,
+      "Data|\uB370\uC774\uD130|\uC218\uCE58",
+    );
     return section.map((line) => {
       const parts = line.split(":");
       if (parts.length >= 2) {
-        return { label: parts[0].trim(), value: parts.slice(1).join(":").trim() };
+        return {
+          label: parts[0].trim(),
+          value: parts.slice(1).join(":").trim(),
+        };
       }
       return { label: line, value: "" };
     });
@@ -1535,13 +1659,14 @@ var ThinkLogView = class extends import_obsidian2.ItemView {
   extractActions(content) {
     const regex = /##\s*(?:Next Actions|액션|다음)[^#]*/i;
     const match = content.match(regex);
-    if (!match)
-      return [];
+    if (!match) return [];
     const lines = match[0].split("\n").slice(1);
-    return lines.filter((line) => line.trim().match(/^-\s*\[[ x]\]/)).map((line) => ({
-      text: line.replace(/^-\s*\[[ x]\]\s*/, "").trim(),
-      completed: line.includes("[x]")
-    }));
+    return lines
+      .filter((line) => line.trim().match(/^-\s*\[[ x]\]/))
+      .map((line) => ({
+        text: line.replace(/^-\s*\[[ x]\]\s*/, "").trim(),
+        completed: line.includes("[x]"),
+      }));
   }
   buildReport(logs, theme) {
     const allObservations = logs.flatMap((l) => l.observations);
@@ -1564,7 +1689,11 @@ This report analyzes **${theme}** based on ${logs.length} daily logs containing 
 
 Key findings include: ${allThoughts.slice(0, 3).join(", ")}.
 
-Recommended actions: ${allActions.filter((a) => !a.completed).slice(0, 3).map((a) => a.text).join(", ")}.
+Recommended actions: ${allActions
+      .filter((a) => !a.completed)
+      .slice(0, 3)
+      .map((a) => a.text)
+      .join(", ")}.
 
 ---
 
@@ -1600,7 +1729,17 @@ ${allActions.map((a) => `- [${a.completed ? "x" : " "}] ${a.text}`).join("\n")}
     const folder = this.plugin.settings.dailyNotesFolder;
     const file = this.app.vault.getAbstractFileByPath(folder);
     if (file) {
-      (_d = (_c = (_b = (_a = this.app.internalPlugins) == null ? void 0 : _a.plugins) == null ? void 0 : _b["file-explorer"]) == null ? void 0 : _c.instance) == null ? void 0 : _d.revealInFolder(file);
+      (_d =
+        (_c =
+          (_b =
+            (_a = this.app.internalPlugins) == null ? void 0 : _a.plugins) ==
+          null
+            ? void 0
+            : _b["file-explorer"]) == null
+          ? void 0
+          : _c.instance) == null
+        ? void 0
+        : _d.revealInFolder(file);
     }
   }
   async exportHTML() {
@@ -1654,14 +1793,20 @@ ${allActions.map((a) => `- [${a.completed ? "x" : " "}] ${a.text}`).join("\n")}
     <div class="card">
       <h2>Key Observations</h2>
       <ul>
-        ${logs.flatMap((l) => l.observations).map((o) => `<li>${o}</li>`).join("")}
+        ${logs
+          .flatMap((l) => l.observations)
+          .map((o) => `<li>${o}</li>`)
+          .join("")}
       </ul>
     </div>
 
     <div class="card">
       <h2>Insights</h2>
       <ul>
-        ${logs.flatMap((l) => l.thoughts).map((t) => `<li>${t}</li>`).join("")}
+        ${logs
+          .flatMap((l) => l.thoughts)
+          .map((t) => `<li>${t}</li>`)
+          .join("")}
       </ul>
     </div>
 
@@ -1678,7 +1823,10 @@ ${allActions.map((a) => `- [${a.completed ? "x" : " "}] ${a.text}`).join("\n")}
     <div class="card">
       <h2>Next Actions</h2>
       <ul>
-        ${logs.flatMap((l) => l.actions).map((a) => `<li>${a.completed ? "\u2705" : "\u2B1C"} ${a.text}</li>`).join("")}
+        ${logs
+          .flatMap((l) => l.actions)
+          .map((a) => `<li>${a.completed ? "\u2705" : "\u2B1C"} ${a.text}</li>`)
+          .join("")}
       </ul>
     </div>
   </div>
@@ -1695,36 +1843,68 @@ var ThinkLogSettingTab = class extends import_obsidian2.PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h2", { text: "ThinkLog Settings" });
-    new import_obsidian2.Setting(containerEl).setName("Daily Notes Folder").setDesc("Folder where your daily logs are stored").addText(
-      (text) => text.setPlaceholder("daily").setValue(this.plugin.settings.dailyNotesFolder).onChange(async (value) => {
-        this.plugin.settings.dailyNotesFolder = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian2.Setting(containerEl).setName("Output Folder").setDesc("Folder where generated reports will be saved").addText(
-      (text) => text.setPlaceholder("thinklog/output").setValue(this.plugin.settings.outputFolder).onChange(async (value) => {
-        this.plugin.settings.outputFolder = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian2.Setting(containerEl).setName("Default Framework").setDesc("Default analysis framework for reports").addDropdown(
-      (dropdown) => dropdown.addOption("mcksey", "McKinsey MECE").addOption("bcg", "BCG Matrix").addOption("palantir", "Palantir Hypothesis").setValue(this.plugin.settings.defaultFramework).onChange(async (value) => {
-        this.plugin.settings.defaultFramework = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian2.Setting(containerEl).setName("Show Streak").setDesc("Display day streak counter in the panel").addToggle(
-      (toggle) => toggle.setValue(this.plugin.settings.showStreak).onChange(async (value) => {
-        this.plugin.settings.showStreak = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian2.Setting(containerEl).setName("Language").setDesc("UI language").addDropdown(
-      (dropdown) => dropdown.addOption("en", "English").addOption("ko", "\uD55C\uAD6D\uC5B4").setValue(this.plugin.settings.language).onChange(async (value) => {
-        this.plugin.settings.language = value;
-        await this.plugin.saveSettings();
-      })
-    );
+    new import_obsidian2.Setting(containerEl)
+      .setName("Daily Notes Folder")
+      .setDesc("Folder where your daily logs are stored")
+      .addText((text) =>
+        text
+          .setPlaceholder("daily")
+          .setValue(this.plugin.settings.dailyNotesFolder)
+          .onChange(async (value) => {
+            this.plugin.settings.dailyNotesFolder = value;
+            await this.plugin.saveSettings();
+          }),
+      );
+    new import_obsidian2.Setting(containerEl)
+      .setName("Output Folder")
+      .setDesc("Folder where generated reports will be saved")
+      .addText((text) =>
+        text
+          .setPlaceholder("thinklog/output")
+          .setValue(this.plugin.settings.outputFolder)
+          .onChange(async (value) => {
+            this.plugin.settings.outputFolder = value;
+            await this.plugin.saveSettings();
+          }),
+      );
+    new import_obsidian2.Setting(containerEl)
+      .setName("Default Framework")
+      .setDesc("Default analysis framework for reports")
+      .addDropdown((dropdown) =>
+        dropdown
+          .addOption("mcksey", "McKinsey MECE")
+          .addOption("bcg", "BCG Matrix")
+          .addOption("palantir", "Palantir Hypothesis")
+          .setValue(this.plugin.settings.defaultFramework)
+          .onChange(async (value) => {
+            this.plugin.settings.defaultFramework = value;
+            await this.plugin.saveSettings();
+          }),
+      );
+    new import_obsidian2.Setting(containerEl)
+      .setName("Show Streak")
+      .setDesc("Display day streak counter in the panel")
+      .addToggle((toggle) =>
+        toggle
+          .setValue(this.plugin.settings.showStreak)
+          .onChange(async (value) => {
+            this.plugin.settings.showStreak = value;
+            await this.plugin.saveSettings();
+          }),
+      );
+    new import_obsidian2.Setting(containerEl)
+      .setName("Language")
+      .setDesc("UI language")
+      .addDropdown((dropdown) =>
+        dropdown
+          .addOption("en", "English")
+          .addOption("ko", "\uD55C\uAD6D\uC5B4")
+          .setValue(this.plugin.settings.language)
+          .onChange(async (value) => {
+            this.plugin.settings.language = value;
+            await this.plugin.saveSettings();
+          }),
+      );
   }
 };
 var THINKLOG_STYLES = `

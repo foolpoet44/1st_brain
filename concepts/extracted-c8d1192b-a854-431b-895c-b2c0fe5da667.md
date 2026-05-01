@@ -104,15 +104,15 @@ load_dotenv()
 
 def diagnose_connection():
     api_key = os.getenv('OPENAI_API_KEY')
-    
+
     print("=== OpenAI API 연결 진단 ===\n")
-    
+
     # 1. API 키 존재 확인
     if not api_key:
         print("❌ API 키가 .env 파일에 없습니다.")
         return
     print(f"✅ API 키 확인: {api_key[:20]}...{api_key[-4:]}")
-    
+
     # 2. 네트워크 연결 확인
     print("\n[네트워크 테스트]")
     try:
@@ -121,7 +121,7 @@ def diagnose_connection():
     except Exception as e:
         print(f"❌ 네트워크 오류: {e}")
         return
-    
+
     # 3. API 인증 테스트
     print("\n[API 인증 테스트]")
     headers = {"Authorization": f"Bearer {api_key}"}

@@ -9,7 +9,7 @@
     → Guide Mode 방식의 단계별 인터뷰 프롬프트
     → 청중 / 목적 / 데이터 소스 / 슬라이드 수 수집
 
-[2] Research & Structure Agent  
+[2] Research & Structure Agent
     → Claude web_search로 필요한 데이터 수집
     → JSON 형태의 슬라이드 아웃라인 생성
     → 각 슬라이드: {title, key_points[], speaker_notes, chart_data}
@@ -67,7 +67,7 @@
       "title": "전사 Well-Being 지수 추이",
       "chart": {
         "type": "line",
-        "data": {"Q4-25": 72, "Q1-26": 78},
+        "data": { "Q4-25": 72, "Q1-26": 78 },
         "highlight": "6pt 상승"
       },
       "key_message": "목표 대비 85% 달성",
@@ -102,9 +102,11 @@ hr-workspace/
 # Slide Agent — CLAUDE.md
 
 ## 역할
+
 JSON outline을 받아 LG CHO 브랜드 .pptx 파일을 생성한다.
 
 ## 실행 순서
+
 1. inputs/outline.json 읽기
 2. renderer.py로 슬라이드 타입별 생성
 3. chart_gen.py로 데이터 시각화 삽입
@@ -112,11 +114,13 @@ JSON outline을 받아 LG CHO 브랜드 .pptx 파일을 생성한다.
 5. outputs/에 .pptx + .pdf 저장
 
 ## 브랜드 규칙
+
 - Primary Red: #A50034
 - Font: Malgun Gothic (제목), Arial (본문)
 - 템플릿: templates/lg_cho_master.pptx의 슬라이드 레이아웃 인덱스를 반드시 유지
 
 ## 절대 하지 말 것
+
 - 템플릿의 폰트/색상 임의 변경 금지
 - 슬라이드 레이아웃 구조 임의 변경 금지
 ```
@@ -139,14 +143,14 @@ SLIDE_TYPE_MAP = {
 def generate_presentation(outline_path: str):
     with open(outline_path) as f:
         outline = json.load(f)
-    
+
     prs = Presentation("templates/lg_cho_master.pptx")
-    
+
     for slide_data in outline["slides"]:
         render_fn = SLIDE_TYPE_MAP.get(slide_data["type"])
         if render_fn:
             render_fn(prs, slide_data)
-    
+
     output_path = f"outputs/{outline['meta']['title']}.pptx"
     prs.save(output_path)
     return output_path

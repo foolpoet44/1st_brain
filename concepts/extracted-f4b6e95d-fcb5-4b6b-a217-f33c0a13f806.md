@@ -48,7 +48,7 @@ report.generate(results, output="report.pptx")
 ### Extracted Code (text)
 
 ```text
-1. 당신: "리더십 평가 점수를 5점 척도로 정규화하고, 
+1. 당신: "리더십 평가 점수를 5점 척도로 정규화하고,
          팀별 평균을 계산해서 막대 그래프로 보여줘"
 2. Claude Code: 구현 코드 생성
 3. 당신: 결과 확인 → 도메인 관점에서 검증
@@ -87,13 +87,13 @@ def generate_feedback_report(scores, template="default"):
 ```text
 1970년대: Waterfall (완성도 우선)
          └─ "완벽한 설계 문서 먼저"
-         
+
 2000년대: Agile (가능성 우선)
          └─ "작동하는 소프트웨어가 문서보다 중요"
-         
+
 2010년대: Lean Startup (가능성 검증)
          └─ "Build - Measure - Learn"
-         
+
 2020년대: AI 시대 (초고속 프로토타이핑)
          └─ "Claude Code로 30분 만에 MVP"
 ```
@@ -116,6 +116,7 @@ def generate_feedback_report(scores, template="default"):
 
 ```markdown
 ## 가능성 검증 (1주 이내)
+
 - [ ] 핵심 기능 1개가 작동하는가?
 - [ ] 데이터 입출력이 가능한가?
 - [ ] 성능이 견딜 만한가?
@@ -148,7 +149,7 @@ Level 3: 제품 수준
 "이 HR 평가 로직을 Python으로 최대한 빠르게 구현해줘.
  지저분해도 상관없어. 일단 작동만 하면 돼."
 
-# 완성도 향상용 프롬프트  
+# 완성도 향상용 프롬프트
 "이 코드를 프로덕션 레벨로 리팩토링해줘.
  - 에러 처리 추가
  - 주석 작성
@@ -267,7 +268,7 @@ Growth Mindset (성장 마인드셋):
 ### Extracted Code (text)
 
 ```text
-자율성: 
+자율성:
 └─ "이 방법으로 만들어볼까?" (스스로 결정)
   └─ vs. "회사 표준 프레임워크 써야 해" (강제)
 

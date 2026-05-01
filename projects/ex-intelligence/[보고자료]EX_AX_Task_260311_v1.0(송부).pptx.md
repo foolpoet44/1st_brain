@@ -20,17 +20,18 @@ PRI HR 실 / EXG팀｜ 2026. 03. 10.
 ### Notes:
 
 <!-- Slide number: 2 -->
+
 1. 추진배경
 
 Main Question : “ 지금 이 순간, 우리 조직에 무슨 일이 일어나고 있는지 — 우리는 정말 알고 있는가? ”
- 현행 연 1회 진단(LG Way Survey)의 구조적 한계
- AX 기반 Pulse Check 전환 시 기대 효과
+현행 연 1회 진단(LG Way Survey)의 구조적 한계
+AX 기반 Pulse Check 전환 시 기대 효과
 
 ① 시간 지연 (Time Lag)
 진단 → 분석 → 결과 공유까지 평균 1~2개월 소요
 이슈가 발생한 시점과 대응 시점 사이의 간극이 크다.
 팀 이탈·번아웃이 이미 진행된 후에야 데이터가 도달한다.
-①  Real-time Signal → 선제적 개입
+① Real-time Signal → 선제적 개입
 월 1회 측정으로 이슈 발생 직후 HR·리더가 감지 가능.
 번아웃·이탈 위험 부서를 Risk Flag로 조기 포착.
 
@@ -51,6 +52,7 @@ HR 개입 효과를 데이터로 입증·피드백하는 선순환 구조.
 데이터가 리포트로 끝나지 않고 행동(Action)으로 이어지는 구조.
 
 <!-- Slide number: 3 -->
+
 2. Mechanism(작동원리) : 직원경험(EX) 측정에서 Performance까지
 
 조직의 지원과 심리적 안정이 직무 몰입을 통해 성과로 연결되는 선순환 구조를 구체화하여 시스템에 반영하고자 함.
@@ -62,6 +64,7 @@ HR 개입 효과를 데이터로 입증·피드백하는 선순환 구조.
 ### Notes:
 
 <!-- Slide number: 4 -->
+
 3. Health Check Process 제안
 
 개별 인터뷰를 통한 상세 이슈진단
@@ -169,7 +172,8 @@ Q8. W-L Balance
 Q4. 리더관계
 
 <!-- Slide number: 5 -->
-유첨. 영역별 측정 문항 설계(안)_월간(Monthly) Pulse
+
+유첨. 영역별 측정 문항 설계(안)\_월간(Monthly) Pulse
 
 A
 
@@ -196,7 +200,7 @@ Q7. 업무환경 / 인프라
 10점 척도
 10점 척도
 "오늘 기준, 나의 직장 경험 전반을 한 단어 또는
- 이모지로 표현한다면?"
+이모지로 표현한다면?"
 "내 업무를 어떻게 수행할지 스스로 결정"
 "리더와 상호작용은 긍정적인 경험"
 "업무 환경은 집중과 몰입을 충분히 지원함"
@@ -210,13 +214,13 @@ Q7. 업무환경 / 인프라
 월별 변화가 빠르게 반응하는 선행 지표.
 설계 의도: 업무 지시가 아닌 '인간적 지지'에 초점.
 심리적 안전감의 기초.
- 부정 응답 시 주요 원인 (복수선택)
+부정 응답 시 주요 원인 (복수선택)
 
 ![preencoded.png](Image4.jpg)
 
 식사 환경
 사무/시설 환경
- 3점(😔) 이하 선택 시 (주관식)
+3점(😔) 이하 선택 시 (주관식)
 
 ![preencoded.png](Image9.jpg)
 AX(디지털) 환경
@@ -249,7 +253,7 @@ Q10. eNPS / 추천의향
 "일과 삶의 균형을 스스로 조율할 수 있음"
 "나는 현재 이 조직을 가까운 지인에게 좋은 직장으로 추천할 의향이 있다."
 
- 부정 응답 시 주요 원인 (복수선택)
+부정 응답 시 주요 원인 (복수선택)
 
 ![preencoded.png](Image10.jpg)
 
@@ -265,7 +269,7 @@ Q6. 협업 수준
 
 ![preencoded.png](Image5.jpg)
 
- 6점(Detractor) 이하 선택 시 (주관식)
+6점(Detractor) 이하 선택 시 (주관식)
 " 나의 업무량과 업무 속도는 지속 가능한 수준"
 ＂구성원과의 협업에 가치가 있음"
 과도한 업무량
@@ -287,6 +291,7 @@ Q6. 협업 수준
 ### Notes:
 
 <!-- Slide number: 6 -->
+
 3. 구성원 참여 촉진전략
 
 방해요인
@@ -345,7 +350,7 @@ FUN FACTOR
 
 “국내/외 Field 출장”
 이번 주 참여자: 1,245명
- 서베이 첫 화면에 흥미로운 양자택일 게임을 배치하여 자연스러운 진입을 유도합니다.
+서베이 첫 화면에 흥미로운 양자택일 게임을 배치하여 자연스러운 진입을 유도합니다.
 
 ![preencoded.png](Image7.jpg)
 
@@ -382,15 +387,16 @@ REWARD SYSTEM
 PGM 기능업데이트 해가면서 공지사항 및 이벤트추가하여 자동 환경 구축 예정
 
 ![](Picture2.jpg)
- 1회성설문 아닌 PGM 버전별 업데이트 구축
- 프로그램 더블클릭 설치만 하면 시작
- DataBase연동
- 누적데이터로 AI 예측
- 뉴스 알림
+1회성설문 아닌 PGM 버전별 업데이트 구축
+프로그램 더블클릭 설치만 하면 시작
+DataBase연동
+누적데이터로 AI 예측
+뉴스 알림
 “바쁜 업무로 인해 우선순위 배재”
- 모든 활동을 포인트로 환산하여, 참여가 곧 실질적인 혜택이 되는 구조를 만듭니다.
+모든 활동을 포인트로 환산하여, 참여가 곧 실질적인 혜택이 되는 구조를 만듭니다.
 
 <!-- Slide number: 7 -->
+
 5. 활성화 : 지속 참여를 통한 선순환 구조 구축
 
 지속적인 참여와 데이터 기반 소통을 통해 문제를 발견하고 개선이 실행되는 선순환 구조를 구축
@@ -453,14 +459,14 @@ HR
 
 ![preencoded.png](Image12.jpg)
 “다매체 활용 Survey 참여독려”
- Pulse Survey 소개 게시판 홍보
- 구성원 대상 게시글 정기(1달) 메일 발송
- 구성원 대상 조직 단위 Trend 공유
+Pulse Survey 소개 게시판 홍보
+구성원 대상 게시글 정기(1달) 메일 발송
+구성원 대상 조직 단위 Trend 공유
 → 구성원들의 자발적 참여 유도
 “우수사례 발굴 및 구성원 공유”
- 생산기술원 각 Site 별 Comm.Board 게시
- 서베이 트렌드 개선사례 공모     ▶ 우수사례 조직문화 활성화 비용 지급
- 서베이 실시 포인트 리워드 지급    ▶ 포인트 현물상품 교환(커피, 치킨, 상품권 등)
+생산기술원 각 Site 별 Comm.Board 게시
+서베이 트렌드 개선사례 공모  ▶ 우수사례 조직문화 활성화 비용 지급
+서베이 실시 포인트 리워드 지급  ▶ 포인트 현물상품 교환(커피, 치킨, 상품권 등)
 
 → 실질적 구성원 참여 동기부여 제공
 
@@ -468,29 +474,30 @@ HR
 
 ![preencoded.png](Image2.jpg)
 “Pulse Check 트렌드 관리 중요성 강조”
- 각 담당 / 연구소장 참여 독려 영상, 메시지 제공
+각 담당 / 연구소장 참여 독려 영상, 메시지 제공
 
 → 구성원 감정상태 수치적 관리가능
- 리더 대상 월간 트렌드 레포트 발행    ▶ 우리 팀의 현재 상태 자각(자발적 참여독려)
+리더 대상 월간 트렌드 레포트 발행  ▶ 우리 팀의 현재 상태 자각(자발적 참여독려)
 “Data 트렌드 기반 구성원 VoE 개선”
- 각 담당 분기 / 월례회 시 구성원 Pulse 트렌드 소개
- LG Way Survey 사전 예측 Data로의 활용
- 팀 미팅 / 워크샵 진행 시 Pulse 트렌드 Data 활용 → 개선사례 도출 및 실천
+각 담당 분기 / 월례회 시 구성원 Pulse 트렌드 소개
+LG Way Survey 사전 예측 Data로의 활용
+팀 미팅 / 워크샵 진행 시 Pulse 트렌드 Data 활용 → 개선사례 도출 및 실천
 → 리스크 선제대응
 
 JB
 
 ![preencoded.png](Image2.jpg)
 “구성원 긍정경험 사례 공유 및 실천”
- 트렌드 맞춤형 구성원 VoE 개선사례 공유
- JB간 조직 트렌드 변화 공유 및 테마별 개선안 B/M
+트렌드 맞춤형 구성원 VoE 개선사례 공유
+JB간 조직 트렌드 변화 공유 및 테마별 개선안 B/M
 “Pulse Survey 미 참여 인원 독려”
- 각 팀 CA대상 Pulse Survey 참여독려
+각 팀 CA대상 Pulse Survey 참여독려
 “Pulse Check 참여를 통해 업무환경이 개선되는 경험제공“
 
 ### Notes:
 
 <!-- Slide number: 8 -->
+
 4. Communication & Solution 제공
 
 의견 청취 ~ Dashboard 구축까지 전 프로세스의 AX기반 시스템화를 통해 구성원 / 현업리더 / 경영진 각각에 가치있는 Value를 제공하고자 함.
@@ -498,7 +505,7 @@ JB
 ![preencoded.png](Image2.jpg)
 구성원
 
-   월 1회
+월 1회
 
 ![preencoded.png](Image11.jpg)
 "여러분의 목소리가 반영되었습니다"
@@ -519,12 +526,12 @@ Visibility
 
 → 참여율 유지의 핵심 장치
 몰입수준 가시화
- 서베이 UI/UX
-  (Front-End)
- Data-Base
- (Analytics)
- DB Management
- (Back-End)
+서베이 UI/UX
+(Front-End)
+Data-Base
+(Analytics)
+DB Management
+(Back-End)
 조직 리더
 
 ![preencoded.png](Image2.jpg)
@@ -585,7 +592,7 @@ Pulse Data Capture
 Risk Signal
 "조직 건강도 Executive Dashboard"
 이슈 · 임계 도달
- Engagement Index 추이
+Engagement Index 추이
 
 ![preencoded.png](Image4.jpg)
 위험 신호(Red Flag) 부서 식별
@@ -597,6 +604,7 @@ Risk Signal
 ### Notes:
 
 <!-- Slide number: 9 -->
+
 6. 시스템 구체화 및 구현 방안
 
 구성원의 경험을 실시간으로 수집 / 데이터화 / 진단하는 시스템을 구축하고, 이를 통해 Needs에 선제적으로 대응하는 체계를 고도화 함
@@ -619,7 +627,7 @@ Risk Signal
 10월
 11월
 12월
- Pulse CheckTool 개발
+Pulse CheckTool 개발
 관계형 DB설계
 웹 호스팅 연동
 Dash Board완성
@@ -673,7 +681,7 @@ LG EP 및 MS-Authentication 연동을 통한 간편 로그인 및 보안 체계
 RESTful/GraphQL API 자동 생성 및 서버리스
 함수를 통한 비즈니스 로직 처리
 NLP 기반 감성 분석 및 이상치(Anomaly) 탐지를 통한
- 리스크 신호 포착
+리스크 신호 포착
 
 실시간 상호작용
 웹 호스팅 연동
@@ -693,6 +701,7 @@ Visibility, Insight, Risk Signal 등 목적별 대시보드 완성 및 제공
 ### Notes:
 
 <!-- Slide number: 10 -->
+
 7. 시스템 구축 추진일정(TBD)
 
 2분기 (Q2)

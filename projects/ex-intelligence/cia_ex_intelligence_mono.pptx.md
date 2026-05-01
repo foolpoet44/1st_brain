@@ -19,7 +19,7 @@ ORGANIZATIONAL DECISION SYSTEM
 "결정이 필요한 사람에게, 필요한 정보를, 필요한 시점에"
 — CIA 창설 원칙, 1947
 
-LG PRI EXG팀  |  4월 킥오프 승인 보고  |  2026년 3월
+LG PRI EXG팀 | 4월 킥오프 승인 보고 | 2026년 3월
 
 ### Notes:
 
@@ -28,7 +28,7 @@ LG PRI EXG팀  |  4월 킥오프 승인 보고  |  2026년 3월
 CIA 메타포 — 구조적 동형성이 설득의 근거다
 LG PRI EXG팀
 
-핵심 메시지  CIA의 핵심 철학 '수집 → 분석 → 브리핑'은 EX Intelligence의 작동 원리와 문자 그대로 동일하다 — 이것은 비유가 아니라 설명이다
+핵심 메시지 CIA의 핵심 철학 '수집 → 분석 → 브리핑'은 EX Intelligence의 작동 원리와 문자 그대로 동일하다 — 이것은 비유가 아니라 설명이다
 CIA 정보 체계
 EX Intelligence 체계
 
@@ -60,7 +60,7 @@ AI 맞춤 인텔리전스
 의사결정자에게 전달
 브리핑 전달
 
-LG PRI EXG팀  |  EX Intelligence 체계 구축  |  2026년 4월 킥오프 승인 보고  |  대외비
+LG PRI EXG팀 | EX Intelligence 체계 구축 | 2026년 4월 킥오프 승인 보고 | 대외비
 
 ### Notes:
 
@@ -69,7 +69,7 @@ LG PRI EXG팀  |  EX Intelligence 체계 구축  |  2026년 4월 킥오프 승�
 Signal vs Noise — 이직 신호는 항상 거기 있었다
 LG PRI EXG팀
 
-핵심 메시지  9/11의 교훈: 신호는 존재했다, 노이즈에 묻혔을 뿐이다 — 현재 HR도 동일한 구조적 공백에 놓여 있다
+핵심 메시지 9/11의 교훈: 신호는 존재했다, 노이즈에 묻혔을 뿐이다 — 현재 HR도 동일한 구조적 공백에 놓여 있다
 
 기존 HR의 한계
 EX Intelligence
@@ -79,15 +79,15 @@ EX Intelligence
 
 — 9/11 이후 미 정보위원회, 2004
 
-✕  연 1회 설문 = 단면 스냅샷
-✓  월 단위 트렌드 = 신호 식별 가능
+✕ 연 1회 설문 = 단면 스냅샷
+✓ 월 단위 트렌드 = 신호 식별 가능
 
-✕  팀장 보고 의존 (HUMINT만)
-✓  AI SIGINT: 자동 패턴 감지
+✕ 팀장 보고 의존 (HUMINT만)
+✓ AI SIGINT: 자동 패턴 감지
 
-✕  이직 결심 후 3개월 내 퇴직
+✕ 이직 결심 후 3개월 내 퇴직
 (Gallup) — 신호 포착 불가
-✓  이직 징후 평균 6~8주 선행 포착
+✓ 이직 징후 평균 6~8주 선행 포착
 
 77%
 6~8주
@@ -101,7 +101,7 @@ EX Intelligence
 예방되지 않는 비율
 (Gallup 2024)
 
-LG PRI EXG팀  |  EX Intelligence 체계 구축  |  2026년 4월 킥오프 승인 보고  |  대외비
+LG PRI EXG팀 | EX Intelligence 체계 구축 | 2026년 4월 킥오프 승인 보고 | 대외비
 
 ### Notes:
 
@@ -110,9 +110,9 @@ LG PRI EXG팀  |  EX Intelligence 체계 구축  |  2026년 4월 킥오프 승�
 PDB & Station Chief — 각 계층은 자신의 결정에 필요한 브리핑만 받는다
 LG PRI EXG팀
 
-핵심 메시지  대통령이 PDB 1~2페이지로 결정을 내리듯, 각 의사결정자는 역할에 최적화된 인텔리전스만 받는다 — 복잡성은 시스템이 흡수한다
+핵심 메시지 대통령이 PDB 1~2페이지로 결정을 내리듯, 각 의사결정자는 역할에 최적화된 인텔리전스만 받는다 — 복잡성은 시스템이 흡수한다
 
-PDB(President's Daily Brief):  수백 개 정보원 → 분석관 압축 → 대통령은 1~2페이지만 본다. 복잡성은 시스템이 흡수하고, 결정만 의사결정자에게 전달된다.
+PDB(President's Daily Brief): 수백 개 정보원 → 분석관 압축 → 대통령은 1~2페이지만 본다. 복잡성은 시스템이 흡수하고, 결정만 의사결정자에게 전달된다.
 
 조직 리더
 경영진
@@ -149,7 +149,7 @@ AI Risk Briefing
 
 예방 가능한 이직의 42%가 타이밍 차이에서 결정됨
 
-LG PRI EXG팀  |  EX Intelligence 체계 구축  |  2026년 4월 킥오프 승인 보고  |  대외비
+LG PRI EXG팀 | EX Intelligence 체계 구축 | 2026년 4월 킥오프 승인 보고 | 대외비
 
 ### Notes:
 
@@ -158,7 +158,7 @@ LG PRI EXG팀  |  EX Intelligence 체계 구축  |  2026년 4월 킥오프 승�
 Red Team & Need to Know — 임원의 두 가지 핵심 저항을 동시에 해소한다
 LG PRI EXG팀
 
-핵심 메시지  '데이터가 무기화되지 않겠냐' → Need to Know 원칙이 보호한다 / '복잡해서 활용되겠냐' → Red Team이 먼저 처리해준다
+핵심 메시지 '데이터가 무기화되지 않겠냐' → Need to Know 원칙이 보호한다 / '복잡해서 활용되겠냐' → Red Team이 먼저 처리해준다
 
 Red Team
 Need to Know
@@ -173,7 +173,7 @@ CIA 원칙
 
 EX Intelligence 적용
 EX Intelligence 적용
-AI = 조직의 Red Team:  이직·번아웃·갈등 징후가 표면화되기 전에 데이터 패턴에서 먼저 감지한다.
+AI = 조직의 Red Team: 이직·번아웃·갈등 징후가 표면화되기 전에 데이터 패턴에서 먼저 감지한다.
 
 리더
 팀 Risk Flag + 면담 타이밍 제안
@@ -188,7 +188,7 @@ HR
 
 "당신이 볼 필요 없는 정보는 시스템이 보호합니다."
 
-LG PRI EXG팀  |  EX Intelligence 체계 구축  |  2026년 4월 킥오프 승인 보고  |  대외비
+LG PRI EXG팀 | EX Intelligence 체계 구축 | 2026년 4월 킥오프 승인 보고 | 대외비
 
 ### Notes:
 
@@ -197,7 +197,7 @@ LG PRI EXG팀  |  EX Intelligence 체계 구축  |  2026년 4월 킥오프 승�
 CIA 메타포가 임원의 3가지 저항을 구조적으로 해소한다
 LG PRI EXG팀
 
-핵심 메시지  반론에 대한 반론을 미리 설계하는 것이 Working Backwards의 핵심 — CIA 메타포는 설득이 아닌 재프레이밍이다
+핵심 메시지 반론에 대한 반론을 미리 설계하는 것이 Working Backwards의 핵심 — CIA 메타포는 설득이 아닌 재프레이밍이다
 
 임원의 저항
 CIA 메타포 대응
@@ -217,9 +217,9 @@ Need to Know 원칙: 각자의 역할에 필요한 정보만. 나머지는 시�
 PDB의 단순함: 세계에서 가장 복잡한 정보도 1~2페이지로 압축. 복잡성은 시스템이 흡수한다.
 복잡성은 AI가 흡수. 리더는 "면담할 사람 2명", 경영진은 "위험 조직 3개"만 받는다.
 
-* 주의: CIA 메타포는 임원 전용 언어입니다. 구성원 커뮤니케이션에는 SDT/POS 기반 '목소리를 듣는다'는 언어를 별도 사용하십시오.
+- 주의: CIA 메타포는 임원 전용 언어입니다. 구성원 커뮤니케이션에는 SDT/POS 기반 '목소리를 듣는다'는 언어를 별도 사용하십시오.
 
-LG PRI EXG팀  |  EX Intelligence 체계 구축  |  2026년 4월 킥오프 승인 보고  |  대외비
+LG PRI EXG팀 | EX Intelligence 체계 구축 | 2026년 4월 킥오프 승인 보고 | 대외비
 
 ### Notes:
 
@@ -252,6 +252,6 @@ Risk Flag 감지
 계층별 맞춤
 의사결정 브리핑
 
-LG PRI EXG팀  |  EX Intelligence 체계 구축  |  2026년 4월 킥오프 승인 보고  |  대외비
+LG PRI EXG팀 | EX Intelligence 체계 구축 | 2026년 4월 킥오프 승인 보고 | 대외비
 
 ### Notes:

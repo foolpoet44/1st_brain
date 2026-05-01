@@ -22,7 +22,7 @@ tags: [onboarding, guide, getting-started]
 - **폴더 구조**: inbox/, wiki/, projects/, outputs/
 - **핵심 규칙**: Compiled Truth + Timeline 이중 구조
 
-### 2 분: wiki/concepts/_index.md 스캔
+### 2 분: wiki/concepts/\_index.md 스캔
 
 [`wiki/concepts/_index.md`](../wiki/concepts/_index.md) 에서 핵심 개념을 파악합니다:
 
@@ -52,15 +52,15 @@ projects/
 
 ### 기본 명령어
 
-| 명령어 | 설명 | 예시 |
-|:---|:---|:---|
-| `ingest` | inbox/ 정리 → wiki/ 통합 | `ingest 해줘` |
-| `query` | 위키 기반 질문 응답 | `LMX 이론이 뭐야?` |
-| `lint` | 위키 자가 점검 | `lint 해줘` |
-| `digest` | 주간 다이제스트 생성 | `이번 주 digest` |
-| `generate` | 콘텐츠 자동 생성 | `generate linkedin` |
-| `status` | 최근 변화 브리핑 | `bash scripts/status.sh` |
-| `harness` | Harness 구조 진단 | `harness-audit 해줘` |
+| 명령어     | 설명                     | 예시                     |
+| :--------- | :----------------------- | :----------------------- |
+| `ingest`   | inbox/ 정리 → wiki/ 통합 | `ingest 해줘`            |
+| `query`    | 위키 기반 질문 응답      | `LMX 이론이 뭐야?`       |
+| `lint`     | 위키 자가 점검           | `lint 해줘`              |
+| `digest`   | 주간 다이제스트 생성     | `이번 주 digest`         |
+| `generate` | 콘텐츠 자동 생성         | `generate linkedin`      |
+| `status`   | 최근 변화 브리핑         | `bash scripts/status.sh` |
+| `harness`  | Harness 구조 진단        | `harness-audit 해줘`     |
 
 ### 작업 흐름 예시
 
@@ -92,15 +92,15 @@ projects/
 
 ## 폴더별读写 규칙
 
-| 폴더 | 인간 (CSP) | AI (Claude) | 설명 |
-|:---|:---:|:---:|:---|
-| `inbox/` | ✅ 던지기 | ✅ 읽기 + 정리 | 미가공 자료 |
-| `wiki/` | ❌ | ✅ 생성/수정 | 정리된 지식 |
+| 폴더        | 인간 (CSP)  |    AI (Claude)    | 설명          |
+| :---------- | :---------: | :---------------: | :------------ |
+| `inbox/`    |  ✅ 던지기  |  ✅ 읽기 + 정리   | 미가공 자료   |
+| `wiki/`     |     ❌      |   ✅ 생성/수정    | 정리된 지식   |
 | `projects/` | ✅ Timeline | ✅ Compiled Truth | 프로젝트 기록 |
-| `outputs/` | ✅ 읽기 | ✅ 생성 | 산출물 |
-| `skills/` | ✅ 요청 | ✅ 생성 | 작업 패턴 |
-| `analysis/` | ✅ 읽기 | ✅ 생성 | 분석 리포트 |
-| `sharing/` | ✅ 검토 | ✅ 생성 | 공개용 콘텐츠 |
+| `outputs/`  |   ✅ 읽기   |      ✅ 생성      | 산출물        |
+| `skills/`   |   ✅ 요청   |      ✅ 생성      | 작업 패턴     |
+| `analysis/` |   ✅ 읽기   |      ✅ 생성      | 분석 리포트   |
+| `sharing/`  |   ✅ 검토   |      ✅ 생성      | 공개용 콘텐츠 |
 
 ---
 
@@ -112,6 +112,7 @@ projects/
 
 ```markdown
 ### [변경 제목]
+
 - 무엇이 바뀌었나:
 - 왜 중요한가:
 - 영향 범위:
@@ -129,13 +130,13 @@ git push
 
 ### 커밋 접두어
 
-| 접두어 | 용도 |
-|:---|:---|
-| `knowledge:` | wiki 지식 변경 |
-| `project:` | 프로젝트 상태 변경 |
-| `ops:` | 운영 규칙, 스크립트, 템플릿 변경 |
-| `archive:` | raw, manifest 등 대량 원자료 변경 |
-| `content:` | 공유 글, 보고서, 초안 변경 |
+| 접두어       | 용도                              |
+| :----------- | :-------------------------------- |
+| `knowledge:` | wiki 지식 변경                    |
+| `project:`   | 프로젝트 상태 변경                |
+| `ops:`       | 운영 규칙, 스크립트, 템플릿 변경  |
+| `archive:`   | raw, manifest 등 대량 원자료 변경 |
+| `content:`   | 공유 글, 보고서, 초안 변경        |
 
 ### 커밋 메시지 예시
 
@@ -171,6 +172,7 @@ git push
 `[[문서명]]` 형식의 링크입니다. Obsidian 에서 자동으로 그래프를 생성합니다.
 
 예시:
+
 ```markdown
 [[Self-Determination Theory]] — 이 개념을 참조
 [[Vibe Coding]] — 이 실천 방식과 연결
@@ -181,16 +183,19 @@ git push
 ## 다음 단계
 
 ### Level 1: 기본 사용자 (1 주)
+
 - [ ] ingest 실행
 - [ ] query 로 질문하기
 - [ ] git push 까지 완료
 
 ### Level 2: 숙련 사용자 (1 개월)
+
 - [ ] digest 주간 실행
 - [ ] generate 로 콘텐츠 생성
 - [ ] wiki/ 문서 추가
 
 ### Level 3: 기여자 (3 개월)
+
 - [ ] 스킬 추가
 - [ ] 프로젝트 README 갱신
 - [ ] harness-audit 월간 실행
@@ -207,6 +212,7 @@ query [질문]
 ```
 
 예시:
+
 ```
 query LMX 이론이 ESCON 프로젝트에 어떻게 적용되나요?
 
@@ -216,4 +222,4 @@ query LMX 이론이 ESCON 프로젝트에 어떻게 적용되나요?
 
 ---
 
-*최종 수정: 2026-04-29 | 버전: 1.0*
+_최종 수정: 2026-04-29 | 버전: 1.0_

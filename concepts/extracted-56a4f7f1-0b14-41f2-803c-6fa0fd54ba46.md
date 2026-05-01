@@ -64,7 +64,7 @@ researcher:
   system: |
     당신은 정보를 체계적으로 수집하고 정리하는 리서처입니다.
     항상 출처를 명확히 하고, 객관적 사실과 의견을 구분합니다.
-  
+
 writer:
   system: |
     수집된 정보를 바탕으로 읽기 쉬운 보고서를 작성합니다.
@@ -80,19 +80,19 @@ from agents.writer import write_report
 
 def run_agent_workflow(topic):
     """에이전트 워크플로우 실행"""
-    
+
     # 1. 리서치 단계
     print(f"📚 리서치 시작: {topic}")
     research_data = research(topic)
-    
+
     # 2. 작성 단계
     print("✍️ 보고서 작성 중...")
     report = write_report(research_data)
-    
+
     # 3. 결과 저장 (md 파일)
     with open(f"data/output/{topic}.md", "w") as f:
         f.write(report)
-    
+
     print(f"✅ 완료: data/output/{topic}.md")
 
 if __name__ == "__main__":
@@ -107,25 +107,25 @@ import google.generativeai as genai
 
 def test_output_quality(md_file_path):
     """생성된 md 파일의 품질 검증"""
-    
+
     with open(md_file_path, 'r') as f:
         content = f.read()
-    
+
     # Gemini로 품질 검증
     model = genai.GenerativeModel('gemini-2.0-flash-exp')
-    
+
     qa_prompt = f"""
     다음 보고서를 검토하고 평가해주세요:
-    
+
     {content}
-    
+
     다음 기준으로 평가:
     1. 구조의 명확성 (1-10점)
     2. 정보의 정확성 (1-10점)
     3. 가독성 (1-10점)
     4. 개선 제안사항
     """
-    
+
     response = model.generate_content(qa_prompt)
     return response.text
 ```
@@ -152,13 +152,16 @@ git merge feature/new-agent
 # Agent Development Tasks
 
 ## 🚀 In Progress
+
 - [ ] Researcher 에이전트 개발
 
 ## ✅ Completed
+
 - [x] 기본 환경 설정
 - [x] Gemini API 연결
 
 ## 💡 Backlog
+
 - [ ] 이미지 분석 에이전트 추가
 - [ ] 슬랙 알림 기능
 ```
@@ -170,8 +173,8 @@ git merge feature/new-agent
 claude-code
 
 # 대화 예시
-> "Python으로 뉴스 요약 에이전트를 만들고 싶어. 
-   웹에서 특정 키워드 뉴스를 가져와서 Gemini로 요약하고, 
+> "Python으로 뉴스 요약 에이전트를 만들고 싶어.
+   웹에서 특정 키워드 뉴스를 가져와서 Gemini로 요약하고,
    결과를 md 파일로 저장해줘"
 
 # Claude Code가 자동으로:
@@ -196,22 +199,26 @@ news-summarizer/
 
 ```markdown
 ### Day 1: 환경 구축
+
 - [ ] VSCode 설치
 - [ ] Claude Code 설치
 - [ ] Gemini API 키 발급
 - [ ] Python 환경 설정
 
 ### Day 2: 첫 에이전트
+
 - [ ] "Hello Agent" 만들기
 - [ ] Gemini 연결 테스트
 - [ ] md 파일 출력 확인
 
 ### Day 3: 실전 적용
+
 - [ ] 업무에 필요한 에이전트 아이디어 도출
 - [ ] Claude Code와 대화하며 PRD 작성
 - [ ] 30분 안에 프로토타입 완성
 
 ### Week 2: 확장
+
 - [ ] Git으로 버전 관리
 - [ ] QA 자동화 추가
 - [ ] 두 번째 에이전트 추가

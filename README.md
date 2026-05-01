@@ -20,14 +20,14 @@ outputs/    → 분석·콘텐츠·다이제스트 산출물
 
 ## Protocols
 
-| # | Name | Trigger | What it does |
-|:--|:-----|:--------|:-------------|
-| 1 | INGEST | `ingest` | inbox/ → wiki/ 통합 |
-| 2 | QUERY | 질문 | 위키 기반 답변 |
-| 3 | LINT | `lint` | 위키 자가 점검 |
-| 4 | DIGEST | `digest` | 주간 다이제스트 |
-| 5 | BRIDGE | `sync` | Notion 양방향 연동 |
-| 6 | GENERATE | `generate` | 콘텐츠 자동 생성 |
+| #   | Name     | Trigger    | What it does        |
+| :-- | :------- | :--------- | :------------------ |
+| 1   | INGEST   | `ingest`   | inbox/ → wiki/ 통합 |
+| 2   | QUERY    | 질문       | 위키 기반 답변      |
+| 3   | LINT     | `lint`     | 위키 자가 점검      |
+| 4   | DIGEST   | `digest`   | 주간 다이제스트     |
+| 5   | BRIDGE   | `sync`     | Notion 양방향 연동  |
+| 6   | GENERATE | `generate` | 콘텐츠 자동 생성    |
 
 ## Quick Start
 
@@ -42,4 +42,4 @@ claude
 
 ---
 
-*v2.0 — Obsidian + GitHub Hybrid | Notion Archive*
+_v2.0 — Obsidian + GitHub Hybrid | Notion Archive_

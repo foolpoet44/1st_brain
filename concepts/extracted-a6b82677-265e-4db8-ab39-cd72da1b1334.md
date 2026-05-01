@@ -28,6 +28,7 @@
 # .claude/commands/snapshot.md
 
 정기적으로(주간/월간):
+
 1. 프로젝트 상태 요약 생성
 2. 주요 메트릭 수집 (코드 라인, 커버리지, 이슈)
 3. 의존성 변경사항 기록
@@ -202,14 +203,14 @@ class CompetencyOntology:
         self.g = Graph()
         self.ax = Namespace("http://example.org/ax-competency#")
         self.g.bind("ax", self.ax)
-        
+
     def create_core_classes(self):
         """핵심 클래스 생성"""
         # Competency 최상위 클래스
         self.g.add((self.ax.Competency, RDF.type, OWL.Class))
-        self.g.add((self.ax.Competency, RDFS.label, 
+        self.g.add((self.ax.Competency, RDFS.label,
                    Literal("역량", lang="ko")))
-        
+
         # 하위 클래스들
         skill_types = [
             ("TechnicalSkill", "기술 스킬"),
@@ -218,25 +219,25 @@ class CompetencyOntology:
             ("Methodology", "방법론"),
             ("Capability", "역량")
         ]
-        
+
         for class_name, label_ko in skill_types:
             class_uri = self.ax[class_name]
             self.g.add((class_uri, RDF.type, OWL.Class))
             self.g.add((class_uri, RDFS.subClassOf, self.ax.Competency))
             self.g.add((class_uri, RDFS.label, Literal(label_ko, lang="ko")))
-            
-    def add_competency(self, skill_id, skill_name, skill_type, 
+
+    def add_competency(self, skill_id, skill_name, skill_type,
                        proficiency=None, market_demand=None):
         """개별 역량 추가"""
         skill_uri = self.ax[skill_id]
         self.g.add((skill_uri, RDF.type, self.ax[skill_type]))
         self.g.add((skill_uri, RDFS.label, Literal(skill_name, lang="ko")))
-        
+
         if proficiency:
-            self.g.add((skill_uri, self.ax.proficiencyLevel, 
+            self.g.add((skill_uri, self.ax.proficiencyLevel,
                        Literal(proficiency)))
         if market_demand:
-            self.g.add((skill_uri, self.ax.marketDemand, 
+            self.g.add((skill_uri, self.ax.marketDemand,
                        Literal(market_demand)))
 ```
 
@@ -256,11 +257,11 @@ class SkillExtractor:
         self.model = AutoModel.from_pretrained(
             "klue/bert-base"
         )
-        
+
     def extract_skills_from_job_posting(self, text):
         """구인공고에서 스킬 추출"""
         doc = self.nlp(text)
-        
+
         skills = []
         # NER 기반 추출
         for ent in doc.ents:
@@ -270,32 +271,32 @@ class SkillExtractor:
                     "type": ent.label_,
                     "context": ent.sent.text
                 })
-        
+
         # 패턴 기반 추출
         skill_patterns = [
             {"label": "TOOL", "pattern": [
                 {"LOWER": {"IN": ["python", "java", "react"]}}
             ]},
             {"label": "METHODOLOGY", "pattern": [
-                {"LOWER": "agile"}, {"IS_PUNCT": True, "OP": "?"}, 
+                {"LOWER": "agile"}, {"IS_PUNCT": True, "OP": "?"},
                 {"LOWER": {"IN": ["scrum", "kanban"]}}
             ]}
         ]
-        
+
         matcher = self.nlp.add_pipe("entity_ruler", before="ner")
         matcher.add_patterns(skill_patterns)
-        
+
         return skills
-    
+
     def compute_skill_similarity(self, skill1, skill2):
         """스킬 간 유사도 계산"""
         inputs1 = self.tokenizer(skill1, return_tensors="pt")
         inputs2 = self.tokenizer(skill2, return_tensors="pt")
-        
+
         with torch.no_grad():
             emb1 = self.model(**inputs1).last_hidden_state.mean(dim=1)
             emb2 = self.model(**inputs2).last_hidden_state.mean(dim=1)
-            
+
         similarity = torch.cosine_similarity(emb1, emb2)
         return similarity.item()
 ```
@@ -312,36 +313,36 @@ class DynamicOntologyUpdater:
     def __init__(self, ontology):
         self.ontology = ontology
         self.trend_detector = TrendDetector()
-        
+
     @app.task
     def update_market_demand(self):
         """주기적으로 시장 수요 업데이트"""
         # 구인공고 데이터 수집
         job_postings = self.scrape_job_postings()
-        
+
         # 스킬별 등장 빈도 계산
         skill_counts = self.count_skill_mentions(job_postings)
-        
+
         # 온톨로지 업데이트
         for skill_id, count in skill_counts.items():
             demand_score = self.calculate_demand_score(count)
             self.ontology.update_property(
-                skill_id, 
-                "marketDemand", 
+                skill_id,
+                "marketDemand",
                 demand_score
             )
-    
+
     @app.task
     def detect_emerging_skills(self):
         """신규 등장 스킬 탐지"""
         recent_data = self.get_recent_data(days=30)
         historical_data = self.get_historical_data(months=6)
-        
+
         new_skills = self.trend_detector.find_new_patterns(
-            recent_data, 
+            recent_data,
             historical_data
         )
-        
+
         for skill in new_skills:
             if self.validate_skill(skill):
                 self.ontology.add_competency(
@@ -350,18 +351,18 @@ class DynamicOntologyUpdater:
                     skill_type=skill['type'],
                     emerging_trend=True
                 )
-    
+
     def calculate_skill_half_life(self, skill_id):
         """스킬 반감기 계산"""
         history = self.get_skill_demand_history(skill_id)
-        
+
         # 최고점 대비 50% 하락까지의 시간
         peak_demand = max(history.values())
         for date, demand in sorted(history.items()):
             if demand <= peak_demand * 0.5:
                 half_life = date - self.get_peak_date(history)
                 return half_life
-        
+
         return None  # 아직 반감기에 도달하지 않음
 ```
 
@@ -375,7 +376,7 @@ class CompetencyInference:
     def __init__(self, ontology):
         self.ontology = ontology
         self.reasoner = self.setup_reasoner()
-        
+
     def find_skill_gaps(self, current_skills, target_role):
         """스킬 갭 분석"""
         query = prepareQuery("""
@@ -390,44 +391,44 @@ class CompetencyInference:
                 }
             }
         """, initNs={"ax": self.ontology.ax})
-        
+
         gaps = self.ontology.g.query(
-            query, 
+            query,
             initBindings={
                 'target': target_role,
                 'current': current_skills
             }
         )
-        
+
         return list(gaps)
-    
+
     def recommend_learning_path(self, current_skills, target_skill):
         """학습 경로 추천"""
         # 그래프 변환
         G = nx.DiGraph()
-        
+
         # 선행 조건 관계를 그래프로 변환
         for s, p, o in self.ontology.g.triples(
             (None, self.ontology.ax.requiresPrerequisite, None)
         ):
             G.add_edge(str(s), str(o))
-        
+
         # 현재 스킬에서 목표 스킬까지의 최단 경로
         paths = []
         for current in current_skills:
             try:
                 path = nx.shortest_path(
-                    G, 
-                    source=str(current), 
+                    G,
+                    source=str(current),
                     target=str(target_skill)
                 )
                 paths.append(path)
             except nx.NetworkXNoPath:
                 continue
-        
+
         # 최적 경로 선택 (총 학습 시간 고려)
         return self.select_optimal_path(paths)
-    
+
     def predict_future_skills(self, domain, horizon_months=12):
         """미래 스킬 예측"""
         query = """
@@ -441,17 +442,17 @@ class CompetencyInference:
             }
             ORDER BY DESC(?growth_rate)
         """
-        
+
         results = self.ontology.g.query(
             query,
             initBindings={'target_domain': domain}
         )
-        
+
         # 트렌드 외삽
         predictions = []
         for row in results:
             projected_demand = self.extrapolate_trend(
-                row.skill, 
+                row.skill,
                 horizon_months
             )
             predictions.append({
@@ -459,7 +460,7 @@ class CompetencyInference:
                 'projected_demand': projected_demand,
                 'confidence': self.calculate_confidence(row.skill)
             })
-        
+
         return predictions
 ```
 
@@ -487,10 +488,10 @@ async def match_candidates(job: JobRequirement):
     """후보자 매칭"""
     ontology = CompetencyOntology()
     inference = CompetencyInference(ontology)
-    
+
     # 모든 후보자 검색
     candidates = get_all_candidates()
-    
+
     matches = []
     for candidate in candidates:
         # 매칭 스코어 계산
@@ -498,13 +499,13 @@ async def match_candidates(job: JobRequirement):
             candidate.skills,
             job.required_skills
         )
-        
+
         # 스킬 갭 분석
         gaps = inference.find_skill_gaps(
             candidate.skills,
             job.job_id
         )
-        
+
         if score > 0.7:  # 임계값
             matches.append({
                 "candidate_id": candidate.person_id,
@@ -515,14 +516,14 @@ async def match_candidates(job: JobRequirement):
                     gaps
                 )
             })
-    
+
     return sorted(matches, key=lambda x: x['match_score'], reverse=True)
 
 @app.get("/api/skills/trending")
 async def get_trending_skills(domain: str, limit: int = 10):
     """트렌딩 스킬 조회"""
     ontology = CompetencyOntology()
-    
+
     query = """
         SELECT ?skill ?label ?demand ?growth
         WHERE {
@@ -536,12 +537,12 @@ async def get_trending_skills(domain: str, limit: int = 10):
         ORDER BY DESC(?growth)
         LIMIT ?limit
     """
-    
+
     results = ontology.g.query(
         query,
         initBindings={'target': domain, 'limit': limit}
     )
-    
+
     return [
         {
             "skill": str(row.skill),
@@ -562,37 +563,37 @@ import networkx as nx
 class CompetencyVisualizer:
     def __init__(self, ontology):
         self.ontology = ontology
-        
+
     def create_skill_network(self, center_skill, depth=2):
         """스킬 관계 네트워크 생성"""
         G = nx.Graph()
-        
+
         # 중심 스킬과 관련된 스킬들 찾기
         related = self.find_related_skills(center_skill, depth)
-        
+
         for skill, relation_type, target in related:
             G.add_edge(
-                skill, 
-                target, 
+                skill,
+                target,
                 relation=relation_type
             )
-        
+
         # Plotly 시각화
         pos = nx.spring_layout(G)
-        
+
         edge_trace = go.Scatter(
             x=[], y=[],
             line=dict(width=0.5, color='#888'),
             hoverinfo='none',
             mode='lines'
         )
-        
+
         for edge in G.edges():
             x0, y0 = pos[edge[0]]
             x1, y1 = pos[edge[1]]
             edge_trace['x'] += (x0, x1, None)
             edge_trace['y'] += (y0, y1, None)
-        
+
         node_trace = go.Scatter(
             x=[], y=[],
             mode='markers+text',
@@ -608,12 +609,12 @@ class CompetencyVisualizer:
                 )
             )
         )
-        
+
         for node in G.nodes():
             x, y = pos[node]
             node_trace['x'] += (x,)
             node_trace['y'] += (y,)
-        
+
         fig = go.Figure(
             data=[edge_trace, node_trace],
             layout=go.Layout(
@@ -622,22 +623,22 @@ class CompetencyVisualizer:
                 hovermode='closest'
             )
         )
-        
+
         return fig
-    
+
     def create_skill_evolution_timeline(self, skill_id):
         """스킬 진화 타임라인"""
         history = self.get_skill_demand_history(skill_id)
-        
+
         fig = go.Figure()
-        
+
         fig.add_trace(go.Scatter(
             x=list(history.keys()),
             y=list(history.values()),
             mode='lines+markers',
             name='수요 지수'
         ))
-        
+
         # 반감기 표시
         half_life = self.calculate_skill_half_life(skill_id)
         if half_life:
@@ -647,13 +648,13 @@ class CompetencyVisualizer:
                 line_color="red",
                 annotation_text="반감기"
             )
-        
+
         fig.update_layout(
             title=f'{skill_id} 수요 변화 추이',
             xaxis_title='날짜',
             yaxis_title='수요 지수'
         )
-        
+
         return fig
 ```
 
@@ -663,11 +664,11 @@ class CompetencyVisualizer:
 class OntologyValidator:
     def __init__(self, ontology):
         self.ontology = ontology
-        
+
     def check_consistency(self):
         """일관성 검증"""
         inconsistencies = []
-        
+
         # 순환 참조 확인
         G = self.build_dependency_graph()
         cycles = list(nx.simple_cycles(G))
@@ -676,7 +677,7 @@ class OntologyValidator:
                 "type": "circular_dependency",
                 "cycles": cycles
             })
-        
+
         # 고아 노드 확인
         orphans = [
             node for node in self.ontology.g.subjects()
@@ -687,14 +688,14 @@ class OntologyValidator:
                 "type": "orphan_nodes",
                 "nodes": orphans
             })
-        
+
         return inconsistencies
-    
+
     def detect_duplicates(self, threshold=0.9):
         """중복 스킬 탐지"""
         skills = list(self.ontology.get_all_skills())
         duplicates = []
-        
+
         for i, skill1 in enumerate(skills):
             for skill2 in skills[i+1:]:
                 similarity = self.compute_similarity(skill1, skill2)
@@ -704,9 +705,9 @@ class OntologyValidator:
                         "skill2": skill2,
                         "similarity": similarity
                     })
-        
+
         return duplicates
-    
+
     def validate_data_quality(self):
         """데이터 품질 검증"""
         quality_report = {
@@ -714,7 +715,7 @@ class OntologyValidator:
             "accuracy": self.check_accuracy(),
             "timeliness": self.check_timeliness()
         }
-        
+
         return quality_report
 ```
 
@@ -728,7 +729,7 @@ class OntologyVersionControl:
     def __init__(self, ontology):
         self.ontology = ontology
         self.versions = []
-        
+
     def create_snapshot(self, description=""):
         """온톨로지 스냅샷 생성"""
         snapshot = {
@@ -739,26 +740,26 @@ class OntologyVersionControl:
             "triple_count": len(self.ontology.g),
             "changes": self.compute_changes()
         }
-        
+
         # 스냅샷 저장
         self.save_snapshot(snapshot)
         self.versions.append(snapshot)
-        
+
         return snapshot['version']
-    
+
     def rollback(self, version_id):
         """이전 버전으로 롤백"""
         snapshot = self.load_snapshot(version_id)
         self.ontology.g = snapshot['graph']
-        
+
     def compare_versions(self, version1, version2):
         """버전 간 차이 비교"""
         g1 = self.load_snapshot(version1)['graph']
         g2 = self.load_snapshot(version2)['graph']
-        
+
         added = g2 - g1
         removed = g1 - g2
-        
+
         return {
             "added_triples": list(added),
             "removed_triples": list(removed),
@@ -775,12 +776,12 @@ class OntologyMetrics:
         total_jobs = self.get_total_job_count()
         covered_jobs = self.get_covered_job_count()
         return covered_jobs / total_jobs
-    
+
     def calculate_freshness(self):
         """최신성: 얼마나 최신 데이터인가"""
         avg_update_lag = self.get_average_update_lag()
         return 1 / (1 + avg_update_lag.days)
-    
+
     def calculate_accuracy(self):
         """정확도: 스킬 추출/매칭의 정확도"""
         test_cases = self.get_test_cases()

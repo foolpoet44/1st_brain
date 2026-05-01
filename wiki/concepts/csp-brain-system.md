@@ -28,20 +28,22 @@ AI 에이전트와 인간이 함께 운영하는 **공유 메모리 시스템**�
 
 **관련 개념**
 
-| 개념 | 관계 |
-|:-----|:-----|
+| 개념                                 | 관계                                 |
+| :----------------------------------- | :----------------------------------- |
 | RAG (Retrieval-Augmented Generation) | Brain 은 구조화된 수동 RAG 에 가까움 |
-| GTD (Getting Things Done) | inbox 우선 원칙의 철학적 유사성 |
+| GTD (Getting Things Done)            | inbox 우선 원칙의 철학적 유사성      |
 
 ---
 
 ## Timeline
 
 ### 2026-04-29
+
 - wiki 초기화와 함께 마이그레이션
 - [[Obsidian]] + [[Git]] 하이브리드 구조로 재정비
 
 ### 2026-04-14
+
 - 개념 등록
 - csp-brain 초기화와 함께 공식 정의됨
 - Compiled Truth / Timeline 이중 구조 적용 형식으로 재정비

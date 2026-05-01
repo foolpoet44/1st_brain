@@ -23,6 +23,6 @@ tmux attach -t hr-workspace
 ```bash
 # 프로젝트별 세션
 tmux new -s escon        # ESCON Next.js 작업
-tmux new -s ex-intel     # EX Intelligence 
+tmux new -s ex-intel     # EX Intelligence
 tmux new -s ax-strategy  # AX 전략 문서
 ```

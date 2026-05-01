@@ -12,10 +12,10 @@ Part 02
 AX Strategy & Roadmap
 
 ![preencoded.png](Image2.jpg)
- Antigravity × Lovable
+Antigravity × Lovable
 기반 AX 역량 내재화 전략
 
- 비개발자도 체감하는 일하는 방식의 변화.
+비개발자도 체감하는 일하는 방식의 변화.
 "코드 작성자"에서 "의도 설계자"로의 전환을 설계합니다.
 
 Step 01
@@ -101,9 +101,9 @@ GUI Builder
 Agent Ops
 
 ![preencoded.png](Image18.jpg)
- "개발자에게 이것은 아키텍트가 되는 것이고,
- 구성원에게는 자동화 가능성을 먼저 생각하는 습관을
- 갖게 되는 것입니다."
+"개발자에게 이것은 아키텍트가 되는 것이고,
+구성원에게는 자동화 가능성을 먼저 생각하는 습관을
+갖게 되는 것입니다."
 
 ![preencoded.png](Image11.jpg)
 
@@ -116,7 +116,7 @@ Lovable
 
 Presentation
 
- 사람에 대한 이해를 시스템으로 구현
+사람에 대한 이해를 시스템으로 구현
 
 ![preencoded.png](Image19.jpg)
 검증용 MVP · 발표 데모 앱 구현
@@ -200,11 +200,11 @@ GUI 기반 운영
 
 미니 앱 만들기
 HR Member
- 복잡 업무는
+복잡 업무는
 Claude Code (CSP) 전담
 
- 3-4개월
- 1-2개월
+3-4개월
+1-2개월
 
 ![preencoded.png](Image12.jpg)
 
@@ -242,11 +242,11 @@ AX COMPETENCY ROADMAP
 3단계 · 확장
 
 5-6개월
- Tool: Antigravity
+Tool: Antigravity
 
 ![preencoded.png](Image14.jpg)
- Tool: Lovable
- Tool: 자유 선택
+Tool: Lovable
+Tool: 자유 선택
 
 ![preencoded.png](Image4.jpg)
 
@@ -257,12 +257,12 @@ GOAL
 "내 일에 붙여보기"
 "나도 뭔가 만들 수 있다"
 "방식을 바꾸기"
- 반복 업무 에이전트 위임 실습.
- 프로토타입을 실무 맥락에서 개선.
- 우리 팀 업무를 앱으로 만들어보기.
- 완성도보다 완성 경험이 중요.
- 워크플로우 재설계 및 AX 쇼케이스.
- 개인의 노하우를 팀 자산화.
+반복 업무 에이전트 위임 실습.
+프로토타입을 실무 맥락에서 개선.
+우리 팀 업무를 앱으로 만들어보기.
+완성도보다 완성 경험이 중요.
+워크플로우 재설계 및 AX 쇼케이스.
+개인의 노하우를 팀 자산화.
 
 ![preencoded.png](Image6.jpg)
 
@@ -333,7 +333,7 @@ Artifacts (검증 가능한 결과물)
 스크린샷
 
 브라우저 녹화
- 심리적 장벽 최소화
+심리적 장벽 최소화
 
 ![preencoded.png](Image2.jpg)
 
@@ -351,8 +351,8 @@ CONFIDENTIAL
 HR 구성원과 같이 텍스트 명령어보다 그래픽 인터페이스를 선호하는 사용자에게 최적화되어 있습니다. 직관적인 UI로 복잡한 개발 작업을 단순화합니다.
 에이전트가 유용한 맥락과 코드 스니펫을 저장하여 미래 태스크를 개선합니다. 단순 반복 수행이 아니라, 조직의 업무 맥락을 학습하는 구조입니다.
 
- 터미널 공포 해소
- 지속적 품질 개선
+터미널 공포 해소
+지속적 품질 개선
 
 ![preencoded.png](Image5.jpg)
 
@@ -388,8 +388,10 @@ Input Metric
 
 ![preencoded.png](Image8.jpg)
 "우리 팀 업무를 앱으로 만들어보기" 워크숍 진행. 채용 현황 트래커, 온보딩 체크리스트 등 실무 직결 미니 앱을 하루 만에 구현.
+
 # of Apps
- "수료율"이 아닌 "자작 앱 수" 측정.
+
+"수료율"이 아닌 "자작 앱 수" 측정.
 실패한 10개보다 완성한 1개가 중요
 
 Focus: 완성도보다 완성 경험 자체에 집중
@@ -432,7 +434,7 @@ All Tools
 ANTIGRAVITY_EXECUTION_PLAN
 CONFIDENTIAL
 워크플로우 재설계 사례 공유(AX 쇼케이스). 우수 프롬프트를 팀의 공용 자산(Knowledge Base)으로 등록하여 조직 전체 생산성 제고.
- AX 이니셔티브 참여도 및 생산성 10% 향상.
+AX 이니셔티브 참여도 및 생산성 10% 향상.
 조직 전반의 일하는 방식 변화도
 
 Focus: 개인의 노하우를 팀의 시스템으로 전환
@@ -444,10 +446,10 @@ Focus: 개인의 노하우를 팀의 시스템으로 전환
 ![preencoded.png](Image11.jpg)
 DESIGN PRINCIPLE
 
- "저항을 최소화하고
+"저항을 최소화하고
 호기심을 자극하라"
- 도구 사용법(Manual)을 가르치지 말고,
- 변화된 결과(Outcome)를 먼저 보여주세요.
+도구 사용법(Manual)을 가르치지 말고,
+변화된 결과(Outcome)를 먼저 보여주세요.
 
 ### Notes:
 
@@ -473,15 +475,15 @@ LG PRI 보안 정책을 준수하며 효과적인 교육을 수행하기 위한 
 ![preencoded.png](Image22.jpg)
 Environment Limitation
 Data Privacy Policy
- LG PRI 사내망 및 보안 정책상 Google Workspace 사용이 불가합니다. 이로 인해 회사 계정을 통한 SSO 연동이나 드라이브 공유 기능 사용에 제한이 있습니다.
+LG PRI 사내망 및 보안 정책상 Google Workspace 사용이 불가합니다. 이로 인해 회사 계정을 통한 SSO 연동이나 드라이브 공유 기능 사용에 제한이 있습니다.
 
 ![preencoded.png](Image10.jpg)
- DO NOT INPUT
+DO NOT INPUT
 
 ![preencoded.png](Image11.jpg)
 실무 데이터(개인정보, 기밀문서) 직접 입력 절대 금지
 
- 사내 계정 연동 불가
+사내 계정 연동 불가
 
 ![preencoded.png](Image12.jpg)
 샘플 데이터 사용
@@ -506,7 +508,7 @@ Account Management
 보안 수칙 체크리스트
 
 ![preencoded.png](Image14.jpg)
- Antigravity의 Gemini 3 Pro 한도 관리 및 동기화를 위해 개인 Gmail 계정을 교육용으로 활용합니다.
+Antigravity의 Gemini 3 Pro 한도 관리 및 동기화를 위해 개인 Gmail 계정을 교육용으로 활용합니다.
 ANTIGRAVITY_SECURITY_GUIDELINES
 CONFIDENTIAL
 
@@ -548,14 +550,14 @@ CSP와 HR 구성원, 두 트랙을 관통하는 공통의 철학
 ![preencoded.png](Image1.jpg)
 Common Philosophy
 
- "의도 설계자" Intent Designer
- "코드 작성자" Code Writer
+"의도 설계자" Intent Designer
+"코드 작성자" Code Writer
 
 ![preencoded.png](Image2.jpg)
 Code Writer
 Shift
 Intent Designer
- 시스템에 대한 이해를 바탕으로 "무엇을 만들 것인가"와 "어떻게 자동화할 것인가"를 설계하는 역할로의 전환입니다.
+시스템에 대한 이해를 바탕으로 "무엇을 만들 것인가"와 "어떻게 자동화할 것인가"를 설계하는 역할로의 전환입니다.
 
 ![preencoded.png](Image3.jpg)
 
@@ -569,8 +571,8 @@ HR 구성원
 From Typing to Architecting
 From Doing to Designing
 
- 직접 함수를 타이핑하는 것이 아니라, 디자인 스펙을 검증하고 구조를 리팩터링하도록 지시합니다.
- 반복 업무를 수행하는 것이 아니라, "이 일을 에이전트에게 어떻게 위임할까?"를 먼저 고민합니다.
+직접 함수를 타이핑하는 것이 아니라, 디자인 스펙을 검증하고 구조를 리팩터링하도록 지시합니다.
+반복 업무를 수행하는 것이 아니라, "이 일을 에이전트에게 어떻게 위임할까?"를 먼저 고민합니다.
 
 Prompt: "OAuth 로그인 플로우를 보안 규정에 맞춰 재설계해줘."
 

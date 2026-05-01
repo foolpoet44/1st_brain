@@ -13,8 +13,8 @@ LG PRI
 
 AX 기반 Pulse Check
 체계 구축
- 경영진 보고서
- BCG Situation–Complication–Resolution 구조
+경영진 보고서
+BCG Situation–Complication–Resolution 구조
 
 ![preencoded.png](Image1.jpg)
 보고 주체: LG PRI HR실 / EXG팀
@@ -42,12 +42,12 @@ Complication
 ![preencoded.png](Image1.jpg)
 
 ![preencoded.png](Image2.jpg)
- AX 기반 월간 Pulse Check :
+AX 기반 월간 Pulse Check :
 조직 인텔리전스 가동
- 우리는 지금 '전시(戰時)'에
+우리는 지금 '전시(戰時)'에
 평시(平時)의 정보 체계로
 싸우고 있습니다
- 정보 실패(Intelligence Failure)는
+정보 실패(Intelligence Failure)는
 전략 실패로 직결됩니다
 월 1회 8개 EX 문항을 측정하고, AI가 이상 신호를 자동 감지합니다.
 이직 결정은 실제 행동 3~4개월 전에 완료되며, 번아웃은 표면화되기 6주 전부터 신호를 보냅니다.
@@ -59,8 +59,8 @@ AX 전환은 LG PRI 역사상 가장 빠르고 광범위한 조직 변화입니�
 정보가 늦었다면 경영진에게 선택지는 없습니다.
 Expected Impact
 진단에서 결과 공유까지 평균 6~8주가 소요되어, 데이터 확인 시점에는 이미 상황이 종료되어 있습니다.
- • 이탈 비용 연간 수억 원 절감
- • AX Maturity 회사 평균 +15%P 초과 목표
+• 이탈 비용 연간 수억 원 절감
+• AX Maturity 회사 평균 +15%P 초과 목표
 
 LG PRI HR실 / EXG팀
 Strictly Confidential
@@ -150,19 +150,20 @@ AI 자동 분석 및 개입 프로세스 (Intervention Flow)
 ![preencoded.png](Image6.jpg)
 
 ![preencoded.png](Image7.jpg)
+
 1. Data Sensing
 2. Anomaly Detection
 3. Deep Dive
 4. Action
-수치 기준 초과/미달
-자동 필터링
-전월 대비 통계적
-유의미한 급락 감지
-Risk Flag 조직 대상
-AI 심층 인터뷰 판정
-맞춤형 리더십 코칭 및
-팀 워크숍 프로그램 연계
- Data Pipeline Architecture : Signal to Decision
+   수치 기준 초과/미달
+   자동 필터링
+   전월 대비 통계적
+   유의미한 급락 감지
+   Risk Flag 조직 대상
+   AI 심층 인터뷰 판정
+   맞춤형 리더십 코칭 및
+   팀 워크숍 프로그램 연계
+   Data Pipeline Architecture : Signal to Decision
 
 ![preencoded.png](Image5.jpg)
 
@@ -444,7 +445,7 @@ LG PRI HR Intelligence Report
 
 의견 청취부터 Dashboard 구축까지 전 프로세스를 시스템화하여, 구성원·리더·경영진 각각에게 다른 언어와 Actionable Insight를 제공합니다.
 
- 3-Layer Intelligence Delivery
+3-Layer Intelligence Delivery
 
 ![preencoded.png](Image1.jpg)
 
@@ -458,7 +459,7 @@ LG PRI HR Intelligence Report
 
 KPI
 
- 구성원
+구성원
 월 1회
 
 "나의 목소리가 반영됩니다"
@@ -470,7 +471,7 @@ KPI
 ![preencoded.png](Image2.jpg)
 참여 리워드 포인트 지급
 
- 조직 리더
+조직 리더
 분기 1회
 
 "내 팀 진단 리포트"
@@ -482,7 +483,7 @@ Risk 기반 1on1 면담 가이드
 ![preencoded.png](Image3.jpg)
 월간 트렌드 리포트 자동 발행
 
- 경영진
+경영진
 분기 1회
 
 "조직판 PDB (Brief)"
@@ -494,7 +495,7 @@ Red Flag 부서 자동 식별
 ![preencoded.png](Image4.jpg)
 AX Maturity 상관관계 분석
 
- Data Pipeline Architecture : Signal to Decision
+Data Pipeline Architecture : Signal to Decision
 
 ![preencoded.png](Image5.jpg)
 
@@ -562,7 +563,7 @@ Expected Return
 ![preencoded.png](Image7.jpg)
 만원
 채용·온보딩 대체 비용 및 숙련도 손실 합산 (연봉 1배 기준)
- 시스템 개발비
+시스템 개발비
 ~0원 (Internal)
 
 ![preencoded.png](Image2.jpg)
@@ -571,7 +572,7 @@ Expected Return
 이직률 감소 목표
 AX Maturity 기여
 
- 클라우드 인프라
+클라우드 인프라
 ~600만원
 
 ![preencoded.png](Image3.jpg)
@@ -579,26 +580,26 @@ AX Maturity 기여
 -15%
 +15%P
 
- Engagement 효과
- 파일럿 기준
- KPI 초과 달성
+Engagement 효과
+파일럿 기준
+KPI 초과 달성
 
 ![preencoded.png](Image8.jpg)
 
 ![preencoded.png](Image9.jpg)
 
 ![preencoded.png](Image10.jpg)
- 리워드 포인트 예산
+리워드 포인트 예산
 ~1,500만원
 
 ![preencoded.png](Image4.jpg)
 
- 운영 인력
+운영 인력
 0.5 FTE (기존)
 
 ![preencoded.png](Image5.jpg)
 
- "이탈 1인 예방만으로 투자비의 5.7배 절감 효과를 창출합니다."
+"이탈 1인 예방만으로 투자비의 5.7배 절감 효과를 창출합니다."
 1 : 5.7
 
 LG PRI HR실 / EXG팀
@@ -797,7 +798,7 @@ LG EP 연동 SSO 인증으로 비인가 접근 원천 차단
 참여율 트렌드 모니터링 및 PGM 버전 업데이트로 신선함 유지
 모든 데이터 암호화 저장 및 접근 로그 전수 관리
 
- 핵심 원칙 : Pulse Check는 감시 도구(Surveillance)가 아닌 조직 건강 정보 시스템(Health Intelligence) 입니다.
+핵심 원칙 : Pulse Check는 감시 도구(Surveillance)가 아닌 조직 건강 정보 시스템(Health Intelligence) 입니다.
 
 ![preencoded.png](Image5.jpg)
 
@@ -851,7 +852,7 @@ Approved
 Approved
 Approved
 
- Next 30 Days Action Plan
+Next 30 Days Action Plan
 
 ![preencoded.png](Image5.jpg)
 
@@ -877,15 +878,16 @@ W4
 파일럿 부서 확정
 & 킥오프 미팅
 설문 문항 최종 확정
-+ UI 프로토타입 검토
-Supabase DB 구성
-+ LG EP 인증 연동
-대상 리더 사전 교육
-+ 전체 일정 공지
- HR/EXG팀
- EXG팀
- 개발 담당
- HR실
+
+- UI 프로토타입 검토
+  Supabase DB 구성
+- LG EP 인증 연동
+  대상 리더 사전 교육
+- 전체 일정 공지
+  HR/EXG팀
+  EXG팀
+  개발 담당
+  HR실
 
 ![preencoded.png](Image9.jpg)
 

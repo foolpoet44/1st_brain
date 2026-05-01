@@ -106,10 +106,7 @@ npm install -g @musistudio/claude-code-router
       "name": "openrouter",
       "api_base_url": "https://openrouter.ai/api/v1/chat/completions",
       "api_key": "${OPENROUTER_API_KEY}",
-      "models": [
-        "qwen/qwen3-coder:free",
-        "qwen/qwen3-coder-next"
-      ],
+      "models": ["qwen/qwen3-coder:free", "qwen/qwen3-coder-next"],
       "transformer": { "use": ["openrouter"] }
     }
   ]
@@ -262,7 +259,7 @@ alias claude-ori='claude'
 ```bash
 # 현재 세션 강제 정리
 unset ANTHROPIC_BASE_URL
-unset ANTHROPIC_AUTH_TOKEN  
+unset ANTHROPIC_AUTH_TOKEN
 unset ANTHROPIC_MODEL
 unset ANTHROPIC_API_KEY
 

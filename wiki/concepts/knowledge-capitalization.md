@@ -29,9 +29,11 @@ aliases: [지식 자산화]
 ## Timeline
 
 ### 2026-04-29
+
 - wiki 초기화와 함께 마이그레이션
 - [[AX Internalization]] 프로젝트의 핵심 원칙으로 설정됨
 
 ### 2026-04-14
+
 - 114MB Conversations 데이터 Sharding 및 개념 추출을 통해 본 원칙의 실효성을 증명함
 - `scripts/brain_build.py` 를 통해 지식의 무결성 관리 자동화 체계 수립

@@ -13,6 +13,7 @@ GitHub 에 커밋한 24 개의 wiki 문서를 분석했습니다.
 백링크 (문서 간 연결) 기반의 지식 그래프 구조였죠.
 
 **분석 결과:**
+
 - 총 24 개 문서 중 **58% 가 서로 연결됨**
 - **4 개의 지식 군집** 발견:
   1. HR/조직심리학 (SDT ←→ Vibe Coding)
@@ -71,6 +72,7 @@ GitHub 에 커밋한 24 개의 wiki 문서를 분석했습니다.
 복잡한 RAG 파이프라인을 구축할 필요가 없습니다.
 
 **필요한 것:**
+
 1. `[[백링크]]` 2 개 이상 규칙
 2. 주간 정리 루틴 (Dream Cycle)
 3. Claude Code 에게 "분석해줘" 라고 말하기
@@ -85,8 +87,7 @@ GitHub 에 커밋한 24 개의 wiki 문서를 분석했습니다.
 
 ---
 
-#Obsidian #GraphRAG #KnowledgeGraph #ClaudeCode #SecondBrain
-#지식관리 #인공지능 #생산성 #VibeCoding
+#Obsidian #GraphRAG #KnowledgeGraph #ClaudeCode #SecondBrain #지식관리 #인공지능 #생산성 #VibeCoding
 
 ---
 

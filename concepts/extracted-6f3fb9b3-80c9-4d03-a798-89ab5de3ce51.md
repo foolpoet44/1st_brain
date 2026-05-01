@@ -44,7 +44,7 @@ Task (하위)
 System: 당신은 PM의 자연어 입력을 task 데이터로 변환합니다.
         기존 프로젝트 목록: {project_list}
         오늘 날짜: {today}
-        
+
         반드시 JSON만 반환하세요:
         {task_name, project_id, due_date, priority, status, tags}
 

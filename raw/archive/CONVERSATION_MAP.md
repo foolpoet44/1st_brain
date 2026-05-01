@@ -3,8 +3,8 @@
 > 이 지표는 114MB의 과거 데이터를 분할하여 관리하는 마스터 인덱스입니다.
 > **최신순**으로 정렬되어 있으며, 에이전트가 필요한 시점에 특정 파일만 읽어 지식을 복원합니다.
 
-| 날짜 | 제목 | UUID | 경로 |
-| :--- | :--- | :--- | :--- |
+| 날짜       | 제목     | UUID      | 경로                                                                                   |
+| :--------- | :------- | :-------- | :------------------------------------------------------------------------------------- |
 | 2026-04-13 | No Title | `unknown` | [unknown](raw/archive/conversations/2026/04/50407bb4-559e-4e2e-aa14-e9bf7f5e5dec.json) |
 | 2026-04-12 | No Title | `unknown` | [unknown](raw/archive/conversations/2026/04/176a4284-e3a6-40e4-a523-357a74eba67f.json) |
 | 2026-04-12 | No Title | `unknown` | [unknown](raw/archive/conversations/2026/04/d9433dad-4153-41aa-82d4-3f9c3bdd000d.json) |

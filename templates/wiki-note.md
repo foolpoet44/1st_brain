@@ -12,11 +12,10 @@ aliases: []
 
 ## Compiled Truth
 
-
-
 ---
 
 ## Timeline
 
 ### {{date}}
-- 
+
+-

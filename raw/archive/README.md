@@ -67,4 +67,4 @@ cat raw/archive/md/[연도]/[월]/[UUID].md
 
 ---
 
-*원본 데이터: `D:\obsi\sync\raw\archive\conversations\`*
+_원본 데이터: `D:\obsi\sync\raw\archive\conversations\`_

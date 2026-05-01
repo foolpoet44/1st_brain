@@ -19,7 +19,7 @@ VP of Customer Success
 ### Extracted Code (text)
 
 ```text
-스마트 팩토리 FDE 역량 = 
+스마트 팩토리 FDE 역량 =
   Manufacturing Domain Knowledge (30%)
   + Data Engineering & Integration (25%)
   + OT/IT Convergence (20%)

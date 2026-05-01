@@ -8,7 +8,7 @@
 # For Linux
    sudo apt-get update
    sudo apt-get install docker-compose-plugin
-   
+
    # Or using the Docker convenience script
    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```

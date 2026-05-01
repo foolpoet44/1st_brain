@@ -16,17 +16,18 @@ tags: [archive, conversation]
 ## Human (Message 1)
 
 EX Intelligence의 보고 회의록이 다음과 같을 때 수정해야 하는 방향을 제안해줘:
+
 1. 설문 문항을 다시 확인할 것
-a. 펄스서베이 임을 가정하지 말고, 구성원에게 물어봐야할 사항 전체 리스트를 뽑아내고
-그중에 펄스가 적절하면 펄스체크로, 아니면 적절한 다른 방식으로
+   a. 펄스서베이 임을 가정하지 말고, 구성원에게 물어봐야할 사항 전체 리스트를 뽑아내고
+   그중에 펄스가 적절하면 펄스체크로, 아니면 적절한 다른 방식으로
 2. AX 과제
-1. 
-1. 왜 check를 하는가?
-2. 펄스를 안하면 잃어버리는게 뭔가?
-3. 필요성에 대한인식과 의미부여
-4. 결과 활용도
+3.
+4. 왜 check를 하는가?
+5. 펄스를 안하면 잃어버리는게 뭔가?
+6. 필요성에 대한인식과 의미부여
+7. 결과 활용도
    1. 계층별말고 : 조직사기/갈등/협업/리더십 개선 등 카테고리
-5. why 3 category
+8. why 3 category
    1. 뭘 수집할 것인가? 손에 잡히는게 뭔가
 
 ## Claude (Message 2)
@@ -59,7 +60,7 @@ a. 펄스서베이 임을 가정하지 말고, 구성원에게 물어봐야할 �
 
 수정 방향은 **EX Intelligence의 존재 이유를 한 문장으로 만드는 작업**을 먼저 하는 것입니다. 예를 들어:
 
-> *"조직이 구성원의 신호를 놓치지 않기 위해, 우리는 지속적으로 듣는다."*
+> _"조직이 구성원의 신호를 놓치지 않기 위해, 우리는 지속적으로 듣는다."_
 
 그리고 "펄스를 안 하면 잃어버리는 것"에 대한 답도 이 문장에서 나와야 합니다. 조기 번아웃 신호, 리더십 신뢰 균열, AX 변화 저항의 누적 — 이것들은 분기 1회 심층서베이로는 포착이 불가능합니다. 이 **시간 민감성(time-sensitivity)**이 펄스의 존재 이유입니다.
 
@@ -73,13 +74,13 @@ a. 펄스서베이 임을 가정하지 말고, 구성원에게 물어봐야할 �
 
 카테고리 구조 제안:
 
-| 현상 카테고리 | 측정 핵심 |
-|---|---|
-| 조직 사기 (Morale) | 에너지, 몰입, 의미감 |
-| 갈등 신호 (Tension) | 심리적 안전감, 발언 억압 |
-| 협업 건강도 (Collaboration) | 신뢰, 정보 공유, 상호의존 |
-| 리더십 신뢰 (Leadership) | 공정성, 지지 체감, 방향성 |
-| AX 적응도 (AX Readiness) | 변화 수용, 역량 체감, 불안 수준 |
+| 현상 카테고리               | 측정 핵심                       |
+| --------------------------- | ------------------------------- |
+| 조직 사기 (Morale)          | 에너지, 몰입, 의미감            |
+| 갈등 신호 (Tension)         | 심리적 안전감, 발언 억압        |
+| 협업 건강도 (Collaboration) | 신뢰, 정보 공유, 상호의존       |
+| 리더십 신뢰 (Leadership)    | 공정성, 지지 체감, 방향성       |
+| AX 적응도 (AX Readiness)    | 변화 수용, 역량 체감, 불안 수준 |
 
 ---
 
@@ -111,13 +112,14 @@ a. 펄스서베이 임을 가정하지 말고, 구성원에게 물어봐야할 �
 
 ## Human (Message 3)
 
-구성원 경험의 전 영역(Employee Experience Full Inventory)**을 도출 작업 부터 진행하자
+구성원 경험의 전 영역(Employee Experience Full Inventory)\*\*을 도출 작업 부터 진행하자
 
 ## Claude (Message 4)
 
 좋습니다. 이 작업은 단순한 문항 리스트업이 아니라, **"우리 조직이 구성원에 대해 무엇을 알아야 하는가"라는 인식론적 질문**에서 시작해야 합니다.
 
 체계적으로 도출하기 위해 먼저 몇 가지를 확인하고 싶습니다.
+
 ```
 This block is not supported on your current device yet.
 ```
@@ -144,11 +146,13 @@ A: 매트릭스 (영역 × 측정방식)
 **Step 1**: 이론 프레임(SDT, JD-R, LMX, POS 등) × 조직 현실 현상을 교차해서 **Full Inventory 전체 목록** 도출
 
 **Step 2**: 각 항목을 **영역 × 측정방식 매트릭스**로 배치
+
 ```
 This block is not supported on your current device yet.
 ```
 
 이제 Full Inventory 도출 작업을 시작합니다. 이론 맵(SDT, JD-R, LMX, POS, Ansoff)과 제조업 조직 현실을 교차하면서 전체 영역을 펼쳐보겠습니다.
+
 ```
 This block is not supported on your current device yet.
 ```
@@ -196,6 +200,7 @@ EX영역에서 이론 근거 분류보다는 현실에서 이슈라는 관점으
 날카로운 관점 전환입니다. 이론 프레임은 설계자의 언어고, 현실 이슈는 구성원과 리더의 언어입니다. 보고 상황에서도 "SDT 기반 자율성 측정"보다 "왜 요즘 사람들이 힘들어하는가"로 프레이밍하면 훨씬 더 설득력 있게 작동합니다.
 
 현실 이슈 관점으로 재분류하기 전에, 한 가지만 확인하고 싶습니다.
+
 ```
 This block is not supported on your current device yet.
 ```
@@ -215,6 +220,7 @@ A: 현상 서술형 ("번아웃이 번지고 있다", "팀장을 못 믿겠다")
 완벽합니다. 현상 서술형 언어는 두 가지 힘이 있습니다. 경영진이 읽었을 때 "이게 우리 조직 얘기구나" 하고 즉각 체감하게 만들고, 구성원이 문항을 봤을 때 "맞아, 이걸 물어보는 거구나" 하고 저항 없이 응답하게 만듭니다.
 
 이제 제조업 대기업 HR의 현장 이슈를 현상 언어로 펼쳐보겠습니다.
+
 ```
 This block is not supported on your current device yet.
 ```
@@ -252,25 +258,22 @@ This block is not supported on your current device yet.
 ## Claude (Message 12)
 
 구글 시트를 직접 생성하는 도구가 연결되어 있지 않아서, 대신 즉시 붙여넣을 수 있는 형태로 만들어 드리겠습니다.
-```
-This block is not supported on your current device yet.
-```
-
 
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
-
 
 ```
 This block is not supported on your current device yet.
@@ -295,80 +298,68 @@ This block is not supported on your current device yet.
 ## Claude (Message 14)
 
 먼저 첨부 파일을 읽고 현재 보고 내용을 파악하겠습니다.
+
 ```
 This block is not supported on your current device yet.
 ```
-
 
 ```
 This block is not supported on your current device yet.
 ```
 
 텍스트 추출이 안 되네요. 슬라이드가 전부 이미지로 구성된 것 같습니다. 시각적으로 직접 읽어보겠습니다.
-```
-This block is not supported on your current device yet.
-```
-
 
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
-
-
-```
-This block is not supported on your current device yet.
-```
-
-
-```
-This block is not supported on your current device yet.
-```
-
-
-```
-This block is not supported on your current device yet.
-```
-
-
-```
-This block is not supported on your current device yet.
-```
-
 
 ```
 This block is not supported on your current device yet.
@@ -440,25 +431,24 @@ This block is not supported on your current device yet.
 ## Claude (Message 16)
 
 먼저 스킬 문서들을 읽고 시작하겠습니다.
+
 ```
 This block is not supported on your current device yet.
 ```
 
 이제 이번 세션에서 쌓인 전체 맥락을 통합해서 Working Backwards 에세이 docx를 작성합니다.
-```
-This block is not supported on your current device yet.
-```
-
 
 ```
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
@@ -480,55 +470,50 @@ A4 포맷, 커버 페이지 포함 총 9개 챕터로 구성된 에세이입니�
 ## Claude (Message 18)
 
 기존 docx를 열어서 해당 섹션을 정확히 찾고 확장하겠습니다.
-```
-This block is not supported on your current device yet.
-```
-
 
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
 섹션 위치를 정확히 파악했습니다. 이제 두 단락을 풍부하게 확장된 내용으로 교체합니다.
-```
-This block is not supported on your current device yet.
-```
-
 
 ```
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
 pBdr의 요소 순서가 잘못됐습니다. 스키마 규칙상 `pBdr`는 `spacing`과 `ind` 앞에 와야 합니다. 수정합니다.
-```
-This block is not supported on your current device yet.
-```
-
 
 ```
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
@@ -548,8 +533,7 @@ This block is not supported on your current device yet.
 
 ## Human (Message 19)
 
-아래 부분을 구체화해서 별도의 보고서로 만들어줘 :
-9. 다음: 보고 3단계 로드맵
+아래 부분을 구체화해서 별도의 보고서로 만들어줘 : 9. 다음: 보고 3단계 로드맵
 WORKING BACKWARDS — 현재로의 역산
 1보고 (완료): "왜 해야 하는가"
 조직 건강도에서 의사결정 인텔리전스로의 관점 전환을 제안하고 개념과 방향성 승인을 받는 단계. CIA 은유, Hidden Risk Zone 개념, 세 수요자 구조가 이 보고의 핵심 자산이었다.
@@ -561,15 +545,14 @@ WORKING BACKWARDS — 현재로의 역산
 ## Claude (Message 20)
 
 3단계 로드맵을 독립 보고서로 구체화합니다. 각 보고의 내용, 산출물, 의사결정 포인트까지 실무 수준으로 채우겠습니다.
-```
-This block is not supported on your current device yet.
-```
-
 
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
@@ -596,11 +579,13 @@ This block is not supported on your current device yet.
 ## Claude (Message 22)
 
 먼저 주간업무 보고 스킬을 읽고 시작하겠습니다.
+
 ```
 This block is not supported on your current device yet.
 ```
 
 스킬 확인 완료. 이번 세션의 전체 작업 내용을 기반으로 두 형식 모두 작성합니다.
+
 ```
 This block is not supported on your current device yet.
 ```
@@ -1389,41 +1374,33 @@ ascii로 출력해
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
+```
+This block is not supported on your current device yet.
+```
 
 ```
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
-
-
-```
-This block is not supported on your current device yet.
-```
-
-
-```
-This block is not supported on your current device yet.
-```
-
-
-```
-This block is not supported on your current device yet.
-```
-
 
 ```
 This block is not supported on your current device yet.
@@ -1443,16 +1420,13 @@ ASCII에서 정의한 구조를 그대로 docx로 옮겼습니다. 커버 페이
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
-
 
 ```
 This block is not supported on your current device yet.
@@ -1747,11 +1721,13 @@ This block is not supported on your current device yet.
 ```
 
 두 개의 다이어그램으로 나눠서 만들겠습니다. 첫 번째는 관점 전환의 개념 자체, 두 번째는 리더십 분석 데이터가 EX Intelligence 클러스터로 치환되는 매핑입니다.
+
 ```
 This block is not supported on your current device yet.
 ```
 
 관점 전환의 구조가 보입니다. 이제 리더십 보고서의 관찰이 실제로 어떤 클러스터 신호로 치환되는지 매핑 다이어그램입니다.
+
 ```
 This block is not supported on your current device yet.
 ```
@@ -1769,6 +1745,7 @@ This block is not supported on your current device yet.
 ## Claude (Message 52)
 
 지금까지의 논의 흐름을 빠르게 복기하겠습니다.
+
 ```
 This block is not supported on your current device yet.
 ```
@@ -1911,7 +1888,7 @@ EX Intelligence의 가장 큰 가치는 AI 기술 그 자체가 아닙니다. �
 
 ---
 
-*EXG 조직문화·구성원경험 담당 / 2026년 4월*
+_EXG 조직문화·구성원경험 담당 / 2026년 4월_
 
 ## Human (Message 53)
 
@@ -1923,16 +1900,13 @@ EX Intelligence의 가장 큰 가치는 AI 기술 그 자체가 아닙니다. �
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
-
 
 ```
 This block is not supported on your current device yet.
@@ -1949,7 +1923,9 @@ This block is not supported on your current device yet.
 ## Human (Message 55)
 
 아래 내용을 감성적인 html 로 생성해줘:
+
 ### [Coaching Agent: 1:1 맞춤 스크립트]
+
 - "상무님, 이번 2,000억 수주 성과는 생산기술원 역사에 남을 만한 업적입니다. 축하드립니다! 그런데, 상무님이 없는 자리에 남겨진 구성원들의 표정을 한번만 더 봐주세요. 이제는 '무엇을(What)' 달성할 것인가보다 '어떻게(How)' 그들과 함께 끝까지 달릴 것인가를 더 고민해야 할 때입니다. 비결은 '감사 표현'과 '적극적 경청'의 5분입니다."
 
 ## Claude (Message 56)
@@ -1957,7 +1933,6 @@ This block is not supported on your current device yet.
 ```
 This block is not supported on your current device yet.
 ```
-
 
 ```
 This block is not supported on your current device yet.
@@ -1979,7 +1954,6 @@ This block is not supported on your current device yet.
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
@@ -1998,7 +1972,6 @@ This block is not supported on your current device yet.
 This block is not supported on your current device yet.
 ```
 
-
 ```
 This block is not supported on your current device yet.
 ```
@@ -2016,7 +1989,6 @@ This block is not supported on your current device yet.
 ```
 This block is not supported on your current device yet.
 ```
-
 
 ```
 This block is not supported on your current device yet.
@@ -2040,11 +2012,11 @@ This block is not supported on your current device yet.
 
 세 명의 리더에 대한 관찰이 원천입니다.
 
-송시용 상무: *"One-way 추진 스타일로 인해 구성원들이 극심한 과부하 상태임. 시니어 구성원들에 대한 카리스마적 화법이 반발을 초래할 위험이 있음."*
+송시용 상무: _"One-way 추진 스타일로 인해 구성원들이 극심한 과부하 상태임. 시니어 구성원들에 대한 카리스마적 화법이 반발을 초래할 위험이 있음."_
 
-김용진 상무: *"완벽주의 성향과 잦은 챌린지로 인해 하위 조직책임자들이 수동적으로 변하고 있음."*
+김용진 상무: _"완벽주의 성향과 잦은 챌린지로 인해 하위 조직책임자들이 수동적으로 변하고 있음."_
 
-이용찬 상무: *"리더의 빠른 속도전이 다소 차갑게 느껴진다는 평이 있음."*
+이용찬 상무: _"리더의 빠른 속도전이 다소 차갑게 느껴진다는 평이 있음."_
 
 ---
 
@@ -2107,11 +2079,13 @@ Full Inventory의 클러스터 헤드라인 자체를 계층에 따라 분기해
 ## Claude (Message 68)
 
 먼저 리더십 보고서 원문을 다시 정확하게 확인하겠습니다.
+
 ```
 This block is not supported on your current device yet.
 ```
 
 원문을 정확히 확인했습니다. 이제 각 클러스터 워딩을 원문 근거에 맞게 교정하고, 특히 I02는 "팀장"이 아닌 임원급 언어로 수정해서 시각화를 재생성하겠습니다.
+
 ```
 This block is not supported on your current device yet.
 ```
@@ -2184,10 +2158,10 @@ MECE 검토를 돌렸을 때 기존 8개 클러스터에서 세 가지 공백이
 ## Claude (Message 72)
 
 HTML로 만들겠습니다. 세 장의 정보를 한 장에 통합합니다.
+
 ```
 This block is not supported on your current device yet.
 ```
-
 
 ```
 This block is not supported on your current device yet.
@@ -2201,4 +2175,4 @@ This block is not supported on your current device yet.
 
 ---
 
-*Archived from: `90ffcc4c-6b1c-4ebe-ae9f-d46429fca1e6.json`*
+_Archived from: `90ffcc4c-6b1c-4ebe-ae9f-d46429fca1e6.json`_

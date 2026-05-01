@@ -76,14 +76,14 @@ try:
         default_headers={"api-key": key},
         model=model
     )
-    
+
     response = client.invoke([{"role": "user", "content": "안녕하세요"}])
     print("✓ 연결 성공!")
     print(f"응답: {response.content}")
-    
+
     if hasattr(response, 'response_metadata'):
         print(f"메타데이터: {json.dumps(response.response_metadata, indent=2, ensure_ascii=False)}")
-        
+
 except Exception as e:
     print(f"✗ 연결 실패: {e}")
 
@@ -100,17 +100,17 @@ try:
         "messages": [{"role": "user", "content": "테스트"}],
         "max_tokens": 100
     }
-    
+
     response = requests.post(url, headers=headers, json=data, timeout=30)
     print(f"상태 코드: {response.status_code}")
-    
+
     if response.status_code == 200:
         print("✓ HTTP 요청 성공!")
         result = response.json()
         print(f"응답 미리보기: {json.dumps(result, indent=2, ensure_ascii=False)[:500]}...")
     else:
         print(f"✗ 요청 실패: {response.text}")
-        
+
 except Exception as e:
     print(f"✗ HTTP 요청 오류: {e}")
 
@@ -119,7 +119,7 @@ def query_and_save(question, filename=None):
     """질문을 보내고 응답을 JSON 파일로 저장"""
     messages = [{"role": "user", "content": question}]
     response = client.invoke(messages)
-    
+
     result = {
         "timestamp": datetime.now().isoformat(),
         "question": question,
@@ -130,13 +130,13 @@ def query_and_save(question, filename=None):
             "response_metadata": response.response_metadata if hasattr(response, 'response_metadata') else {}
         }
     }
-    
+
     if filename is None:
         filename = f"response_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-    
+
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
-    
+
     print(f"\n✓ 응답 저장 완료: {filename}")
     return result
 

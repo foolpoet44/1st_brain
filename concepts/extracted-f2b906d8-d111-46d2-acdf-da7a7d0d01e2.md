@@ -35,24 +35,24 @@ FREE_FALLBACK="gemini-2.0-flash"            # Google AI Studio 무료
 
 run_with_fallback() {
   local prompt="$1"
-  
+
   # Primary 시도
   result=$(claude --model $PRIMARY_MODEL -p "$prompt" 2>&1)
   exit_code=$?
-  
+
   # Rate limit 감지 (exit code 또는 stderr 패턴)
   if echo "$result" | grep -q "rate_limit\|usage_limit\|529\|overloaded"; then
     echo "[FALLBACK] Switching to $FALLBACK_MODEL..."
     result=$(claude --model $FALLBACK_MODEL -p "$prompt" 2>&1)
     exit_code=$?
   fi
-  
+
   # 완전 소진 시 외부 무료 모델
   if [ $exit_code -ne 0 ]; then
     echo "[FREE_FALLBACK] Switching to Gemini Flash..."
     result=$(call_gemini_flash "$prompt")
   fi
-  
+
   echo "$result"
 }
 ```
@@ -62,15 +62,15 @@ run_with_fallback() {
 ```javascript
 // model-router.js
 
-import Anthropic from '@anthropic-ai/sdk';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import Anthropic from "@anthropic-ai/sdk";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const MODEL_PRIORITY = [
-  { provider: 'anthropic', model: 'claude-opus-4-5', tier: 'primary' },
-  { provider: 'anthropic', model: 'claude-haiku-4-5-20251001', tier: 'budget' },
-  { provider: 'google', model: 'gemini-2.0-flash', tier: 'free' },
-  { provider: 'groq', model: 'llama-3.3-70b', tier: 'free' },
-  { provider: 'ollama', model: 'qwen2.5-coder', tier: 'local' },
+  { provider: "anthropic", model: "claude-opus-4-5", tier: "primary" },
+  { provider: "anthropic", model: "claude-haiku-4-5-20251001", tier: "budget" },
+  { provider: "google", model: "gemini-2.0-flash", tier: "free" },
+  { provider: "groq", model: "llama-3.3-70b", tier: "free" },
+  { provider: "ollama", model: "qwen2.5-coder", tier: "local" },
 ];
 
 class ModelRouter {
@@ -79,12 +79,12 @@ class ModelRouter {
     this.cooldowns = new Map(); // 모델별 쿨다운 추적
   }
 
-  async complete(prompt, systemPrompt = '') {
+  async complete(prompt, systemPrompt = "") {
     for (let i = this.currentIndex; i < MODEL_PRIORITY.length; i++) {
       const modelConfig = MODEL_PRIORITY[i];
-      
+
       if (this.isInCooldown(modelConfig.model)) continue;
-      
+
       try {
         const result = await this.callModel(modelConfig, prompt, systemPrompt);
         this.currentIndex = i; // 성공한 모델 기억
@@ -93,37 +93,41 @@ class ModelRouter {
         if (this.isRateLimitError(err)) {
           // 쿨다운 설정 (Anthropic: 60초, 등)
           this.setCooldown(modelConfig.model, this.getCooldownDuration(err));
-          console.log(`[Router] ${modelConfig.model} rate limited, trying next...`);
+          console.log(
+            `[Router] ${modelConfig.model} rate limited, trying next...`,
+          );
           continue;
         }
         throw err; // 다른 에러는 상위로
       }
     }
-    throw new Error('All models exhausted');
+    throw new Error("All models exhausted");
   }
 
   isRateLimitError(err) {
-    return err.status === 429 || 
-           err.status === 529 ||
-           err.message?.includes('rate_limit') ||
-           err.message?.includes('overloaded');
+    return (
+      err.status === 429 ||
+      err.status === 529 ||
+      err.message?.includes("rate_limit") ||
+      err.message?.includes("overloaded")
+    );
   }
 
   getCooldownDuration(err) {
     // retry-after 헤더 파싱
-    const retryAfter = err.headers?.['retry-after'];
+    const retryAfter = err.headers?.["retry-after"];
     return retryAfter ? parseInt(retryAfter) * 1000 : 60000;
   }
 
   async callModel(config, prompt, system) {
-    switch(config.provider) {
-      case 'anthropic':
+    switch (config.provider) {
+      case "anthropic":
         return this.callAnthropic(config.model, prompt, system);
-      case 'google':
+      case "google":
         return this.callGemini(config.model, prompt, system);
-      case 'groq':
+      case "groq":
         return this.callGroq(config.model, prompt, system);
-      case 'ollama':
+      case "ollama":
         return this.callOllama(config.model, prompt, system);
     }
   }
@@ -152,11 +156,11 @@ monitor_usage() {
     # Claude Code 로그에서 limit 신호 감지
     if tail -n 5 $LOG | grep -q "Claude AI usage limit reached"; then
       echo "[$(date)] Usage limit detected, switching model..."
-      
+
       # 현재 세션 정리
       tmux send-keys -t $SESSION "/model claude-haiku-4-5-20251001" Enter
       sleep 2
-      
+
       # 그래도 안되면 세션 재시작 with 대체 모델
       if tail -n 2 $LOG | grep -q "limit"; then
         tmux send-keys -t $SESSION "exit" Enter
@@ -173,7 +177,7 @@ monitor_usage() {
 
 ```text
 Primary:   Claude Sonnet/Opus  (Claude Code MAX 세션)
-Budget:    Claude Haiku         (API 직접 호출, 저렴)  
+Budget:    Claude Haiku         (API 직접 호출, 저렴)
 Free Alt:  Gemini 2.0 Flash    (Google AI Studio 무료 키)
 Local:     Ollama + Qwen2.5    (완전 오프라인 fallback)
 ```

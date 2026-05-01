@@ -7,39 +7,43 @@
 ```json
 {
   "type": "message",
-  "attachments": [{
-    "contentType": "application/vnd.microsoft.card.adaptive",
-    "content": {
-      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-      "type": "AdaptiveCard",
-      "version": "1.4",
-      "body": [
-        {
-          "type": "TextBlock",
-          "text": "📊 이번 달 Pulse Check가 시작되었습니다",
-          "weight": "Bolder",
-          "size": "Medium"
-        },
-        {
-          "type": "TextBlock",
-          "text": "3분이면 충분합니다. 여러분의 솔직한 응답이 더 나은 업무 환경을 만듭니다.",
-          "wrap": true,
-          "color": "Default"
-        },
-        {
-          "type": "TextBlock",
-          "text": "응답 마감: [날짜] | 완전 익명 보장",
-          "size": "Small",
-          "color": "Accent"
-        }
-      ],
-      "actions": [{
-        "type": "Action.OpenUrl",
-        "title": "설문 참여하기",
-        "url": "[FORMS_URL]"
-      }]
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "📊 이번 달 Pulse Check가 시작되었습니다",
+            "weight": "Bolder",
+            "size": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "3분이면 충분합니다. 여러분의 솔직한 응답이 더 나은 업무 환경을 만듭니다.",
+            "wrap": true,
+            "color": "Default"
+          },
+          {
+            "type": "TextBlock",
+            "text": "응답 마감: [날짜] | 완전 익명 보장",
+            "size": "Small",
+            "color": "Accent"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "title": "설문 참여하기",
+            "url": "[FORMS_URL]"
+          }
+        ]
+      }
     }
-  }]
+  ]
 }
 ```
 

@@ -54,34 +54,35 @@ print(courses)
 ### Extracted Code (javascript)
 
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
-const clientId = 'YOUR_CLIENT_ID';
-const clientSecret = 'YOUR_CLIENT_SECRET';
-const organizationId = 'YOUR_ORG_ID';
-const portalName = 'YOUR_PORTAL_NAME';
+const clientId = "YOUR_CLIENT_ID";
+const clientSecret = "YOUR_CLIENT_SECRET";
+const organizationId = "YOUR_ORG_ID";
+const portalName = "YOUR_PORTAL_NAME";
 
 // Bearer Token 생성
-const token = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
+const token = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
 
 // API 호출
 const url = `https://${portalName}.udemy.com/api-2.0/organizations/${organizationId}/courses/list/`;
 
-axios.get(url, {
-  headers: {
-    'Authorization': `Basic ${token}`,
-    'Content-Type': 'application/json'
-  },
-  params: {
-    'fields[courses]': '@all',
-    'page': 1,
-    'page_size': 10
-  }
-})
-.then(response => {
-  console.log(response.data);
-})
-.catch(error => {
-  console.error(error);
-});
+axios
+  .get(url, {
+    headers: {
+      Authorization: `Basic ${token}`,
+      "Content-Type": "application/json",
+    },
+    params: {
+      "fields[courses]": "@all",
+      page: 1,
+      page_size: 10,
+    },
+  })
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 ```

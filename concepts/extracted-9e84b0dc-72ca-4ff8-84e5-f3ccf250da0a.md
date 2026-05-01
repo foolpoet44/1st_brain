@@ -77,21 +77,21 @@ CREATE TABLE learning_pathways (
 -- Physical AI 특화 속성
 CREATE TABLE physical_ai_extensions (
     skill_id TEXT PRIMARY KEY REFERENCES esco_skills(skill_id),
-    
+
     -- Hardware Requirements
     requires_physical_robot BOOLEAN DEFAULT FALSE,
     simulation_capable BOOLEAN DEFAULT TRUE,
     hardware_platforms TEXT[], -- ['UR5', 'Franka Emika', 'Boston Dynamics Spot']
-    
+
     -- Interaction Modalities
     sensory_modalities TEXT[], -- ['vision', 'force', 'tactile', 'audio']
     actuation_types TEXT[], -- ['manipulation', 'locomotion', 'grasping']
-    
+
     -- Complexity Metrics
     real_time_requirement BOOLEAN DEFAULT FALSE,
     safety_critical BOOLEAN DEFAULT FALSE,
     multi_modal_integration BOOLEAN DEFAULT FALSE,
-    
+
     -- Learning Characteristics
     sample_efficiency_rating INTEGER, -- 1-5
     sim_to_real_transferability INTEGER, -- 1-5
@@ -109,11 +109,11 @@ class PhysicalAISkillDB:
     def __init__(self, db_path="physical_ai_skills.db"):
         self.conn = sqlite3.connect(db_path)
         self.create_schema()
-    
+
     def create_schema(self):
         # 위 SQL 스키마 실행
         pass
-    
+
     def import_esco_skills(self, esco_csv_path):
         """ESCO CSV를 Physical AI 관점으로 필터링하여 import"""
         # Physical AI 관련 키워드로 필터링
@@ -123,7 +123,7 @@ class PhysicalAISkillDB:
             'machine learning', 'computer vision'
         ]
         pass
-    
+
     def add_physical_ai_extensions(self, skill_id, **kwargs):
         """Physical AI 특화 속성 추가"""
         pass
@@ -139,13 +139,13 @@ class AdvancedPhysicalAIDB:
     def __init__(self, connection_string):
         self.engine = create_engine(connection_string)
         self.setup_vector_search()
-    
+
     def setup_vector_search(self):
         """임베딩 기반 시맨틱 검색 설정"""
         # CREATE EXTENSION vector;
         # ALTER TABLE esco_skills ADD COLUMN embedding vector(768);
         pass
-    
+
     def semantic_skill_search(self, query, top_k=10):
         """자연어 쿼리로 관련 스킬 검색"""
         # OpenAI embedding + cosine similarity
@@ -233,7 +233,7 @@ for domain in domains:
 ### Extracted Code (text)
 
 ```text
-ESCO 데이터베이스에서 산업용 로봇 관련 역량을 추출하고 Physical AI에 특화된 
+ESCO 데이터베이스에서 산업용 로봇 관련 역량을 추출하고 Physical AI에 특화된
 SQLite 데이터베이스를 구축해줘.
 
 [필수 요구사항]
@@ -314,34 +314,34 @@ CREATE TABLE skill_cluster_mapping (
 -- 테이블 5: Physical AI 특화 확장 속성
 CREATE TABLE industrial_robot_extensions (
     skill_id TEXT PRIMARY KEY,
-    
+
     -- 하드웨어 요구사항
     requires_physical_robot BOOLEAN DEFAULT FALSE,
     simulation_capable BOOLEAN DEFAULT TRUE,
     robot_brands TEXT, -- JSON: ["ABB", "FANUC", "KUKA", "Yaskawa"]
     robot_types TEXT, -- JSON: ["6-axis", "SCARA", "Delta", "Collaborative"]
-    
+
     -- 상호작용 특성
     primary_sensors TEXT, -- JSON: ["vision", "force_torque", "tactile"]
     actuation_category TEXT, -- manipulation, material_handling, welding, etc.
     workspace_type TEXT CHECK(workspace_type IN ('fixed', 'mobile', 'collaborative')),
-    
+
     -- 복잡도 및 안전성
     real_time_critical BOOLEAN DEFAULT FALSE,
     safety_critical BOOLEAN DEFAULT FALSE,
     iso_standard_required TEXT, -- JSON: ["ISO 10218-1", "ISO/TS 15066"]
     risk_assessment_level TEXT CHECK(risk_assessment_level IN ('low', 'medium', 'high', 'critical')),
-    
+
     -- 학습 특성
     typical_training_hours INTEGER,
     hands_on_practice_required BOOLEAN DEFAULT TRUE,
     certification_available BOOLEAN DEFAULT FALSE,
     prerequisite_skills TEXT, -- JSON array of skill_ids
-    
+
     -- 직무 연관성
     hr_job_families TEXT, -- JSON: ["Manufacturing Engineer", "Automation Technician"]
     seniority_level TEXT CHECK(seniority_level IN ('entry', 'intermediate', 'advanced', 'expert')),
-    
+
     FOREIGN KEY (skill_id) REFERENCES esco_skills(skill_id)
 );
 
@@ -509,27 +509,27 @@ import json
 CORE_KEYWORDS = [
     # 로봇 관련
     'robot', 'robotic', 'robotics', 'manipulator', 'industrial automation',
-    
+
     # 제조 공정
     'welding', 'assembly', 'pick and place', 'palletizing', 'material handling',
     'machine tending', 'painting', 'coating', 'grinding', 'polishing',
-    
+
     # 제어 기술
     'motion control', 'trajectory', 'kinematics', 'inverse kinematics',
     'PID control', 'servo', 'actuator', 'controller',
-    
+
     # 센서 기술
     'vision system', 'computer vision', 'force sensor', 'torque sensor',
     'encoder', 'proximity sensor', 'laser scanner', '3D vision',
-    
+
     # 프로그래밍
-    'robot programming', 'teach pendant', 'offline programming', 
+    'robot programming', 'teach pendant', 'offline programming',
     'simulation', 'PLC programming', 'ladder logic',
-    
+
     # 안전 및 표준
     'safety system', 'risk assessment', 'collaborative robot', 'cobot',
     'ISO 10218', 'ISO/TS 15066', 'safety standard',
-    
+
     # 특정 브랜드/기술
     'ABB', 'FANUC', 'KUKA', 'Yaskawa', 'Universal Robots',
     'RAPID', 'Karel', 'KRL', 'RobotStudio', 'ROBOGUIDE'
@@ -540,21 +540,21 @@ def calculate_relevance_score(skill_label, skill_description):
     스킬의 산업용 로봇 관련성 점수 계산 (0-1)
     """
     text = (skill_label + ' ' + skill_description).lower()
-    
+
     matches = 0
     for keyword in CORE_KEYWORDS:
         if keyword.lower() in text:
             matches += 1
-    
+
     # 정규화
     score = min(matches / 5.0, 1.0)
-    
+
     # 가중치 적용
     if 'industrial robot' in text:
         score *= 1.2
     if 'automation' in text and 'manufacturing' in text:
         score *= 1.15
-    
+
     return min(score, 1.0)
 
 [실행 단계]
@@ -595,18 +595,18 @@ def infer_robot_extensions(skill_label, skill_description, skill_type):
         'hr_job_families': [],
         'seniority_level': 'intermediate'
     }
-    
+
     text = (skill_label + ' ' + skill_description).lower()
-    
+
     # 하드웨어 요구사항
     if any(k in text for k in ['welding', 'assembly', 'painting', 'grinding']):
         extensions['requires_physical_robot'] = True
         extensions['hands_on_practice_required'] = True
-    
+
     # 로봇 브랜드
     brands = ['ABB', 'FANUC', 'KUKA', 'Yaskawa', 'Universal Robots', 'Staubli']
     extensions['robot_brands'] = [b for b in brands if b.lower() in text]
-    
+
     # 로봇 타입
     if '6-axis' in text or 'articulated' in text:
         extensions['robot_types'].append('6-axis')
@@ -615,7 +615,7 @@ def infer_robot_extensions(skill_label, skill_description, skill_type):
     if 'collaborative' in text or 'cobot' in text:
         extensions['robot_types'].append('Collaborative')
         extensions['workspace_type'] = 'collaborative'
-    
+
     # 센서
     if 'vision' in text or 'camera' in text:
         extensions['primary_sensors'].append('vision')
@@ -623,7 +623,7 @@ def infer_robot_extensions(skill_label, skill_description, skill_type):
         extensions['primary_sensors'].append('force_torque')
     if 'tactile' in text or 'touch' in text:
         extensions['primary_sensors'].append('tactile')
-    
+
     # 작업 카테고리
     if 'welding' in text:
         extensions['actuation_category'] = 'welding'
@@ -633,22 +633,22 @@ def infer_robot_extensions(skill_label, skill_description, skill_type):
         extensions['actuation_category'] = 'assembly'
     elif 'painting' in text or 'coating' in text:
         extensions['actuation_category'] = 'surface_treatment'
-    
+
     # 실시간 및 안전
     if 'real-time' in text or 'real time' in text:
         extensions['real_time_critical'] = True
-    
+
     if any(k in text for k in ['safety', 'hazard', 'risk', 'collision']):
         extensions['safety_critical'] = True
         extensions['risk_assessment_level'] = 'high'
-    
+
     # ISO 표준
     if 'ISO 10218' in text or 'iso 10218' in text:
         extensions['iso_standard_required'].append('ISO 10218-1')
         extensions['iso_standard_required'].append('ISO 10218-2')
     if 'ISO/TS 15066' in text or 'ts 15066' in text:
         extensions['iso_standard_required'].append('ISO/TS 15066')
-    
+
     # 교육 시간 추정
     if skill_type == 'knowledge':
         extensions['typical_training_hours'] = 10
@@ -656,7 +656,7 @@ def infer_robot_extensions(skill_label, skill_description, skill_type):
         extensions['typical_training_hours'] = 40
     else:  # skill
         extensions['typical_training_hours'] = 20
-    
+
     # 직무 매칭
     if 'programming' in text:
         extensions['hr_job_families'].append('Robot Programmer')
@@ -664,13 +664,13 @@ def infer_robot_extensions(skill_label, skill_description, skill_type):
         extensions['hr_job_families'].append('Maintenance Technician')
     if 'engineer' in text:
         extensions['hr_job_families'].append('Automation Engineer')
-    
+
     # 숙련도
     if any(k in text for k in ['advanced', 'expert', 'senior']):
         extensions['seniority_level'] = 'advanced'
     elif any(k in text for k in ['basic', 'fundamental', 'introduction']):
         extensions['seniority_level'] = 'entry'
-    
+
     return extensions
 
 [실행]
@@ -718,7 +718,7 @@ def infer_robot_extensions(skill_label, skill_description, skill_type):
 [데이터 형식]
 INSERT INTO robot_platforms (
     platform_id, manufacturer, model_series, robot_type,
-    payload_kg, reach_mm, programming_language, 
+    payload_kg, reach_mm, programming_language,
     common_applications, market_share_percent, documentation_url
 ) VALUES (
     'abb_irb1200',
@@ -853,12 +853,12 @@ INSERT INTO occupation_skill_requirements (
 
 [검증 쿼리]
 -- 1. 전체 데이터 통계
-SELECT 
+SELECT
     'Total Skills' as metric,
     COUNT(*) as count
 FROM esco_skills
 UNION ALL
-SELECT 
+SELECT
     'By Type: ' || skill_type,
     COUNT(*)
 FROM esco_skills
@@ -893,7 +893,7 @@ WHERE parent_skill_id = child_skill_id;
 
 [HR용 분석 쿼리]
 -- Q1. 특정 직무에 필요한 모든 스킬 조회
-SELECT 
+SELECT
     s.preferred_label as skill_name,
     osr.proficiency_level,
     osr.importance_rating,
@@ -907,14 +907,14 @@ WHERE osr.occupation_code = '2512'  -- Robot Programmer
 ORDER BY osr.importance_rating DESC, osr.is_mandatory DESC;
 
 -- Q2. 학습 경로 추천 (초급 → 고급)
-SELECT 
+SELECT
     pathway_name,
     target_role,
     difficulty_level,
     estimated_total_hours,
     json_extract(prerequisites, '$') as prerequisites
 FROM learning_pathways
-ORDER BY 
+ORDER BY
     CASE difficulty_level
         WHEN 'beginner' THEN 1
         WHEN 'intermediate' THEN 2
@@ -922,7 +922,7 @@ ORDER BY
     END;
 
 -- Q3. 안전 필수 스킬 목록
-SELECT 
+SELECT
     s.preferred_label,
     s.description,
     ire.iso_standard_required,
@@ -930,7 +930,7 @@ SELECT
 FROM esco_skills s
 JOIN industrial_robot_extensions ire ON s.skill_id = ire.skill_id
 WHERE ire.safety_critical = TRUE
-ORDER BY 
+ORDER BY
     CASE ire.risk_assessment_level
         WHEN 'critical' THEN 1
         WHEN 'high' THEN 2
@@ -940,7 +940,7 @@ ORDER BY
 
 [엔지니어용 분석 쿼리]
 -- Q4. 특정 로봇 플랫폼에 필요한 스킬
-SELECT 
+SELECT
     s.preferred_label as skill_name,
     s.skill_type,
     spc.compatibility_score,
@@ -954,7 +954,7 @@ ORDER BY spc.compatibility_score DESC
 LIMIT 20;
 
 -- Q5. 특정 응용 분야의 스킬 클러스터
-SELECT 
+SELECT
     dc.cluster_name,
     COUNT(DISTINCT scm.skill_id) as skill_count,
     GROUP_CONCAT(DISTINCT s.preferred_label, ' | ') as sample_skills
@@ -966,7 +966,7 @@ GROUP BY dc.cluster_id, dc.cluster_name
 ORDER BY skill_count DESC;
 
 -- Q6. 센서별 필요 역량
-SELECT 
+SELECT
     json_each.value as sensor_type,
     COUNT(DISTINCT s.skill_id) as related_skills,
     AVG(ire.typical_training_hours) as avg_training_hours
@@ -1040,11 +1040,11 @@ ORDER BY related_skills DESC;
   - 총 스킬 수: [N]개
   - 로봇 플랫폼: [M]개
   - 학습 경로: [K]개
-  
+
 📊 다음 명령으로 데이터 탐색:
   sqlite3 physical_ai_skills.db
   .tables
   .schema esco_skills
-  
+
 📖 상세 가이드: README.md 참조"
 ```

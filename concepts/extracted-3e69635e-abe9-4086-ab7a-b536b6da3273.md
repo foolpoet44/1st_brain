@@ -235,7 +235,7 @@ tmux send-keys "cd ~/projects/feature-api" C-m
 git worktree list | while read -r line; do
   path=$(echo $line | awk '{print $1}')
   branch=$(echo $line | grep -oP '\[\K[^\]]+')
-  
+
   if git branch --merged main | grep -q "$branch"; then
     echo "Removing merged worktree: $path"
     git worktree remove "$path"
@@ -349,17 +349,17 @@ Feature 브랜치 (실험용)
    ├─ report.py (수정 중...)
    ├─ email.py
    └─ excel.py (새로 만드는 중...)
-   
+
    (아직 커밋 안 함 - 덜 완성됨)
 
 4. 😱 긴급! Main에서 email.py 버그 발견!
-   
+
    git stash  (현재 작업 임시 저장)
    → "서류를 서랍에 넣음"
 
 5. Main으로 이동
    git checkout main
-   
+
    Main 상태:
    ├─ report.py (깨끗한 버전)
    └─ email.py (깨끗한 버전)
@@ -371,7 +371,7 @@ Feature 브랜치 (실험용)
 7. 다시 내 작업으로
    git checkout feature/excel-export
    git stash pop  (임시 저장 꺼냄)
-   
+
    다시 작업 중이던 상태로:
    ├─ report.py (수정 중이던 거 그대로)
    ├─ email.py
@@ -473,7 +473,7 @@ v1.0  v1.1  v1.2  v1.3
                    └──> o ──> o ──> o
                       feature/excel
                       (실험 버전)
-                      
+
                    └──> o ──> o
                       feature/email
                       (다른 실험)
@@ -493,7 +493,7 @@ v1.0     v1.1     v1.2         v2.0
                     │            │
 Feature/Excel:      └──> o ──> o
                         "개발" "완성"
-                        
+
                          (여기서 실험)
 ```
 
@@ -505,7 +505,7 @@ Feature/Excel:      └──> o ──> o
 
 2️⃣ 새 기능 개발하고 싶다
    git branch feature/excel  (가지 만들기)
-   
+
    Main:          o
                   │
    feature/excel: └──> (여기서 작업 시작)
@@ -570,7 +570,7 @@ git clone https://github.com/...  # 처음 전체 복사
 │    근데 이거 커밋하기는 애매...   │
 └─────────────────────────────────┘
               ↓ git stash
-              
+
 ┌─────────────────────────────────┐
 │ 📦 Stash (임시 보관함)           │
 │ [작업내용 임시 저장됨]            │
@@ -584,7 +584,7 @@ git clone https://github.com/...  # 처음 전체 복사
 │ → 긴급 작업 처리                │
 └─────────────────────────────────┘
               ↓ git stash pop
-              
+
 ┌─────────────────────────────────┐
 │ Working Directory               │
 │ ├─ report.py (수정 중 50%) 복구  │

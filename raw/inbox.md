@@ -25,16 +25,17 @@
 ## 처리된 항목 (Archive)
 
 ### ~~2026-04-14 — [태그: memories/migrated]~~
-- **분배 완료**: 
-    - `projects/ex-intelligence/README.md`
-    - `projects/pulse-check/README.md`
-    - `projects/ai--솔로프레너/README.md`
-    - `projects/escon/README.md`
-    - `projects/lds-360/README.md`
-    - `concepts/vibe-coding.md`
-    - `concepts/data-sensing.md`
-    - `concepts/weak-signal-theory.md`
-    - `concepts/ax-internalization.md`
+
+- **분배 완료**:
+  - `projects/ex-intelligence/README.md`
+  - `projects/pulse-check/README.md`
+  - `projects/ai--솔로프레너/README.md`
+  - `projects/escon/README.md`
+  - `projects/lds-360/README.md`
+  - `concepts/vibe-coding.md`
+  - `concepts/data-sensing.md`
+  - `concepts/weak-signal-theory.md`
+  - `concepts/ax-internalization.md`
 - **내용 요약**: 17년차 HR 전문가의 AX 전략, EX Intelligence 아키텍처, 24/7 코드 팩토리 인프라 등 레거시 memories.json 전체 이식 완료.
 
 ---

@@ -13,12 +13,14 @@ aliases: [사용자, HR 전문가]
 ## Compiled Truth
 
 **Profile**
+
 - **Role**: Creative Solution Provider (CSP)
 - **Background**: 17+ years HR Experience
 - **Identity**: AI Transformation (AX) leader
 - **Vibe Coder**: 심리학과 HR 경험을 코드로 변환하는 Creative Solution Provider
 
 **핵심 관심 영역**
+
 - AI/ML Automation in HR
 - Full-stack building ([[Vibe Coding]])
 - Psychologist-based AI algorithms
@@ -35,8 +37,10 @@ aliases: [사용자, HR 전문가]
 ## Timeline
 
 ### 2026-04-29
+
 - wiki 초기화와 함께 마이그레이션
 - CLAUDE.md 에 사용자 프로필 명시
 
 ### 2026-04-14
+
 - 사용자 페르소나 데이터 CSP Brain 이식 완료

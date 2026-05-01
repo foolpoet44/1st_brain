@@ -294,12 +294,12 @@ pip list --outdated
   "total_persons": 30,
   "total_proficiency_records": 394,
   "by_department": [
-    {"department": "AI연구팀", "count": 6},
-    {"department": "데이터팀", "count": 4}
+    { "department": "AI연구팀", "count": 6 },
+    { "department": "데이터팀", "count": 4 }
   ],
   "by_competency_type": [
-    {"type": "TechnicalSkill", "count": 32},
-    {"type": "SoftSkill", "count": 10}
+    { "type": "TechnicalSkill", "count": 32 },
+    { "type": "SoftSkill", "count": 10 }
   ]
 }
 ```
@@ -376,7 +376,7 @@ curl "http://localhost:8000/competencies?limit=10"
       "level_name": "Basic",
       "level_description": "지도 하에 기본적인 작업을 수행할 수 있음",
       "typical_experience": "6+ 개월"
-    },
+    }
     // ... levels 3, 4, 5
   ]
 }

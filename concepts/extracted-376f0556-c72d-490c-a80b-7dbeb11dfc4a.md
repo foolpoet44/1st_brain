@@ -103,21 +103,21 @@ LOG_DIR="./session_log"
 run_task() {
     local task="$1"
     local task_id="$2"
-    
+
     echo "[$(date)] Starting task: $task_id" >> $LOG_DIR/run.log
-    
+
     # 핵심: -p 플래그로 단일 세션, 작업 완료 후 즉시 종료
     # context를 최소화한 명시적 프롬프트 주입
     claude -p \
         --allowedTools "Edit,Write,Bash,Read" \
         --max-turns 10 \
         "ESCON 프로젝트 컨텍스트: Next.js + Supabase, GitHub: foolpoet44/escon
-        
+
         작업: $task
-        
+
         완료 조건을 충족하면 즉시 종료하세요. 불필요한 탐색 금지." \
         2>&1 | tee $LOG_DIR/${task_id}.log
-    
+
     echo "[$(date)] Completed: $task_id" >> $LOG_DIR/run.log
 }
 
@@ -130,7 +130,7 @@ while true; do
         sleep 1800  # 30분 대기 후 재확인
         continue
     fi
-    
+
     # 다음 작업 꺼내기
     TASK=$(python3 -c "
 import json
@@ -143,13 +143,13 @@ if q['pending']:
         json.dump(q, f, indent=2)
     print(task['prompt'])
 ")
-    
+
     if [ -z "$TASK" ]; then
         echo "[$(date)] Queue empty. Waiting..." >> $LOG_DIR/run.log
         sleep 300  # 5분 대기
         continue
     fi
-    
+
     run_task "$TASK" "task_$(date +%s)"
     sleep 60  # 작업 간 1분 간격 (quota 안전 버퍼)
 done
@@ -166,7 +166,7 @@ done
       "prompt": "src/components/SkillCard.tsx의 타입 에러를 수정하세요. valid_from/valid_to 컬럼 타입이 string | null인데 Date로 처리하는 부분 찾아서 고치기."
     },
     {
-      "id": "escon-002", 
+      "id": "escon-002",
       "priority": "normal",
       "prompt": "Supabase의 skill_records 테이블 쿼리에서 N+1 문제가 있는 곳을 찾아 단일 쿼리로 최적화하세요."
     }
@@ -182,17 +182,20 @@ done
 # ESCON Auto-Factory Rules
 
 ## 절대 규칙
+
 - 주어진 작업 하나만 완료하고 종료
 - 관련 없는 파일 탐색 금지
 - 작업 완료 후 추가 개선 제안 금지 (quota 낭비)
 - 불확실하면 TODO 주석 남기고 종료 (무한 탐색 금지)
 
 ## 프로젝트 컨텍스트
+
 - Stack: Next.js 14, Supabase, TypeScript
 - DB: skill_records (valid_from, valid_to: timestamp)
 - 브랜치 규칙: feature/escon-[task-id]
 
 ## 완료 정의
+
 - 코드 수정 완료 + 빌드 에러 없음 = 작업 종료
 ```
 
@@ -204,7 +207,7 @@ cd ~/escon
 mkdir -p escon-factory/session_log
 
 # 2. Claude Code로 factory 파일들 생성
-claude "escon-factory/ 디렉토리 구조와 위에서 설계한 
+claude "escon-factory/ 디렉토리 구조와 위에서 설계한
 factory.sh, task_queue.json, CLAUDE.md를 생성해줘"
 
 # 3. 첫 작업 추가하고 테스트 실행
@@ -266,7 +269,7 @@ csp queue          # 대기 중인 작업 목록
 
 csp project add <name> <path> <description>
   - ~/.csp-factory/projects/registry.json에 프로젝트 등록
-  
+
 csp add <project_name> <task_description>
   - registry에서 프로젝트 정보 조회
   - ~/.csp-factory/queue/tasks.json의 pending 배열에 추가
@@ -276,7 +279,7 @@ csp start
   - ~/.csp-factory/core/factory.sh를 백그라운드 데몬으로 실행
   - PID를 ~/.csp-factory/factory.pid에 저장
 
-csp stop  
+csp stop
   - factory.pid 읽어서 프로세스 종료
 
 csp status

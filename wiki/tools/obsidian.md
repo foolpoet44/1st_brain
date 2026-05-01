@@ -15,12 +15,14 @@ aliases: []
 로컬 마크다운 기반 지식 관리 도구.
 
 **CSP 의 Working Brain:**
+
 - 이 레포 전체가 Obsidian Vault
 - Claude Code 가 직접 읽고 쓰는 지식 베이스
 - Git 과 연동하여 버전 관리
 - 백링크 기반 지식 그래프 구성
 
 **주요 플러그인:**
+
 - Templater — 템플릿 자동화
 - Dataview — 동적 쿼리
 - obsidian-git — Git 자동화
@@ -33,5 +35,6 @@ aliases: []
 ## Timeline
 
 ### 2026-04-29
+
 - wiki 초기화와 함께 등록
 - csp-brain 의 핵심 인프라

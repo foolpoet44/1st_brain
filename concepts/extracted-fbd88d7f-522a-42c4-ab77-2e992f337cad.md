@@ -238,12 +238,12 @@ npx bmad-method@alpha install
 # 2. Web UI에서 기획 (2-3시간)
 # claude.ai에 team-fullstack.txt 업로드
 *analyst
-"1인 개발자가 3개월 내 런칭 가능한 
+"1인 개발자가 3개월 내 런칭 가능한
  AI 기반 SaaS 아이템 3개 추천해주세요.
- 
+
  제약사항:
  - 초기 개발비 $0
- - 월 운영비 $50 이하  
+ - 월 운영비 $50 이하
  - 타겟: 중소기업/프리랜서
  - 가격대: $29-99/월"
 
@@ -282,7 +282,7 @@ npx bmad-method@alpha install
 1. 개인별 역량 프로파일 자동 구축
    - 다면평가, 성과데이터, 역량평가 통합
    - AI 분석으로 강점/약점 시각화
-   
+
 2. 고성과자 성장 확률 분석
    - 기존 고성과자 데이터 패턴 학습
    - 개인별 고성과자 도달 확률 예측
@@ -517,15 +517,18 @@ docs/stories/
 # Story 2.4: 역량 프로파일 레이더 차트 시각화
 
 ## Context
+
 사용자는 직원의 역량을 한눈에 파악하기 위해 레이더 차트가 필요합니다.
 다면평가 결과를 5-8개 역량 축으로 시각화합니다.
 
 ## Architecture Reference
+
 - Component: ProfileVisualization
 - Database: assessments, assessment_scores
 - API: GET /api/v1/employees/:id/competency-profile
 
 ## Acceptance Criteria
+
 ✅ 5-8개 역량 축을 레이더 차트로 표시
 ✅ 평균 대비 개인 점수 오버레이
 ✅ 호버 시 상세 점수 툴팁
@@ -533,11 +536,13 @@ docs/stories/
 ✅ 차트 이미지 다운로드 기능
 
 ## Technical Details
+
 - Library: Recharts (radarChart)
 - Data format: { subject: string, A: number, fullMark: number }[]
 - Colors: 개인(#3b82f6), 평균(#94a3b8)
 
 ## Test Scenarios
+
 1. 역량 5개 데이터로 차트 렌더링
 2. 데이터 없을 때 placeholder
 3. 모바일 화면 (375px) 레이아웃 테스트
@@ -726,7 +731,7 @@ npx bmad-method@alpha install
 
 3. HR 커뮤니티에 아이디어 검증 (1시간)
 LinkedIn 게시글:
-"HR 동료분들께 질문드립니다. 
-AI 기반 역량 프로파일 & 성장 예측 도구가 있다면 
+"HR 동료분들께 질문드립니다.
+AI 기반 역량 프로파일 & 성장 예측 도구가 있다면
 월 얼마 정도가 적정할까요?"
 ```

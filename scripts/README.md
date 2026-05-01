@@ -9,6 +9,7 @@
 ## 📊 완료된 Phase
 
 ### Phase 1: manifest.json 하네싱 ✅
+
 - **핵심 기능:** 문서 메타데이터 실시간 추적
 - **생성 파일:**
   - `harness/manifest_schema.py` - 스키마 정의 (category, tags, md_path 추가)
@@ -24,6 +25,7 @@
   ```
 
 ### Phase 2: 검색 및 연결 ✅
+
 - **핵심 기능:** 시맨틱 검색 (BM25)
 - **생성 파일:**
   - `harness/search.py` - 하이브리드 검색 엔진
@@ -37,6 +39,7 @@
   ```
 
 ### Phase 3: 보고 자동화 ✅
+
 - **핵심 기능:** 주간보고 초안 자동 생성
 - **생성 파일:**
   - `harness/report_gen.py` - 보고 생성기 + PPTX 내보내기
@@ -49,6 +52,7 @@
   ```
 
 ### Phase 4: EX Intelligence ✅
+
 - **핵심 기능:** Pulse 신호 감지 및 액션 트리거
 - **생성 파일:**
   - `harness/ex_signal.py` - 신호 감지 + 규칙 엔진
@@ -92,6 +96,7 @@ Zavis_Brain/
 ## 🚀 사용 방법
 
 ### 1. 검색 데모
+
 ```bash
 cd harness
 source venv/Scripts/activate
@@ -99,16 +104,19 @@ python search.py
 ```
 
 ### 2. 보고 생성 데모
+
 ```bash
 python report_gen.py
 ```
 
 ### 3. EX 신호 분석
+
 ```bash
 python ex_signal.py
 ```
 
 ### 4. 인덱스 재생성
+
 ```bash
 python indexer.py
 ```
@@ -118,6 +126,7 @@ python indexer.py
 ## 🔧 확장 가이드
 
 ### Claude API 연동 (보고 자동화 고도화)
+
 ```python
 # harness/report_gen.py 에서
 api_key = "your-api-key"
@@ -125,12 +134,14 @@ generator = ReportGenerator(api_key)
 ```
 
 ### Qdrant 벡터 DB (시맨틱 검색 고도화)
+
 ```bash
 pip install qdrant-client
 python embed.py  # 임베딩 생성
 ```
 
 ### 웹 대시보드 (Streamlit)
+
 ```python
 # harness/dashboard.py 생성
 import streamlit as st
@@ -163,21 +174,23 @@ st.title("Zavis_Brain Intelligence")
 
 ## 🎯 달성된 효과
 
-| 지표 | 이전 | 이후 |
-|------|------|------|
-| 문서 검색 | 수동 탐색 | 3 초 이내 |
-| 보고 작성 | 4-6 시간 | 10 분 초안 |
-| 신호 감지 | 사후 분석 | 실시간 감지 |
-| 메타데이터 | 수동 | 자동 분류 |
+| 지표       | 이전      | 이후        |
+| ---------- | --------- | ----------- |
+| 문서 검색  | 수동 탐색 | 3 초 이내   |
+| 보고 작성  | 4-6 시간  | 10 분 초안  |
+| 신호 감지  | 사후 분석 | 실시간 감지 |
+| 메타데이터 | 수동      | 자동 분류   |
 
 ---
 
 ## 📝 maintanence
 
 ### 정기 작업
+
 - 주 1 회 `python indexer.py` (인덱스 갱신)
 - 월 1 회 `python migrate.py` (메타데이터 동기화)
 
 ### 모니터링
+
 - `harness/INDEX_SUMMARY.md` 확인
 - `harness/ex_signals.json` 트렌드 확인

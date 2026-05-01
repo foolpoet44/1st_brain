@@ -5,11 +5,11 @@
 ### Extracted Code (text)
 
 ```text
-[Google Forms] 
+[Google Forms]
     ↓ 응답 수집 (자동)
-[Google Sheets - 원본 데이터] 
+[Google Sheets - 원본 데이터]
     ↓ Apps Script 트리거 (자동)
-[Google Sheets - 분석 시트] 
+[Google Sheets - 분석 시트]
     ↓ Zapier / Make (자동)
 [monday.com - 대시보드]
     ↓ 자동 알림
@@ -32,7 +32,7 @@
 ```text
 안녕하세요.
 
-이번 Pulse Check는 여러분의 업무 경험과 조직 환경을 
+이번 Pulse Check는 여러분의 업무 경험과 조직 환경을
 이해하기 위한 분기 설문입니다.
 
 • 소요 시간: 약 8~10분
@@ -50,24 +50,32 @@
 // 트리거: 폼 응답 제출 시 자동 실행
 function onFormSubmit(e) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
-  const rawSheet = ss.getSheetByName('원본응답');
-  const scoreSheet = ss.getSheetByName('점수집계');
-  
+  const rawSheet = ss.getSheetByName("원본응답");
+  const scoreSheet = ss.getSheetByName("점수집계");
+
   // 열 인덱스 정의 (Forms 순서에 맞게 조정)
   const COL = {
     timestamp: 0,
     // EX Touchpoints: 열 1~12
-    ex_start: 1, ex_end: 12,
+    ex_start: 1,
+    ex_end: 12,
     // POS: 열 13~20
-    pos_start: 13, pos_end: 20,
+    pos_start: 13,
+    pos_end: 20,
     // SDT: 열 21~29 (자율성 21~23, 유능감 24~26, 관계성 27~29)
-    sdt_auto_start: 21, sdt_auto_end: 23,
-    sdt_comp_start: 24, sdt_comp_end: 26,
-    sdt_rel_start: 27, sdt_rel_end: 29,
+    sdt_auto_start: 21,
+    sdt_auto_end: 23,
+    sdt_comp_start: 24,
+    sdt_comp_end: 26,
+    sdt_rel_start: 27,
+    sdt_rel_end: 29,
     // UWES: 열 30~38 (활력 30~32, 헌신 33~35, 몰두 36~38)
-    uwes_vig_start: 30, uwes_vig_end: 32,
-    uwes_ded_start: 33, uwes_ded_end: 35,
-    uwes_abs_start: 36, uwes_abs_end: 38,
+    uwes_vig_start: 30,
+    uwes_vig_end: 32,
+    uwes_ded_start: 33,
+    uwes_ded_end: 35,
+    uwes_abs_start: 36,
+    uwes_abs_end: 38,
   };
 
   const lastRow = rawSheet.getLastRow();
@@ -100,13 +108,20 @@ function onFormSubmit(e) {
   // 점수집계 시트에 행 추가
   scoreSheet.appendRow([
     scores.timestamp,
-    scores.ex_leadership, scores.ex_infra, 
-    scores.ex_collab, scores.ex_ax, scores.ex_total,
+    scores.ex_leadership,
+    scores.ex_infra,
+    scores.ex_collab,
+    scores.ex_ax,
+    scores.ex_total,
     scores.pos_total,
-    scores.sdt_autonomy, scores.sdt_competence, 
-    scores.sdt_relatedness, scores.sdt_total,
-    scores.uwes_vigor, scores.uwes_dedication, 
-    scores.uwes_absorption, scores.uwes_total
+    scores.sdt_autonomy,
+    scores.sdt_competence,
+    scores.sdt_relatedness,
+    scores.sdt_total,
+    scores.uwes_vigor,
+    scores.uwes_dedication,
+    scores.uwes_absorption,
+    scores.uwes_total,
   ]);
 }
 ```
@@ -117,23 +132,23 @@ function onFormSubmit(e) {
 // 트리거: 매일 오전 9시 실행
 function checkResponseRate() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
-  const rawSheet = ss.getSheetByName('원본응답');
-  
+  const rawSheet = ss.getSheetByName("원본응답");
+
   const totalResponses = rawSheet.getLastRow() - 1; // 헤더 제외
   const TARGET_PARTICIPANTS = 50; // 파일럿 대상 인원으로 수정
   const responseRate = totalResponses / TARGET_PARTICIPANTS;
-  
-  const surveyDeadline = new Date('2026-03-19');
+
+  const surveyDeadline = new Date("2026-03-19");
   const today = new Date();
   const daysLeft = Math.ceil((surveyDeadline - today) / (1000 * 60 * 60 * 24));
-  
+
   if (responseRate < 0.7 && daysLeft <= 3) {
     GmailApp.sendEmail(
-      'your-email@lg.com', // HR 담당자 이메일
-      '[Pulse Check] 응답률 알림 — 마감 ' + daysLeft + '일 전',
+      "your-email@lg.com", // HR 담당자 이메일
+      "[Pulse Check] 응답률 알림 — 마감 " + daysLeft + "일 전",
       `현재 응답률: ${Math.round(responseRate * 100)}% (${totalResponses}명/${TARGET_PARTICIPANTS}명)\n` +
-      `마감일: 2026-03-19\n\n` +
-      `응답률이 70% 미달입니다. 팀장에게 리마인드를 요청해주세요.`
+        `마감일: 2026-03-19\n\n` +
+        `응답률이 70% 미달입니다. 팀장에게 리마인드를 요청해주세요.`,
     );
   }
 }
@@ -153,7 +168,7 @@ function checkResponseRate() {
 [액션 2] 조건 분기
          IF UWES 총점 < 3.5 (7점 기준)
          → monday.com 알림 생성 "⚠️ 몰입도 주의 구간"
-         IF AX 체감도 < 3.0 (5점 기준)  
+         IF AX 체감도 < 3.0 (5점 기준)
          → monday.com 알림 생성 "⚠️ AX 체감도 낮음"
 ```
 
@@ -288,7 +303,7 @@ function checkResponseRate() {
 1월    2월    3월    4월    5월    6월
 월간(13)  ●      ●      ●      ●      ●      ●
 분기(25)  ●                    ●
-                                              
+
 전체(38)  ●      ○      ○      ●      ○      ○
 
 ● = 전체 or 분기 운영  ○ = 월간만 운영

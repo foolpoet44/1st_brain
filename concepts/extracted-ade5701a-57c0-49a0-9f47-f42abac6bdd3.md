@@ -5,7 +5,7 @@
 ### Extracted Code (text)
 
 ```text
-Create a modern, visually stunning single-page website that introduces Lovable.dev 
+Create a modern, visually stunning single-page website that introduces Lovable.dev
 to Korean HR professionals and non-developers.
 
 ## Design Requirements
@@ -43,7 +43,7 @@ to Korean HR professionals and non-developers.
 
 ### 5. Use Case Examples
 - Horizontal scroll card gallery with 5 example apps:
-  "1on1 아젠다 자동 생성기" / "조직 건강도 Pulse Check 앱" / 
+  "1on1 아젠다 자동 생성기" / "조직 건강도 Pulse Check 앱" /
   "역량 평가 퀴즈 플랫폼" / "리더십 피드백 대시보드" / "팀 무드 트래커"
 - Each card has: app name, short description, "Lovable로 만든 앱" badge
 
@@ -75,8 +75,8 @@ to Korean HR professionals and non-developers.
 ### Extracted Code (text)
 
 ```text
-Add a live typing animation in the hero section that cycles through these 
-Korean phrases: "HR 평가 시스템 만들어줘" → "팀 무드 트래커 앱 만들어줘" 
+Add a live typing animation in the hero section that cycles through these
+Korean phrases: "HR 평가 시스템 만들어줘" → "팀 무드 트래커 앱 만들어줘"
 → "온보딩 체크리스트 앱 만들어줘"
 This should look like someone typing into a Lovable prompt input box.
 ```
@@ -84,7 +84,7 @@ This should look like someone typing into a Lovable prompt input box.
 ### Extracted Code (text)
 
 ```text
-Add a interactive demo section where users can click one of 3 preset prompts 
-and see a simulated "AI is generating your app..." loading animation, 
+Add a interactive demo section where users can click one of 3 preset prompts
+and see a simulated "AI is generating your app..." loading animation,
 then reveal a mock app screenshot. All in Korean UI.
 ```

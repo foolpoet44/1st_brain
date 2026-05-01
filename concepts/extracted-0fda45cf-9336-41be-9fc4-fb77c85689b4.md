@@ -30,7 +30,7 @@
 
 ```text
 [Product 1] 연봉 벤치마크 가이드북 v1.0
-- 구성: 
+- 구성:
   • 50페이지 PDF
   • 10개 직군 × 10개 경력 단계
   • 직군별 연봉 분포 그래프 (파이썬 matplotlib)
@@ -128,33 +128,33 @@
 
 ```text
 [AI 면접 질문 생성기 MVP]
-- 기술 스택: 
+- 기술 스택:
   • 프론트: React (바이브 코딩으로 생성)
   • 백엔드: Claude API
   • 호스팅: Vercel (무료)
-  
+
 - 기능:
   1. 직무/경력/회사문화 입력 폼
   2. AI가 맞춤형 면접 질문 30개 생성
   3. 질문별 평가 기준 자동 생성
   4. PDF 다운로드
-  
+
 - 가격 모델:
   • 무료: 월 3회 생성
   • Pro: 월 49,000원 (무제한)
   • 기업: 월 99,000원 (팀 5명)
 
 [연봉 계산기 웹 앱]
-- 기술 스택: 
+- 기술 스택:
   • Streamlit (파이썬)
   • 데이터: 수집한 500개 연봉 데이터
-  
+
 - 기능:
   1. 직군/경력/지역/회사규모 선택
   2. 추천 연봉 범위 실시간 계산
   3. 동종업계 비교 그래프
   4. 인상률 시뮬레이터
-  
+
 - 가격: 무료 (리드 획득용)
 ```
 
@@ -180,7 +180,7 @@ Package C: "HR 기초 세팅 올인원" (5일, 800만원)
 
 [첫 B2B 고객 확보 전략]
 - 타겟: 투자 받은 시리즈 A 스타트업
-- 접근: 
+- 접근:
   • 크레딧잡에서 투자 뉴스 모니터링
   • 투자 받은 지 1개월 이내 회사에 콜드메일
   • 무료 진단 1회 제공 → 컨설팅 전환
@@ -326,33 +326,33 @@ def scrape_jobkorea_salary(job_category):
     주의: 실제 사용 전 robots.txt 확인 필요
     """
     base_url = "https://www.jobkorea.co.kr/salary/"
-    
+
     # 실제 구현은 사이트 구조에 따라 달라짐
     # 여기서는 개념만 제시
-    
+
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
     }
-    
+
     data = []
-    
+
     try:
         response = requests.get(base_url, headers=headers)
         soup = BeautifulSoup(response.content, 'html.parser')
-        
+
         # 실제 HTML 구조 분석 후 수정 필요
         # salary_items = soup.find_all('div', class_='salary-item')
-        
+
         # for item in salary_items:
         #     job_title = item.find('span', class_='job').text
         #     salary = item.find('span', class_='salary').text
         #     data.append({'직무': job_title, '연봉': salary})
-        
+
         time.sleep(1)  # 서버 부하 방지
-        
+
     except Exception as e:
         print(f"오류 발생: {e}")
-    
+
     return data
 
 # 실행 예시
@@ -390,7 +390,7 @@ def scrape_jobkorea_salary(job_category):
 공고 제목: [네이버] 백엔드 개발자 경력직 채용
 급여: 연봉 5,000만원~7,000만원
 경력: 3년 이상
-→ 엑셀 입력: 
+→ 엑셀 입력:
    직군=개발, 세부직무=백엔드, 경력=3년, 최소=5000, 최대=7000
 ```
 
@@ -549,9 +549,9 @@ def remove_outliers(df, column):
     IQR = Q3 - Q1
     lower_bound = Q1 - 1.5 * IQR
     upper_bound = Q3 + 1.5 * IQR
-    
+
     return df[
-        (df[column] >= lower_bound) & 
+        (df[column] >= lower_bound) &
         (df[column] <= upper_bound)
     ]
 
@@ -652,8 +652,8 @@ plt.close()
 # 4. 히트맵 (직군 × 경력)
 plt.figure(figsize=(14, 8))
 pivot = df.pivot_table(
-    values='평균연봉', 
-    index='직군', 
+    values='평균연봉',
+    index='직군',
     columns='경력_숫자',
     aggfunc='mean'
 )
@@ -701,7 +701,7 @@ Q001 | 개발 | 백엔드 | 동시성 이슈를 경험한 적이 있나요? | �
 3. 인기 게시물 확인:
    - "면접 예상 질문 50개 모음"
    - "직군별 면접 질문 리스트"
-   
+
 [게시물 예시]
 제목: "💯면접 예상질문 리스트 50개"
 내용에서 질문 복사:
@@ -749,7 +749,7 @@ Q101 | 개발 | 백엔드 | Redis와 Memcached 차이점은? | 직무 | 주니�
 
 "안녕하세요, [이름]님.
 저는 HR 컨설팅 서비스를 준비 중인 [본인이름]입니다.
-면접 질문 설계에 대한 인사이트를 얻고자 
+면접 질문 설계에 대한 인사이트를 얻고자
 30분 정도 커피챗이 가능하실까요?
 소정의 사례비(스타벅스 쿠폰)를 드립니다."
 ```
@@ -858,7 +858,7 @@ shortage_df.to_excel("추가수집_계획.xlsx", index=False)
 → 너무 막연함, Yes/No로 끝날 수 있음
 
 [개선 후]
-"팀 프로젝트에서 의견 충돌이 있었을 때, 
+"팀 프로젝트에서 의견 충돌이 있었을 때,
 어떻게 해결하셨나요? 구체적인 상황과 결과를 말씀해주세요."
 → STAR 기법 유도, 구체적 답변 유도
 ```
@@ -1245,7 +1245,7 @@ class JobkoreaSalaryScraper:
         self.ua = UserAgent()
         self.session = requests.Session()
         self.data = []
-        
+
     def get_headers(self):
         """랜덤 User-Agent 생성"""
         return {
@@ -1256,42 +1256,42 @@ class JobkoreaSalaryScraper:
             'Connection': 'keep-alive',
             'Referer': 'https://www.jobkorea.co.kr/'
         }
-    
+
     def scrape_company_salaries(self, max_pages=5):
         """기업별 연봉 정보 수집"""
         print(f"🚀 기업별 연봉 수집 시작... (최대 {max_pages}페이지)")
-        
+
         for page in range(1, max_pages + 1):
             try:
                 # URL 구성 (실제 URL 구조에 맞게 수정 필요)
                 url = f"{self.salary_url}/company?Page={page}"
-                
+
                 print(f"📄 페이지 {page} 수집 중...")
                 response = self.session.get(url, headers=self.get_headers())
-                
+
                 if response.status_code != 200:
                     print(f"❌ 페이지 로드 실패: {response.status_code}")
                     continue
-                
+
                 soup = BeautifulSoup(response.content, 'html.parser')
-                
+
                 # HTML 구조 분석하여 데이터 추출
                 # 실제 구조에 맞게 셀렉터 수정 필요
                 company_items = soup.select('.company-salary-item')
-                
+
                 if not company_items:
                     print("⚠️ 데이터를 찾을 수 없습니다. HTML 구조 확인 필요")
                     # HTML 저장해서 분석
                     with open(f'logs/page_{page}_html.html', 'w', encoding='utf-8') as f:
                         f.write(response.text)
                     print(f"💾 HTML이 logs/page_{page}_html.html에 저장됨")
-                
+
                 for item in company_items:
                     try:
                         company_name = item.select_one('.company-name').text.strip()
                         avg_salary = item.select_one('.avg-salary').text.strip()
                         industry = item.select_one('.industry').text.strip()
-                        
+
                         self.data.append({
                             '수집일': datetime.now().strftime('%Y-%m-%d'),
                             '출처': '잡코리아-기업별',
@@ -1303,46 +1303,46 @@ class JobkoreaSalaryScraper:
                     except Exception as e:
                         print(f"⚠️ 항목 파싱 오류: {e}")
                         continue
-                
+
                 print(f"✅ 페이지 {page} 완료: {len(company_items)}개 수집")
-                
+
                 # 서버 부하 방지 (1-3초 랜덤 대기)
                 time.sleep(random.uniform(1, 3))
-                
+
             except Exception as e:
                 print(f"❌ 페이지 {page} 오류: {e}")
                 continue
-        
+
         print(f"🎉 총 {len(self.data)}개 데이터 수집 완료!")
         return self.data
-    
+
     def scrape_job_salaries(self, job_categories):
         """직무별 연봉 정보 수집"""
         print(f"🚀 직무별 연봉 수집 시작... ({len(job_categories)}개 직군)")
-        
+
         for job in job_categories:
             try:
                 # URL 구성
                 url = f"{self.salary_url}/job?jobCd={job['code']}"
-                
+
                 print(f"📊 {job['name']} 직군 수집 중...")
                 response = self.session.get(url, headers=self.get_headers())
-                
+
                 if response.status_code != 200:
                     print(f"❌ 요청 실패: {response.status_code}")
                     continue
-                
+
                 soup = BeautifulSoup(response.content, 'html.parser')
-                
+
                 # 경력별 연봉 데이터 추출
                 career_levels = soup.select('.career-salary-item')
-                
+
                 for item in career_levels:
                     try:
                         career = item.select_one('.career-level').text.strip()
                         min_salary = item.select_one('.min-salary').text.strip()
                         max_salary = item.select_one('.max-salary').text.strip()
-                        
+
                         self.data.append({
                             '수집일': datetime.now().strftime('%Y-%m-%d'),
                             '출처': '잡코리아-직무별',
@@ -1355,22 +1355,22 @@ class JobkoreaSalaryScraper:
                     except Exception as e:
                         print(f"⚠️ 항목 파싱 오류: {e}")
                         continue
-                
+
                 print(f"✅ {job['name']} 완료")
                 time.sleep(random.uniform(1, 3))
-                
+
             except Exception as e:
                 print(f"❌ {job['name']} 오류: {e}")
                 continue
-        
+
         return self.data
-    
+
     def _parse_salary(self, salary_text):
         """연봉 텍스트를 숫자로 변환"""
         try:
             # "5,000만원", "5천만원", "50,000,000원" 등 다양한 형식 처리
             salary_text = salary_text.replace(',', '').replace(' ', '')
-            
+
             if '만원' in salary_text:
                 number = float(salary_text.replace('만원', ''))
                 return int(number)
@@ -1384,18 +1384,18 @@ class JobkoreaSalaryScraper:
                 return int(float(salary_text))
         except:
             return 0
-    
+
     def save_to_excel(self, filename='data/raw/jobkorea_salary_raw.xlsx'):
         """데이터를 엑셀로 저장"""
         if not self.data:
             print("⚠️ 저장할 데이터가 없습니다.")
             return
-        
+
         df = pd.DataFrame(self.data)
         df.to_excel(filename, index=False, engine='openpyxl')
         print(f"💾 데이터 저장 완료: {filename}")
         print(f"📊 총 {len(df)}개 행 저장됨")
-        
+
         # 기본 통계 출력
         print("\n=== 수집 통계 ===")
         if '직군' in df.columns:
@@ -1404,7 +1404,7 @@ class JobkoreaSalaryScraper:
             print(f"\n평균: {df['평균연봉'].mean():.0f}만원")
             print(f"최소: {df['평균연봉'].min():.0f}만원")
             print(f"최대: {df['평균연봉'].max():.0f}만원")
-        
+
         return df
 
 
@@ -1412,10 +1412,10 @@ class JobkoreaSalaryScraper:
 if __name__ == "__main__":
     # 스크래퍼 초기화
     scraper = JobkoreaSalaryScraper()
-    
+
     # 방법 1: 기업별 연봉 수집
     # scraper.scrape_company_salaries(max_pages=3)
-    
+
     # 방법 2: 직무별 연봉 수집
     job_categories = [
         {'name': '개발', 'code': '1001'},
@@ -1424,10 +1424,10 @@ if __name__ == "__main__":
         # 실제 잡코리아의 직무 코드로 수정 필요
     ]
     # scraper.scrape_job_salaries(job_categories)
-    
+
     # 데이터 저장
     # scraper.save_to_excel()
-    
+
     print("\n⚠️ 주의: 실제 실행 전 HTML 구조 분석 필요!")
     print("1. 브라우저에서 잡코리아 연봉 페이지 접속")
     print("2. F12 눌러서 개발자도구 오픈")
@@ -1465,61 +1465,61 @@ class JobkoreaSeleniumScraper:
         """
         self.data = []
         self.driver = self._init_driver(headless)
-        
+
     def _init_driver(self, headless):
         """Selenium 드라이버 초기화"""
         chrome_options = Options()
-        
+
         if headless:
             chrome_options.add_argument('--headless')
-        
+
         # 봇 탐지 우회 설정
         chrome_options.add_argument('--disable-blink-features=AutomationControlled')
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--window-size=1920,1080')
-        
+
         # User-Agent 설정
         chrome_options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
-        
+
         # 자동 ChromeDriver 다운로드
         service = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=chrome_options)
-        
+
         # 봇 탐지 우회 스크립트
         driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-        
+
         print("✅ Selenium 드라이버 초기화 완료")
         return driver
-    
+
     def scrape_salary_data(self, url, max_scroll=3):
         """연봉 페이지 스크래핑"""
         print(f"🌐 페이지 접속: {url}")
-        
+
         try:
             self.driver.get(url)
             time.sleep(2)  # 페이지 로딩 대기
-            
+
             # 무한 스크롤 처리
             for i in range(max_scroll):
                 print(f"📜 스크롤 {i+1}/{max_scroll}")
                 self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
                 time.sleep(random.uniform(1, 2))
-            
+
             # 데이터 추출
             # 예시: 연봉 카드 목록
             salary_cards = self.driver.find_elements(By.CSS_SELECTOR, '.salary-card')
-            
+
             print(f"📊 찾은 항목 수: {len(salary_cards)}")
-            
+
             for card in salary_cards:
                 try:
                     # 각 항목에서 데이터 추출
                     company = card.find_element(By.CSS_SELECTOR, '.company-name').text
                     salary = card.find_element(By.CSS_SELECTOR, '.salary-amount').text
                     job_title = card.find_element(By.CSS_SELECTOR, '.job-title').text
-                    
+
                     self.data.append({
                         '수집일': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                         '출처': 'Selenium',
@@ -1527,60 +1527,60 @@ class JobkoreaSeleniumScraper:
                         '직무': job_title,
                         '연봉': self._parse_salary(salary)
                     })
-                    
+
                 except NoSuchElementException as e:
                     print(f"⚠️ 요소 찾기 실패: {e}")
                     continue
-            
+
             print(f"✅ 수집 완료: {len(self.data)}개")
-            
+
         except TimeoutException:
             print("❌ 페이지 로딩 시간 초과")
         except Exception as e:
             print(f"❌ 오류 발생: {e}")
-    
+
     def scrape_job_posting_salaries(self, job_keyword, max_pages=5):
         """채용공고에서 연봉 정보 추출"""
         print(f"🔍 '{job_keyword}' 채용공고 검색 중...")
-        
+
         base_url = "https://www.jobkorea.co.kr/Search/"
-        
+
         for page in range(1, max_pages + 1):
             try:
                 # 검색 URL
                 search_url = f"{base_url}?stext={job_keyword}&Page={page}"
                 self.driver.get(search_url)
-                
+
                 # 페이지 로딩 대기
                 WebDriverWait(self.driver, 10).until(
                     EC.presence_of_element_located((By.CSS_SELECTOR, '.list-default'))
                 )
-                
+
                 # 채용공고 목록
                 job_listings = self.driver.find_elements(By.CSS_SELECTOR, '.list-default .list-post')
-                
+
                 print(f"📄 페이지 {page}: {len(job_listings)}개 공고 발견")
-                
+
                 for listing in job_listings:
                     try:
                         # 공고 클릭
                         listing.click()
                         time.sleep(1)
-                        
+
                         # 새 탭으로 전환
                         self.driver.switch_to.window(self.driver.window_handles[-1])
-                        
+
                         # 연봉 정보 추출
                         try:
                             salary_element = WebDriverWait(self.driver, 5).until(
                                 EC.presence_of_element_located((By.CSS_SELECTOR, '.salary-info'))
                             )
                             salary_text = salary_element.text
-                            
+
                             # 기업명, 직무명
                             company = self.driver.find_element(By.CSS_SELECTOR, '.company-name').text
                             job_title = self.driver.find_element(By.CSS_SELECTOR, '.job-title').text
-                            
+
                             # "회사 내규에 따름" 같은 경우 스킵
                             if "내규" not in salary_text and "협의" not in salary_text:
                                 self.data.append({
@@ -1594,13 +1594,13 @@ class JobkoreaSeleniumScraper:
                                 })
                         except TimeoutException:
                             pass  # 연봉 정보 없음
-                        
+
                         # 탭 닫고 원래 탭으로
                         self.driver.close()
                         self.driver.switch_to.window(self.driver.window_handles[0])
-                        
+
                         time.sleep(random.uniform(0.5, 1))
-                        
+
                     except Exception as e:
                         print(f"⚠️ 공고 처리 오류: {e}")
                         # 탭 정리
@@ -1609,27 +1609,27 @@ class JobkoreaSeleniumScraper:
                             self.driver.close()
                             self.driver.switch_to.window(self.driver.window_handles[0])
                         continue
-                
+
                 print(f"✅ 페이지 {page} 완료")
                 time.sleep(random.uniform(2, 4))
-                
+
             except Exception as e:
                 print(f"❌ 페이지 {page} 오류: {e}")
                 continue
-        
+
         print(f"🎉 총 {len(self.data)}개 데이터 수집 완료")
-    
+
     def _parse_salary(self, salary_text):
         """연봉 텍스트 파싱"""
         import re
-        
+
         # 숫자만 추출
         numbers = re.findall(r'[\d,]+', salary_text)
         if numbers:
             # 쉼표 제거하고 첫 번째 숫자 반환
             return int(numbers[0].replace(',', ''))
         return 0
-    
+
     def _extract_min_salary(self, text):
         """최소 연봉 추출"""
         import re
@@ -1637,7 +1637,7 @@ class JobkoreaSeleniumScraper:
         if len(numbers) >= 1:
             return int(numbers[0].replace(',', ''))
         return 0
-    
+
     def _extract_max_salary(self, text):
         """최대 연봉 추출"""
         import re
@@ -1647,19 +1647,19 @@ class JobkoreaSeleniumScraper:
         elif len(numbers) == 1:
             return int(numbers[0].replace(',', ''))
         return 0
-    
+
     def save_to_excel(self, filename='data/raw/jobkorea_selenium.xlsx'):
         """데이터 저장"""
         if not self.data:
             print("⚠️ 저장할 데이터가 없습니다.")
             return
-        
+
         df = pd.DataFrame(self.data)
         df.to_excel(filename, index=False, engine='openpyxl')
         print(f"💾 저장 완료: {filename}")
         print(f"📊 총 {len(df)}개 행")
         return df
-    
+
     def close(self):
         """드라이버 종료"""
         if self.driver:
@@ -1671,17 +1671,17 @@ class JobkoreaSeleniumScraper:
 if __name__ == "__main__":
     # 스크래퍼 초기화 (headless=False로 하면 브라우저 보임)
     scraper = JobkoreaSeleniumScraper(headless=False)
-    
+
     try:
         # 방법 1: 특정 URL 스크래핑
         # scraper.scrape_salary_data("https://www.jobkorea.co.kr/salary/")
-        
+
         # 방법 2: 채용공고 검색
         scraper.scrape_job_posting_salaries("백엔드 개발자", max_pages=2)
-        
+
         # 데이터 저장
         scraper.save_to_excel()
-        
+
     finally:
         # 드라이버 종료
         scraper.close()
@@ -1705,49 +1705,49 @@ import time
 def analyze_jobkorea_page(url):
     """페이지 HTML 구조 분석"""
     print(f"🔍 페이지 분석 중: {url}")
-    
+
     # 드라이버 초기화
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
-    
+
     try:
         driver.get(url)
         time.sleep(3)  # 페이지 완전 로딩 대기
-        
+
         # HTML 소스 가져오기
         html = driver.page_source
         soup = BeautifulSoup(html, 'html.parser')
-        
+
         # HTML 저장
         with open('logs/jobkorea_page_source.html', 'w', encoding='utf-8') as f:
             f.write(soup.prettify())
         print("💾 HTML 저장: logs/jobkorea_page_source.html")
-        
+
         # 주요 클래스 찾기
         print("\n=== 발견된 주요 클래스 ===")
-        
+
         # 연봉 관련 클래스
         salary_classes = soup.find_all(class_=lambda x: x and ('salary' in x.lower() or 'pay' in x.lower()))
         print(f"연봉 관련 클래스: {len(salary_classes)}개")
         for item in salary_classes[:5]:
             print(f"  - {item.get('class')}: {item.text[:50]}...")
-        
+
         # 기업명 관련 클래스
         company_classes = soup.find_all(class_=lambda x: x and 'company' in x.lower())
         print(f"\n기업명 관련 클래스: {len(company_classes)}개")
         for item in company_classes[:5]:
             print(f"  - {item.get('class')}: {item.text[:50]}...")
-        
+
         # 직무 관련 클래스
         job_classes = soup.find_all(class_=lambda x: x and 'job' in x.lower())
         print(f"\n직무 관련 클래스: {len(job_classes)}개")
         for item in job_classes[:5]:
             print(f"  - {item.get('class')}: {item.text[:50]}...")
-        
+
         # 스크린샷 저장
         driver.save_screenshot('logs/jobkorea_screenshot.png')
         print("\n📸 스크린샷 저장: logs/jobkorea_screenshot.png")
-        
+
     finally:
         driver.quit()
 
@@ -1759,7 +1759,7 @@ if __name__ == "__main__":
         "https://www.jobkorea.co.kr/salary/company",
         "https://www.jobkorea.co.kr/salary/job",
     ]
-    
+
     for url in urls:
         analyze_jobkorea_page(url)
         print("\n" + "="*50 + "\n")
@@ -1802,21 +1802,21 @@ class SalaryDataProcessor:
         self.df = pd.read_excel(input_file)
         print(f"📂 데이터 로드: {input_file}")
         print(f"📊 총 {len(self.df)}개 행, {len(self.df.columns)}개 열")
-    
+
     def clean_data(self):
         """데이터 정제"""
         print("\n🧹 데이터 정제 시작...")
-        
+
         initial_count = len(self.df)
-        
+
         # 1. 중복 제거
         self.df = self.df.drop_duplicates()
         print(f"✅ 중복 제거: {initial_count - len(self.df)}개 삭제")
-        
+
         # 2. 결측치 처리
         print(f"⚠️ 결측치: {self.df.isnull().sum().sum()}개")
         self.df = self.df.dropna(subset=['평균연봉'])  # 연봉 정보 없는 행 삭제
-        
+
         # 3. 이상치 제거
         if '평균연봉' in self.df.columns:
             Q1 = self.df['평균연봉'].quantile(0.25)
@@ -1824,39 +1824,39 @@ class SalaryDataProcessor:
             IQR = Q3 - Q1
             lower = Q1 - 1.5 * IQR
             upper = Q3 + 1.5 * IQR
-            
+
             outliers = self.df[(self.df['평균연봉'] < lower) | (self.df['평균연봉'] > upper)]
             print(f"⚠️ 이상치: {len(outliers)}개 (범위: {lower:.0f} ~ {upper:.0f}만원)")
-            
+
             self.df = self.df[(self.df['평균연봉'] >= lower) & (self.df['평균연봉'] <= upper)]
-        
+
         print(f"✅ 정제 완료: 최종 {len(self.df)}개 행")
-        
+
         return self.df
-    
+
     def add_statistics(self):
         """통계 컬럼 추가"""
         print("\n📈 통계 컬럼 추가...")
-        
+
         if '직군' in self.df.columns and '평균연봉' in self.df.columns:
             # 직군별 평균 연봉
             job_avg = self.df.groupby('직군')['평균연봉'].transform('mean')
             self.df['직군_평균연봉'] = job_avg
-            
+
             # 편차
             self.df['평균대비_차이'] = self.df['평균연봉'] - self.df['직군_평균연봉']
             self.df['평균대비_비율'] = (self.df['평균연봉'] / self.df['직군_평균연봉'] * 100).round(1)
-            
+
             print("✅ 통계 컬럼 추가 완료")
-        
+
         return self.df
-    
+
     def generate_summary(self):
         """요약 통계 생성"""
         print("\n📊 요약 통계 생성...")
-        
+
         summary = {}
-        
+
         # 전체 통계
         if '평균연봉' in self.df.columns:
             summary['전체'] = {
@@ -1867,62 +1867,62 @@ class SalaryDataProcessor:
                 '표준편차': self.df['평균연봉'].std(),
                 '개수': len(self.df)
             }
-        
+
         # 직군별 통계
         if '직군' in self.df.columns:
             summary['직군별'] = self.df.groupby('직군')['평균연봉'].agg([
                 'count', 'mean', 'median', 'min', 'max', 'std'
             ]).round(0)
-        
+
         # 경력별 통계
         if '경력' in self.df.columns:
             summary['경력별'] = self.df.groupby('경력')['평균연봉'].agg([
                 'count', 'mean', 'median', 'min', 'max'
             ]).round(0)
-        
+
         return summary
-    
+
     def save_processed_data(self, output_file='data/processed/salary_data_clean.xlsx'):
         """정제된 데이터 저장"""
         self.df.to_excel(output_file, index=False)
         print(f"\n💾 저장 완료: {output_file}")
-        
+
         # 요약 통계도 저장
         summary_file = output_file.replace('.xlsx', '_summary.xlsx')
-        
+
         with pd.ExcelWriter(summary_file, engine='openpyxl') as writer:
             # 전체 데이터
             self.df.to_excel(writer, sheet_name='전체데이터', index=False)
-            
+
             # 직군별 요약
             if '직군' in self.df.columns:
                 pivot_job = self.df.groupby('직군')['평균연봉'].agg(['mean', 'median', 'count']).round(0)
                 pivot_job.to_excel(writer, sheet_name='직군별요약')
-            
+
             # 경력별 요약
             if '경력' in self.df.columns:
                 pivot_career = self.df.groupby('경력')['평균연봉'].agg(['mean', 'median', 'count']).round(0)
                 pivot_career.to_excel(writer, sheet_name='경력별요약')
-        
+
         print(f"💾 요약 저장: {summary_file}")
-        
+
         return self.df
 
 # 실행 예시
 if __name__ == "__main__":
     processor = SalaryDataProcessor('data/raw/jobkorea_salary_raw.xlsx')
-    
+
     # 데이터 정제
     df_clean = processor.clean_data()
-    
+
     # 통계 추가
     df_clean = processor.add_statistics()
-    
+
     # 요약 생성
     summary = processor.generate_summary()
     print("\n=== 전체 통계 ===")
     print(summary['전체'])
-    
+
     # 저장
     processor.save_processed_data()
 ```
@@ -1945,44 +1945,44 @@ def main():
     print("🤖 잡코리아 연봉 데이터 수집 자동화")
     print(f"⏰ 시작 시간: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("="*60)
-    
+
     # 1단계: 데이터 수집
     print("\n[1/3] 데이터 수집 시작...")
     scraper = JobkoreaSeleniumScraper(headless=True)
-    
+
     try:
         # 채용공고 검색
         keywords = ['백엔드 개발자', '프론트엔드 개발자', '마케터', '영업']
-        
+
         for keyword in keywords:
             print(f"\n🔍 검색어: {keyword}")
             scraper.scrape_job_posting_salaries(keyword, max_pages=3)
-        
+
         # 데이터 저장
         raw_file = f'data/raw/jobkorea_{datetime.now().strftime("%Y%m%d_%H%M%S")}.xlsx'
         scraper.save_to_excel(raw_file)
-        
+
     finally:
         scraper.close()
-    
+
     # 2단계: 데이터 정제
     print("\n[2/3] 데이터 정제 시작...")
     processor = SalaryDataProcessor(raw_file)
     df_clean = processor.clean_data()
     df_clean = processor.add_statistics()
-    
+
     # 3단계: 저장 및 요약
     print("\n[3/3] 결과 저장 및 요약...")
     final_file = processor.save_processed_data()
-    
+
     summary = processor.generate_summary()
-    
+
     print("\n" + "="*60)
     print("✅ 전체 프로세스 완료!")
     print(f"⏰ 종료 시간: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"📊 최종 데이터: {len(df_clean)}개")
     print("="*60)
-    
+
     # 요약 출력
     if '전체' in summary:
         print("\n=== 수집 요약 ===")

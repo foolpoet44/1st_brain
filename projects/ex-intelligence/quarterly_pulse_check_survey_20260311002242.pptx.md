@@ -8,7 +8,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 <!-- Slide number: 1 -->
 
 3. 영역별 측정 문항 설계(안) — 분기(Quarterly) Pulse Check
-LGE Internal Use Only
+   LGE Internal Use Only
 
 Layer 0 · EX Touchpoints
 Layer 1 · Psychology
@@ -66,7 +66,7 @@ Q10. 감정 온도계
 "이번 분기 직장 경험을 한 단어/이모지로 표현한다면?"
 EMPLOYEE ENGAGEMENT
 
- 부정 응답 시 원인
+부정 응답 시 원인
 의도:
 
 ↓ 심층
@@ -109,7 +109,7 @@ Q5. 동료 관계
 인과
 의도:절차적 공정성. POS 핵심 선행 변수. 인과
 
- 3점 이하 시
+3점 이하 시
 
 ![preencoded.png](Image8.jpg)
 
@@ -140,7 +140,7 @@ Q11. eNPS
 
 NPS
 
- 4점 이하 (주관식)
+4점 이하 (주관식)
 의도:
 의도: UWES Vigor 차원. 인내력 측정.
 
@@ -152,7 +152,7 @@ NPS
 Q6. 협업 수준
 
 10점
- 부정 원인
+부정 원인
 
 ![preencoded.png](Image3.jpg)
 
@@ -187,7 +187,7 @@ Q9. AX 지원도
 10점
 의도: 양(Quantity) 아닌 질(Quality). 지식 시너지. ↓ 심층
 
- 6점 이하 시
+6점 이하 시
 
 ![preencoded.png](Image9.jpg)
 의도:
@@ -199,7 +199,7 @@ Q9. AX 지원도
 "조직은 내가 AI를 업무에 실질적으로 활용하도록 지원하고 있다"
 "비추천의 가장 큰 이유는?"
 
- 부정 응답 시 원인
+부정 응답 시 원인
 
 ![preencoded.png](Image1.jpg)
 
@@ -215,14 +215,14 @@ QE3. 몰두
 의도: 제공 여부 아닌 개인의 주도권 관점. 인과
 "업무에 완전히 몰입해 시간 가는 줄 모른 순간이 있었다"
 
- 부정 원인
+부정 원인
 
 ![preencoded.png](Image4.jpg)
 방해/중단
 의미부재
 
- 총 14문항 · 설계 근거: POS / SDT / LMX / UWES / eNPS
- LG PRI · HRD팀 · 분기 1회 운영 · 2026.Q1
+총 14문항 · 설계 근거: POS / SDT / LMX / UWES / eNPS
+LG PRI · HRD팀 · 분기 1회 운영 · 2026.Q1
 ↓ 심층 깊이 탐색
 
 ↓ 심층
@@ -394,7 +394,7 @@ D
 월 1회 (Monthly)
 분기 1회 (Quarterly)
 Frequency
- Frequency
+Frequency
 
 ![preencoded.png](Image7.jpg)
 매월 2주차 진행
@@ -403,7 +403,7 @@ Frequency
 즉각적 이슈 감지 (Sensing)
 누적 경험 & 인과 분석
 Purpose
- Purpose
+Purpose
 
 ![preencoded.png](Image8.jpg)
 빠른 변화 캐치 및 이상 징후 포착
@@ -417,14 +417,14 @@ Load
 14 문항
 
 < 5 분
- Load
+Load
 
 ![preencoded.png](Image9.jpg)
 
 5점/7점 척도
 10점 척도 + Engagement
 Design
- Design
+Design
 
 ![preencoded.png](Image10.jpg)
 제한적 Branching (단순 사유)
@@ -433,7 +433,7 @@ Design
 즉시 개선 (Quick Fix)
 조직 전략 수립 (Strategic)
 Action
- Action
+Action
 
 ![preencoded.png](Image11.jpg)
 팀 단위의 빠른 소통 및 해결
@@ -493,11 +493,11 @@ D (2)
 ![preencoded.png](Image1.jpg)
 
 ![preencoded.png](Image2.jpg)
- 기존 4개 영역에서 Engagement(E) 영역을 추가하여 5열 구조로 심화. 몰입의 원인과 결과를 분리.
- 5/7점 척도에서 10점 척도로 변경하여 미세한 변화 감지력 확보. Outcome은 이모지/NPS 도입.
- 단순 응답을 넘어 부정 응답 시 Branching(원인 파악) 로직 자동 노출 및 UWES 입체 분석.
+기존 4개 영역에서 Engagement(E) 영역을 추가하여 5열 구조로 심화. 몰입의 원인과 결과를 분리.
+5/7점 척도에서 10점 척도로 변경하여 미세한 변화 감지력 확보. Outcome은 이모지/NPS 도입.
+단순 응답을 넘어 부정 응답 시 Branching(원인 파악) 로직 자동 노출 및 UWES 입체 분석.
 
- 문항별 대응 관계 (Item Evolution Map)
+문항별 대응 관계 (Item Evolution Map)
 
 ![preencoded.png](Image5.jpg)
 Monthly (10 Items)
@@ -522,7 +522,7 @@ C. HR 지원 (Q7-Q8)
 
 C. HR 운영·지원 (Q7-Q9)
 
-+ Q9 AX지원 추가
+- Q9 AX지원 추가
 
 ![preencoded.png](Image9.jpg)
 
@@ -636,11 +636,11 @@ QE2
 
 QE3
 
- 이번 분기, 일을 할 때 강한 에너지와 활기를 느꼈다.
+이번 분기, 일을 할 때 강한 에너지와 활기를 느꼈다.
 
- 이번 분기, 내 일에 의미와 열정·자부심을 느꼈다.
+이번 분기, 내 일에 의미와 열정·자부심을 느꼈다.
 
- 업무에 완전히 몰입해 시간 가는 줄 모른 순간이 있었다.
+업무에 완전히 몰입해 시간 가는 줄 모른 순간이 있었다.
 
 ![preencoded.png](Image6.jpg)
 
@@ -724,9 +724,9 @@ C. HR 운영·지원
 SDT 욕구 충족
 eNPS
 자율성 · 유능감 · 관계성
-*Based on UWES Model
- 핵심 검증 가설 (Key Hypotheses)
- 데이터 산출물 (Outputs)
+\*Based on UWES Model
+핵심 검증 가설 (Key Hypotheses)
+데이터 산출물 (Outputs)
 
 ![preencoded.png](Image0.jpg)
 
@@ -741,9 +741,9 @@ Hypothesis 3 · Mediation
 조직별 Heatmap
 
 ![preencoded.png](Image9.jpg)
- "공정한 프로세스와 강한 Job-Fit은 구성원의 유능감·자율성을 높여 몰입을 견인한다."
- "심리적 안전감과 리더의 성장 지원은 관계성 욕구를 충족시켜 헌신을 이끈다."
- "Engagement는 EX(경험)가 eNPS 및 유지율로 연결되는 핵심 매개 변수이다."
+"공정한 프로세스와 강한 Job-Fit은 구성원의 유능감·자율성을 높여 몰입을 견인한다."
+"심리적 안전감과 리더의 성장 지원은 관계성 욕구를 충족시켜 헌신을 이끈다."
+"Engagement는 EX(경험)가 eNPS 및 유지율로 연결되는 핵심 매개 변수이다."
 Analysis
 
 ![preencoded.png](Image10.jpg)
@@ -1375,6 +1375,7 @@ Final Outcomes
 ### Notes:
 
 <!-- Slide number: 11 -->
+
 Integrated Measurement System
 LGE Internal Use Only
 통합 측정 체계 — 월간 + 분기 (Total 24문항)
@@ -1490,8 +1491,8 @@ Quarterly (Same)
 Q9. 감정 온도계
 
 Q10. Emotion (동일)
-+
-=
+
+- =
 
 ![preencoded.png](Image5.jpg)
 Monthly Items

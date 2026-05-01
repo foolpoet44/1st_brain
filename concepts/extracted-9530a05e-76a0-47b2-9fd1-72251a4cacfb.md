@@ -15,7 +15,7 @@ claude mcp add context7 -- npx -y @upstash/context7-mcp --api-key YOUR_API_KEY
 ### Extracted Code (text)
 
 ```text
-코드 생성, 설정 단계, 라이브러리/API 문서가 필요할 때 항상 context7을 사용하세요. 
+코드 생성, 설정 단계, 라이브러리/API 문서가 필요할 때 항상 context7을 사용하세요.
 명시적으로 요청하지 않아도 Context7 MCP 도구를 자동으로 사용하여 라이브러리 ID를 확인하고 문서를 가져오세요.
 ```
 

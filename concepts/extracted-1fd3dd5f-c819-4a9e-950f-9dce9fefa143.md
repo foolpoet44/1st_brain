@@ -40,7 +40,7 @@ Claude Code (로컬)
 ├─ PPT 리포트 생성 (python-pptx)
 └─ 개인별 피드백 텍스트 AI 생성
 
-[Antigravity 역할]  
+[Antigravity 역할]
 🌐 웹 시스템 자동화
 ├─ LG 내부 HR 시스템 로그인
 ├─ 평가 결과 일괄 업로드

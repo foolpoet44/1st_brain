@@ -55,7 +55,7 @@ DOCX 파일 (Word 문서)
 PPTX 파일 (PowerPoint 프레젠테이션)
 ──────────────────────────────────
 
-1. HR_AX_교육운영안_260306_v1.0.pptx
+1. HR*AX*교육운영안\_260306_v1.0.pptx
    HR 조직 대상 AX 교육 운영 계획안
 
 2. SUB_questions_260316.pptx
@@ -106,7 +106,7 @@ XLSX 파일 (Excel 스프레드시트)
 1. survey_Q_table_260226.xlsx
    설문 질문 테이블
 
-2. 터치포인트 항목_260305.xlsx
+2. 터치포인트 항목\_260305.xlsx
    터치포인트(고객 접점) 관련 항목 정리
 
 이미지 파일
@@ -135,17 +135,20 @@ LG PRI(People & Relations Innovation) 조직의 디지털 전환 프로젝트
 ──────────────────
 
 ① AI 활용도 제고
-  - Copilot + OneDrive 활용
-  - Vibe-Coding 개발
-  - 전사 인증체계 Lv.1~Lv.4
+
+- Copilot + OneDrive 활용
+- Vibe-Coding 개발
+- 전사 인증체계 Lv.1~Lv.4
 
 ② AX 역량 고도화
-  - AI Agent 개발·작동
-  - Physical AI Tech 기술 고도화
+
+- AI Agent 개발·작동
+- Physical AI Tech 기술 고도화
 
 ③ 중앙축: AI와 함께 일하는 조직
-  - AI를 등료로 맞이할 준비된 구성원
-  - 상시학습 체계
+
+- AI를 등료로 맞이할 준비된 구성원
+- 상시학습 체계
 
 세부 추진 내용
 ───────────────

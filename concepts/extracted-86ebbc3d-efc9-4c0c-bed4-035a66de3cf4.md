@@ -56,7 +56,7 @@ name: Daily Learning Collection
 
 on:
   schedule:
-    - cron: '0 21 * * *'  # 매일 밤 9시
+    - cron: "0 21 * * *" # 매일 밤 9시
   workflow_dispatch:
 
 jobs:
@@ -66,27 +66,27 @@ jobs:
       # Claude 대화에서 학습 내용 추출
       - name: Fetch Claude Conversations
         run: python automation/collectors/claude_sync.py
-      
+
       # Notion에서 학습 로그 가져오기
       - name: Sync Notion Learning Log
         run: python automation/collectors/notion_sync.py
-      
+
       # 브라우저 북마크에서 읽기 자료 수집
       - name: Collect Reading List
         run: python automation/collectors/bookmark_sync.py
-      
+
       # 자동 분류 및 태깅
       - name: Auto Classify & Tag
         run: python automation/processors/auto_tagger.py
-      
+
       # 스킬 온톨로지 업데이트
       - name: Update Skill Graph
         run: python automation/analyzers/skill_mapper.py
-      
+
       # 일일 리포트 생성
       - name: Generate Daily Report
         run: python automation/analyzers/daily_report.py
-      
+
       # Notion 대시보드 업데이트
       - name: Update Notion Dashboard
         run: python automation/collectors/update_notion.py
@@ -98,18 +98,23 @@ jobs:
 # 2025-01-04 Learning Log
 
 ## 📥 Today's Input
+
 - [ ] Claude 대화 3건 (자동 링크)
 - [ ] 아티클 2건 읽음
 - [ ] YouTube 강의 1건 시청
 
 ## 🧠 Key Insights
+
 ### HR Domain
+
 - 리더십 평가 데이터 분석 패턴 발견
 
 ### Technical
+
 - Python 자동화 스크립트 최적화 기법
 
 ### Cross-Domain
+
 - HR 데이터 + 통계분석의 결합 포인트
 
 ## 💻 Code Created
@@ -142,24 +147,24 @@ skills:
       level: expert
       linked_to: [psychology, statistics]
       projects: [leadership-evaluation-2025]
-      
+
   technical:
     - name: Python Automation
       level: advanced
       linked_to: [hr_domain, analytics]
       tools: [pandas, notion-sdk]
-      
+
   analytics:
     - name: Statistical Analysis
       level: intermediate
       linked_to: [hr_domain, technical]
-      
+
 connections:
   - from: Python Automation
     to: HR Analytics
     type: enables
     strength: 0.9
-    
+
   - from: Psychology
     to: Leadership Assessment
     type: foundation
@@ -176,21 +181,21 @@ import matplotlib.pyplot as plt
 def generate_learning_graph():
     """학습한 개념들의 관계를 자동으로 시각화"""
     G = nx.Graph()
-    
+
     # 일일 로그에서 자동 추출
     concepts = extract_concepts_from_daily_logs()
-    
+
     for concept in concepts:
-        G.add_node(concept['name'], 
+        G.add_node(concept['name'],
                    domain=concept['domain'],
                    strength=concept['mastery'])
-    
+
     # 개념 간 연결 자동 감지
     connections = detect_connections(concepts)
     for conn in connections:
-        G.add_edge(conn['from'], conn['to'], 
+        G.add_edge(conn['from'], conn['to'],
                    weight=conn['strength'])
-    
+
     # 시각화 저장
     visualize_graph(G, 'analytics/visualizations/learning-graph.png')
 ```
@@ -201,6 +206,7 @@ def generate_learning_graph():
 # Weekly Progress Report (Auto-generated)
 
 ## 📈 This Week's Stats (2025 W1)
+
 - Total Learning Hours: 12.5h
 - Concepts Learned: 8
 - Code Written: 450 lines
@@ -236,13 +242,13 @@ class LearningRecommender:
         """
         # 스킬 갭 분석
         gaps = self.analyze_skill_gaps(current_skills, goals)
-        
+
         # GitHub Stars, HN, Reddit에서 관련 자료 수집
         resources = self.collect_resources(gaps)
-        
+
         # 학습 우선순위 자동 계산
         prioritized = self.prioritize_by_impact(resources, gaps)
-        
+
         # Notion '학습 대기열'에 자동 추가
         self.add_to_notion_queue(prioritized)
 ```
@@ -271,12 +277,12 @@ hr_concepts:
   - Leadership Competencies
   - Organizational Development
   - Talent Analytics
-  
+
 tech_enablers:
   - Python Automation
   - Statistical Modeling
   - Data Visualization
-  
+
 value_creation:
   - Automated Assessment
   - Predictive HR
@@ -289,7 +295,7 @@ value_creation:
 # 서로 다른 도메인의 융합 포인트 자동 감지
 synergy_detector.find_intersections([
     "HR Leadership",
-    "Python Automation", 
+    "Python Automation",
     "Statistical Analysis"
 ])
 # → "Automated Leadership Assessment System"
@@ -312,11 +318,14 @@ synergy_detector.find_intersections([
 **Title Format**: 📚 2025-01-04 학습 로그
 
 ## Labels (자동 추가)
+
 - `daily-log`
 - `hr` / `coding` / `analytics` / `psychology`
 
 ## 모바일에서 빠른 입력
+
 ### 오늘 배운 것
+
 - Claude와 Notion MCP 연동 방법 학습
 - Python asyncio 개념 이해
 
@@ -327,18 +336,19 @@ synergy_detector.find_intersections([
 
 ```markdown
 # Category 구조
+
 📂 Knowledge Areas
-  ├── HR & Leadership
-  ├── Python & Automation
-  ├── Data Analytics
-  └── Psychology Insights
+├── HR & Leadership
+├── Python & Automation
+├── Data Analytics
+└── Psychology Insights
 
 📂 Projects
-  ├── HR Automation SaaS
-  └── Ontology System
+├── HR Automation SaaS
+└── Ontology System
 
 📂 Ideas
-  └── 브레인스토밍
+└── 브레인스토밍
 ```
 
 ### Extracted Code (yaml)
@@ -359,7 +369,7 @@ jobs:
         run: |
           # Discussion 내용을 해당 카테고리 폴더에 저장
           python automation/processors/discussion_parser.py
-      
+
       - name: Update Knowledge Graph
         run: |
           # 개념 연결 자동 업데이트
@@ -375,7 +385,7 @@ jobs:
 Python         Notion MCP     React         Django
 고급 기법        통합 방법        Hooks         ORM
 
-[Issue]        
+[Issue]
 Ontology
 설계 패턴
 ```
@@ -386,7 +396,7 @@ Ontology
 🔰 Beginner    💪 Intermediate    🚀 Advanced    ⭐ Expert
 ────────────────────────────────────────────────────────
 Ontology       Python            HR Analytics   Psychology
-Design         Automation        
+Design         Automation
 
 Git Actions                      Statistics
 ```
@@ -405,7 +415,7 @@ jobs:
     steps:
       - name: Update Skill Progress JSON
         run: python automation/analyzers/update_skill_stats.py
-      
+
       - name: Sync to Notion
         run: python automation/collectors/update_notion_dashboard.py
 ```
@@ -476,22 +486,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Convert Issue to Markdown
         run: |
           python automation/processors/issue_parser.py \
             --issue-number ${{ github.event.issue.number }} \
             --output daily-learning/$(date +%Y/%m)
-      
+
       - name: Extract Code Snippets
         run: |
           python automation/processors/code_extractor.py \
             --issue-number ${{ github.event.issue.number }}
-      
+
       - name: Update Learning Graph
         run: |
           python automation/analyzers/update_graph.py
-      
+
       - name: Commit Changes
         run: |
           git config --local user.email "action@github.com"
@@ -499,7 +509,7 @@ jobs:
           git add .
           git commit -m "📚 Archive: Issue #${{ github.event.issue.number }}"
           git push
-      
+
       - name: Sync to Notion
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
@@ -520,7 +530,7 @@ class AutoTagger:
         'analytics': ['분석', '통계', 'data', 'visualization', '시각화'],
         'psychology': ['심리', '행동', 'psychology', 'behavior']
     }
-    
+
     def detect_labels(self, issue_body):
         """Issue 내용 기반 자동 라벨링"""
         labels = []
@@ -528,7 +538,7 @@ class AutoTagger:
             if any(kw in issue_body.lower() for kw in keywords):
                 labels.append(domain)
         return labels
-    
+
     def extract_code_blocks(self, issue_body):
         """코드 블록 자동 추출"""
         code_pattern = r'
@@ -569,6 +579,7 @@ class AutoTagger:
 ### 나는 누구?
 
 **Creative Solution Provider (CSP)**
+
 - 🏢 LG PRI Production Technology HR
 - 🧩 HR(17년) × Psychology × Analytics × Full-stack Coding
 - 🚀 Vibe Coder: 빠른 프로토타입, 실용적 자동화
@@ -832,11 +843,13 @@ contact_links:
 # 기여 가이드
 
 ## 개발 환경 설정
+
 1. Python 3.9+ 설치
 2. `pip install -r requirements.txt`
 3. `.env` 파일 생성
 
 ## 코딩 스타일
+
 - Black 포매터 사용
 - Docstring 필수
 - Type hints 권장

@@ -37,7 +37,7 @@ Employee와 Skill 관계:
 - hasProficiency (직원이 스킬 숙련도를 가짐)
   Domain: Employee
   Range: SkillProficiency
-  
+
 - wantsToLearn (학습 희망 스킬)
   Domain: Employee
   Range: Skill
@@ -46,7 +46,7 @@ Job과 Skill 관계:
 - requiresSkill (필수 스킬)
   Domain: Job
   Range: Skill
-  
+
 - prefersSkill (우대 스킬)
   Domain: Job
   Range: Skill
@@ -54,10 +54,10 @@ Job과 Skill 관계:
 Skill 간 관계:
 - isPrerequisiteOf (선수 스킬)
   예: Java isPrerequisiteOf Spring
-  
+
 - isRelatedTo (연관 스킬)
   예: React isRelatedTo JavaScript
-  
+
 - isAlternativeTo (대체 가능 스킬)
   예: MySQL isAlternativeTo PostgreSQL
 
@@ -65,7 +65,7 @@ Learning 관계:
 - teachesSkill
   Domain: Course
   Range: Skill
-  
+
 - hasCompleted
   Domain: Employee
   Range: Course
@@ -74,7 +74,7 @@ Project 관계:
 - usedSkillIn
   Domain: Employee
   Range: Project
-  
+
 - requiresSkillFor
   Domain: Project
   Range: Skill
@@ -102,7 +102,7 @@ Employee_김철수:
   hasEmployeeID "EMP001"
   hasName "김철수"
   hasYearsOfExperience 5
-  
+
   hasProficiency [
     a SkillProficiency;
     forSkill Skill_Java;
@@ -110,31 +110,31 @@ Employee_김철수:
     hasAcquiredDate "2020-03-15";
     hasCertified true
   ]
-  
+
   hasProficiency [
     a SkillProficiency;
     forSkill Skill_Spring;
     hasProficiencyLevel 3;
     hasAcquiredDate "2021-06-20";
   ]
-  
+
   wantsToLearn Skill_Kubernetes
 
 # 직무 인스턴스
 Job_SeniorBackendDev:
   rdf:type JobPosition
   hasJobTitle "Senior Backend Developer"
-  
+
   requiresSkill Skill_Java [
     minimumLevel 4;
     yearsRequired 3
   ]
-  
+
   requiresSkill Skill_Spring [
     minimumLevel 3;
     yearsRequired 2
   ]
-  
+
   prefersSkill Skill_AWS
   prefersSkill Skill_Kubernetes
 
@@ -187,14 +187,14 @@ THEN SUGGEST Course_Kubernetes to Employee
 ### Extracted Code (text)
 
 ```text
-QUERY: 김철수가 "Senior Backend Developer" 포지션에 지원하려면 
+QUERY: 김철수가 "Senior Backend Developer" 포지션에 지원하려면
        무엇이 부족한가?
 
 온톨로지 추론:
 1. Job_SeniorBackendDev requiresSkill:
    - Java (level 4, 3 years) ✓ 김철수: level 4, 5년 경력
    - Spring (level 3, 2 years) ✓ 김철수: level 3, 2년 경력
-   
+
 2. Job_SeniorBackendDev prefersSkill:
    - AWS ✗ 김철수: 보유하지 않음
    - Kubernetes ✗ 김철수: wantsToLearn 표시
@@ -215,7 +215,7 @@ QUERY: React 프로젝트에 적합한 팀원 찾기
 3. 직원 검색:
    - Employee hasProficiency JavaScript (level >= 3)
    - Employee hasProficiency React (level >= 2)
-   
+
 4. 보너스 점수:
    - Employee hasProficiency Redux (+10점)
    - Employee hasCompleted Course_ReactAdvanced (+5점)
@@ -245,7 +245,7 @@ QUERY: 초급 개발자가 클라우드 아키텍트가 되려면?
    Step 5: Java Advanced (4개월)
    Step 6: AWS Advanced (3개월)
    Step 7: Kubernetes Mastery (4개월)
-   
+
    총 예상 기간: 19개월
 ```
 
@@ -279,12 +279,12 @@ QUERY: 초급 개발자가 클라우드 아키텍트가 되려면?
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    
+
     <owl:Class rdf:about="#Employee">
         <rdfs:subClassOf rdf:resource="#Person"/>
         <rdfs:label>직원</rdfs:label>
     </owl:Class>
-    
+
     <owl:ObjectProperty rdf:about="#hasProficiency">
         <rdfs:domain rdf:resource="#Employee"/>
         <rdfs:range rdf:resource="#SkillProficiency"/>
@@ -324,7 +324,7 @@ QUERY: 초급 개발자가 클라우드 아키텍트가 되려면?
     {
       "@id": "Employee",
       "@type": "owl:Class",
-      "rdfs:subClassOf": {"@id": "Person"},
+      "rdfs:subClassOf": { "@id": "Person" },
       "rdfs:label": "직원"
     }
   ]
@@ -370,37 +370,37 @@ with onto:
     # 클래스 정의
     class Person(Thing):
         pass
-    
+
     class Employee(Person):
         pass
-    
+
     class Skill(Thing):
         pass
-    
+
     # 속성 정의
     class hasProficiency(ObjectProperty):
         domain = [Employee]
         range = [Skill]
-    
+
     class hasEmployeeID(DataProperty, FunctionalProperty):
         domain = [Employee]
         range = [str]
-    
+
     class hasProficiencyLevel(DataProperty):
         domain = [Skill]
         range = [int]
-    
+
     # 인스턴스 생성
     java = Skill("Java")
-    
+
     김철수 = Employee("김철수")
     김철수.hasEmployeeID = ["EMP001"]
     김철수.hasProficiency = [java]
-    
+
     # 규칙 정의
     class AdvancedDeveloper(Employee):
-        equivalent_to = [Employee & 
-                        hasProficiency.some(Skill & 
+        equivalent_to = [Employee &
+                        hasProficiency.some(Skill &
                         hasProficiencyLevel.value(5))]
 
 # 추론 실행
@@ -425,75 +425,75 @@ with onto:
     # === 클래스 정의 ===
     class Skill(Thing):
         pass
-    
+
     class TechnicalSkill(Skill):
         pass
-    
+
     class ProgrammingLanguage(TechnicalSkill):
         pass
-    
+
     class Framework(TechnicalSkill):
         pass
-    
+
     class Person(Thing):
         pass
-    
+
     class Employee(Person):
         pass
-    
+
     class Job(Thing):
         pass
-    
+
     # === 속성 정의 ===
     class hasProficiency(ObjectProperty):
         domain = [Employee]
         range = [Skill]
-    
+
     class requiresSkill(ObjectProperty):
         domain = [Job]
         range = [Skill]
-    
+
     class isPrerequisiteOf(ObjectProperty, TransitiveProperty):
         domain = [Skill]
         range = [Skill]
-    
+
     class hasSkillLevel(DataProperty, FunctionalProperty):
         domain = [Skill]
         range = [int]
-    
+
     class hasYearsOfExperience(DataProperty):
         domain = [Employee]
         range = [int]
-    
+
     # === 추론 규칙 ===
     class SeniorDeveloper(Employee):
         equivalent_to = [
-            Employee & 
+            Employee &
             hasYearsOfExperience.some(ConstrainedDatatype(int, min_inclusive=5)) &
             hasProficiency.min(3, Skill)
         ]
-    
+
     # === 인스턴스 생성 ===
     # 스킬
     java = ProgrammingLanguage("Java")
     java.hasSkillLevel = 3
-    
+
     spring = Framework("Spring")
     spring.hasSkillLevel = 4
     spring.isPrerequisiteOf = [java]  # Spring은 Java 선수지식 필요
-    
+
     python = ProgrammingLanguage("Python")
     python.hasSkillLevel = 2
-    
+
     # 직원
     emp1 = Employee("김철수")
     emp1.hasYearsOfExperience = 6
     emp1.hasProficiency = [java, spring, python]
-    
+
     emp2 = Employee("이영희")
     emp2.hasYearsOfExperience = 3
     emp2.hasProficiency = [python]
-    
+
     # 직무
     backend_job = Job("BackendDeveloper")
     backend_job.requiresSkill = [java, spring]
@@ -528,7 +528,7 @@ for emp in Employee.instances():
 graph = default_world.as_rdflib_graph()
 query = """
     PREFIX hr: <http://example.org/hr-skills.owl#>
-    
+
     SELECT ?employee ?skill
     WHERE {
         ?employee a hr:Employee .
@@ -604,29 +604,29 @@ import json
 class HRSkillsOntology:
     def __init__(self, owl_file="hr_skills.owl"):
         self.onto = get_ontology(owl_file).load()
-        
+
     def add_employee(self, emp_id, name, skills):
         """새 직원과 스킬 추가"""
         with self.onto:
             emp = self.onto.Employee(name)
             emp.hasEmployeeID = [emp_id]
-            
+
             for skill_name in skills:
                 skill = self.onto.search_one(iri=f"*{skill_name}")
                 if skill:
                     emp.hasProficiency.append(skill)
-        
+
         self.onto.save()
-        
+
     def find_qualified_employees(self, job_title):
         """직무에 적합한 직원 찾기"""
         job = self.onto.search_one(iri=f"*{job_title}")
         if not job:
             return []
-        
+
         required = set(job.requiresSkill)
         qualified = []
-        
+
         for emp in self.onto.Employee.instances():
             emp_skills = set(emp.hasProficiency)
             if required.issubset(emp_skills):
@@ -635,21 +635,21 @@ class HRSkillsOntology:
                     'id': emp.hasEmployeeID[0],
                     'skills': [s.name for s in emp.hasProficiency]
                 })
-        
+
         return qualified
-    
+
     def recommend_learning_path(self, employee_name, target_job):
         """학습 경로 추천"""
         emp = self.onto.search_one(iri=f"*{employee_name}")
         job = self.onto.search_one(iri=f"*{target_job}")
-        
+
         if not emp or not job:
             return None
-        
+
         current = set(emp.hasProficiency)
         required = set(job.requiresSkill)
         gap = required - current
-        
+
         # 선수 지식 고려한 학습 순서
         learning_path = []
         for skill in gap:
@@ -658,7 +658,7 @@ class HRSkillsOntology:
                 'skill': skill.name,
                 'prerequisites': [p.name for p in prereqs]
             })
-        
+
         return learning_path
 
 # 사용 예시

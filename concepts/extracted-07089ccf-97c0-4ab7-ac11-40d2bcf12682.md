@@ -63,9 +63,9 @@ And 해당 도구로 주 2시간 이상 업무시간을 절감한다
 ### Extracted Code (text)
 
 ```text
-[구성원이 MVP 완성] 
+[구성원이 MVP 완성]
     → Event: ToolCreated
-    → Trigger: 
+    → Trigger:
         - Skill Assessment에 경험치 추가
         - Community에 성공 사례 게시
         - Learning Platform에서 다음 과정 추천
@@ -87,7 +87,7 @@ physical_ai:
   target_pool_size: 30
   skill_levels: [L1, L2, L3, L4, L5]
   assessment_frequency: "monthly"
-  
+
 culture:
   survey_frequency: "quarterly"
   target_improvement: 0.15
@@ -100,17 +100,21 @@ culture:
 # MVP 실패 회고 템플릿
 
 ## 무엇을 만들려 했나?
+
 [의도]
 
 ## 왜 작동하지 않았나?
+
 - 기술적 이슈:
 - 사용자 니즈 미스매치:
 - 시간/리소스 부족:
 
 ## 무엇을 배웠나?
+
 [핵심 교훈 3가지]
 
 ## 다음엔 어떻게 할 것인가?
+
 [액션 아이템]
 ```
 

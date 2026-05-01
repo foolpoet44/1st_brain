@@ -23,14 +23,14 @@
 
 **필수 플러그인 6개** (순서대로 설치):
 
-| 플러그인 | 역할 | 설정 포인트 |
-|:---|:---|:---|
-| **Dataview** | wiki/ 문서 쿼리, 대시보드 | 설치만 하면 됨 |
-| **Templater** | 문서 생성 자동화 | Template folder: `_templates` |
-| **Obsidian Git** | 자동 Git 커밋/푸시 | Auto pull: 5min, Auto push: 매뉴얼 |
-| **Shell Commands** | Claude Code 터미널 연동 | 아래 Step 4 참고 |
-| **Kanban** | 프로젝트 보드 뷰 (선택) | — |
-| **Calendar** | 일별/주별 타임라인 (선택) | — |
+| 플러그인           | 역할                      | 설정 포인트                        |
+| :----------------- | :------------------------ | :--------------------------------- |
+| **Dataview**       | wiki/ 문서 쿼리, 대시보드 | 설치만 하면 됨                     |
+| **Templater**      | 문서 생성 자동화          | Template folder: `_templates`      |
+| **Obsidian Git**   | 자동 Git 커밋/푸시        | Auto pull: 5min, Auto push: 매뉴얼 |
+| **Shell Commands** | Claude Code 터미널 연동   | 아래 Step 4 참고                   |
+| **Kanban**         | 프로젝트 보드 뷰 (선택)   | —                                  |
+| **Calendar**       | 일별/주별 타임라인 (선택) | —                                  |
 
 ### Templater 설정
 
@@ -97,13 +97,14 @@ cd ~/csp-brain
 claude
 
 # 첫 프롬프트:
-> CLAUDE.md를 읽고, 현재 vault 상태를 파악해줘. 
+> CLAUDE.md를 읽고, 현재 vault 상태를 파악해줘.
 > wiki/에 몇 개의 문서가 있고, 어떤 프로젝트가 추적되고 있는지 status 보고.
 ```
 
 ## Step 6: 일상 워크플로우
 
 ### 매일
+
 ```
 1. 흥미로운 자료 발견 → inbox/에 드래그 앤 드롭
 2. 떠오르는 생각 → inbox/notes/에 빠른 메모
@@ -111,6 +112,7 @@ claude
 ```
 
 ### 매주 금요일 (Dream Cycle)
+
 ```bash
 cd ~/csp-brain
 claude
@@ -120,6 +122,7 @@ claude
 ```
 
 ### 월 1회
+
 ```bash
 > lint
 # → 전체 위키 점검. 고립 문서, 오래된 Compiled Truth 경고
@@ -130,6 +133,7 @@ claude
 ## iPad 동기화 (선택)
 
 Working Copy 앱 사용:
+
 1. Working Copy 설치 (App Store)
 2. GitHub 계정 연결
 3. csp-brain 레포 클론
@@ -150,4 +154,4 @@ A: `cd ~/csp-brain` 후 `claude` 실행 확인. 반드시 Vault 루트에서 시
 
 ---
 
-*v2.0 — 2026-04-29*
+_v2.0 — 2026-04-29_

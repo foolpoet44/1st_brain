@@ -5,7 +5,7 @@
 ### Extracted Code (text)
 
 ```text
-[AX 학습] 
+[AX 학습]
     ↓ (즉시 적용 가능한 실용적 내용)
 [역량 성장]
     ↓ (가시적 성과 창출)
@@ -51,19 +51,19 @@ Physical AI CoE
 Level 1: Junior Engineer (1-3년)
   - 기본 프로젝트 참여
   - 멘토 지도 하 업무 수행
-  
+
   Level 2: Engineer (3-5년)
   - 독립적 프로젝트 수행
   - 기술 문서 작성
-  
+
   Level 3: Senior Engineer (5-8년)
   - 프로젝트 리더
   - 주니어 멘토링
-  
+
   Level 4: Principal Engineer (8-12년)
   - 기술 전략 수립
   - 외부 발표/특허
-  
+
   Level 5: Distinguished Engineer (12년+)
   - 회사 기술 비전 제시
   - 업계 리더십
@@ -74,7 +74,7 @@ Level 1: Junior Engineer (1-3년)
 ```text
 Physical AI Tech 리더 육성 체계 구축
 ├── 1. 조직별 Physical AI Tech Leader 후보 Pool 구축 및 적절자 추진
-├── 2. 선도적인 Smart Factory Solution 제공 및 정비/하드웨어의 
+├── 2. 선도적인 Smart Factory Solution 제공 및 정비/하드웨어의
 │      미지함을 리드할 기술 전문가 육성 체계 구축
 └── 3. Physical AI 기술 연계라 소길 인벤토리 구체화 / 육성 체계 구축
 ```

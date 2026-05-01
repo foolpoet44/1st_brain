@@ -8,7 +8,7 @@
 [Input Layer]
 신년사 문서 (PDF/DOCX/MD)
     ↓
-[Analysis Layer] 
+[Analysis Layer]
 Claude 기반 의미 추출 엔진
     ↓
 [Ontology Layer]
@@ -174,19 +174,19 @@ from pathlib import Path
 
 def analyze_strategic_document(pdf_path):
     client = anthropic.Anthropic()
-    
+
     prompt = """
     다음 신년사 문서를 분석하여 구조화된 전략 정보를 추출해주세요:
-    
+
     1. 핵심 메시지 (3-5개)
     2. 전략 테마 분류 (DX/AX/People/Innovation 등)
     3. 구체적 목표/지표
     4. 추진 과제
     5. 타임라인
-    
+
     출력 형식: YAML frontmatter + Markdown
     """
-    
+
     # Claude API 호출로 문서 분석
     # Obsidian 노트 자동 생성
     pass
@@ -221,6 +221,7 @@ def build_strategic_ontology(messages_dir):
 **출력**: 분기별 실행계획
 
 다음 구조로 계획을 수립하세요:
+
 1. 목표 분해 (OKR 방식)
 2. 주요 마일스톤
 3. 주간 액션 아이템
@@ -284,7 +285,7 @@ SORT priority ASC
 // sync-to-notion.js
 /**
  * Obsidian의 전략 데이터를 Notion DB로 동기화
- * 
+ *
  * Use Case:
  * - Obsidian: 개인 전략 수립 & 깊은 사고
  * - Notion: 팀 협업 & 진척 공유

@@ -1,9 +1,11 @@
 # 오늘의 인사이트: 지식의 자산화 (Knowledge Capitalization)
 
 ## Compiled Truth
+
 **개요**: 기록된 데이터를 AI가 즉각적으로 처리 가능한 '원자 단위'로 분해하고 지각화하는 과정. 단순 백업과 달리, 지식의 **용해성(Solubility)**을 높여 추론의 재료로 만드는 것을 의미한다.
 
 **핵심 원칙**:
+
 1. **Sharding**: 대용량 데이터를 시계열로 쪼개어 에이전트의 메모리 과부하를 방지.
 2. **Atomic Concepts**: 대화 속 핵심 개념을 추출하여 개별 파일로 관리함으로써 검색 정확도 향상.
 3. **Traceability**: 원본 로그와 추출된 개념 간의 연결 고리 보존.
@@ -14,6 +16,8 @@
 ---
 
 ## Timeline (append-only — 절대 수정/삭제 금지)
+
 ### 2026-04-14
+
 - 114MB Conversations 데이터 Sharding 및 개념 추출을 통해 본 원칙의 실효성을 증명함.
 - `scripts/brain_build.py`를 통해 지식의 무결성 관리 자동화 체계 수립.
