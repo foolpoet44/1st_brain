@@ -1,1120 +1,741 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSP-Brain Change Dashboard</title>
-    <style>
-      :root {
-        --bg: #f7f3ec;
-        --surface: #fffdf8;
-        --surface-2: #efe7da;
-        --border: rgba(54, 47, 39, 0.14);
-        --text: #2f2a24;
-        --text-dim: #71685c;
-        --accent: #9f3f22;
-        --accent-2: #587246;
-        --accent-3: #1f5f6f;
-        --warn: #b45309;
-        --ok: #48733f;
-        --shadow: 0 18px 50px rgba(66, 52, 34, 0.12);
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSP-Brain Change Dashboard</title>
+  <style>
+    :root {
+      --bg: #f7f3ec;
+      --surface: #fffdf8;
+      --surface-2: #efe7da;
+      --border: rgba(54, 47, 39, 0.14);
+      --text: #2f2a24;
+      --text-dim: #71685c;
+      --accent: #9f3f22;
+      --accent-2: #587246;
+      --accent-3: #1f5f6f;
+      --warn: #b45309;
+      --ok: #48733f;
+      --shadow: 0 18px 50px rgba(66, 52, 34, 0.12);
+    }
 
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        font-family:
-          ui-sans-serif, "Apple SD Gothic Neo", "Malgun Gothic", system-ui,
-          sans-serif;
-        color: var(--text);
-        background:
-          linear-gradient(90deg, rgba(47, 42, 36, 0.035) 1px, transparent 1px),
-          linear-gradient(rgba(47, 42, 36, 0.035) 1px, transparent 1px),
-          radial-gradient(
-            circle at 12% 8%,
-            rgba(159, 63, 34, 0.12),
-            transparent 30%
-          ),
-          radial-gradient(
-            circle at 82% 12%,
-            rgba(88, 114, 70, 0.14),
-            transparent 28%
-          ),
-          var(--bg);
-        background-size:
-          28px 28px,
-          28px 28px,
-          auto,
-          auto,
-          auto;
-      }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        linear-gradient(90deg, rgba(47, 42, 36, 0.035) 1px, transparent 1px),
+        linear-gradient(rgba(47, 42, 36, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at 12% 8%, rgba(159, 63, 34, 0.12), transparent 30%),
+        radial-gradient(circle at 82% 12%, rgba(88, 114, 70, 0.14), transparent 28%),
+        var(--bg);
+      background-size: 28px 28px, 28px 28px, auto, auto, auto;
+    }
 
-      .shell {
-        width: min(1180px, calc(100vw - 40px));
-        margin: 0 auto;
-        padding: 34px 0 48px;
-      }
+    .shell {
+      width: min(1180px, calc(100vw - 40px));
+      margin: 0 auto;
+      padding: 34px 0 48px;
+    }
 
-      header {
-        display: grid;
-        grid-template-columns: 1.5fr 0.9fr;
-        gap: 18px;
-        align-items: stretch;
-        margin-bottom: 18px;
-      }
+    header {
+      display: grid;
+      grid-template-columns: 1.5fr 0.9fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
 
-      .hero,
-      .card {
-        background: rgba(255, 253, 248, 0.88);
-        border: 1px solid var(--border);
-        box-shadow: var(--shadow);
-        border-radius: 8px;
-      }
+    .hero, .card {
+      background: rgba(255, 253, 248, 0.88);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+    }
 
-      .hero {
-        padding: 30px;
-        min-height: 260px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
+    .hero {
+      padding: 30px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-      .eyebrow {
-        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-        color: var(--accent);
-        font-size: 12px;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
+    .eyebrow {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
 
-      h1 {
-        margin: 12px 0;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(36px, 6vw, 68px);
-        line-height: 0.95;
-        letter-spacing: 0;
-      }
+    h1 {
+      margin: 12px 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 6vw, 68px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
 
-      h2 {
-        margin: 0 0 14px;
-        font-size: 18px;
-        letter-spacing: 0;
-      }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
 
-      h3 {
-        margin: 0 0 8px;
-        font-size: 15px;
-      }
-      p {
-        color: var(--text-dim);
-        line-height: 1.62;
-      }
-      code {
-        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-        font-size: 12px;
-        background: rgba(47, 42, 36, 0.06);
-        padding: 2px 5px;
-        border-radius: 4px;
-        overflow-wrap: anywhere;
-      }
+    h3 { margin: 0 0 8px; font-size: 15px; }
+    p { color: var(--text-dim); line-height: 1.62; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      background: rgba(47, 42, 36, 0.06);
+      padding: 2px 5px;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+    }
 
-      .summary {
-        font-size: 17px;
-        max-width: 740px;
-      }
+    .summary {
+      font-size: 17px;
+      max-width: 740px;
+    }
 
+    .scorecard {
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .metric {
+      padding: 15px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      margin-top: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 22px;
+    }
+
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 8px 0; color: var(--text-dim); }
+    .latest li {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .latest span {
+      color: var(--accent-3);
+      font-weight: 700;
+    }
+
+    .mini {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      background: rgba(255, 255, 255, 0.35);
+    }
+    .mini strong { color: var(--warn); }
+    .mini.ok strong { color: var(--ok); }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 52px;
+      gap: 10px;
+      align-items: center;
+      margin: 12px 0;
+      color: var(--text-dim);
+    }
+    .bar {
+      height: 11px;
+      border-radius: 999px;
+      background: rgba(47, 42, 36, 0.08);
+      overflow: hidden;
+    }
+    .bar i {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .timeline-item {
+      border-left: 3px solid var(--accent);
+      background: rgba(239, 231, 218, 0.55);
+      border-radius: 6px;
+      padding: 14px;
+    }
+    .timeline-item p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(159, 63, 34, 0.11);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .direct-link {
+      text-decoration: none;
+      font-size: 14px;
+      margin-left: 4px;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+    .direct-link:hover { opacity: 1; color: var(--accent); }
+
+    .bridge-box {
+      background: rgba(47, 42, 36, 0.04);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+    .bridge-box strong { color: var(--accent-3); }
+
+    /* Graph Style */
+    #knowledge-graph {
+      width: 100%;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+      cursor: grab;
+    }
+    .node { fill: var(--accent); stroke: #fff; stroke-width: 1.5px; }
+    .link { stroke: var(--accent-2); stroke-opacity: 0.4; stroke-width: 1px; }
+    .node-label { font-size: 10px; fill: var(--text); pointer-events: none; }
+
+    /* Capture Interface Styles */
+    .capture-panel {
+      margin-bottom: 24px;
+      padding: 24px;
+      background: rgba(159, 63, 34, 0.03);
+      border: 1px dashed var(--accent);
+      border-radius: 8px;
+    }
+    .capture-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .capture-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .capture-tab {
+      padding: 6px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+    .capture-tab.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+    .capture-input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .capture-title {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--surface);
+      font-family: inherit;
+      font-size: 14px;
+    }
+    .capture-content {
+      width: 100%;
+      height: 100px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--surface);
+      font-family: inherit;
+      font-size: 14px;
+      resize: vertical;
+    }
+    .capture-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+    }
+    .capture-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 8px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .capture-btn:hover { opacity: 0.9; }
+    .capture-status { font-size: 13px; font-weight: 600; }
+
+    .muted { color: var(--text-dim); }
+    .foot {
+      margin-top: 18px;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      header, .grid, .timeline {
+        grid-template-columns: 1fr;
+      }
+      .span-4, .span-5, .span-7, .span-8, .span-12 {
+        grid-column: span 1;
+      }
       .scorecard {
-        padding: 22px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+        grid-template-columns: 1fr;
       }
-
-      .metric {
-        padding: 15px;
-        background: var(--surface-2);
-        border: 1px solid var(--border);
-        border-radius: 8px;
+      .shell {
+        width: min(100vw - 24px, 1180px);
+        padding-top: 18px;
       }
-
-      .metric strong {
-        display: block;
-        font-size: 28px;
-        margin-top: 6px;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 18px;
-      }
-
-      .card {
-        padding: 22px;
-      }
-
-      .span-4 {
-        grid-column: span 4;
-      }
-      .span-5 {
-        grid-column: span 5;
-      }
-      .span-7 {
-        grid-column: span 7;
-      }
-      .span-8 {
-        grid-column: span 8;
-      }
-      .span-12 {
-        grid-column: span 12;
-      }
-
-      ul {
-        margin: 0;
-        padding-left: 18px;
-      }
-      li {
-        margin: 8px 0;
-        color: var(--text-dim);
-      }
-      .latest li {
-        display: grid;
-        grid-template-columns: 82px 1fr;
-        gap: 10px;
-        padding: 8px 0;
-        border-bottom: 1px solid var(--border);
-      }
-      .latest span {
-        color: var(--accent-3);
-        font-weight: 700;
-      }
-
-      .mini {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        align-items: center;
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        padding: 10px 12px;
-        margin-bottom: 8px;
-        background: rgba(255, 255, 255, 0.35);
-      }
-      .mini strong {
-        color: var(--warn);
-      }
-      .mini.ok strong {
-        color: var(--ok);
-      }
-
-      .bar-row {
-        display: grid;
-        grid-template-columns: 110px 1fr 52px;
-        gap: 10px;
-        align-items: center;
-        margin: 12px 0;
-        color: var(--text-dim);
-      }
-      .bar {
-        height: 11px;
-        border-radius: 999px;
-        background: rgba(47, 42, 36, 0.08);
-        overflow: hidden;
-      }
-      .bar i {
-        display: block;
-        height: 100%;
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      }
-
-      .timeline {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-      }
-      .timeline-item {
-        border-left: 3px solid var(--accent);
-        background: rgba(239, 231, 218, 0.55);
-        border-radius: 6px;
-        padding: 14px;
-      }
-      .timeline-item p {
-        margin: 0;
-        font-size: 13px;
-      }
-
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 7px 10px;
-        border-radius: 999px;
-        background: rgba(159, 63, 34, 0.11);
-        color: var(--accent);
-        font-weight: 700;
-      }
-
-      .direct-link {
-        text-decoration: none;
-        font-size: 14px;
-        margin-left: 4px;
-        opacity: 0.5;
-        transition: opacity 0.2s;
-      }
-      .direct-link:hover {
-        opacity: 1;
-        color: var(--accent);
-      }
-
-      .bridge-box {
-        background: rgba(47, 42, 36, 0.04);
-        border-radius: 8px;
-        padding: 12px;
-        margin-top: 12px;
-        font-size: 13px;
-      }
-      .bridge-box strong {
-        color: var(--accent-3);
-      }
-
-      /* Graph Style */
-      #knowledge-graph {
-        width: 100%;
-        height: 300px;
-        background: rgba(255, 255, 255, 0.4);
-        border-radius: 12px;
-        border: 1px solid var(--border);
-        margin-bottom: 24px;
-        cursor: grab;
-      }
-      .node {
-        fill: var(--accent);
-        stroke: #fff;
-        stroke-width: 1.5px;
-      }
-      .link {
-        stroke: var(--accent-2);
-        stroke-opacity: 0.4;
-        stroke-width: 1px;
-      }
-      .node-label {
-        font-size: 10px;
-        fill: var(--text);
-        pointer-events: none;
-      }
-
-      /* Capture Interface Styles */
-      .capture-panel {
-        margin-bottom: 24px;
-        padding: 24px;
-        background: rgba(159, 63, 34, 0.03);
-        border: 1px dashed var(--accent);
-        border-radius: 8px;
-      }
-      .capture-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-      }
-      .capture-tabs {
-        display: flex;
-        gap: 12px;
-        margin-bottom: 16px;
-      }
-      .capture-tab {
-        padding: 6px 16px;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        background: var(--surface);
-        cursor: pointer;
-        font-size: 13px;
-        transition: all 0.2s;
-      }
-      .capture-tab.active {
-        background: var(--accent);
-        color: white;
-        border-color: var(--accent);
-      }
-      .capture-input-group {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .capture-title {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid var(--border);
-        border-radius: 4px;
-        background: var(--surface);
-        font-family: inherit;
-        font-size: 14px;
-      }
-      .capture-content {
-        width: 100%;
-        height: 100px;
-        padding: 12px;
-        border: 1px solid var(--border);
-        border-radius: 4px;
-        background: var(--surface);
-        font-family: inherit;
-        font-size: 14px;
-        resize: vertical;
-      }
-      .capture-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 12px;
-      }
-      .capture-btn {
-        background: var(--accent);
-        color: white;
-        border: none;
-        padding: 8px 24px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: opacity 0.2s;
-      }
-      .capture-btn:hover {
-        opacity: 0.9;
-      }
-      .capture-status {
-        font-size: 13px;
-        font-weight: 600;
-      }
-
-      .muted {
-        color: var(--text-dim);
-      }
-      .foot {
-        margin-top: 18px;
-        color: var(--text-dim);
-        font-size: 13px;
-      }
-
-      @media (max-width: 900px) {
-        header,
-        .grid,
-        .timeline {
-          grid-template-columns: 1fr;
-        }
-        .span-4,
-        .span-5,
-        .span-7,
-        .span-8,
-        .span-12 {
-          grid-column: span 1;
-        }
-        .scorecard {
-          grid-template-columns: 1fr;
-        }
-        .shell {
-          width: min(100vw - 24px, 1180px);
-          padding-top: 18px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main class="shell">
-      <header>
-        <section class="hero">
-          <div>
-            <div class="eyebrow">CSP-Brain Change Dashboard · 2026-05-02</div>
-            <h1>오늘 무엇이 바뀌었나</h1>
-            <p class="summary">
-              오늘의 핵심 변화는 CSP-Brain에 “무엇이 어떻게 바뀌는지 보이게 하는
-              운영층”이 새로 생겼다는 점이다. 저장소는 더 많은 지식을 담는
-              방향이 아니라, 변화의 의미를 매일 읽을 수 있는 방향으로
-              조정되었다. `_ops/change-log.md`가 새로 생겼다. 앞으로 의미 있는
-              변경은 단순 파일 목록이 아니라 “무엇이 바뀌었나 / 왜 중요한가 /
-              영향 범위 / 다음 확인” 네 질문으로 기록된다. 이는 Git이 보여주는
-              파일 변화와 사용자가 알고 싶은 의미
-            </p>
-          </div>
-          <div>
-            <span class="badge">확인 필요 · 작업트리 항목 357건</span>
-          </div>
-        </section>
-
-        <aside class="scorecard card">
-          <div class="metric"><span>Wiki</span><strong>27</strong></div>
-          <div class="metric"><span>Projects</span><strong>57</strong></div>
-          <div class="metric"><span>Outputs</span><strong>5</strong></div>
-          <div class="metric"><span>Inbox</span><strong>5</strong></div>
-        </aside>
-      </header>
-
-      <section class="card" style="padding: 20px; margin-bottom: 24px">
-        <h2 style="font-size: 16px; margin-bottom: 12px">
-          Knowledge Graph (Wiki Connectivity)
-        </h2>
-        <div id="knowledge-graph"></div>
-      </section>
-
-      <section class="capture-panel">
-        <div class="capture-header">
-          <h2 style="margin: 0">Quick Capture</h2>
-          <span id="cap-location" class="muted" style="font-size: 12px"
-            >Saved to <code>inbox/notes/</code></span
-          >
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">CSP-Brain Change Dashboard · 2026-05-04</div>
+          <h1>오늘 무엇이 바뀌었나</h1>
+          <p class="summary">오늘의 핵심 변화는 CSP-Brain에 “무엇이 어떻게 바뀌는지 보이게 하는 운영층”이 새로 생겼다는 점이다. 저장소는 더 많은 지식을 담는 방향이 아니라, 변화의 의미를 매일 읽을 수 있는 방향으로 조정되었다. `_ops/change-log.md`가 새로 생겼다. 앞으로 의미 있는 변경은 단순 파일 목록이 아니라 “무엇이 바뀌었나 / 왜 중요한가 / 영향 범위 / 다음 확인” 네 질문으로 기록된다. 이는 Git이 보여주는 파일 변화와 사용자가 알고 싶은 의미 </p>
         </div>
-        <div class="capture-tabs">
-          <div
-            id="tab-note"
-            class="capture-tab active"
-            onclick="setCaptureMode('note')"
-          >
-            📝 Note
-          </div>
-          <div
-            id="tab-short"
-            class="capture-tab"
-            onclick="setCaptureMode('short')"
-          >
-            ⚡ Short Memo
-          </div>
-        </div>
-        <div class="capture-input-group">
-          <input
-            type="text"
-            id="cap-title"
-            class="capture-title"
-            placeholder="메모 제목 (선택사항)"
-          />
-          <textarea
-            id="cap-content"
-            class="capture-content"
-            placeholder="무슨 생각을 하고 계신가요? 내용을 입력하세요."
-          ></textarea>
-        </div>
-        <div class="capture-footer">
-          <select
-            id="cap-category"
-            style="
-              padding: 6px;
-              border-radius: 4px;
-              border: 1px solid var(--border);
-              background: var(--surface);
-            "
-          >
-            <option value="thought">💭 생각</option>
-            <option value="clip">📎 클리핑</option>
-            <option value="note">📝 메모</option>
-            <option value="idea">💡 아이디어</option>
-          </select>
-          <div>
-            <span id="cap-status" class="capture-status"></span>
-            <button onclick="captureNote()" class="capture-btn">
-              저장하기
-            </button>
-          </div>
-        </div>
-
-        <div
-          style="
-            margin-top: 24px;
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-          "
-        >
-          <h3 style="margin-top: 0; font-size: 14px; color: var(--accent)">
-            최근 단상 (Short Memos)
-          </h3>
-          <div
-            style="
-              display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-              gap: 12px;
-              max-height: 400px;
-              overflow-y: auto;
-              padding-top: 10px;
-            "
-          >
-            <div
-              class="mini"
-              style="display: block; font-size: 13px; margin-bottom: 6px"
-            >
-              동물농장 차차
-            </div>
-            <div
-              class="mini"
-              style="display: block; font-size: 13px; margin-bottom: 6px"
-            >
-              이것은 주간 파일에 누적되는 Short Memo 테스트입니다.
-            </div>
-          </div>
+        <div>
+          <span class="badge">확인 필요 · 작업트리 항목 5건</span>
         </div>
       </section>
 
-      <section class="grid">
-        <article class="card span-7">
-          <h2>주의할 변화</h2>
-          <h3>수정됨</h3>
-          <ul>
-            <li>
-              <code>M .claude/rules/csp-brain.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=.claude/rules/csp-brain.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-            <li><code>M .obsidian/plugins/calendar/main.js</code></li>
-            <li><code>M .obsidian/plugins/dataview/main.js</code></li>
-            <li><code>M .obsidian/plugins/dataview/styles.css</code></li>
-            <li><code>M .obsidian/plugins/obsidian-git/main.js</code></li>
-            <li><code>M .obsidian/plugins/obsidian-git/manifest.json</code></li>
-            <li><code>M .obsidian/plugins/obsidian-git/styles.css</code></li>
-            <li><code>M .obsidian/plugins/obsidian-kanban/main.js</code></li>
-          </ul>
-          <h3 style="margin-top: 18px">미추적</h3>
-          <ul>
-            <li><code>?? dev/</code></li>
-            <li>
-              <code>?? inbox/notes/2026-05-02-Test-Capture.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=inbox/notes/2026-05-02-Test-Capture.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-            <li>
-              <code>?? inbox/notes/2026-05-02-메모-인터페이스.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=inbox/notes/2026-05-02-메모-인터페이스.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-            <li><code>?? inbox/short_memo/</code></li>
-            <li>
-              <code>?? outputs/briefs/2026-04-30-dream-cycle.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=outputs/briefs/2026-04-30-dream-cycle.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-            <li><code>?? scripts/capture_server.py</code></li>
-          </ul>
+      <aside class="scorecard card">
+        <div class="metric"><span>Wiki</span><strong>27</strong></div>
+        <div class="metric"><span>Projects</span><strong>57</strong></div>
+        <div class="metric"><span>Outputs</span><strong>5</strong></div>
+        <div class="metric"><span>Inbox</span><strong>5</strong></div>
+      </aside>
+    </header>
+
+    <section class="card" style="padding: 20px; margin-bottom: 24px;">
+      <h2 style="font-size: 16px; margin-bottom: 12px;">Knowledge Graph (Wiki Connectivity)</h2>
+      <div id="knowledge-graph"></div>
+    </section>
+
+    <section class="capture-panel">
+      <div class="capture-header">
+        <h2 style="margin:0;">Quick Capture</h2>
+        <span id="cap-location" class="muted" style="font-size:12px;">Saved to <code>inbox/notes/</code></span>
+      </div>
+      <div class="capture-tabs">
+        <div id="tab-note" class="capture-tab active" onclick="setCaptureMode('note')">📝 Note</div>
+        <div id="tab-short" class="capture-tab" onclick="setCaptureMode('short')">⚡ Short Memo</div>
+      </div>
+      <div class="capture-input-group">
+        <input type="text" id="cap-title" class="capture-title" placeholder="메모 제목 (선택사항)">
+        <textarea id="cap-content" class="capture-content" placeholder="무슨 생각을 하고 계신가요? 내용을 입력하세요."></textarea>
+      </div>
+      <div class="capture-footer">
+        <select id="cap-category" style="padding:6px; border-radius:4px; border:1px solid var(--border); background:var(--surface);">
+          <option value="thought">💭 생각</option>
+          <option value="clip">📎 클리핑</option>
+          <option value="note">📝 메모</option>
+          <option value="idea">💡 아이디어</option>
+        </select>
+        <div>
+          <span id="cap-status" class="capture-status"></span>
+          <button onclick="captureNote()" class="capture-btn">저장하기</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; border-top: 1px solid var(--border); padding-top: 20px;">
+        <h3 style="margin-top:0; font-size:14px; color:var(--accent);">최근 단상 (Short Memos)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; max-height: 400px; overflow-y: auto; padding-top: 10px;">
+          <div class='mini' style='display:block; font-size:13px; margin-bottom:6px;'>오늘을 현명하게 잘보내는 방법</div>
+<div class='mini' style='display:block; font-size:13px; margin-bottom:6px;'>동물농장 차차</div>
+<div class='mini' style='display:block; font-size:13px; margin-bottom:6px;'>이것은 주간 파일에 누적되는 Short Memo 테스트입니다.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card span-7">
+        <h2>주의할 변화</h2>
+        <h3>수정됨</h3>
+        <ul><li><code>M .obsidian/plugins/obsidian-git/obsidian_askpass.sh</code></li>
+<li><code>M inbox/short_memo/2026-W18-short_memo.md</code> <a href='obsidian://open?vault=@26&file=inbox/short_memo/2026-W18-short_memo.md' class='direct-link'>↗</a></li>
+<li><code>M outputs/briefs/change-dashboard.html</code></li></ul>
+        <h3 style="margin-top:18px;">미추적</h3>
+        <ul><li><code>?? dev/</code></li>
+<li><code>?? sync/</code></li></ul>
+      </article>
+
+      <article class="card span-5">
+        <h2>운영 로그 건강도</h2>
+        <div class='mini ok'><span>_ops/change-log.md</span><strong>기록 있음</strong></div>
+<div class='mini ok'><span>_ops/ingest-log.md</span><strong>기록 있음</strong></div>
+<div class='mini ok'><span>_ops/lint-log.md</span><strong>기록 있음</strong></div>
+<div class='mini warn'><span>_ops/question-log.md</span><strong>비어 있음</strong></div>
+<div class='mini ok'><span>_ops/bridge-log.md</span><strong>기록 있음</strong></div>
+
+        <div class="bridge-box">
+          <strong>Notion Bridge: 2026-04-30 Dream Cycle</strong><br>
+          상태: 실행 보류<br>
+          <small>현재 세션의 Dream Cycle은 로컬 변경 가시성 정리와 digest/dashboard 재생성에 집중했다. Notion Bridge 대상과 동기화 범위가 명시되지 않아 외부 동...</small>
+        </div>
+      </article>
+
+      <article class="card span-12" style="background: rgba(31, 95, 111, 0.05);">
+        <h2>External Signals & Pulse</h2>
+        <div class="timeline" style="grid-template-columns: repeat(4, 1fr);">
+          <p class='muted'>수집된 외부 신호 없음</p>
+        </div>
+      </article>
+
+      <article class="card span-5">
+        <h2>주간 변경 영역</h2>
+        
+        <div class="bar-row">
+          <span>concepts</span>
+          <div class="bar"><i style="width:51%"></i></div>
+          <strong>235</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>projects</span>
+          <div class="bar"><i style="width:14%"></i></div>
+          <strong>64</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>raw</span>
+          <div class="bar"><i style="width:10%"></i></div>
+          <strong>46</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>.obsidian</span>
+          <div class="bar"><i style="width:7%"></i></div>
+          <strong>34</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>wiki</span>
+          <div class="bar"><i style="width:7%"></i></div>
+          <strong>34</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>scripts</span>
+          <div class="bar"><i style="width:4%"></i></div>
+          <strong>19</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>people</span>
+          <div class="bar"><i style="width:3%"></i></div>
+          <strong>16</strong>
+        </div>
+        
+
+        <div class="bar-row">
+          <span>root</span>
+          <div class="bar"><i style="width:3%"></i></div>
+          <strong>12</strong>
+        </div>
+        
+      </article>
+
+      <article class="card span-7">
+        <h2>최근 수정된 핵심 문서</h2>
+        <ul class="latest"><li><span>_ops</span><code>_ops/change-log.md</code> <a href='obsidian://open?vault=@26&file=_ops/change-log.md' class='direct-link'>↗</a></li>
+<li><span>wiki</span><code>wiki/tools/obsidian.md</code> <a href='obsidian://open?vault=@26&file=wiki/tools/obsidian.md' class='direct-link'>↗</a></li>
+<li><span>projects</span><code>projects/pulse-check/README.md</code> <a href='obsidian://open?vault=@26&file=projects/pulse-check/README.md' class='direct-link'>↗</a></li>
+<li><span>outputs</span><code>outputs/weekly/2026-W18.md</code> <a href='obsidian://open?vault=@26&file=outputs/weekly/2026-W18.md' class='direct-link'>↗</a></li>
+<li><span>weekly</span><code>weekly/PRI HR실 주간업무 보고 양식.xlsx.md</code> <a href='obsidian://open?vault=@26&file=weekly/PRI HR실 주간업무 보고 양식.xlsx.md' class='direct-link'>↗</a></li>
+<li><span>templates</span><code>templates/weekly-digest.md</code> <a href='obsidian://open?vault=@26&file=templates/weekly-digest.md' class='direct-link'>↗</a></li>
+<li><span>scripts</span><code>scripts/README.md</code> <a href='obsidian://open?vault=@26&file=scripts/README.md' class='direct-link'>↗</a></li></ul>
+      </article>
+
+      <article class="card span-12">
+        <h2>Change Log 최근 항목</h2>
+        <div class="timeline">
+        <article class="timeline-item">
+          <h3>Dream Cycle 실행</h3>
+          <p>무엇이 바뀌었나: 현재까지의 Dream Cycle을 실행해 inbox, lint, weekly digest, change dashboard, bridge 보류 상태를 점검하고 기록했다. 왜 중요한가: 변경 가시성 체계가 실제 운영 루틴으로 작동하는지 첫 통합 점검을 수행했다. 영향 범위: `_ops/ingest-log.md`, `_ops/lint-log.md`, `_ops/bridge-log</p>
         </article>
+        
 
-        <article class="card span-5">
-          <h2>운영 로그 건강도</h2>
-          <div class="mini ok">
-            <span>_ops/change-log.md</span><strong>기록 있음</strong>
-          </div>
-          <div class="mini ok">
-            <span>_ops/ingest-log.md</span><strong>기록 있음</strong>
-          </div>
-          <div class="mini ok">
-            <span>_ops/lint-log.md</span><strong>기록 있음</strong>
-          </div>
-          <div class="mini warn">
-            <span>_ops/question-log.md</span><strong>비어 있음</strong>
-          </div>
-          <div class="mini ok">
-            <span>_ops/bridge-log.md</span><strong>기록 있음</strong>
-          </div>
-
-          <div class="bridge-box">
-            <strong>Notion Bridge: 2026-04-30 Dream Cycle</strong><br />
-            상태: 실행 보류<br />
-            <small
-              >현재 세션의 Dream Cycle은 로컬 변경 가시성 정리와
-              digest/dashboard 재생성에 집중했다. Notion Bridge 대상과 동기화
-              범위가 명시되지 않아 외부 동...</small
-            >
-          </div>
+        <article class="timeline-item">
+          <h3>Change Dashboard 생성기 추가</h3>
+          <p>무엇이 바뀌었나: `scripts/generate_change_dashboard.py`를 추가해 change-log, status 정보, weekly digest, daily briefing을 `outputs/briefs/change-dashboard.html` 한 화면으로 모으게 했다. 왜 중요한가: 사용자가 여러 Markdown과 Git 출력을 오가지 않고 오늘 봐야 할 변화만 한눈에 확</p>
         </article>
+        
 
-        <article
-          class="card span-12"
-          style="background: rgba(31, 95, 111, 0.05)"
-        >
-          <h2>External Signals & Pulse</h2>
-          <div class="timeline" style="grid-template-columns: repeat(4, 1fr)">
-            <p class="muted">수집된 외부 신호 없음</p>
-          </div>
+        <article class="timeline-item">
+          <h3>오늘의 변화 브리핑 작성</h3>
+          <p>무엇이 바뀌었나: `outputs/briefs/2026-04-30-change-briefing.md`에 오늘의 변경 흐름과 주의 항목을 정리했다. 왜 중요한가: status 출력과 weekly digest를 사용자가 바로 읽을 수 있는 일일 해석 문서로 압축했다. 영향 범위: `outputs/briefs/2026-04-30-change-briefing.md`, `_ops/change-log.</p>
         </article>
+        
 
-        <article class="card span-5">
-          <h2>주간 변경 영역</h2>
-
-          <div class="bar-row">
-            <span>concepts</span>
-            <div class="bar"><i style="width: 51%"></i></div>
-            <strong>235</strong>
-          </div>
-
-          <div class="bar-row">
-            <span>projects</span>
-            <div class="bar"><i style="width: 14%"></i></div>
-            <strong>64</strong>
-          </div>
-
-          <div class="bar-row">
-            <span>raw</span>
-            <div class="bar"><i style="width: 10%"></i></div>
-            <strong>46</strong>
-          </div>
-
-          <div class="bar-row">
-            <span>.obsidian</span>
-            <div class="bar"><i style="width: 7%"></i></div>
-            <strong>34</strong>
-          </div>
-
-          <div class="bar-row">
-            <span>wiki</span>
-            <div class="bar"><i style="width: 7%"></i></div>
-            <strong>34</strong>
-          </div>
-
-          <div class="bar-row">
-            <span>scripts</span>
-            <div class="bar"><i style="width: 4%"></i></div>
-            <strong>19</strong>
-          </div>
-
-          <div class="bar-row">
-            <span>people</span>
-            <div class="bar"><i style="width: 3%"></i></div>
-            <strong>16</strong>
-          </div>
-
-          <div class="bar-row">
-            <span>root</span>
-            <div class="bar"><i style="width: 3%"></i></div>
-            <strong>12</strong>
-          </div>
+        <article class="timeline-item">
+          <h3>2026-W18 주간 변화 다이제스트 생성</h3>
+          <p>무엇이 바뀌었나: `scripts/generate_weekly.py --date 2026-04-30` 기준으로 `outputs/weekly/2026-W18.md`를 생성하고 weekly index에 등록했다. 왜 중요한가: 사용자가 이번 주 변경 흐름을 파일 목록이 아니라 해석된 브리핑으로 확인할 수 있게 되었다. 영향 범위: `outputs/weekly/2026-W18.md`, `outpu</p>
         </article>
+        </div>
+      </article>
 
-        <article class="card span-7">
-          <h2>최근 수정된 핵심 문서</h2>
-          <ul class="latest">
-            <li>
-              <span>_ops</span><code>_ops/onboarding.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=_ops/onboarding.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-            <li>
-              <span>wiki</span><code>wiki/tools/obsidian.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=wiki/tools/obsidian.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-            <li>
-              <span>projects</span><code>projects/pulse-check/README.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=projects/pulse-check/README.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-            <li>
-              <span>outputs</span><code>outputs/weekly/2026-W18.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=outputs/weekly/2026-W18.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-            <li>
-              <span>weekly</span
-              ><code>weekly/PRI HR실 주간업무 보고 양식.xlsx.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=weekly/PRI HR실 주간업무 보고 양식.xlsx.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-            <li>
-              <span>templates</span><code>templates/weekly-digest.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=templates/weekly-digest.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-            <li>
-              <span>scripts</span><code>scripts/README.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=scripts/README.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-          </ul>
-        </article>
+      <article class="card span-4">
+        <h2>최근 커밋</h2>
+        <ul><li><code>acf3f37 knowledge: bulk update and content extraction</code></li>
+<li><code>f8230d7 ops: Intelligence Center 및 Quick Capture 시스템 도입</code></li>
+<li><code>a476b85 ops: add change visibility dashboard</code></li>
+<li><code>1938b85 Add EX Intelligence concepts and complete LDS 360 documentation</code></li>
+<li><code>e567dac Import Zavis_Brain HR knowledge assets</code></li></ul>
+      </article>
 
-        <article class="card span-12">
-          <h2>Change Log 최근 항목</h2>
-          <div class="timeline">
-            <article class="timeline-item">
-              <h3>Dream Cycle 실행</h3>
-              <p>
-                무엇이 바뀌었나: 현재까지의 Dream Cycle을 실행해 inbox, lint,
-                weekly digest, change dashboard, bridge 보류 상태를 점검하고
-                기록했다. 왜 중요한가: 변경 가시성 체계가 실제 운영 루틴으로
-                작동하는지 첫 통합 점검을 수행했다. 영향 범위:
-                `_ops/ingest-log.md`, `_ops/lint-log.md`, `_ops/bridge-log
-              </p>
-            </article>
+      <article class="card span-4">
+        <h2>고립 문서 후보</h2>
+        <ul><li><code>wiki/frameworks/compiled-truth-timeline.md</code> <a href='obsidian://open?vault=@26&file=wiki/frameworks/compiled-truth-timeline.md' class='direct-link'>↗</a></li></ul>
+      </article>
 
-            <article class="timeline-item">
-              <h3>Change Dashboard 생성기 추가</h3>
-              <p>
-                무엇이 바뀌었나: `scripts/generate_change_dashboard.py`를 추가해
-                change-log, status 정보, weekly digest, daily briefing을
-                `outputs/briefs/change-dashboard.html` 한 화면으로 모으게 했다.
-                왜 중요한가: 사용자가 여러 Markdown과 Git 출력을 오가지 않고
-                오늘 봐야 할 변화만 한눈에 확
-              </p>
-            </article>
+      <article class="card span-4">
+        <h2>다음 확인</h2>
+        <ul>
+          <li><code>dev/</code> 미추적 폴더 정책 결정</li>
+          <li>대량 archive 변경과 의미 변경 분리</li>
+          <li>비어 있는 운영 로그가 실제 프로토콜 실행 때 채워지는지 확인</li>
+        </ul>
+      </article>
+    </section>
 
-            <article class="timeline-item">
-              <h3>오늘의 변화 브리핑 작성</h3>
-              <p>
-                무엇이 바뀌었나:
-                `outputs/briefs/2026-04-30-change-briefing.md`에 오늘의 변경
-                흐름과 주의 항목을 정리했다. 왜 중요한가: status 출력과 weekly
-                digest를 사용자가 바로 읽을 수 있는 일일 해석 문서로 압축했다.
-                영향 범위: `outputs/briefs/2026-04-30-change-briefing.md`,
-                `_ops/change-log.
-              </p>
-            </article>
+    <p class="foot">
+      Source: outputs/briefs/2026-04-30-change-briefing.md
+      · Generated by <code>scripts/generate_change_dashboard.py</code>
+    </p>
+  </main>
 
-            <article class="timeline-item">
-              <h3>2026-W18 주간 변화 다이제스트 생성</h3>
-              <p>
-                무엇이 바뀌었나: `scripts/generate_weekly.py --date 2026-04-30`
-                기준으로 `outputs/weekly/2026-W18.md`를 생성하고 weekly index에
-                등록했다. 왜 중요한가: 사용자가 이번 주 변경 흐름을 파일 목록이
-                아니라 해석된 브리핑으로 확인할 수 있게 되었다. 영향 범위:
-                `outputs/weekly/2026-W18.md`, `outpu
-              </p>
-            </article>
-          </div>
-        </article>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    // Knowledge Graph Data
+    const graphData = {"nodes": [{"id": 0, "name": "_index", "path": "wiki/concepts/_index.md"}, {"id": 1, "name": "ax-internalization", "path": "wiki/concepts/ax-internalization.md"}, {"id": 2, "name": "csp-brain-system", "path": "wiki/concepts/csp-brain-system.md"}, {"id": 3, "name": "data-sensing", "path": "wiki/concepts/data-sensing.md"}, {"id": 4, "name": "ex-intelligence", "path": "wiki/concepts/ex-intelligence.md"}, {"id": 5, "name": "knowledge-capitalization", "path": "wiki/concepts/knowledge-capitalization.md"}, {"id": 6, "name": "leader-member-exchange", "path": "wiki/concepts/leader-member-exchange.md"}, {"id": 7, "name": "pulse-check", "path": "wiki/concepts/pulse-check.md"}, {"id": 8, "name": "self-determination-theory", "path": "wiki/concepts/self-determination-theory.md"}, {"id": 9, "name": "vibe-coding", "path": "wiki/concepts/vibe-coding.md"}, {"id": 10, "name": "weak-signal-theory", "path": "wiki/concepts/weak-signal-theory.md"}, {"id": 11, "name": "_index", "path": "wiki/decisions/_index.md"}, {"id": 12, "name": "_index", "path": "wiki/frameworks/_index.md"}, {"id": 13, "name": "compiled-truth-timeline", "path": "wiki/frameworks/compiled-truth-timeline.md"}, {"id": 14, "name": "protocols", "path": "wiki/frameworks/protocols.md"}, {"id": 15, "name": "_index", "path": "wiki/people/_index.md"}, {"id": 16, "name": "csp", "path": "wiki/people/csp.md"}, {"id": 17, "name": "_index", "path": "wiki/projects/_index.md"}, {"id": 18, "name": "_index", "path": "wiki/signals/_index.md"}, {"id": 19, "name": "_index", "path": "wiki/skills/_index.md"}, {"id": 20, "name": "context-restore", "path": "wiki/skills/context-restore.md"}, {"id": 21, "name": "dream-cycle", "path": "wiki/skills/dream-cycle.md"}, {"id": 22, "name": "memory-save", "path": "wiki/skills/memory-save.md"}, {"id": 23, "name": "_index", "path": "wiki/tools/_index.md"}, {"id": 24, "name": "claude-code", "path": "wiki/tools/claude-code.md"}, {"id": 25, "name": "notion", "path": "wiki/tools/notion.md"}, {"id": 26, "name": "obsidian", "path": "wiki/tools/obsidian.md"}], "links": []};
 
-        <article class="card span-4">
-          <h2>최근 커밋</h2>
-          <ul>
-            <li><code>a476b85 ops: add change visibility dashboard</code></li>
-            <li>
-              <code
-                >1938b85 Add EX Intelligence concepts and complete LDS 360
-                documentation</code
-              >
-            </li>
-            <li><code>e567dac Import Zavis_Brain HR knowledge assets</code></li>
-            <li>
-              <code
-                >44f8bb9 Add Harness Engineering insights and audit skill</code
-              >
-            </li>
-            <li>
-              <code>64c46be Add LinkedIn post: Obsidian Graph RAG insight</code>
-            </li>
-          </ul>
-        </article>
+    function initGraph() {
+      const width = document.getElementById('knowledge-graph').clientWidth;
+      const height = 300;
 
-        <article class="card span-4">
-          <h2>고립 문서 후보</h2>
-          <ul>
-            <li>
-              <code>wiki/frameworks/compiled-truth-timeline.md</code>
-              <a
-                href="obsidian://open?vault=@26&file=wiki/frameworks/compiled-truth-timeline.md"
-                class="direct-link"
-                >↗</a
-              >
-            </li>
-          </ul>
-        </article>
+      const svg = d3.select("#knowledge-graph")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .call(d3.zoom().on("zoom", (event) => {
+          container.attr("transform", event.transform);
+        }));
 
-        <article class="card span-4">
-          <h2>다음 확인</h2>
-          <ul>
-            <li><code>dev/</code> 미추적 폴더 정책 결정</li>
-            <li>대량 archive 변경과 의미 변경 분리</li>
-            <li>비어 있는 운영 로그가 실제 프로토콜 실행 때 채워지는지 확인</li>
-          </ul>
-        </article>
-      </section>
+      const container = svg.append("g");
 
-      <p class="foot">
-        Source: outputs/briefs/2026-04-30-change-briefing.md · Generated by
-        <code>scripts/generate_change_dashboard.py</code>
-      </p>
-    </main>
+      const simulation = d3.forceSimulation(graphData.nodes)
+        .force("link", d3.forceLink(graphData.links).id(d => d.id).distance(50))
+        .force("charge", d3.forceManyBody().strength(-100))
+        .force("center", d3.forceCenter(width / 2, height / 2));
 
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script>
-      // Knowledge Graph Data
-      const graphData = {
-        nodes: [
-          { id: 0, name: "_index", path: "wiki/concepts/_index.md" },
-          {
-            id: 1,
-            name: "ax-internalization",
-            path: "wiki/concepts/ax-internalization.md",
-          },
-          {
-            id: 2,
-            name: "csp-brain-system",
-            path: "wiki/concepts/csp-brain-system.md",
-          },
-          {
-            id: 3,
-            name: "data-sensing",
-            path: "wiki/concepts/data-sensing.md",
-          },
-          {
-            id: 4,
-            name: "ex-intelligence",
-            path: "wiki/concepts/ex-intelligence.md",
-          },
-          {
-            id: 5,
-            name: "knowledge-capitalization",
-            path: "wiki/concepts/knowledge-capitalization.md",
-          },
-          {
-            id: 6,
-            name: "leader-member-exchange",
-            path: "wiki/concepts/leader-member-exchange.md",
-          },
-          { id: 7, name: "pulse-check", path: "wiki/concepts/pulse-check.md" },
-          {
-            id: 8,
-            name: "self-determination-theory",
-            path: "wiki/concepts/self-determination-theory.md",
-          },
-          { id: 9, name: "vibe-coding", path: "wiki/concepts/vibe-coding.md" },
-          {
-            id: 10,
-            name: "weak-signal-theory",
-            path: "wiki/concepts/weak-signal-theory.md",
-          },
-          { id: 11, name: "_index", path: "wiki/decisions/_index.md" },
-          { id: 12, name: "_index", path: "wiki/frameworks/_index.md" },
-          {
-            id: 13,
-            name: "compiled-truth-timeline",
-            path: "wiki/frameworks/compiled-truth-timeline.md",
-          },
-          { id: 14, name: "protocols", path: "wiki/frameworks/protocols.md" },
-          { id: 15, name: "_index", path: "wiki/people/_index.md" },
-          { id: 16, name: "csp", path: "wiki/people/csp.md" },
-          { id: 17, name: "_index", path: "wiki/projects/_index.md" },
-          { id: 18, name: "_index", path: "wiki/signals/_index.md" },
-          { id: 19, name: "_index", path: "wiki/skills/_index.md" },
-          {
-            id: 20,
-            name: "context-restore",
-            path: "wiki/skills/context-restore.md",
-          },
-          { id: 21, name: "dream-cycle", path: "wiki/skills/dream-cycle.md" },
-          { id: 22, name: "memory-save", path: "wiki/skills/memory-save.md" },
-          { id: 23, name: "_index", path: "wiki/tools/_index.md" },
-          { id: 24, name: "claude-code", path: "wiki/tools/claude-code.md" },
-          { id: 25, name: "notion", path: "wiki/tools/notion.md" },
-          { id: 26, name: "obsidian", path: "wiki/tools/obsidian.md" },
-        ],
-        links: [],
-      };
+      const link = container.append("g")
+        .attr("class", "links")
+        .selectAll("line")
+        .data(graphData.links)
+        .enter().append("line")
+        .attr("class", "link");
 
-      function initGraph() {
-        const width = document.getElementById("knowledge-graph").clientWidth;
-        const height = 300;
+      const node = container.append("g")
+        .attr("class", "nodes")
+        .selectAll("circle")
+        .data(graphData.nodes)
+        .enter().append("circle")
+        .attr("class", "node")
+        .attr("r", 6)
+        .on("click", (event, d) => {
+          window.location.href = `obsidian://open?vault=@26&file=${encodeURIComponent(d.path)}`;
+        })
+        .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended));
 
-        const svg = d3
-          .select("#knowledge-graph")
-          .append("svg")
-          .attr("width", width)
-          .attr("height", height)
-          .call(
-            d3.zoom().on("zoom", (event) => {
-              container.attr("transform", event.transform);
-            }),
-          );
+      node.append("title").text(d => d.name);
 
-        const container = svg.append("g");
+      const labels = container.append("g")
+        .selectAll("text")
+        .data(graphData.nodes)
+        .enter().append("text")
+        .attr("class", "node-label")
+        .attr("dx", 8)
+        .attr("dy", ".35em")
+        .text(d => d.name);
 
-        const simulation = d3
-          .forceSimulation(graphData.nodes)
-          .force(
-            "link",
-            d3
-              .forceLink(graphData.links)
-              .id((d) => d.id)
-              .distance(50),
-          )
-          .force("charge", d3.forceManyBody().strength(-100))
-          .force("center", d3.forceCenter(width / 2, height / 2));
+      simulation.on("tick", () => {
+        link
+          .attr("x1", d => d.source.x)
+          .attr("y1", d => d.source.y)
+          .attr("x2", d => d.target.x)
+          .attr("y2", d => d.target.y);
 
-        const link = container
-          .append("g")
-          .attr("class", "links")
-          .selectAll("line")
-          .data(graphData.links)
-          .enter()
-          .append("line")
-          .attr("class", "link");
+        node
+          .attr("cx", d => d.x)
+          .attr("cy", d => d.y);
 
-        const node = container
-          .append("g")
-          .attr("class", "nodes")
-          .selectAll("circle")
-          .data(graphData.nodes)
-          .enter()
-          .append("circle")
-          .attr("class", "node")
-          .attr("r", 6)
-          .on("click", (event, d) => {
-            window.location.href = `obsidian://open?vault=@26&file=${encodeURIComponent(d.path)}`;
+        labels
+          .attr("x", d => d.x)
+          .attr("y", d => d.y);
+      });
+
+      function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      }
+
+      function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+      }
+
+      function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+      }
+    }
+
+    window.addEventListener('load', initGraph);
+
+    let captureMode = 'note';
+
+    function setCaptureMode(mode) {
+      captureMode = mode;
+      const tabNote = document.getElementById('tab-note');
+      const tabShort = document.getElementById('tab-short');
+      const titleInput = document.getElementById('cap-title');
+      const locationLabel = document.getElementById('cap-location');
+      const contentArea = document.getElementById('cap-content');
+
+      if (mode === 'note') {
+        tabNote.classList.add('active');
+        tabShort.classList.remove('active');
+        titleInput.style.display = 'block';
+        locationLabel.innerHTML = 'Saved to <code>inbox/notes/</code>';
+        contentArea.placeholder = '무슨 생각을 하고 계신가요? 내용을 입력하세요.';
+      } else {
+        tabNote.classList.remove('active');
+        tabShort.classList.add('active');
+        titleInput.style.display = 'none';
+        locationLabel.innerHTML = 'Appended to <code>inbox/short_memo/주간파일.md</code>';
+        contentArea.placeholder = '지금 이 순간의 단상을 가볍게 기록하세요...';
+      }
+    }
+
+    async function captureNote() {
+      const title = document.getElementById('cap-title').value;
+      const content = document.getElementById('cap-content').value;
+      const category = document.getElementById('cap-category').value;
+      const statusEl = document.getElementById('cap-status');
+      const isShort = (captureMode === 'short');
+
+      if (!content) {
+        statusEl.style.color = 'var(--accent)';
+        statusEl.innerText = '내용을 입력해주세요.';
+        return;
+      }
+
+      statusEl.style.color = 'var(--text)';
+      statusEl.innerText = '저장 중...';
+
+      try {
+        const response = await fetch('http://localhost:8080/capture', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title,
+            content,
+            category,
+            is_short: isShort
           })
-          .call(
-            d3
-              .drag()
-              .on("start", dragstarted)
-              .on("drag", dragged)
-              .on("end", dragended),
-          );
-
-        node.append("title").text((d) => d.name);
-
-        const labels = container
-          .append("g")
-          .selectAll("text")
-          .data(graphData.nodes)
-          .enter()
-          .append("text")
-          .attr("class", "node-label")
-          .attr("dx", 8)
-          .attr("dy", ".35em")
-          .text((d) => d.name);
-
-        simulation.on("tick", () => {
-          link
-            .attr("x1", (d) => d.source.x)
-            .attr("y1", (d) => d.source.y)
-            .attr("x2", (d) => d.target.x)
-            .attr("y2", (d) => d.target.y);
-
-          node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
-
-          labels.attr("x", (d) => d.x).attr("y", (d) => d.y);
         });
 
-        function dragstarted(event, d) {
-          if (!event.active) simulation.alphaTarget(0.3).restart();
-          d.fx = d.x;
-          d.fy = d.y;
-        }
-
-        function dragged(event, d) {
-          d.fx = event.x;
-          d.fy = event.y;
-        }
-
-        function dragended(event, d) {
-          if (!event.active) simulation.alphaTarget(0);
-          d.fx = null;
-          d.fy = null;
-        }
-      }
-
-      window.addEventListener("load", initGraph);
-
-      let captureMode = "note";
-
-      function setCaptureMode(mode) {
-        captureMode = mode;
-        const tabNote = document.getElementById("tab-note");
-        const tabShort = document.getElementById("tab-short");
-        const titleInput = document.getElementById("cap-title");
-        const locationLabel = document.getElementById("cap-location");
-        const contentArea = document.getElementById("cap-content");
-
-        if (mode === "note") {
-          tabNote.classList.add("active");
-          tabShort.classList.remove("active");
-          titleInput.style.display = "block";
-          locationLabel.innerHTML = "Saved to <code>inbox/notes/</code>";
-          contentArea.placeholder =
-            "무슨 생각을 하고 계신가요? 내용을 입력하세요.";
+        if (response.ok) {
+          const result = await response.json();
+          statusEl.style.color = 'var(--ok)';
+          const obsLink = `obsidian://open?vault=@26&file=${encodeURIComponent(result.file)}`;
+          statusEl.innerHTML = `저장 완료! <a href="${obsLink}" style="color:var(--accent-3); text-decoration:underline;">[Obsidian에서 열기]</a>`;
+          document.getElementById('cap-title').value = '';
+          document.getElementById('cap-content').value = '';
+          // 5초 후에 상태 메시지 숨기기 (링크 클릭 시간을 고려해 조금 늘림)
+          setTimeout(() => {
+            if (statusEl.innerHTML.includes('저장 완료')) statusEl.innerHTML = '';
+          }, 8000);
         } else {
-          tabNote.classList.remove("active");
-          tabShort.classList.add("active");
-          titleInput.style.display = "none";
-          locationLabel.innerHTML =
-            "Appended to <code>inbox/short_memo/주간파일.md</code>";
-          contentArea.placeholder =
-            "지금 이 순간의 단상을 가볍게 기록하세요...";
+          throw new Error('Server error');
         }
+      } catch (err) {
+        statusEl.style.color = 'var(--accent)';
+        statusEl.innerText = '서버 연결 실패 (capture_server.py 실행 확인)';
       }
-
-      async function captureNote() {
-        const title = document.getElementById("cap-title").value;
-        const content = document.getElementById("cap-content").value;
-        const category = document.getElementById("cap-category").value;
-        const statusEl = document.getElementById("cap-status");
-        const isShort = captureMode === "short";
-
-        if (!content) {
-          statusEl.style.color = "var(--accent)";
-          statusEl.innerText = "내용을 입력해주세요.";
-          return;
-        }
-
-        statusEl.style.color = "var(--text)";
-        statusEl.innerText = "저장 중...";
-
-        try {
-          const response = await fetch("http://localhost:8080/capture", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              title,
-              content,
-              category,
-              is_short: isShort,
-            }),
-          });
-
-          if (response.ok) {
-            const result = await response.json();
-            statusEl.style.color = "var(--ok)";
-            const obsLink = `obsidian://open?vault=@26&file=${encodeURIComponent(result.file)}`;
-            statusEl.innerHTML = `저장 완료! <a href="${obsLink}" style="color:var(--accent-3); text-decoration:underline;">[Obsidian에서 열기]</a>`;
-            document.getElementById("cap-title").value = "";
-            document.getElementById("cap-content").value = "";
-            // 5초 후에 상태 메시지 숨기기 (링크 클릭 시간을 고려해 조금 늘림)
-            setTimeout(() => {
-              if (statusEl.innerHTML.includes("저장 완료"))
-                statusEl.innerHTML = "";
-            }, 8000);
-          } else {
-            throw new Error("Server error");
-          }
-        } catch (err) {
-          statusEl.style.color = "var(--accent)";
-          statusEl.innerText = "서버 연결 실패 (capture_server.py 실행 확인)";
-        }
-      }
-    </script>
-  </body>
+    }
+  </script>
+</body>
 </html>
