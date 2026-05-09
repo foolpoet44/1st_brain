@@ -1,7 +1,7 @@
 ---
 title: Change Log
 created: 2026-04-30
-updated: 2026-05-02
+updated: 2026-05-09
 type: ops-log
 status: active
 tags: [ops, change-log, visibility]
@@ -21,6 +21,17 @@ tags: [ops, change-log, visibility]
 - 왜 중요한가
 - 어디에 영향이 있나
 - 다음에 무엇을 확인해야 하나
+
+---
+
+## 2026-05-09
+
+### World Monitor 글로벌 지능형 대시보드 도입
+
+- 무엇이 바뀌었나: 지정학적 신호와 글로벌 뉴스를 AI로 집계하는 실시간 대시보드인 `worldmonitor` 리포지토리를 `projects/worldmonitor/`에 설치했다.
+- 왜 중요한가: Ansoff의 '약한 신호(Weak Signal)' 이론을 실전 워크플로우에 적용하기 위한 핵심 데이터 파이프라인이자 시각화 도구를 확보했다. 이는 CSP-Brain의 외부 정보 수집(Capture) 능력을 비약적으로 향상시킨다.
+- 영향 범위: `projects/worldmonitor/`, `_ops/change-log.md`.
+- 다음 확인: `npm run dev`를 통한 로컬 실행 여부 확인 및 Ollama와의 연동을 통한 로컬 AI 요약 기능 테스트를 진행한다.
 
 ---
 

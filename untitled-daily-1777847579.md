@@ -1,0 +1,9 @@
+---
+type: daily
+---
+
+#
+
+untitle
+
+ok?
