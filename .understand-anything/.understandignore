@@ -1,0 +1,44 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# Syntax: same as .gitignore (globs, # comments, ! negation, trailing / for dirs)
+# Lines below are suggestions — uncomment to activate.
+# Use ! prefix to force-include something excluded by defaults.
+#
+# Built-in defaults (always excluded unless negated):
+#   node_modules/, .git/, dist/, build/, obj/, *.lock, *.min.js, etc.
+#
+# --- From .gitignore (uncomment to exclude) ---
+
+# .obsidian/workspace*
+# .obsidian/workspace-mobile*
+# .obsidian/active-plugins.json
+# .obsidian/core-plugins-migration.json
+# .obsidian/types.json
+# .DS_Store
+# Thumbs.db
+# *.swp
+# *.swo
+# raw/archive/conversations/
+# raw/archive/md/2024/
+# raw/archive/md/2025/
+# raw/archive/md/2026/01/
+# raw/archive/md/2026/02/
+# raw/archive/md/2026/03/
+# Desktop.ini
+# *.tmp
+# *.bak
+# scripts/venv/
+# scripts/__pycache__/
+# scripts/output/
+# *.pyc
+# *.json
+# !manifest.json
+
+# --- Detected directories (uncomment to exclude) ---
+
+# scripts/
+
+# --- Test file patterns (uncomment to exclude) ---
+
+# *.test.*
+# *.spec.*
+# *.snap

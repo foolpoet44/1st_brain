@@ -1,36 +1,22 @@
 
+## 2026-05-17
 
-## 2026-05-16
+### [OPS] KBO 경기 결과 조회 자동화 스킬(kbo-results) 도입
 
-### 멀티 에이전트 지식 공장(Knowledge Factory) 설계
-- 무엇이 바뀌었나: arXiv:2604.23090 논문 분석을 바탕으로 `outputs/briefs/MULTI_AGENT_ONTOLOGY_INGESTION.md` 기획안 수립 및 `wiki/concepts/competency-question.md` 정의.
-- 왜 중요한가: 단순 정보 추출에서 '검증 가능한 지식 구축'으로 자동화 단계를 격상함. 4역할(Expert, Manager, Coder, QA) 기반의 협업 모델을 통해 지식 밀도를 높임.
-- 어디에 영향이 있나: `_ops/scripts/` (향후), `wiki/concepts/`, `outputs/briefs/`.
-- 다음에 무엇을 확인해야 하나: 4단계 역할을 수행하는 Python 멀티 에이전트 프로토콜 실제 코딩.
-
----
-
-- 무엇이 바뀌었나: 안소프(Ansoff)의 위크 시그널 프레임워크(`wiki/frameworks/weak-signal-ansoff.md`) 신규 정의 및 글로벌 투자 전략 프로젝트(`projects/investment/README.md`) 개설.
-- 왜 중요한가: 단순한 뉴스 소비를 넘어, 정보를 '시그널'로 변환하여 의사결정 인프라로 구축함. 사용자님의 'Vibe Coding' 철학을 금융 도메인으로 확장.
-- 어디에 영향이 있나: `wiki/frameworks/`, `projects/investment/`.
-- 다음에 무엇을 확인해야 하나: 자동화 로직(Crawler, Scorer)의 실제 Python 스크립트 구현 작업 착수.
+- 무엇이 바뀌었나: 외부 커뮤니티 저장소(`NomaDamas/k-skill`)에서 `kbo-results` 스킬을 발굴하여 헤르메스 에이전트에 이식함. `kbo-game` npm 패키지를 활용한 실시간 스코어 및 경기 일정 조회 체계 구축.
+- 왜 중요한가: "Do it once, automate it forever" 원칙에 따라 사용자의 반복적인 야구 경기 정보 조회를 자동화함. 검색 에이전트의 기능을 '스포츠 도메인'으로 확장함.
+- 영향 범위: 헤르메스 에이전트 스킬셋, `_ops/` (향후 자동화 리포트 생성 시 활용).
+- 다음 확인: 주간 다이제스트(`Protocol 4: DIGEST`) 생성 시 해당 스킬을 활용한 스포츠 신호 탐지 자동화 가능성 검토.
 
 ---
-
-- 무엇이 바뀌었나: OPQ32 프레임워크를 `wiki/concepts/opq-framework.md`에 정의하고, `outputs/analyses/PSY_ASSESS_SUMMARY.md`를 통해 프로젝트 인사이트 리포트 생성.
-- 왜 중요한가: HR 자동화의 핵심인 '역량 데이터의 구조화'를 실현함. 단순 PDF 자료를 `csp-brain`의 7-Layer Architecture로 편입하여 검색 및 재사용이 가능한 형태로 전환.
-- 어디에 영향이 있나: `wiki/`, `outputs/`, OKA 프로젝트 타임라인.
-- 다음에 무엇을 확인해야 하나: 추출된 Atoms를 활용한 채용 자동화 인터뷰 가이드 생성 로직 검토.
-
----
-
-
-### 행동경제학 주요 논문 브리프 생성
-
-- 무엇이 바뀌었나: `outputs/briefs/behavioral-economics-papers-20260512.md` 신규 생성. 최근 2년간의 행동경제학 최신 연구 4건(강화학습, 부정 편향, LLM 페르소나 등) 요약 반영.
-- 왜 중요한가: HR 자동화 및 AI 에이전트 설계 시 '인간다운 의사결정' 모델을 이식하기 위한 이론적 토대를 확보함. 특히 '부정 편향' 연구는 사용자님의 Weak Signal 탐지 철학인 Ansoff 이론과 맞닿아 있음.
-- 어디에 영향이 있나: `outputs/briefs/`, `wiki/` (잠재적).
-- 다음에 무엇을 확인해야 하나: 선정된 논문 중 '강화학습-경제학 서베이' 논문의 상세 방법론을 `wiki/concepts`에 더 깊게 편입할지 결정함.
-
----
-
+     1|## 2026-05-17
+     2|
+     3|### [INGEST] OKA 프로젝트 심리 진단(Psy_assess) 분석 및 저장 완료
+     4|
+     5|- 무엇이 바뀌었나: `/Users/dkmac/Desktop/@26/hermes/` 경로에 `Psy_assess_summary.md` 산출물을 최종 생성하고, `csp-brain` Vault의 `outputs/analyses/` 및 `wiki/` 체계에 지식 원자(Atoms: Resilience, Engagement 등)를 통합함.
+     6|- 왜 중요한가: 파편화된 PDF 정보를 구조화된 지식 데이터로 전환하여 '자동 면접 질문 생성' 등 향후 자동화 업무의 추론 토대를 마련함.
+     7|- 영향 범위: `outputs/analyses/`, `wiki/concepts/`, `projects/oka/` (내부 데이터 정합성 강화).
+     8|- 다음 확인: 추출된 8-Cluster 모델을 기반으로 한 '맞춤형 채용 가이드' 생성 스크립트 설계.
+     9|
+    10|---
+    11|

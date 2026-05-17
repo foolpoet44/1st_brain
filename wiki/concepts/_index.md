@@ -1,44 +1,38 @@
----
-title: Concepts
-created: 2026-04-29
-updated: 2026-04-29
-type: project
-status: growing
-tags: [index, wiki]
----
+     1|---
+     2|title: Concepts Index
+     3|created: 2026-04-29
+     4|updated: 2026-05-17
+     5|type: project
+     6|status: mature
+     7|tags: [index, wiki, concepts]
+     8|---
+     9|
+    10|# Concepts — 개념 정의
+    11|
+    12|이 폴더는 HR, 조직심리학, AI, Vibe Coding 등 다양한 도메인의 **개념 정의**를 담습니다.
+    13|
+    14|## 링크 모음
+    15|
+    16|### 조직심리학
+    17|- [[self-determination-theory|Self-Determination Theory (자기결정이론)]]
+    18|- [[leader-member-exchange|Leader-Member Exchange (LMX)]]
+    19|
+    20|### AI & 워크플로우
+    21|- [[vibe-coding|Vibe Coding]] — AI와 함께하는 흐름 코딩
+    22|- [[ax-internalization|AX Internalization (AI Transformation)]]
+    23|- [[knowledge-capitalization|Knowledge Capitalization (지식의 자산화)]]
+    24|- [[ai-recruitment-behavioral-economics|AI Recruitment Solutions]]
+    25|
+    26|### 시스템 & 아키텍처
+    27|- [[csp-brain-system|CSP Brain System]] 
+    28|- [[data-sensing|Data Sensing (L1/L2/L3 Architecture)]]
+    29|- [[ex-intelligence|EX Intelligence]]
+    30|- [[pulse-check|Pulse Check]]
+    31|
+    32|### 전략
+    33|- [[weak-signal-theory|Weak Signal Theory (Ansoff)]]
+    34|- [[economic-freedom|Economic Freedom (경제적 자유)]]
+    35|
 
-# Concepts — 개념 정의
-
-이 폴더는 HR, 조직심리학, AI, Vibe Coding 등 다양한 도메인의 **개념 정의**를 담습니다.
-
-## 등록 기준
-
-- "XX 란 무엇인가"에 답하는 문서
-- 용어 사전 역할
-- 다른 문서들의 기초 구성 요소
-
-## 링크 모음
-
-### 조직심리학
-
-- [[Self-Determination Theory (자기결정이론)]] — 자율성, 유능감, 관계성
-- [[Leader-Member Exchange (LMX)]] — 리더 - 구성원 관계 이론
-
-### AI & 워크플로우
-### AI & 워크플로우
-- [[Vibe Coding]] — AI 와 함께하는 흐름 코딩
-- [[AX Internalization (AI Transformation)]] — AI 내재화 3 단계
-- [[Knowledge Capitalization (지식의 자산화)]] — 지식의 원자화와 자산화
-- [[AI Recruitment Solutions: Collaboration & Behavioral Economics]] — 행동경제학 기반 협업 역량 측정
-
-### 시스템 & 아키텍처
-
-- [[CSP Brain System]] — 공유 메모리 시스템
-- [[Data Sensing (L1/L2/L3 Architecture)]] — 3 단계 데이터 계층
-- [[EX Intelligence]] — 구성원 신호 → 조직 성과 전환 체계
-- [[Pulse Check]] — 월 1 회 상시 진단 설문
-
-### 전략
-### 전략
-- [[Weak Signal Theory (Ansoff)]] — 약한 신호 포착 프레임워크
-- [[Economic Freedom (경제적 자유)]] — 독립적 의사결정을 위한 인프라
+## Missing Links (LINT Fixed)
+- [[competency-question]]
