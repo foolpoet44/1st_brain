@@ -1,0 +1,28 @@
+---
+type: Project
+status: Active
+tags: [hr-tech, psy-assess, automation]
+related_to: "[[opq-framework]]"
+---
+
+# OKA Project
+
+## 1. 미션
+심리 진단 데이터를 구조화하고 이를 기반으로 HR 운영(채용, 배치, 육성)의 자동화 및 인텔리전스를 실현하는 "Vibe Coding" 프로젝트.
+
+## 2. 주요 아키텍처
+* **Data Sources**: OPQ32, 8-Cluster 심리 진단 결과.
+* **Knowledge Layer**: `csp-brain` 7-Layer Architecture 기반의 시맨틱 데이터 저장소.
+* **Automation**: 진단 결과 PDF의 자동 인제스천 및 인사이트 리포트 생성 스크립트.
+
+## 3. 타임라인
+### 2026-05-16
+* **심리 진단 모델 통합**: OPQ32 프레임워크를 지식 체계에 이식.
+* **분석 리포트 생성**: `Psy_assess-OPQ.pdf` 기반의 핵심 역량 클러스터 분석 완료.
+* **시스템 인제스천**: `wiki/concepts`와 `outputs/analyses`에 관련 지식 업데이트.
+
+## 4. 핵심 지표 (Atoms)
+* Resilience (회복탄력성)
+* Job Engagement (직무 몰입)
+* Stress Tolerance (스트레스 내성)
+* 8-Cluster Competency Model

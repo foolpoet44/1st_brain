@@ -18,3 +18,4 @@ tags: [index, wiki]
 - 나중에 "왜 그렇게 했나"를 알 수 있는 기록
 
 ## 링크 모음
+- [[2026-05-10 System Evolution: Transition to Coding Factory Control Tower]] — 코딩 공장 관제탑 전환 및 아키텍처 정립

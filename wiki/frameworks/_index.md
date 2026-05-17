@@ -18,3 +18,7 @@ tags: [index, wiki]
 - 사고의 틀을 제공하는 모델
 
 ## 링크 모음
+- [[7-Layer Knowledge Architecture (COMPASS~COMPOST)]] — 지식 구조 7 단계
+- [[Layer 1: COMPASS (방향)]] — 시스템 정체성과 원칙
+- [[Protocols]] — 6 개 운영 프로토콜
+- [[Compiled Truth + Timeline]] — 문서 작성 이중 구조

@@ -25,10 +25,11 @@ tags: [index, wiki]
 - [[Leader-Member Exchange (LMX)]] — 리더 - 구성원 관계 이론
 
 ### AI & 워크플로우
-
+### AI & 워크플로우
 - [[Vibe Coding]] — AI 와 함께하는 흐름 코딩
 - [[AX Internalization (AI Transformation)]] — AI 내재화 3 단계
 - [[Knowledge Capitalization (지식의 자산화)]] — 지식의 원자화와 자산화
+- [[AI Recruitment Solutions: Collaboration & Behavioral Economics]] — 행동경제학 기반 협업 역량 측정
 
 ### 시스템 & 아키텍처
 
@@ -38,5 +39,6 @@ tags: [index, wiki]
 - [[Pulse Check]] — 월 1 회 상시 진단 설문
 
 ### 전략
-
+### 전략
 - [[Weak Signal Theory (Ansoff)]] — 약한 신호 포착 프레임워크
+- [[Economic Freedom (경제적 자유)]] — 독립적 의사결정을 위한 인프라
