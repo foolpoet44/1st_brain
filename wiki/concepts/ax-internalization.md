@@ -37,6 +37,10 @@ aliases: [AI 내재화, AI Transformation]
 
 ## Timeline
 
+### 2026-05-18
+
+- [[AI Boom and Labor Distribution]] 관찰 추가. AI 내재화는 도구 교육이나 업무 자동화만이 아니라, AI가 만든 가치와 부담을 조직이 어떻게 배분하는가까지 포함하는 운영 설계 이슈로 확장됨.
+
 ### 2026-04-29
 
 - wiki 초기화와 함께 마이그레이션

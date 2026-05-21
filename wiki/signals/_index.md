@@ -18,3 +18,5 @@ tags: [index, wiki]
 - 약한 신호 (Weak Signal) 이론 기반 관찰
 
 ## 링크 모음
+
+- [[AI Boom and Labor Distribution]] — AI 반도체 호황이 성과배분, 핵심인재 보상, 공급망 리스크로 번지는 신호
