@@ -29,8 +29,6 @@ outputs/    → 분석·콘텐츠·다이제스트 산출물
 | 5   | BRIDGE   | `sync`     | Notion 양방향 연동  |
 | 6   | GENERATE | `generate` | 콘텐츠 자동 생성    |
 
-
-
 ## Library (Knowledge Index)
 
 - [[wiki/concepts/_index|개념 (Concepts)]] — HR, AI, 조직심리학 핵심 개념
@@ -38,7 +36,6 @@ outputs/    → 분석·콘텐츠·다이제스트 산출물
 - [[wiki/frameworks/_index|프레임워크 (Frameworks)]] — 운영 이론 및 모델
 - [[wiki/skills/_index|에이전트 기술 (Skills)]] — 시스템 운영 자동화 스킬
 - [[wiki/decisions/_index|의사결정 (Decisions)]] — 시스템 아키텍처 및 정책 변경 이력
-
 
 - [[Concepts|_index (개념 사전)]] — HR, AI, 조직심리학 핵심 개념
 - [[Tools|_index (도구 상자)]] — 활용 중인 기술 스택 및 플랫폼

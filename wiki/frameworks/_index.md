@@ -26,5 +26,6 @@
     26|
 
 ## Missing Links (LINT Fixed)
+
 - [[compiled-truth-timeline]]
 - [[protocols]]

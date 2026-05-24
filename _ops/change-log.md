@@ -1,3 +1,44 @@
+## 2026-05-24
+
+### [OPS] 지식 체계 전반의 인덱싱 최적화 및 안정화
+
+- 무엇이 바뀌었나: `wiki/concepts`, `wiki/people`, `wiki/tools`, `wiki/decisions` 등 4개 주요 카테고리의 인덱스 파일(`_index.md`)을 최신화하고, 최근 2주간 추가된 20여 개의 문서를 지식 그래프에 정식 편입함. 또한 `inbox/`의 백업 파일들을 정리하여 작업 환경을 정화함.
+- 왜 중요한가: 지식의 개별 문서들이 파편화되지 않고 상위 인덱스에서 발견될 수 있도록 '연결성'을 확보함. 특히 최근의 '3층 아키텍처'와 'Hermes Pi' 철학이 인덱스에 반영되어 시스템의 현재 상태를 한눈에 파악 가능해짐.
+- 영향 범위: `wiki/**/_index.md`, `inbox/`, `_ops/change-log.md`.
+- 다음 확인: `lint` 프로토콜 정기 실행 및 `projects/` 타임라인의 주간 요약(W21) 준비.
+
+---
+
+### [INGEST] 인박스 파편 메모의 지식 체계 및 프로젝트 타임라인 통합
+
+- 무엇이 바뀌었나: `inbox/`에 대기 중이던 5개의 메모를 분석하여, 실무 이슈는 `projects/ax-internalization` 타임라인에, 인터페이스 실험 데이터는 `wiki/concepts/execution-surface`에 각각 통합함.
+- 왜 중요한가: 단순 테스트나 파편화된 메모를 방치하지 않고, '실행 표면'이라는 상위 개념의 증거(Evidence)로 전환함으로써 지식의 휘발을 방지함.
+- 영향 범위: `projects/ax-internalization/README.md`, `wiki/concepts/execution-surface.md`, `_ops/ingest-log.md`.
+- 다음 확인: 수집 완료된 `inbox/` 파일들의 물리적 정리 및 `wiki/concepts/memo-architecture.md` 설계 검토.
+
+---
+
+## 2026-05-23
+
+### [REFLECT] 에이전틱 코딩 멘탈 모델 수립 및 조직 웰빙 기상도 파일럿
+
+- 무엇이 바뀌었나: 'Thin Harness, Fat Skills' 원칙을 바탕으로 HR 전문가의 판단력을 자산화(Skill Assetization)하고, 외부 환경 데이터(날씨, 공휴일)를 HR 지식 원자와 결합한 '조직 웰빙 기상도' 모델을 설계함.
+- 왜 중요한가: AI를 단순 도구가 아닌 '맥락 조력자(Contextual Champion)'로 진화시켜, HR의 역할을 '규정 관리'에서 '조직 분위기 설계(Vibe Coding)'로 확장함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-05-23.md`, `hr-automation/org-wellbeing-monitor/SKILL.md`.
+- 다음 확인: 거시 경제 지표(반도체 슈퍼사이클 등)를 웰빙 모델에 이식하여 조직 내 보상 및 성과 압박 시그널 탐지 체계 구축.
+
+---
+
+## 2026-05-22
+
+### [REFLECT] FDE(Forward Deployed Engineer) 개념 정립 및 심리적 거울 효과 분석
+
+- 무엇이 바뀌었나: jyoung105(Jeongmin Lee)의 인사이트를 바탕으로 FDE의 3대 워크플로우(Audit, Evals, Deployment)를 HR 도메인에 이식하고, AI 인터페이스가 심리적 안전감을 통해 데이터 정합성을 높이는 기제를 분석함.
+- 왜 중요한가: 기술적 구현력(FDE)과 인간적 신뢰(Psychological Safety)가 결합될 때 진정한 AX(AI Transformation)가 가능하다는 전략적 토대를 마련함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-05-22.md`, `_ops/change-log.md`.
+- 다음 확인: 8-Cluster 심리 지표의 온톨로지 매핑(AOG)을 통한 추론 엔진 설계 착수.
+
+---
 
 ## 2026-05-20
 
@@ -53,4 +94,7 @@
 - 다음 확인: 추출된 8-Cluster 모델을 기반으로 한 '맞춤형 채용 가이드' 생성 스크립트 설계.
 
 ---
+
 - [2026-05-21] Josh Kim의 링크드인 인사이트 분석 및 '데이터 브릿지' 전략 리포트 생성 완료 (/outputs/analyses/INSIGHT_2026-05-21_Data_Bridge_Strategy.md)
+- [2026-05-21] 헤르메스 마스터 플랜 수립: Josh Kim, 김재우, Blake Crosley의 인사이트를 통합한 3계층 아키텍처 및 자기 개선형 시스템 설계 (/outputs/analyses/MASTER_PLAN_2026-05-21_Hermes_CSP_Integration.md)
+- [2026-05-21] 'Context Corpus' 개념을 시스템 지식 계층(L0)으로 공식 편입하고 마스터 플랜 업데이트 완료

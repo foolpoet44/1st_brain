@@ -33,5 +33,6 @@ related_to: "[[opq-framework]]"
 - 8-Cluster Competency Model
 
 ### 관련 지식 연결 (Backlinks)
+
 - [[vibe-coding]]
 - [[7-layer-architecture]]

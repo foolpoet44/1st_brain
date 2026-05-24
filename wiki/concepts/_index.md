@@ -1,38 +1,53 @@
-     1|---
-     2|title: Concepts Index
-     3|created: 2026-04-29
-     4|updated: 2026-05-17
-     5|type: project
-     6|status: mature
-     7|tags: [index, wiki, concepts]
-     8|---
-     9|
-    10|# Concepts — 개념 정의
-    11|
-    12|이 폴더는 HR, 조직심리학, AI, Vibe Coding 등 다양한 도메인의 **개념 정의**를 담습니다.
-    13|
-    14|## 링크 모음
-    15|
-    16|### 조직심리학
-    17|- [[self-determination-theory|Self-Determination Theory (자기결정이론)]]
-    18|- [[leader-member-exchange|Leader-Member Exchange (LMX)]]
-    19|
-    20|### AI & 워크플로우
-    21|- [[vibe-coding|Vibe Coding]] — AI와 함께하는 흐름 코딩
-    22|- [[ax-internalization|AX Internalization (AI Transformation)]]
-    23|- [[knowledge-capitalization|Knowledge Capitalization (지식의 자산화)]]
-    24|- [[ai-recruitment-behavioral-economics|AI Recruitment Solutions]]
-    25|
-    26|### 시스템 & 아키텍처
-    27|- [[csp-brain-system|CSP Brain System]] 
-    28|- [[data-sensing|Data Sensing (L1/L2/L3 Architecture)]]
-    29|- [[ex-intelligence|EX Intelligence]]
-    30|- [[pulse-check|Pulse Check]]
-    31|
-    32|### 전략
-    33|- [[weak-signal-theory|Weak Signal Theory (Ansoff)]]
-    34|- [[economic-freedom|Economic Freedom (경제적 자유)]]
-    35|
+---
+title: Concepts Index
+created: 2026-04-29
+updated: 2026-05-24
+type: concept
+status: growing
+tags: [index, wiki, concepts]
+---
+
+# Concepts — 개념 정의
+
+이 폴더는 HR, 조직심리학, AI, Vibe Coding 등 다양한 도메인의 **개념 정의**를 담습니다.
+
+## 링크 모음
+
+### 조직심리학
+
+- [[self-determination-theory|Self-Determination Theory (자기결정이론)]]
+- [[leader-member-exchange|Leader-Member Exchange (LMX)]]
+
+### AI & 워크플로우
+
+- [[vibe-coding|Vibe Coding]] — AI와 함께하는 흐름 코딩
+- [[ax-internalization|AX Internalization (AI Transformation)]]
+- [[knowledge-capitalization|Knowledge Capitalization (지식의 자산화)]]
+- [[ai-recruitment-behavioral-economics|AI Recruitment Solutions]]
+- [[antigravity-2-0|Antigravity 2.0]] — 에이전트 관제 허브
+- [[claude-code-workflow|Claude Code Workflow]] — 에이전트 협업 흐름
+- [[hermes-pi-philosophy|Hermes Pi Philosophy]] — 인지부하 감소 철학
+- [[gemini-spark|Gemini Spark]] — 직관적 도약의 순간
+
+### 시스템 & 아키텍처
+
+- [[csp-brain-system|CSP Brain System]]
+- [[data-sensing|Data Sensing (L1/L2/L3 Architecture)]]
+- [[ex-intelligence|EX Intelligence]]
+- [[pulse-check|Pulse Check]]
+- [[context-corpus|Context Corpus]] — 지식의 맥락 뭉치
+- [[execution-surface|Execution Surface]] — 실행의 표면
+- [[knowledge-synthesis-steps|Knowledge Synthesis Steps]] — 지식 대사 단계
+- [[memo-architecture|Memo Architecture]] — 메모의 구조화
+- [[automated-ontology-generation|Automated Ontology Generation]] — 자동 온톨로지 생성
+
+### 전략
+
+- [[weak-signal-theory|Weak Signal Theory (Ansoff)]]
+- [[economic-freedom|Economic Freedom (경제적 자유)]]
 
 ## Missing Links (LINT Fixed)
+
 - [[competency-question]]
+- [[opq-framework]]
+- [[digital-unconscious]]
