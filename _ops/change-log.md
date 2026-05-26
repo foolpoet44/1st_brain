@@ -1,3 +1,32 @@
+## 2026-05-26
+
+### [REFLECT] 디지털 외골격 개념 정립 및 메타-하네싱 전략 수립
+
+- 무엇이 바뀌었나: AI agents를 단순 도구가 아닌 '디지털 외골격(Exoskeleton)'으로 정의하고, agy CLI 기반의 '메타-하네싱(Meta-Harnessing)'과 GraphRAG를 통한 '지식 맥박(Knowledge Pulse)' 로드맵을 수립함.
+- 왜 중요한가: 기술적 FOMO를 주권적 효능감으로 전환하고, 에이전트 오케스트레이션의 근간(Spine)을 세움으로써 "Do it once, automate it forever"의 완성도를 높임.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-05-26.md`, `wiki/concepts/digital-exoskeleton.md`, `_ops/change-log.md`.
+- 다음 확인: GraphRAG의 로컬 Vault 이식 가능성 검토 및 `agy` 스캐폴딩 스크립트(`harness_scaffold.py`)의 실전 적용 테스트.
+
+---
+
+## 2026-05-25
+
+### [OPS] 토큰 최적화 도구 RTK(Rust Token Killer) 도입 및 Claude Code 연동
+
+- 무엇이 바뀌었나: LLM 토큰 소비를 60-90% 절감하는 `rtk` 도구를 Homebrew로 설치하고, Claude Code의 PreToolUse Hook에 등록함. `~/.claude/RTK.md` 가이드를 생성하여 시스템 전반의 토큰 효율성을 확보함.
+- 왜 중요한가: "Token Maxing" 전략의 실천적 도구를 확보함. 에이전트가 처리하는 데이터의 밀도를 높여 비용을 절감하고, 문맥 유지 능력을 극대화함.
+- 영향 범위: 시스템 전반의 Bash 명령어 실행 환경, `/Users/dkmac/.claude/CLAUDE.md`, `~/.claude/settings.json`.
+- 다음 확인: `rtk gain` 명령어를 통해 실제 토큰 절감 효과를 주기적으로 모니터링하고, `Protocol 3: LINT` 실행 시 토큰 효율성 지표 포함 검토.
+
+### [INGEST] LinkedIn 에이전트 자동화 원칙 지식 이식 및 분석
+
+- 무엇이 바뀌었나: 정승현 님의 '가재맨' 에이전트 사례를 분석하여 `agent-friendly-redesign`, `token-maxing` 개념을 정립하고 분석 리포트를 생성함.
+- 왜 중요한가: 에이전트를 단순 도구가 아닌 '조직의 상태 관리자'로 보는 관점을 확보함. 특히 'Hermes'가 실전에서 언급된 사례를 통해 현재 시스템 방향성의 정당성을 확인.
+- 영향 범위: `wiki/concepts/agent-friendly-redesign.md`, `wiki/concepts/token-maxing.md`, `outputs/analyses/linkedin-agent-automation-20260525.md`.
+- 다음 확인: 현재 진행 중인 OKA 프로젝트의 '검증 단계'에 독립 에이전트 패턴(Principle 3) 적용 검토.
+
+---
+
 ## 2026-05-24
 
 ### [OPS] 지식 체계 전반의 인덱싱 최적화 및 안정화
