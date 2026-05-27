@@ -127,3 +127,5 @@
 - [2026-05-21] Josh Kim의 링크드인 인사이트 분석 및 '데이터 브릿지' 전략 리포트 생성 완료 (/outputs/analyses/INSIGHT_2026-05-21_Data_Bridge_Strategy.md)
 - [2026-05-21] 헤르메스 마스터 플랜 수립: Josh Kim, 김재우, Blake Crosley의 인사이트를 통합한 3계층 아키텍처 및 자기 개선형 시스템 설계 (/outputs/analyses/MASTER_PLAN_2026-05-21_Hermes_CSP_Integration.md)
 - [2026-05-21] 'Context Corpus' 개념을 시스템 지식 계층(L0)으로 공식 편입하고 마스터 플랜 업데이트 완료
+[2026-05-27 16:03:55] NEW CONCEPT: skillopt.md (Self-Evolving AI Insight)
+[2026-05-27 18:33:57] SIGNAL DETECTED: Agentic Recruitment Proxy (Harper Insight)

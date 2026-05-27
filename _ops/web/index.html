@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSP-Brain: Synaptic Control Tower</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        body { background-color: #0b0e14; color: #e6edf3; font-family: 'Inter', sans-serif; overflow: hidden; }
+        #network-container { height: 50vh; background: radial-gradient(circle, #1a1f29 0%, #0b0e14 100%); border-radius: 12px; border: 1px solid #30363d; }
+        .glass-card { background: rgba(22, 27, 34, 0.8); backdrop-filter: blur(10px); border: 1px solid #30363d; border-radius: 12px; }
+        .node-label { font-size: 10px; color: #8b949e; }
+        .btn-open { color: #58a6ff; cursor: pointer; transition: all 0.2s; }
+        .btn-open:hover { text-decoration: underline; color: #79c0ff; text-shadow: 0 0 8px #58a6ff; }
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 10px; }
+    </style>
+</head>
+<body class="h-screen flex flex-col p-4">
+    <header class="flex justify-between items-center mb-4">
+        <div>
+            <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">🧠 CSP-Brain V4: Synaptic Activation</h1>
+            <p class="text-xs text-gray-500 italic">뉴런을 클릭하여 지식을 의식의 영역으로 활성화하십시오.</p>
+        </div>
+        <div class="text-right">
+            <span id="update-timer" class="text-[10px] font-mono text-gray-600">SYNCING...</span>
+            <div id="status" class="text-xs font-bold text-emerald-500 animate-pulse">● EVOLVING</div>
+        </div>
+    </header>
+
+    <main class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 overflow-hidden">
+        <!-- Knowledge Graph Area -->
+        <div class="lg:col-span-2 flex flex-col gap-4">
+            <div id="network-container" class="relative">
+                <div class="absolute top-4 left-4 z-10 text-[10px] bg-black/50 p-2 rounded border border-gray-800">
+                    <p>🔵 Concepts (L2)</p>
+                    <p>🟢 Projects (L3)</p>
+                    <p>🟣 Outputs (L4)</p>
+                </div>
+            </div>
+            
+            <div class="glass-card flex-1 p-4 overflow-y-auto">
+                <h3 class="text-sm font-semibold mb-3 text-gray-400 border-b border-gray-800 pb-2 flex justify-between">
+                    <span>⚡ Recent Synapses</span>
+                    <span class="text-[10px] text-blue-500">CLICK TO ACTIVATE</span>
+                </h3>
+                <ul id="synapse-list" class="space-y-2 text-sm">
+                    <!-- Dynamic Items -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Stats & Action Area -->
+        <div class="flex flex-col gap-4 overflow-y-auto">
+            <div class="glass-card p-4">
+                <h3 class="text-xs font-bold text-gray-500 mb-4 uppercase tracking-widest">Metabolism Stats</h3>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div class="p-3 bg-blue-900/20 rounded-lg border border-blue-800/30">
+                        <p class="text-[10px] text-blue-400 uppercase">Density</p>
+                        <p id="total-atoms" class="text-2xl font-bold">--</p>
+                    </div>
+                    <div class="p-3 bg-emerald-900/20 rounded-lg border border-emerald-800/30">
+                        <p class="text-[10px] text-emerald-400 uppercase">Velocity</p>
+                        <p id="recent-activity" class="text-2xl font-bold">--</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-4 flex-1">
+                <h3 class="text-xs font-bold text-gray-500 mb-4 uppercase tracking-widest">Active Operations</h3>
+                <div id="op-log" class="text-[11px] font-mono space-y-2 text-gray-400">
+                    <p class="text-emerald-500">> System initialized...</p>
+                    <p class="text-blue-400">> Synaptic bridge active.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        async function openFile(name) {
+            fetch(`/api/open?file=${encodeURIComponent(name)}`);
+            const log = document.getElementById('op-log');
+            const p = document.createElement('p');
+            p.innerText = `> Activating: ${name}...`;
+            p.className = 'text-gray-300 animate-pulse';
+            log.prepend(p);
+        }
+
+        async function updateDashboard() {
+            try {
+                const res = await fetch('data.json');
+                const data = await res.json();
+                
+                document.getElementById('total-atoms').innerText = data.total_atoms;
+                document.getElementById('recent-activity').innerText = data.recent_activity;
+                
+                // Update Synapse List
+                const list = document.getElementById('synapse-list');
+                list.innerHTML = data.recent_files.map(f => `
+                    <li class="flex justify-between items-center group">
+                        <span onclick="openFile('${f.name}')" class="btn-open font-medium text-xs truncate max-w-[200px]">
+                            ${f.name}
+                        </span>
+                        <span class="text-[9px] text-gray-600 group-hover:text-gray-400 transition">${f.time}</span>
+                    </li>
+                `).join('');
+
+                // Render Graph (Simplified representation)
+                const nodes = [];
+                const edges = [];
+                
+                // Add categories as central hubs
+                nodes.push({id: 'L2', label: 'CONCEPTS', color: '#3b82f6', shape: 'diamond', size: 25});
+                nodes.push({id: 'L3', label: 'PROJECTS', color: '#10b981', shape: 'diamond', size: 25});
+                
+                // Sample some nodes for visualization
+                data.recent_files.forEach((f, i) => {
+                    nodes.push({id: i, label: f.name.split('.')[0], color: '#30363d', font: {color: '#8b949e'}});
+                    edges.push({from: (i % 2 === 0 ? 'L2' : 'L3'), to: i});
+                });
+
+                const container = document.getElementById('network-container');
+                const graphData = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
+                const options = {
+                    physics: { enabled: true, solver: 'forceAtlas2Based' },
+                    nodes: { font: { size: 10 } },
+                    edges: { color: { opacity: 0.3 } }
+                };
+                new vis.Network(container, graphData, options);
+
+            } catch (e) { console.error('Dashboard Sync Error', e); }
+        }
+
+        updateDashboard();
+        setInterval(updateDashboard, 5000);
+    </script>
+</body>
+</html>
