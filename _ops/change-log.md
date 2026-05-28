@@ -1,3 +1,14 @@
+## 2026-05-28
+
+### [REFLECT] AI 네이티브 로드맵 통합 및 지식 그래프 내비게이션 전략 수립
+
+- 무엇이 바뀌었나: 'AI 네이티브 컴퍼니 로드맵'을 수립하고, 단순 검색을 넘어선 '지식 그래프 맵'과 '맥락적 적재' 개념을 지식 체계에 통합함.
+- 왜 중요한가: 에이전트가 조직의 모든 맥락을 실시간으로 학습하고, 인덱싱된 관계를 통해 토큰 비용을 혁신적으로 절감하며 판단의 설명 가능성을 확보함.
+- 영향 범위: `projects/AI-Native-Company-Roadmap.md`, `wiki/concepts/knowledge-graph-as-map.md`, `outputs/daily-reflect/REFLECT_2026-05-28.md`.
+- 다음 확인: 8-Cluster 심리 지표를 SKILL.md 자산으로 변환하여 지식 그래프 상의 '추론 노드'로 실전 배치 테스트.
+
+---
+
 ## 2026-05-26
 
 ### [REFLECT] 디지털 외골격 개념 정립 및 메타-하네싱 전략 수립
@@ -129,3 +140,4 @@
 - [2026-05-21] 'Context Corpus' 개념을 시스템 지식 계층(L0)으로 공식 편입하고 마스터 플랜 업데이트 완료
 [2026-05-27 16:03:55] NEW CONCEPT: skillopt.md (Self-Evolving AI Insight)
 [2026-05-27 18:33:57] SIGNAL DETECTED: Agentic Recruitment Proxy (Harper Insight)
+[2026-05-28 19:07:45] MISSION UPDATE: AI-Native Company Roadmap integrated.

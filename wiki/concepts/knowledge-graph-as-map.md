@@ -18,6 +18,7 @@ tags: [knowledge-graph, mapping, agent-logic, trust]
 모델의 지능은 평준화되지만, 조직 특유의 **'암묵지(Implicit Knowledge)'**와 **'운영 규칙(Governance)'**은 자동으로 정리되지 않습니다.
 - **설명 가능성(Explainability)**: "왜 그렇게 판단했는가?"에 대해 밟아온 노드와 엣지를 제시할 수 있어야 함.
 - **신뢰의 임계점**: 권한, 최신성, 출처가 명확한 경로만이 실무 에이전트의 자격 증명이 됨.
+- **경제적 임계점**: 그래프 인덱싱을 통해 토큰 소모를 50% 이상 절감하여, 대규모 실무 적용의 가성비를 확보함. ([[codegraph-efficiency]])
 
 ## 3. csp-brain 적용 원칙
 - 모든 산출물은 밟아온 노드들의 **'Synaptic Chain'**을 남겨야 함.
