@@ -77,7 +77,20 @@
     </main>
 
     <script>
+        
         async function openFile(name) {
+            if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                alert('Local file opening is only available in Local Mode (localhost).');
+                return;
+            }
+            fetch(`/api/open?file=${encodeURIComponent(name)}`);
+            const log = document.getElementById('op-log');
+            const p = document.createElement('p');
+            p.innerText = `> Activating: ${name}...`;
+            p.className = 'text-gray-300 animate-pulse';
+            log.prepend(p);
+        }
+
             fetch(`/api/open?file=${encodeURIComponent(name)}`);
             const log = document.getElementById('op-log');
             const p = document.createElement('p');
