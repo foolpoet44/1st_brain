@@ -42,3 +42,4 @@ scripts/output/
 # Large data files
 *.json
 !manifest.json
+!_ops/web/data.json
