@@ -190,10 +190,10 @@
       </div>
 
       <!-- Right: Stats, Metabolism & Operation Log -->
-      <div class="flex flex-col gap-6 overflow-y-auto">
+      <div class="flex flex-col gap-6 overflow-hidden">
         
         <!-- Metabolism Stats & Bar -->
-        <div class="glass-card p-5">
+        <div class="glass-card p-5 shrink-0">
           <h3 class="text-xs font-bold text-gray-400 mb-4 uppercase tracking-widest font-['Outfit']">
             Metabolism Stats
           </h3>
@@ -221,9 +221,20 @@
           </div>
         </div>
 
+        <!-- 🔮 Synaptic Evolution Digest (신설) -->
+        <div class="glass-card p-5 flex flex-col shrink-0">
+          <h3 class="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest font-['Outfit'] flex justify-between items-center">
+            <span>🔮 Synaptic Evolution Digest</span>
+            <span class="text-[9px] text-indigo-400 font-mono tracking-normal">DAILY REFLECT</span>
+          </h3>
+          <div id="evolution-digest" class="overflow-y-auto max-h-[22vh] pr-1">
+            <!-- Dynamic Essay Render -->
+          </div>
+        </div>
+
         <!-- Active Operations Log -->
         <div class="glass-card p-5 flex-1 flex flex-col overflow-hidden">
-          <h3 class="text-xs font-bold text-gray-400 mb-4 uppercase tracking-widest font-['Outfit']">
+          <h3 class="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest font-['Outfit']">
             Active Operations
           </h3>
           <div id="op-log" class="flex-1 overflow-y-auto text-[11px] font-mono space-y-2 text-gray-500 pr-1">
@@ -258,6 +269,55 @@
           setTimeout(() => {
               body.classList.remove('pulse-glow');
           }, 600);
+      }
+
+      // 🔮 시냅스 진화 에세이식 렌더러 함수
+      function renderEvolutionDigest(changes) {
+          const container = document.getElementById('evolution-digest');
+          if (!container) return;
+          
+          if (!changes || changes.length === 0) {
+              container.innerHTML = `<p class="text-[11px] text-gray-500 italic font-mono">> No recent evolution signals detected.</p>`;
+              return;
+          }
+          
+          // 가장 최신 변경점을 가져옴
+          const change = changes[0];
+          const category = change.title.match(/\[(.*?)\]/)?.[1] || '지식';
+          const titleClean = change.title.replace(/\[.*?\]/, '').trim();
+          
+          let warmIntro = "";
+          if (category === 'OPS') {
+              warmIntro = `🛠️ <b>운영 비서가 알립니다.</b> 우리 지식 제국의 운영 체계가 한 차원 더 견고하게 진화했습니다.`;
+          } else if (category === 'INGEST') {
+              warmIntro = `📥 <b>새로운 지식 원자가 흡수되었습니다.</b> 외부의 똑똑한 가치들이 우리 지식 뇌 속으로 정교하게 이식되었습니다.`;
+          } else if (category === 'REFLECT') {
+              warmIntro = `🔮 <b>사유의 밀도가 깊어지는 성찰이 있었습니다.</b> 본질을 꿰뚫는 전략적 통찰이 발현되었습니다.`;
+          } else if (category === 'SIGNAL') {
+              warmIntro = `📡 <b>미세한 외부의 변화(Weak Signal)가 포착되었습니다.</b> 세상의 거대한 트렌드가 우리 레이더에 잡혔습니다.`;
+          } else {
+              warmIntro = `✨ <b>새로운 의식의 파동이 시냅스를 타고 전해졌습니다.</b>`;
+          }
+          
+          container.innerHTML = `
+              <div class="space-y-3 font-sans">
+                  <p class="text-xs text-gray-300 leading-relaxed">
+                      ${warmIntro} 오늘 AI와 함께 완성한 <b>"${titleClean}"</b> 성과는 다음과 같은 의미를 지닙니다.
+                  </p>
+                  <div class="pl-3.5 border-l border-indigo-500/40 space-y-2 py-0.5">
+                      <p class="text-[11px] text-gray-400 leading-relaxed">
+                          🎯 <b>어떤 변화가 있었나:</b> ${change.what_changed}
+                      </p>
+                      <p class="text-[11px] text-indigo-300/90 leading-relaxed">
+                          🧠 <b>왜 그것이 중요한가:</b> ${change.why_important}
+                      </p>
+                  </div>
+                  <div class="flex justify-between items-center text-[9px] text-gray-500 font-mono mt-1">
+                      <span>DATE: ${change.date}</span>
+                      <span class="px-1.5 py-0.5 rounded bg-indigo-950/40 border border-indigo-800/40 text-indigo-400 font-bold uppercase tracking-wider text-[8px]">${category}</span>
+                  </div>
+              </div>
+          `;
       }
 
       // 지식의 실제 폴더 경로(relPath)를 바탕으로 해당 파일이 어느 등급에 속하는지 정확히 판정합니다.
@@ -363,6 +423,9 @@
                       <span class="tooltip">📥 Inbox: ${inbox}개 (${Math.round(inbox/total*100)}%)<br><span class="text-gray-400">소화 대기 중인 원재료</span></span>
                   </div>
               `;
+
+              // 에세이 다이제스트 렌더링 호출
+              renderEvolutionDigest(data.latest_changes);
 
               // 시냅스 리스트 구성 및 환경 기반 배지 추가
               const list = document.getElementById('synapse-list');
