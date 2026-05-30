@@ -2,10 +2,10 @@ name: Update Knowledge Dashboard
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at 09:00 KST daily
+    - cron: "0 0 * * *" # Runs at 09:00 KST daily
   push:
-    branches: [ main ]
-  workflow_dispatch:      # Allows manual trigger from GitHub web UI
+    branches: [main]
+  workflow_dispatch: # Allows manual trigger from GitHub web UI
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: "3.10"
 
       - name: Update Data JSON
         run: |

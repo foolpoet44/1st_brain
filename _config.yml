@@ -1,0 +1,17 @@
+name: CSP-Brain
+exclude:
+  - raw/
+  - projects/
+  - sy/
+  - sync/
+  - dev/
+  - wiki/
+  - concepts/
+  - people/
+  - research/
+  - outputs/
+  - inbox/
+  - attachments/
+  - scripts/
+  - .obsidian/
+  - venv/

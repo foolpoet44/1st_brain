@@ -1,3 +1,86 @@
+## 2026-05-30
+
+### [REFLECT] 시스템의 '내구적 실행' 및 지능적 리졸버 전략 수립
+
+- 무엇이 바뀌었나: Obelisk 기반의 내구적 실행(Durable Execution) 개념과 Claude 4.8에 최적화된 Effort-based Routing 및 리졸버(Resolver) 아키텍처를 지식 체계에 통합함.
+- 왜 중요한가: 에이전트를 단순 도구에서 장애에 강하고(Resilient), 토큰 효율적인 '조직의 운영 시스템(OS)'으로 진화시키기 위한 논리적 근간을 마련함.
+- 영향 범위: `_ops/RESOLVER.md`, `wiki/concepts/durable-execution.md`, `outputs/daily-reflect/REFLECT_2026-05-30.md`.
+- 다음 확인: 포인터 기반 스킬 로딩 엔진의 실전 성능 테스트 및 토큰 절감 지표 확인.
+
+---
+
+## 2026-05-30
+
+### [DIGEST] 2026년 22주차 주간 지식 진화 보고서 생성
+
+- 무엇이 바뀌었나: 한 주간의 AI 네이티브 조직론, 4.8 인프라, 투자 전략 이식 과정을 종합 요약하고 차주 전략 수립.
+- 영향 범위: `outputs/weekly/WEEKLY_DIGEST_2026-05-30.md`.
+
+---
+
+## 2026-05-30
+
+### [INFRA] Obelisk 전략 및 내구적 실행(Durable Execution) 개념 이식
+
+- 무엇이 바뀌었나: SQLite 기반 워크플로 엔진 Obelisk의 신호를 분석하고, 에이전트 시스템의 안정성을 위한 '내구적 실행' 개념을 정립함.
+- 왜 중요한가: 현재 헤르메스가 수행하는 장기 태스크들을 장애에 강한(Resilient) 구조로 고도화하기 위한 인프라 지침을 확보함.
+- 영향 범위: `wiki/signals/`, `wiki/concepts/durable-execution.md`.
+
+---
+
+## 2026-05-30
+
+### [INVEST] 헤드앤숄더 실패(H&S Failure) 전략 이식 및 투자 지능 강화
+
+- 무엇이 바뀌었나: 기술적 지표의 실패를 역이용하는 'H&S Top Failure' 롱 포지션 타점 전략을 신호 및 개념 원자로 등록함.
+- 왜 중요한가: 시장의 심리적 배반과 숏 스퀴즈 원리를 통해 투자 도메인에서의 '회복탄력성' 개념을 구체화함.
+- 영향 범위: `wiki/signals/`, `wiki/concepts/failed-pattern-trading.md`.
+
+---
+
+## 2026-05-30
+
+### [INFRA] Claude Opus 4.8 10대 핵심 가이드라인 통합 및 리졸버 고도화
+
+- 무엇이 바뀌었나: 고영혁 님의 최신 4.8 리서치를 바탕으로 'Effort-based Routing' 개념을 `_ops/RESOLVER.md`에 추가하고, 스캐폴딩 제거 원칙을 수립함.
+- 왜 중요한가: 인위적인 프롬프트 다그치기를 줄여 AI의 순수 추론 능력을 극대화하고, 토큰 효율성과 품질 사이의 레버를 확보함.
+- 영향 범위: `_ops/RESOLVER.md`, `wiki/signals/2026-05-30-claude-opus-4-8-detailed-harnessing.md`.
+
+---
+
+## 2026-05-30
+
+### [SIGNAL] Claude Opus 4.8 출시 및 프롬프팅 아키텍처 재정립 신호 포착
+
+- 무엇이 바뀌었나: Anthropic의 Claude 4.8 출시와 함께 '다그치기'가 아닌 '제어(Effort)' 중심의 새로운 프롬프팅 베스트 프랙티스를 포착함.
+- 왜 중요한가: 우리 시스템이 사용하는 스캐폴딩(Harness)과 리졸버(Resolver)의 논리적 토대를 최신 AI 엔진의 특성에 맞춰 최적화해야 함.
+- 영향 범위: `_ops/RESOLVER.md`, `wiki/concepts/maximal-knowledge-exactness.md`, `wiki/signals/`.
+- 다음 확인: 현재 사용 중인 시스템 프롬프트에서 'anti-laziness' 성격의 중복 지시를 제거하고 4.8에 최적화된 '명시적 범위 지정' 방식으로 전환 테스트.
+
+---
+
+## 2026-05-30
+
+### [INGEST] Josh Kim & Jeongmin Lee의 AI 네이티브 조직론 통합 이식
+
+- 무엇이 바뀌었나: 스킬 기반 가상 직원, 포인터 기반 리졸버, 자가 개선 루프 등 '진짜 AI 네이티브'를 위한 실행 지침을 지식 체계에 통합함.
+- 왜 중요한가: 에이전트가 단순 도구를 넘어 '조직의 운영 시스템(OS)'으로 기능하기 위한 구체적인 아키텍처를 확보함.
+- 영향 범위: `wiki/signals/`, `outputs/analyses/AI_NATIVE_COMPANY_MASTER_PLAN.md`, `KNOWLEDGE_PULSE.md`.
+- 다음 확인: 리졸버(Resolver) 개념을 현재의 헤르메스 스킬셋 구조에 시험 적용하여 토큰 효율성 및 태스크 정확도 측정.
+
+---
+
+## 2026-05-30
+
+### [OPS] 대시보드 V5 인터랙션 및 환경 감지 기능 대규모 개선
+
+- 무엇이 바뀌었나: 대시보드의 인터랙티브 사용자 경험을 극적으로 개선함. 1) 대시보드 호스팅 배포처(wiki_dash)와 실제 지식 자산 리포지토리(1st_brain)의 이원화 구조를 파악하여, 배포지 주소와 상관없이 마크다운 클릭 시 언제나 진짜 지식 보관소인 `https://github.com/foolpoet44/1st_brain` 브랜치 내의 물리적 상대 경로를 가리키도록 100% 정합성 새 탭 매핑을 완성함. 2) data.json에 숨겨져 있던 L2 Concepts, L3 Projects, L4 Outputs, Inbox 분포의 글래스모피즘 스택형 차트 시각화 및 세부 정의 툴팁 구현. 3) 수동 동기화 버튼 설계 및 동기화 감지 시 헤더에 네온 일렉트릭 블루 글로우 파동 애니메이션 효과 구현. 4) Outfit & Inter 고급 웹 타이포그래피 적용.
+- 왜 중요한가: 대시보드가 단순한 감상용 정적 웹 페이지를 넘어, 깃허브 페이지스로 외부 배포된 상태에서도 별도의 설정 없이 내 깃허브 원격 저장소에 저장된 문서를 즉시 열람하고 오프라인-온라인을 자연스럽게 잇는 '액셔너블(Actionable) 관제탑'으로 진화함.
+- 영향 범위: `_ops/web/index.html`, `_ops/change-log.md`.
+- 다음 확인: GitHub Pages 배포 자동화 파이썬 스크립트(`deploy.py`) 실행을 통한 원격 호스팅 적용 여부 검토 및 모바일 디바이스 반응형 레이아웃 추가 테스트.
+
+---
+
 ## 2026-05-29
 
 ### [REFLECT] 지식의 최대 정합성 프레임워크 도입 및 대시보드 V4 자동화
@@ -149,7 +232,7 @@
 - [2026-05-21] Josh Kim의 링크드인 인사이트 분석 및 '데이터 브릿지' 전략 리포트 생성 완료 (/outputs/analyses/INSIGHT_2026-05-21_Data_Bridge_Strategy.md)
 - [2026-05-21] 헤르메스 마스터 플랜 수립: Josh Kim, 김재우, Blake Crosley의 인사이트를 통합한 3계층 아키텍처 및 자기 개선형 시스템 설계 (/outputs/analyses/MASTER_PLAN_2026-05-21_Hermes_CSP_Integration.md)
 - [2026-05-21] 'Context Corpus' 개념을 시스템 지식 계층(L0)으로 공식 편입하고 마스터 플랜 업데이트 완료
-[2026-05-27 16:03:55] NEW CONCEPT: skillopt.md (Self-Evolving AI Insight)
-[2026-05-27 18:33:57] SIGNAL DETECTED: Agentic Recruitment Proxy (Harper Insight)
-[2026-05-28 19:07:45] MISSION UPDATE: AI-Native Company Roadmap integrated.
-[2026-05-29 19:09:10] FINANCIAL SIGNAL: Transportation Sector AI Pivot (MarketWatch Insight)\n
+  [2026-05-27 16:03:55] NEW CONCEPT: skillopt.md (Self-Evolving AI Insight)
+  [2026-05-27 18:33:57] SIGNAL DETECTED: Agentic Recruitment Proxy (Harper Insight)
+  [2026-05-28 19:07:45] MISSION UPDATE: AI-Native Company Roadmap integrated.
+  [2026-05-29 19:09:10] FINANCIAL SIGNAL: Transportation Sector AI Pivot (MarketWatch Insight)\n
