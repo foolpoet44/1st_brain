@@ -1,5 +1,16 @@
 ## 2026-05-31
 
+### [REFLECT] 시스템의 '내구적 실행' 및 구성적 적합성(Constructed Fit) 통합
+
+- 무엇이 바뀌었나: JOOP 2026.05.30 논문을 기반으로 한 'Constructed Fit' 개념을 HR 지식 체계에 통합하고, 에이전트 시스템을 '작업 운영체제(OS)'로 보는 하네싱 고도화 전략을 수립함.
+- 왜 중요한가: 적합성을 정적 매칭이 아닌 동적 대사 작용으로 정의함으로써 AI 기반 HR 평가 모델의 차세대 논거를 확보함. 또한, 자동화 동기화 오류를 통해 '내구적 실행(Durable Execution)'의 실전적 필요성을 확인함.
+- 영향 범위: `wiki/concepts/constructed-fit.md`, `_ops/checklists/`, `outputs/daily-reflect/REFLECT_2026-05-31.md`.
+- 다음 확인: GitHub 인증 이슈 해결을 위한 SSH 키 전환 및 8-Cluster 심리 지표의 SKILL.md 자산화 실전 테스트.
+
+---
+
+## 2026-05-31
+
 ### [SIGNAL] 하네싱(Harnessing)의 체계적 고도화 및 작업 운영체제 개념 이식
 
 - 무엇이 바뀌었나: 황민호 님의 하네스 인사이트를 바탕으로 '하네스 = 작업 운영체제'라는 개념을 정립하고, Planner-Generator-Evaluator 분리 원칙을 지식 체계에 통합함.
