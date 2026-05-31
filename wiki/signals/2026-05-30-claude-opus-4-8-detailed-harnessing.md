@@ -5,12 +5,15 @@ date: 2026-05-30
 tags: ["anthropic", "claude-4.8", "prompt-engineering", "infra"]
 url: https://www.linkedin.com/posts/gonnector_ai-agent-claude-share-7465905827950895105-ZUvt/
 ---
+
 # [SIGNAL] Claude Opus 4.8: 바닐라 모델의 승리와 제어 파라미터의 시대
 
 ## 💡 핵심 철학의 전환
+
 Anthropic은 4.8 모델에서 모델을 다그치는 'Anti-laziness' 스캐폴딩(예: "중간에 멈추지 마", "끝까지 답해")을 제거하고, **Effort 레버**와 **명시적 범위 지정**으로 조절할 것을 권고합니다.
 
 ## 🚀 10개 핵심 포인트 (Full Detail)
+
 1. **응답 길이 자동 보정 (Verbosity Calibration)**: 작업 복잡도에 따라 길이를 스스로 판단. 단순 조회는 짧게, 분석은 길게.
 2. **Effort 파라미터의 준거성**: xhigh/high 레벨이 지능 민감 작업에 필수. low 레벨에서는 지시한 범위 '딱 거기까지만' 수행함.
 3. **Thinking 기본 OFF**: `thinking: {type: "adaptive"}`를 명시적으로 설정해야 활성화됨.
@@ -23,6 +26,7 @@ Anthropic은 4.8 모델에서 모델을 다그치는 'Anti-laziness' 스캐폴�
 10. **인터랙티브 코딩 최적화**: 다중 턴 작업에서 토큰을 더 많이 쓰는 경향. 첫 턴에 의도와 제약을 명확히 명시하는 것이 효율 극대화.
 
 ## 🛠️ CSP-Brain 적용 전략
+
 - **Resolver 고도화**: 질문의 복잡도를 에이전트가 사전 판별하여 API 호출 시 `effort: "xhigh"` 등을 동적으로 할당하는 로직 추가.
 - **Harness Scaffolding 제거**: `CLAUDE.md` 내의 중복된 강조와 모델 다그치기 문구들을 삭제하여 '바닐라 성능' 극대화.
 - **Literal Prompting**: "이 문서 전체에 적용해" 보다는 "전체 문서를 훑고 각 섹션마다 적용해"와 같이 범위를 명시적으로 지정하도록 가이드 수정.

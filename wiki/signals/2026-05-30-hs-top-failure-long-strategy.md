@@ -2,19 +2,30 @@
 type: Signal
 source: Tech Charts (X)
 date: 2026-05-30
-tags: ["trading", "technical-analysis", "head-and-shoulders", "failed-pattern", "long-strategy"]
+tags:
+  [
+    "trading",
+    "technical-analysis",
+    "head-and-shoulders",
+    "failed-pattern",
+    "long-strategy",
+  ]
 ---
+
 # [SIGNAL] 헤드앤숄더 실패(H&S Top Failure)를 통한 불리시 컨티뉴에이션
 
 ## 💡 핵심 요약 (TL;DR)
+
 - **패턴 파괴의 미학**: 전형적인 하락 반전 신호인 '헤드앤숄더'가 완성된 후 실제 하락으로 이어지지 않고 저항선을 돌파할 때, 이는 강력한 매수 에너지의 응축을 의미함.
 - **숏 스퀴즈(Short Squeeze)**: 하락을 예상하고 진입한 매도세가 손절(손절매)을 시작하며 상승 탄력을 폭발적으로 강화시키는 구간.
 
 ## 🛠️ 전략적 타점 (Execution Points)
+
 - **진입 임계점**: 실패한 헤드앤숄더의 우어깨(Right Shoulder) 저항선 또는 전고점 돌파 시 거래량 동반 확인.
 - **익절 구간**: 실패한 패턴의 목표치(Head에서 Neckline까지의 거리)를 상단으로 투사하여 설정.
 - **손절 라인**: 직전 저점(우어깨의 저점 또는 넥라인) 아래로 타격감 있게 설정.
 
 ## 🧠 CSP-Brain 투자 철학적 해석
+
 - **시장 심리의 배반**: 다수가 하락을 믿고 배팅했을 때 그 믿음이 깨지는 지점이야말로 가장 순도 높은 에너지가 발생하는 곳임.
 - **회복탄력성(Resilience)**: 차트가 하락 압력을 이겨내고 다시 솟구치는 모습은 조직이나 개인이 위기를 숲으로 전환하는 '회복탄력성'의 기술적 현신임.

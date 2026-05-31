@@ -25,8 +25,8 @@ related_to: "[[opq-framework]]"
 - **분석 리포트 생성**: `Psy_assess-OPQ.pdf` 기반의 핵심 역량 클러스터 분석 완료.
 - **시스템 인제스천**: `wiki/concepts`와 `outputs/analyses`에 관련 지식 업데이트.
 
-
 ### 2026-05-31 (Planned)
+
 - **[[AgentSchool Simulation]]**: 에이전트를 활용한 조직 사회적 역동 시뮬레이션 마일스톤 착수.
 
 ## 4. 핵심 지표 (Atoms)

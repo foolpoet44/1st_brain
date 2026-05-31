@@ -2,6 +2,7 @@
 type: Checklist
 category: AI-Ops
 ---
+
 # Task Completion Contract (완료 정의 체크리스트)
 
 - [ ] **Functional**: 요구된 기능이 물리적으로 구현되었는가? (파일 확인)
