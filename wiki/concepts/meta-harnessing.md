@@ -31,3 +31,17 @@ related_to: "[[harness-engineering-insight]], [[vibe-coding]]"
 ---
 
 _참조: https://github.com/revfactory/harness-for-agy_
+
+## 2. 하네싱의 고도화 (v2.0 Insight)
+하네스는 인공지능의 '디지털 신경망'을 보호하고 강화하는 '강화복'과 같습니다.
+
+### ❶ Planner-Generator-Evaluator 분리
+- **Planner**: 작업 분해 및 선언적 계획 수립.
+- **Generator**: 실제 코드 및 콘텐츠 생성.
+- **Evaluator**: 생성물에 대한 비판적 검증 (Playwright, Unit Test, LLM-as-a-judge).
+
+### ❷ 작업 인계 장치 (Hand-off Mechanism)
+- 세션 간 컨텍스트 단절을 막기 위해 `progress.md`나 Git 히스토리를 '기억의 릴레이' 도구로 활용합니다.
+
+### ❸ Sprint Contract
+- 에이전트 작업의 "완료" 정의를 명확히 하고, 해당 계약 조건이 충족될 때까지 세션을 종료하지 않는 엄격한 완결성을 지향합니다.

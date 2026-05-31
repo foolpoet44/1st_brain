@@ -1,5 +1,15 @@
 ## 2026-05-31
 
+### [SIGNAL] 하네싱(Harnessing)의 체계적 고도화 및 작업 운영체제 개념 이식
+
+- 무엇이 바뀌었나: 황민호 님의 하네스 인사이트를 바탕으로 '하네스 = 작업 운영체제'라는 개념을 정립하고, Planner-Generator-Evaluator 분리 원칙을 지식 체계에 통합함.
+- 왜 중요한가: 에이전트의 자립도를 높이기 위해 단순 프롬프팅이 아닌 '환경'과 '시스템' 설계에 집중할 수 있는 이론적 기반을 마련함.
+- 영향 범위: `wiki/signals/`, `wiki/concepts/meta-harnessing.md`, `_ops/checklists/`.
+
+---
+
+## 2026-05-31
+
 ### [SYNAPSE] 지식 체계 심층 연결 및 HR 원자 업데이트
 
 - 무엇이 바뀌었나: [[Constructed Fit]] 개념을 신설하고 P-O Fit을 동적 모델로 업데이트함. OKA 프로젝트에 'AgentSchool' 시뮬레이션 마일스톤을 추가하고, AI 검증을 위한 'Anti-Optimism Bias' 체크리스트를 도입함.
