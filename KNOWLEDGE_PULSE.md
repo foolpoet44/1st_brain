@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-06-01 20:00
+last_update: 2026-06-01 22:01
 status: 🟢 ACTIVE
 ---
 
@@ -20,7 +20,7 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
-- **[06-01 18:00]** `KNOWLEDGE_PULSE.md`
+- **[06-01 20:00]** `KNOWLEDGE_PULSE.md`
 - **[05-31 22:03]** `_ops/change-log.md`
 - **[05-31 22:03]** `outputs/daily-reflect/REFLECT_2026-05-31.md`
 - **[05-31 14:43]** `Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md`
