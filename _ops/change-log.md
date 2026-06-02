@@ -1,3 +1,14 @@
+## 2026-06-02
+
+### [REFLECT] 소셜 IDE 진화 및 HR FDE 인재 모델 정립
+
+- 무엇이 바뀌었나: '소셜 IDE(디스코드/텔레그램 기반 협업 환경)' 전략과 'HR FDE(Field Deployment Engineer)' 인재 모델을 지식 체계에 통합함.
+- 왜 중요한가: AI 도입을 기술 설치가 아닌 '현장 건축'으로 재정의하고, 에이전트 오케스트레이션을 위한 사회적 인터페이스의 중요성을 확보함.
+- 영향 범위: `FDE-talent-model.md`, `Social-IDE-Strategy.md`, `outputs/daily-reflect/REFLECT_2026-06-02.md`.
+- 다음 확인: 6월 3일 오전, Hermes(SOT)와 Claude Code(Execution) 간의 역할 분담 시뮬레이션 및 정밀도 테스트.
+
+---
+
 ## 2026-05-31
 
 ### [REFLECT] 시스템의 '내구적 실행' 및 구성적 적합성(Constructed Fit) 통합
