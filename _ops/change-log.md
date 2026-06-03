@@ -1,5 +1,15 @@
 ## 2026-06-03
 
+### [REFLECT] 지능의 '레이지(Lazy)'한 도약과 지식 소화 기관의 안착
+
+- 무엇이 바뀌었나: 미리 지도를 그리지 않는 실시간 논리 추론(LogicRAG) 통찰을 수용하고, 비정형 문서를 시스템 DNA로 즉시 치환하는 `tomd` 소화 기관을 구축함. 또한 끊겼던 GitHub SSH 혈류를 복구함.
+- 왜 중요한가: 완벽한 지식 그래프 구축에 드는 '전처리 강박'에서 벗어나, 지능 그 자체를 항해 도구로 사용하는 실용적 지연 추론의 시대로 진입함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-03.md`, `_ops/scripts/resolver_engine.py`.
+
+---
+
+## 2026-06-03
+
 ### [OPS] claude-tomd-skill (문서-마크다운 변환기) 설치 및 최적화
 
 - 무엇이 바뀌었나: 외부 업무 문서(Word, Excel, PPT, PDF, HWP/HWPX)를 CSP-Brain 스타일의 마크다운으로 변환해주는 `tomd` 스킬을 `.claude/skills/tomd/`에 로컬 설치함.
