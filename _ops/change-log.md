@@ -9,6 +9,14 @@
 
 ---
 
+### [SIGNAL] LogicRAG: 지도를 미리 그리지 않는 '레이지(Lazy)' 추론의 승리
+
+- 무엇이 바뀌었나: 미리 지식 그래프를 구축하지 않고 질문 시점에 실시간으로 논리 구조(DAG)를 설계하여 검색하는 LogicRAG 통찰을 이식함.
+- 왜 중요한가: 전처리 비용을 0으로 줄이면서도 추론 지능을 활용해 정답률을 극적으로 높이는 '실용적 지능 활용'의 새로운 표준을 확보함.
+- 영향 범위: `wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.md`, `_ops/scripts/resolver_engine.py` (차기 업데이트).
+
+---
+
 ## 2026-06-03
 
 ### [INFRA] GitHub SSH 인증 복구 및 지식 동기화 정상화
