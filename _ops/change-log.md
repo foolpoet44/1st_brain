@@ -1,3 +1,25 @@
+## 2026-06-03
+
+### [OPS] claude-tomd-skill (문서-마크다운 변환기) 설치 및 최적화
+
+- 무엇이 바뀌었나: 외부 업무 문서(Word, Excel, PPT, PDF, HWP/HWPX)를 CSP-Brain 스타일의 마크다운으로 변환해주는 `tomd` 스킬을 `.claude/skills/tomd/`에 로컬 설치함.
+- 왜 중요한가: 인박스(`inbox/`)에 던져지는 비정형 업무 파일들을 위키(`wiki/`)나 프로젝트(`projects/`) 지식 체계로 즉시 편입할 수 있는 '지식 소화 기관'을 확보함. 특히 저장 폴더의 YAML 프론트매터 형식을 자동 학습하여 지식의 정합성을 유지함.
+- 영향 범위: `.claude/skills/tomd/`, `outputs/drafts/`, `inbox/`.
+- 다음 확인: `pip install "markitdown[all]" pyhwp` 실행을 통한 의존성 해결 및 실제 HWP/PDF 문서 변환 성능 테스트.
+
+---
+
+## 2026-06-03
+
+### [INFRA] GitHub SSH 인증 복구 및 지식 동기화 정상화
+
+- 무엇이 바뀌었나: GitHub 인증 방식이 HTTPS(ID/PW)에서 SSH(Ed25519 열쇠)로 변경됨에 따라, 중단되었던 자동 동기화(Scripts/Sync) 파이프라인을 복구하고 최신 지식 정보를 강제 갱신함.
+- 왜 중요한가: 지식 대사(Knowledge Metabolism)의 혈류라 할 수 있는 GitHub 연동이 복구됨으로써 'Do it once, automate it forever' 원칙이 물리적으로 다시 작동하기 시작함.
+- 영향 범위: `~/.ssh/id_ed25519`, `KNOWLEDGE_PULSE.md`, `_ops/change-log.md`.
+- 다음 확인: 23:00 정기 싱크 크론잡의 정상 작동 여부 모니터링.
+
+---
+
 ## 2026-06-02
 
 ### [REFLECT] 소셜 IDE 진화 및 HR FDE 인재 모델 정립
