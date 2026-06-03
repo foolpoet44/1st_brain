@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-06-03 14:00
+last_update: 2026-06-03 16:00
 status: 🟢 ACTIVE
 ---
 
@@ -20,10 +20,10 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
-- **[06-03 12:17]** `.agents/skills/tomd/SKILL.md`
-- **[06-03 12:17]** `_ops/change-log.md`
-- **[06-03 12:16]** `wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.md`
-- **[06-03 12:00]** `KNOWLEDGE_PULSE.md`
+- **[06-03 14:00]** `wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.md`
+- **[06-03 14:00]** `_ops/change-log.md`
+- **[06-03 14:00]** `KNOWLEDGE_PULSE.md`
+- **[06-03 14:00]** `.agents/skills/tomd/SKILL.md`
 - **[06-03 09:02]** `temp_skill/tomd/SKILL.md`
 
 ---
