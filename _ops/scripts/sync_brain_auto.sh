@@ -4,15 +4,16 @@
 
 cd /Users/dkmac/Desktop/@26/dev
 
+# 2. Git operations
+git pull --rebase origin main || echo "Pull failed, attempting to continue..."
+
 # 1. Update pulse data and dashboard
 python3 /Users/dkmac/Desktop/@26/dev/scripts/know_grow_monitor.py
 python3 /Users/dkmac/Desktop/@26/dev/_ops/scripts/update_dashboard.py
 
-# 2. Git operations
 git add .
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
-git commit -m "Auto-Sync: $TIMESTAMP [Evolution Insight]"
+git commit -m "Auto-Sync: $TIMESTAMP [Evolution Insight]" || echo "Nothing to commit"
 
 # 3. Push to origin
-# We use '|| echo' to prevent script failure if there are no changes to commit or network issues
-git push origin main || echo "Sync completed (no changes or push suppressed)."
+git push origin main || echo "Push failed."
