@@ -5,7 +5,7 @@
 cd /Users/dkmac/Desktop/@26/dev
 
 # 2. Git operations
-git pull --rebase origin main || echo "Pull failed, attempting to continue..."
+git pull --rebase -Xtheirs origin main || echo "Pull failed, attempting to continue..."
 
 # 1. Update pulse data and dashboard
 python3 /Users/dkmac/Desktop/@26/dev/scripts/know_grow_monitor.py
