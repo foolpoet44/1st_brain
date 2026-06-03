@@ -1,9 +1,13 @@
 #!/bin/bash
 # CSP-Brain Dashboard Publisher
-cd /Users/dkmac/Desktop/@26/dev
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+VAULT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+cd "$VAULT_ROOT"
 
 # Update Data
-python3 /Users/dkmac/Desktop/@26/dev/_ops/scripts/update_dashboard.py
+python3 "$VAULT_ROOT/_ops/scripts/update_dashboard.py"
 
 # Git sync
 git add .gitignore _ops/web/index.html _ops/web/data.json KNOWLEDGE_PULSE.md _ops/scripts/update_dashboard.py _ops/scripts/publish_dashboard.sh

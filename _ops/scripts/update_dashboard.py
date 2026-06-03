@@ -1,7 +1,10 @@
 import os, json, re
 from datetime import datetime, timedelta
+from pathlib import Path
 
-root = "/Users/dkmac/Desktop/@26/dev"
+# 스크립트 자신의 위치를 기준으로 Vault 루트를 계산합니다.
+# 이렇게 해야 로컬 Mac과 GitHub Actions의 체크아웃 경로가 달라도 같은 코드가 동작합니다.
+root = str(Path(__file__).resolve().parents[2])
 web_dir = os.path.join(root, "_ops/web")
 
 def count_files(path):
@@ -210,6 +213,6 @@ def get_recent_data():
     }
 
 data = get_recent_data()
+os.makedirs(web_dir, exist_ok=True)
 with open(os.path.join(web_dir, "data.json"), 'w') as f:
     json.dump(data, f)
-
