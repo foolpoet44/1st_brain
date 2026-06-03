@@ -1,7 +1,10 @@
 name: CSP-Brain
 exclude:
+  - Understand-Anything/
   - raw/
+  - open-design/
   - projects/
+  - temp_skill/
   - sy/
   - sync/
   - dev/
