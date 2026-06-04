@@ -20,9 +20,9 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
+- **[06-04 23:00]** `KNOWLEDGE_PULSE.md`
 - **[06-04 22:04]** `outputs/daily-reflect/REFLECT_2026-06-04.md`
 - **[06-04 22:04]** `_ops/change-log.md`
-- **[06-04 18:28]** `KNOWLEDGE_PULSE.md`
 - **[06-04 17:01]** `wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.md`
 - **[06-04 17:01]** `outputs/daily-reflect/REFLECT_2026-06-03.md`
 
