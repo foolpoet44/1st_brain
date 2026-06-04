@@ -1,3 +1,13 @@
+## 2026-06-04
+
+### [REFLECT] 신경망의 재연결과 '지능의 백질' 개념 정립
+
+- 무엇이 바뀌었나: Sihvonen(2026)의 네트워크 단절 연구를 이식하여 조직 회복탄력성을 '백질(Tract) 무결성'으로 정의함. `/tomd` 스킬을 실전에 투입해 복잡한 PDF를 지식 원자로 즉시 치환함.
+- 왜 중요한가: 특정 개인(Node)에 의존하는 HR 솔루션에서 벗어나, 조직 전체의 연결망(Connectivity)을 강화하는 전략적 논거를 확보함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-04.md`, `wiki/concepts/network-connectivity.md` (예정).
+
+---
+
 ## 2026-06-03
 
 ### [REFLECT] 지능의 '레이지(Lazy)'한 도약과 지식 소화 기관의 안착
@@ -14,20 +24,17 @@
 
 - 무엇이 바뀌었나: 외부 업무 문서(Word, Excel, PPT, PDF, HWP/HWPX)를 CSP-Brain 스타일의 마크다운으로 변환해주는 `tomd` 스킬을 `.claude/skills/tomd/`에 로컬 설치함.
 - 왜 중요한가: 인박스(`inbox/`)에 던져지는 비정형 업무 파일들을 위키(`wiki/`)나 프로젝트(`projects/`) 지식 체계로 즉시 편입할 수 있는 '지식 소화 기관'을 확보함. 특히 저장 폴더의 YAML 프론트매터 형식을 자동 학습하여 지식의 정합성을 유지함.
-- 영향 범위: `.claude/skills/tomd/`, `outputs/drafts/`, `inbox/`.
-- 다음 확인: `pip install "markitdown[all]" pyhwp` 실행을 통한 의존성 해결 및 실제 HWP/PDF 문서 변환 성능 테스트.
+- 영향 범위: `.claude/skills/tomd/`, `outputs/drafts/`, `inbox/`.\n- 다음 확인: `pip install "markitdown[all]" pyhwp` 실행을 통한 의존성 해결 및 실제 HWP/PDF 문서 변환 성능 테스트.
 
 ---
 
 ### [SIGNAL] LogicRAG: 지도를 미리 그리지 않는 '레이지(Lazy)' 추론의 승리
 
-- 무엇이 바뀌었나: 미리 지식 그래프를 구축하지 않고 질문 시점에 실시간으로 논리 구조(DAG)를 설계하여 검색하는 LogicRAG 통찰을 이식함.
+- 무엇이 바뀌었나: 미리 지능 그래프를 구축하지 않고 질문 시점에 실시간으로 논리 구조(DAG)를 설계하여 검색하는 LogicRAG 통찰을 이식함.
 - 왜 중요한가: 전처리 비용을 0으로 줄이면서도 추론 지능을 활용해 정답률을 극적으로 높이는 '실용적 지능 활용'의 새로운 표준을 확보함.
 - 영향 범위: `wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.md`, `_ops/scripts/resolver_engine.py` (차기 업데이트).
 
 ---
-
-## 2026-06-03
 
 ### [INFRA] GitHub SSH 인증 복구 및 지식 동기화 정상화
 
@@ -70,8 +77,6 @@
 
 ---
 
-## 2026-05-31
-
 ### [SYNAPSE] 지식 체계 심층 연결 및 HR 원자 업데이트
 
 - 무엇이 바뀌었나: [[Constructed Fit]] 개념을 신설하고 P-O Fit을 동적 모델로 업데이트함. OKA 프로젝트에 'AgentSchool' 시뮬레이션 마일스톤을 추가하고, AI 검증을 위한 'Anti-Optimism Bias' 체크리스트를 도입함.
@@ -79,8 +84,6 @@
 - 영향 범위: `wiki/concepts/`, `projects/oka/`, `_ops/checklists/`.
 
 ---
-
-## 2026-05-31
 
 ### [INGEST] AI 에이전트 하니스 및 지능형 워크플로우 통찰 통합
 
@@ -102,16 +105,12 @@
 
 ---
 
-## 2026-05-30
-
 ### [DIGEST] 2026년 22주차 주간 지식 진화 보고서 생성
 
 - 무엇이 바뀌었나: 한 주간의 AI 네이티브 조직론, 4.8 인프라, 투자 전략 이식 과정을 종합 요약하고 차주 전략 수립.
 - 영향 범위: `outputs/weekly/WEEKLY_DIGEST_2026-05-30.md`.
 
 ---
-
-## 2026-05-30
 
 ### [INFRA] Obelisk 전략 및 내구적 실행(Durable Execution) 개념 이식
 
@@ -121,8 +120,6 @@
 
 ---
 
-## 2026-05-30
-
 ### [INVEST] 헤드앤숄더 실패(H&S Failure) 전략 이식 및 투자 지능 강화
 
 - 무엇이 바뀌었나: 기술적 지표의 실패를 역이용하는 'H&S Top Failure' 롱 포지션 타점 전략을 신호 및 개념 원자로 등록함.
@@ -131,8 +128,6 @@
 
 ---
 
-## 2026-05-30
-
 ### [INFRA] Claude Opus 4.8 10대 핵심 가이드라인 통합 및 리졸버 고도화
 
 - 무엇이 바뀌었나: 고영혁 님의 최신 4.8 리서치를 바탕으로 'Effort-based Routing' 개념을 `_ops/RESOLVER.md`에 추가하고, 스캐폴딩 제거 원칙을 수립함.
@@ -140,8 +135,6 @@
 - 영향 범위: `_ops/RESOLVER.md`, `wiki/signals/2026-05-30-claude-opus-4-8-detailed-harnessing.md`.
 
 ---
-
-## 2026-05-30
 
 ### [SIGNAL] Claude Opus 4.8 출시 및 프롬프팅 아키텍처 재정립 신호 포착
 
@@ -152,8 +145,6 @@
 
 ---
 
-## 2026-05-30
-
 ### [INGEST] Josh Kim & Jeongmin Lee의 AI 네이티브 조직론 통합 이식
 
 - 무엇이 바뀌었나: 스킬 기반 가상 직원, 포인터 기반 리졸버, 자가 개선 루프 등 '진짜 AI 네이티브'를 위한 실행 지침을 지식 체계에 통합함.
@@ -162,8 +153,6 @@
 - 다음 확인: 리졸버(Resolver) 개념을 현재의 헤르메스 스킬셋 구조에 시험 적용하여 토큰 효율성 및 태스크 정확도 측정.
 
 ---
-
-## 2026-05-30
 
 ### [OPS] 대시보드 V5 인터랙션 및 환경 감지 기능 대규모 개선
 
@@ -215,6 +204,8 @@
 - 왜 중요한가: "Token Maxing" 전략의 실천적 도구를 확보함. 에이전트가 처리하는 데이터의 밀도를 높여 비용을 절감하고, 문맥 유지 능력을 극대화함.
 - 영향 범위: 시스템 전반의 Bash 명령어 실행 환경, `/Users/dkmac/.claude/CLAUDE.md`, `~/.claude/settings.json`.
 - 다음 확인: `rtk gain` 명령어를 통해 실제 토큰 절감 효과를 주기적으로 모니터링하고, `Protocol 3: LINT` 실행 시 토큰 효율성 지표 포함 검토.
+
+---
 
 ### [INGEST] LinkedIn 에이전트 자동화 원칙 지식 이식 및 분석
 
@@ -328,4 +319,4 @@
   [2026-05-27 16:03:55] NEW CONCEPT: skillopt.md (Self-Evolving AI Insight)
   [2026-05-27 18:33:57] SIGNAL DETECTED: Agentic Recruitment Proxy (Harper Insight)
   [2026-05-28 19:07:45] MISSION UPDATE: AI-Native Company Roadmap integrated.
-  [2026-05-29 19:09:10] FINANCIAL SIGNAL: Transportation Sector AI Pivot (MarketWatch Insight)\n
+  [2026-05-29 19:09:10] FINANCIAL SIGNAL: Transportation Sector AI Pivot (MarketWatch Insight)\n\n
