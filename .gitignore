@@ -43,3 +43,7 @@ scripts/output/
 *.json
 !manifest.json
 !_ops/web/data.json
+
+# AI Models and Blobs
+ragapp/ollama/models/blobs/
+ragapp/ollama/models/manifests/
