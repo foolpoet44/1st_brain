@@ -2,7 +2,7 @@ import os
 import re
 from datetime import datetime, timedelta
 
-VAULT_ROOT = "/Users/dkmac/Desktop/@26/dev"
+VAULT_ROOT = os.getcwd()
 WIKI_DIR = os.path.join(VAULT_ROOT, "wiki")
 PROJECTS_DIR = os.path.join(VAULT_ROOT, "projects")
 OPS_DIR = os.path.join(VAULT_ROOT, "_ops")
