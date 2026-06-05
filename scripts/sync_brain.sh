@@ -12,5 +12,5 @@ fi
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
 git add .
 git commit -m "[AUTOSYNC] Knowledge Metabolism Pulse: $TIMESTAMP"
-git push origin main
+git pull --rebase origin main && git push origin main
 echo "Knowledge evolution synced to GitHub at $TIMESTAMP"
