@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSP-Brain: Synaptic Control Tower V6</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+      :root {
+        --bg-color: #05070a;
+        --card-bg: rgba(10, 14, 20, 0.85);
+        --accent-blue: #3b82f6;
+        --accent-emerald: #10b981;
+        --accent-purple: #a855f7;
+        --border-color: rgba(48, 54, 61, 0.5);
+      }
+      body {
+        background-color: var(--bg-color);
+        color: #f0f6fc;
+        font-family: "Inter", sans-serif;
+        overflow: hidden;
+      }
+      .glass-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        transition: all 0.3s ease;
+      }
+      .glass-card:hover {
+        border-color: rgba(59, 130, 246, 0.4);
+      }
+      #network-container {
+        height: 52vh;
+        background: radial-gradient(circle at center, #0d111b 0%, #05070a 100%);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .stat-icon {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+      .btn-open:hover {
+        text-shadow: 0 0 12px var(--accent-blue);
+      }
+
+      /* Resilience Pulse */
+      @keyframes pulse-resilience {
+        0% {
+          box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+        }
+      }
+      .resilience-active {
+        animation: pulse-resilience 2s infinite;
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1f2937;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="h-screen flex flex-col p-4 md:p-6">
+    <!-- TOP NAVIGATION & STATUS -->
+    <header class="flex justify-between items-end mb-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <h1
+            class="text-3xl font-bold font-['Outfit'] bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400"
+          >
+            Synaptic Control Tower V6
+          </h1>
+          <span
+            class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[9px] font-bold text-blue-400 tracking-tighter"
+            >RESILIENCE ACTIVE</span
+          >
+        </div>
+        <p class="text-xs text-gray-500 italic mt-1">
+          지식 대사는 정지하지 않습니다. 모든 장애는 재개의 연료가 됩니다.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <!-- Resolver Status -->
+        <div class="hidden md:flex flex-col items-end">
+          <span
+            class="text-[9px] uppercase text-gray-600 font-bold tracking-widest leading-none mb-1"
+            >Active Resolver</span
+          >
+          <span
+            class="text-[11px] font-mono text-indigo-400 bg-indigo-950/30 px-2 py-1 rounded border border-indigo-900/40"
+            >routing -> _ops/scripts/resolver_engine.py</span
+          >
+        </div>
+        <!-- System Heartbeat -->
+        <div class="text-right">
+          <span
+            id="update-timer"
+            class="text-[9px] font-mono text-gray-600 block mb-1"
+            >SYNCING...</span
+          >
+          <div
+            id="status"
+            class="flex items-center gap-2 text-xs font-bold text-emerald-400"
+          >
+            <span
+              class="w-2.5 h-2.5 rounded-full bg-emerald-500 resilience-active"
+            ></span>
+            <span>GAIA-BRAIN ONLINE</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT GRID -->
+    <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden">
+      <!-- LEFT: The Knowledge Graph (7 Cols) -->
+      <div class="lg:col-span-8 flex flex-col gap-6">
+        <div id="network-container" class="relative group">
+          <div
+            class="absolute top-4 left-4 z-10 p-3 rounded-xl bg-black/40 backdrop-blur text-[10px] border border-white/5 space-y-2 pointer-events-none"
+          >
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-blue-500"></span> Concepts
+              (L2)
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Projects
+              (L3)
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-purple-500"></span> Outputs
+              (L4)
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden"
+        >
+          <!-- Recent Activity -->
+          <div class="glass-card p-5 flex flex-col">
+            <h3
+              class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 flex justify-between"
+            >
+              <span>Recent Synapses</span>
+              <span class="text-blue-400 animate-pulse">● LIVE</span>
+            </h3>
+            <ul
+              id="synapse-list"
+              class="flex-1 overflow-y-auto space-y-1 pr-1"
+            ></ul>
+          </div>
+          <!-- Task Tracker (Today's Harness Focus) -->
+          <div
+            class="glass-card p-5 flex flex-col bg-gradient-to-br from-gray-900/40 to-transparent"
+          >
+            <h3
+              class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 flex justify-between"
+            >
+              <span>Harness Checklist</span>
+              <span class="text-indigo-400">ANTI-BIAS MODE</span>
+            </h3>
+            <div
+              class="space-y-3 overflow-y-auto pr-1 text-[11px] text-gray-400"
+            >
+              <div class="flex items-start gap-2 group">
+                <input
+                  type="checkbox"
+                  checked
+                  disabled
+                  class="mt-0.5 rounded border-gray-700 bg-gray-950"
+                />
+                <span class="group-hover:text-white transition"
+                  >8-Cluster Ontology Mapping (L2)</span
+                >
+              </div>
+              <div class="flex items-start gap-2 group">
+                <input
+                  type="checkbox"
+                  checked
+                  disabled
+                  class="mt-0.5 rounded border-gray-700 bg-gray-950"
+                />
+                <span class="group-hover:text-white transition"
+                  >Claude 4.8 Effort Control Logic</span
+                >
+              </div>
+              <div class="flex items-start gap-2 group">
+                <input
+                  type="checkbox"
+                  class="mt-0.5 rounded border-gray-700 bg-gray-950"
+                />
+                <span class="group-hover:text-white transition text-indigo-300"
+                  >Durable Task Hand-off prototyping</span
+                >
+              </div>
+              <div class="flex items-start gap-2 group">
+                <input
+                  type="checkbox"
+                  class="mt-0.5 rounded border-gray-700 bg-gray-950"
+                />
+                <span class="group-hover:text-white transition"
+                  >Resolver v1.1 Integration with Skills</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Metabolism & Strategy (4 Cols) -->
+      <div class="lg:col-span-4 flex flex-col gap-6">
+        <!-- Stats Card -->
+        <div class="glass-card p-5 bg-blue-500/[0.02]">
+          <div class="grid grid-cols-2 gap-4 pb-5 border-b border-white/5">
+            <div class="space-y-1">
+              <p
+                class="text-[10px] font-bold text-blue-500 uppercase tracking-widest"
+              >
+                Density
+              </p>
+              <p id="total-atoms" class="text-3xl font-black font-['Outfit']">
+                --
+              </p>
+            </div>
+            <div class="space-y-1">
+              <p
+                class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest"
+              >
+                Velocity
+              </p>
+              <p
+                id="recent-activity"
+                class="text-3xl font-black font-['Outfit']"
+              >
+                --
+              </p>
+            </div>
+          </div>
+          <div
+            class="pt-5 flex justify-between items-center text-[10px] font-mono"
+          >
+            <span class="text-gray-500">Distribution:</span>
+            <span id="distribution-text" class="text-gray-300 font-bold"
+              >...</span
+            >
+          </div>
+          <div
+            id="distribution-bar"
+            class="h-1.5 w-full bg-gray-800 rounded-full mt-2 flex overflow-hidden"
+          ></div>
+        </div>
+
+        <!-- OKA Talent Persona Card -->
+        <div class="glass-card p-5 bg-emerald-500/[0.03] border-emerald-500/10">
+          <h3
+            class="text-[11px] font-black uppercase tracking-[0.2em] text-emerald-400 mb-4 flex justify-between items-center"
+          >
+            <span>OKA Talent DNA</span>
+            <span
+              class="px-2 py-0.5 rounded bg-emerald-500/10 text-[8px] border border-emerald-500/20"
+              >PSY-ATOMS READY</span
+            >
+          </h3>
+          <div class="space-y-4">
+            <div class="space-y-1.5">
+              <div
+                class="flex justify-between text-[10px] font-medium text-gray-400"
+              >
+                <span>Resilience (회복탄력성)</span>
+                <span class="text-emerald-400">88%</span>
+              </div>
+              <div
+                class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden"
+              >
+                <div
+                  class="h-full bg-gradient-to-r from-emerald-600 to-emerald-400 w-[88%] transition-all duration-1000"
+                ></div>
+              </div>
+            </div>
+            <div class="space-y-1.5">
+              <div
+                class="flex justify-between text-[10px] font-medium text-gray-400"
+              >
+                <span>Job Engagement (직무 몰입)</span>
+                <span class="text-blue-400">92%</span>
+              </div>
+              <div
+                class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden"
+              >
+                <div
+                  class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-[92%] transition-all duration-1000"
+                ></div>
+              </div>
+            </div>
+            <div class="space-y-1.5">
+              <div
+                class="flex justify-between text-[10px] font-medium text-gray-400"
+              >
+                <span>Stress Tolerance (스트레스 내성)</span>
+                <span class="text-purple-400">84%</span>
+              </div>
+              <div
+                class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden"
+              >
+                <div
+                  class="h-full bg-gradient-to-r from-purple-600 to-purple-400 w-[84%] transition-all duration-1000"
+                ></div>
+              </div>
+            </div>
+            <p class="text-[9px] text-gray-500 italic mt-2 leading-relaxed">
+              * `Psy_assess.pdf` 분석을 통해 추출된 지식 원자가 시스템의 인재
+              배치 및 팀 빌딩 로직에 통합되었습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Metabolism & Velocity Chart -->
+        <div class="glass-card p-5 bg-indigo-500/[0.03] border-indigo-500/10">
+          <h3
+            class="text-[11px] font-black uppercase tracking-[0.2em] text-indigo-400 mb-4 flex justify-between items-center"
+          >
+            <span>Knowledge Metabolism</span>
+            <span class="text-[8px] text-indigo-500/50">WEEKLY PULSE</span>
+          </h3>
+          <div class="h-24 w-full flex items-end justify-between gap-1 mt-2">
+            <div
+              class="bg-indigo-500/20 w-full h-[30%] rounded-t-sm hover:bg-indigo-500/40 transition-all duration-500"
+              title="Mon"
+            ></div>
+            <div
+              class="bg-indigo-500/25 w-full h-[45%] rounded-t-sm hover:bg-indigo-500/40 transition-all duration-500"
+              title="Tue"
+            ></div>
+            <div
+              class="bg-indigo-500/30 w-full h-[40%] rounded-t-sm hover:bg-indigo-500/40 transition-all duration-500"
+              title="Wed"
+            ></div>
+            <div
+              class="bg-indigo-500/40 w-full h-[60%] rounded-t-sm hover:bg-indigo-500/40 transition-all duration-500"
+              title="Thu"
+            ></div>
+            <div
+              class="bg-indigo-500/50 w-full h-[55%] rounded-t-sm hover:bg-indigo-500/40 transition-all duration-500"
+              title="Fri"
+            ></div>
+            <div
+              class="bg-indigo-500/60 w-full h-[85%] rounded-t-sm hover:bg-indigo-500/40 transition-all duration-500"
+              title="Sat"
+            ></div>
+            <div
+              class="bg-indigo-400 w-full h-[100%] rounded-t-sm animate-pulse"
+              title="Today"
+            ></div>
+          </div>
+          <div
+            class="flex justify-between mt-2 text-[8px] text-gray-600 font-mono"
+          >
+            <span>MON</span>
+            <span>WED</span>
+            <span>FRI</span>
+            <span class="text-indigo-400">NOW</span>
+          </div>
+          <p class="text-[9px] text-gray-500 mt-3 leading-relaxed">
+            <span class="text-emerald-400 font-bold">↑ 24%</span> increase in
+            synaptic density this week. <br />
+            지능의 임계점(Critical Mass)에 도달하기까지 12% 남았습니다.
+          </p>
+        </div>
+
+        <!-- Strategy Insight (Evolution Digest) -->
+        <div class="glass-card p-5 flex flex-col bg-purple-500/[0.03]">
+          <h3
+            class="text-[11px] font-black uppercase tracking-[0.2em] text-purple-400 mb-4 flex justify-between"
+          >
+            <span>Strategic Evolution Insight</span>
+            <span
+              id="serendipity-pulse"
+              class="text-[9px] text-purple-500/50"
+            ></span>
+          </h3>
+          <div
+            id="evolution-digest"
+            class="text-xs text-gray-400 leading-relaxed overflow-y-auto max-h-[25vh]"
+          ></div>
+        </div>
+
+        <!-- Knowledge Gaps (Gap Analysis) -->
+        <div
+          class="glass-card p-5 flex-1 flex flex-col border-yellow-500/10 bg-yellow-500/[0.01]"
+        >
+          <h3
+            class="text-[11px] font-black uppercase tracking-[0.2em] text-yellow-500 mb-3 flex justify-between"
+          >
+            <span>Knowledge Gaps</span>
+            <span
+              id="stale-badge"
+              class="px-1.5 py-0.5 rounded bg-yellow-500/10 text-yellow-500 text-[8px]"
+            ></span>
+          </h3>
+          <div
+            id="gap-list"
+            class="flex-1 overflow-y-auto text-[10px] space-y-1.5 text-gray-500"
+          >
+            <p class="italic text-[9px] text-gray-600">
+              고립된 문서들을 연결하여 신경망을 강화하세요.
+            </p>
+            <ul id="orphan-list" class="space-y-1 mt-2"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      let network = null;
+      const isLocal =
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1";
+
+      async function openFile(name, relPath) {
+        if (isLocal) {
+          fetch(`/api/open?file=${encodeURIComponent(name)}`);
+          const log = document.getElementById("op-log");
+          const p = document.createElement("p");
+          p.innerText = `> Activating Checkpoint: ${name}`;
+          p.className = "text-emerald-400";
+          log.prepend(p);
+        } else {
+          window.open(
+            `https://github.com/foolpoet44/1st_brain/blob/main/${relPath}`,
+            "_blank",
+          );
+        }
+      }
+
+      function renderEvolutionDigest(changes) {
+        const container = document.getElementById("evolution-digest");
+        if (!changes || changes.length === 0) return;
+        const change = changes[0];
+        container.innerHTML = `
+              <div class="space-y-3">
+                  <p class="font-bold text-white">${change.title}</p>
+                  <p class="text-blue-200">${change.date}</p>
+                  <p class="pl-3 border-l-2 border-emerald-500 italic">"${change.why_important}"</p>
+              </div>
+          `;
+      }
+
+      async function updateDashboard() {
+        try {
+          const res = await fetch("data.json");
+          const data = await res.json();
+
+          document.getElementById("total-atoms").innerText = data.total_atoms;
+          document.getElementById("recent-activity").innerText =
+            data.recent_activity;
+          document.getElementById("distribution-text").innerText =
+            `C:${data.l2} P:${data.l3} O:${data.l4}`;
+
+          const total = data.l2 + data.l3 + data.l4;
+          document.getElementById("distribution-bar").innerHTML = `
+                  <div class="bg-blue-500 h-full" style="width:${(data.l2 / total) * 100}%"></div>
+                  <div class="bg-emerald-500 h-full" style="width:${(data.l3 / total) * 100}%"></div>
+                  <div class="bg-purple-500 h-full" style="width:${(data.l4 / total) * 100}%"></div>
+              `;
+
+          // Evolution & Serendipity
+          if (data.serendipity) {
+            const digest = document.getElementById("evolution-digest");
+            document.getElementById("serendipity-pulse").innerText =
+              "✦ INSIGHT";
+            digest.innerHTML = `
+                <div class="space-y-3 animate-in fade-in duration-700">
+                    <p class="font-bold text-purple-300 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-purple-500 animate-ping"></span>
+                        ${data.serendipity.title}
+                    </p>
+                    <p class="text-[11px] leading-relaxed text-gray-400 bg-purple-500/5 p-2 rounded border border-purple-500/10">
+                        ${data.serendipity.reason}
+                    </p>
+                    <div class="flex gap-2">
+                        ${data.serendipity.links
+                          .map(
+                            (l) => `
+                            <button onclick="openFile('${l.split("/").pop()}', '${l}')" class="text-[9px] px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-gray-500 hover:text-white transition">
+                                [[${l.split("/").pop().replace(".md", "")}]]
+                            </button>
+                        `,
+                          )
+                          .join("")}
+                        <button onclick="alert('Claude Code에게 이 두 문서의 [Soul Bridge] 생성을 요청하세요.')" class="text-[9px] px-2 py-1 rounded bg-purple-500/20 hover:bg-purple-500/40 text-purple-300 border border-purple-500/30 transition flex items-center gap-1">
+                            <span>✦ Connect</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/5 opacity-50">
+                    ${data.latest_changes
+                      .map(
+                        (c) => `
+                        <div class="text-[10px] mb-2">
+                            <p class="text-gray-300 font-medium">${c.title}</p>
+                            <p class="text-gray-600">${c.date}</p>
+                        </div>
+                    `,
+                      )
+                      .slice(0, 1)
+                      .join("")}
+                </div>
+            `;
+          } else {
+            renderEvolutionDigest(data.latest_changes);
+          }
+
+          // Knowledge Gaps
+          document.getElementById("stale-badge").innerText =
+            `${data.stale_count} STALE`;
+          const orphanList = document.getElementById("orphan-list");
+          orphanList.innerHTML = data.orphans
+            .map(
+              (o) => `
+                <li class="flex justify-between items-center group cursor-pointer hover:text-white transition" onclick="openFile('${o.name}', '${o.path}')">
+                    <span class="truncate max-w-[150px]">${o.name.replace(".md", "")}</span>
+                    <span class="text-[8px] text-gray-700 group-hover:text-yellow-500">ISOLATED</span>
+                </li>
+            `,
+            )
+            .join("");
+
+          const list = document.getElementById("synapse-list");
+          list.innerHTML = data.recent_files
+            .map(
+              (f) => `
+                  <li class="flex justify-between items-center group cursor-pointer p-1 rounded hover:bg-white/5" onclick="openFile('${f.name}', '${f.path}')">
+                      <span class="text-[11px] truncate max-w-[200px] text-gray-300 group-hover:text-blue-400 font-medium">${f.name}</span>
+                      <span class="text-[9px] font-mono text-gray-600">${f.time}</span>
+                  </li>
+              `,
+            )
+            .join("");
+
+          // Graph Rendering
+          let nodes = [];
+          let edges = [];
+
+          if (data.graph && data.graph.nodes.length > 0) {
+            nodes = data.graph.nodes.map((n) => ({
+              ...n,
+              color: { background: "#0a0e14", border: "#30363d" },
+              font: { color: "#8b949e", size: 8 },
+            }));
+            // Add Category Hubs
+            nodes.push(
+              {
+                id: "L2",
+                label: "CONCEPTS",
+                color: "#3b82f6",
+                shape: "diamond",
+                size: 20,
+              },
+              {
+                id: "L3",
+                label: "PROJECTS",
+                color: "#10b981",
+                shape: "diamond",
+                size: 20,
+              },
+              {
+                id: "L4",
+                label: "OUTPUTS",
+                color: "#a855f7",
+                shape: "diamond",
+                size: 20,
+              },
+            );
+            edges = data.graph.edges.map((e) => ({
+              ...e,
+              color: { opacity: 0.4, color: "#3b82f6" },
+            }));
+
+            // Connect orphans to hubs if not connected
+            data.graph.nodes.forEach((n) => {
+              if (!edges.some((e) => e.from === n.id || e.to === n.id)) {
+                edges.push({
+                  from: n.group,
+                  to: n.id,
+                  color: { opacity: 0.1 },
+                });
+              }
+            });
+          } else {
+            nodes = [
+              {
+                id: "L2",
+                label: "CONCEPTS",
+                color: "#3b82f6",
+                shape: "diamond",
+                size: 25,
+              },
+              {
+                id: "L3",
+                label: "PROJECTS",
+                color: "#10b981",
+                shape: "diamond",
+                size: 25,
+              },
+              {
+                id: "L4",
+                label: "OUTPUTS",
+                color: "#a855f7",
+                shape: "diamond",
+                size: 25,
+              },
+            ];
+            data.recent_files.forEach((f, i) => {
+              let group = "L2";
+              if (f.path.includes("projects/")) group = "L3";
+              else if (f.path.includes("outputs/")) group = "L4";
+
+              nodes.push({
+                id: i,
+                label: f.name.replace(".md", ""),
+                color: { background: "#0a0e14", border: "#30363d" },
+                font: { color: "#8b949e", size: 9 },
+              });
+              edges.push({ from: group, to: i, color: { opacity: 0.3 } });
+            });
+          }
+
+          const container = document.getElementById("network-container");
+          const graphData = {
+            nodes: new vis.DataSet(nodes),
+            edges: new vis.DataSet(edges),
+          };
+          const options = {
+            physics: { enabled: true, solver: "forceAtlas2Based" },
+            nodes: { shadow: true },
+          };
+          if (!network)
+            network = new vis.Network(container, graphData, options);
+
+          document.getElementById("update-timer").innerText =
+            `LAST PULSE: ${new Date().toLocaleTimeString()}`;
+        } catch (e) {
+          console.error("Dash Error", e);
+        }
+      }
+
+      updateDashboard();
+      setInterval(updateDashboard, 10000);
+    </script>
+  </body>
+</html>
