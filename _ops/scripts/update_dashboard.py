@@ -41,7 +41,7 @@ class BacklinkAnalyzer:
                     # _index.md는 제목에서 제외
                     if name_no_ext == "_index": continue
 
-                    self.file_map[name_no_ext.lower()] = rel_path
+                    if name_no_ext.lower() not in self.file_map: self.file_map[name_no_ext.lower()] = rel_path
                     self.outlinks[rel_path] = []
                     self.backlinks[rel_path] = []
 
@@ -215,4 +215,6 @@ def get_recent_data():
 data = get_recent_data()
 os.makedirs(web_dir, exist_ok=True)
 with open(os.path.join(web_dir, "data.json"), 'w') as f:
+    with open(os.path.join(root, "data.json"), 'w') as fr:
+        json.dump(data, fr)
     json.dump(data, f)
