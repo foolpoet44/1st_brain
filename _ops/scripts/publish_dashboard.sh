@@ -10,7 +10,7 @@ cd "$VAULT_ROOT"
 python3 "$VAULT_ROOT/_ops/scripts/update_dashboard.py"
 
 # Git sync
-git add .gitignore _ops/web/index.html _ops/web/data.json KNOWLEDGE_PULSE.md _ops/scripts/update_dashboard.py _ops/scripts/publish_dashboard.sh
+git add .
 git commit -m "Dashboard Pulse: $(date '+%Y-%m-%d %H:%M:%S') [Automated]" || echo "No changes to commit"
 
 # Pull first to prevent merge rejection
