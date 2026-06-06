@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-06-05 20:01
+last_update: 2026-06-06 01:01
 status: 🟢 ACTIVE
 ---
 
@@ -13,14 +13,14 @@ status: 🟢 ACTIVE
 ## 1. 지식 대사 활성도 (Pulse)
 최근 7일간의 지식 업데이트 밀도입니다.
 
-` ▄▄ ▄▄▄  ` (Current Status)
+` ▄ ▄▄▄   ` (Current Status)
 
 ## 2. 계층별 지능 밀도 (7-Layer Density)
 - **L2 Concepts**: 43 Atoms (개념 원자 자산)
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
-- **[06-05 19:45]** `KNOWLEDGE_PULSE.md`
+- **[06-05 20:01]** `KNOWLEDGE_PULSE.md`
 - **[06-05 19:45]** `이름 없는 보드.md`
 - **[06-05 19:45]** `syncs/무제.md`
 - **[06-05 19:45]** `syncs/wiki/tools/obsidian.md`
