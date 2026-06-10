@@ -1,3 +1,13 @@
+## 2026-06-10
+
+### [REFLECT] 부의 외골격과 신뢰의 가드레일 정립
+
+- 무엇이 바뀌었나: Toss 디렉토리 아키텍처 재구성 및 에이전트 인프라(Connector/Adapter/MCP) 설치를 완료하고, 이를 '신뢰의 구조화' 관점에서 성찰함.
+- 왜 중요한가: 에이전트의 지능을 실제 금융/HR 실행력과 안전하게 결합하는 가드레일 인프라를 확보함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-10.md`, `Toss/`, `_ops/change-log.md`.
+
+---
+
 ### [ops] Toss 디렉토리 아키텍처 재구성 및 에이전트 인프라 설치
 
 - 무엇이 바뀌었나: Toss 디렉토리를 에이전트 기반 금융 커넥터 레이어로 재구성하고, TossConnector, TossAssetAdapter 및 MCP 서버 기능을 추가했습니다.
