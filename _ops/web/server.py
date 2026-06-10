@@ -40,6 +40,7 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
         return super().do_GET()
 
 os.chdir(WEB_DIR)
+socketserver.TCPServer.allow_reuse_address = True
 with socketserver.TCPServer(("", PORT), DashboardHandler) as httpd:
     print(f"Serving at port {PORT}")
     httpd.serve_forever()
