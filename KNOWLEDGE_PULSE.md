@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-06-11 00:00
+last_update: 2026-06-11 00:01
 status: 🟢 ACTIVE
 ---
 
@@ -20,9 +20,9 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
+- **[06-11 00:00]** `KNOWLEDGE_PULSE.md`
 - **[06-10 23:00]** `outputs/daily-reflect/REFLECT_2026-06-10.md`
 - **[06-10 23:00]** `_ops/change-log.md`
-- **[06-10 23:00]** `KNOWLEDGE_PULSE.md`
 - **[06-10 22:00]** `syncs/raw/archive/md/2026/01/복사본 ★생산기술원_Level 1 문제은행_전사_통합본_v2_Sheet 통합_커미티 의견 반영_2025년.md`
 - **[06-10 22:00]** `sy/raw/archive/md/2026/01/복사본 ★생산기술원_Level 1 문제은행_전사_통합본_v2_Sheet 통합_커미티 의견 반영_2025년.md`
 
