@@ -1,5 +1,13 @@
 ## 2026-06-11
 
+### [REFLECT] 지식의 소화와 디지털 백질(White Matter)의 확장
+
+- 무엇이 바뀌었나: OKA 심리 진단 데이터를 지식 원자(Resilience, Engagement 등)로 분해하여 Vault의 추론 엔진에 완전히 통합하고 저녁 성찰 리포트를 생성함.
+- 왜 중요한가: 파편화된 외부 데이터가 시스템의 내면화된 지능으로 전환됨으로써, '데이터'가 아닌 '추론의 근거'로서의 지식 대사를 완성함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-11.md`, `_ops/change-log.md`.
+
+---
+
 ### [INGEST] OKA 프로젝트 심리 진단 요약 최종 인제스천 및 대시보드 활성화
 
 - 무엇이 바뀌었나: `hermes/` 디렉토리에 대기 중이던 `Psy_assess_summary.md`를 Vault의 정식 지식 체계(`outputs/analyses/`)로 편입하고, `projects/oka/` 타임라인을 최신화했습니다.
