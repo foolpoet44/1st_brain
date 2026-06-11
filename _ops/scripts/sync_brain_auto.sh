@@ -19,15 +19,15 @@ echo "Updating dashboard..."
 python3 "$REPO_ROOT/_ops/scripts/update_dashboard.py" || echo "Dashboard update failed."
 
 # 2. Git operations
-echo "Pulling latest changes..."
-git pull --rebase -Xtheirs origin main || echo "Pull failed, attempting to continue..."
-
 echo "Adding changes..."
 git add .
 
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 echo "Committing changes..."
 git commit -m "Auto-Sync: $TIMESTAMP [Evolution Insight]" || echo "Nothing to commit"
+
+echo "Pulling latest changes..."
+git pull --rebase -Xtheirs origin main || echo "Pull failed, attempting to continue..."
 
 # 3. Push to origin
 echo "Pushing to origin..."
