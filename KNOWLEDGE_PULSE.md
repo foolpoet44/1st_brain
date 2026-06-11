@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-06-11 23:00
+last_update: 2026-06-12 00:01
 status: 🟢 ACTIVE
 ---
 
@@ -13,16 +13,16 @@ status: 🟢 ACTIVE
 ## 1. 지식 대사 활성도 (Pulse)
 최근 7일간의 지식 업데이트 밀도입니다.
 
-`      ▄▄ ` (Current Status)
+`     ▄▄  ` (Current Status)
 
 ## 2. 계층별 지능 밀도 (7-Layer Density)
 - **L2 Concepts**: 43 Atoms (개념 원자 자산)
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
-- **[06-11 22:02]** `_ops/change-log.md`
-- **[06-11 22:02]** `outputs/daily-reflect/REFLECT_2026-06-11.md`
-- **[06-11 22:00]** `KNOWLEDGE_PULSE.md`
+- **[06-11 23:01]** `outputs/daily-reflect/REFLECT_2026-06-11.md`
+- **[06-11 23:01]** `_ops/change-log.md`
+- **[06-11 23:01]** `KNOWLEDGE_PULSE.md`
 - **[06-11 20:00]** `projects/oka/README.md`
 - **[06-11 20:00]** `outputs/analyses/psy-assess-summary.md`
 
