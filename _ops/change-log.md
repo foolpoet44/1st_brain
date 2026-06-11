@@ -1,3 +1,13 @@
+## 2026-06-11
+
+### [INGEST] OKA 프로젝트 심리 진단 요약 최종 인제스천 및 대시보드 활성화
+
+- 무엇이 바뀌었나: `hermes/` 디렉토리에 대기 중이던 `Psy_assess_summary.md`를 Vault의 정식 지식 체계(`outputs/analyses/`)로 편입하고, `projects/oka/` 타임라인을 최신화했습니다.
+- 왜 중요한가: 파편화된 심리 진단 데이터를 Vault의 추론 근거(Knowledge Atoms)로 실질적으로 연결하여 지식 대사를 완성했습니다.
+- 영향 범위: `outputs/analyses/psy-assess-summary.md`, `projects/oka/README.md`, `KNOWLEDGE_PULSE.md`.
+
+---
+
 ## 2026-06-10
 
 ### [REFLECT] 부의 외골격과 신뢰의 가드레일 정립
