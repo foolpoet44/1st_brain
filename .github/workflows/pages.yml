@@ -1,0 +1,57 @@
+name: Deploy Pages (submodule-safe)
+
+# 레거시 "Deploy from a branch" Jekyll 빌더를 대체한다.
+# 레거시 빌더는 actions/checkout 을 submodules:recursive 로 호출해, 깨진
+# gitlink(예: .gitmodules 에 URL 없는 tmp_deploy)가 하나라도 생기면
+# exit 128 로 배포 전체가 죽었다. 이 워크플로는 submodules:false 로
+# 체크아웃하므로 서브모듈 메타데이터가 어긋나도 Pages 배포가 영향받지 않는다.
+#
+# 전제: Settings > Pages > Build and deployment > Source = "GitHub Actions"
+# (레거시 "Deploy from a branch" 에서 한 번만 전환해야 이 워크플로가 발행한다.)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 동시 배포 충돌 방지(진행 중 배포는 취소하지 않고 직렬화)
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: false # 핵심: 깨진 gitlink 가 배포를 깨뜨리지 못하게 한다
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
