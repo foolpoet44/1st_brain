@@ -36,19 +36,14 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Jekyll 미사용: vault에 자동 축적되는 아카이브 마크다운에 {{ }} 플레이스홀더가
-      # 들어 있어 Jekyll(Liquid)이 이를 템플릿으로 해석하려다 빌드 전체가 죽는다.
-      # 대시보드는 index.html + data.json 짜리 순수 정적 페이지이므로 Jekyll이 불필요.
-      # 발행에 필요한 정적 파일만 추려 _site 로 조립한다.
-      - name: Assemble static dashboard
-        run: |
-          rm -rf _site
-          mkdir -p _site
-          cp index.html _site/index.html
-          cp data.json _site/data.json
-          [ -f METABOLISM_SNAPSHOT.html ] && cp METABOLISM_SNAPSHOT.html _site/ || true
-          touch _site/.nojekyll
-          echo "Assembled _site:"; ls -la _site
+      # 지식 위키 발행: Jekyll 로 vault 마크다운을 웹페이지로 렌더링한다.
+      # 빌드를 깨뜨리는 {{ }} 마크다운(자동추출 덤프·템플릿)은 _config.yml exclude 에서
+      # 걸러내므로 Liquid 오류 없이 빌드된다. 대시보드(index.html+data.json)도 함께 발행됨.
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -1,5 +1,14 @@
 ## 2026-06-12
 
+### [ops] Pages를 지식 위키 발행으로 확장 — Jekyll 재도입 + 지뢰 마크다운만 선별 제외
+
+- 무엇이 바뀌었나: Pages 빌드를 정적 대시보드 전용에서 Jekyll 기반 지식 위키 발행으로 확장함. `pages.yml`을 `jekyll-build-pages`로 되돌리고(`submodules: false` 유지), `_config.yml`의 exclude를 재설계하여 지식 폴더(wiki/concepts/projects/outputs/people/decisions/weekly/research 등)는 발행하고 vault 복제본(dev/dev2/sync/syncs/sy/raw)·코드/앱(Toss/ragapp/harness)·빌드 부산물·Liquid 빌드를 깨뜨리는 `{{ }}` 마크다운만 제외함.
+- 왜 중요한가: 대시보드뿐 아니라 지식 자체를 웹에서 열람 가능하게 만들면서도, github-pages의 optional-front-matter가 모든 .md를 Liquid 처리해 발생하던 빌드 실패를 회피함. 지뢰는 전부 `concepts/extracted-*.md`(UUID 자동추출 덤프 228개)·`templates/`·`outputs/weekly/2026-W18.md`에 군집해 있어 선별 제외로 봉쇄함 — 사람이 쓴 실제 지식 노트는 보존.
+- 영향 범위: `.github/workflows/pages.yml`, `_config.yml`. 발행 .md 5075→672개(노이즈 제외). 제외 적용 후 발행 대상에 남은 `{{ }}` 지뢰 0개를 시뮬레이션으로 검증함.
+- 다음 확인: 머지 후 `Deploy Pages (submodule-safe)` 런이 build·deploy 모두 success로 끝나고 지식 페이지(/wiki/*, /concepts/* 등)가 실제 열람되는지 확인.
+
+---
+
 ### [ops] Pages 빌드를 Jekyll 제거 → 정적 대시보드 발행으로 전환 (Liquid 빌드 오류 제거)
 
 - 무엇이 바뀌었나: `.github/workflows/pages.yml`에서 `actions/jekyll-build-pages`를 제거하고, 발행에 실제로 필요한 정적 파일(`index.html`, `data.json`, `METABOLISM_SNAPSHOT.html` + `.nojekyll`)만 `_site`로 조립해 업로드하도록 변경함.
