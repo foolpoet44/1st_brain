@@ -1,5 +1,14 @@
 ## 2026-06-12
 
+### [ops] Pages 빌드를 Jekyll 제거 → 정적 대시보드 발행으로 전환 (Liquid 빌드 오류 제거)
+
+- 무엇이 바뀌었나: `.github/workflows/pages.yml`에서 `actions/jekyll-build-pages`를 제거하고, 발행에 실제로 필요한 정적 파일(`index.html`, `data.json`, `METABOLISM_SNAPSHOT.html` + `.nojekyll`)만 `_site`로 조립해 업로드하도록 변경함.
+- 왜 중요한가: 서브모듈(exit 128) 문제 해결 후 빌드가 Jekyll 단계까지 진행되자, 오토싱크가 `dev2/raw/`·`syncs/raw/` 등에 축적한 아카이브 마크다운의 `{{시간}}`·`{{ width: ${...} }}` 같은 플레이스홀더를 Jekyll(Liquid)이 템플릿으로 해석하려다 `Liquid::SyntaxError`로 매 푸시 실패했음. 대시보드는 순수 정적 페이지라 Jekyll이 불필요 — 엔진 자체를 제거해 폴더 제외 두더지잡기 없이 원인을 봉쇄함.
+- 영향 범위: `.github/workflows/pages.yml`. 발행물은 대시보드(index.html+data.json)와 METABOLISM_SNAPSHOT.html로 한정됨(vault 마크다운은 더 이상 웹페이지로 렌더링되지 않음 — 기존에도 사용처 없던 부산물).
+- 다음 확인: 머지 후 `Deploy Pages (submodule-safe)` 런이 build·deploy 모두 success로 끝나고 대시보드가 갱신되는지 확인.
+
+---
+
 ### [REFLECT] 시스템 구조적 회복탄력성 및 지식 대사 안전망 구축
 
 - 무엇이 바뀌었나: GitHub Pages 배포 장애(exit 128)를 유발하던 유령 서브모듈을 정리하고, 자동싱크 스크립트에 gitlink 오염을 차단하는 가드를 설치함. 배포 방식을 서브모듈 독립적 워크플로로 전환함.
