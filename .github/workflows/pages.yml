@@ -32,9 +32,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: false # 핵심: 깨진 gitlink 가 배포를 깨뜨리지 못하게 한다
+          fetch-depth: 0 # 지식 인덱스의 '최신 수정순' 계산에 전체 커밋 히스토리 필요
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      # 지식 인덱스 데이터 생성: 파일별 git 마지막 커밋 시각으로 최신순 정렬해
+      # _data/knowledge.json 을 떨군다. knowledge.html 이 이를 폴더별로 렌더링한다.
+      - name: Generate knowledge index
+        run: python3 _ops/scripts/gen_knowledge_index.py
 
       # 지식 위키 발행: Jekyll 로 vault 마크다운을 웹페이지로 렌더링한다.
       # 빌드를 깨뜨리는 {{ }} 마크다운(자동추출 덤프·템플릿)은 _config.yml exclude 에서

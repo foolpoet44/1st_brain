@@ -50,3 +50,6 @@ scripts/output/
 # AI Models and Blobs
 ragapp/ollama/models/blobs/
 ragapp/ollama/models/manifests/
+
+# 빌드 시 생성되는 지식 인덱스 데이터 (워크플로가 매 배포마다 재생성)
+_data/knowledge.json

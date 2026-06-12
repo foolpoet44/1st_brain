@@ -1,5 +1,14 @@
 ## 2026-06-12
 
+### [ops] 지식 인덱스 정렬을 '최신 수정순'으로 — git mtime 기반 빌드시 생성
+
+- 무엇이 바뀌었나: 인덱스를 경로순에서 최신 수정순으로 변경. 빌드 전 `_ops/scripts/gen_knowledge_index.py`가 파일별 git 마지막 커밋 시각을 계산해 `_data/knowledge.json`(최신순 정렬)을 생성하고, `knowledge.html`이 이를 폴더별로 렌더링함(폴더 내 최신순 유지, 각 문서에 날짜 표시). 워크플로 checkout에 `fetch-depth: 0` 추가.
+- 왜 중요한가: 발행 문서 144개 중 날짜 프론트매터 보유는 ~25%뿐이라 프론트매터 정렬은 부정확함. git 마지막 커밋 시각이 '최신 수정'의 유일하게 신뢰할 수 있는 신호. 매 배포마다 재생성되므로 오토싱크 동기화 후에도 정렬이 자동 최신화됨.
+- 영향 범위: `_ops/scripts/gen_knowledge_index.py`(신규), `knowledge.html`, `.github/workflows/pages.yml`(fetch-depth:0 + 생성 단계), `.gitignore`(_data/knowledge.json). 로컬 검증: 144개 문서가 단조 최신순 정렬, 날짜 누락 0.
+- 다음 확인: 머지 후 빌드 success 및 `/knowledge/`가 폴더별 최신순으로 표시되는지 확인.
+
+---
+
 ### [ops] 지식 인덱스 페이지 추가 — 발행 문서 자동 목록 + 대시보드 링크
 
 - 무엇이 바뀌었나: `/knowledge/` 경로의 인덱스 페이지(`knowledge.html`)를 추가함. Jekyll이 빌드 시점에 `site.html_pages`를 폴더별로 자동 집계해 지식 폴더(wiki/concepts/projects/outputs/people/decisions/weekly/research) 문서를 링크로 나열함. 대시보드(`index.html`) 헤더에 '📚 지식 인덱스' 링크를 추가함.
