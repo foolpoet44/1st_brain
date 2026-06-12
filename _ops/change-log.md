@@ -1,3 +1,14 @@
+## 2026-06-12
+
+### [ops] GitHub Pages 배포 실패(exit 128) 원인 제거 — 유령 서브모듈 정리
+
+- 무엇이 바뀌었나: `.gitmodules`에 URL 정의가 없는 채 트리에 gitlink로만 박혀 있던 `tmp_deploy`를 인덱스에서 제거하고, 반대로 `.gitmodules`에는 있으나 gitlink가 없던 죽은 `projects/worldmonitor` 항목을 삭제함. 재발 방지를 위해 `.gitignore`에 `tmp_deploy/`를 추가함.
+- 왜 중요한가: Pages 자동 빌더(`pages-build-deployment`)가 `submodules: recursive`로 체크아웃하면서 `tmp_deploy`의 URL을 찾지 못해 `fatal: No url found ... exit code 128`로 죽었고, 2026-06-10 23:00 오토싱크(`46546a7`) 이후 모든 Pages 배포가 연속 실패했음. 이 정리로 배포 파이프라인의 구조적 실패 원인을 제거함.
+- 영향 범위: `.gitmodules`, `.gitignore`, `tmp_deploy`(추적 해제). main 머지 후 Pages 빌드가 정상화됨.
+- 다음 확인: main 머지 직후 `pages-build-deployment` 최신 런이 success로 전환되는지 확인. 오토싱크(Hermes) 스크립트가 `git add -A`로 임시 디렉터리를 다시 gitlink로 흡수하지 않는지 모니터링.
+
+---
+
 ## 2026-06-11
 
 ### [REFLECT] 지식의 소화와 디지털 백질(White Matter)의 확장

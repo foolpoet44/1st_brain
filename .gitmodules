@@ -4,9 +4,6 @@
 [submodule "open-design"]
 	path = open-design
 	url = https://github.com/nexu-io/open-design.git
-[submodule "projects/worldmonitor"]
-	path = projects/worldmonitor
-	url = https://github.com/koala73/worldmonitor.git
 [submodule "temp_skill"]
 	path = temp_skill
 	url = https://github.com/admonth1224/claude-tomd-skill.git
