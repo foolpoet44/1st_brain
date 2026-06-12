@@ -22,6 +22,16 @@ python3 "$REPO_ROOT/_ops/scripts/update_dashboard.py" || echo "Dashboard update 
 echo "Adding changes..."
 git add .
 
+# --- 안전장치: .gitmodules에 없는 우발적 gitlink(중첩 git 저장소) 언스테이징 ---
+# tmp_deploy 같은 임시/중첩 저장소가 gitlink로 흡수되면 GitHub Pages 빌더가
+# 'No url found ... exit code 128'로 죽는다. 선언되지 않은 gitlink는 커밋 전에 제거.
+git ls-files --stage | awk '$1 == "160000" {print $4}' | while IFS= read -r gl; do
+    if ! grep -qF "path = $gl" .gitmodules 2>/dev/null; then
+        echo "⚠️  우발적 gitlink 제거(언스테이징): $gl"
+        git rm --cached "$gl" >/dev/null 2>&1 || true
+    fi
+done
+
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 echo "Committing changes..."
 git commit -m "Auto-Sync: $TIMESTAMP [Evolution Insight]" || echo "Nothing to commit"
