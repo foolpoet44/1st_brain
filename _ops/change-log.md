@@ -1,5 +1,13 @@
 ## 2026-06-12
 
+### [REFLECT] 시스템 구조적 회복탄력성 및 지식 대사 안전망 구축
+
+- 무엇이 바뀌었나: GitHub Pages 배포 장애(exit 128)를 유발하던 유령 서브모듈을 정리하고, 자동싱크 스크립트에 gitlink 오염을 차단하는 가드를 설치함. 배포 방식을 서브모듈 독립적 워크플로로 전환함.
+- 왜 중요한가: 지식의 확장(White Matter)이 인프라 결함으로 인해 멈추지 않도록 시스템의 '혈류(Sync)'와 '배포(Pages)'의 내구성을 확보함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-12.md`, `.github/workflows/pages.yml`, `scripts/sync_brain.sh`.
+
+---
+
 ### [ops] 자동싱크 스크립트에 우발적 gitlink 차단 안전장치 추가 (근본 원인 봉쇄)
 
 - 무엇이 바뀌었나: `git add .`로 전체를 스테이징하는 자동싱크 스크립트 3종(`scripts/sync_brain.sh`, `_ops/scripts/sync_brain_auto.sh`, `_ops/scripts/publish_dashboard.sh`)에, 커밋 직전 `.gitmodules`에 선언되지 않은 gitlink(중첩 git 저장소)를 자동 언스테이징하는 가드를 삽입함.
