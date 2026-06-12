@@ -1,5 +1,14 @@
 ## 2026-06-12
 
+### [ops] 자동싱크 스크립트에 우발적 gitlink 차단 안전장치 추가 (근본 원인 봉쇄)
+
+- 무엇이 바뀌었나: `git add .`로 전체를 스테이징하는 자동싱크 스크립트 3종(`scripts/sync_brain.sh`, `_ops/scripts/sync_brain_auto.sh`, `_ops/scripts/publish_dashboard.sh`)에, 커밋 직전 `.gitmodules`에 선언되지 않은 gitlink(중첩 git 저장소)를 자동 언스테이징하는 가드를 삽입함.
+- 왜 중요한가: `tmp_deploy`를 박은 `[AUTOSYNC] Knowledge Metabolism Pulse` 커밋(`46546a7`)의 출처가 바로 `scripts/sync_brain.sh`의 `git add .`였음(로컬 Mac cron). 가드는 특정 이름이 아니라 "중첩 저장소가 실수로 gitlink로 흡수되는 것" 자체를 일반적으로 차단해, Pages exit 128 재발을 스크립트 단에서 봉쇄함. 정상 파일·선언된 서브모듈은 건드리지 않는 비파괴적 방식(격리 테스트로 검증).
+- 영향 범위: `scripts/sync_brain.sh`, `_ops/scripts/sync_brain_auto.sh`, `_ops/scripts/publish_dashboard.sh`. 로컬에서 도는 스크립트라 CSP가 다음 `git pull` 후부터 효과 발생.
+- 다음 확인: 다음 자동싱크 실행 로그에 "우발적 gitlink 제거" 경고가 뜨는지(=흡수 시도 차단됨) 관찰. wiki_dash 저장소의 동일 `deploy.py`는 세션 범위 밖이라 미반영(별도 처리 필요).
+
+---
+
 ### [ops] Pages 배포를 서브모듈 안전 커스텀 워크플로로 전환 (재발 구조적 차단)
 
 - 무엇이 바뀌었나: `.github/workflows/pages.yml`을 추가함. 레거시 "Deploy from a branch" Jekyll 빌더(서브모듈을 `recursive`로 체크아웃)를 대체하여, `submodules: false`로 체크아웃 후 동일한 Jekyll 빌드를 거쳐 `actions/deploy-pages`로 배포함.
