@@ -36,14 +36,24 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+      # Jekyll 미사용: vault에 자동 축적되는 아카이브 마크다운에 {{ }} 플레이스홀더가
+      # 들어 있어 Jekyll(Liquid)이 이를 템플릿으로 해석하려다 빌드 전체가 죽는다.
+      # 대시보드는 index.html + data.json 짜리 순수 정적 페이지이므로 Jekyll이 불필요.
+      # 발행에 필요한 정적 파일만 추려 _site 로 조립한다.
+      - name: Assemble static dashboard
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp index.html _site/index.html
+          cp data.json _site/data.json
+          [ -f METABOLISM_SNAPSHOT.html ] && cp METABOLISM_SNAPSHOT.html _site/ || true
+          touch _site/.nojekyll
+          echo "Assembled _site:"; ls -la _site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
   deploy:
     needs: build
