@@ -1,5 +1,14 @@
 ## 2026-06-12
 
+### [ops] 지식 인덱스 페이지 추가 — 발행 문서 자동 목록 + 대시보드 링크
+
+- 무엇이 바뀌었나: `/knowledge/` 경로의 인덱스 페이지(`knowledge.html`)를 추가함. Jekyll이 빌드 시점에 `site.html_pages`를 폴더별로 자동 집계해 지식 폴더(wiki/concepts/projects/outputs/people/decisions/weekly/research) 문서를 링크로 나열함. 대시보드(`index.html`) 헤더에 '📚 지식 인덱스' 링크를 추가함.
+- 왜 중요한가: 그간 지식 페이지는 URL을 직접 알아야 접근 가능했음. 수동 목록이 아니라 자동 순회 방식이라 오토싱크가 새 문서를 동기화해도 인덱스가 다음 배포에서 스스로 갱신됨 — 유지보수 불필요.
+- 영향 범위: `knowledge.html`(신규), `index.html`(헤더 링크 1줄). `index.html`은 자동 재생성 대상이 아님(스크립트는 data.json만 갱신)이라 링크가 보존됨.
+- 다음 확인: 머지 후 빌드 success 및 `/knowledge/`에서 폴더별 문서 목록이 렌더링되는지 확인.
+
+---
+
 ### [ops] Pages를 지식 위키 발행으로 확장 — Jekyll 재도입 + 지뢰 마크다운만 선별 제외
 
 - 무엇이 바뀌었나: Pages 빌드를 정적 대시보드 전용에서 Jekyll 기반 지식 위키 발행으로 확장함. `pages.yml`을 `jekyll-build-pages`로 되돌리고(`submodules: false` 유지), `_config.yml`의 exclude를 재설계하여 지식 폴더(wiki/concepts/projects/outputs/people/decisions/weekly/research 등)는 발행하고 vault 복제본(dev/dev2/sync/syncs/sy/raw)·코드/앱(Toss/ragapp/harness)·빌드 부산물·Liquid 빌드를 깨뜨리는 `{{ }}` 마크다운만 제외함.

@@ -1,0 +1,39 @@
+---
+layout: default
+title: 지식 인덱스
+permalink: /knowledge/
+---
+
+<h1>🧠 CSP-Brain 지식 인덱스</h1>
+
+<p>
+  Vault에 축적된 지식 문서를 폴더별로 자동 집계합니다. 새 문서가 동기화되면
+  이 목록도 다음 배포에서 자동으로 갱신됩니다.
+  <a href="{{ '/' | relative_url }}">← 대시보드로 돌아가기</a>
+</p>
+
+{%- comment -%}
+  발행 대상 지식 폴더만 화이트리스트로 노출한다. site.html_pages 를 최상위
+  폴더 기준으로 그룹화하고, 각 그룹에서 페이지를 경로순으로 나열한다.
+  (수동 목록이 아니라 Jekyll 이 빌드 시점에 자동 생성 → 유지보수 불필요)
+{%- endcomment -%}
+{% assign allow = "wiki,concepts,projects,outputs,people,decisions,weekly,research" | split: "," %}
+{% assign groups = site.html_pages | group_by_exp: "p", "p.path | split: '/' | first" %}
+
+<p>발행 페이지 총 {{ site.html_pages | size }}개</p>
+
+{% for dir in allow %}
+  {% for g in groups %}
+    {% if g.name == dir %}
+      <h2 id="{{ dir }}">{{ dir }} <small>({{ g.items | size }})</small></h2>
+      <ul>
+        {% assign sorted = g.items | sort: "path" %}
+        {% for p in sorted %}
+          <li>
+            <a href="{{ p.url | relative_url }}">{{ p.title | default: p.name | default: p.path }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
