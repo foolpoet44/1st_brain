@@ -1,5 +1,14 @@
 ## 2026-06-12
 
+### [ops] Pages 배포를 서브모듈 안전 커스텀 워크플로로 전환 (재발 구조적 차단)
+
+- 무엇이 바뀌었나: `.github/workflows/pages.yml`을 추가함. 레거시 "Deploy from a branch" Jekyll 빌더(서브모듈을 `recursive`로 체크아웃)를 대체하여, `submodules: false`로 체크아웃 후 동일한 Jekyll 빌드를 거쳐 `actions/deploy-pages`로 배포함.
+- 왜 중요한가: 직전 정리(유령 gitlink 제거)는 사후 처방이라, 자동싱크(Hermes)가 앞으로 또 깨진 gitlink를 박으면 레거시 빌더가 다시 exit 128로 죽을 수 있었음. 이 전환은 Pages 배포가 서브모듈 메타데이터 정합성에 의존하지 않게 만들어 동일 장애를 구조적으로 차단함.
+- 영향 범위: `.github/workflows/pages.yml`(신규). 활성화에는 Settings > Pages > Source = "GitHub Actions" 1회 전환이 필요(저장소 설정이라 에이전트가 대신 못 함).
+- 다음 확인: 설정 전환 후 첫 푸시에서 `Deploy Pages (submodule-safe)` 워크플로가 success로 끝나고 사이트가 갱신되는지 확인. 전환 완료 시 레거시 `pages-build-deployment`는 자동 비활성화됨.
+
+---
+
 ### [ops] GitHub Pages 배포 실패(exit 128) 원인 제거 — 유령 서브모듈 정리
 
 - 무엇이 바뀌었나: `.gitmodules`에 URL 정의가 없는 채 트리에 gitlink로만 박혀 있던 `tmp_deploy`를 인덱스에서 제거하고, 반대로 `.gitmodules`에는 있으나 gitlink가 없던 죽은 `projects/worldmonitor` 항목을 삭제함. 재발 방지를 위해 `.gitignore`에 `tmp_deploy/`를 추가함.
