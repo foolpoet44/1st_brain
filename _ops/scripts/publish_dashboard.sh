@@ -24,8 +24,14 @@ done
 
 git commit -m "Dashboard Pulse: $(date '+%Y-%m-%d %H:%M:%S') [Automated]" || echo "No changes to commit"
 
+# Stash remaining unstaged changes temporarily to avoid pull conflicts
+git stash
+
 # Pull first to prevent merge rejection
 git pull --rebase origin main
+
+# Restore stashed changes
+git stash pop || echo "No stashed changes to restore"
 
 # Try pushing, but don't fail the whole script if it's an auth issue
 git push origin main || echo "Git push failed. Please check your GitHub authentication (run 'gh auth login' or setup SSH keys)."
