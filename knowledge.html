@@ -7,33 +7,27 @@ permalink: /knowledge/
 <h1>🧠 CSP-Brain 지식 인덱스</h1>
 
 <p>
-  Vault에 축적된 지식 문서를 폴더별로 묶어, 각 폴더 안에서 <strong>최신 수정순</strong>
+  Vault에 축적된 지식 문서를 폴더 구분 없이 <strong>전체 최신 수정순</strong>
   (git 마지막 커밋 기준)으로 나열합니다. 새 문서가 동기화되면 다음 배포에서 자동 갱신됩니다.
   <a href="{{ '/' | relative_url }}">← 대시보드로 돌아가기</a>
 </p>
 
 {%- comment -%}
-  데이터는 빌드 전에 _ops/scripts/gen_knowledge_index.py 가 생성한
-  _data/knowledge.json (이미 최신순 정렬됨). where 필터는 정렬 순서를 보존하므로
-  각 폴더 안에서도 최신순이 유지된다.
+  데이터(_data/knowledge.json)는 _ops/scripts/gen_knowledge_index.py 가 빌드 전에
+  파일별 git 마지막 커밋 시각으로 전역 최신순 정렬해 생성한다. 여기서는 폴더 그룹 없이
+  하나의 목록(최근 변경 피드)으로 그대로 출력한다. 폴더는 항목 옆 태그로 표시.
 {%- endcomment -%}
-{% assign allow = "wiki,concepts,projects,outputs,people,decisions,weekly,research" | split: "," %}
 
 <p>총 {{ site.data.knowledge | size }}개 · 최신 수정순</p>
 
-{% for dir in allow %}
-  {% assign docs = site.data.knowledge | where: "dir", dir %}
-  {% if docs.size > 0 %}
-    <h2 id="{{ dir }}">{{ dir }} <small>({{ docs.size }})</small></h2>
-    <ul>
-      {% for d in docs %}
-        <li>
-          <a href="{{ d.url | relative_url }}">{{ d.title }}</a>
-          {% if d.date and d.date != "" %}
-            <small style="color:#888"> · {{ d.date }}</small>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-{% endfor %}
+<ul class="knowledge-feed">
+  {% for d in site.data.knowledge %}
+    <li>
+      {% if d.date and d.date != "" %}
+        <small style="color:#888; font-variant-numeric:tabular-nums">{{ d.date }}</small>
+      {% endif %}
+      <a href="{{ d.url | relative_url }}">{{ d.title }}</a>
+      <small style="color:#aaa">· {{ d.dir }}</small>
+    </li>
+  {% endfor %}
+</ul>
