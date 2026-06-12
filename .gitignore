@@ -5,6 +5,9 @@
 .obsidian/core-plugins-migration.json
 .obsidian/types.json
 
+# Temp deploy artifacts (오토싱크가 gitlink로 삼키는 것 방지)
+tmp_deploy/
+
 # OS
 .DS_Store
 Thumbs.db
