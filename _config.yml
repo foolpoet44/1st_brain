@@ -1,20 +1,40 @@
 name: CSP-Brain
+
+# Pages 발행 정책
+# ---------------------------------------------------------------------------
+# 발행 대상: 지식 위키(wiki/ concepts/ projects/ outputs/ people/ decisions/
+#   weekly/ research/ 등)와 대시보드(index.html + data.json).
+# 제외 대상: vault 복제본·원자료·코드/앱·빌드 부산물, 그리고 Jekyll(Liquid)
+#   빌드를 깨뜨리는 {{ }} 마크다운(UUID 자동추출 덤프, 미치환 템플릿).
+# 주의: github-pages 의 jekyll-optional-front-matter 가 모든 .md 를 Liquid 로
+#   처리하므로, {{ }} 가 든 .md 는 반드시 제외해야 빌드가 통과한다.
 exclude:
-  - Understand-Anything/
-  - raw/
-  - open-design/
-  - projects/
-  - temp_skill/
-  - sy/
-  - sync/
-  - dev/
-  - wiki/
-  - concepts/
-  - people/
-  - research/
-  - outputs/
-  - inbox/
-  - attachments/
-  - scripts/
+  # 빌드/설정/의존성
   - .obsidian/
   - venv/
+  - attachments/
+  - scripts/
+  - _ops/
+  # 서브모듈 · 임시 디렉터리
+  - Understand-Anything/
+  - open-design/
+  - temp_skill/
+  - tmp_deploy/
+  # vault 복제본 · 원자료 (노이즈)
+  - dev/
+  - dev2/
+  - sync/
+  - syncs/
+  - sy/
+  - raw/
+  - inbox/
+  # 코드 · 앱 (지식 문서 아님)
+  - Toss/
+  - ragapp/
+  - harness/
+  # 템플릿(플레이스홀더 {{ }} 포함) · 사고 로그
+  - templates/
+  - thinklog/
+  # Liquid 빌드를 깨뜨리는 자동추출 덤프 / 미치환 템플릿 파일
+  - "concepts/extracted-*.md"
+  - outputs/weekly/2026-W18.md
