@@ -1,3 +1,29 @@
+## 2026-06-13
+
+### [REFLECT] 에이전트 정체성의 진화: '외골격'에서 '운영체제(OS)'로
+
+- 무엇이 바뀌었나: Hermes Agent를 축적되는 지능의 운영 레이어(AI OS)로 재정의하고, 그래프 기반 오케스트레이션(Fabro) 및 에이전틱 채용 트렌드를 지식 체계에 통합함.
+- 왜 중요한가: 에이전트를 일회성 도구가 아닌, 시간이 흐를수록 사용자의 사고와 동기화되는 지속 가능한 인프라로 전환함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-13.md`, `Atoms/`, `wiki/signals/`.
+
+---
+
+### [INGEST] Hermes Agent as AI OS 및 Fabro 철학 이식
+
+- 무엇이 바뀌었나: 정구봉 님의 'AI OS' 관점과 오픈소스 오케스트레이터 'Fabro'의 그래프 기반 실행 철학을 지식 원자(Atoms)로 전환함.
+- 왜 중요한가: '절차적 기억(Procedural Memory)'으로서의 스킬 관리와 '큐레이션'의 중요성을 시스템 설계 원칙에 반영함.
+- 영향 범위: `Atoms/hermes-agent-as-ai-os.md`, `Atoms/Fabro-Philosophy.md`.
+
+---
+
+### [SIGNAL] 에이전틱 채용(Agentic Recruitment) 주류화 신호 포착
+
+- 무엇이 바뀌었나: ADP, Korn Ferry 등 2026년 리포트를 바탕으로 자율형 채용 시스템의 확산과 '신뢰 아키텍트'로서의 HR 역할 변화를 기록함.
+- 왜 중요한가: 기술적 변화를 넘어선 조직 내 권력 이동과 인간-AI 협업 모델의 구체적인 논거를 확보함.
+- 영향 범위: `wiki/signals/2026-06-13-agentic-ta-mainstream-shift.md`.
+
+---
+
 ## 2026-06-12
 
 ### [ops] 지식 인덱스를 폴더 그룹 없이 전체 최신순 단일 목록으로 변경
