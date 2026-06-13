@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-06-13 18:00
+last_update: 2026-06-13 20:00
 status: 🟢 ACTIVE
 ---
 
@@ -20,7 +20,7 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
-- **[06-13 16:00]** `KNOWLEDGE_PULSE.md`
+- **[06-13 18:00]** `KNOWLEDGE_PULSE.md`
 - **[06-13 10:00]** `wiki/signals/2026-06-13-hermes-agent-infrastructure-shift.md`
 - **[06-13 10:00]** `wiki/signals/2026-06-13-agentic-ta-mainstream-shift.md`
 - **[06-13 10:00]** `Atoms/hermes-agent-as-ai-os.md`
