@@ -1,3 +1,24 @@
+## LINT-LOG: 2026-06-16 (OKF Conformance 베이스라인 — Phase 1)
+
+> 트리거: `python -m scripts.okf.publish --only conformance --write`
+> LINT 프로토콜이 OKF conformance checker(SPEC §8)로 승격된 첫 측정.
+> 전체 리포트: `_ops/okf/lint-baseline-2026-06-16.md`
+
+### 게이트: FAIL ❌ (ERROR 69 · WARN 49 · INFO 0)
+
+| 코드 | severity | 건수 | 비고 |
+| --- | --- | ---: | --- |
+| `malformed-frontmatter` | ERROR | 69 | YAML 파싱 실패. 대부분 `related_to: "[[a]]", "[[b]]"` 쉼표 나열(§11 보정 4 대상). ex-intelligence 44건 집중 |
+| `legacy-dialect` | WARN | 44 | 본문 위키링크 잔존(발행 시 변환 대상) |
+| `type-conflict` | WARN | 5 | 기존 type ≠ 경로 유도 type |
+
+- 대상: 번들 IN 145개 파일(`wiki, projects, references, research, analysis`).
+- 루트 정크 격리 큐 11건(이동/삭제는 사람 확인 후).
+- **다음 감소 작전**: ERROR 69건의 거의 전부가 malformed `related_to`이므로, Phase 2 frontmatter
+  단계에서 `related_to` 쉼표 나열 → YAML 리스트 정규화 한 번으로 대량 해소 예상.
+
+---
+
 ## LINT-LOG: 2026-05-17 14:28:47
 
 ### [Isolated Documents (Backlinks: 0)]

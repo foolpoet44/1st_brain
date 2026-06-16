@@ -174,6 +174,14 @@ IN 후보(`wiki concepts people references projects research analysis`)에서 �
 
 ## Timeline
 
+### 2026-06-16 (Phase 1 정정)
+
+- **프론트매터 보유율 정정**: §1의 "wiki 98%"는 `---` 구분자 기준이다. Phase 1 conformance(YAML
+  파싱 가능성 기준)로 재측정하니 번들 IN 145개 중 **69개가 malformed YAML**(닫는 `---`는 있으나
+  파싱 실패)이었다. 거의 전부 `related_to: "[[a]]", "[[b]]"` 쉼표 나열 패턴(`projects/ex-intelligence`
+  44건 집중). → conformance checker는 `missing-frontmatter`(블록 없음)와 `malformed-frontmatter`
+  (블록 있으나 파싱 실패)를 분리 보고한다. 베이스라인: `_ops/okf/lint-baseline-2026-06-16.md`.
+
 ### 2026-06-16
 
 - OKF Adoption Package 3종(README/PUBLISH_PROTOCOL/BUILD_PLAN)을 `_ops/okf/`에 보존.

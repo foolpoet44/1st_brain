@@ -1,5 +1,14 @@
 ## 2026-06-16
 
+### [OPS] OKF Phase 1 — type 부여 + LINT conformance 게이트 구현
+
+- 무엇이 바뀌었나: `scripts/okf/publish.py`(PUBLISH 프로토콜 Phase 1)를 구현함. `discover`·`derive_type`·`check_conformance`와 루트 정크 격리 큐, 17개 단위 테스트. LINT 프로토콜을 conformance checker로 승격(`.claude/rules/okf-publish.md`). `.gitignore`에 `dist/` 추가.
+- 왜 중요한가: 발행 없이도 "지식이 OKF에 얼마나 부합하는가"를 **숫자로** 잴 수 있게 됐다. 첫 베이스라인은 ERROR 69·WARN 49. 결정적으로, ERROR 69건이 "프론트매터 없음"이 아니라 `related_to: "[[a]]", "[[b]]"` 같은 **malformed YAML**임을 발견해 두 코드로 분리 보고하도록 했다 — Phase 2의 `related_to` 리스트 정규화 한 번으로 대량 해소가 예상된다. 변경 가시성이 모호한 자가 점검에서 측정 가능한 게이트로 바뀌었다.
+- 영향 범위: `scripts/okf/`(publish.py·test_publish.py·README), `scripts/__init__.py`, `.claude/rules/okf-publish.md`, `.gitignore`, `_ops/okf/lint-baseline-2026-06-16.md`, `_ops/lint-log.md`. 작성본·발행본 모두 비파괴(dist/는 gitignore).
+- 다음 확인: (1) 루트 정크 11건 격리(이동/삭제) 사람 확인 → 실행, (2) Phase 2(frontmatter 정규화·`_index`→`index.md`·위키링크 변환·log.md) 착수 여부.
+
+---
+
 ### [OPS] OKF 정본 SPEC 수령 + Phase 0 보정 반영
 
 - 무엇이 바뀌었나: 미수령 상태였던 `OKF_ADOPTION_SPEC.md`(정본 설계)를 `_ops/okf/`에 보존하고, 자리표시자를 제거함. Phase 0 검증으로 도출한 보정 6건을 SPEC에 **비파괴 반영**(원문 보존 + `⚠ Phase 0 보정` 인라인 주석 + §11 통합 섹션).

@@ -38,16 +38,18 @@ SPEC §10의 가정을 실제 리포로 검증한다. 결과를 `_ops/okf-phase0
 목표: 발행 없이도 "conformance 측정"이 가능해지고 루트 정크가 격리된다.
 
 작업:
-- [ ] `scripts/okf/` 스캐폴드 + 단위 테스트 하네스(`harness/` 활용).
-- [ ] `discover` + `derive_type` + `check_conformance` 구현(PROTOCOL [0][1][7]).
-- [ ] `--only conformance --dry-run`으로 현재 상태 LINT 리포트 1회 생성 → 베이스라인 기록.
-- [ ] 루트 정크(`무제.md`, `이름 없는 보드.md`, `untitled-daily-*`, 비정형 날짜) 격리 규칙 적용 → `inbox/` 이동 또는 삭제 큐(사람 확인).
-- [ ] LINT을 기존 `LINT` 프로토콜 정의에 연결(트리거 `lint` → conformance checker).
+- [x] `scripts/okf/` 스캐폴드 + 단위 테스트 하네스(stdlib `unittest`, 17 케이스).
+- [x] `discover` + `derive_type` + `check_conformance` 구현(PROTOCOL [0][1][7]).
+- [x] `--only conformance --dry-run`으로 현재 상태 LINT 리포트 1회 생성 → 베이스라인 기록(`_ops/okf/lint-baseline-2026-06-16.md`).
+- [~] 루트 정크(`무제.md`, `이름 없는 보드.md`, `untitled-daily-*`, 비정형 날짜) 격리 규칙 적용 → 리포트에 격리 큐(11건) 생성. **이동/삭제는 사람 확인 후**(미실행).
+- [x] LINT을 기존 `LINT` 프로토콜 정의에 연결(`.claude/rules/okf-publish.md`, `_ops/lint-log.md`).
 
 수용 기준(AC1):
-- `dist/okf/lint-report.md`가 생성되고 ERROR 건수 베이스라인이 보인다.
-- 정크 파일이 번들 IN에서 사라진다(격리 완료).
-- 단위 테스트: `derive_type` 전체 prefix 케이스 통과.
+- [x] `dist/okf/lint-report.md`가 생성되고 ERROR 건수 베이스라인이 보인다(ERROR 69 · WARN 49).
+- [~] 정크 파일이 번들 IN에서 사라진다(격리 큐 11건 — 사람 확인 대기, 미이동).
+- [x] 단위 테스트: `derive_type` 전체 prefix 케이스 통과(17/17 OK).
+
+> 📌 Phase 1 발견: ERROR 69건은 "프론트매터 없음"이 아니라 **malformed YAML**(대부분 `related_to: "[[a]]", "[[b]]"` 쉼표 나열)이다. `missing-frontmatter`/`malformed-frontmatter`를 분리 보고하도록 구현. Phase 2 frontmatter 단계의 `related_to` 리스트 정규화로 대량 해소 예상.
 
 ## Phase 2 — PUBLISH 패스 + 링크 변환 (설계결정② + 방안 3)
 
