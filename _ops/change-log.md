@@ -1,3 +1,14 @@
+## 2026-06-16
+
+### [OPS] OKF 도입 패키지 보존 + Phase 0 인벤토리 검증 완료
+
+- 무엇이 바뀌었나: Open Knowledge Format v0.1 도입 문서 묶음(README/PUBLISH_PROTOCOL/BUILD_PLAN)을 `_ops/okf/`에 보존하고, BUILD_PLAN의 부트스트랩 지침대로 **코드 없이 Phase 0(인벤토리·가정 검증)만** 수행해 `_ops/okf-phase0-findings.md`를 작성함.
+- 왜 중요한가: 패키지의 핵심 원칙은 "갈아엎지 않는다"이며, 코드 착수 전 실제 리포로 가정을 검증하는 것이 안전장치다. 검증 결과 패키지의 IN/OUT·TYPE_MAP 가정이 실제와 어긋남을 발견했다(루트 `concepts/`는 큐레이션 지식이 아니라 대화 추출 덤프, 정본 지식은 `wiki/`+`projects/`에 집중, 위키링크 84%가 이름형). 가정대로 코딩했다면 234개 추출 덤프 오분류·링크 대량 미해석이 발생했을 것.
+- 영향 범위: `_ops/okf/`(패키지 4파일 + SPEC 자리표시자), `_ops/okf-phase0-findings.md`(신규). 작성본 비파괴 — 기존 지식 파일 변경 0건.
+- 다음 확인: 미수령된 `OKF_ADOPTION_SPEC.md` 원본 확보 → findings의 보정 6건 반영 → 사람 승인 후 Phase 1(`scripts/okf/` 스캐폴드 + LINT 베이스라인 + `.gitignore`에 `dist/`) 착수.
+
+---
+
 ## 2026-06-15
 
 ### [REFLECT] 지능의 외골격과 '인지적 슬롭(Thinkslop)'의 경계
