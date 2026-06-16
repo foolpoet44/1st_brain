@@ -1,3 +1,23 @@
+## 2026-06-16
+
+### [OPS] OKF 정본 SPEC 수령 + Phase 0 보정 반영
+
+- 무엇이 바뀌었나: 미수령 상태였던 `OKF_ADOPTION_SPEC.md`(정본 설계)를 `_ops/okf/`에 보존하고, 자리표시자를 제거함. Phase 0 검증으로 도출한 보정 6건을 SPEC에 **비파괴 반영**(원문 보존 + `⚠ Phase 0 보정` 인라인 주석 + §11 통합 섹션).
+- 왜 중요한가: SPEC §3·§10이 IN/OUT 최종 확정을 Phase 0에 명시적으로 위임하고 있어, 검증 결과를 SPEC에 묶어두면 코드가 실제 리포와 어긋날 여지가 사라진다. 이제 Phase 1 착수의 유일한 선결 조건은 "보정안 사람 승인" 하나로 좁혀졌다.
+- 영향 범위: `_ops/okf/OKF_ADOPTION_SPEC.md`(신규, 자리표시자 대체), `_ops/okf/README.md`·`_ops/okf-phase0-findings.md`(상태 갱신). 작성본 비파괴 유지.
+- 다음 확인: SPEC §11의 보정 6건(IN/OUT·TYPE_MAP·status 정규화·relations 매핑·위키링크 인덱스·Timeline 파싱) 승인 → Phase 1 코드 착수.
+
+---
+
+### [OPS] OKF 도입 패키지 보존 + Phase 0 인벤토리 검증 완료
+
+- 무엇이 바뀌었나: Open Knowledge Format v0.1 도입 문서 묶음(README/PUBLISH_PROTOCOL/BUILD_PLAN)을 `_ops/okf/`에 보존하고, BUILD_PLAN의 부트스트랩 지침대로 **코드 없이 Phase 0(인벤토리·가정 검증)만** 수행해 `_ops/okf-phase0-findings.md`를 작성함.
+- 왜 중요한가: 패키지의 핵심 원칙은 "갈아엎지 않는다"이며, 코드 착수 전 실제 리포로 가정을 검증하는 것이 안전장치다. 검증 결과 패키지의 IN/OUT·TYPE_MAP 가정이 실제와 어긋남을 발견했다(루트 `concepts/`는 큐레이션 지식이 아니라 대화 추출 덤프, 정본 지식은 `wiki/`+`projects/`에 집중, 위키링크 84%가 이름형). 가정대로 코딩했다면 234개 추출 덤프 오분류·링크 대량 미해석이 발생했을 것.
+- 영향 범위: `_ops/okf/`(패키지 4파일 + SPEC 자리표시자), `_ops/okf-phase0-findings.md`(신규). 작성본 비파괴 — 기존 지식 파일 변경 0건.
+- 다음 확인: 미수령된 `OKF_ADOPTION_SPEC.md` 원본 확보 → findings의 보정 6건 반영 → 사람 승인 후 Phase 1(`scripts/okf/` 스캐폴드 + LINT 베이스라인 + `.gitignore`에 `dist/`) 착수.
+
+---
+
 ## 2026-06-15
 
 ### [REFLECT] 지능의 외골격과 '인지적 슬롭(Thinkslop)'의 경계
