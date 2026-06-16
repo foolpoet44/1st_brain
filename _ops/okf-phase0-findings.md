@@ -28,9 +28,9 @@ BUILD_PLAN 부록 A가 IN으로 분류한 루트 디렉터리 다수(`concepts/`
 3. **`dist/okf/` 격리 = `.gitignore`에 `dist/` 추가** (별도 발행 브랜치 불필요. 근거 §8).
 4. **가장 큰 기술 위험 = 위키링크 변환** (99%가 이름형, 전역 인덱스 의존, 한글·공백·괄호 이름).
 
-> ⚠ **선결 조건**: 패키지 읽기 순서 1번인 `OKF_ADOPTION_SPEC.md`가 **미수령**이다
-> (`_ops/okf/OKF_ADOPTION_SPEC.PLACEHOLDER.md` 참조). SPEC §3/§5/§6/§7/§8을 확보해
-> 아래 보정 사항을 반영한 뒤 Phase 1 코드에 착수한다.
+> ✅ **선결 조건 해소 (2026-06-16)**: `OKF_ADOPTION_SPEC.md` 수령 완료. 아래 보정 6건을
+> SPEC에 비파괴 반영함(`_ops/okf/OKF_ADOPTION_SPEC.md` §11 + 인라인 `⚠ Phase 0 보정` 주석).
+> 이제 남은 선결 조건은 **보정안 사람 확인** 하나다.
 
 ---
 
@@ -166,8 +166,8 @@ IN 후보(`wiki concepts people references projects research analysis`)에서 �
 
 ## 다음 단계 (사람 확인 대기)
 
-1. `OKF_ADOPTION_SPEC.md` 원본 확보 → 위 6개 보정 반영.
-2. 보정안 사람 승인 후 Phase 1 착수(`scripts/okf/` 스캐폴드 + LINT 베이스라인 + `.gitignore`에 `dist/`).
+1. ✅ `OKF_ADOPTION_SPEC.md` 원본 확보 → 위 6개 보정 반영 완료(SPEC §11).
+2. ⏳ 보정안 사람 승인 → Phase 1 착수(`scripts/okf/` 스캐폴드 + LINT 베이스라인 + `.gitignore`에 `dist/`).
 3. 코드는 아직 작성하지 않음 — BUILD_PLAN Phase 0 종료 지점에서 정지.
 
 ---

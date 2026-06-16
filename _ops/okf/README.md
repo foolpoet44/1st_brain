@@ -21,6 +21,6 @@ csp-brain(`foolpoet44/1st_brain`)에 Open Knowledge Format v0.1을 적용하기 
 ## 현재 상태 (2026-06-16)
 
 - ✅ 패키지 문서 보존: `_ops/okf/` (이 디렉터리).
-- ⚠️ **`OKF_ADOPTION_SPEC.md` 미수령** — 정본 설계 문서가 아직 이 리포에 없다. PROTOCOL/BUILD_PLAN이 SPEC §3/§5/§6/§7/§8을 참조하므로 Phase 1 코드 착수 전 반드시 확보해야 한다. 자리표시자: `OKF_ADOPTION_SPEC.PLACEHOLDER.md`.
+- ✅ **`OKF_ADOPTION_SPEC.md` 수령·반영 완료** — 정본 설계 문서를 보존하고, Phase 0 검증 보정 6건을 `> ⚠ Phase 0 보정` 주석 + §11 통합 섹션으로 비파괴 반영(자리표시자 제거).
 - ✅ **Phase 0 완료**: `_ops/okf-phase0-findings.md` — 실제 리포 인벤토리로 SPEC 가정 검증. AC0 충족.
-- ⏸️ Phase 1~4: 코드 미착수 (SPEC 확보 + Phase 0 결정 사람 확인 대기).
+- ⏸️ Phase 1~4: 코드 미착수 (SPEC §11 보정 6건 **사람 확인 대기**).

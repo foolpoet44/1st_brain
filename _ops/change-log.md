@@ -1,5 +1,14 @@
 ## 2026-06-16
 
+### [OPS] OKF 정본 SPEC 수령 + Phase 0 보정 반영
+
+- 무엇이 바뀌었나: 미수령 상태였던 `OKF_ADOPTION_SPEC.md`(정본 설계)를 `_ops/okf/`에 보존하고, 자리표시자를 제거함. Phase 0 검증으로 도출한 보정 6건을 SPEC에 **비파괴 반영**(원문 보존 + `⚠ Phase 0 보정` 인라인 주석 + §11 통합 섹션).
+- 왜 중요한가: SPEC §3·§10이 IN/OUT 최종 확정을 Phase 0에 명시적으로 위임하고 있어, 검증 결과를 SPEC에 묶어두면 코드가 실제 리포와 어긋날 여지가 사라진다. 이제 Phase 1 착수의 유일한 선결 조건은 "보정안 사람 승인" 하나로 좁혀졌다.
+- 영향 범위: `_ops/okf/OKF_ADOPTION_SPEC.md`(신규, 자리표시자 대체), `_ops/okf/README.md`·`_ops/okf-phase0-findings.md`(상태 갱신). 작성본 비파괴 유지.
+- 다음 확인: SPEC §11의 보정 6건(IN/OUT·TYPE_MAP·status 정규화·relations 매핑·위키링크 인덱스·Timeline 파싱) 승인 → Phase 1 코드 착수.
+
+---
+
 ### [OPS] OKF 도입 패키지 보존 + Phase 0 인벤토리 검증 완료
 
 - 무엇이 바뀌었나: Open Knowledge Format v0.1 도입 문서 묶음(README/PUBLISH_PROTOCOL/BUILD_PLAN)을 `_ops/okf/`에 보존하고, BUILD_PLAN의 부트스트랩 지침대로 **코드 없이 Phase 0(인벤토리·가정 검증)만** 수행해 `_ops/okf-phase0-findings.md`를 작성함.
