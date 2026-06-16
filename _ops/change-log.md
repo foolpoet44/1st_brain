@@ -1,3 +1,13 @@
+## 2026-06-16
+
+### [REFLECT] 재귀적 지능(RLM)과 신뢰의 관문(TraceGuard) 정립
+
+- 무엇이 바뀌었나: 무한 컨텍스트 처리를 위한 RLM 패러다임과 추론 보안을 위한 TraceGuard(Evidence Gating) 개념을 지식 체계에 통합하고, Google ADK 기반 EX Intelligence 시스템 구축을 시작함.
+- 왜 중요한가: 에이전트가 스스로의 논리를 성찰하는 '메타 인지' 구조를 확보하고, HR 의사결정의 신뢰도를 기술적으로 보증하는 가드레일을 마련함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-16.md`, `무제.md`, `untitled-daily-1777934360.md`.
+
+---
+
 ## 2026-06-15
 
 ### [REFLECT] 지능의 외골격과 '인지적 슬롭(Thinkslop)'의 경계
