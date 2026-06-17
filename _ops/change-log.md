@@ -1,3 +1,13 @@
+## 2026-06-17
+
+### [REFLECT] 시스템 구조적 대전환: OKF 도입 및 지식의 보편성 확보
+
+- 무엇이 바뀌었나: 지식 체계를 특정 도구(Obsidian) 독립적인 Open Knowledge Format(OKF)으로 전환하는 Phase 0~2 공정을 완수하고, LINT 프로토콜을 Conformance Gate(ERROR 0)로 승격시킴.
+- 왜 중요한가: 도구 락인을 제거하고 지능의 소유권을 강화함으써, 시스템이 더 넓은 에코시스템(LLM, Graph)과 상호작용할 수 있는 '보편적 골격'을 갖춤.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-17.md`, `_ops/okf/`, `scripts/okf/`, `.claude/rules/okf-publish.md`.
+
+---
+
 ## 2026-06-16
 
 ### [REFLECT] 재귀적 지능(RLM)과 신뢰의 관문(TraceGuard) 정립
