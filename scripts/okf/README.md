@@ -29,19 +29,31 @@ python -m scripts.okf.publish --only conformance --write --strict
 python -m unittest scripts.okf.test_publish -v
 ```
 
-## 구현 현황 (Phase 1)
+## 구현 현황 (Phase 1 + 2)
 
 | 단계 | 함수 | 상태 |
 | --- | --- | --- |
 | [0] discover | `discover` | ✅ 번들 IN 스캔 + 전역 파일명 인덱스 |
 | [1] derive_type | `derive_type` / `normalize_type` | ✅ §5+§11 보정 반영 |
+| [2] frontmatter | `ensure_frontmatter` / `repair_frontmatter_text` | ✅ 비파괴 병합 + malformed YAML 수리 |
+| [3] index | `rename_index` / `build_index_md` | ✅ `_index`→`index.md`, 루트 okf_version |
+| [4] links | `convert_wikilinks` / `build_link_index` | ✅ slug·aliases 인덱스, 충돌/미해석 처리 |
+| [5] log | `extract_timeline_entries` / `generate_log` | ✅ projects Timeline → log.md |
 | [7] conformance | `check_conformance` / `render_report` | ✅ SPEC §8 검사 |
-| 정크 격리 큐 | `scan_root_junk` | ✅ 목록만(이동 X) |
-| [2] frontmatter | — | ⏸️ Phase 2 |
-| [3] index | `rename_index` 등 | ⏸️ Phase 2 |
-| [4] links | `convert_wikilinks` | ⏸️ Phase 2 |
-| [5] log | `generate_log` | ⏸️ Phase 2 |
-| [6] relations | — | ⏸️ Phase 3 |
+| 발행 통합 | `publish_bundle` | ✅ dist/okf 전체 발행 (멱등) |
+| 정크 격리 큐 | `scan_root_junk` | ✅ (실행: 11건 inbox/raw/ 이관 완료) |
+| [6] relations | — | ⏸️ Phase 3 (typed-edge) |
+
+## 발행 (Phase 2)
+
+```bash
+python -m scripts.okf.publish              # 전체 발행 미리보기 (dry-run)
+python -m scripts.okf.publish --write       # dist/okf/ 번들 발행
+```
+
+현재 베이스라인: **PASS ✅ (ERROR 0 · WARN 38 · INFO 18)**, 153개 파일.
+malformed `related_to` 18건 수리, log.md 7개·index.md 8개 생성, 위키링크 67건 변환.
+남은 WARN/INFO: 이름 충돌 17 + type-conflict 21 + 미해석 링크 18(사람이 명시 경로로 보강).
 
 ## 번들 IN (Phase 0 확정본)
 

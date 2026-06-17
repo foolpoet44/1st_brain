@@ -1,3 +1,22 @@
+## LINT-LOG: 2026-06-16 (OKF 발행본 conformance — Phase 2)
+
+> 트리거: `python -m scripts.okf.publish --write` (전체 PUBLISH 패스)
+> 전체 리포트: `_ops/okf/lint-report-2026-06-16-phase2.md`
+
+### 게이트: PASS ✅ (ERROR 0 · WARN 38 · INFO 18) — 발행본 153개 파일
+
+| 코드 | severity | 건수 | 비고 |
+| --- | --- | ---: | --- |
+| `type-conflict` | WARN | 21 | 프론트매터 type ≠ 경로 유도 type(사람 판단) |
+| `ambiguous-link` | WARN | 17 | 이름 충돌 — 명시 경로로 보강 필요 |
+| `unresolved-link` | INFO | 18 | 미해석(아직 안 쓴 지식, 허용) |
+
+- **ERROR 69 → 0**: malformed `related_to` 18건 수리 + log.md 예약처리로 베이스라인 대비 전량 해소.
+- 산출: log.md 7개(projects Timeline), index.md 8개(_index 변환), 루트 index.md(okf_version).
+- 위키링크 67건 변환(해석 성공), 작성본 비파괴, 멱등성 검증 완료.
+
+---
+
 ## LINT-LOG: 2026-06-16 (OKF Conformance 베이스라인 — Phase 1)
 
 > 트리거: `python -m scripts.okf.publish --only conformance --write`

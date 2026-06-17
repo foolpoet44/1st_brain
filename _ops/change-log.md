@@ -1,5 +1,14 @@
 ## 2026-06-16
 
+### [OPS] OKF Phase 2 — PUBLISH 패스 + 첫 conformant 발행본 (PASS)
+
+- 무엇이 바뀌었나: PUBLISH 패스를 완성해 `dist/okf/`에 첫 OKF v0.1 conformant 번들(153개 파일)을 발행함. frontmatter 비파괴 병합 + malformed YAML 수리, `_index`→`index.md`, 위키링크 변환(slug·aliases 인덱스), projects Timeline → `log.md`. 단위 테스트 31개.
+- 왜 중요한가: 게이트가 **ERROR 69 → 0 (PASS ✅)**. 결정적 지렛대는 예측대로 `related_to` 리스트 정규화였다 — 18개 파일 수리로 ERROR 대부분이 사라졌다. 이제 csp-brain 지식이 도구 독립적인 OKF 마크다운으로 빠져나갈 수 있다(락인 제거). 작성본은 한 글자도 바뀌지 않았고(비파괴), 두 번 발행해도 결과가 같다(멱등).
+- 영향 범위: `scripts/okf/publish.py`(Phase 2 전 단계 구현)·`test_publish.py`(31 케이스)·`README.md`, `_ops/okf/lint-report-2026-06-16-phase2.md`, `_ops/lint-log.md`, `OKF_BUILD_PLAN.md`(AC2 체크). 발행본은 `dist/`(gitignore).
+- 다음 확인: 남은 WARN/INFO(이름 충돌 17·type-conflict 21·미해석 18)는 사람이 명시 경로/타입으로 보강. Phase 3(typed-edge relations: people/·decisions/) 착수 여부.
+
+---
+
 ### [OPS] OKF Phase 1 — type 부여 + LINT conformance 게이트 구현
 
 - 무엇이 바뀌었나: `scripts/okf/publish.py`(PUBLISH 프로토콜 Phase 1)를 구현함. `discover`·`derive_type`·`check_conformance`와 루트 정크 격리 큐, 17개 단위 테스트. LINT 프로토콜을 conformance checker로 승격(`.claude/rules/okf-publish.md`). `.gitignore`에 `dist/` 추가.

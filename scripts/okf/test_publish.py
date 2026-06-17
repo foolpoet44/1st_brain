@@ -162,5 +162,150 @@ class TestConformanceAndDiscover(unittest.TestCase):
             self.assertEqual(errors, [])
 
 
+class TestRepairFrontmatter(unittest.TestCase):
+    def test_multi_wikilink_to_list(self):
+        raw = 'type: Note\nrelated_to: "[[a]]", "[[b]]"'
+        fixed, changed = P.repair_frontmatter_text(raw)
+        self.assertTrue(changed)
+        import yaml
+        data = yaml.safe_load(fixed)
+        self.assertEqual(data["related_to"], ["[[a]]", "[[b]]"])
+
+    def test_single_unquoted_wikilink(self):
+        raw = "related_to: [[opq-framework]]"
+        fixed, changed = P.repair_frontmatter_text(raw)
+        self.assertTrue(changed)
+        import yaml
+        self.assertEqual(yaml.safe_load(fixed)["related_to"], "[[opq-framework]]")
+
+    def test_no_change_for_valid(self):
+        _, changed = P.repair_frontmatter_text("type: Concept\ntags: [a, b]")
+        self.assertFalse(changed)
+
+
+class TestSlugify(unittest.TestCase):
+    def test_paren_and_space(self):
+        self.assertEqual(P.slugify("Dream Cycle (주간 정리 루틴)"), "dream-cycle")
+        self.assertEqual(P.slugify("Memory Save (대화 종료 기록)"), "memory-save")
+        self.assertEqual(P.slugify("self-determination-theory"),
+                         "self-determination-theory")
+
+
+class TestWikilinkConversion(unittest.TestCase):
+    def _idx(self, concepts):
+        return P.build_link_index(concepts), \
+            {c.rel for c in concepts} | {P.rename_index(c.rel) for c in concepts}
+
+    def _c(self, rel, fm=None, body=""):
+        return P.Concept(src=Path(rel), rel=rel, frontmatter=fm or {},
+                         fm_status="ok", body=body)
+
+    def test_name_form_resolves(self):
+        cs = [self._c("wiki/concepts/foo.md")]
+        idx, rels = self._idx(cs)
+        out, lint = P.convert_wikilinks("see [[foo]] here", idx, rels)
+        self.assertEqual(out, "see [foo](/wiki/concepts/foo.md) here")
+        self.assertEqual(lint, [])
+
+    def test_alias_form(self):
+        cs = [self._c("wiki/concepts/foo.md")]
+        idx, rels = self._idx(cs)
+        out, _ = P.convert_wikilinks("[[foo|보이는 라벨]]", idx, rels)
+        self.assertEqual(out, "[보이는 라벨](/wiki/concepts/foo.md)")
+
+    def test_path_form_and_index(self):
+        cs = [self._c("wiki/concepts/foo/_index.md")]
+        idx, rels = self._idx(cs)
+        out, _ = P.convert_wikilinks("[[wiki/concepts/foo/_index|개념]]", idx, rels)
+        self.assertEqual(out, "[개념](/wiki/concepts/foo/index.md)")
+
+    def test_anchor_preserved(self):
+        cs = [self._c("wiki/concepts/foo.md")]
+        idx, rels = self._idx(cs)
+        out, _ = P.convert_wikilinks("[[foo#섹션]]", idx, rels)
+        self.assertEqual(out, "[foo](/wiki/concepts/foo.md#섹션)")
+
+    def test_alias_index_resolves_korean_title(self):
+        cs = [self._c("wiki/concepts/memory-save.md",
+                      fm={"aliases": ["Memory Save (대화 종료 기록)"]})]
+        idx, rels = self._idx(cs)
+        out, lint = P.convert_wikilinks("[[Memory Save (대화 종료 기록)]]", idx, rels)
+        self.assertIn("/wiki/concepts/memory-save.md", out)
+        self.assertEqual(lint, [])
+
+    def test_ambiguous_kept(self):
+        cs = [self._c("wiki/concepts/dup.md"), self._c("projects/dup.md")]
+        idx, rels = self._idx(cs)
+        out, lint = P.convert_wikilinks("[[dup]]", idx, rels)
+        self.assertEqual(out, "[[dup]]")  # 미변환 보존
+        self.assertEqual(lint[0][0], "ambiguous-link")
+
+    def test_unresolved_kept(self):
+        cs = [self._c("wiki/concepts/foo.md")]
+        idx, rels = self._idx(cs)
+        out, lint = P.convert_wikilinks("[[nonexistent]]", idx, rels)
+        self.assertEqual(out, "[[nonexistent]]")
+        self.assertEqual(lint[0][0], "unresolved-link")
+
+
+class TestTimelineAndLog(unittest.TestCase):
+    def test_extract_and_generate(self):
+        body = (
+            "## 3. 타임라인\n\n"
+            "### 2026-05-16\n\n"
+            "- **모델 통합**: OPQ32 이식.\n"
+            "- 리포트 생성 완료.\n\n"
+            "### 2026-05-31 (Planned)\n\n"
+            "- 시뮬레이션 착수.\n"
+        )
+        entries = P.extract_timeline_entries(body)
+        self.assertEqual(entries[0][0], "2026-05-16")
+        self.assertEqual(entries[1][0], "2026-05-31 (Planned)")
+        # 굵게 ** 보존 확인
+        self.assertEqual(entries[0][1][0], "**모델 통합**: OPQ32 이식.")
+        log = P.generate_log(entries)
+        self.assertIn("## 2026-05-16", log)
+        self.assertIn("* **Planned**: 시뮬레이션 착수.", log)
+        self.assertTrue(log.startswith("# Directory Update Log"))
+
+
+class TestRenameIndex(unittest.TestCase):
+    def test_rename(self):
+        self.assertEqual(P.rename_index("wiki/tools/_index.md"),
+                         "wiki/tools/index.md")
+        self.assertEqual(P.rename_index("wiki/tools/foo.md"),
+                         "wiki/tools/foo.md")
+
+
+class TestPublishBundleIntegration(unittest.TestCase):
+    def _mk(self, root, rel, content):
+        p = root / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(content, encoding="utf-8")
+
+    def test_end_to_end_passes_and_idempotent(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            self._mk(root, "wiki/concepts/a.md",
+                     '---\ntype: Concept\nrelated_to: "[[b]]", "[[c]]"\n---\n'
+                     "본문 [[b]] 참조\n")
+            self._mk(root, "wiki/concepts/b.md", "---\ntype: Concept\n---\nbody")
+            self._mk(root, "wiki/concepts/_index.md", "# 색인")
+            out1, out2 = root / "o1", root / "o2"
+            f1, s1 = P.publish_bundle(root, out1, dry_run=False)
+            f2, s2 = P.publish_bundle(root, out2, dry_run=False)
+            errors = [x for x in f1 if x.severity == "ERROR"]
+            self.assertEqual(errors, [])              # PASS
+            # malformed 수리로 a.md 의 related_to 가 유효해졌다
+            self.assertTrue((out1 / "wiki/concepts/index.md").exists())
+            self.assertTrue((out1 / "index.md").exists())  # 루트 okf_version
+            # 멱등: 두 발행본 동일
+            txt1 = (out1 / "wiki/concepts/a.md").read_text(encoding="utf-8")
+            txt2 = (out2 / "wiki/concepts/a.md").read_text(encoding="utf-8")
+            self.assertEqual(txt1, txt2)
+            # [[b]] → 변환됨
+            self.assertIn("/wiki/concepts/b.md", txt1)
+
+
 if __name__ == "__main__":
     unittest.main()

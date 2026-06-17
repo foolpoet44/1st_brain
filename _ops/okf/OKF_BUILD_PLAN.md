@@ -56,18 +56,18 @@ SPEC §10의 가정을 실제 리포로 검증한다. 결과를 `_ops/okf-phase0
 목표: 첫 OKF-conformant 발행본(`dist/okf/`)이 손에 들어온다.
 
 작업:
-- [ ] `ensure_frontmatter`(비파괴 병합, git timestamp) 구현(PROTOCOL [2]).
-- [ ] `rename_index`(`_index`→`index.md`) + 루트 `index.md`에 `okf_version` 구현(PROTOCOL [3]).
-- [ ] 전역 파일명 인덱스 + `convert_wikilinks` 구현(PROTOCOL [4], 충돌/미해석 LINT 처리).
-- [ ] `generate_log`(weekly/Timeline → log.md) 구현(PROTOCOL [5]).
-- [ ] `--dry-run` diff 검토 → 사람 확인 → `--write` 실행.
-- [ ] 발행본을 OKF 그래프 뷰어(또는 OKF repo의 visualize)로 1회 렌더해 그래프 연결성 육안 확인.
+- [x] `ensure_frontmatter`(비파괴 병합, git timestamp, **malformed YAML 수리**) 구현(PROTOCOL [2]).
+- [x] `rename_index`(`_index`→`index.md`) + 루트 `index.md`에 `okf_version` + 디렉터리 `index.md` 생성(PROTOCOL [3]).
+- [x] 전역 링크 인덱스(stem·slug·title·aliases) + `convert_wikilinks` 구현(PROTOCOL [4], 충돌→ambiguous / 미해석→unresolved).
+- [x] `generate_log`(projects/* Timeline `### <ISO>` → log.md) 구현(PROTOCOL [5]).
+- [x] `--dry-run` diff 검토 → 사람 확인 → `--write` 실행.
+- [~] 그래프 연결성: 위키링크 67건 변환(해석 성공)으로 연결성 확인. 전용 뷰어 렌더는 Phase 4 `viz.html`로 이관.
 
 수용 기준(AC2):
-- `dist/okf/`가 SPEC §8 conformance PASS(ERROR 0).
-- 발행본에 `_index`·`[[ ]]`·비정형 날짜 잔존 0(`legacy-dialect` WARN 0).
-- 작성본 diff = 0(비파괴 검증).
-- 멱등성: 연속 2회 `--write` 결과 동일.
+- [x] `dist/okf/`가 SPEC §8 conformance PASS(ERROR 0 · WARN 38 · INFO 18).
+- [x] `legacy-dialect` WARN 0. (단, 미해석 17 ambiguous + 18 unresolved 링크는 SPEC §7 규칙대로 placeholder 보존 — INFO/WARN, 비차단. 사람이 명시 경로로 보강.)
+- [x] 작성본 diff = 0(wiki/·projects/ 무변경).
+- [x] 멱등성: 연속 2회 `--write` 발행본 동일(diff 0).
 
 ## Phase 3 — Typed-Edge Profile (방안 4)
 
