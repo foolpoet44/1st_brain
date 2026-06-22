@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-06-22 08:05
+last_update: 2026-06-22 12:00
 status: 🟢 ACTIVE
 ---
 
@@ -20,8 +20,9 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
+- **[06-22 08:16]** `wiki/signals/2026-06-22-agentic-orchestration-shift.md`
+- **[06-22 08:06]** `KNOWLEDGE_PULSE.md`
 - **[06-21 23:14]** `outputs/daily-reflect/REFLECT_2026-06-21.md`
-- **[06-21 23:14]** `KNOWLEDGE_PULSE.md`
 - **[06-20 23:00]** `outputs/daily-reflect/REFLECT_2026-06-20.md`
 - **[06-19 23:01]** `outputs/daily-reflect/REFLECT_2026-06-19.md`
 
