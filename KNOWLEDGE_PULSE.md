@@ -2,8 +2,8 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-06-23 23:01
-status: 🟢 ACTIVE
+last_update: 2026-06-24 08:00
+status: ⚪️ STEADY
 ---
 
 # 🧠 CSP-Brain 지식 진화 대시보드 (Know-Grow)
@@ -13,15 +13,15 @@ status: 🟢 ACTIVE
 ## 1. 지식 대사 활성도 (Pulse)
 최근 7일간의 지식 업데이트 밀도입니다.
 
-` ▄       ` (Current Status)
+`         ` (Current Status)
 
 ## 2. 계층별 지능 밀도 (7-Layer Density)
 - **L2 Concepts**: 43 Atoms (개념 원자 자산)
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
-- **[06-23 22:01]** `outputs/daily-reflect/REFLECT_2026-06-23.md`
-- **[06-23 20:00]** `KNOWLEDGE_PULSE.md`
+- **[06-23 23:01]** `outputs/daily-reflect/REFLECT_2026-06-23.md`
+- **[06-23 23:01]** `KNOWLEDGE_PULSE.md`
 - **[06-23 12:00]** `wiki/concepts/agentic-engineering.md`
 - **[06-22 23:01]** `outputs/daily-reflect/REFLECT_2026-06-22.md`
 - **[06-22 12:00]** `wiki/signals/2026-06-22-agentic-orchestration-shift.md`
