@@ -1,3 +1,13 @@
+## 2026-06-25
+
+### [REFLECT] 성과의 설계자: 행정에서 시스템 아키텍처로의 진화
+
+- 무엇이 바뀌었나: SAP의 SmartRecruiters 인수 및 UKG의 에이전틱 자동화 신호를 분석하여 HR의 역할을 '성과 시스템 설계자(Architect)'로 재정의하고, '탈-로그인(No-login) HR' 개념을 지식 체계에 통합함.
+- 왜 중요한가: HR 서비스의 마찰력을 제로화하고, AI가 실행을 전담하는 환경에서 인간 설계자가 지향해야 할 가치 기반의 시스템 설계 주권을 확보함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-25.md`, `wiki/signals/2026-06-25-hr-performance-architect-pivot.md`.
+
+---
+
 ## 2026-06-24
 
 ### [REFLECT] 지능의 안식일: 에이전틱 엔지니어링의 내면화와 신뢰 게이팅
