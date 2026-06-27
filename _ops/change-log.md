@@ -1,5 +1,12 @@
 ## 2026-06-27
 
+### [REFACTOR] Vault 구조 대청소 — 추적 파일 5,457→679, 현황 표면 단일화
+
+- 무엇이 바뀌었나: 3단계 리팩토링 실행. (1) 2026-06-22 Auto-Sync 사고로 편입된 중복 Vault 스냅샷 5개(dev/dev2/sync/syncs/sy, ~4,800파일/170MB)를 제거하고 `.gitignore` 가드로 재발 차단. (2) 레거시 루트 `concepts/`(235)를 `raw/legacy-concepts/`로 이전하고 루트 스크래치 .md 14개를 정리(빈 파일 삭제+inbox/raw 이동), weekly 이중 폴더를 `outputs/weekly/`로 통합. (3) 난립하던 현황 표면 5개를 정본 2개(`change-log.md`+Pages 대시보드)로 선언하고 `_ops/README.md`에 SSOT 내비게이션을 못박음.
+- 왜 중요한가: 변경 1건이 git diff·검색·대시보드에 최대 6벌로 보이던 노이즈가 사라져, 마침내 "무엇이 바뀌었나"가 1:1로 보인다. 지식 taxonomy가 `wiki/` 한 곳으로 단일화되고, 현황 확인 시 어디를 봐야 할지가 명확해짐.
+- 영향 범위: 레포 전역(추적 파일 88% 감소), `.gitignore`, `raw/legacy-concepts/`, `inbox/raw/`, `references/weekly-templates/`, `outputs/weekly/`, `_ops/README.md`.
+- 다음 확인: 레거시 현황 표면(KNOWLEDGE_PULSE.md 등)을 재생성하는 로컬 스크립트(`know_grow_monitor.py`, `sync_brain.sh`의 하드코딩 경로) 정리, 그리고 비표준 최상위 디렉토리(Toss/, Atoms/, moc/ 등)의 wiki 편입 또는 archive 여부 판단.
+
 ### [LINT] 위키 구조 부채 해소 — 고립 30개 제거 및 프론트매터 51개 정규화
 
 - 무엇이 바뀌었나: `wiki/` 스코프 정밀 LINT를 돌려 인덱스 허브의 깨진 제목 링크를 stem 링크로 재구성(고립 30→0)하고, 자동 수집 문서 51개의 누락 프론트매터(`title/created/updated/status`)를 정직한 날짜로 보강함. 손상된 `frameworks/_index.md`(줄번호 접두사 혼입)를 복구하고 `protocols/_index.md`를 신규 생성함.
