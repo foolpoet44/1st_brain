@@ -20,6 +20,7 @@ tags: [hr-tech, agentic-recruitment, autonomous-negotiation, learning-agency, sh
 ## 3. 우리 시스템과의 연결 (Vault Synapse)
 - **[[agentic-recruitment-proxy]] 확장**: 프록시 모델이 단순 스크리닝을 넘어 '협상 주체(Negotiation Entity)'로서의 기능을 탑재해야 함을 시사함.
 - **[[hr-conceptual-atoms]] 업데이트**: '대리적 진정성(Proxy Authenticity)', '성과의 물리적 소모량(Outcome Consumption)' 개념을 추가할 필요가 있음.
+- **[[ai-evaluation-system]] 도입**: 자율적 에이전트의 '신뢰성'을 담보하기 위한 기업 고유의 Eval 데이터셋 구축이 AX의 핵심 IP로 부상함.
 - **[[KNOWLEDGE_PULSE]] 반영**: 시스템의 지식 밀도가 '실행력' 중심으로 급격히 이동하고 있음.
 
 ## 4. 제언 (Next Action)
