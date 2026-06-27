@@ -1,3 +1,14 @@
+## 2026-06-27
+
+### [LINT] 위키 구조 부채 해소 — 고립 30개 제거 및 프론트매터 51개 정규화
+
+- 무엇이 바뀌었나: `wiki/` 스코프 정밀 LINT를 돌려 인덱스 허브의 깨진 제목 링크를 stem 링크로 재구성(고립 30→0)하고, 자동 수집 문서 51개의 누락 프론트매터(`title/created/updated/status`)를 정직한 날짜로 보강함. 손상된 `frameworks/_index.md`(줄번호 접두사 혼입)를 복구하고 `protocols/_index.md`를 신규 생성함.
+- 왜 중요한가: 대시보드가 "고아 5"로 안심시켰지만 실제론 위키의 1/3이 그래프에서 단절돼 있었음. 연결을 복원해 "성장" 단계의 핵심 효용인 교차 인사이트와 세렌디피티가 작동할 토대를 확보함.
+- 영향 범위: `wiki/signals/_index.md`, `wiki/concepts/_index.md`, `wiki/frameworks/_index.md`, `wiki/protocols/_index.md`, 위키 문서 51개 프론트매터, `_ops/lint-log.md`.
+- 다음 확인: 정규화로 드러난 노후 문서 56개(콘텐츠 6주+ 미갱신)의 Compiled Truth 재방문, 그리고 대시보드 고아 탐지를 `wiki/` 스코프로 한정하는 수정.
+
+---
+
 ## 2026-06-26
 
 ### [REFLECT] 지능의 안식과 앰비언트 HR(Ambient HR)로의 전환

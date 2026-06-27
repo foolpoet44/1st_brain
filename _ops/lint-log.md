@@ -1,3 +1,34 @@
+## LINT-LOG: 2026-06-27 (wiki-scoped)
+
+> 대시보드 고아 탐지가 레포 전체를 스캔해 루트 스크래치 파일(`2605.md`, `KNOWLEDGE_PULSE.md` 등)을 오탐하던 문제를 발견. `wiki/`만 정밀 스캔하니 실제 구조적 부채가 드러남.
+
+### 점검 전 (Before)
+
+- 고립 문서 (inbound 0): **30개** (개념 9, 신호 19, 프레임워크 1, 프로토콜 1)
+- 필수 필드 누락: **51개** (자동 수집 문서들이 `title/created/updated` 없이 `date`만 보유)
+- Frontmatter 파싱 실패: 0개
+- 갱신 정체(6주+): 24개 (단, `updated` 필드 자체가 없어 과소 집계됨)
+
+### 조치 (Actions)
+
+1. **프론트매터 정규화 (51개)** — 누락된 `title`(H1/파일명 유도)·`created`·`updated`·`status` 보강, `type` 값 소문자 정규화(Note→concept). 날짜는 문서의 `date` 필드 또는 파일명 날짜 접두사에서 가져와 **정체 신호를 위조하지 않음**.
+2. **고립 해소 (30개)** — 각 섹션 `_index.md` 허브가 깨진 제목 링크(`[[AI Boom and Labor Distribution]]`) 대신 **해결 가능한 stem 링크**로 모든 문서를 가리키도록 재구성. `wiki/signals/_index.md`(19개 전체 주제별 재편), `wiki/concepts/_index.md`(누락 9개 추가), `wiki/frameworks/_index.md`(손상된 줄번호 접두사 복구 + `weak-signal-ansoff` 추가), `wiki/protocols/_index.md`(신규 생성).
+
+### 점검 후 (After)
+
+- 고립 문서: **0개** ✅
+- 필수 필드 누락: **0개** ✅
+- Frontmatter 파싱 실패: 0개 ✅
+- 인덱스 링크 해결 불가: 0개 ✅
+- 갱신 정체(6주+): **56개** — 정규화로 `updated`가 정직하게 채워지며 드러난 콘텐츠 신선도 백로그. 날짜 위조 대신 후속 과제로 보고.
+
+### 남은 과제 (CSP 보고)
+
+- 56개 노후 문서(대부분 2026-04-29 생성 후 미갱신)의 Compiled Truth 재방문 — 특히 조직심리학 코어(SDT, LMX, weak-signal-theory)는 최신 신호와 재연결 필요.
+- 대시보드 고아 탐지 로직을 `wiki/` 스코프로 한정하는 수정 권고(현재 루트 파일 오탐).
+
+---
+
 ## LINT-LOG: 2026-05-17 14:28:47
 
 ### [Isolated Documents (Backlinks: 0)]
