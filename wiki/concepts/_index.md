@@ -46,8 +46,23 @@ tags: [index, wiki, concepts]
 - [[weak-signal-theory|Weak Signal Theory (Ansoff)]]
 - [[economic-freedom|Economic Freedom (경제적 자유)]]
 
-## Missing Links (LINT Fixed)
+### HR & 심리 진단
 
-- [[competency-question]]
-- [[opq-framework]]
-- [[digital-unconscious]]
+- [[competency-question]] — 역량 질문 설계
+- [[opq-framework]] — 직무 성격 검사 프레임워크
+- [[8-cluster-model]] — 8-Cluster 심리 역량 모델
+- [[constructed-fit]] — 구성된 적합성(P-O Fit)
+- [[digital-unconscious]] — 디지털 무의식
+
+### AI 인프라 & 지식 대사
+
+- [[contextual-ingestion]] — 맥락 기반 자료 수집
+- [[durable-execution]] — 내구적 실행(Durable Execution)
+- [[graph-rag]] — 그래프 기반 검색·추론
+- [[meta-harnessing]] — 메타 하네싱
+- [[gbrain-personal-ai-os]] — 개인 AI 운영체제
+- [[linkedin-agent-automation-20260525]] — 링크드인 에이전트 자동화
+
+### 투자
+
+- [[failed-pattern-trading]] — 실패 패턴 트레이딩
