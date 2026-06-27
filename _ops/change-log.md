@@ -1,5 +1,12 @@
 ## 2026-06-27
 
+### [DASHBOARD] 고도화 Phase A+B — 신뢰 회복 + 변화 가시성
+
+- 무엇이 바뀌었나: 대시보드 데이터 생성기(`update_dashboard.py`)를 재작성. (A) `os.path.getmtime`(CI에서 체크아웃 시각으로 리셋돼 거짓)을 버리고, 정체(stale)는 프론트매터 `updated`(콘텐츠 신선도), 활동(recent)은 git 커밋일로 분리. 고립·통계를 위키 스코프로 정렬해 LINT와 동일 수치 산출(위키 75·고립 0·정체 56·프론트매터 75/75·health 78). (B) `history.jsonl` 일일 누적, 직전 대비 델타, Health 점수, 추세 스파크라인, LINT 패널을 `index.html`에 연결하고 가짜 하드코딩 차트("↑24%")를 실데이터로 교체. 워크플로가 history도 커밋하도록 수정, 중복 루트 `data.json` 제거.
+- 왜 중요한가: 대시보드 숫자가 LINT와 한목소리를 내며 신뢰를 회복했고("stale 0인데 실제 56" 버그 해소), 단일 스냅샷이던 화면이 어제 대비 증감을 보여줘 CSP의 핵심 질문("무엇이 바뀌었나")에 답하게 됨.
+- 영향 범위: `_ops/scripts/update_dashboard.py`, `_ops/web/index.html`, `_ops/web/history.jsonl`(신규), `.github/workflows/deploy-visual.yml`.
+- 다음 확인: 며칠 누적 후 스파크라인 추세 확인, 그리고 Phase C(결정론적 세렌디피티 정교화·노드 클릭→Jekyll 페이지·모바일 최적화) 진행 여부.
+
 ### [REFACTOR] Vault 구조 대청소 — 추적 파일 5,457→679, 현황 표면 단일화
 
 - 무엇이 바뀌었나: 3단계 리팩토링 실행. (1) 2026-06-22 Auto-Sync 사고로 편입된 중복 Vault 스냅샷 5개(dev/dev2/sync/syncs/sy, ~4,800파일/170MB)를 제거하고 `.gitignore` 가드로 재발 차단. (2) 레거시 루트 `concepts/`(235)를 `raw/legacy-concepts/`로 이전하고 루트 스크래치 .md 14개를 정리(빈 파일 삭제+inbox/raw 이동), weekly 이중 폴더를 `outputs/weekly/`로 통합. (3) 난립하던 현황 표면 5개를 정본 2개(`change-log.md`+Pages 대시보드)로 선언하고 `_ops/README.md`에 SSOT 내비게이션을 못박음.
