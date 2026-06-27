@@ -1,4 +1,7 @@
 ---
+created: 2026-04-29
+updated: 2026-04-29
+status: growing
 title: "Ansoff's Weak Signal Framework: 비즈니스 안테나"
 type: framework
 tags: [strategy, mindset, risk-management, anssoff, weak-signal]

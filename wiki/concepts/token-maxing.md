@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "토큰 맥싱 (Token Maxing)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Active
 tags: [software-3.0, ai-persistence, problem-solving]
 related_to: "[[software-2.0]]", "[[hermes-agent]]"

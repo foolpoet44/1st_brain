@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "[SIGNAL] AI 인프라의 실핏줄, 물류 섹터의 브레이크아웃"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Listening
 tags: [investment, signal, ai-infrastructure, transportation, marketwatch]
 ---

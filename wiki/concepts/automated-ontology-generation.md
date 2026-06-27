@@ -1,5 +1,8 @@
 ---
-type: Concept
+title: "Automated Ontology Generation (AOG)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 tags: [automation, ontology, knowledge-graph, ai-agents]
 status: Active
 ---

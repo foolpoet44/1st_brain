@@ -1,5 +1,8 @@
 ---
-type: Concept
+title: "[Concept] Context Corpus: 지능의 토양, 진실의 저수지"
+created: 2026-05-21
+updated: 2026-05-21
+type: concept
 status: Active
 date: 2026-05-21
 tags: [context-engineering, knowledge-management, llm, pkm, corpus]

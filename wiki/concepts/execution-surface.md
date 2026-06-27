@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "실행 표면 (Execution Surface)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Active
 related_to: "[[vibe-coding]]", "[[ax-internalization]]"
 ---

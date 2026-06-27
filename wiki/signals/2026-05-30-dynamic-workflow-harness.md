@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[SIGNAL] 에이전트 팀에서 '다이내믹 워크플로우'로의 진화"
+created: 2026-05-31
+updated: 2026-05-31
+status: growing
+type: signal
 source: LinkedIn (Alexander Lindbergh)
 date: 2026-05-31
 tags: ["agent-harness", "claudecode", "dynamic-workflow", "scalability"]

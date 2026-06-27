@@ -1,6 +1,9 @@
 ---
+created: 2026-04-29
+updated: 2026-04-29
+status: growing
 title: "Competency Question (CQ): 지식 검증의 척도"
-type: Concept
+type: concept
 tags: [ontology, testing, knowledge-engineering]
 related_to: "[[opq-framework]]"
 ---

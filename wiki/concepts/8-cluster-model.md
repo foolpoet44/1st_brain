@@ -1,5 +1,9 @@
 ---
-type: Concept
+title: "8-Cluster 심리 역량 모델 (8-Cluster Model)"
+created: 2026-04-29
+updated: 2026-04-29
+status: growing
+type: concept
 domain: HR
 tags: ["psy-assess", "8-cluster", "talent-management", "competency"]
 ---

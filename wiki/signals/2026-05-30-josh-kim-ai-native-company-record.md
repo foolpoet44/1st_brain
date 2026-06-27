@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[SIGNAL] Josh Kim의 AI 네이티브 컴퍼니 구축 기록: 데이터 적재와 자가 개선"
+created: 2026-05-30
+updated: 2026-05-30
+status: growing
+type: signal
 source: LinkedIn (Josh Kim)
 date: 2026-05-30
 tags: ["ai-native", "hermes-agent", "data-metabolism", "automation"]

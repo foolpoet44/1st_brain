@@ -1,4 +1,6 @@
 ---
+updated: 2026-04-29
+status: growing
 title: GraphRAG (Graph-based Retrieval-Augmented Generation)
 created: 2026-05-26
 type: concept

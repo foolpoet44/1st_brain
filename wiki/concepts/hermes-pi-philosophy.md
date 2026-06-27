@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "Hermes Pi: 인지부하 감소와 하네스의 개인화"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Active
 related_to: "[[vibe-coding]]", "[[ax-internalization]]", "[[claude-code-workflow]]"
 ---

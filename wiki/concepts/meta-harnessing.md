@@ -1,4 +1,6 @@
 ---
+updated: 2026-04-29
+status: growing
 title: 메타-하네스 (Meta-Harnessing)
 created: 2026-05-26
 type: concept

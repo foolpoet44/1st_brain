@@ -1,5 +1,9 @@
 ---
-type: Concept
+title: "[JOOP] Constructed Fit (구성적 적합성)"
+created: 2026-04-29
+updated: 2026-04-29
+status: growing
+type: concept
 domain: HR
 tags: ["p-o-fit", "dynamic-model", "constructionism", "JOOP"]
 related_to: ["[[hr-conceptual-atoms]]", "[[digital-exoskeleton]]"]

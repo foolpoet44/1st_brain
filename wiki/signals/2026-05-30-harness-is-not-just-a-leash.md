@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[SIGNAL] 하네스는 목줄이 아닌 '작업 운영체제'다: 황민호 님의 하네싱 통찰"
+created: 2026-05-31
+updated: 2026-05-31
+status: growing
+type: signal
 source: LinkedIn (Hwang Minho)
 date: 2026-05-31
 tags: ["harnessing", "agentic-workflow", "anthropic", "openai", "reliability"]

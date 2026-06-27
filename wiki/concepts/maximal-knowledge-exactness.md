@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "Maximal Knowledge Exactness (지식의 최대 정합성)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 related_to: "[[knowledge-graph-as-map]]", "[[agentic-engineering]]"
 status: Active
 tags: [category-theory, exactness, alignment, logic-structure]

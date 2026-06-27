@@ -1,5 +1,8 @@
 ---
-type: Concept
+title: "Digital Unconscious (디지털 무의식)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Active
 tags: [ai, psychology, automation, agents]
 ---

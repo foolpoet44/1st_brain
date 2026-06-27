@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "Contextual Ingestion (맥락적 적재)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 related_to: "[[agentic-engineering]]", "[[knowledge-graph-as-map]]"
 status: Active
 tags: [data-stacking, context, zapier, automated-ingestion]

@@ -1,5 +1,8 @@
 ---
-type: Protocol
+title: "OKA 프로젝트 독립 검증 프로토콜 (Validator Protocol)"
+created: 2026-04-29
+updated: 2026-04-29
+type: protocol
 status: Active
 tags: [validation, multi-agent, quality-control]
 related_to: "[[oka-project]]", "[[agent-friendly-redesign]]"

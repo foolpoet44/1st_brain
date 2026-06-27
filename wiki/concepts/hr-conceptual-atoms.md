@@ -1,5 +1,9 @@
 ---
-type: Concept
+title: "HR 핵심 지식 원자 (HR Conceptual Atoms)"
+created: 2026-04-29
+updated: 2026-04-29
+status: growing
+type: concept
 domain: HR
 tags: ["atoms", "hr-theory", "conceptual-framework"]
 ---

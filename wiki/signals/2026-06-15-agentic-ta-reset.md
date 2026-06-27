@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[Signal] 2026-06-15: Agentic TA 리셋과 '슈퍼제너럴리스트'의 부상"
+created: 2026-06-15
+updated: 2026-06-15
+status: growing
+type: signal
 date: 2026-06-15
 tags: [agentic-ta, hr-tech-reset, supergeneralist, thinkslop]
 importance: High

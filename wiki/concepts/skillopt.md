@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "SkillOpt (자기 진화형 기술 최적화)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 related_to: "[[agentic-engineering]]", "[[knowledge-metabolism]]"
 status: Active
 tags: [microsoft, optimization, self-evolution, ai-agent]

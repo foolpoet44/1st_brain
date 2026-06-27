@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "[SIGNAL] 채용 시장의 권력 이동 (Harper & AI Talent Agents)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Listening
 tags: [signal, hr-market, trend]
 ---
