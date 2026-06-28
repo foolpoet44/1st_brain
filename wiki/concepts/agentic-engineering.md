@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 related_to: "[[vibe-coding]]", "[[execution-surface]]"
 status: Active
 tags: [agent, engineering, karpathy, hr-analogy]

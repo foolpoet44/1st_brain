@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 related_to: "[[knowledge-graph-as-map]]", "[[maximal-knowledge-exactness]]"
 status: Active
 tags: [indexing, cost-efficiency, codegraph, token-optimization]

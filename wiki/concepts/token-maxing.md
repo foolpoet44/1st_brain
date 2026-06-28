@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 status: Active
 tags: [software-3.0, ai-persistence, problem-solving]
 related_to: "[[software-2.0]]", "[[hermes-agent]]"

@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 related_to: "[[agentic-engineering]]", "[[knowledge-graph-as-map]]"
 status: Active
 tags: [data-stacking, context, zapier, automated-ingestion]

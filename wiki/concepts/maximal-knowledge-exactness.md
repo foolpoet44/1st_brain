@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 related_to: "[[knowledge-graph-as-map]]", "[[agentic-engineering]]"
 status: Active
 tags: [category-theory, exactness, alignment, logic-structure]

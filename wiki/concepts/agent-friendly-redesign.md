@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 status: Active
 tags: [agent-automation, architecture, state-management]
 related_to: "[[hermes-agent]]", "[[ax-infrastructure]]"

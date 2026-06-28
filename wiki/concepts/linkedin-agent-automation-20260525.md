@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 status: Completed
 tags: [case-study, hr-automation, linkedin-insight]
 related_to: "[[agent-friendly-redesign]]", "[[token-maxing]]"

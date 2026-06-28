@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 related_to: "[[agentic-engineering]]", "[[knowledge-metabolism]]"
 status: Active
 tags: [microsoft, optimization, self-evolution, ai-agent]

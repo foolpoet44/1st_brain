@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 status: Active
 related_to: "[[vibe-coding]]", "[[ax-internalization]]"
 ---

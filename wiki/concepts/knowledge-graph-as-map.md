@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 related_to: "[[agentic-engineering]]", "[[skillopt]]"
 status: Active
 tags: [knowledge-graph, mapping, agent-logic, trust]

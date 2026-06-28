@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Signal
 status: Listening
 tags: [investment, signal, ai-infrastructure, transportation, marketwatch]
 ---

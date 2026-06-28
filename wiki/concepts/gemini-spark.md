@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Concept
 status: Active
 related_to: "[[execution-surface]]", "[[ax-internalization]]"
 ---

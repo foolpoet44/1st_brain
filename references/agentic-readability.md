@@ -1,5 +1,5 @@
 ---
-type: Note
+type: Reference
 status: Active
 tags: [protocol, documentation, agent-friendly]
 ---
