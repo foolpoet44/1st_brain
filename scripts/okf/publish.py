@@ -21,7 +21,7 @@ import re
 import subprocess
 import sys
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 import yaml
@@ -61,12 +61,18 @@ TYPE_NORMALIZE = {
     "signal": "Signal", "protocol": "Protocol", "project": "Project",
     "reference": "Reference", "research": "Research", "analysis": "Analysis",
     "note": "Note",
+    "people": "Person", "persons": "Person",  # 복수형/방언 흡수(§5.1)
 }
 
 # status 단어 방언 ↔ 이모지 정규화(§11 보정 3). 발행본은 이모지로 통일.
 STATUS_NORMALIZE = {
     "seed": "💡", "growing": "🔄", "mature": "✅", "archived": "📦",
 }
+
+# 신선도(드리프트) 임계 — Compiled Truth 가 N주 이상 미갱신이면 WARN.
+# OKF 의 구조적 결함 ①(드리프트)에 대한 응답: "필드는 프로세스가 아니다"를 측정 가능한
+# 게이트로 코드화한다. LINT 프로토콜 §2(6주 미갱신 점검)의 SPEC §8 승격.
+STALE_WEEKS = 6
 
 # 예약 파일(conformance 비대상 — 별도 규칙으로 처리).
 RESERVED = {"_index.md", "index.md", "log.md"}
@@ -121,6 +127,7 @@ SEVERITY = {
     "unresolved-link": "INFO",
     "relation-target-missing": "INFO",
     "root-junk": "WARN",
+    "stale-compiled-truth": "WARN",
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -221,18 +228,72 @@ def scan_root_junk(root: Path) -> list[str]:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# 신선도(드리프트) 측정 — OKF 결함 ①에 대한 응답
+# ─────────────────────────────────────────────────────────────────────────────
+
+# 본문 Timeline 헤딩의 ISO 날짜(`### 2026-06-28`, suffix 무시).
+_BODY_DATE_RE = re.compile(r"^#{2,4}\s+(\d{4}-\d{2}-\d{2})\b")
+
+
+def _parse_iso_date(val) -> "datetime | None":
+    """YAML date/datetime/문자열 → datetime. 파싱 불가면 None."""
+    if val is None:
+        return None
+    if isinstance(val, datetime):
+        return val
+    # yaml 이 `2026-06-28` 을 datetime.date 로 파싱한 경우(문자열 아님).
+    if not isinstance(val, str) and hasattr(val, "year") and hasattr(val, "month") \
+            and hasattr(val, "day"):
+        try:
+            return datetime(val.year, val.month, val.day)
+        except (ValueError, TypeError):
+            return None
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", str(val).strip())
+    if not m:
+        return None
+    try:
+        return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    except ValueError:
+        return None
+
+
+def latest_content_date(c: Concept) -> "datetime | None":
+    """문서의 콘텐츠 최신 날짜 = max(frontmatter.updated, 마지막 Timeline 날짜).
+
+    git timestamp 는 일부러 제외한다 — 커밋 시각은 '콘텐츠 신선도'가 아니라 단순 파일 이동에도
+    갱신되므로 드리프트 측정을 왜곡한다. 저자가 선언한 updated 와 Timeline 증거만 본다.
+    """
+    cands: list[datetime] = []
+    d = _parse_iso_date((c.frontmatter or {}).get("updated"))
+    if d:
+        cands.append(d)
+    for line in c.body.splitlines():
+        m = _BODY_DATE_RE.match(line)
+        if m:
+            dt = _parse_iso_date(m.group(1))
+            if dt:
+                cands.append(dt)
+    return max(cands) if cands else None
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # [7] check_conformance — SPEC §8 검사
 # ─────────────────────────────────────────────────────────────────────────────
 
 
 def check_conformance(concepts: list[Concept],
-                      published: bool = False) -> list[Finding]:
+                      published: bool = False,
+                      now: "datetime | None" = None) -> list[Finding]:
     """SPEC §8 기준으로 Concept 목록을 검사 → Finding 목록.
 
-    published=False: 작성본(번들 IN) 베이스라인. 위키링크 잔존을 legacy-dialect 로 본다.
+    published=False: 작성본(번들 IN) 베이스라인. 위키링크 잔존을 legacy-dialect 로 보고,
+                     신선도(stale-compiled-truth) 드리프트를 측정한다.
     published=True : 발행본. 위키링크 잔존은 미해석/모호 링크(별도 보고)이므로 여기선 무시.
+    now: 신선도 기준 시각(테스트 주입용). 기본 datetime.now().
     """
     findings: list[Finding] = []
+    ref = now or datetime.now()
+    stale_delta = timedelta(weeks=STALE_WEEKS)
     for c in concepts:
         name = Path(c.rel).name
         # log.md 는 OKF 예약 생성 파일(프론트매터 없음이 정상). 검사 제외.
@@ -283,6 +344,16 @@ def check_conformance(concepts: list[Concept],
             n = len(WIKILINK_RE.findall(c.body))
             findings.append(Finding("legacy-dialect", "WARN", c.rel,
                                     f"위키링크 {n}건(발행 시 변환 대상)"))
+
+        # 6. 신선도(드리프트): 작성본 베이스라인에서만. Compiled Truth 가 STALE_WEEKS 주
+        #    이상 미갱신이면 WARN. OKF 결함 ①("필드는 프로세스가 아니다")의 측정 가능한 게이트.
+        if not published:
+            latest = latest_content_date(c)
+            if latest and (ref - latest) > stale_delta:
+                age = (ref - latest).days
+                findings.append(Finding("stale-compiled-truth", "WARN", c.rel,
+                                        f"최종 갱신 {latest.date()} ({age}일 경과, "
+                                        f"임계 {STALE_WEEKS}주)"))
     return findings
 
 

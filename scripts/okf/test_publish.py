@@ -4,6 +4,7 @@ OKF publish 단위 테스트 (표준 라이브러리 unittest).
 실행: python -m unittest scripts.okf.test_publish -v
 AC1: derive_type 전체 prefix 케이스 통과 + conformance/정크 핵심 동작.
 """
+import datetime as _dt
 import tempfile
 import unittest
 from pathlib import Path
@@ -305,6 +306,57 @@ class TestPublishBundleIntegration(unittest.TestCase):
             self.assertEqual(txt1, txt2)
             # [[b]] → 변환됨
             self.assertIn("/wiki/concepts/b.md", txt1)
+
+
+class TestStaleness(unittest.TestCase):
+    """OKF 결함 ①(드리프트) 응답 — stale-compiled-truth 게이트."""
+
+    NOW = _dt.datetime(2026, 6, 28)
+
+    def _c(self, rel, fm=None, body=""):
+        return P.Concept(src=Path(rel), rel=rel, frontmatter=fm or {},
+                         fm_status="ok", body=body)
+
+    def _codes(self, concepts, published=False):
+        return {f.code for f in P.check_conformance(
+            concepts, published=published, now=self.NOW)}
+
+    def test_old_updated_is_stale(self):
+        c = self._c("wiki/concepts/old.md",
+                    {"type": "Concept", "updated": "2026-01-01"})
+        self.assertIn("stale-compiled-truth", self._codes([c]))
+
+    def test_recent_updated_is_fresh(self):
+        c = self._c("wiki/concepts/new.md",
+                    {"type": "Concept", "updated": "2026-06-20"})
+        self.assertNotIn("stale-compiled-truth", self._codes([c]))
+
+    def test_recent_timeline_rescues_old_frontmatter(self):
+        # updated 는 오래됐지만 Timeline 마지막 날짜가 최근이면 신선.
+        c = self._c("wiki/concepts/active.md",
+                    {"type": "Concept", "updated": "2026-01-01"},
+                    body="## Timeline\n\n### 2026-06-15\n- 최근 작업\n")
+        self.assertNotIn("stale-compiled-truth", self._codes([c]))
+
+    def test_no_date_is_not_flagged(self):
+        # 날짜 신호가 전혀 없으면 평가 불가 — WARN 내지 않는다(오탐 방지).
+        c = self._c("wiki/concepts/nodate.md", {"type": "Concept"})
+        self.assertNotIn("stale-compiled-truth", self._codes([c]))
+
+    def test_published_suppresses_staleness(self):
+        # 발행본에서는 드리프트를 재측정하지 않는다(작성본 베이스라인 전용).
+        c = self._c("wiki/concepts/old.md",
+                    {"type": "Concept", "updated": "2026-01-01"})
+        self.assertNotIn("stale-compiled-truth", self._codes([c], published=True))
+
+    def test_latest_content_date_picks_max_and_excludes_git(self):
+        # updated(문자열)·date 객체·Timeline 중 최댓값을 고르고, git timestamp 는 무시.
+        c = self._c("wiki/x.md",
+                    {"type": "Concept", "updated": _dt.date(2026, 5, 1),
+                     "timestamp": "2027-01-01T00:00:00+09:00"},
+                    body="### 2026-06-10\n- a\n### 2026-03-01\n- b\n")
+        latest = P.latest_content_date(c)
+        self.assertEqual(latest, _dt.datetime(2026, 6, 10))
 
 
 if __name__ == "__main__":

@@ -92,6 +92,24 @@ OKF의 유일한 필수 필드는 `type`이다. csp-brain은 폴더가 곧 타�
 | 그 외 매칭 실패 | `Concept` (fallback) + LINT 경고 | 수동 확인 큐. |
 > OKF 규칙: type 값은 중앙 등록되지 않으며, 소비자는 미지의 type을 관대하게 처리해야 한다. 위 값은 자명성만 만족하면 된다.
 
+### 5.1 정본 Type 어휘 (Controlled Vocabulary) — OKF 결함 ③에 대한 응답
+
+OKF의 가장 깊은 결함은 **의미가 아니라 컨테이너만 표준화**한다는 점이다. `type`이 자유 형식이라
+"BigQuery 테이블"·"테이블"·"관계형 자산"이 모두 유효하지만 서로 다른 언어가 된다. csp-brain은
+"상자의 합의를 사용자에게 떠넘기지 않는다" — 아래를 **정본 어휘**로 고정한다. OKF의 관대함은
+*외부 소비*에서만 유지하고, *내부 작성*에는 이 폐쇄 집합을 강제한다(`derive_type`/`normalize_type`).
+
+```
+Concept · Tool · Framework · Skill · Decision · Person ·
+Signal · Protocol · Project · Reference · Research · Analysis
+```
+
+- 경로가 타입을 유도하므로(§5 표), 작성본의 `type`은 **경로 유도값과 일치**해야 한다. 불일치 시
+  `type-conflict` WARN.
+- `Note` 는 정본 어휘가 **아니다**. `permanent/`(번들 OUT)의 영구 노트에서만 의미를 가지며,
+  번들 IN(`wiki/**`·`references/**` 등)에서 `type: Note` 는 막연한 레이블이므로 경로 유도값으로
+  교정한다. 복수형/대소문자 방언(`people`→`Person` 등)은 `normalize_type`이 흡수한다.
+
 > ⚠ **Phase 0 보정 (§5)**:
 > - 루트 prefix `concepts/`·`decisions/`·`people/`·`permanent/`·`moc/`는 §3.1 보정으로 IN에서 빠지므로 TYPE_MAP에서 **제거**(또는 fallback 처리). 유효 매핑은 `wiki/*` prefix + `projects/`(+`references/`·`research/`·`analysis/`).
 > - **type 대소문자 정규화 필요**: 본 SPEC은 PascalCase(`Concept`), CLAUDE.md는 소문자(`concept`)를 쓴다. PUBLISH는 기존 프론트매터 `type` 값을 PascalCase로 정규화하되, 충돌 시 §6.1 비파괴 병합 규칙을 따른다.
@@ -153,6 +171,9 @@ OKF §9 + csp-brain 추가 규칙. 번들이 conformant하려면:
 3. `index.md`/`log.md`가 존재할 때 OKF §6/§7 구조를 따른다.
 4. (csp 추가) `relations[].target`은 bundle-relative path 형식이다(존재 보장은 안 함).
 5. (csp 추가) 번들 IN에 `_index`·`[[wikilink]]`·미정형 날짜 파일명이 남아있지 않다(발행본 기준).
+6. (csp 추가) 작성본 concept의 콘텐츠 최신 날짜(`updated` 또는 마지막 Timeline 날짜)가 6주(기본
+   `STALE_WEEKS`) 이내다 — OKF 결함 ①(드리프트)에 대한 측정 가능한 게이트. 초과 시
+   `stale-compiled-truth` WARN. git timestamp는 신선도 신호에서 제외(파일 이동에도 갱신되므로).
 연성 규칙(소비자가 거부하면 안 됨): 선택 필드 누락, 미지 type, 미지 확장 키, 깨진 링크, `index.md` 부재.
 ## 9. 6 프로토콜과의 관계
 | 프로토콜 | OKF로 벼려지는 방식 |

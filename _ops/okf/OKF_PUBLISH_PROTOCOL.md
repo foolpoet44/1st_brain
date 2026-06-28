@@ -82,6 +82,15 @@ SPEC §8 기준을 검사한다. 출력은 `dist/okf/lint-report.md`.
 | `unresolved-link` | INFO | 해석 실패(= 아직 안 쓴 지식, 허용) |
 | `legacy-dialect` | WARN | 발행본에 `_index`/`[[ ]]`/비정형 날짜 잔존 |
 | `relation-target-missing` | INFO | `relations[].target` 미존재(허용) |
+| `stale-compiled-truth` | WARN | 작성본의 콘텐츠 최신 날짜가 6주(기본) 초과로 미갱신 |
+
+> `stale-compiled-truth` 는 OKF 의 구조적 결함 ①(드리프트)에 대한 응답이다. OKF 사양은
+> 타임스탬프 *필드*만 두고 최신성 유지 *프로세스*가 없어 공유 폴더가 부패한다. csp-brain 은
+> LINT 프로토콜 §2(6주 미갱신 점검)를 이 측정 가능한 게이트로 승격한다. 콘텐츠 날짜는
+> `frontmatter.updated` 와 본문 Timeline 의 마지막 `### YYYY-MM-DD` 중 최댓값으로 본다.
+> git `timestamp` 는 단순 파일 이동에도 갱신되어 드리프트를 가리므로 **제외**한다. 작성본
+> 베이스라인(`--only conformance`)에서만 측정하고 발행본 재검사에서는 중복 측정하지 않는다.
+
 ### 4.2 게이트 기준
 - **PASS**: ERROR 0건.
 - WARN/INFO는 리포트에 집계하되 빌드를 막지 않는다.
