@@ -1,3 +1,13 @@
+## 2026-06-28
+
+### [REFLECT] 지능의 자산화와 그로스해킹의 이식
+
+- 무엇이 바뀌었나: HR을 데이터 기반 실험 과학으로 전환하는 'HR 그로스해킹' 프레임워크와 AI 품질을 비즈니스 가치로 검증하는 'AI Eval System'을 지식 체계에 통합함.
+- 왜 중요한가: 주관적 직관(Vibe)을 계량화된 자산(Eval Dataset)으로 치환함으로써, 모델 종속을 방지하고 기업 고유의 노하우를 영속적인 지능으로 박제함.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-28.md`, `growth-hacking-philosophy.md`, `wiki/concepts/ai-evaluation-system.md`, `wiki/concepts/eval.md`.
+
+---
+
 ## 2026-06-27
 
 ### [REFLECT] 자율적 대사와 진정성의 이연(Delayed Rapport)
