@@ -1,3 +1,21 @@
+## 2026-06-28
+
+### [KNOWLEDGE] OKF/RAG/Karpathy 위키 신설 — 시스템이 자기 기반 표준을 설명하게 됨
+
+- 무엇이 바뀌었나: OKF 분석 글을 INGEST해 `inbox/articles/2026-06-28-okf-folders-vs-vectordb.md`로 보존하고, 빠져 있던 세 개념을 신설했다 — `wiki/frameworks/okf-open-knowledge-format.md`(앵커), `wiki/concepts/rag.md`, `wiki/concepts/karpathy-llm-wiki.md`. 기존 `compiled-truth-timeline`·`protocols` Timeline에 역링크 추가.
+- 왜 중요한가: 이 Vault는 OKF를 이미 **구현**해 두고도(`scripts/okf/`) 정작 OKF가 무엇인지 설명하는 위키가 하나도 없었다 — 가장 큰 아키텍처 기둥이 자기 지식 그래프에서 빠져 있던 셈. 이제 폴더>벡터DB 논지와 RAG의 한계, Karpathy LLM Wiki의 기원이 백링크로 연결됐고, OKF 프레임워크 문서가 "글의 세 결함 → 이 Vault의 응답"을 표로 못박는다.
+- 영향 범위: `inbox/articles/`(신규 폴더)·`wiki/frameworks/`·`wiki/concepts/`. 발행본 게이트 기준 신규 백링크는 전부 해석돼 unresolved/ambiguous 증가 0.
+- 다음 확인: OKF 프레임워크 문서를 `wiki/decisions/`의 OKF 채택 결정과 연결할지, signals의 에이전트 OS 흐름과 교차할지.
+
+### [OPS] OKF 결함 3종 → 측정 가능한 점검표 (신선도 게이트 신설 + type 어휘 고정)
+
+- 무엇이 바뀌었나: 글이 지적한 OKF의 세 결함을 구현 점검표로 전환했다. ① **드리프트** → `check_conformance`에 `stale-compiled-truth` 검사 신설(콘텐츠 최신일이 6주 초과면 WARN; git timestamp는 신선도에서 제외). ③ **컨테이너만 표준화** → SPEC §5.1에 정본 type 어휘(12종)를 고정하고, 막연한 `type: Note` 20건을 경로 유도값(Concept/Signal/Reference)으로 교정 + `people`→`Person` 방언을 `normalize_type`에 흡수. ② **지저분한 마크다운**은 기존 비파괴 발행+게이트가 이미 답이므로 OKF 문서에 명문화. 테스트 31→37.
+- 왜 중요한가: 글의 핵심 통찰은 "OKF는 타임스탬프 *필드*만 두고 최신성 *프로세스*가 없어 공유 폴더가 부패한다"는 것. csp-brain은 LINT §2의 6주 점검을 산문에서 **측정 가능한 게이트**로 승격해 이 결함에 응답한다 — 첫 측정에서 드리프트 25건 포착. type-conflict는 21→0으로 사라져 발행본 WARN이 38→17로 줄었다. "상자의 합의를 사용자에게 떠넘기지 않는다"는 원칙이 코드가 됐다.
+- 영향 범위: `scripts/okf/publish.py`·`test_publish.py`, `_ops/okf/OKF_ADOPTION_SPEC.md`(§5.1·§8)·`OKF_PUBLISH_PROTOCOL.md`(§4.1), 작성본 type 한 줄 교정 20건. 발행본 게이트 **PASS 유지(ERROR 0)**.
+- 다음 확인: 신선도 WARN 25건은 사람이 갱신/아카이브로 해소. `--strict` CI 게이트에 신선도를 포함할지. 남은 ambiguous-link 17은 명시 경로로 보강.
+
+---
+
 ## 2026-06-16
 
 ### [OPS] OKF Phase 2 — PUBLISH 패스 + 첫 conformant 발행본 (PASS)

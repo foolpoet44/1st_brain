@@ -112,3 +112,12 @@
 - 조치:
   - 변경 가시성 로그와 weekly/dashboard는 정상 작동 확인
   - 고립 문서와 `dev/` 폴더는 별도 정리 대상으로 보류
+
+## 2026-06-28 — OKF conformance (신선도 게이트 신설)
+
+- 실행: `python -m scripts.okf.publish --only conformance` (+ 발행 dry-run)
+- 베이스라인: `_ops/okf/lint-baseline-2026-06-28.md` (작성본 ERROR 69 · WARN 73 · INFO 0)
+- 발견 사항:
+  - 신규 `stale-compiled-truth` 검사가 6주+ 미갱신 25건 포착(OKF 드리프트 결함 응답)
+  - `type: Note` 막연 레이블 20건을 경로 유도값으로 교정 → 발행본 type-conflict 21→0
+- 발행본 게이트: PASS ✅ (ERROR 0 · WARN 17 · INFO 18) — WARN 38→17
