@@ -43,3 +43,9 @@ csp-brain 운영을 위한 6 가지 프로토콜 + 검증 체계.
 
 - wiki 초기화와 함께 등록
 - 각 프로토콜은 별도 문서로 확장 예정
+
+### 2026-06-28
+
+- [[OKF (Open Knowledge Format)]] 편입으로, LINT의 "6주 미갱신 점검"이 단순 산문 규칙을 넘어
+  conformance checker의 `stale-compiled-truth` 게이트로 코드화되는 근거가 정리됨 — OKF의
+  드리프트 결함에 대한 프로토콜 차원의 응답.
