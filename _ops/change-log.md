@@ -1,3 +1,14 @@
+## 2026-06-29
+
+### [OKF] Google OKF 원칙 공식 정렬 — 번들 루트 생성 및 인덱스 체계화
+
+- 무엇이 바뀌었나: Google의 Open Knowledge Format(OKF) 개념을 INGEST하여 CSP-Brain 구조와 공식 정렬함. `wiki/_index.md` 번들 루트를 신규 생성하고, `wiki/concepts/_index.md`와 `wiki/signals/_index.md`를 최신 파일 목록으로 전면 갱신함. OKF 개념 문서(`wiki/concepts/open-knowledge-format.md`)를 새로 생성함.
+- 왜 중요한가: CSP-Brain은 이미 OKF 철학을 선행하고 있었지만, 에이전트가 수천 개 파일 중 필요한 것만 골라 읽는 "네비게이션 효율성"을 보장하는 번들 루트가 없었음. 이번 정렬로 에이전트가 wiki 진입 시 `_index.md` 계층을 통해 효율적으로 탐색할 수 있게 됨.
+- 영향 범위: `wiki/_index.md`(신규), `wiki/concepts/open-knowledge-format.md`(신규), `wiki/concepts/_index.md`(전면 갱신), `wiki/signals/_index.md`(전면 갱신).
+- 다음 확인: 새 파일 추가 시 해당 폴더 `_index.md`에 항목을 추가하는 습관이 정착되는지 다음 INGEST 때 확인.
+
+---
+
 ## 2026-06-28
 
 ### [REFLECT] 지능의 자산화와 그로스해킹의 이식

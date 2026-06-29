@@ -219,6 +219,7 @@ aliases: [대체명칭]
    a) 기존 wiki 관련 → 해당 문서에 병합
    b) 새로운 주제 → wiki/ 적절한 폴더에 새 문서 생성
    c) 여러 주제 → 분산 추가 + 교차 링크
+   d) 새 파일이 추가된 폴더의 _index.md에 해당 항목 추가 (OKF 네비게이션 유지)
 4. 처리 완료된 inbox 파일에 frontmatter 추가: processed: true
 5. _ops/ingest-log.md에 기록
 6. 의미 있는 편입이면 _ops/change-log.md에 변경 요약 기록
