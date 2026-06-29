@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-06-29 23:00
+last_update: 2026-06-29 23:01
 status: 🟢 ACTIVE
 ---
 
@@ -20,7 +20,7 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
-- **[06-29 17:03]** `KNOWLEDGE_PULSE.md`
+- **[06-29 23:01]** `KNOWLEDGE_PULSE.md`
 - **[06-28 23:00]** `outputs/daily-reflect/REFLECT_2026-06-28.md`
 - **[06-28 23:00]** `_ops/change-log.md`
 - **[06-28 08:00]** `wiki/signals/2026-06-27-autonomous-talent-agency-shift.md`
