@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "MEMO (Memory as a Model)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Active
 related_to: "[[llm-knowledge-base]]", "[[ax-internalization]]"
 ---

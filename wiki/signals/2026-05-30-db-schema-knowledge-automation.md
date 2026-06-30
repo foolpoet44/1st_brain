@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[SIGNAL] DB 스키마의 지식 자산화: td-export와 Git-Ops"
+created: 2026-05-31
+updated: 2026-05-31
+status: growing
+type: signal
 source: LinkedIn (Tei Nam)
 date: 2026-05-31
 tags: ["database", "automation", "markdown", "git-ops"]

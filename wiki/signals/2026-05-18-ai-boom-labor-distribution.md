@@ -1,4 +1,5 @@
 ---
+title: "AI Boom and Labor Distribution"
 created: 2026-05-18
 updated: 2026-05-18
 type: signal

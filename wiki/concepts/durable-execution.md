@@ -1,5 +1,9 @@
 ---
-type: Concept
+title: "내구적 실행 (Durable Execution)"
+created: 2026-04-29
+updated: 2026-04-29
+status: growing
+type: concept
 domain: Infrastructure
 tags: ["engineering", "reliability", "statebase", "deterministic-workflow"]
 ---

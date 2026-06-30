@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[Signal] 에이전틱 채용의 주류화와 '인간-AI 파워 커플'의 등장"
+created: 2026-06-13
+updated: 2026-06-13
+status: growing
+type: signal
 date: 2026-06-13
 source: ["ADP 2026 Trends", "Korn Ferry TA Trends 2026", "RecruitmentSmart"]
 tags: [agentic-recruitment, hr-tech-shift, human-ai-collaboration, power-couple]

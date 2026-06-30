@@ -1,6 +1,9 @@
 ---
+created: 2026-06-22
+updated: 2026-06-22
+status: growing
 title: 2026-06-22 에이전틱 오케스트레이션으로의 전환 (The Orchestration Shift)
-type: Signal
+type: signal
 date: 2026-06-22
 tags: [hr-tech, agentic-ai, orchestration, skills-first]
 source: [Eightfold AI, AutomationEdge, Radancy 2026 Trends]

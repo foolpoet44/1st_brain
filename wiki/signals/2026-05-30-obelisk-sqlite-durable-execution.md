@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[SIGNAL] Obelisk: SQLite 기반 내구적 워크플로 엔진의 부상"
+created: 2026-05-30
+updated: 2026-05-30
+status: growing
+type: signal
 source: Anthropic / Tech Blogs (Obelisk)
 date: 2026-05-30
 tags:

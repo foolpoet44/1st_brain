@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[SIGNAL] 헤드앤숄더 실패(H&S Top Failure)를 통한 불리시 컨티뉴에이션"
+created: 2026-05-30
+updated: 2026-05-30
+status: growing
+type: signal
 source: Tech Charts (X)
 date: 2026-05-30
 tags:

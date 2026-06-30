@@ -1,5 +1,8 @@
 ---
-type: Signal
+title: "[SIGNAL] LogicRAG: 지도를 미리 그리지 않는 '레이지(Lazy)' 추론의 승리"
+created: 2026-06-03
+updated: 2026-06-03
+type: signal
 date: 2026-06-03
 source: LinkedIn (Soojeong Bae/Kiwoong Yeom)
 tags: [RAG, LogicRAG, GraphRAG, Resolver, Efficiency, AI-Strategy]

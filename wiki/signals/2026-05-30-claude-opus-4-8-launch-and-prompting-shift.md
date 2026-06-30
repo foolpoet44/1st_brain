@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[SIGNAL] Claude Opus 4.8 발표 및 프롬프팅 패러다임의 전환"
+created: 2026-05-30
+updated: 2026-05-30
+status: growing
+type: signal
 source: X (@gonnector)
 date: 2026-05-30
 tags: ["anthropic", "claude-4.8", "prompt-engineering", "infra"]

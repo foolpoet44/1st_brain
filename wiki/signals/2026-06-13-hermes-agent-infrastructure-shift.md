@@ -1,5 +1,8 @@
 ---
-type: Signal
+title: "[Weak Signal] AI Agent as an Operating Layer"
+created: 2026-06-13
+updated: 2026-06-13
+type: signal
 status: Active
 date: 2026-06-13
 source: "Goobong Jeong (LinkedIn)"

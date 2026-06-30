@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "CodeGraph Efficiency (지능적 인덱싱과 비용 효율성)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 related_to: "[[knowledge-graph-as-map]]", "[[maximal-knowledge-exactness]]"
 status: Active
 tags: [indexing, cost-efficiency, codegraph, token-optimization]

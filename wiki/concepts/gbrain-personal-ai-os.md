@@ -1,5 +1,9 @@
 ---
-type: Concept
+title: "정교한 지능 체계 (GBrain): 단순 저장소를 넘어선 개인용 AI OS"
+created: 2026-05-31
+updated: 2026-05-31
+status: growing
+type: concept
 source: LinkedIn (GB Jeong / Garry Tan)
 date: 2026-05-31
 tags: ["gbrain", "llm-wiki", "personal-ai-os", "state-change"]

@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "에이전트 친화적 재설계 (Agent-friendly Redesign)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Active
 tags: [agent-automation, architecture, state-management]
 related_to: "[[hermes-agent]]", "[[ax-infrastructure]]"

@@ -1,6 +1,9 @@
 ---
-type: Concept
-status: Active
+title: "AI Evaluation System (Eval)"
+created: 2026-06-27
+updated: 2026-06-27
+type: concept
+status: growing
 tags: [ai-engineering, ax-strategy, quality-assurance, evaluation, ip-asset]
 related_to: "[[agentic-engineering]]"
 ---

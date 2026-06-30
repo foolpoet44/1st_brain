@@ -1,5 +1,9 @@
 #!/bin/bash
-VAULT_PATH="/Users/dkmac/Desktop/@26/dev"
+# 이식성: 하드코딩된 로컬 경로(/Users/dkmac/...) 대신 스크립트 위치에서 레포 루트를 유도.
+# 과거 하드코딩 경로는 머신 종속이었고, 부모 디렉토리에 sibling vault가 있으면
+# `git add .`가 이를 통째로 빨아들이는 사고(2026-06-22 중복 스냅샷)의 단초였다.
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+VAULT_PATH="$( cd "$SCRIPT_DIR/.." && pwd )"
 MONITOR_SCRIPT="$VAULT_PATH/scripts/know_grow_monitor.py"
 cd "$VAULT_PATH" || exit
 if [ -f "$MONITOR_SCRIPT" ]; then

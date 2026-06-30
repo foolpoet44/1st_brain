@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "지식 합성 5단계 (MEMO 학습법)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Active
 related_to: "[[memo-architecture]]"
 ---

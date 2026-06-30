@@ -1,5 +1,9 @@
 ---
-type: Concept
+title: "OPQ32 (Occupational Personality Questionnaire) Framework"
+created: 2026-04-29
+updated: 2026-04-29
+status: growing
+type: concept
 tags: [hr, psychology, assessment, opq32]
 related_to: "[[oka-project]]"
 ---

@@ -1,4 +1,6 @@
 ---
+created: 2026-06-25
+updated: 2026-06-25
 title: "HR의 역할 대전환: 행정의 파수꾼에서 '성과 시스템의 설계자(Architect)'로"
 date: 2026-06-25
 type: signal

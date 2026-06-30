@@ -1,20 +1,32 @@
-## 2026-06-28
-
-### [REFLECT] 지능의 자산화와 그로스해킹의 이식
-
-- 무엇이 바뀌었나: HR을 데이터 기반 실험 과학으로 전환하는 'HR 그로스해킹' 프레임워크와 AI 품질을 비즈니스 가치로 검증하는 'AI Eval System'을 지식 체계에 통합함.
-- 왜 중요한가: 주관적 직관(Vibe)을 계량화된 자산(Eval Dataset)으로 치환함으로써, 모델 종속을 방지하고 기업 고유의 노하우를 영속적인 지능으로 박제함.
-- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-28.md`, `growth-hacking-philosophy.md`, `wiki/concepts/ai-evaluation-system.md`, `wiki/concepts/eval.md`.
-
----
-
 ## 2026-06-27
 
-### [REFLECT] 자율적 대사와 진정성의 이연(Delayed Rapport)
+### [DASHBOARD] 고도화 Phase C + 발행경로 회귀 수정
 
-- 무엇이 바뀌었나: 채용 공고부터 연봉 협상까지 전담하는 '자율적 인재 에이전시'와 AI가 교육을 대신 이수하는 '학습 대리' 신호를 분석하여, 평가와 신뢰의 축을 '시스템적 무결성'으로 전환함.
-- 왜 중요한가: 진정성의 기준이 인간의 언어에서 시스템 로그로 이동함에 따라, HR 서비스 설계 시 'Trust Gating'과 '시각적 무결성' 확보가 핵심 경쟁력이 됨을 정의함.
-- 영향 범위: `outputs/daily-reflect/REFLECT_2026-06-27.md`, `wiki/signals/2026-06-27-autonomous-talent-agency-shift.md`.
+- 무엇이 바뀌었나: (C1) 세렌디피티를 '첫 매칭'에서 '공유 태그가 가장 많은 미연결 쌍'으로 정교화(결정론적). (C2) vis-network 그래프 노드 클릭 시 문서 소스를 열도록 핸들러 추가 + 매 폴링마다 그래프 갱신(setData). (C3) 모바일에서 `h-screen`+`overflow:hidden`이 콘텐츠를 자르던 문제를 미디어쿼리로 세로 스크롤 허용해 해소. 아울러 Phase A+B 과정에서 만든 회귀를 수정: 실제 Pages 발행본은 루트 `index.html`+`data.json`인데(`_ops/`는 Jekyll exclude) UI 개선이 `_ops/web/`에만 들어가고 루트 `data.json`이 삭제돼 있었음 → 루트를 강화본으로 동기화, 생성기가 루트에도 data.json을 쓰도록 복구, `.gitignore` 화이트리스트 및 워크플로 커밋 대상에 루트 data.json 추가.
+- 왜 중요한가: 고도화한 대시보드가 실제로 라이브 Pages에 반영되도록 발행 경로를 바로잡았고(안 그러면 개선이 로컬 소스에만 머물고 라이브는 깨짐), 모바일에서 폰으로 확인하는 CSP의 실사용 환경을 살림.
+- 영향 범위: `index.html`(루트 발행본), `_ops/web/index.html`, `_ops/scripts/update_dashboard.py`, `data.json`, `.gitignore`, `.github/workflows/deploy-visual.yml`.
+- 다음 확인: 머지 후 라이브 Pages에서 신규 패널·모바일 렌더 확인, 루트/`_ops/web` index.html 이중 사본의 단일화(기술 부채).
+
+### [DASHBOARD] 고도화 Phase A+B — 신뢰 회복 + 변화 가시성
+
+- 무엇이 바뀌었나: 대시보드 데이터 생성기(`update_dashboard.py`)를 재작성. (A) `os.path.getmtime`(CI에서 체크아웃 시각으로 리셋돼 거짓)을 버리고, 정체(stale)는 프론트매터 `updated`(콘텐츠 신선도), 활동(recent)은 git 커밋일로 분리. 고립·통계를 위키 스코프로 정렬해 LINT와 동일 수치 산출(위키 75·고립 0·정체 56·프론트매터 75/75·health 78). (B) `history.jsonl` 일일 누적, 직전 대비 델타, Health 점수, 추세 스파크라인, LINT 패널을 `index.html`에 연결하고 가짜 하드코딩 차트("↑24%")를 실데이터로 교체. 워크플로가 history도 커밋하도록 수정, 중복 루트 `data.json` 제거.
+- 왜 중요한가: 대시보드 숫자가 LINT와 한목소리를 내며 신뢰를 회복했고("stale 0인데 실제 56" 버그 해소), 단일 스냅샷이던 화면이 어제 대비 증감을 보여줘 CSP의 핵심 질문("무엇이 바뀌었나")에 답하게 됨.
+- 영향 범위: `_ops/scripts/update_dashboard.py`, `_ops/web/index.html`, `_ops/web/history.jsonl`(신규), `.github/workflows/deploy-visual.yml`.
+- 다음 확인: 며칠 누적 후 스파크라인 추세 확인, 그리고 Phase C(결정론적 세렌디피티 정교화·노드 클릭→Jekyll 페이지·모바일 최적화) 진행 여부.
+
+### [REFACTOR] Vault 구조 대청소 — 추적 파일 5,457→679, 현황 표면 단일화
+
+- 무엇이 바뀌었나: 3단계 리팩토링 실행. (1) 2026-06-22 Auto-Sync 사고로 편입된 중복 Vault 스냅샷 5개(dev/dev2/sync/syncs/sy, ~4,800파일/170MB)를 제거하고 `.gitignore` 가드로 재발 차단. (2) 레거시 루트 `concepts/`(235)를 `raw/legacy-concepts/`로 이전하고 루트 스크래치 .md 14개를 정리(빈 파일 삭제+inbox/raw 이동), weekly 이중 폴더를 `outputs/weekly/`로 통합. (3) 난립하던 현황 표면 5개를 정본 2개(`change-log.md`+Pages 대시보드)로 선언하고 `_ops/README.md`에 SSOT 내비게이션을 못박음.
+- 왜 중요한가: 변경 1건이 git diff·검색·대시보드에 최대 6벌로 보이던 노이즈가 사라져, 마침내 "무엇이 바뀌었나"가 1:1로 보인다. 지식 taxonomy가 `wiki/` 한 곳으로 단일화되고, 현황 확인 시 어디를 봐야 할지가 명확해짐.
+- 영향 범위: 레포 전역(추적 파일 88% 감소), `.gitignore`, `raw/legacy-concepts/`, `inbox/raw/`, `references/weekly-templates/`, `outputs/weekly/`, `_ops/README.md`.
+- 다음 확인: 레거시 현황 표면(KNOWLEDGE_PULSE.md 등)을 재생성하는 로컬 스크립트(`know_grow_monitor.py`, `sync_brain.sh`의 하드코딩 경로) 정리, 그리고 비표준 최상위 디렉토리(Toss/, Atoms/, moc/ 등)의 wiki 편입 또는 archive 여부 판단.
+
+### [LINT] 위키 구조 부채 해소 — 고립 30개 제거 및 프론트매터 51개 정규화
+
+- 무엇이 바뀌었나: `wiki/` 스코프 정밀 LINT를 돌려 인덱스 허브의 깨진 제목 링크를 stem 링크로 재구성(고립 30→0)하고, 자동 수집 문서 51개의 누락 프론트매터(`title/created/updated/status`)를 정직한 날짜로 보강함. 손상된 `frameworks/_index.md`(줄번호 접두사 혼입)를 복구하고 `protocols/_index.md`를 신규 생성함.
+- 왜 중요한가: 대시보드가 "고아 5"로 안심시켰지만 실제론 위키의 1/3이 그래프에서 단절돼 있었음. 연결을 복원해 "성장" 단계의 핵심 효용인 교차 인사이트와 세렌디피티가 작동할 토대를 확보함.
+- 영향 범위: `wiki/signals/_index.md`, `wiki/concepts/_index.md`, `wiki/frameworks/_index.md`, `wiki/protocols/_index.md`, 위키 문서 51개 프론트매터, `_ops/lint-log.md`.
+- 다음 확인: 정규화로 드러난 노후 문서 56개(콘텐츠 6주+ 미갱신)의 Compiled Truth 재방문, 그리고 대시보드 고아 탐지를 `wiki/` 스코프로 한정하는 수정.
 
 ---
 

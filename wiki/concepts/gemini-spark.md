@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "Gemini Spark"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Active
 related_to: "[[execution-surface]]", "[[ax-internalization]]"
 ---

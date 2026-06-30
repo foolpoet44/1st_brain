@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "Agentic Recruitment Proxy (에이전틱 채용 대리인)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 related_to: "[[agentic-engineering]]", "[[skillopt]]"
 status: Active
 tags: [hr-tech, recruitment, harper, power-shift]

@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "Antigravity 2.0 (Agent Hub)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Active
 related_to: "[[vibe-coding]]", "[[ax-internalization]]"
 ---

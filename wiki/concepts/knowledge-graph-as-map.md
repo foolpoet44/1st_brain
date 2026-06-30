@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "Knowledge Graph as a Map (지식그래프: 에이전트의 관계 지도)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 related_to: "[[agentic-engineering]]", "[[skillopt]]"
 status: Active
 tags: [knowledge-graph, mapping, agent-logic, trust]

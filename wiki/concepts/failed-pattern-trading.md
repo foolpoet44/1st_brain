@@ -1,5 +1,9 @@
 ---
-type: Concept
+title: "실패한 패턴 트레이딩 (Failed Pattern Trading)"
+created: 2026-04-29
+updated: 2026-04-29
+status: growing
+type: concept
 domain: Investment
 tags: ["trading", "psychology", "failed-pattern", "market-sentiment"]
 ---

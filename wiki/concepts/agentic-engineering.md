@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "Agentic Engineering (에이전틱 엔지니어링)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 related_to: "[[vibe-coding]]", "[[execution-surface]]"
 status: Active
 tags: [agent, engineering, karpathy, hr-analogy]

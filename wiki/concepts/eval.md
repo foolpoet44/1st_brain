@@ -1,6 +1,9 @@
 ---
-type: Note
-status: Active
+title: "Eval (Evaluation): 지능의 독립 보증서이자 기업의 핵심 IP"
+created: 2026-06-27
+updated: 2026-06-27
+type: concept
+status: growing
 related_to: "[[csp-brain]]"
 tags: [ai-eval, ax, internal-ip, quality-assurance]
 ---

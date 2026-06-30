@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[SIGNAL] 자율형 태스크 패키징: 반복 작업을 스킬과 서브에이전트로 전환"
+created: 2026-05-31
+updated: 2026-05-31
+status: growing
+type: signal
 source: LinkedIn (Jeongmin Lee)
 date: 2026-05-31
 tags: ["automation", "skillify", "subagent", "efficiency"]

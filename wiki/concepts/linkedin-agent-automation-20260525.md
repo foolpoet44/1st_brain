@@ -1,5 +1,8 @@
 ---
-type: Note
+title: "LinkedIn 에이전트 자동화 실전 원칙 분석 (정승현 님 사례)"
+created: 2026-04-29
+updated: 2026-04-29
+type: concept
 status: Completed
 tags: [case-study, hr-automation, linkedin-insight]
 related_to: "[[agent-friendly-redesign]]", "[[token-maxing]]"

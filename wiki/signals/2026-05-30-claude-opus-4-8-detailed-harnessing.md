@@ -1,5 +1,9 @@
 ---
-type: Signal
+title: "[SIGNAL] Claude Opus 4.8: 바닐라 모델의 승리와 제어 파라미터의 시대"
+created: 2026-05-30
+updated: 2026-05-30
+status: growing
+type: signal
 source: LinkedIn/X (@gonnector)
 date: 2026-05-30
 tags: ["anthropic", "claude-4.8", "prompt-engineering", "infra"]

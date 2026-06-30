@@ -1,5 +1,8 @@
 ---
-type: Signal
+title: "Google I/O 2026: 에이전틱 전환의 신호"
+created: 2026-05-20
+updated: 2026-05-20
+type: signal
 status: Active
 source: LinkedIn (Jeongmin Lee)
 date: 2026-05-20
