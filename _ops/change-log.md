@@ -1,5 +1,12 @@
 ## 2026-06-27
 
+### [DASHBOARD] 라이브 렌더 결함 3건 수정 (빈 패널·안 보이는 그래프)
+
+- 무엇이 바뀌었나: 라이브 화면에서 Recent Synapses와 중앙 그래프가 비어 보이던 문제를 수정. (1) `fetch("data.json")`에 캐시 무력화(`?_=Date.now()` + no-store) 추가 — Pages/브라우저가 옛 data.json을 주던 문제 차단. (2) 그래프 노드가 `#0a0e14`(검정)/배경도 검정이라 사실상 안 보이던 것을 그룹별 색 테두리 + 밝은 라벨로 가시화. (3) `recent_files`를 '2일 창' 의존에서 '항상 최근 10개(git 커밋일 내림차순)'로 바꿔 조용한 날에도 패널이 비지 않게 함.
+- 왜 중요한가: 데이터는 정상(recent_files 10·graph 78노드)인데 렌더 단계에서 비어 보여 "고장난 것처럼" 인식되던 신뢰 훼손을 제거. 데이터-표시 일치를 회복.
+- 영향 범위: `index.html`(루트 발행본), `_ops/web/index.html`, `_ops/scripts/update_dashboard.py`.
+- 다음 확인: 머지·배포 후 라이브에서 그래프 노드와 Recent Synapses 표시 확인.
+
 ### [DASHBOARD] 고도화 Phase C + 발행경로 회귀 수정
 
 - 무엇이 바뀌었나: (C1) 세렌디피티를 '첫 매칭'에서 '공유 태그가 가장 많은 미연결 쌍'으로 정교화(결정론적). (C2) vis-network 그래프 노드 클릭 시 문서 소스를 열도록 핸들러 추가 + 매 폴링마다 그래프 갱신(setData). (C3) 모바일에서 `h-screen`+`overflow:hidden`이 콘텐츠를 자르던 문제를 미디어쿼리로 세로 스크롤 허용해 해소. 아울러 Phase A+B 과정에서 만든 회귀를 수정: 실제 Pages 발행본은 루트 `index.html`+`data.json`인데(`_ops/`는 Jekyll exclude) UI 개선이 `_ops/web/`에만 들어가고 루트 `data.json`이 삭제돼 있었음 → 루트를 강화본으로 동기화, 생성기가 루트에도 data.json을 쓰도록 복구, `.gitignore` 화이트리스트 및 워크플로 커밋 대상에 루트 data.json 추가.

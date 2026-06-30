@@ -528,7 +528,10 @@
 
       async function updateDashboard() {
         try {
-          const res = await fetch("data.json");
+          // 캐시 무력화: GitHub Pages/브라우저가 옛 data.json 을 주는 문제 방지
+          const res = await fetch(`data.json?_=${Date.now()}`, {
+            cache: "no-store",
+          });
           const data = await res.json();
 
           document.getElementById("total-atoms").innerText = data.total_atoms;
@@ -629,10 +632,19 @@
           let edges = [];
 
           if (data.graph && data.graph.nodes.length > 0) {
+            // 노드 가시성: 검은 배경에 검은 노드(거의 안 보임) 문제 해결.
+            // 그룹별 색 테두리 + 밝은 라벨로 대비를 준다.
+            const groupColor = { L2: "#3b82f6", L3: "#10b981", L4: "#a855f7" };
             nodes = data.graph.nodes.map((n) => ({
               ...n,
-              color: { background: "#0a0e14", border: "#30363d" },
-              font: { color: "#8b949e", size: 8 },
+              shape: "dot",
+              size: 7,
+              color: {
+                background: "#111827",
+                border: groupColor[n.group] || "#3b82f6",
+                highlight: { background: "#1f2937", border: "#60a5fa" },
+              },
+              font: { color: "#c9d1d9", size: 11 },
             }));
             // Add Category Hubs
             nodes.push(
