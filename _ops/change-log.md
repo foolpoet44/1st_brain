@@ -1,5 +1,12 @@
 ## 2026-06-27
 
+### [DASHBOARD] 고도화 Phase C + 발행경로 회귀 수정
+
+- 무엇이 바뀌었나: (C1) 세렌디피티를 '첫 매칭'에서 '공유 태그가 가장 많은 미연결 쌍'으로 정교화(결정론적). (C2) vis-network 그래프 노드 클릭 시 문서 소스를 열도록 핸들러 추가 + 매 폴링마다 그래프 갱신(setData). (C3) 모바일에서 `h-screen`+`overflow:hidden`이 콘텐츠를 자르던 문제를 미디어쿼리로 세로 스크롤 허용해 해소. 아울러 Phase A+B 과정에서 만든 회귀를 수정: 실제 Pages 발행본은 루트 `index.html`+`data.json`인데(`_ops/`는 Jekyll exclude) UI 개선이 `_ops/web/`에만 들어가고 루트 `data.json`이 삭제돼 있었음 → 루트를 강화본으로 동기화, 생성기가 루트에도 data.json을 쓰도록 복구, `.gitignore` 화이트리스트 및 워크플로 커밋 대상에 루트 data.json 추가.
+- 왜 중요한가: 고도화한 대시보드가 실제로 라이브 Pages에 반영되도록 발행 경로를 바로잡았고(안 그러면 개선이 로컬 소스에만 머물고 라이브는 깨짐), 모바일에서 폰으로 확인하는 CSP의 실사용 환경을 살림.
+- 영향 범위: `index.html`(루트 발행본), `_ops/web/index.html`, `_ops/scripts/update_dashboard.py`, `data.json`, `.gitignore`, `.github/workflows/deploy-visual.yml`.
+- 다음 확인: 머지 후 라이브 Pages에서 신규 패널·모바일 렌더 확인, 루트/`_ops/web` index.html 이중 사본의 단일화(기술 부채).
+
 ### [DASHBOARD] 고도화 Phase A+B — 신뢰 회복 + 변화 가시성
 
 - 무엇이 바뀌었나: 대시보드 데이터 생성기(`update_dashboard.py`)를 재작성. (A) `os.path.getmtime`(CI에서 체크아웃 시각으로 리셋돼 거짓)을 버리고, 정체(stale)는 프론트매터 `updated`(콘텐츠 신선도), 활동(recent)은 git 커밋일로 분리. 고립·통계를 위키 스코프로 정렬해 LINT와 동일 수치 산출(위키 75·고립 0·정체 56·프론트매터 75/75·health 78). (B) `history.jsonl` 일일 누적, 직전 대비 델타, Health 점수, 추세 스파크라인, LINT 패널을 `index.html`에 연결하고 가짜 하드코딩 차트("↑24%")를 실데이터로 교체. 워크플로가 history도 커밋하도록 수정, 중복 루트 `data.json` 제거.

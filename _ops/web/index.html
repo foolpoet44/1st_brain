@@ -72,6 +72,23 @@
         background: #1f2937;
         border-radius: 10px;
       }
+
+      /* C3: 모바일 최적화 — 폰에서 고정 높이(h-screen)+overflow:hidden 이
+         콘텐츠를 잘라내므로, 작은 화면에서는 세로 스크롤을 허용한다. */
+      @media (max-width: 1024px) {
+        body {
+          height: auto !important;
+          min-height: 100vh;
+          overflow-y: auto !important;
+        }
+        main {
+          overflow: visible !important;
+        }
+        #network-container {
+          height: 48vh;
+          min-height: 320px;
+        }
+      }
     </style>
   </head>
   <body class="h-screen flex flex-col p-4 md:p-6">
@@ -704,8 +721,18 @@
             physics: { enabled: true, solver: "forceAtlas2Based" },
             nodes: { shadow: true },
           };
-          if (!network)
+          if (!network) {
             network = new vis.Network(container, graphData, options);
+            // C2: 그래프 노드 클릭 → 해당 문서 소스 열기 (허브 L2/L3/L4 제외)
+            network.on("click", (params) => {
+              const id = params.nodes && params.nodes[0];
+              if (typeof id === "string" && id.endsWith(".md")) {
+                openFile(id.split("/").pop(), id);
+              }
+            });
+          } else {
+            network.setData(graphData);
+          }
 
           document.getElementById("update-timer").innerText =
             `LAST PULSE: ${new Date().toLocaleTimeString()}`;

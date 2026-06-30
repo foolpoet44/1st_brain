@@ -46,6 +46,8 @@ scripts/output/
 *.json
 !manifest.json
 !_ops/web/data.json
+# GitHub Pages 발행 대시보드 데이터 (루트 index.html 이 fetch)
+!/data.json
 
 # AI Models and Blobs
 ragapp/ollama/models/blobs/

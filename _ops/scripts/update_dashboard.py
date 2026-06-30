@@ -116,23 +116,36 @@ class WikiAnalyzer:
                    if all(k in d["fm"] for k in REQUIRED_FM))
 
     def serendipity(self):
-        """결정론적: 태그를 공유하지만 직접 링크되지 않은 두 문서를 정렬 순으로 선택."""
+        """결정론적: 태그 공유가 '가장 강한'(공유 태그 수 최다) 미연결·이종폴더 쌍 선택.
+        첫 매칭이 아니라 잠재 연결이 가장 강한 쌍을 고르므로 추천 가치가 높다.
+        동점은 (stem1, stem2) 사전순으로 안정 정렬 → 매 실행 동일 결과."""
         items = sorted(self.docs.items())
+        best = None  # (shared_count, s1, s2, shared_tags, path1, path2)
         for i, (s1, d1) in enumerate(items):
             if not d1["tags"]:
                 continue
+            links1 = {Path(l).stem for l in d1["links"]}
             for s2, d2 in items[i + 1:]:
                 shared = d1["tags"] & d2["tags"]
-                linked = (s2 in {Path(l).stem for l in d1["links"]} or
-                          s1 in {Path(l).stem for l in d2["links"]})
-                if shared and not linked and Path(d1["path"]).parent != Path(d2["path"]).parent:
-                    tag = sorted(shared)[0]
-                    return {
-                        "title": "Serendipity: 공유 태그 교차점",
-                        "reason": f"[[{s1}]] 와 [[{s2}]] 는 '#{tag}' 를 공유하지만 아직 직접 연결되지 않았습니다. 둘을 잇는 통찰을 적어보세요.",
-                        "links": [d1["path"], d2["path"]],
-                    }
-        return None
+                if not shared:
+                    continue
+                if Path(d1["path"]).parent == Path(d2["path"]).parent:
+                    continue
+                if s2 in links1 or s1 in {Path(l).stem for l in d2["links"]}:
+                    continue
+                cand = (len(shared), s1, s2, shared, d1["path"], d2["path"])
+                # 더 많은 공유 태그 우선; 동점이면 사전순 앞쪽 우선(음수 비교 불가하므로 별도 처리)
+                if best is None or cand[0] > best[0]:
+                    best = cand
+        if not best:
+            return None
+        _, s1, s2, shared, p1, p2 = best
+        tags = ", ".join("#" + t for t in sorted(shared))
+        return {
+            "title": "Serendipity: 가장 강한 미연결 고리",
+            "reason": f"[[{s1}]] 와 [[{s2}]] 는 {tags} 를 공유(공유 태그 {len(shared)}개)하지만 아직 직접 연결되지 않았습니다. 둘을 잇는 통찰이 가장 큰 시너지를 낼 지점입니다.",
+            "links": [p1, p2],
+        }
 
 
 def count_md(path):
@@ -305,7 +318,12 @@ def build():
 if __name__ == "__main__":
     data = build()
     WEB_DIR.mkdir(parents=True, exist_ok=True)
-    (WEB_DIR / "data.json").write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    payload = json.dumps(data, ensure_ascii=False)
+    # data.json 을 두 곳에 쓴다:
+    #   • 루트 data.json  → GitHub Pages 발행본(루트 index.html 이 fetch). _ops/ 는 Jekyll exclude 이므로 발행은 루트에서.
+    #   • _ops/web/data.json → 로컬 server.py 개발용. (history 는 data.json 안에 embed 되므로 브라우저는 data.json 만 필요)
+    (WEB_DIR / "data.json").write_text(payload, encoding="utf-8")
+    (ROOT / "data.json").write_text(payload, encoding="utf-8")
     print(f"✅ dashboard: wiki={data['total_atoms']} orphans={data['lint']['orphans']} "
           f"stale={data['lint']['stale']} fm_ok={data['lint']['frontmatter_ok']}/{data['lint']['frontmatter_total']} "
           f"health={data['health']} deltas={data['deltas']}")
