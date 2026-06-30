@@ -37,6 +37,7 @@ tags: [index, wiki]
 - [[2026-06-13-agentic-ta-mainstream-shift|에이전틱 채용의 주류화]] — 인간-AI 파워 커플의 등장
 - [[2026-06-15-agentic-ta-reset|Agentic TA 리셋과 슈퍼제너럴리스트의 부상]]
 - [[2026-06-25-hr-performance-architect-pivot|HR의 역할 대전환: 성과 시스템의 설계자로]]
+- [[2026-06-27-autonomous-talent-agency-shift|자율적 인재 에이전시로의 이동]] — 에이전틱 협상과 완결적 대리
 - [[talent-market-disruption|채용 시장의 권력 이동]] — Harper & AI Talent Agents
 - [[2026-05-18-ai-boom-labor-distribution|AI Boom and Labor Distribution]] — AI 반도체 호황이 성과배분·핵심인재 보상·공급망 리스크로
 

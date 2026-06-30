@@ -62,6 +62,8 @@ tags: [index, wiki, concepts]
 - [[meta-harnessing]] — 메타 하네싱
 - [[gbrain-personal-ai-os]] — 개인 AI 운영체제
 - [[linkedin-agent-automation-20260525]] — 링크드인 에이전트 자동화
+- [[ai-evaluation-system]] — AI 평가 시스템(Eval)
+- [[eval]] — Eval: 지능의 독립 보증서이자 핵심 IP
 
 ### 투자
 
