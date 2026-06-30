@@ -226,20 +226,20 @@ def build():
 
     # 저장소 활동(git 커밋일) — CI 에서 신뢰 가능
     gitdates = git_last_commit_dates("wiki")
-    recent_files = []
     activity_7d = 0
+    dated = []
     for d in az.docs.values():
         iso = gitdates.get(d["path"], "")
         ds = days_since(iso)
         if ds is not None and ds <= 7:
             activity_7d += 1
-        if ds is not None and ds <= 2:
-            recent_files.append({
-                "name": Path(d["path"]).name,
-                "time": iso[5:10] if iso else "",
-                "path": d["path"],
-            })
-    recent_files = sorted(recent_files, key=lambda x: x["time"], reverse=True)[:10]
+        if iso:
+            dated.append((iso, d["path"]))
+    # recent_files: 2일 창에 의존하지 않고 '항상 최근 10개'를 git 커밋일 내림차순으로.
+    # 조용한 날에도 패널이 비지 않도록(빈 화면=고장처럼 보이는 UX 문제 방지).
+    dated.sort(reverse=True)
+    recent_files = [{"name": Path(p).name, "time": iso[5:10], "path": p}
+                    for iso, p in dated[:10]]
 
     # 분포(C/P/O) — 정직한 카운트
     l2 = count_md_recursive(WIKI / "concepts") + count_md_recursive(WIKI / "frameworks") + count_md_recursive(WIKI / "tools")
