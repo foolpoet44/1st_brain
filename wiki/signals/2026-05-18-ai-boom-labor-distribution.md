@@ -1,7 +1,7 @@
 ---
 title: "AI Boom and Labor Distribution"
 created: 2026-05-18
-updated: 2026-05-18
+updated: 2026-07-02
 type: signal
 status: seed
 tags: [ai, semiconductor, labor, compensation, ax, hr]
@@ -16,9 +16,9 @@ AI 반도체 호황은 기술 산업의 성장 뉴스에 머물지 않고, 조�
 
 2026-05-18 기준 삼성전자 노사는 총파업 예고일을 앞두고 정부 중재 조정에 들어갔고, 법원은 반도체 생산시설의 안전보호와 웨이퍼 변질 방지 작업은 쟁의 중에도 유지되어야 한다고 판단했다. 경제단체는 파업이 반도체 수출과 글로벌 공급망 신뢰에 영향을 줄 수 있다며 긴급조정권 발동까지 요구했다.
 
-이 신호의 핵심은 “AI가 만든 부가가치를 누가 가져가는가”다. AI 인프라 경쟁은 GPU와 HBM 같은 기술 병목만 만드는 것이 아니라, 그 기술을 운영하는 숙련 인력의 보상 기대와 조직 내 공정성 기준도 다시 끌어올린다. 따라서 [[AX Internalization (AI Transformation)]]은 도구 도입이나 교육만으로는 완성되지 않는다. AI가 만든 가치, 역할 변화, 심리적 계약을 함께 설계해야 한다.
+이 신호의 핵심은 “AI가 만든 부가가치를 누가 가져가는가”다. AI 인프라 경쟁은 GPU와 HBM 같은 기술 병목만 만드는 것이 아니라, 그 기술을 운영하는 숙련 인력의 보상 기대와 조직 내 공정성 기준도 다시 끌어올린다. 따라서 [[ax-internalization|AX Internalization]]은 도구 도입이나 교육만으로는 완성되지 않는다. AI가 만든 가치, 역할 변화, 심리적 계약을 함께 설계해야 한다.
 
-[[EX Intelligence (Employee Experience Intelligence)]] 관점에서는 보상 공정성, 핵심인재 이탈 신호, 역할 불안, AI 도입 피로감이 모두 조기 감지 대상이 된다. 특히 AI가 조직을 혁신적으로 보이게 만들더라도 구성원이 더 행복해지지 않는다면, 그 전환은 오래 지속되기 어렵다.
+[[ex-intelligence|EX Intelligence]] 관점에서는 보상 공정성, 핵심인재 이탈 신호, 역할 불안, AI 도입 피로감이 모두 조기 감지 대상이 된다. 특히 AI가 조직을 혁신적으로 보이게 만들더라도 구성원이 더 행복해지지 않는다면, 그 전환은 오래 지속되기 어렵다.
 
 ## CSP 해석
 
@@ -40,3 +40,8 @@ AI 반도체 호황은 기술 산업의 성장 뉴스에 머물지 않고, 조�
   - [Reuters 경유 Investing.com: AI boom and Samsung labor divisions](https://www.investing.com/news/stock-market-news/at-samsung-the-global-ai-boom-spurred-a-looming-strike-and-deep-divisions-4694572)
   - [Deloitte Korea: 기업의 AI 활용 현황 2026](https://www.deloitte.com/kr/ko/about/press-room/2026/press-2026-03-05.html)
   - [HI-AI: 비영리 활동가 AI 인식·활용 조사](https://hi-ai.kr/wp-content/uploads/2026/05/2026-%E1%84%87%E1%85%B5%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%85%E1%85%B5-%E1%84%92%E1%85%AA%E1%86%AF%E1%84%83%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A1-AI-%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%B5%E1%86%A8%E2%80%A2%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC-%E1%84%8C%E1%85%A9%E1%84%89%E1%85%A1-%E1%84%80%E1%85%A7%E1%86%AF%E1%84%80%E1%85%AA.pdf)
+
+### 2026-07-02 — BRIDGE: [[ax-internalization]] 와의 연결 통찰 (Issue #15)
+
+- 세렌디피티 엔진이 두 문서의 단절(해석 불가능한 제목 링크)을 감지 → stem 링크로 복구하고 통찰을 기록.
+- **연결 통찰**: 이 신호는 AX 내재화 3단계 모델(도구→에이전트→내재화)에 누락된 **4번째 축 — 배분(Distribution)** 을 드러낸다. AI가 만든 가치의 인정·배분 설계가 없으면 3단계 내재화는 심리적 계약 위에서 무너진다. 삼성 사례는 '내재화 없는 도입'이 아니라 '배분 없는 내재화'의 리스크 사례로 읽어야 한다.
