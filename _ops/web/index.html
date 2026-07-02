@@ -472,13 +472,18 @@
             hist[0].date.slice(5);
         }
 
-        // Honest summary
+        // Honest summary + 대사 지표(Layer 3): 문서 수가 아니라 '흐름'을 잰다
         const stalePct = lint.frontmatter_total
           ? Math.round((lint.stale / lint.frontmatter_total) * 100)
           : 0;
+        const mb = data.metabolism || {};
+        const arch = (data.archive_queue || []).length;
         document.getElementById("metabolism-summary").innerHTML =
-          `직전 기록 대비 위키 ${fmtDelta(d.wiki_total)} 문서 · 고립 ${fmtDelta(d.orphans, true)} · 정체 ${fmtDelta(d.stale, true)}.<br/>` +
-          `신선도가 health를 누르고 있습니다 — 정체 문서 ${lint.stale}/${lint.frontmatter_total} (${stalePct}%).`;
+          `직전 기록 대비 위키 ${fmtDelta(d.wiki_total)} 문서 · 고립 ${fmtDelta(d.orphans, true)} · 정체 ${fmtDelta(d.stale, true)} (정체율 ${stalePct}%).<br/>` +
+          `<span class="text-gray-400">대사</span>: inbox ${mb.inbox_pending ?? 0}건 대기` +
+          (mb.inbox_oldest_days ? ` <span class="text-yellow-500">(최고령 ${mb.inbox_oldest_days}일)</span>` : "") +
+          ` · 7일 내 갱신 ${mb.updated_7d ?? 0}건 · 중위 문서나이 ${mb.median_age_days ?? 0}일` +
+          (arch ? ` · <span class="text-purple-400">아카이브 대기 ${arch}건</span>` : "");
       }
 
       // Action Queue: 관측 → 일감. Issue 프리필 링크가 루프를 닫는 '운동신경'이다.

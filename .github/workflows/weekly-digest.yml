@@ -1,0 +1,43 @@
+name: Weekly Knowledge Digest
+
+# Dream Cycle 의 클라우드 자율신경계: 매주 금요일 09:00 KST 에 주간 다이제스트를
+# 자동 생성·커밋한다. 로컬 Mac 이 꺼져 있어도 지식 대사의 주간 리듬이 유지된다.
+
+on:
+  schedule:
+    - cron: "0 0 * * 5" # 금요일 09:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: false
+          fetch-depth: 0 # knowledge_events 가 7일 git 이력을 읽는다
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Generate weekly digest
+        run: |
+          cd _ops/scripts && python3 weekly_digest.py
+
+      - name: Refresh dashboard data
+        run: python3 _ops/scripts/update_dashboard.py
+
+      - name: Commit and push
+        run: |
+          git config --global user.name "Hermes Cloud Agent"
+          git config --global user.email "hermes@agentic.engineering"
+          git add outputs/weekly/ data.json _ops/web/data.json _ops/web/history.jsonl
+          git commit -m "content: 주간 다이제스트 자동 생성 [Dream Cycle]" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main

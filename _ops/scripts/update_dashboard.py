@@ -383,6 +383,25 @@ def build():
                                f"할 일: 최근 신호·개념과 대조해 Compiled Truth 갱신, Timeline 에 재방문 기록, updated 갱신{agent_footer}"),
         })
 
+    # ── ARCHIVE 대기열 (Layer 3): mature 승격 문서 = Notion BRIDGE 후보 ──
+    archive_queue = [
+        {"name": s, "path": d["path"], "title": d["fm"].get("title", s)}
+        for s, d in sorted(az.docs.items())
+        if d["fm"].get("status", "").lower() == "mature"
+    ]
+
+    # ── 대사 지표 (Layer 3): 루프가 실제로 도는지 측정 ──
+    # 문서 수가 아니라 '흐름'을 잰다: 입구 적체(inbox), 소화 속도(7d), 평균 신선도(중위 나이)
+    inbox_dates = git_last_commit_dates("inbox")
+    inbox_ages = [days_since(v) for v in inbox_dates.values() if days_since(v) is not None]
+    ages = sorted(a for a in (days_since(d["updated"]) for d in az.docs.values()) if a is not None)
+    metabolism = {
+        "inbox_pending": len(inbox_files),
+        "inbox_oldest_days": max(inbox_ages) if inbox_ages else 0,
+        "median_age_days": ages[len(ages) // 2] if ages else 0,
+        "updated_7d": activity_7d,
+    }
+
     # 그래프(위키 한정)
     stems = list(az.docs.keys())
     def grp(path):
@@ -425,6 +444,8 @@ def build():
         "serendipity": sr,
         "actions": actions,
         "events": knowledge_events(),
+        "archive_queue": archive_queue,
+        "metabolism": metabolism,
         "graph": {"nodes": nodes, "edges": edges},
     }
 
