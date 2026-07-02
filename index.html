@@ -169,14 +169,22 @@
         <div
           class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden"
         >
-          <!-- Recent Activity -->
+          <!-- Live Pulse: 실시간 커밋 피드(GitHub API) + 7일 지식 이벤트 원장 -->
           <div class="glass-card p-5 flex flex-col">
             <h3
-              class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 flex justify-between"
+              class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-500 mb-3 flex justify-between"
             >
-              <span>Recent Synapses</span>
-              <span class="text-blue-400 animate-pulse">● LIVE</span>
+              <span>Live Pulse</span>
+              <span id="pulse-status" class="text-blue-400 animate-pulse"
+                >● LIVE</span
+              >
             </h3>
+            <ul id="commit-feed" class="space-y-1 pr-1 mb-3"></ul>
+            <p
+              class="text-[9px] font-bold uppercase tracking-widest text-gray-600 border-t border-white/5 pt-2 mb-1"
+            >
+              Knowledge Events (7d)
+            </p>
             <ul
               id="synapse-list"
               class="flex-1 overflow-y-auto space-y-1 pr-1"
@@ -621,16 +629,37 @@
             )
             .join("");
 
+          // Knowledge Events: 문서 단위 A/M/D/R 타임라인 (git 이력 기반, 빌드타임)
+          const EV_BADGE = {
+            A: ["＋", "text-emerald-400"],
+            M: ["Δ", "text-blue-400"],
+            D: ["－", "text-red-400"],
+            R: ["→", "text-gray-500"],
+          };
           const list = document.getElementById("synapse-list");
-          list.innerHTML = data.recent_files
-            .map(
-              (f) => `
-                  <li class="flex justify-between items-center group cursor-pointer p-1 rounded hover:bg-white/5" onclick="openFile('${f.name}', '${f.path}')">
-                      <span class="text-[11px] truncate max-w-[200px] text-gray-300 group-hover:text-blue-400 font-medium">${f.name}</span>
-                      <span class="text-[9px] font-mono text-gray-600">${f.time}</span>
+          const events =
+            data.events && data.events.length
+              ? data.events
+              : (data.recent_files || []).map((f) => ({
+                  ...f,
+                  action: "M",
+                  date: "",
+                  name: f.name.replace(".md", ""),
+                }));
+          list.innerHTML = events
+            .slice(0, 25)
+            .map((ev) => {
+              const [sym, color] = EV_BADGE[ev.action] || EV_BADGE.M;
+              return `
+                  <li class="flex justify-between items-center gap-2 group cursor-pointer p-1 rounded hover:bg-white/5" onclick="openFile('${ev.name}.md', '${ev.path}')">
+                      <span class="flex items-center gap-1.5 min-w-0">
+                        <span class="${color} font-bold text-[10px] w-3">${sym}</span>
+                        <span class="text-[11px] truncate text-gray-300 group-hover:text-blue-400 font-medium">${ev.name}</span>
+                      </span>
+                      <span class="text-[9px] font-mono text-gray-600 shrink-0">${(ev.date || "").slice(5)} ${ev.time || ""}</span>
                   </li>
-              `,
-            )
+              `;
+            })
             .join("");
 
           // Graph Rendering
@@ -759,8 +788,65 @@
         }
       }
 
+      // Live Pulse: 공개 레포이므로 GitHub API 를 브라우저가 직접 폴링(익명 60회/h → 90초 주기).
+      // 재빌드 없이 커밋 스트림이 초 단위로 보이는, 정적 Pages 에서 가능한 '진짜 실시간'.
+      const COMMIT_TAG = [
+        [/^knowledge:/, ["지식", "text-blue-400 bg-blue-500/10"]],
+        [/^project:/, ["프로젝트", "text-emerald-400 bg-emerald-500/10"]],
+        [/^content:/, ["콘텐츠", "text-purple-400 bg-purple-500/10"]],
+        [/^archive:/, ["아카이브", "text-gray-400 bg-gray-500/10"]],
+        [/^ops:/, ["운영", "text-sky-400 bg-sky-500/10"]],
+        [/auto-?sync|autosync|cloud sync/i, ["자동", "text-gray-500 bg-gray-500/10"]],
+        [/^merge/i, ["머지", "text-indigo-400 bg-indigo-500/10"]],
+      ];
+      function tagOf(msg) {
+        for (const [re, tag] of COMMIT_TAG) if (re.test(msg)) return tag;
+        return ["기타", "text-gray-500 bg-gray-500/10"];
+      }
+      function timeAgo(iso) {
+        const s = (Date.now() - new Date(iso).getTime()) / 1000;
+        if (s < 90) return "방금";
+        if (s < 3600) return `${Math.floor(s / 60)}분 전`;
+        if (s < 86400) return `${Math.floor(s / 3600)}시간 전`;
+        return `${Math.floor(s / 86400)}일 전`;
+      }
+      async function updateCommitFeed() {
+        const feed = document.getElementById("commit-feed");
+        const status = document.getElementById("pulse-status");
+        if (!feed) return;
+        try {
+          const res = await fetch(
+            "https://api.github.com/repos/foolpoet44/1st_brain/commits?per_page=5",
+            { headers: { Accept: "application/vnd.github+json" } },
+          );
+          if (!res.ok) throw new Error(res.status);
+          const commits = await res.json();
+          feed.innerHTML = commits
+            .map((c) => {
+              const msg = c.commit.message.split("\n")[0];
+              const [label, cls] = tagOf(msg);
+              return `
+                <li class="flex items-center gap-2 p-1 rounded hover:bg-white/5 cursor-pointer"
+                    onclick="window.open('${c.html_url}','_blank')">
+                  <span class="text-[8px] px-1.5 py-0.5 rounded font-bold shrink-0 ${cls}">${label}</span>
+                  <span class="text-[10px] text-gray-400 truncate flex-1">${msg}</span>
+                  <span class="text-[9px] font-mono text-gray-600 shrink-0">${timeAgo(c.commit.committer.date)}</span>
+                </li>`;
+            })
+            .join("");
+          status.innerText = "● LIVE";
+          status.className = "text-blue-400 animate-pulse";
+        } catch (e) {
+          // API 미도달(오프라인/레이트리밋) 시 빌드타임 이벤트로 계속 동작 — 조용히 저하
+          status.innerText = "○ BUILD-TIME";
+          status.className = "text-gray-600";
+        }
+      }
+
       updateDashboard();
+      updateCommitFeed();
       setInterval(updateDashboard, 10000);
+      setInterval(updateCommitFeed, 90000);
     </script>
   </body>
 </html>

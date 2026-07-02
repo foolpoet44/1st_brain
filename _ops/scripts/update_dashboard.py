@@ -45,6 +45,34 @@ def git_last_commit_dates(rel_dir="wiki"):
     return dates
 
 
+def knowledge_events(days=7, limit=40):
+    """최근 N일의 문서 단위 이벤트(A/M/D/R)를 git 이력에서 도출 — append-only 이벤트 원장.
+    상태 파일이 필요 없어(stateless) CI 재실행에도 항상 동일하게 재구성된다."""
+    try:
+        out = subprocess.run(
+            ["git", "log", f"--since={days}.days", "--name-status",
+             "--format=@%cI|%h|%s", "--", "wiki", "outputs", "projects"],
+            cwd=ROOT, capture_output=True, text=True, timeout=60).stdout
+    except Exception:
+        return []
+    events, cur = [], None
+    for line in out.splitlines():
+        if line.startswith("@"):
+            iso, sha, subj = line[1:].split("|", 2)
+            cur = {"date": iso[:10], "time": iso[11:16], "sha": sha, "subject": subj}
+        elif line.strip() and cur:
+            m = re.match(r"^([AMDR])\S*\t(.+)$", line)
+            if not m:
+                continue
+            path = m.group(2).split("\t")[-1]  # R(rename)은 마지막 필드가 새 경로
+            if path.endswith(".md") and not path.endswith("_index.md"):
+                events.append({**cur, "action": m.group(1), "path": path,
+                               "name": Path(path).stem})
+        if len(events) >= limit:
+            break
+    return events
+
+
 def parse_frontmatter(text):
     if not text.startswith("---"):
         return {}
@@ -396,6 +424,7 @@ def build():
         "stale_count": len(stale),
         "serendipity": sr,
         "actions": actions,
+        "events": knowledge_events(),
         "graph": {"nodes": nodes, "edges": edges},
     }
 
