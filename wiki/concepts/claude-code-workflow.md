@@ -1,7 +1,7 @@
 ---
 title: "Claude Code 워크플로우 (Explore-Plan-Code-Commit)"
 created: 2026-04-29
-updated: 2026-04-29
+updated: 2026-07-02
 type: concept
 status: Active
 related_to: "[[vibe-coding]]", "[[ax-internalization]]"
@@ -34,3 +34,12 @@ Vibe Coder에게 워크플로우란 '직관'을 '신뢰할 수 있는 계획'으
 
 _Source: 정상록(SangRok Jung) LinkedIn_
 _Last Updated: {now}_
+
+
+---
+
+## Timeline
+
+### 2026-07-02 — Karpathy 'LLM=OS 커널' 유비의 제품화 (INGEST, Issue #13)
+
+- LLM 을 '새로운 운영체제의 커널 프로세스'로 보라던 Karpathy 의 유비가 Claude Code / Managed Agents 에서 제품 구조로 구체화. 핵심 질문의 이동: "AI가 코드를 얼마나 잘 짜는가" → **"에이전트가 안정적으로 일할 운영 구조를 누가 제공하는가"**. CLAUDE.md 를 포함한 5개 운영 계층이 그 답의 골격.

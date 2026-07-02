@@ -7,6 +7,9 @@ created: 2026-04-29
 description:
 tags:
   - "clippings"
+processed: true
+processed_date: 2026-07-02
+processed_note: "wiki/tools/claude-code-skills.md 신규 생성"
 ---
 
 ## 피드 게시물![Avi Chawla님의 프로필 보기](https://media.licdn.com/dms/image/v2/D5603AQEJCWIuqMy2Og/profile-displayphoto-shrink_100_100/B56ZPKn7QXHIAU-/0/1734271284735?e=1779321600&v=beta&t=CPA6_DzPqxmzUpftb3g5DHfQ7UYu4KemPqT2K-FNMIw)

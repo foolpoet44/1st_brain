@@ -65,6 +65,12 @@ tags: [index, wiki, concepts]
 - [[ai-evaluation-system]] — AI 평가 시스템(Eval)
 - [[eval]] — Eval: 지능의 독립 보증서이자 핵심 IP
 
+### HR & 조직 (2026-07-02 INGEST 편입)
+
+- [[fde-talent-model]] — Palantir FDE 현장 해결사 인재 모델
+- [[social-ide]] — 대화형 인터페이스로 진화하는 협업 환경
+- [[poststroke-depression-network]] — 네트워크 단절성과 회복 (조직 연결망 유비)
+
 ### 투자
 
 - [[failed-pattern-trading]] — 실패 패턴 트레이딩

@@ -1,7 +1,7 @@
 ---
 title: Knowledge Capitalization (지식의 자산화)
 created: 2026-04-14
-updated: 2026-04-29
+updated: 2026-07-02
 type: concept
 status: growing
 tags: [knowledge, asset, ax, capitalization]
@@ -37,3 +37,7 @@ aliases: [지식 자산화]
 
 - 114MB Conversations 데이터 Sharding 및 개념 추출을 통해 본 원칙의 실효성을 증명함
 - `scripts/brain_build.py` 를 통해 지식의 무결성 관리 자동화 체계 수립
+
+### 2026-07-02 — 셀피쉬클럽: 팀 단위 지식 자산화 사례 (INGEST, Issue #13)
+
+- Claude Code + Obsidian + GitHub 조합으로 팀의 지식 자산화·문서 동기화·자동 발행을 구현한 커뮤니티 사례. 개인의 [[vibe-coding]] 흐름이 팀 협업으로 확장될 때 옵시디언(마크다운+Git)이 최적 기반이라는 논지 — csp-brain 아키텍처와 동일한 결론에 독립적으로 도달한 외부 검증 사례.

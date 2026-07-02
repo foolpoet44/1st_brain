@@ -1,5 +1,12 @@
 ## 2026-07-02
 
+### [INGEST] 성장 루프 첫 회전 완성 — inbox 16건 전량 대사 (Issue #13)
+
+- 무엇이 바뀌었나: V7 Action Queue 가 발행한 첫 일감(Issue #13)을 처리. 신규 위키 5건 생성(FDE 인재모델·소셜 IDE·Claude Code Skills·RLM-Forge·PSD 네트워크 논문), 기존 4건에 Timeline 병합(Graph RAG의 BigQuery 통합, 지식자산화의 셀피쉬클럽 사례, 에이전틱 엔지니어링의 전사 확산 신호, Claude Code 워크플로의 Karpathy LLM=OS), 나머지 7건은 사유와 함께 처리 마킹. 생성기가 processed:true 파일을 INGEST 카운트에서 제외하도록 수정 — 처리 커밋 후 카드가 실제로 사라진다.
+- 왜 중요한가: 관측(INGEST 16건 적체)→일감(이슈 발행)→처리(위키 편입)→재관측(카드 소멸·지표 갱신)의 루프 1회전이 실증됨. 시스템이 설계도가 아니라 실제로 돌아가는 기관임을 확인.
+- 영향 범위: `wiki/concepts/` +3, `wiki/tools/` +2, 병합 4건, `inbox/` 16건 processed 마킹, `_ops/ingest-log.md`, `_ops/scripts/update_dashboard.py`.
+- 다음 확인: 대시보드에서 INGEST 카드 소멸 및 위키 78→83 델타 확인, 다음 카드(BRIDGE/REVIEW) 처리 여부.
+
 ### [DASHBOARD] V7 전환 — 관제탑에서 '성장 루프 기관'으로 (M1~M4)
 
 - 무엇이 바뀌었나: 대시보드를 SENSE→ACT→LEARN 루프의 실행 기관으로 전면 개편. (M1) Action Queue — LINT 관측을 INGEST/CONNECT/STRUCTURE/BRIDGE/REVIEW 행동 카드로 변환, 각 카드는 GitHub Issue 프리필 링크로 일감을 발행(복습 큐는 정체일수×백링크 가중 랭킹). (M2) Live Pulse — 공개 레포 GitHub API 를 브라우저가 직접 폴링해 재빌드 없이 커밋 스트림 실시간 표시 + 최근 7일 문서 단위 A/M/D/R 이벤트 원장. (M3) weekly-digest.yml 금요일 cron 이 주간 다이제스트를 자동 생성·커밋(Dream Cycle 클라우드화), 대사 지표(inbox 적체·7일 갱신·중위 문서나이)와 mature 아카이브 대기열 추가. (M4) V7 헤더·루프 단계 칩, 가짜 장식(OKA DNA 하드코딩, Harness Checklist, Resolver 칩) 전부 제거, 그래프 팔레트를 CVD 검증 통과 색으로 교정.

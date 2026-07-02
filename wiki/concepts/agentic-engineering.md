@@ -1,7 +1,7 @@
 ---
 title: "Agentic Engineering (에이전틱 엔지니어링)"
 created: 2026-04-29
-updated: 2026-04-29
+updated: 2026-07-02
 type: concept
 related_to: "[[vibe-coding]]", "[[execution-surface]]"
 status: Active
@@ -45,3 +45,12 @@ HR 관점에서 이는 **'직무 기술서(JD)'**의 진화와 같습니다.
 - **Decision Velocity (의사결정 속도)**: 데이터 수집부터 최종 판단 제안까지 소요되는 'End-to-End' 리드 타임.
 - **Cognitive Salvage (인지적 구원)**: 인간이 단순 반복 업무에서 해방되어 '고차원적 전략/심리적 케어'에 투입한 시간의 질적 가치.
 - **Agency Integrity (에이전시 무결성)**: 에이전트가 내린 결정이 조직의 핵심 가치([[SOUL.md]]) 및 규정과 일치하는지 여부.
+
+
+---
+
+## Timeline
+
+### 2026-07-02 — 하네스 엔지니어링 전사 확산 신호 (INGEST, Issue #13)
+
+- HoYeon Lee & Zoon Chang: 인티그레이션에서 임직원 100+명 대상 Harness Engineering 세션. 참여자 절반 이상이 **비개발자의 자발적 신청** — 하네싱이 개발자 기술을 넘어 전사 업무 역량으로 확산되는 신호. [[2026-05-30-harness-is-not-just-a-leash]] 와 같은 계보.
