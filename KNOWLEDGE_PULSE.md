@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-07-02 08:00
+last_update: 2026-07-02 12:00
 status: 🟢 ACTIVE
 ---
 
@@ -20,8 +20,8 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
+- **[07-02 08:00]** `KNOWLEDGE_PULSE.md`
 - **[07-01 23:00]** `outputs/daily-reflect/REFLECT_2026-07-01.md`
-- **[07-01 23:00]** `KNOWLEDGE_PULSE.md`
 - **[06-30 23:00]** `outputs/daily-reflect/REFLECT_2026-06-30.md`
 - **[06-30 17:01]** `wiki/signals/transportation-ai-pivot.md`
 - **[06-30 17:01]** `wiki/signals/talent-market-disruption.md`
