@@ -2,6 +2,9 @@
 type: Note
 status: Active
 tags: [AX, HR, Talent-Model, Palantir, FDE]
+processed: true
+processed_date: 2026-07-02
+processed_note: "wiki/concepts/fde-talent-model.md 신규 생성"
 ---
 
 # 현장의 해결사, FDE(Field Deployment Engineer) 인재 모델

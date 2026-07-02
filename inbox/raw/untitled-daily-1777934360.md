@@ -1,5 +1,8 @@
 ---
 type: daily
+processed: true
+processed_date: 2026-07-02
+processed_note: "wiki/tools/rlm-forge.md 신규 생성"
 ---
 
 ## rlm-forge 리포지토리 분석

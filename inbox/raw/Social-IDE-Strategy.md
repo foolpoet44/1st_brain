@@ -2,6 +2,9 @@
 type: Note
 status: Active
 tags: [Hermes, IDE, Interface, Collaboration, Discord]
+processed: true
+processed_date: 2026-07-02
+processed_note: "wiki/concepts/social-ide.md 신규 생성"
 ---
 
 # 소셜 IDE의 시대: 대화형 인터페이스로 진화하는 지능망

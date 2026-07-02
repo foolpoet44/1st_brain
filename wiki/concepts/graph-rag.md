@@ -1,5 +1,5 @@
 ---
-updated: 2026-04-29
+updated: 2026-07-02
 status: growing
 title: GraphRAG (Graph-based Retrieval-Augmented Generation)
 created: 2026-05-26
@@ -36,3 +36,8 @@ GraphRAG는 전통적인 벡터 기반 RAG의 한계를 극복하기 위해 지�
 ---
 
 _참조: https://wikidocs.net/book/19813_
+
+### 2026-07-02 — BigQuery 에 찾아온 Graph (INGEST, Issue #13)
+
+- Sungmin Kim(LinkedIn): Graph RAG 가 Spanner 기반 '별도 구축'에서 **BigQuery 통합**의 시대로 이동. 그래프 탐색이 데이터 웨어하우스 안으로 들어오면서 지식 그래프 구축의 인프라 장벽이 급락.
+- csp-brain 함의: [[knowledge-graph-as-map]] 이 말하는 '지도'를 별도 시스템 없이 기존 데이터 위에 그릴 수 있게 됨.

@@ -7,6 +7,9 @@ status: seed
 tags: [stroke, depression, neuroscience, dmri, connectome, neuroimaging]
 author: Aleksi J. Sihvonen et al.
 source: Psychiatry and Clinical Neurosciences (2026)
+processed: true
+processed_date: 2026-07-02
+processed_note: "wiki/concepts/poststroke-depression-network.md 신규 생성"
 ---
 
 # Network-level disconnectivity tracks poststroke depressive symptom improvement

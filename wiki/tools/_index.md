@@ -19,3 +19,5 @@ tags: [index, wiki, tools]
 - [[github|GitHub]] — 버전 관리 및 협업 플랫폼
 - [[python|Python]] — 주력 자동화 언어
 - [[google-io-2026|Google I/O 2026]] — 기술 트렌드 소스
+- [[claude-code-skills|Claude Code Skills]] — 재사용 가능한 에이전트 역량 패키지
+- [[rlm-forge|RLM-Forge]] — 재귀적 언어모델(RLM) 실험 리포지토리

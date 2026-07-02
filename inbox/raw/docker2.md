@@ -1,5 +1,8 @@
 ---
 type: daily
+processed: true
+processed_date: 2026-07-02
+processed_note: "hermes-agent 도커 재시작 메모 — 운영 스크랩(보류)"
 ---
 
 # docker_260502

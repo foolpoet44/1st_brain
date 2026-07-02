@@ -27,3 +27,17 @@ inbox/ 에서 wiki/ 로 자료가 수집된 기록입니다.
 - 처리 결과: wiki/project 승격 없음
 - 이유: `2026-04-29.md`는 생산기술담당, 국내 출장, 근태 제도변경, 건설팀 해외출장 이슈 키워드를 담고 있으나 귀속 프로젝트와 결정 사항이 불명확하다. `Invalid date.md`는 깨진 daily 템플릿 잔여물로 판단된다.
 - 다음 확인: 업무 이슈 메모를 HR 운영 프로젝트로 승격할지, 단순 daily note로 보관할지 CSP 판단 필요.
+
+---
+
+## 2026-07-02 — 성장 루프 첫 회전 (Issue #13)
+
+대시보드 Action Queue 의 INGEST 카드로 발행된 일감. inbox 16건 전체 처리.
+
+| 처리 | 건수 | 내용 |
+| :-- | :-: | :-- |
+| 신규 생성 | 5 | [[fde-talent-model]], [[social-ide]], [[claude-code-skills]], [[rlm-forge]], [[poststroke-depression-network]] |
+| Timeline 병합 | 4 | [[graph-rag]](BigQuery Graph), [[knowledge-capitalization]](셀피쉬클럽), [[agentic-engineering]](하네스 세션), [[claude-code-workflow]](Karpathy LLM=OS) |
+| 처리 마킹(보류) | 7 | 일일 메모 4, 빈 파일 2, ADK 셋업 프롬프트 1 — 각 파일 frontmatter 의 processed_note 에 사유 기록 |
+
+모든 inbox 파일에 `processed: true` + `processed_date` + `processed_note` 마킹.
