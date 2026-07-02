@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSP-Brain: Synaptic Control Tower V6</title>
+    <title>CSP-Brain: Synaptic Control Tower V7 — Growth Loop</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
@@ -99,29 +99,27 @@
           <h1
             class="text-3xl font-bold font-['Outfit'] bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400"
           >
-            Synaptic Control Tower V6
+            Synaptic Control Tower V7
           </h1>
           <span
-            class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[9px] font-bold text-blue-400 tracking-tighter"
-            >RESILIENCE ACTIVE</span
+            class="px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-[9px] font-bold text-indigo-400 tracking-tighter"
+            >GROWTH LOOP</span
           >
         </div>
         <p class="text-xs text-gray-500 italic mt-1">
-          지식 대사는 정지하지 않습니다. 모든 장애는 재개의 연료가 됩니다.
+          감지(SENSE) → 해석 → 행동(ACT) → 아카이브 → 재소화(LEARN) — 관측이
+          일감이 되고, 커밋이 다시 관측이 됩니다.
         </p>
       </div>
 
       <div class="flex items-center gap-6">
-        <!-- Resolver Status -->
-        <div class="hidden md:flex flex-col items-end">
-          <span
-            class="text-[9px] uppercase text-gray-600 font-bold tracking-widest leading-none mb-1"
-            >Active Resolver</span
-          >
-          <span
-            class="text-[11px] font-mono text-indigo-400 bg-indigo-950/30 px-2 py-1 rounded border border-indigo-900/40"
-            >routing -> _ops/scripts/resolver_engine.py</span
-          >
+        <!-- Loop stages -->
+        <div class="hidden md:flex items-center gap-1 text-[9px] font-mono">
+          <span class="px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400">SENSE</span>
+          <span class="text-gray-700">→</span>
+          <span class="px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-400">ACT</span>
+          <span class="text-gray-700">→</span>
+          <span class="px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-400">LEARN</span>
         </div>
         <!-- System Heartbeat -->
         <div class="text-right">
@@ -156,7 +154,7 @@
               (L2)
             </div>
             <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Projects
+              <span class="w-2 h-2 rounded-full bg-emerald-600"></span> Projects
               (L3)
             </div>
             <div class="flex items-center gap-2">
@@ -250,70 +248,6 @@
             id="distribution-bar"
             class="h-1.5 w-full bg-gray-800 rounded-full mt-2 flex overflow-hidden"
           ></div>
-        </div>
-
-        <!-- OKA Talent Persona Card -->
-        <div class="glass-card p-5 bg-emerald-500/[0.03] border-emerald-500/10">
-          <h3
-            class="text-[11px] font-black uppercase tracking-[0.2em] text-emerald-400 mb-4 flex justify-between items-center"
-          >
-            <span>OKA Talent DNA</span>
-            <span
-              class="px-2 py-0.5 rounded bg-emerald-500/10 text-[8px] border border-emerald-500/20"
-              >PSY-ATOMS READY</span
-            >
-          </h3>
-          <div class="space-y-4">
-            <div class="space-y-1.5">
-              <div
-                class="flex justify-between text-[10px] font-medium text-gray-400"
-              >
-                <span>Resilience (회복탄력성)</span>
-                <span class="text-emerald-400">88%</span>
-              </div>
-              <div
-                class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden"
-              >
-                <div
-                  class="h-full bg-gradient-to-r from-emerald-600 to-emerald-400 w-[88%] transition-all duration-1000"
-                ></div>
-              </div>
-            </div>
-            <div class="space-y-1.5">
-              <div
-                class="flex justify-between text-[10px] font-medium text-gray-400"
-              >
-                <span>Job Engagement (직무 몰입)</span>
-                <span class="text-blue-400">92%</span>
-              </div>
-              <div
-                class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden"
-              >
-                <div
-                  class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-[92%] transition-all duration-1000"
-                ></div>
-              </div>
-            </div>
-            <div class="space-y-1.5">
-              <div
-                class="flex justify-between text-[10px] font-medium text-gray-400"
-              >
-                <span>Stress Tolerance (스트레스 내성)</span>
-                <span class="text-purple-400">84%</span>
-              </div>
-              <div
-                class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden"
-              >
-                <div
-                  class="h-full bg-gradient-to-r from-purple-600 to-purple-400 w-[84%] transition-all duration-1000"
-                ></div>
-              </div>
-            </div>
-            <p class="text-[9px] text-gray-500 italic mt-2 leading-relaxed">
-              * `Psy_assess.pdf` 분석을 통해 추출된 지식 원자가 시스템의 인재
-              배치 및 팀 빌딩 로직에 통합되었습니다.
-            </p>
-          </div>
         </div>
 
         <!-- Wiki Health & Metabolism (data-driven) -->
@@ -674,7 +608,7 @@
           if (data.graph && data.graph.nodes.length > 0) {
             // 노드 가시성: 검은 배경에 검은 노드(거의 안 보임) 문제 해결.
             // 그룹별 색 테두리 + 밝은 라벨로 대비를 준다.
-            const groupColor = { L2: "#3b82f6", L3: "#10b981", L4: "#a855f7" };
+            const groupColor = { L2: "#3b82f6", L3: "#059669", L4: "#a855f7" }; // validate_palette PASS (dark #05070a)
             nodes = data.graph.nodes.map((n) => ({
               ...n,
               shape: "dot",
@@ -698,7 +632,7 @@
               {
                 id: "L3",
                 label: "PROJECTS",
-                color: "#10b981",
+                color: "#059669",
                 shape: "diamond",
                 size: 20,
               },
@@ -737,7 +671,7 @@
               {
                 id: "L3",
                 label: "PROJECTS",
-                color: "#10b981",
+                color: "#059669",
                 shape: "diamond",
                 size: 25,
               },
