@@ -1,6 +1,7 @@
 import os, json, re, subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
+from urllib.parse import quote
 
 # 스크립트 위치 기준 Vault 루트 (로컬 Mac과 GitHub Actions 체크아웃 경로 차이 흡수)
 ROOT = Path(__file__).resolve().parents[2]
@@ -9,6 +10,14 @@ WIKI = ROOT / "wiki"
 REQUIRED_FM = ["title", "created", "updated", "type", "status"]
 STALE_DAYS = 42
 HISTORY_KEEP = 60
+REPO_URL = "https://github.com/foolpoet44/1st_brain"
+
+
+def issue_url(title, body):
+    """GitHub Issue 프리필 링크 — 정적 Pages 에서 가능한 유일한 '쓰기'.
+    대시보드 관측을 일감(이슈)으로 발행해 성장 루프(관측→행동→커밋→재관측)를 닫는다."""
+    return (f"{REPO_URL}/issues/new?title={quote(title)}"
+            f"&body={quote(body)}&labels={quote('knowledge-loop')}")
 
 # ──────────────────────────────────────────────────────────────────────────
 # 날짜원(源) 분리 — 이 대시보드의 신뢰성 핵심:
@@ -34,6 +43,34 @@ def git_last_commit_dates(rel_dir="wiki"):
             if line not in dates:  # git log 최신순 → 첫 등장이 마지막 커밋
                 dates[line] = cur
     return dates
+
+
+def knowledge_events(days=7, limit=40):
+    """최근 N일의 문서 단위 이벤트(A/M/D/R)를 git 이력에서 도출 — append-only 이벤트 원장.
+    상태 파일이 필요 없어(stateless) CI 재실행에도 항상 동일하게 재구성된다."""
+    try:
+        out = subprocess.run(
+            ["git", "log", f"--since={days}.days", "--name-status",
+             "--format=@%cI|%h|%s", "--", "wiki", "outputs", "projects"],
+            cwd=ROOT, capture_output=True, text=True, timeout=60).stdout
+    except Exception:
+        return []
+    events, cur = [], None
+    for line in out.splitlines():
+        if line.startswith("@"):
+            iso, sha, subj = line[1:].split("|", 2)
+            cur = {"date": iso[:10], "time": iso[11:16], "sha": sha, "subject": subj}
+        elif line.strip() and cur:
+            m = re.match(r"^([AMDR])\S*\t(.+)$", line)
+            if not m:
+                continue
+            path = m.group(2).split("\t")[-1]  # R(rename)은 마지막 필드가 새 경로
+            if path.endswith(".md") and not path.endswith("_index.md"):
+                events.append({**cur, "action": m.group(1), "path": path,
+                               "name": Path(path).stem})
+        if len(events) >= limit:
+            break
+    return events
 
 
 def parse_frontmatter(text):
@@ -271,6 +308,100 @@ def build():
     hist = hist[-HISTORY_KEEP:]
     save_history(hist)
 
+    # ── Action Queue (Layer 2: ACT) ─────────────────────────────────────
+    # 관측(LINT)을 '다음 행동'으로 변환한다. 각 카드는 Issue 프리필 링크를 가져
+    # 클릭 한 번으로 일감이 발행되고, 처리 커밋이 다시 대시보드에 반영된다.
+    sr = az.serendipity()
+    actions = []
+    agent_footer = ("\n\n---\n> CSP-Brain 성장 루프가 발행한 작업입니다. "
+                    "Claude Code 세션에서 이 이슈 번호를 지목해 처리하세요.")
+
+    # 1) INGEST — inbox 적체 (대사의 입구가 막히면 루프 전체가 멈춘다)
+    inbox_files = [p for p in (ROOT / "inbox").rglob("*.md")] if (ROOT / "inbox").exists() else []
+    if inbox_files:
+        names = "\n".join(f"- `{p.relative_to(ROOT)}`" for p in inbox_files[:10])
+        actions.append({
+            "type": "INGEST", "title": f"inbox 대기 {len(inbox_files)}건 편입",
+            "detail": "INGEST 프로토콜: 판별 → wiki 병합/생성 → processed 마킹",
+            "links": [str(p.relative_to(ROOT)) for p in inbox_files[:3]],
+            "issue": issue_url(f"[INGEST] inbox {len(inbox_files)}건 → wiki 편입",
+                               f"## Action: INGEST\n대기 파일:\n{names}\n\n"
+                               f"할 일: CLAUDE.md Protocol 1 수행 (판별→병합/생성→교차링크→로그){agent_footer}"),
+        })
+
+    # 2) CONNECT — 고립 문서 (그래프에서 끊긴 지식은 검색·연상의 사각지대)
+    for o in orphans[:2]:
+        stem = Path(o["path"]).stem
+        actions.append({
+            "type": "CONNECT", "title": f"{stem} 고립 해소",
+            "detail": "백링크 0 — 인덱스 허브 연결 + 관련 문서 상호 링크",
+            "links": [o["path"]],
+            "issue": issue_url(f"[CONNECT] {stem} — 고립 문서 연결",
+                               f"## Action: CONNECT\n- 대상: `{o['path']}`\n- 상태: inbound 백링크 0\n\n"
+                               f"할 일: 해당 섹션 _index.md 에 stem 링크 추가, 주제가 겹치는 문서 2개 이상과 상호 [[링크]]{agent_footer}"),
+        })
+
+    # 3) STRUCTURE — 프론트매터 미비 (자동 유입 문서의 표준화)
+    if fm_ok < wiki_total:
+        actions.append({
+            "type": "STRUCTURE", "title": f"프론트매터 미비 {wiki_total - fm_ok}건 정규화",
+            "detail": "title/created/updated/type/status 보강 (날짜는 콘텐츠 원본 기준)",
+            "links": [],
+            "issue": issue_url(f"[STRUCTURE] 프론트매터 정규화 {wiki_total - fm_ok}건",
+                               f"## Action: STRUCTURE\n- 현황: {fm_ok}/{wiki_total} 충족\n\n"
+                               f"할 일: LINT 프로토콜로 누락 필드 식별 후 정규화 (updated 위조 금지 — 콘텐츠 날짜 사용){agent_footer}"),
+        })
+
+    # 4) BRIDGE — 세렌디피티 (가장 강한 미연결 고리를 연결 노트로)
+    if sr:
+        s1, s2 = (Path(l).stem for l in sr["links"])
+        actions.append({
+            "type": "BRIDGE", "title": f"{s1} ↔ {s2} 연결 노트",
+            "detail": sr["reason"][:80] + "…",
+            "links": sr["links"],
+            "issue": issue_url(f"[BRIDGE] {s1} ↔ {s2} 연결 통찰 작성",
+                               f"## Action: BRIDGE\n- {sr['reason']}\n- 파일: `{sr['links'][0]}`, `{sr['links'][1]}`\n\n"
+                               f"할 일: 두 문서를 잇는 통찰을 각 문서 Timeline 에 추가하고 상호 [[링크]] 연결{agent_footer}"),
+        })
+
+    # 5) REVIEW — 복습 큐: 오래됐고(정체일수) 중요한(백링크수) 문서 우선.
+    #    간격 반복(spaced repetition)의 지식 버전 — 정체는 부채가 아니라 복습 스케줄이다.
+    scored = []
+    for s, d in az.docs.items():
+        ds = days_since(d["updated"])
+        if ds is not None and ds >= STALE_DAYS:
+            inb = len(az.inbound[s])
+            scored.append((ds * (1 + inb), ds, inb, s, d["path"]))
+    scored.sort(key=lambda x: (-x[0], x[3]))
+    for _, ds, inb, s, p in scored[:4]:
+        actions.append({
+            "type": "REVIEW", "title": f"{s} 재소화",
+            "detail": f"{ds}일 미갱신 · 백링크 {inb}개 — Compiled Truth 재방문",
+            "links": [p],
+            "issue": issue_url(f"[REVIEW] {s} — Compiled Truth 재방문 ({ds}일 경과)",
+                               f"## Action: REVIEW (복습 큐)\n- 대상: `{p}`\n- 사유: {ds}일 미갱신, 백링크 {inb}개(중요도 높음)\n\n"
+                               f"할 일: 최근 신호·개념과 대조해 Compiled Truth 갱신, Timeline 에 재방문 기록, updated 갱신{agent_footer}"),
+        })
+
+    # ── ARCHIVE 대기열 (Layer 3): mature 승격 문서 = Notion BRIDGE 후보 ──
+    archive_queue = [
+        {"name": s, "path": d["path"], "title": d["fm"].get("title", s)}
+        for s, d in sorted(az.docs.items())
+        if d["fm"].get("status", "").lower() == "mature"
+    ]
+
+    # ── 대사 지표 (Layer 3): 루프가 실제로 도는지 측정 ──
+    # 문서 수가 아니라 '흐름'을 잰다: 입구 적체(inbox), 소화 속도(7d), 평균 신선도(중위 나이)
+    inbox_dates = git_last_commit_dates("inbox")
+    inbox_ages = [days_since(v) for v in inbox_dates.values() if days_since(v) is not None]
+    ages = sorted(a for a in (days_since(d["updated"]) for d in az.docs.values()) if a is not None)
+    metabolism = {
+        "inbox_pending": len(inbox_files),
+        "inbox_oldest_days": max(inbox_ages) if inbox_ages else 0,
+        "median_age_days": ages[len(ages) // 2] if ages else 0,
+        "updated_7d": activity_7d,
+    }
+
     # 그래프(위키 한정)
     stems = list(az.docs.keys())
     def grp(path):
@@ -310,7 +441,11 @@ def build():
         "latest_changes": get_latest_changes(),
         "orphans": orphans,
         "stale_count": len(stale),
-        "serendipity": az.serendipity(),
+        "serendipity": sr,
+        "actions": actions,
+        "events": knowledge_events(),
+        "archive_queue": archive_queue,
+        "metabolism": metabolism,
         "graph": {"nodes": nodes, "edges": edges},
     }
 

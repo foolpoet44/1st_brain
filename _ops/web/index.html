@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSP-Brain: Synaptic Control Tower V6</title>
+    <title>CSP-Brain: Synaptic Control Tower V7 — Growth Loop</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
@@ -99,29 +99,27 @@
           <h1
             class="text-3xl font-bold font-['Outfit'] bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400"
           >
-            Synaptic Control Tower V6
+            Synaptic Control Tower V7
           </h1>
           <span
-            class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[9px] font-bold text-blue-400 tracking-tighter"
-            >RESILIENCE ACTIVE</span
+            class="px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-[9px] font-bold text-indigo-400 tracking-tighter"
+            >GROWTH LOOP</span
           >
         </div>
         <p class="text-xs text-gray-500 italic mt-1">
-          지식 대사는 정지하지 않습니다. 모든 장애는 재개의 연료가 됩니다.
+          감지(SENSE) → 해석 → 행동(ACT) → 아카이브 → 재소화(LEARN) — 관측이
+          일감이 되고, 커밋이 다시 관측이 됩니다.
         </p>
       </div>
 
       <div class="flex items-center gap-6">
-        <!-- Resolver Status -->
-        <div class="hidden md:flex flex-col items-end">
-          <span
-            class="text-[9px] uppercase text-gray-600 font-bold tracking-widest leading-none mb-1"
-            >Active Resolver</span
-          >
-          <span
-            class="text-[11px] font-mono text-indigo-400 bg-indigo-950/30 px-2 py-1 rounded border border-indigo-900/40"
-            >routing -> _ops/scripts/resolver_engine.py</span
-          >
+        <!-- Loop stages -->
+        <div class="hidden md:flex items-center gap-1 text-[9px] font-mono">
+          <span class="px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400">SENSE</span>
+          <span class="text-gray-700">→</span>
+          <span class="px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-400">ACT</span>
+          <span class="text-gray-700">→</span>
+          <span class="px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-400">LEARN</span>
         </div>
         <!-- System Heartbeat -->
         <div class="text-right">
@@ -156,7 +154,7 @@
               (L2)
             </div>
             <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Projects
+              <span class="w-2 h-2 rounded-full bg-emerald-600"></span> Projects
               (L3)
             </div>
             <div class="flex items-center gap-2">
@@ -169,73 +167,41 @@
         <div
           class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden"
         >
-          <!-- Recent Activity -->
+          <!-- Live Pulse: 실시간 커밋 피드(GitHub API) + 7일 지식 이벤트 원장 -->
           <div class="glass-card p-5 flex flex-col">
             <h3
-              class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 flex justify-between"
+              class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-500 mb-3 flex justify-between"
             >
-              <span>Recent Synapses</span>
-              <span class="text-blue-400 animate-pulse">● LIVE</span>
+              <span>Live Pulse</span>
+              <span id="pulse-status" class="text-blue-400 animate-pulse"
+                >● LIVE</span
+              >
             </h3>
+            <ul id="commit-feed" class="space-y-1 pr-1 mb-3"></ul>
+            <p
+              class="text-[9px] font-bold uppercase tracking-widest text-gray-600 border-t border-white/5 pt-2 mb-1"
+            >
+              Knowledge Events (7d)
+            </p>
             <ul
               id="synapse-list"
               class="flex-1 overflow-y-auto space-y-1 pr-1"
             ></ul>
           </div>
-          <!-- Task Tracker (Today's Harness Focus) -->
+          <!-- Action Queue: 관측을 일감으로 (성장 루프 Layer 2: ACT) -->
           <div
             class="glass-card p-5 flex flex-col bg-gradient-to-br from-gray-900/40 to-transparent"
           >
             <h3
               class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 flex justify-between"
             >
-              <span>Harness Checklist</span>
-              <span class="text-indigo-400">ANTI-BIAS MODE</span>
+              <span>Action Queue</span>
+              <span id="action-count" class="text-indigo-400"></span>
             </h3>
             <div
-              class="space-y-3 overflow-y-auto pr-1 text-[11px] text-gray-400"
-            >
-              <div class="flex items-start gap-2 group">
-                <input
-                  type="checkbox"
-                  checked
-                  disabled
-                  class="mt-0.5 rounded border-gray-700 bg-gray-950"
-                />
-                <span class="group-hover:text-white transition"
-                  >8-Cluster Ontology Mapping (L2)</span
-                >
-              </div>
-              <div class="flex items-start gap-2 group">
-                <input
-                  type="checkbox"
-                  checked
-                  disabled
-                  class="mt-0.5 rounded border-gray-700 bg-gray-950"
-                />
-                <span class="group-hover:text-white transition"
-                  >Claude 4.8 Effort Control Logic</span
-                >
-              </div>
-              <div class="flex items-start gap-2 group">
-                <input
-                  type="checkbox"
-                  class="mt-0.5 rounded border-gray-700 bg-gray-950"
-                />
-                <span class="group-hover:text-white transition text-indigo-300"
-                  >Durable Task Hand-off prototyping</span
-                >
-              </div>
-              <div class="flex items-start gap-2 group">
-                <input
-                  type="checkbox"
-                  class="mt-0.5 rounded border-gray-700 bg-gray-950"
-                />
-                <span class="group-hover:text-white transition"
-                  >Resolver v1.1 Integration with Skills</span
-                >
-              </div>
-            </div>
+              id="action-queue"
+              class="flex-1 space-y-2 overflow-y-auto pr-1 text-[11px]"
+            ></div>
           </div>
         </div>
       </div>
@@ -282,70 +248,6 @@
             id="distribution-bar"
             class="h-1.5 w-full bg-gray-800 rounded-full mt-2 flex overflow-hidden"
           ></div>
-        </div>
-
-        <!-- OKA Talent Persona Card -->
-        <div class="glass-card p-5 bg-emerald-500/[0.03] border-emerald-500/10">
-          <h3
-            class="text-[11px] font-black uppercase tracking-[0.2em] text-emerald-400 mb-4 flex justify-between items-center"
-          >
-            <span>OKA Talent DNA</span>
-            <span
-              class="px-2 py-0.5 rounded bg-emerald-500/10 text-[8px] border border-emerald-500/20"
-              >PSY-ATOMS READY</span
-            >
-          </h3>
-          <div class="space-y-4">
-            <div class="space-y-1.5">
-              <div
-                class="flex justify-between text-[10px] font-medium text-gray-400"
-              >
-                <span>Resilience (회복탄력성)</span>
-                <span class="text-emerald-400">88%</span>
-              </div>
-              <div
-                class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden"
-              >
-                <div
-                  class="h-full bg-gradient-to-r from-emerald-600 to-emerald-400 w-[88%] transition-all duration-1000"
-                ></div>
-              </div>
-            </div>
-            <div class="space-y-1.5">
-              <div
-                class="flex justify-between text-[10px] font-medium text-gray-400"
-              >
-                <span>Job Engagement (직무 몰입)</span>
-                <span class="text-blue-400">92%</span>
-              </div>
-              <div
-                class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden"
-              >
-                <div
-                  class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-[92%] transition-all duration-1000"
-                ></div>
-              </div>
-            </div>
-            <div class="space-y-1.5">
-              <div
-                class="flex justify-between text-[10px] font-medium text-gray-400"
-              >
-                <span>Stress Tolerance (스트레스 내성)</span>
-                <span class="text-purple-400">84%</span>
-              </div>
-              <div
-                class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden"
-              >
-                <div
-                  class="h-full bg-gradient-to-r from-purple-600 to-purple-400 w-[84%] transition-all duration-1000"
-                ></div>
-              </div>
-            </div>
-            <p class="text-[9px] text-gray-500 italic mt-2 leading-relaxed">
-              * `Psy_assess.pdf` 분석을 통해 추출된 지식 원자가 시스템의 인재
-              배치 및 팀 빌딩 로직에 통합되었습니다.
-            </p>
-          </div>
         </div>
 
         <!-- Wiki Health & Metabolism (data-driven) -->
@@ -504,13 +406,63 @@
             hist[0].date.slice(5);
         }
 
-        // Honest summary
+        // Honest summary + 대사 지표(Layer 3): 문서 수가 아니라 '흐름'을 잰다
         const stalePct = lint.frontmatter_total
           ? Math.round((lint.stale / lint.frontmatter_total) * 100)
           : 0;
+        const mb = data.metabolism || {};
+        const arch = (data.archive_queue || []).length;
         document.getElementById("metabolism-summary").innerHTML =
-          `직전 기록 대비 위키 ${fmtDelta(d.wiki_total)} 문서 · 고립 ${fmtDelta(d.orphans, true)} · 정체 ${fmtDelta(d.stale, true)}.<br/>` +
-          `신선도가 health를 누르고 있습니다 — 정체 문서 ${lint.stale}/${lint.frontmatter_total} (${stalePct}%).`;
+          `직전 기록 대비 위키 ${fmtDelta(d.wiki_total)} 문서 · 고립 ${fmtDelta(d.orphans, true)} · 정체 ${fmtDelta(d.stale, true)} (정체율 ${stalePct}%).<br/>` +
+          `<span class="text-gray-400">대사</span>: inbox ${mb.inbox_pending ?? 0}건 대기` +
+          (mb.inbox_oldest_days ? ` <span class="text-yellow-500">(최고령 ${mb.inbox_oldest_days}일)</span>` : "") +
+          ` · 7일 내 갱신 ${mb.updated_7d ?? 0}건 · 중위 문서나이 ${mb.median_age_days ?? 0}일` +
+          (arch ? ` · <span class="text-purple-400">아카이브 대기 ${arch}건</span>` : "");
+      }
+
+      // Action Queue: 관측 → 일감. Issue 프리필 링크가 루프를 닫는 '운동신경'이다.
+      const ACTION_STYLE = {
+        INGEST: { color: "text-blue-400", border: "border-blue-500/20", label: "수집" },
+        CONNECT: { color: "text-emerald-400", border: "border-emerald-500/20", label: "연결" },
+        STRUCTURE: { color: "text-sky-400", border: "border-sky-500/20", label: "정규화" },
+        BRIDGE: { color: "text-purple-400", border: "border-purple-500/20", label: "교차" },
+        REVIEW: { color: "text-yellow-400", border: "border-yellow-500/20", label: "복습" },
+      };
+
+      function renderActionQueue(actions) {
+        const box = document.getElementById("action-queue");
+        const count = document.getElementById("action-count");
+        if (!box) return;
+        if (!actions || actions.length === 0) {
+          count.innerText = "ALL CLEAR";
+          box.innerHTML = `<p class="italic text-gray-600 text-[10px]">발행할 행동이 없습니다. 루프가 소화를 마쳤습니다.</p>`;
+          return;
+        }
+        count.innerText = `${actions.length} PENDING`;
+        box.innerHTML = actions
+          .map((a) => {
+            const st = ACTION_STYLE[a.type] || ACTION_STYLE.REVIEW;
+            const fileBtns = (a.links || [])
+              .slice(0, 2)
+              .map(
+                (l) =>
+                  `<button onclick="openFile('${l.split("/").pop()}','${l}')" class="text-[9px] px-1.5 py-0.5 rounded bg-white/5 hover:bg-white/10 text-gray-500 hover:text-white transition truncate max-w-[130px]">${l.split("/").pop().replace(".md", "")}</button>`,
+              )
+              .join("");
+            return `
+              <div class="p-2.5 rounded-lg bg-black/30 border ${st.border} space-y-1.5">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold ${st.color} text-[10px] tracking-widest">${a.type} · ${st.label}</span>
+                  <a href="${a.issue}" target="_blank"
+                     class="text-[9px] px-2 py-0.5 rounded bg-indigo-500/20 hover:bg-indigo-500/40 text-indigo-300 border border-indigo-500/30 transition font-bold">
+                     ⚡ Issue 발행</a>
+                </div>
+                <p class="text-gray-300 font-medium leading-snug">${a.title}</p>
+                <p class="text-gray-600 text-[10px] leading-snug">${a.detail}</p>
+                <div class="flex gap-1.5 flex-wrap">${fileBtns}</div>
+              </div>`;
+          })
+          .join("");
       }
 
       function renderEvolutionDigest(changes) {
@@ -552,6 +504,7 @@
             (data.deltas || {}).wiki_total,
           );
           renderHealth(data);
+          renderActionQueue(data.actions);
 
           // Evolution & Serendipity
           if (data.serendipity) {
@@ -615,16 +568,37 @@
             )
             .join("");
 
+          // Knowledge Events: 문서 단위 A/M/D/R 타임라인 (git 이력 기반, 빌드타임)
+          const EV_BADGE = {
+            A: ["＋", "text-emerald-400"],
+            M: ["Δ", "text-blue-400"],
+            D: ["－", "text-red-400"],
+            R: ["→", "text-gray-500"],
+          };
           const list = document.getElementById("synapse-list");
-          list.innerHTML = data.recent_files
-            .map(
-              (f) => `
-                  <li class="flex justify-between items-center group cursor-pointer p-1 rounded hover:bg-white/5" onclick="openFile('${f.name}', '${f.path}')">
-                      <span class="text-[11px] truncate max-w-[200px] text-gray-300 group-hover:text-blue-400 font-medium">${f.name}</span>
-                      <span class="text-[9px] font-mono text-gray-600">${f.time}</span>
+          const events =
+            data.events && data.events.length
+              ? data.events
+              : (data.recent_files || []).map((f) => ({
+                  ...f,
+                  action: "M",
+                  date: "",
+                  name: f.name.replace(".md", ""),
+                }));
+          list.innerHTML = events
+            .slice(0, 25)
+            .map((ev) => {
+              const [sym, color] = EV_BADGE[ev.action] || EV_BADGE.M;
+              return `
+                  <li class="flex justify-between items-center gap-2 group cursor-pointer p-1 rounded hover:bg-white/5" onclick="openFile('${ev.name}.md', '${ev.path}')">
+                      <span class="flex items-center gap-1.5 min-w-0">
+                        <span class="${color} font-bold text-[10px] w-3">${sym}</span>
+                        <span class="text-[11px] truncate text-gray-300 group-hover:text-blue-400 font-medium">${ev.name}</span>
+                      </span>
+                      <span class="text-[9px] font-mono text-gray-600 shrink-0">${(ev.date || "").slice(5)} ${ev.time || ""}</span>
                   </li>
-              `,
-            )
+              `;
+            })
             .join("");
 
           // Graph Rendering
@@ -634,7 +608,7 @@
           if (data.graph && data.graph.nodes.length > 0) {
             // 노드 가시성: 검은 배경에 검은 노드(거의 안 보임) 문제 해결.
             // 그룹별 색 테두리 + 밝은 라벨로 대비를 준다.
-            const groupColor = { L2: "#3b82f6", L3: "#10b981", L4: "#a855f7" };
+            const groupColor = { L2: "#3b82f6", L3: "#059669", L4: "#a855f7" }; // validate_palette PASS (dark #05070a)
             nodes = data.graph.nodes.map((n) => ({
               ...n,
               shape: "dot",
@@ -658,7 +632,7 @@
               {
                 id: "L3",
                 label: "PROJECTS",
-                color: "#10b981",
+                color: "#059669",
                 shape: "diamond",
                 size: 20,
               },
@@ -697,7 +671,7 @@
               {
                 id: "L3",
                 label: "PROJECTS",
-                color: "#10b981",
+                color: "#059669",
                 shape: "diamond",
                 size: 25,
               },
@@ -753,8 +727,65 @@
         }
       }
 
+      // Live Pulse: 공개 레포이므로 GitHub API 를 브라우저가 직접 폴링(익명 60회/h → 90초 주기).
+      // 재빌드 없이 커밋 스트림이 초 단위로 보이는, 정적 Pages 에서 가능한 '진짜 실시간'.
+      const COMMIT_TAG = [
+        [/^knowledge:/, ["지식", "text-blue-400 bg-blue-500/10"]],
+        [/^project:/, ["프로젝트", "text-emerald-400 bg-emerald-500/10"]],
+        [/^content:/, ["콘텐츠", "text-purple-400 bg-purple-500/10"]],
+        [/^archive:/, ["아카이브", "text-gray-400 bg-gray-500/10"]],
+        [/^ops:/, ["운영", "text-sky-400 bg-sky-500/10"]],
+        [/auto-?sync|autosync|cloud sync/i, ["자동", "text-gray-500 bg-gray-500/10"]],
+        [/^merge/i, ["머지", "text-indigo-400 bg-indigo-500/10"]],
+      ];
+      function tagOf(msg) {
+        for (const [re, tag] of COMMIT_TAG) if (re.test(msg)) return tag;
+        return ["기타", "text-gray-500 bg-gray-500/10"];
+      }
+      function timeAgo(iso) {
+        const s = (Date.now() - new Date(iso).getTime()) / 1000;
+        if (s < 90) return "방금";
+        if (s < 3600) return `${Math.floor(s / 60)}분 전`;
+        if (s < 86400) return `${Math.floor(s / 3600)}시간 전`;
+        return `${Math.floor(s / 86400)}일 전`;
+      }
+      async function updateCommitFeed() {
+        const feed = document.getElementById("commit-feed");
+        const status = document.getElementById("pulse-status");
+        if (!feed) return;
+        try {
+          const res = await fetch(
+            "https://api.github.com/repos/foolpoet44/1st_brain/commits?per_page=5",
+            { headers: { Accept: "application/vnd.github+json" } },
+          );
+          if (!res.ok) throw new Error(res.status);
+          const commits = await res.json();
+          feed.innerHTML = commits
+            .map((c) => {
+              const msg = c.commit.message.split("\n")[0];
+              const [label, cls] = tagOf(msg);
+              return `
+                <li class="flex items-center gap-2 p-1 rounded hover:bg-white/5 cursor-pointer"
+                    onclick="window.open('${c.html_url}','_blank')">
+                  <span class="text-[8px] px-1.5 py-0.5 rounded font-bold shrink-0 ${cls}">${label}</span>
+                  <span class="text-[10px] text-gray-400 truncate flex-1">${msg}</span>
+                  <span class="text-[9px] font-mono text-gray-600 shrink-0">${timeAgo(c.commit.committer.date)}</span>
+                </li>`;
+            })
+            .join("");
+          status.innerText = "● LIVE";
+          status.className = "text-blue-400 animate-pulse";
+        } catch (e) {
+          // API 미도달(오프라인/레이트리밋) 시 빌드타임 이벤트로 계속 동작 — 조용히 저하
+          status.innerText = "○ BUILD-TIME";
+          status.className = "text-gray-600";
+        }
+      }
+
       updateDashboard();
+      updateCommitFeed();
       setInterval(updateDashboard, 10000);
+      setInterval(updateCommitFeed, 90000);
     </script>
   </body>
 </html>

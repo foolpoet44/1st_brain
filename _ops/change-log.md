@@ -1,3 +1,12 @@
+## 2026-07-02
+
+### [DASHBOARD] V7 전환 — 관제탑에서 '성장 루프 기관'으로 (M1~M4)
+
+- 무엇이 바뀌었나: 대시보드를 SENSE→ACT→LEARN 루프의 실행 기관으로 전면 개편. (M1) Action Queue — LINT 관측을 INGEST/CONNECT/STRUCTURE/BRIDGE/REVIEW 행동 카드로 변환, 각 카드는 GitHub Issue 프리필 링크로 일감을 발행(복습 큐는 정체일수×백링크 가중 랭킹). (M2) Live Pulse — 공개 레포 GitHub API 를 브라우저가 직접 폴링해 재빌드 없이 커밋 스트림 실시간 표시 + 최근 7일 문서 단위 A/M/D/R 이벤트 원장. (M3) weekly-digest.yml 금요일 cron 이 주간 다이제스트를 자동 생성·커밋(Dream Cycle 클라우드화), 대사 지표(inbox 적체·7일 갱신·중위 문서나이)와 mature 아카이브 대기열 추가. (M4) V7 헤더·루프 단계 칩, 가짜 장식(OKA DNA 하드코딩, Harness Checklist, Resolver 칩) 전부 제거, 그래프 팔레트를 CVD 검증 통과 색으로 교정.
+- 왜 중요한가: 지금까지 대시보드는 '보는 눈'이었고 행동은 사람의 기억에 의존했다. 이제 관측이 클릭 한 번에 이슈(일감)가 되고, 처리 커밋이 다시 관측되며 루프가 스스로 닫힌다. 주간 리듬도 로컬 Mac 없이 클라우드에서 유지된다.
+- 영향 범위: `_ops/scripts/update_dashboard.py`, `_ops/scripts/weekly_digest.py`(신규), `.github/workflows/weekly-digest.yml`(신규), `index.html`/`_ops/web/index.html`, `outputs/weekly/2026-W26.md`.
+- 다음 확인: 첫 금요일 cron 실행 확인, Action Queue 이슈 발행→처리→재관측 사이클 실사용 1회전, knowledge-loop 라벨 생성.
+
 ## 2026-06-27
 
 ### [DASHBOARD] 라이브 렌더 결함 3건 수정 (빈 패널·안 보이는 그래프)
