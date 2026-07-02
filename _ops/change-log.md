@@ -1,5 +1,13 @@
 ## 2026-07-02
 
+### [BRIDGE] 성장 루프 2회전 — 배분(Distribution) 축의 발견 (Issue #15)
+
+- 무엇이 바뀌었나: 세렌디피티 카드가 지목한 [[2026-05-18-ai-boom-labor-distribution]] ↔ [[ax-internalization]] 를 연결. 두 문서는 서로를 참조하고 있었으나 해석 불가능한 제목 링크라 그래프에선 단절 상태 — stem 링크로 복구하고, 교차 통찰(AX 3단계 모델에 누락된 4번째 축 '가치 배분')을 양쪽 Timeline 에 기록. ax-internalization 의 깨진 링크 4곳도 함께 복구.
+- 왜 중요한가: 루프의 자기 반응성이 재확인됨 — 연결 즉시 세렌디피티가 다음 미연결 쌍으로 이동하고 복습 큐에서 해당 문서가 이탈. 내용적으로는 AX 내재화 모델에 '배분 설계' 질문이 공식 편입됨.
+- 영향 범위: `wiki/signals/2026-05-18-ai-boom-labor-distribution.md`, `wiki/concepts/ax-internalization.md`.
+- 다음 확인: 다음 세렌디피티 쌍(ai-boom ↔ csp) 처리 여부, REVIEW 큐 소화.
+
+
 ### [INGEST] 성장 루프 첫 회전 완성 — inbox 16건 전량 대사 (Issue #13)
 
 - 무엇이 바뀌었나: V7 Action Queue 가 발행한 첫 일감(Issue #13)을 처리. 신규 위키 5건 생성(FDE 인재모델·소셜 IDE·Claude Code Skills·RLM-Forge·PSD 네트워크 논문), 기존 4건에 Timeline 병합(Graph RAG의 BigQuery 통합, 지식자산화의 셀피쉬클럽 사례, 에이전틱 엔지니어링의 전사 확산 신호, Claude Code 워크플로의 Karpathy LLM=OS), 나머지 7건은 사유와 함께 처리 마킹. 생성기가 processed:true 파일을 INGEST 카운트에서 제외하도록 수정 — 처리 커밋 후 카드가 실제로 사라진다.

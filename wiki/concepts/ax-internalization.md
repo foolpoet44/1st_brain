@@ -1,7 +1,7 @@
 ---
 title: AX Internalization (AI Transformation)
 created: 2026-04-14
-updated: 2026-04-29
+updated: 2026-07-02
 type: concept
 status: growing
 tags: [ax, transformation, ai, internalization]
@@ -29,17 +29,22 @@ aliases: [AI 내재화, AI Transformation]
 
 **연결 개념**
 
-- [[Knowledge Capitalization]] — AX 의 핵심 원칙
-- [[Vibe Coding]] — AX 내재화의 실천 방식
-- [[CSP Brain System]] — AX 를 위한 인프라
+- [[knowledge-capitalization|Knowledge Capitalization]] — AX 의 핵심 원칙
+- [[vibe-coding|Vibe Coding]] — AX 내재화의 실천 방식
+- [[csp-brain-system|CSP Brain System]] — AX 를 위한 인프라
 
 ---
 
 ## Timeline
 
+### 2026-07-02 — BRIDGE: 4번째 축 '배분(Distribution)' 의 발견 (Issue #15)
+
+- [[2026-05-18-ai-boom-labor-distribution]] 와의 교차에서 도출: 3단계 모델(도구→에이전트→내재화)은 **가치 배분 설계**가 빠지면 지속 불가능하다. 내재화(3단계)가 조직 KPI 와 AI 성과 지표의 동기화라면, 그 다음 질문은 "동기화된 성과를 누구의 것으로 인정하는가"다. AX 교육 설계 시 '어떻게 쓰는가'와 함께 '만든 가치를 어떻게 나누는가'를 물어야 함.
+- 깨진 제목 링크 4곳을 stem 링크로 복구 (그래프 연결 복원).
+
 ### 2026-05-18
 
-- [[AI Boom and Labor Distribution]] 관찰 추가. AI 내재화는 도구 교육이나 업무 자동화만이 아니라, AI가 만든 가치와 부담을 조직이 어떻게 배분하는가까지 포함하는 운영 설계 이슈로 확장됨.
+- [[2026-05-18-ai-boom-labor-distribution|AI Boom and Labor Distribution]] 관찰 추가. AI 내재화는 도구 교육이나 업무 자동화만이 아니라, AI가 만든 가치와 부담을 조직이 어떻게 배분하는가까지 포함하는 운영 설계 이슈로 확장됨.
 
 ### 2026-04-29
 
