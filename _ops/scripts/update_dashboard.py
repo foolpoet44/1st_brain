@@ -317,7 +317,12 @@ def build():
                     "Claude Code 세션에서 이 이슈 번호를 지목해 처리하세요.")
 
     # 1) INGEST — inbox 적체 (대사의 입구가 막히면 루프 전체가 멈춘다)
-    inbox_files = [p for p in (ROOT / "inbox").rglob("*.md")] if (ROOT / "inbox").exists() else []
+    # processed: true 로 마킹된 파일은 이미 대사를 마친 것 — 카운트에서 제외해야
+    # 처리 커밋 후 카드가 사라지며 루프가 실제로 닫힌다.
+    inbox_files = [
+        p for p in ((ROOT / "inbox").rglob("*.md") if (ROOT / "inbox").exists() else [])
+        if "processed: true" not in p.read_text(encoding="utf-8", errors="ignore")[:500]
+    ]
     if inbox_files:
         names = "\n".join(f"- `{p.relative_to(ROOT)}`" for p in inbox_files[:10])
         actions.append({
