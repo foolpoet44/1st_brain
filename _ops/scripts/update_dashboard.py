@@ -305,6 +305,9 @@ def build():
     snap = {"date": today, "wiki_total": wiki_total, "orphans": len(orphans),
             "stale": len(stale), "frontmatter_ok": fm_ok, "health": health}
     hist = [r for r in hist if r.get("date") != today] + [snap]
+    # 스케줄 cron 과 push 트리거가 경합하면 항목이 역순으로 삽입될 수 있다
+    # (실사례: 7/3, 7/5, 7/4) — 날짜 정렬로 스파크라인 순서를 보장한다.
+    hist.sort(key=lambda r: r.get("date", ""))
     hist = hist[-HISTORY_KEEP:]
     save_history(hist)
 
