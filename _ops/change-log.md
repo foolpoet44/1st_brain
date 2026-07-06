@@ -1,4 +1,13 @@
-## 2026-07-02
+## 2026-07-06
+
+### [SIGNAL] 슈퍼에이전트의 서막: '판단의 종말'에서 '오케스트레이션'으로
+
+- 무엇이 바뀌었나: 2026년 하반기 HR Tech의 핵심 트렌드인 '슈퍼에이전트(Superagents)'와 '구성적 적합성(Constructed Fit)' 신호를 포착하여 위키에 편입함. HR의 역할을 행정이나 개별 판단자가 아닌, 에이전트 군단을 지휘하는 '시스템 아키텍트'로 재정의함.
+- 왜 중요한가: 단순 AI 비서를 넘어 채용, 코칭, 성과 관리를 종단간 수행하는 에이전트 환경에서 조직이 주권을 유지하기 위한 '조직 운영체제(SOS)'의 필요성을 확인람.
+- 영향 범위: `wiki/signals/2026-07-06-dawn-of-hr-superagents.md`, `outputs/daily-reflect/REFLECT_2026-07-06.md` (예정).
+- 다음 확인: `superagent-operating-system` 노드 생성 및 에이전틱 ROI KPI 설계.
+
+## 2026-07-05
 
 ### [BRIDGE] 성장 루프 2회전 — 배분(Distribution) 축의 발견 (Issue #15)
 
