@@ -20,9 +20,9 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 9 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
+- **[07-09 08:00]** `KNOWLEDGE_PULSE.md`
 - **[07-09 07:01]** `_ops/change-log.md`
 - **[07-09 07:01]** `outputs/daily-reflect/REFLECT_2026-07-09.md`
-- **[07-08 23:03]** `KNOWLEDGE_PULSE.md`
 - **[07-08 22:11]** `outputs/daily-reflect/REFLECT_2026-07-08.md`
 - **[07-08 21:00]** `AI-TOOLBOX-2026.md`
 
