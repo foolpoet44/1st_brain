@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-07-09 08:00
+last_update: 2026-07-09 12:00
 status: 🟢 ACTIVE
 ---
 
@@ -21,9 +21,9 @@ status: 🟢 ACTIVE
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
 - **[07-09 08:00]** `KNOWLEDGE_PULSE.md`
-- **[07-09 07:01]** `_ops/change-log.md`
-- **[07-09 07:01]** `outputs/daily-reflect/REFLECT_2026-07-09.md`
-- **[07-08 22:11]** `outputs/daily-reflect/REFLECT_2026-07-08.md`
+- **[07-09 08:00]** `outputs/daily-reflect/REFLECT_2026-07-09.md`
+- **[07-09 08:00]** `_ops/change-log.md`
+- **[07-09 08:00]** `outputs/daily-reflect/REFLECT_2026-07-08.md`
 - **[07-08 21:00]** `AI-TOOLBOX-2026.md`
 
 ---
