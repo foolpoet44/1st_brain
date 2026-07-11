@@ -29,10 +29,13 @@ related_to: "[[opq-framework]]"
 
 - **[[AgentSchool Simulation]]**: 에이전트를 활용한 조직 사회적 역동 시뮬레이션 마일스톤 착수.
 
-### 2026-06-11 (Current)
-
+### 2026-06-11
 - **심리 진단 요약 인제스천 완료**: `hermes/` 디렉토리에 대기 중이던 `Psy_assess_summary.md`를 Vault의 `outputs/analyses/`로 정식 편입.
 - **지식 대사(Metabolism) 활성화**: 심리 진단 지표(Resilience, Engagement 등)를 시스템의 추론 근거로 활성화.
+
+### 2026-07-11 (Current)
+- **OKA 분석 결과 최종 적용**: 분석된 심리 진단 요약(`psy-assess-summary.md`)을 기반으로 지식 구조를 확정하고, `csp-brain` Vault 내의 지식 맥락을 갱신함.
+- **지휘자(Orchestrator) 모드 가동**: 분석 결과가 시스템의 핵심 IP(Eval)로 전이될 수 있도록 검증 및 동기화 절차 수행.
 
 ## 4. 핵심 지표 (Atoms)
 

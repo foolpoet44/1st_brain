@@ -1,3 +1,9 @@
+---
+type: Analysis
+project: "[[oka]]"
+tags: [hr, assessment, psychometrics, resilience, engagement]
+status: Completed
+---
 # PSY_ASSESS.pdf (OPQ 진단) 핵심 요약
 
 ## 1. 개요
@@ -15,8 +21,8 @@
 
 ## 4. 계층별 매핑 (7-Layer Mapping)
 - **L2 CONCEPT**: [[opq-framework]]
-- **L3 CONTEXT**: [[oka-project]]
+- **L3 CONTEXT**: [[projects/oka/README|OKA Project]]
 - **L4 CONTENT**: 현재 문서
 
 ---
-*Last Updated: 2026-06-11 (Hermes Orchestrator)*
+*Last Updated: 2026-07-11 (Hermes Orchestrator)*
