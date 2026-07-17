@@ -3,7 +3,7 @@ source: gdrive
 original_title: "BP_Signal_Intelligence_개발명세서.md"
 drive_id: 1DK-2gL6YeH6Vdfo5jPUob4bj90T76z9YBzX7qxCAj8o
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 # BP Signal Intelligence — 운영 시스템 개발 명세서

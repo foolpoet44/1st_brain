@@ -3,7 +3,7 @@ source: gdrive
 original_title: "Physical_AI_Tech_Leader_Pool_조직설계"
 drive_id: 1axRkpBe8XfcXFfYEvcDWwqNh6103ws1Qp737EYm2oMk
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 **Physical AI Tech Leader Pool**

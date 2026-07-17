@@ -3,7 +3,7 @@ source: gdrive
 original_title: "직무역량_SF_Domain 매핑"
 drive_id: 1IerYFTIwlnHD_b8z6X7827xNDdanPQoMLIyomemyIiQ
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 첨부파일 4개 중 taxonomy-mapping.html만 본문에 보입니다. 나머지 3개(CSV 매핑표, expert-area-taxonomy, competency-mapping-report)를 디스크에서 읽어 전체 그림을 파악하겠습니다.핵심 데이터가 잡혔습니다. 매핑 신뢰도와 대분류별 분포를 더 확인합니다.이제 나머지 두 HTML 파일(expert-area-taxonomy, competency-mapping-report)의 구조를 확인해서 어떤 내용을 담고 있는지 파악합니다.전체 그림이 완성됐습니다. 네 개 파일의 관계를 정리하면 — CSV는 원천 데이터(44개 직무역량 × 평가인원 × 점수 × 스킬 매핑), taxonomy-mapping은 대-중-소 분류의 도메인 매핑 점검, expert-area-taxonomy는 도메인별 역량 구성도, competency-mapping-report는 직무역량평가와 Factory Robotics 스킬맵의 연결 지도입니다.

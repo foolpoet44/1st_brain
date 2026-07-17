@@ -3,7 +3,7 @@ source: gdrive
 original_title: "ex-oi-integration-strategy.md"
 drive_id: 1ZUCj1K-noVwf52x0_4C5ruLxaJlx8xVm
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 # EX Intelligence × Organizational Intelligence 통합 전략: 유기적 지능체로의 실행 로드맵

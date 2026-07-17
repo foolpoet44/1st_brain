@@ -3,7 +3,7 @@ source: gdrive
 original_title: "Ax internalization"
 drive_id: 13c-gSOF2-n5hcqIaaPuQV_M4HIzJE6xNoVlQfKkMRIg
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 **AX(AI Transformation) 내러티브의 서막: 기술을 넘어 조직의 유기적 동화로**

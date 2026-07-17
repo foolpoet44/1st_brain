@@ -3,7 +3,7 @@ source: gdrive
 original_title: "Physical_AI_Tech_Leader_면접계획서"
 drive_id: 1DUeW762pe3nJ9TndVg3JbwwjQBKB7tbl_x-QKc6usec
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 **Physical AI Tech Leader**

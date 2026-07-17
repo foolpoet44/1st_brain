@@ -3,7 +3,7 @@ source: gdrive
 original_title: "PRI_FDE_대화아카이브.md"
 drive_id: 1UGMxyvm4SJVJTiUn5GykBBPTxmJN4rCsyERil1aFAqE
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 # PRI FDE 부트캠프 설계 & 도메인 성장경로 솔루션 컨셉
