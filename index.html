@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script src="https://unpkg.com/vis-network@10.1.0/standalone/umd/vis-network.min.js"></script>
     <style>
       :root {
         --bg-color: #05070a;
@@ -74,8 +74,9 @@
       }
 
       /* C3: 모바일 최적화 — 폰에서 고정 높이(h-screen)+overflow:hidden 이
-         콘텐츠를 잘라내므로, 작은 화면에서는 세로 스크롤을 허용한다. */
-      @media (max-width: 1024px) {
+         콘텐츠를 잘라내므로, 작은 화면에서는 세로 스크롤을 허용한다.
+         1023.98px: Tailwind lg(min-width:1024px)와 정확히 1024px에서 겹치지 않도록. */
+      @media (max-width: 1023.98px) {
         body {
           height: auto !important;
           min-height: 100vh;
@@ -113,6 +114,11 @@
       </div>
 
       <div class="flex items-center gap-6">
+        <a
+          href="knowledge/"
+          class="hidden md:inline text-[10px] font-mono text-gray-500 hover:text-blue-400 transition"
+          >지식 인덱스 →</a
+        >
         <!-- Loop stages -->
         <div class="hidden md:flex items-center gap-1 text-[9px] font-mono">
           <span class="px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400">SENSE</span>
@@ -143,8 +149,10 @@
 
     <!-- CONTENT GRID -->
     <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden">
-      <!-- LEFT: The Knowledge Graph (7 Cols) -->
-      <div class="lg:col-span-8 flex flex-col gap-6">
+      <!-- LEFT: The Knowledge Graph (8 Cols) -->
+      <!-- min-h-0: grid/flex 아이템의 min-height:auto 기본값이 높이 제약 전달을
+           끊어 내부 overflow-y-auto가 발동하지 않던 문제의 근본 수정. -->
+      <div class="lg:col-span-8 flex flex-col gap-6 min-h-0">
         <div id="network-container" class="relative group">
           <div
             class="absolute top-4 left-4 z-10 p-3 rounded-xl bg-black/40 backdrop-blur text-[10px] border border-white/5 space-y-2 pointer-events-none"
@@ -165,10 +173,10 @@
         </div>
 
         <div
-          class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden"
+          class="flex-1 min-h-0 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden"
         >
           <!-- Live Pulse: 실시간 커밋 피드(GitHub API) + 7일 지식 이벤트 원장 -->
-          <div class="glass-card p-5 flex flex-col">
+          <div class="glass-card p-5 flex flex-col min-h-0">
             <h3
               class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-500 mb-3 flex justify-between"
             >
@@ -185,12 +193,12 @@
             </p>
             <ul
               id="synapse-list"
-              class="flex-1 overflow-y-auto space-y-1 pr-1"
+              class="flex-1 min-h-0 overflow-y-auto space-y-1 pr-1"
             ></ul>
           </div>
           <!-- Action Queue: 관측을 일감으로 (성장 루프 Layer 2: ACT) -->
           <div
-            class="glass-card p-5 flex flex-col bg-gradient-to-br from-gray-900/40 to-transparent"
+            class="glass-card p-5 flex flex-col min-h-0 bg-gradient-to-br from-gray-900/40 to-transparent"
           >
             <h3
               class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 flex justify-between"
@@ -200,14 +208,16 @@
             </h3>
             <div
               id="action-queue"
-              class="flex-1 space-y-2 overflow-y-auto pr-1 text-[11px]"
+              class="flex-1 min-h-0 space-y-2 overflow-y-auto pr-1 text-[11px]"
             ></div>
           </div>
         </div>
       </div>
 
       <!-- RIGHT: Metabolism & Strategy (4 Cols) -->
-      <div class="lg:col-span-4 flex flex-col gap-6">
+      <!-- min-h-0 + overflow-y-auto: 카드 4장의 자연 높이(~1600px)가 뷰포트를
+           넘어도 컬럼 자체가 스크롤되어 하단 카드(Knowledge Gaps)에 항상 닿는다. -->
+      <div class="lg:col-span-4 flex flex-col gap-6 min-h-0 overflow-y-auto">
         <!-- Stats Card -->
         <div class="glass-card p-5 bg-blue-500/[0.02]">
           <div class="grid grid-cols-2 gap-4 pb-5 border-b border-white/5">
@@ -337,6 +347,10 @@
 
     <script>
       let network = null;
+      let lastPayload = null;
+      // 터치 기기에서는 캔버스가 팬/줌으로 스크롤 제스처를 삼켜 페이지가
+      // 안 내려가므로, 그래프 조작(팬·줌·노드 드래그)을 끈다.
+      const IS_COARSE_POINTER = window.matchMedia("(pointer: coarse)").matches;
       const isLocal =
         window.location.hostname === "localhost" ||
         window.location.hostname === "127.0.0.1";
@@ -484,7 +498,14 @@
           const res = await fetch(`data.json?_=${Date.now()}`, {
             cache: "no-store",
           });
-          const data = await res.json();
+          const payload = await res.text();
+          document.getElementById("update-timer").innerText =
+            `LAST PULSE: ${new Date().toLocaleTimeString()}`;
+          // data.json 은 빌드 시에만 바뀐다. 내용이 같으면 재렌더링을 건너뛴다 —
+          // innerHTML 교체가 목록 스크롤 위치를, setData 가 그래프 시점을 파괴하므로.
+          if (payload === lastPayload) return;
+          lastPayload = payload;
+          const data = JSON.parse(payload);
 
           document.getElementById("total-atoms").innerText = data.total_atoms;
           document.getElementById("recent-activity").innerText =
@@ -704,11 +725,25 @@
             edges: new vis.DataSet(edges),
           };
           const options = {
-            physics: { enabled: true, solver: "forceAtlas2Based" },
+            physics: {
+              enabled: true,
+              solver: "forceAtlas2Based",
+              stabilization: { iterations: 200 },
+            },
             nodes: { shadow: true },
+            interaction: IS_COARSE_POINTER
+              ? { dragView: false, zoomView: false, dragNodes: false }
+              : {},
           };
+          // 안정화가 끝나면 물리엔진을 끈다 — 계속 돌리면 그래프가 쉼 없이
+          // 출렁이고 CPU/배터리를 소모하기 때문.
+          const freezePhysicsWhenStable = () =>
+            network.once("stabilizationIterationsDone", () =>
+              network.setOptions({ physics: false }),
+            );
           if (!network) {
             network = new vis.Network(container, graphData, options);
+            freezePhysicsWhenStable();
             // C2: 그래프 노드 클릭 → 해당 문서 소스 열기 (허브 L2/L3/L4 제외)
             network.on("click", (params) => {
               const id = params.nodes && params.nodes[0];
@@ -717,11 +752,10 @@
               }
             });
           } else {
+            network.setOptions({ physics: { enabled: true } });
             network.setData(graphData);
+            freezePhysicsWhenStable();
           }
-
-          document.getElementById("update-timer").innerText =
-            `LAST PULSE: ${new Date().toLocaleTimeString()}`;
         } catch (e) {
           console.error("Dash Error", e);
         }
@@ -784,7 +818,9 @@
 
       updateDashboard();
       updateCommitFeed();
-      setInterval(updateDashboard, 10000);
+      // data.json 은 정적 파일(빌드 시 갱신)이므로 10초 폴링은 실익 없이
+      // 요청만 늘린다. 커밋 피드와 같은 90초 주기로 정렬.
+      setInterval(updateDashboard, 90000);
       setInterval(updateCommitFeed, 90000);
     </script>
   </body>
