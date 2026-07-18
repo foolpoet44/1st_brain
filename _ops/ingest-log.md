@@ -41,3 +41,26 @@ inbox/ 에서 wiki/ 로 자료가 수집된 기록입니다.
 | 처리 마킹(보류) | 7 | 일일 메모 4, 빈 파일 2, ADK 셋업 프롬프트 1 — 각 파일 frontmatter 의 processed_note 에 사유 기록 |
 
 모든 inbox 파일에 `processed: true` + `processed_date` + `processed_note` 마킹.
+
+---
+
+## 2026-07-18 Drive 설계문서 INGEST
+
+Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 + Physical AI/스마트팩토리 인재육성 두 클러스터.
+
+- `BP_Signal_Intelligence_개발명세서.md` → wiki/concepts/bp-signal-intelligence.md / **new**
+- `EX_Insight_Mining_Pipeline_설계서.md` → wiki/concepts/ex-insight-mining-pipeline.md / **new**
+- `ESCON_College_Level_Extension_Design.md` → projects/escon/README.md / **merge**
+- `Physical_AI_Tech_Leader_Pool_조직설계.md` → projects/physical-ai-talent/README.md / **new**
+- `Physical_AI_Tech_Leader_면접계획서.md` → projects/physical-ai-talent/README.md / **merge**
+- `스마트팩토리-전문가-육성방안-보고서.md` → wiki/concepts/k-smart-model.md / **new**
+- `직무역량_SF_Domain_매핑.md` → wiki/concepts/sf-domain-mapping.md / **new**
+- `AI_Factory_기술전문가_육성체계_v2_2.md` → projects/physical-ai-talent/README.md / **merge**
+- `Ax-internalization.md` → wiki/concepts/ax-internalization.md / **merge**
+- `Opq-ucf-le.md` → wiki/concepts/opq-framework.md / **merge**
+- `PRI_FDE_대화아카이브.md` → wiki/concepts/fde-talent-model.md / **merge**
+- `ex-oi-integration-strategy.md` → projects/ex-intelligence/README.md / **merge**
+- `EX-Intelligence-보고-3단계-실행-로드맵.md` → projects/ex-intelligence/README.md / **merge**
+- `2026_AX_역량강화_업무계획.md` → projects/ax-internalization/README.md / **merge**
+
+신규 5(bp-signal-intelligence, ex-insight-mining-pipeline, k-smart-model, sf-domain-mapping, projects/physical-ai-talent) / 병합 9 / 처리 inbox 14건 전부 `processed: true`.

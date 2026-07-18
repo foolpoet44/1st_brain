@@ -3,7 +3,7 @@ source: gdrive
 original_title: "AI_Factory_기술전문가_육성체계_v2_2"
 drive_id: 1tduVec_FwBbD5s4Oee7zArOB30xfg-9b7bRGSGWnp-M
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 -----

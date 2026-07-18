@@ -3,7 +3,7 @@ source: gdrive
 original_title: "EX Intelligence 보고 3단계 실행 로드맵.pdf"
 drive_id: 1Ad9FdOnWwtDEeNNdqQewiIhBb7GF9nfh
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 EXG 조직문화 · 구성원경험 담당

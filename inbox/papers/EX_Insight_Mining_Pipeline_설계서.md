@@ -3,7 +3,7 @@ source: gdrive
 original_title: "EX_Insight_Mining_Pipeline_설계서.md"
 drive_id: 1hFYpt9O7M0CjNw-ULfRV-1CrFNWnyaoZeg9F_w5tmIg
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 # EX Insight Mining Pipeline — 설계서

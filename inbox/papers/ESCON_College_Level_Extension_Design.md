@@ -3,7 +3,7 @@ source: gdrive
 original_title: "ESCON_College_Level_Extension_Design.md"
 drive_id: 1b2TabyxDJyDFOy-FbzvQr0dy5RPMjOFoHLgTu0Rf8Ew
 pulled: 2026-07-18
-processed: false
+processed: true
 ---
 
 # ESCON 데이터 모델 확장 설계서
