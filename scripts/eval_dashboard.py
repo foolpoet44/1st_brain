@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 # 설정
-VAULT_PATH = Path("/Users/dkmac/Desktop/@26/dev")
+VAULT_PATH = Path("/opt/data/vault")
 DATA_JSON_PATH = VAULT_PATH / "data.json"
 INDEX_HTML_PATH = VAULT_PATH / "index.html"
 EVAL_THRESHOLD = 60  # 임계치 (이 미만일 때 알림)
