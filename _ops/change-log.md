@@ -1,3 +1,12 @@
+## 2026-07-21
+
+### [REFLECT] 저녁 성찰: 채용이 자율화되는 날, 우리는 무엇을 지휘하는가
+
+- 무엇이 바뀌었나: 오늘은 wiki에 새로 INGEST된 문서가 없었음. 대신 자동화 파이프라인이 `csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-21.md`(Autonomous Hiring, People Analytics→Workforce Intelligence 분열, Multiplayer HR 세 신호)를 남겼고, 이를 기존 [[agentic-roi]]·[[bp-signal-intelligence]] 두 개념 렌즈로 읽어 `outputs/daily-reflect/REFLECT_2026-07-21.md`를 작성함. 새 wiki 문서를 만들지는 않고, 세 신호 각각에서 "사람이 지키는 칸"이 어디인지부터 확인해야 한다는 판단 기준을 정리함.
+- 왜 중요한가: Autonomous Hiring과 Multiplayer HR처럼 인간의 통제 영역을 에이전트가 흡수하는 흐름이 실제 산업 신호로 확인되는 시점에, [[bp-signal-intelligence]]가 이미 세워둔 "조치 칸만 사람이 지킨다"는 설계 원칙이 채용 도메인에도 그대로 이식돼야 한다는 것을 보여줌. 슬로건("인간이 최종 결정한다")과 구조적 보장(감사 가능한 인간 개입 좌표)의 차이를 오늘 놓치면 Autonomous Hiring은 나중에 통제권 상실로만 기억될 위험이 있음.
+- 영향 범위: `outputs/daily-reflect/REFLECT_2026-07-21.md`, `_ops/change-log.md`. wiki 원본 문서는 무변경(읽기만 함). `csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-21.md`가 제안한 3개 신규 노드(signal-autonomous-hiring-economics 등)는 아직 미편입 상태로 남김.
+- 다음 확인: (1) 위 3개 신호 노드를 INGEST할지 여부와, 편입 시 각 노드에 인간 개입 좌표를 명시했는지 확인. (2) 이 briefing이 표준 볼트 경로(`wiki/signals/`)가 아닌 `csp-brain/vault/signals/`라는 별도 하위 경로에 쌓이고 있는 것이 자동화 간 경로 불일치인지 다음 INGEST 시점에 점검. (3) `_ops/change-log.md`에 2026-07-19·07-20자 항목이 비어 있어 그 사이 다른 자동화(Hermes 등)가 별도로 기록했는지 확인 필요.
+
 ## 2026-07-18
 
 ### [REFLECT] 저녁 성찰: 번역이라는 노동
