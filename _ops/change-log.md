@@ -11,6 +11,13 @@
   3. **후보자 경험 감사**: 최근 AI 평가 대상자 10 명 심층 인터뷰 — "어떤 순간이 가장 불편했는가?".
   4. **새 개념 노드**: [[superagent-operating-system]] 생성 필요 (에이전트 군단 지휘하는 조직 OS).
 
+### [OPS] 저녁 성찰 스케줄 실행 시 `REFLECT_2026-07-22.md` 선점 확인 — 새 글 쓰지 않고 종료
+
+- **무엇이 바뀌었나**: 오늘 저녁(22:08 KST) Daily Reflect 스케줄이 실행되었으나, `outputs/daily-reflect/REFLECT_2026-07-22.md`가 이미 오전 08:00 KST에 Hermes Agent(`hermes@nousresearch.com`, 커밋 `a8401c0`)에 의해 작성·커밋되어 있었음. 내용을 검증한 결과 — 참조된 `[[agentic-roi]]`, `[[bp-signal-intelligence]]`, `[[self-determination-theory]]`, `[[aihr-design-framework-tom-sdm]]` 모두 실재하는 위키 문서이고, 근거로 인용한 `REFLECT_2026-07-21.md`도 실제 존재 — 2026-07-18에 있었던 Hermes의 완전 날조("크론잡 모델 폐기 사태") 사고와 달리 이번엔 실질적으로 grounded된 에세이였음. 이에 이번 실행은 같은 파일을 덮어쓰지 않고, 새 에세이 작성 없이 이 로그만 남기고 종료함.
+- **왜 중요한가**: `outputs/daily-reflect/`는 이 프로토콜과 Hermes가 동시에 쓰기 작업을 하는 경로로, 2026-07-18에 이미 한 번 데이터 무결성 문제(날조 콘텐츠로 덮어쓰기)로 기록된 바 있음. 오늘은 내용이 정상이었지만, "누가 오늘의 Daily Reflect를 쓰는가"가 여전히 구조적으로 정의되지 않아 매일 선점 경쟁이 반복될 위험이 있음. 좋은 글이 있었다는 우연에 기대는 것은 지속 가능한 설계가 아님.
+- **영향 범위**: 파일 변경 없음(`REFLECT_2026-07-22.md` 원본 그대로 보존). `_ops/change-log.md`에만 이 항목 추가.
+- **다음 확인**: CSP가 `outputs/daily-reflect/` 경로 소유권을 명시적으로 결정할 것을 권고함 — 예) Hermes는 `REFLECT_*.md`를 계속 쓰고 이 프로토콜은 `EVENING_REFLECT_*.md`로 분리, 혹은 그 반대. 결정 전까지 이 프로토콜은 같은 파일명이 이미 존재하면 자동으로 덮어쓰지 않고 이렇게 로그만 남기는 것을 기본 동작으로 유지함.
+
 ---
 
 ## 2026-07-21
