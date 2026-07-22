@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-07-22 12:00
+last_update: 2026-07-22 21:00
 status: 🟢 ACTIVE
 ---
 
@@ -20,10 +20,10 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 10 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
-- **[07-22 08:36]** `outputs/daily-reflect/IO_PSYCHOLOGY_BRIEFING_2026-07-22.md`
-- **[07-22 08:14]** `_ops/change-log.md`
-- **[07-22 08:14]** `KNOWLEDGE_PULSE.md`
-- **[07-22 08:14]** `wiki/signals/2026-07-22-autonomous-hiring-paradox.md`
+- **[07-22 12:00]** `wiki/signals/2026-07-22-autonomous-hiring-paradox.md`
+- **[07-22 12:00]** `outputs/daily-reflect/IO_PSYCHOLOGY_BRIEFING_2026-07-22.md`
+- **[07-22 12:00]** `_ops/change-log.md`
+- **[07-22 12:00]** `KNOWLEDGE_PULSE.md`
 - **[07-22 08:00]** `outputs/daily-reflect/REFLECT_2026-07-22.md`
 
 ---
