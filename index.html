@@ -65,6 +65,80 @@
             padding: 2rem 3rem;
         }
         
+        /* Search Bar */
+        .search-container {
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #f8f9fa;
+            padding: 1rem 0;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 800px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            font-size: 0.9375rem;
+            background: #ffffff;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #0366d6;
+            box-shadow: 0 0 0 3px rgba(3,102,214,0.1);
+        }
+        
+        .search-clear {
+            padding: 0.75rem 1.25rem;
+            background: #e1e4e8;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            color: #586069;
+        }
+        
+        .search-clear:hover { background: #d1d5da; }
+        
+        /* Tag Filter */
+        .tag-filter {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            max-width: 800px;
+        }
+        
+        .tag-btn {
+            padding: 0.375rem 0.75rem;
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8125rem;
+            color: #586069;
+            transition: all 0.2s;
+        }
+        
+        .tag-btn:hover {
+            border-color: #0366d6;
+            color: #0366d6;
+        }
+        
+        .tag-btn.active {
+            background: #0366d6;
+            border-color: #0366d6;
+            color: #ffffff;
+        }
+        
         /* Header Stats */
         .header-stats {
             display: grid;
@@ -129,6 +203,7 @@
             padding: 1rem;
             transition: box-shadow 0.2s;
             background: #fafbfc;
+            cursor: pointer;
         }
         
         .doc-card:hover {
@@ -145,7 +220,35 @@
         .doc-card .meta {
             font-size: 0.75rem;
             color: #586069;
+            margin-bottom: 0.25rem;
         }
+        
+        .doc-card .tags {
+            font-size: 0.6875rem;
+            color: #586069;
+        }
+        
+        .doc-card .tag {
+            display: inline-block;
+            padding: 0.125rem 0.5rem;
+            background: #f6f8fa;
+            border-radius: 10px;
+            margin-right: 0.25rem;
+            margin-top: 0.25rem;
+        }
+        
+        /* GitHub Link */
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.75rem;
+            color: #586069;
+            text-decoration: none;
+            margin-top: 0.5rem;
+        }
+        
+        .github-link:hover { color: #0366d6; }
         
         /* Recent Activity */
         .activity-list { list-style: none; }
@@ -206,6 +309,19 @@
         }
         .orphan-warning strong { color: #c53030; }
         
+        /* Search Results Info */
+        .search-info {
+            font-size: 0.875rem;
+            color: #586069;
+            margin-bottom: 1rem;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #586069;
+        }
+        
         /* Footer */
         .timestamp {
             text-align: center;
@@ -227,15 +343,14 @@
                 <h3>지식 레이어</h3>
                 <ul class="nav-list">
                     <li><a href="#concepts">📚 Concepts (53)</a></li>
-<li><a href="#decisions">🚀 Decisions (1)</a></li>
-<li><a href="#frameworks">🚀 Frameworks (5)</a></li>
-<li><a href="#people">📚 People (2)</a></li>
-<li><a href="#projects">🚀 Projects (0)</a></li>
-<li><a href="#protocols">🚀 Protocols (1)</a></li>
-<li><a href="#signals">📚 Signals (23)</a></li>
-<li><a href="#skills">🚀 Skills (3)</a></li>
-<li><a href="#tools">🚀 Tools (6)</a></li>
-
+                    <li><a href="#decisions">🚀 Decisions (1)</a></li>
+                    <li><a href="#frameworks">🚀 Frameworks (5)</a></li>
+                    <li><a href="#people">📚 People (2)</a></li>
+                    <li><a href="#projects">🚀 Projects (0)</a></li>
+                    <li><a href="#protocols">🚀 Protocols (1)</a></li>
+                    <li><a href="#signals">📚 Signals (23)</a></li>
+                    <li><a href="#skills">🚀 Skills (3)</a></li>
+                    <li><a href="#tools">🚀 Tools (6)</a></li>
                 </ul>
             </nav>
             
@@ -247,10 +362,36 @@
                     <li><a href="#orphans">⚠️ Orphan Docs</a></li>
                 </ul>
             </nav>
+            
+            <nav class="nav-section">
+                <h3>External</h3>
+                <ul class="nav-list">
+                    <li><a href="https://github.com/foolpoet44/1st_brain" target="_blank">📦 GitHub Repo</a></li>
+                    <li><a href="https://foolpoet44.github.io/1st_brain/" target="_blank">🌐 GitHub Pages</a></li>
+                </ul>
+            </nav>
         </aside>
         
         <!-- Main Content -->
         <main class="main">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" class="search-input" id="searchInput" placeholder="문서 검색 (제목, 태그, 내용)...">
+                    <button class="search-clear" id="clearBtn">초기화</button>
+                </div>
+                <div class="tag-filter" id="tagFilter">
+                    <button class="tag-btn active" data-tag="all">All</button>
+                    <button class="tag-btn" data-tag="concepts">Concepts</button>
+                    <button class="tag-btn" data-tag="signals">Signals</button>
+                    <button class="tag-btn" data-tag="tools">Tools</button>
+                    <button class="tag-btn" data-tag="frameworks">Frameworks</button>
+                    <button class="tag-btn" data-tag="skills">Skills</button>
+                    <button class="tag-btn" data-tag="people">People</button>
+                </div>
+                <div class="search-info" id="searchInfo">총 94 개 문서 표시</div>
+            </div>
+            
             <!-- Header Stats -->
             <div class="header-stats">
                 <div class="stat-card">
@@ -291,240 +432,404 @@
                 <h2>🕐 Recent Activity</h2>
                 <ul class="activity-list">
                     <li>
-            <div class="activity-icon">📄</div>
-            <div class="activity-content">
-                <div class="title"><strong>wiki/signals/2026-07-22-autonomous-hiring-paradox.md</strong> 업데이트됨</div>
-                <div class="time">2026-07-22 12:00</div>
-            </div>
-        </li>
-
+                        <div class="activity-icon">📄</div>
+                        <div class="activity-content">
+                            <div class="title"><strong>wiki/signals/2026-07-22-autonomous-hiring-paradox.md</strong> 업데이트됨</div>
+                            <div class="time">2026-07-22 12:00</div>
+                        </div>
+                    </li>
                 </ul>
             </section>
             
             <!-- Document Sections by Folder -->
-            <section id="concepts" class="section">
-            <h2>📚 Concepts (53 docs)</h2>
-            <div class="doc-grid">
-                <div class="doc-card">
-                <h3>Ax Internalization</h3>
-                <div class="meta">Updated: 2026-07-18</div>
-            </div>
-<div class="doc-card">
-                <h3>Opq Framework</h3>
-                <div class="meta">Updated: 2026-07-18</div>
-            </div>
-<div class="doc-card">
-                <h3>Bp Signal Intelligence</h3>
-                <div class="meta">Updated: 2026-07-18</div>
-            </div>
-<div class="doc-card">
-                <h3>Sf Domain Mapping</h3>
-                <div class="meta">Updated: 2026-07-18</div>
-            </div>
-<div class="doc-card">
-                <h3>Fde Talent Model</h3>
-                <div class="meta">Updated: 2026-07-18</div>
-            </div>
-<div class="doc-card">
-                <h3>K Smart Model</h3>
-                <div class="meta">Updated: 2026-07-18</div>
-            </div>
-<div class="doc-card">
-                <h3>Ex Insight Mining Pipeline</h3>
-                <div class="meta">Updated: 2026-07-18</div>
-            </div>
-<div class="doc-card">
-                <h3>Agentic Roi</h3>
-                <div class="meta">Updated: 2026-07-11</div>
-            </div>
-<div class="doc-card">
-                <h3>Aihr Design Framework Tom Sdm</h3>
-                <div class="meta">Updated: 2026-07-11</div>
-            </div>
-<div class="doc-card">
-                <h3>Agentic Engineering</h3>
-                <div class="meta">Updated: 2026-07-02</div>
-            </div>
-<div class="doc-card">
-                <h3>Claude Code Workflow</h3>
-                <div class="meta">Updated: 2026-07-02</div>
-            </div>
-<div class="doc-card">
-                <h3>Poststroke Depression Network</h3>
-                <div class="meta">Updated: 2026-07-02</div>
-            </div>
-
-            </div>
-        </section>
-<section id="decisions" class="section">
-            <h2>🚀 Decisions (1 docs)</h2>
-            <div class="doc-grid">
-                <div class="doc-card">
-                <h3>2026 05 10 System Evolution</h3>
-                <div class="meta">Updated: 2026-05-17</div>
-            </div>
-
-            </div>
-        </section>
-<section id="frameworks" class="section">
-            <h2>🚀 Frameworks (5 docs)</h2>
-            <div class="doc-grid">
-                <div class="doc-card">
-                <h3>Weak Signal Ansoff</h3>
-                <div class="meta">Updated: 2026-06-30</div>
-            </div>
-<div class="doc-card">
-                <h3>Layer 1 Compass</h3>
-                <div class="meta">Updated: 2026-05-17</div>
-            </div>
-<div class="doc-card">
-                <h3>7 Layer Architecture</h3>
-                <div class="meta">Updated: 2026-05-17</div>
-            </div>
-<div class="doc-card">
-                <h3>Compiled Truth Timeline</h3>
-                <div class="meta">Updated: 2026-05-02</div>
-            </div>
-<div class="doc-card">
-                <h3>Protocols</h3>
-                <div class="meta">Updated: 2026-05-02</div>
-            </div>
-
-            </div>
-        </section>
-<section id="people" class="section">
-            <h2>📚 People (2 docs)</h2>
-            <div class="doc-grid">
-                <div class="doc-card">
-                <h3>Duckjung Kim</h3>
-                <div class="meta">Updated: 2026-07-11</div>
-            </div>
-<div class="doc-card">
-                <h3>Csp</h3>
-                <div class="meta">Updated: 2026-05-02</div>
-            </div>
-
-            </div>
-        </section>
-<section id="projects" class="section">
-            <h2>🚀 Projects (0 docs)</h2>
-            <div class="doc-grid">
-                
-            </div>
-        </section>
-<section id="protocols" class="section">
-            <h2>🚀 Protocols (1 docs)</h2>
-            <div class="doc-grid">
-                <div class="doc-card">
-                <h3>Validation Protocol</h3>
-                <div class="meta">Updated: 2026-06-30</div>
-            </div>
-
-            </div>
-        </section>
-<section id="signals" class="section">
-            <h2>📚 Signals (23 docs)</h2>
-            <div class="doc-grid">
-                <div class="doc-card">
-                <h3>2026 07 22 Autonomous Hiring Paradox</h3>
-                <div class="meta">Updated: 2026-07-22</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 07 11 Deepwiki Post</h3>
-                <div class="meta">Updated: 2026-07-11</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 07 06 Dawn Of Hr Superagents</h3>
-                <div class="meta">Updated: 2026-07-06</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 05 18 Ai Boom Labor Distribution</h3>
-                <div class="meta">Updated: 2026-07-02</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 05 30 Harness Is Not Just A Leash</h3>
-                <div class="meta">Updated: 2026-06-30</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 06 13 Hermes Agent Infrastructure Shift</h3>
-                <div class="meta">Updated: 2026-06-30</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 06 25 Hr Performance Architect Pivot</h3>
-                <div class="meta">Updated: 2026-06-30</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 05 30 Hs Top Failure Long Strategy</h3>
-                <div class="meta">Updated: 2026-06-30</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 05 30 Automated Task Packaging</h3>
-                <div class="meta">Updated: 2026-06-30</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 06 13 Agentic Ta Mainstream Shift</h3>
-                <div class="meta">Updated: 2026-06-30</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 05 30 Josh Kim Ai Native Company Record</h3>
-                <div class="meta">Updated: 2026-06-30</div>
-            </div>
-<div class="doc-card">
-                <h3>2026 06 03 Logicrag Lazy Graph Reasoning</h3>
-                <div class="meta">Updated: 2026-06-30</div>
-            </div>
-
-            </div>
-        </section>
-<section id="skills" class="section">
-            <h2>🚀 Skills (3 docs)</h2>
-            <div class="doc-grid">
-                <div class="doc-card">
-                <h3>Memory Save</h3>
-                <div class="meta">Updated: 2026-05-02</div>
-            </div>
-<div class="doc-card">
-                <h3>Context Restore</h3>
-                <div class="meta">Updated: 2026-05-02</div>
-            </div>
-<div class="doc-card">
-                <h3>Dream Cycle</h3>
-                <div class="meta">Updated: 2026-05-02</div>
-            </div>
-
-            </div>
-        </section>
-<section id="tools" class="section">
-            <h2>🚀 Tools (6 docs)</h2>
-            <div class="doc-grid">
-                <div class="doc-card">
-                <h3>Deepwiki</h3>
-                <div class="meta">Updated: 2026-07-11</div>
-            </div>
-<div class="doc-card">
-                <h3>Rlm Forge</h3>
-                <div class="meta">Updated: 2026-07-02</div>
-            </div>
-<div class="doc-card">
-                <h3>Claude Code Skills</h3>
-                <div class="meta">Updated: 2026-07-02</div>
-            </div>
-<div class="doc-card">
-                <h3>Claude Code</h3>
-                <div class="meta">Updated: 2026-05-02</div>
-            </div>
-<div class="doc-card">
-                <h3>Notion</h3>
-                <div class="meta">Updated: 2026-05-02</div>
-            </div>
-<div class="doc-card">
-                <h3>Obsidian</h3>
-                <div class="meta">Updated: 2026-05-02</div>
-            </div>
-
-            </div>
-        </section>
-
+            <section id="concepts" class="section" data-type="concepts">
+                <h2>📚 Concepts (53 docs)</h2>
+                <div class="doc-grid">
+                    <div class="doc-card" data-tags="concepts ax internalization">
+                        <h3>Ax Internalization</h3>
+                        <div class="meta">Updated: 2026-07-18</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">ax</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/ax-internalization.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts opq framework">
+                        <h3>Opq Framework</h3>
+                        <div class="meta">Updated: 2026-07-18</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">framework</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/opq-framework.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts bp signal intelligence">
+                        <h3>Bp Signal Intelligence</h3>
+                        <div class="meta">Updated: 2026-07-18</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">bp</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/bp-signal-intelligence.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts sf domain mapping">
+                        <h3>Sf Domain Mapping</h3>
+                        <div class="meta">Updated: 2026-07-18</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">sf</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/sf-domain-mapping.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts fde talent model">
+                        <h3>Fde Talent Model</h3>
+                        <div class="meta">Updated: 2026-07-18</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">fde</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/fde-talent-model.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts k smart model">
+                        <h3>K Smart Model</h3>
+                        <div class="meta">Updated: 2026-07-18</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">k-smart</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/k-smart-model.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts ex insight mining pipeline">
+                        <h3>Ex Insight Mining Pipeline</h3>
+                        <div class="meta">Updated: 2026-07-18</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">pipeline</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/ex-insight-mining-pipeline.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts agentic roi">
+                        <h3>Agentic Roi</h3>
+                        <div class="meta">Updated: 2026-07-11</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">agentic</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/agentic-roi.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts aihr design framework tom sdm">
+                        <h3>Aihr Design Framework Tom Sdm</h3>
+                        <div class="meta">Updated: 2026-07-11</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">aihr</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/aihr-design-framework-tom-sdm.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts agentic engineering">
+                        <h3>Agentic Engineering</h3>
+                        <div class="meta">Updated: 2026-07-02</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">agentic</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/agentic-engineering.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts claude code workflow">
+                        <h3>Claude Code Workflow</h3>
+                        <div class="meta">Updated: 2026-07-02</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">claude</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/claude-code-workflow.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="concepts poststroke depression network">
+                        <h3>Poststroke Depression Network</h3>
+                        <div class="meta">Updated: 2026-07-02</div>
+                        <div class="tags"><span class="tag">concepts</span><span class="tag">medical</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/concepts/poststroke-depression-network.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="decisions" class="section" data-type="decisions">
+                <h2>🚀 Decisions (1 docs)</h2>
+                <div class="doc-grid">
+                    <div class="doc-card" data-tags="decisions system evolution">
+                        <h3>2026 05 10 System Evolution</h3>
+                        <div class="meta">Updated: 2026-05-17</div>
+                        <div class="tags"><span class="tag">decisions</span><span class="tag">system</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/decisions/2026-05-10-system-evolution.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="frameworks" class="section" data-type="frameworks">
+                <h2>🚀 Frameworks (5 docs)</h2>
+                <div class="doc-grid">
+                    <div class="doc-card" data-tags="frameworks weak signal ansoff">
+                        <h3>Weak Signal Ansoff</h3>
+                        <div class="meta">Updated: 2026-06-30</div>
+                        <div class="tags"><span class="tag">frameworks</span><span class="tag">weak-signal</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/frameworks/weak-signal-ansoff.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="frameworks layer 1 compass">
+                        <h3>Layer 1 Compass</h3>
+                        <div class="meta">Updated: 2026-05-17</div>
+                        <div class="tags"><span class="tag">frameworks</span><span class="tag">compass</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/frameworks/layer-1-compass.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="frameworks 7 layer architecture">
+                        <h3>7 Layer Architecture</h3>
+                        <div class="meta">Updated: 2026-05-17</div>
+                        <div class="tags"><span class="tag">frameworks</span><span class="tag">architecture</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/frameworks/7-layer-architecture.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="frameworks compiled truth timeline">
+                        <h3>Compiled Truth Timeline</h3>
+                        <div class="meta">Updated: 2026-05-02</div>
+                        <div class="tags"><span class="tag">frameworks</span><span class="tag">timeline</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/frameworks/compiled-truth-timeline.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="frameworks protocols">
+                        <h3>Protocols</h3>
+                        <div class="meta">Updated: 2026-05-02</div>
+                        <div class="tags"><span class="tag">frameworks</span><span class="tag">protocols</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/frameworks/protocols.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="people" class="section" data-type="people">
+                <h2>📚 People (2 docs)</h2>
+                <div class="doc-grid">
+                    <div class="doc-card" data-tags="people duckjung kim">
+                        <h3>Duckjung Kim</h3>
+                        <div class="meta">Updated: 2026-07-11</div>
+                        <div class="tags"><span class="tag">people</span><span class="tag">founder</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/people/duckjung-kim.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="people csp">
+                        <h3>Csp</h3>
+                        <div class="meta">Updated: 2026-05-02</div>
+                        <div class="tags"><span class="tag">people</span><span class="tag">csp</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/people/csp.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="projects" class="section" data-type="projects">
+                <h2>🚀 Projects (0 docs)</h2>
+                <div class="doc-grid"></div>
+            </section>
+            
+            <section id="protocols" class="section" data-type="protocols">
+                <h2>🚀 Protocols (1 docs)</h2>
+                <div class="doc-grid">
+                    <div class="doc-card" data-tags="protocols validation protocol">
+                        <h3>Validation Protocol</h3>
+                        <div class="meta">Updated: 2026-06-30</div>
+                        <div class="tags"><span class="tag">protocols</span><span class="tag">validation</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/protocols/validation-protocol.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="signals" class="section" data-type="signals">
+                <h2>📚 Signals (23 docs)</h2>
+                <div class="doc-grid">
+                    <div class="doc-card" data-tags="signals autonomous hiring paradox">
+                        <h3>2026 07 22 Autonomous Hiring Paradox</h3>
+                        <div class="meta">Updated: 2026-07-22</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">hiring</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-07-22-autonomous-hiring-paradox.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals deepwiki post">
+                        <h3>2026 07 11 Deepwiki Post</h3>
+                        <div class="meta">Updated: 2026-07-11</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">deepwiki</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-07-11-deepwiki-post.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals dawn of hr superagents">
+                        <h3>2026 07 06 Dawn Of Hr Superagents</h3>
+                        <div class="meta">Updated: 2026-07-06</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">hr</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-07-06-dawn-of-hr-superagents.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals ai boom labor distribution">
+                        <h3>2026 05 18 Ai Boom Labor Distribution</h3>
+                        <div class="meta">Updated: 2026-07-02</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">ai-boom</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-05-18-ai-boom-labor-distribution.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals harness is not just a leash">
+                        <h3>2026 05 30 Harness Is Not Just A Leash</h3>
+                        <div class="meta">Updated: 2026-06-30</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">harness</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-05-30-harness-is-not-just-a-leash.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals hermes agent infrastructure shift">
+                        <h3>2026 06 13 Hermes Agent Infrastructure Shift</h3>
+                        <div class="meta">Updated: 2026-06-30</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">hermes</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-06-13-hermes-agent-infrastructure-shift.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals hr performance architect pivot">
+                        <h3>2026 06 25 Hr Performance Architect Pivot</h3>
+                        <div class="meta">Updated: 2026-06-30</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">hr</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-06-25-hr-performance-architect-pivot.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals hs top failure long strategy">
+                        <h3>2026 05 30 Hs Top Failure Long Strategy</h3>
+                        <div class="meta">Updated: 2026-06-30</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">strategy</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-05-30-hs-top-failure-long-strategy.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals automated task packaging">
+                        <h3>2026 05 30 Automated Task Packaging</h3>
+                        <div class="meta">Updated: 2026-06-30</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">automation</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-05-30-automated-task-packaging.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals agentic ta mainstream shift">
+                        <h3>2026 06 13 Agentic Ta Mainstream Shift</h3>
+                        <div class="meta">Updated: 2026-06-30</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">agentic</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-06-13-agentic-ta-mainstream-shift.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals josh kim ai native company record">
+                        <h3>2026 05 30 Josh Kim Ai Native Company Record</h3>
+                        <div class="meta">Updated: 2026-06-30</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">ai-native</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-05-30-josh-kim-ai-native-company-record.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="signals logicrag lazy graph reasoning">
+                        <h3>2026 06 03 Logicrag Lazy Graph Reasoning</h3>
+                        <div class="meta">Updated: 2026-06-30</div>
+                        <div class="tags"><span class="tag">signals</span><span class="tag">reasoning</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="skills" class="section" data-type="skills">
+                <h2>🚀 Skills (3 docs)</h2>
+                <div class="doc-grid">
+                    <div class="doc-card" data-tags="skills memory save">
+                        <h3>Memory Save</h3>
+                        <div class="meta">Updated: 2026-05-02</div>
+                        <div class="tags"><span class="tag">skills</span><span class="tag">memory</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/skills/memory-save.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="skills context restore">
+                        <h3>Context Restore</h3>
+                        <div class="meta">Updated: 2026-05-02</div>
+                        <div class="tags"><span class="tag">skills</span><span class="tag">context</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/skills/context-restore.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="skills dream cycle">
+                        <h3>Dream Cycle</h3>
+                        <div class="meta">Updated: 2026-05-02</div>
+                        <div class="tags"><span class="tag">skills</span><span class="tag">dream</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/skills/dream-cycle.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="tools" class="section" data-type="tools">
+                <h2>🚀 Tools (6 docs)</h2>
+                <div class="doc-grid">
+                    <div class="doc-card" data-tags="tools deepwiki">
+                        <h3>Deepwiki</h3>
+                        <div class="meta">Updated: 2026-07-11</div>
+                        <div class="tags"><span class="tag">tools</span><span class="tag">wiki</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/tools/deepwiki.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="tools rlm forge">
+                        <h3>Rlm Forge</h3>
+                        <div class="meta">Updated: 2026-07-02</div>
+                        <div class="tags"><span class="tag">tools</span><span class="tag">rlm</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/tools/rlm-forge.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="tools claude code skills">
+                        <h3>Claude Code Skills</h3>
+                        <div class="meta">Updated: 2026-07-02</div>
+                        <div class="tags"><span class="tag">tools</span><span class="tag">claude</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/tools/claude-code-skills.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="tools claude code">
+                        <h3>Claude Code</h3>
+                        <div class="meta">Updated: 2026-05-02</div>
+                        <div class="tags"><span class="tag">tools</span><span class="tag">claude</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/tools/claude-code.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="tools notion">
+                        <h3>Notion</h3>
+                        <div class="meta">Updated: 2026-05-02</div>
+                        <div class="tags"><span class="tag">tools</span><span class="tag">notion</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/tools/notion.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                    <div class="doc-card" data-tags="tools obsidian">
+                        <h3>Obsidian</h3>
+                        <div class="meta">Updated: 2026-05-02</div>
+                        <div class="tags"><span class="tag">tools</span><span class="tag">obsidian</span></div>
+                        <a class="github-link" href="https://github.com/foolpoet44/1st_brain/blob/main/wiki/tools/obsidian.md" target="_blank">
+                            📄 GitHub 에서 보기
+                        </a>
+                    </div>
+                </div>
+            </section>
             
             <!-- Orphan Documents Warning -->
             <section id="orphans" class="section">
@@ -538,12 +843,90 @@
             </section>
             
             <div class="timestamp">
-                Last updated: 2026-07-26T16:22:37.785797 | csp-brain Wiki Dashboard
+                Last updated: <span id="lastUpdate"></span> | csp-brain Wiki Dashboard
             </div>
         </main>
     </div>
     
     <script>
+        // Set last update time
+        document.getElementById('lastUpdate').textContent = new Date().toISOString().slice(0, 19).replace('T', ' ');
+        
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const clearBtn = document.getElementById('clearBtn');
+        const searchInfo = document.getElementById('searchInfo');
+        const tagFilter = document.getElementById('tagFilter');
+        
+        let activeTag = 'all';
+        
+        function filterDocuments() {
+            const query = searchInput.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.doc-card');
+            let visibleCount = 0;
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const tags = card.getAttribute('data-tags') || '';
+                const section = card.closest('section');
+                const sectionType = section.getAttribute('data-type') || '';
+                
+                // Check tag filter
+                const matchesTag = activeTag === 'all' || 
+                                   sectionType === activeTag || 
+                                   tags.includes(activeTag);
+                
+                // Check search query
+                const matchesSearch = query === '' || 
+                                      title.includes(query) || 
+                                      tags.includes(query);
+                
+                if (matchesTag && matchesSearch) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Hide empty sections
+            document.querySelectorAll('.section[data-type]').forEach(section => {
+                const visibleCards = section.querySelectorAll('.doc-card[style="display: block;"], .doc-card:not([style*="display: none"])');
+                let hasVisible = false;
+                section.querySelectorAll('.doc-card').forEach(card => {
+                    if (card.style.display !== 'none') hasVisible = true;
+                });
+                section.style.display = hasVisible ? 'block' : 'none';
+            });
+            
+            // Update info
+            searchInfo.textContent = query || activeTag !== 'all' 
+                ? `${visibleCount}개 문서 표시 (검색: "${query}", 필터: ${activeTag})`
+                : `총 94 개 문서 표시`;
+        }
+        
+        // Search input handler
+        searchInput.addEventListener('input', filterDocuments);
+        
+        // Clear button handler
+        clearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            activeTag = 'all';
+            document.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.tag-btn[data-tag="all"]').classList.add('active');
+            filterDocuments();
+        });
+        
+        // Tag filter handlers
+        tagFilter.querySelectorAll('.tag-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeTag = btn.getAttribute('data-tag');
+                filterDocuments();
+            });
+        });
+        
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
