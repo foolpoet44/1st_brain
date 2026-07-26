@@ -1,3 +1,5 @@
+status: Active
+related_to: "[[Organization-Memory]]"
 # Person: CSP
 
 > AI 솔로프레너 및 HR 전문가

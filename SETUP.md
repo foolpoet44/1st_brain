@@ -1,3 +1,4 @@
+status: Active
 # CSP-Brain Setup Guide
 
 > MacBook Air M5에서 처음부터 세팅하는 가이드

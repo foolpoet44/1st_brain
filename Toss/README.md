@@ -1,3 +1,4 @@
+status: Active
 # Toss × AMQS 퀀트 대시보드 — 투자 철학을 이해하자.
 
 > 토스증권 **Open API**로 한국인이 실제로 사고·검색하는 국내 주식·ETF에

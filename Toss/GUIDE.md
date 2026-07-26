@@ -1,3 +1,4 @@
+status: Active
 # 사용 설명서 — Toss × AMQS 퀀트 대시보드
 
 > 설치 · 실행 · 토스 Open API 연동 · 서버 API · 종목 교체 가이드.

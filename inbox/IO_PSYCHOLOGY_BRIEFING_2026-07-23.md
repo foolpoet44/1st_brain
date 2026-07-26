@@ -4,6 +4,8 @@ date: 2026-07-23
 type: daily-briefing
 tags: [IO-psychology, cognitive-psychology, behavioral-economics, AI-wellbeing, nudge-theory]
 sources: [arXiv, Frontiers in Psychology, PubMed, OECD]
+status: Active
+related_to: "[[HR-Tech-Ecosystem]]"
 ---
 
 # 🧠 I/O 심리학 일일 브리핑: AI 시대, 인간 중심성의 재발견

@@ -4,6 +4,8 @@ created: 2026-07-24T09:10:00+09:00
 type: daily-briefing
 tags: [io-psychology, cognitive-psychology, behavioral-economics, organizational-behavior, AI-workplace]
 source: [arXiv, PubMed, Frontiers in Psychology, APA Monitor]
+status: Active
+related_to: "[[HR-Tech-Ecosystem]]"
 ---
 
 # 📚 I/O 심리학 일일 브리핑: 2026 년 7 월 24 일 (금)

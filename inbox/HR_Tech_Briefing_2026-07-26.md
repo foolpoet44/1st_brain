@@ -2,6 +2,8 @@
 type: HR_Tech_Briefing
 date: 2026-07-26
 tags: [hr-tech, ai-recruitment, self-evolving-agents, people-analytics, saturday-briefing]
+status: Active
+related_to: "[[HR-Tech-Ecosystem]]"
 ---
 
 # HR Tech Morning Briefing: 2026-07-26 (일)

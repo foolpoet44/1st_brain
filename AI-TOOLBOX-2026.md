@@ -8,6 +8,7 @@ tags:
   - 2026
 related_to:
   - "[[KNOWLEDGE_PULSE]]"
+  - "[[AI-Agent-Playbook]]"
 ---
 
 # AI 툴 업무별 정리 가이드 (2026 Ver.)

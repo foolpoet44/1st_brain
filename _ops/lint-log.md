@@ -1,3 +1,4 @@
+status: Active
 ## LINT-LOG: 2026-06-27 (wiki-scoped)
 
 > 대시보드 고아 탐지가 레포 전체를 스캔해 루트 스크래치 파일(`2605.md`, `KNOWLEDGE_PULSE.md` 등)을 오탐하던 문제를 발견. `wiki/`만 정밀 스캔하니 실제 구조적 부채가 드러남.

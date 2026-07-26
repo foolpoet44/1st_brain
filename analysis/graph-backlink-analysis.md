@@ -3,6 +3,7 @@ title: Graph Backlink Analysis Report
 created: 2026-04-29
 type: analysis
 tags: [graph, backlink, analysis, knowledge-graph]
+status: Active
 ---
 
 # Graph Backlink Analysis Report

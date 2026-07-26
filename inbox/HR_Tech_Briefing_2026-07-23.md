@@ -4,6 +4,8 @@ created: 2026-07-23
 type: daily-briefing
 tags: [hr-tech, ai-recruitment, people-analytics, agentic-hiring, trust-design]
 importance: High
+status: Active
+related_to: "[[HR-Tech-Ecosystem]]"
 ---
 
 # 🌅 HR Tech Morning Briefing — 2026 년 7 월 23 일 목요일

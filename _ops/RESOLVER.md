@@ -1,3 +1,4 @@
+status: Active
 # 🛰️ CSP-Brain 지능 리졸버 (Synaptic Resolver)
 
 > "리졸버는 지식의 조직도입니다. 모든 것을 알 필요는 없습니다. 누구에게 물어봐야 할지 아는 것이 지능의 본질입니다."

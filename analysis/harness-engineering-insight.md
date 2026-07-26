@@ -4,6 +4,7 @@ created: 2026-04-29
 type: analysis
 tags: [harness, engineering, ai-agent, workflow]
 source: https://www.linkedin.com/feed/update/urn:li:activity:7448127608682086400/
+status: Active
 ---
 
 # Harness Engineering 인사이트

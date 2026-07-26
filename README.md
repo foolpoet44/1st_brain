@@ -1,3 +1,4 @@
+status: Active
 # csp-brain 🧠
 
 > Working Brain — CSP의 옵시디언 기반 지식 운영 시스템

@@ -1,3 +1,4 @@
+status: Active
 # CSP-Brain — Agent Operating Manual
 
 > 이 문서는 Claude Code가 csp-brain Vault에서 작업할 때 따르는 운영 지침서입니다.

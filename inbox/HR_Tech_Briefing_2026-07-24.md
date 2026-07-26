@@ -3,7 +3,8 @@ type: Signal Intelligence
 created: 2026-07-24 08:00 KST
 source: Global HR Tech Scan
 tags: [agentic-recruitment, people-analytics, trust-design, skill-adjacency]
-related: [[agentic-recruitment-proxy]], [[hr-conceptual-atoms]], [[fde-talent-model]], [[bp-signal-intelligence]]
+related: [[agentic-recruitment-proxy]], [[hr-conceptual-atoms]], [[fde-talent-model]], [[bp-signal-intelligence]], [[HR-Tech-Ecosystem]]
+status: Active
 ---
 
 # 📡 HR Tech Briefing: 2026-07-24
