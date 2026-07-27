@@ -1,3 +1,19 @@
+## 2026-07-27
+
+### [REFLECT] 데일리 성찰 — 타입 온톨로지 도입과 '성공률 100%'가 감춘 타당도의 구멍
+
+- **무엇이 바뀌었나**: 오늘(2026-07-27) 볼트의 신규 델타는 HR 도메인 지식이 아니라 **볼트 자신의 구조 변화**였음. Hermes 오토싱크 커밋 `b04682a`(08:00 KST)로 ① `Type/` 하위 타입 온톨로지 10종(Concept·Decision·Idea·Meeting·Note·Person·Project·Reflection·Resource·Task), ② 자동 분류 스크립트 `scripts/auto-classify-types.sh`와 새벽 4시 크론잡(Job ID `ab1915821586`), ③ MOC 허브 3종(`moc/AI-Agent-Playbook.md`, `moc/HR-Tech-Ecosystem.md`, `moc/Organization-Memory.md`), ④ 자기 계측 대시보드 `EVAL_STATUS.md`(Eval Score 16.7/100, 2,120개 중 353개 type 할당)가 유입됨. 이 델타를 소재로 `outputs/daily-reflect/REFLECT_2026-07-27.md` 작성. 집필 과정에서 **자동 분류기의 체계적 오분류를 확인**함 — `python.md`·`javascript.md`·`swift.md`·`kotlin.md`·`go.md`·`rust.md` → Meeting, `react.md`·`flask.md`·`php.md` → Reflection. 원인은 `scripts/auto-classify-types.sh:29-33`의 우선순위 키워드 캐스케이드로, 첫 규칙 `grep -qiE "meeting|sync|standup|retro|agenda"`가 Python 문서의 `async`/`sync`에 부분 매칭되어 먼저 발화함(`retro`는 1·2번 규칙에 중복 등장). 부수 확인: 동 스크립트의 `VAULT_PATH`가 `/Users/dkmac/Desktop/@26/dev`로 하드코딩되어 특정 기기에 결박되어 있음.
+- **왜 중요한가**: `classification-report-2026-07-27.md`가 보고한 **"성공률 100%"는 분류 정확도가 아니라 스크립트 실행 완료율**임. 심리측정학 용어로 이 분류기는 신뢰도(reliability)는 만점이고 타당도(validity)는 미측정 상태 — 같은 문서를 백 번 넣어도 백 번 똑같이 틀린다. 더 중요한 것은 리포트의 '관찰 사항' 항목이 이 한계를 **이미 정확히 자기진단해 놓았음에도 크론잡은 무관하게 계속 돈다**는 점. 이는 2026-07-26 저녁 성찰이 제안한 **Evolution Gate(`human_approval_required`·`rollback_enabled`·`audit_log_enabled`)가 문서로만 존재하고 코드로 내려오지 않았을 때 벌어지는 일의 실물 사례**임. 현행 Eval 공식은 `type` 필드의 존재 여부만 세므로 **오분류를 할 때마다 점수가 정확히 똑같이 올라간다** — 목표 80점에 도달했을 때 볼트가 대량 오분류 상태로 만점에 가까운 대시보드를 갖게 되는 굿하트의 법칙 구조. [[weak-signal-theory]] 기준으로 오늘 신호는 Level 2(위협의 출처·성격 특정)이며, 지금 개입 비용은 정규식 몇 줄이지만 잔여 1,767개가 분류된 뒤에는 오분류 위에 세워진 MOC·검색·인용을 되감아야 하므로 복리로 증가함.
+- **영향 범위**: `outputs/daily-reflect/REFLECT_2026-07-27.md`(신규), `_ops/change-log.md`. 기존 파일은 무변경 — 특히 `scripts/auto-classify-types.sh`와 크론잡은 이번 실행에서 손대지 않음(정지 권한은 CSP의 결정 사항으로 남김). 해석 영향: [[ai-evaluation-system]]의 '나침반' 역할이 현재 볼트에서 완료율 계측으로 축소되어 있음을 확인, [[automated-ontology-generation]]의 QA 에이전트 층위가 이 볼트 구현에서는 부재함을 확인, [[knowledge-graph-as-map]] 관점에서 고아율 96.42%(문서당 평균 링크 0.14개)에 대한 대응으로 MOC 3종이 도입되었음을 기록.
+- **다음 확인**:
+  1. **크론잡 정지 우선**: 3배치(추가 100개) 실행 전에 Job ID `ab1915821586`을 일시 중지할 것. 오분류는 누적될수록 되감기 비용이 커짐.
+  2. **표본 검증**: 이미 분류된 353개에서 무작위 30개를 추출해 타입 정확도를 손으로 확인. 이 한 숫자가 현재 16.7점을 의미 있는 점수로 전환함.
+  3. **분류 규칙 재설계**: 정확도가 70% 미만이면 본문 전체 부분 문자열 매칭을 버리고 **경로 기반 규칙을 1순위로** 승격(`skills/**`→Concept, `plans/**`→Project, `outputs/daily-reflect/**`→Reflection). 파일 위치가 본문 우연 등장 단어보다 강한 증거임.
+  4. **Eval 공식 수정**: `type` 필드 존재 여부가 아니라 사람이 승인한 `type_verified: true` 여부를 세도록 변경 — 어제 제안한 `human_approval_required`가 문서에서 코드로 내려오는 첫 지점.
+  5. **스크립트 이식성**: `VAULT_PATH` 하드코딩을 환경변수/인자로 분리할 것.
+
+---
+
 ## 2026-07-25
 
 ### [OPS] 저녁 성찰 스케줄 실행 시 `REFLECT_2026-07-25.md` 선점 확인 — 새 글 쓰지 않고 종료
