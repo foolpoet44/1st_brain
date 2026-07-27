@@ -1,0 +1,53 @@
+---type: Project
+
+title: "{{year}}-W{{week}} Weekly Change Digest"
+created: { { date } }
+type: digest
+status: draft
+tags: [weekly, digest, change-briefing]
+---
+
+# {{year}}년 {{week}}주차 주간 변화 다이제스트
+
+> 생성일: {{date}}
+
+---
+
+## 1. 이번 주 한 줄 요약
+
+- ***
+
+## 2. 영역별 변경
+
+### wiki
+
+### projects
+
+### outputs
+
+### scripts / ops
+
+---
+
+## 3. 핵심 해석
+
+- 무엇이 바뀌었나:
+- 왜 중요한가:
+- 영향 범위:
+- 다음 확인:
+
+---
+
+## 4. 최근 커밋
+
+- ***
+
+## 5. 미추적 파일
+
+- ***
+
+## 6. 다음 주 확인
+
+- ***
+
+_G[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]erated by CSP-Brain weekly change digest_

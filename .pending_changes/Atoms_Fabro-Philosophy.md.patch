@@ -1,0 +1,27 @@
+---type: Meeting
+
+type: Note
+related_to: "[[AI-Agent]]", "[[Orchestration]]", "[[Software-Engineering]]"
+status: Active
+created: 2026-06-13
+---
+
+# Fabro: AI 에이전트 워크플로우 오케스트레이터의 철학
+
+## 1. 개요
+Rust 기반의 오픈소스 프로젝트로, AI 에이전트의 즉흥성을 제어하고 소프트웨어 공학적 방법론(Graph, CI/CD, Test)을 이식한 도구.
+
+## 2. 핵심 메커니즘
+- **Directed Graph (방향성 그래프)**: 개발 프로세스를 기획-구현-검증-승인 노드로 구조화.
+- **Model Stylesheet**: CSS 선택자 형식으로 각 노드에 최적화된 AI 모델 배치 (Ensemble Intelligence).
+- **Cloud Sandbox & Git Checkpoint**: 안전한 실행 환경과 실패 시 복구 가능한 체크포인트 제공.
+- **Retrospective (회고)**: 작업 종료 후 소요 비용, 마찰 지점, 해결 과정을 내러티브 형태로 보고.
+
+## 3. CSP(Creative Solution Provider)적 관점의 가치
+- **HR 자동화의 백엔드 모델**: 채용-평가-컨설팅으로 이어지는 HR 파이프라인의 설계 표준.
+- **비개발자 친화적 아키텍처**: 코드가 아닌 논리적 흐름(Graph)으로 시스템 제어.
+- **경제적 자유를 위한 레버리지**: 인간의 개입을 최소화한 'Dark Software Factory' 구축 가능.
+
+## 4. 운영 원칙 반영 (SOUL.md)
+- "에이전트 베이비시팅을 중단하고 시스템 가이드로 진화할 것"
+- 모든 복잡한 작업은 Fabro식 그래프 설계와 회고를 포함한다.
