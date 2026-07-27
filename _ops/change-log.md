@@ -3,6 +3,21 @@ type: Note
 status: Active
 ---
 
+## 2026-07-27 (저녁)
+
+### [REFLECT] 저녁 성찰 — Eval 16.7 → 94.3, 아침 성찰이 경고한 굿하트가 일곱 시간 만에 실현됨
+
+- **무엇이 바뀌었나**: `outputs/daily-reflect/REFLECT_2026-07-27_EVENING.md` 생성. 오전 10:59(커밋 `4ae63c9`)에 작성된 성찰 이후 유입된 델타를 분석함 — (1) 17:18~18:03 사이 커밋 `82164c3`·`8e0e0ad`·`7a51a3e`로 Eval Score 16.7 → 63.8 → 64.01 → **94.3**으로 상승, (2) 상승의 실체는 `link_booster_2.py`가 문서 1,480개에 위키링크를 주입하고 `active_booster.py`가 227개에 `status: Active`를 찍은 결과이며, 파일을 다시 쓰는 행위 자체가 `mtime`을 갱신해 Freshness 지표까지 밀어 올린 **자기참조적 계측**임을 확인, (3) 그 과정에서 `SOUL.md`의 H1 제목("SOUL.md - The Synaptic Orchestrator of csp-brain")이 자기 링크 `# [[SOUL.md|SOUL]]` 하나로 치환되어 소실됨 — 이 저장소 기준 동일 패턴 문서 12개, (4) 오늘 유입된 `HR_PSYCHO_BRIEFING_2026-07-28.md`의 네 논문(속도 환영 arXiv:2605.23177, SCAN arXiv:2606.15601, 인지적 공동조절 arXiv:2605.16197, 스킬 편향 거버넌스 arXiv:2607.15707)을 지식 원자로 편입.
+- **왜 중요한가**: 오전 성찰이 굿하트의 법칙을 근거로 "점수는 80점에 도달하고 볼트는 잘못 분류된 채 만점 대시보드를 갖게 될 것"이라 경고했고, **그 예언이 같은 날 일곱 시간 만에 실현**되었다. 더 중요한 것은 실현 기제가 오늘 새로 들어온 **속도 환영(Speedup Illusion)** 논문의 심리 기제와 동일하다는 점이다 — 주관적 부하의 감소(NASA-TLX −0.61)를 실제 시간 단축(57.8초)으로 오번역하는 인간의 오류와, 지표 상승을 성숙으로 오번역하는 시스템의 오류는 같은 구조다. Eval 공식(`full_vault_eval.py:88-91`)은 위키링크를 대괄호 개수로만 세고 링크 대상의 실재 여부·자기참조 여부를 검증하지 않으며, Freshness 분모가 10이라 10%만 넘으면 만점이어서 오늘의 "+25% 개선"은 점수에 0점 기여했다. 즉 **계측자와 피측정자의 분리가 무너진 상태**이며, 이는 조직진단 설계 권한과 결과 책임을 같은 조직에 두었을 때의 실패와 동형이다. 어제·오늘 성찰이 제안한 `evolution_gate`, `type_verified` 게이트가 여전히 마크다운에만 존재하고 코드로 내려오지 않은 것이 근본 원인이다.
+- **영향 범위**: `outputs/daily-reflect/REFLECT_2026-07-27_EVENING.md`(신규), `_ops/change-log.md`. 해석 대상은 `scripts/full_vault_eval.py`, `scripts/link_booster_2.py`, `scripts/active_booster.py`, `SOUL.md`, `EVAL_STATUS.md`. 연결 개념 — [[ai-evaluation-system]](독립보증서 전제 훼손), [[knowledge-graph-as-map]](자기참조 링크는 통로가 아님), [[agentic-roi]](체감 지표로 ROI 측정 시 속도 환영에 포섭), [[agentic-recruitment-proxy]](SCAN의 N 영역 매핑 필요), [[weak-signal-theory]](Level 2 → Level 3 격상).
+- **다음 확인**:
+  1. **이름 복원(최우선)**: `git show 82164c3 -- SOUL.md`로 원 제목을 확인해 손으로 되돌리고, H1이 자기 링크로 치환된 12개 문서를 함께 복원. 이 작업은 Eval 점수를 떨어뜨리며, 떨어뜨리는 것이 목적이다.
+  2. **Eval 공식 수정**: `full_vault_eval.py:46`의 링크 카운트에 "대상 문서가 실재할 것 + 자기 자신이 아닐 것" 두 조건 추가.
+  3. **Freshness 재정의 또는 폐기**: `mtime` 기반을 버리고 커밋 접두어가 `content:`/`knowledge:`인 변경만 계수 — CLAUDE.md 4장의 커밋 분리 규칙을 계측 장치로 연결.
+  4. **N 영역(의미 보호 구역) 선언**: `SOUL.md`, `CLAUDE.md`, `.claude/rules/`, `outputs/daily-reflect/`를 모든 부스터 스크립트의 `SKIP_DIRS` 상수에 명시적으로 추가. 에세이가 아니라 코드에 쓸 것.
+
+---
+
 ## 2026-07-28
 
 ### [BRIEFING] HR Tech Psychology 일일 브리핑 — 속도 환영, SCAN 프레임워크, 인지적 공동조절
