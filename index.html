@@ -13,7 +13,7 @@
             min-height: 100vh;
             padding: 2rem;
         }
-        .container { max-width: 1400px; margin: 0 auto; }
+        .container { max-width: 1200px; margin: 0 auto; }
         h1 { 
             font-size: 2.5rem; 
             margin-bottom: 0.5rem;
@@ -39,10 +39,10 @@
         .card .value { font-size: 2.5rem; font-weight: 700; }
         .card .unit { font-size: 1rem; color: #64748b; }
         .score-card { 
-            border: 2px solid #eab308;
-            background: rgba(234, 179, 8, 0.1);
+            border: 2px solid #ef4444;
+            background: rgba(239, 68, 68, 0.1);
         }
-        .score-value { color: #eab308; }
+        .score-value { color: #ef4444; }
         .progress-bar {
             height: 8px;
             background: rgba(148, 163, 184, 0.2);
@@ -71,108 +71,66 @@
             border-radius: 9999px;
             font-size: 0.75rem;
             font-weight: 600;
-            background: #eab308;
+            background: #ef4444;
             color: #fff;
             margin-top: 0.5rem;
         }
-        .activity-list { list-style: none; }
-        .activity-list li { 
-            padding: 0.75rem 0; 
-            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .activity-list li:last-child { border-bottom: none; }
-        .activity-list .doc-title { font-weight: 500; }
-        .activity-list .doc-meta { color: #64748b; font-size: 0.875rem; }
-        .activity-list .doc-type { 
-            background: rgba(96, 165, 250, 0.2); 
-            color: #60a5fa; 
-            padding: 0.25rem 0.5rem; 
-            border-radius: 0.25rem;
-            font-size: 0.75rem;
-        }
-        .orphan-warning {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin-top: 1rem;
-        }
-        .orphan-warning strong { color: #ef4444; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🧠 csp-brain Eval Dashboard</h1>
-        <p class="subtitle">전체 Vault 지식 건강 상태 실시간 진단</p>
+        <p class="subtitle">지식 건강 상태 실시간 진단</p>
         
         <div class="grid">
             <div class="card score-card">
                 <h3>EVAL SCORE</h3>
-                <div class="value score-value">64.01<span class="unit">/100</span></div>
-                <span class="status-badge">보통</span>
+                <div class="value score-value">31.55<span class="unit">/100</span></div>
+                <span class="status-badge">개선 필요</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 64.01%"></div>
+                    <div class="progress-fill" style="width: 31.55%"></div>
                 </div>
             </div>
             
             <div class="card">
                 <h3>TOTAL DOCUMENTS</h3>
-                <div class="value">2,124<span class="unit">개</span></div>
+                <div class="value">7740<span class="unit">개</span></div>
                 <div class="metrics" style="margin-top: 1rem;">
                     <div class="metric">
                         <label>Type 문서</label>
-                        <div class="val">1,621개 (76.32%)</div>
+                        <div class="val">10개</div>
                     </div>
                     <div class="metric">
                         <label>Active 문서</label>
-                        <div class="val">180개 (8.47%)</div>
+                        <div class="val">407개</div>
                     </div>
                 </div>
             </div>
             
             <div class="card">
                 <h3>KNOWLEDGE DENSITY</h3>
-                <div class="value">1.04<span class="unit">링크/문서</span></div>
+                <div class="value">0.79<span class="unit">링크/문서</span></div>
                 <div class="metrics" style="margin-top: 1rem;">
                     <div class="metric">
                         <label>총 연결</label>
-                        <div class="val">2,199개</div>
+                        <div class="val">6080개</div>
                     </div>
                     <div class="metric">
                         <label>고립 문서</label>
-                        <div class="val">1,483개 (69.82%)</div>
+                        <div class="val">5535개 (71.51%)</div>
                     </div>
                 </div>
             </div>
             
             <div class="card">
                 <h3>METABOLISM</h3>
-                <div class="value">76.32<span class="unit">%</span></div>
+                <div class="value">26.27<span class="unit">%</span></div>
                 <div class="metric" style="margin-top: 1rem;">
-                    <label>최근 7 일 수정 (1621개)</label>
+                    <label>최근 7 일 수정 (2033개)</label>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width: 76.32%"></div>
+                        <div class="progress-fill" style="width: 26.27%"></div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <div class="grid" style="grid-template-columns: 2fr 1fr;">
-            <div class="card">
-                <h3>🕐 Recent Activity (최근 7 일)</h3>
-                <ul class="activity-list">
-                    <li><span class='doc-title'>change-log</span><span class='doc-meta'>07-27 <span class='doc-type'>Note</span></span></li><li><span class='doc-title'>저녁 성찰 (Daily Reflect): 2026-07-27 (월)</span><span class='doc-meta'>07-27 <span class='doc-type'>Reflection</span></span></li><li><span class='doc-title'>_index</span><span class='doc-meta'>07-27 <span class='doc-type'>Concept</span></span></li><li><span class='doc-title'>linkedin-2026-04-29-obsidian-graph-rag</span><span class='doc-meta'>07-27 <span class='doc-type'>Note</span></span></li><li><span class='doc-title'>Zavis_Brain Harness - 최종 요약</span><span class='doc-meta'>07-27 <span class='doc-type'>Note</span></span></li><li><span class='doc-title'>Zavis_Brain Harness - 최종 요약</span><span class='doc-meta'>07-27 <span class='doc-type'>Note</span></span></li><li><span class='doc-title'>📊 Zavis_Brain 인덱스 요약</span><span class='doc-meta'>07-27 <span class='doc-type'>Note</span></span></li><li><span class='doc-title'>[[research/AI_Agent_Strategy_2026.md|AI_Agent_Strategy_2026]]</span><span class='doc-meta'>07-27 <span class='doc-type'>research</span></span></li><li><span class='doc-title'>주간업무계획(W50,12월2주차)_육성파트.docx</span><span class='doc-meta'>07-27 <span class='doc-type'>Resource</span></span></li><li><span class='doc-title'>주간업무계획(W48 11월 4주차)_251126_생산기술 HR실_조직문화파트.docx</span><span class='doc-meta'>07-27 <span class='doc-type'>Resource</span></span></li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>⚠️ Orphan Preview</h3>
-                <div class='orphan-warning'><strong>1,483개의 문서가 고립되었습니다.<br><small>연결 필요: inbox/, raw/, 미분류 문서들</small></div>
-                <ul class="activity-list" style="margin-top: 1rem;">
-                    <li><span class='doc-title' style='font-size: 0.875rem;'>AI-TOOLBOX-2026.md...</span></li><li><span class='doc-title' style='font-size: 0.875rem;'>kimi-k3-cost-curve.md...</span></li><li><span class='doc-title' style='font-size: 0.875rem;'>Fabro-Philosophy.md...</span></li><li><span class='doc-title' style='font-size: 0.875rem;'>무제 2.md...</span></li><li><span class='doc-title' style='font-size: 0.875rem;'>무제 3.md...</span></li>
-                </ul>
             </div>
         </div>
         
@@ -181,24 +139,24 @@
             <div class="metrics" style="margin-top: 1rem;">
                 <div class="metric">
                     <label>Link Density (40%)</label>
-                    <div class="val">13.8점</div>
+                    <div class="val">3.14점</div>
                 </div>
                 <div class="metric">
-                    <label>Freshness (20%)</label>
+                    <label>Freshness (30%)</label>
+                    <div class="val">7.88점</div>
+                </div>
+                <div class="metric">
+                    <label>Type Structure (20%)</label>
                     <div class="val">20.0점</div>
                 </div>
                 <div class="metric">
-                    <label>Type Structure (25%)</label>
-                    <div class="val">23.85점</div>
-                </div>
-                <div class="metric">
-                    <label>Active Rate (15%)</label>
-                    <div class="val">6.36점</div>
+                    <label>Active Rate (10%)</label>
+                    <div class="val">0.53점</div>
                 </div>
             </div>
         </div>
         
-        <p class="timestamp">Last updated: 2026-07-27T17:29:48.298951 | Full Vault Scan (2,124 docs)</p>
+        <p class="timestamp">Last updated: 2026-07-27T12:03:27.825145</p>
     </div>
 </body>
 </html>
