@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\[보고자료]EX_AX_Task_260310_v1.0.pptx"
 converted_at: 2026-04-13 10:59:30
 category: Strategy_Planning
@@ -39,7 +41,7 @@ AX 기반 Pulse Check 전환 시 기대 효과
 조직의 상태를 1년에 단 1회 ‘사진 한 장’으로만 본다
 계절·프로젝트 사이클·리더 교체 등 변동 요인이 반영되지 않는다.
 몰입 지수가 연중 어느 시점에 무너졌는지 추적 불가.
-② Trend 추적 → 동적 조직 이해
+② Tr[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]d 추적 → 동적 조직 이해
 Engagement Index의 월별 궤적으로 변화 원인 추론 가능.
 HR 개입 효과를 데이터로 입증·피드백하는 선순환 구조.
 
@@ -252,7 +254,7 @@ DB화
 Risk 분석에 따른 행동 방침 제안
 Analysis · Modeling
 강점 · 기회 도출
-Storage · Structuring · Metadata
+Storage · St[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]cturing · Metadata
 Pulse Data Capture
 
 → 리더의 행동 가이드 및 리더십 개선 000
@@ -707,7 +709,7 @@ QE1. 활력
 🌱
 
 의도: 월간 '안전감' → LMX 파트너십. 커리어 지원. ↓ 심층
-의도: UWES Vigor 차원. 인내력 측정.
+의도: UWES Vi[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]r 차원. 인내력 측정.
 
 ![preencoded.png](Image2.jpg)
 의도: 월간 '자율성' → 전문성 활용 심화. ↓ 심층

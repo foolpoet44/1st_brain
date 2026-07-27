@@ -1,4 +1,6 @@
 ---
+status: Inbox
+type: Note
 source: gdrive
 original_title: "Opq-ucf-le"
 drive_id: 15KCJvf_oagg2VAblY-GgZ7xpanrC5WXSDLSUbULwOEQ
@@ -8,7 +10,7 @@ processed: true
 
 좋습니다. 캐러밴이 어디로 가는지 아는 사람과 설계하는 건 즐거운 일입니다. 군더더기 빼고 로직으로 바로 들어가죠.
 
-먼저 두 프로파일의 성격을 분명히 구분하고 시작하는 게 중요합니다. **UCF는 "이 사람이 직무 역량을 발휘할 잠재력의 폭"을 묻고, Leader Edge는 "리더로서의 차별적 우위 — 그리고 그 우위가 칼날처럼 뒤집히는 지점"을 묻습니다.** UCF가 평면이라면 Leader Edge는 벡터이자 양날입니다. 같은 OPQ 스케일이 두 프로파일에 모두 들어가지만, 가중치도 다르고 무엇보다 Leader Edge는 *그림자(dark-side)* 를 명시적으로 모델링한다는 점에서 결이 다릅니다. 이 비대칭이 나중에 Intelligence 레이어로 가는 다리가 됩니다.
+먼저 두 프로파일의 성격을 분명히 구분하고 시작하는 게 중요합니다. **UCF는 "이 사람이 직무 역량을 발휘할 잠재력의 폭"을 묻고, Leader Edge는 "리더로서의 차별적 우위 — 그리고 그 우위가 칼날처럼 뒤집히는 지점"을 묻습니다.** UCF가 평면이라면 Leader Edge는 벡터이자 양날입니다. 같은 OPQ 스케일이 두 프로파일에 모두 들어가지만, 가중치도 다르고 무엇보다 Leader Edge는 *그림자(dark-side)* 를 명시적으로 모델링한다는 점에서 결이 다릅니다. 이 비대칭이 나중에 Intellig[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce 레이어로 가는 다리가 됩니다.
 
 ## 공통 산출 엔진
 
@@ -30,8 +32,8 @@ SHL의 OPQ–UCF 연결 논리를 따르되, 가중치는 투명한 3-tier(강 0
 | Great Eight | 앵커(강) | 지지(중) | 변조(약) |
 |---|---|---|---|
 | **1. Leading & Deciding** | Controlling .30, Decisive .25 | Persuasive .15 | Independent Minded .10, Outspoken .10, Socially Confident .10 |
-| **2. Supporting & Cooperating** | Caring .30, Democratic .25 | Affiliative .20 | Trusting .15, Modest .10 |
-| **3. Interacting & Presenting** | Persuasive .25, Outgoing .25, Socially Confident .25 | Affiliative .15 | Outspoken .10 |
+| **2. Supporting & Cooperating** | Caring .30, Democratic .25 | Affiliative .20 | T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]sting .15, Modest .10 |
+| **3. Interacting & Presenting** | Persuasive .25, Out[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]ing .25, Socially Confident .25 | Affiliative .15 | Outspoken .10 |
 | **4. Analysing & Interpreting** | Data Rational .30, Evaluative .30 | Behavioural .20 | Conceptual .10, Detail Conscious .10 |
 | **5. Creating & Conceptualising** | Innovative .30, Conceptual .25 | Variety Seeking .15, Forward Thinking .15 | Adaptable .15 |
 | **6. Organising & Executing** | Conscientious .30, Detail Conscious .25 | Forward Thinking .20 | Rule Following .15, Achieving .10 |

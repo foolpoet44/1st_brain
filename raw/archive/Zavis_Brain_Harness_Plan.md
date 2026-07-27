@@ -1,3 +1,7 @@
+---
+type: Resource
+---
+
 # Zavis_Brain Harness Engineering Plan
 
 > **문서 버전:** 1.0

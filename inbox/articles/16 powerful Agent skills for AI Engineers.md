@@ -1,4 +1,6 @@
 ---
+status: Inbox
+type: Note
 title: "16 powerful Agent skills for AI Engineers:"
 source: "https://www.linkedin.com/feed/update/urn:li:activity:7448336151070961664/"
 author:
@@ -18,13 +20,13 @@ Avi Chawla님의 프로필 보기
 
 16 powerful Agent skills for AI Engineers:
 
-Claude Code’s.claude/ skills system lets you package reusable instructions, workflows, and tool configurations into portable folders that any agent session can pick up.
+[[CLAUDE.md|CLAUDE]] Code’s.claude/ skills system lets you package reusable instructions, workflows, and tool configurations into portable folders that any agent session can pick up.
 
 Here are 16 powerful Agent skills for AI engineers:
 
 \- Superpowers: A structured dev workflow that forces Claude to brainstorm, plan, and test before writing any code. Useful when you want rigor over speed.
 
-\- InsForge: Semantic backend layer that exposes auth, database, storage, and functions through one agent-friendly API. Think of it as a unified backend for agents.
+\- InsForge: Semantic backend layer that exposes auth, database, storage, and functions through one agent-friendly API. Think of it as a unified backend for [[AGENTS.md|AGENTS]].
 
 \- Bright Data Skills: Teaches Claude to orchestrate 60+ MCP tools for web scraping and structured data extraction. Handles the messy parts of live web access.
 
@@ -50,7 +52,7 @@ Here are 16 powerful Agent skills for AI engineers:
 
 \- Agent Sandbox: Isolated E2B cloud sandboxes for building, hosting, and testing apps without touching local files. Good for when you want the agent to experiment freely without risk.
 
-\- Agile Workflow: Full agile delivery pipeline with multi-model parallel review via Codex and Gemini agents. Brings structured software delivery practices into the agent workflow.
+\- Agile Workflow: Full agile delivery pipeline with multi-model parallel review via Codex and [[GEMINI.md|GEMINI]] agents. Brings structured software delivery practices into the agent workflow.
 
 \- Claude Code Plugins+: Plugin directory with a CLI package manager for searching and installing niche skills.
 

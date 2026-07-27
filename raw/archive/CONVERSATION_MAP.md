@@ -1,3 +1,7 @@
+---
+type: Resource
+---
+
 # Conversation Knowledge Map Index
 
 > 이 지표는 114MB의 과거 데이터를 분할하여 관리하는 마스터 인덱스입니다.

@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\quarterly_pulse_check_survey_20260311002242.pptx"
 converted_at: 2026-04-13 11:16:35
 category: Knowledge_Base
@@ -12,7 +14,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 Layer 0 · EX Touchpoints
 Layer 1 · Psychology
-Layer 2 · Engagement
+Layer 2 · [[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]gagement
 Layer 3 · Outcomes
 
 무엇을 경험하는가
@@ -272,7 +274,7 @@ Completion Time
 2
 
 측정 목적 (Purpose Flow)
-월간 vs 분기 비교 (Structure Shift)
+월간 vs 분기 비교 (St[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]cture Shift)
 
 ![preencoded.png](Image15.jpg)
 Monthly Pulse
@@ -1119,7 +1121,7 @@ Q4
 ![preencoded.png](Image39.jpg)
 
 ![preencoded.png](Image4.jpg)
-Jan
+[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ja.md|ja]]n
 Feb
 Apr
 May

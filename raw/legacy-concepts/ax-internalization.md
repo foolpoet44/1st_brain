@@ -1,3 +1,7 @@
+---
+type: Resource
+---
+
 # AX Internalization (AI Transformation)
 
 > "기술 도입을 넘어 조직의 유전자를 바꾸는 AI 내재화 전략"

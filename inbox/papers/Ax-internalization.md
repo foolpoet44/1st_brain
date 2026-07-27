@@ -1,4 +1,6 @@
 ---
+status: Inbox
+type: Note
 source: gdrive
 original_title: "Ax internalization"
 drive_id: 13c-gSOF2-n5hcqIaaPuQV_M4HIzJE6xNoVlQfKkMRIg
@@ -10,7 +12,7 @@ processed: true
 
 단순히 새로운 도구를 쥐여주는 시스템 도입(Introduction)과, 그 기술이 구성원의 일하는 방식과 철학에 스며드는 **내지화(Internalization)** 사이에는 거대한 심연이 존재합니다. AX 내지화는 단순한 소프트웨어 기능 교육이 아닙니다. 그것은 기술과 인간, 그리고 조직 구조가 결합하여 새로운 균형점을 찾아가는 일종의 '조직 진화론적 여정'에 가깝습니다.
 
-우리가 지향해야 할 AX 내지화의 본질은 구성원 개개인이 **'Creative Solution Provider(CSP)'**이자 **'Vibe coder'**로 거듭나게 하는 것입니다. 프로그래밍 언어의 문법을 몰라도, AI 능동 개체(Agentic Workflow)를 지휘하며 비즈니스 문제를 해결하고 조직의 가치를 높이는 상태, 그것이 궁극의 내지화 모델입니다.
+우리가 지향해야 할 AX 내지화의 본질은 구성원 개개인이 **'Creative Solution Provider(CSP)'**이자 **'Vibe coder'**로 거듭나게 하는 것입니다. 프로그래밍 언어의 문법을 몰라도, AI 능동 개체(Ag[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]tic Workflow)를 지휘하며 비즈니스 문제를 해결하고 조직의 가치를 높이는 상태, 그것이 궁극의 내지화 모델입니다.
 
 이 여정을 성공으로 이끌기 위한 소프트웨어 공학, 애자일 방법론, 그리고 심리학적 배경을 융합한 핵심 아키텍처를 제안합니다.
 
@@ -27,7 +29,7 @@ AX 내지화가 조직의 문화로 안착하려면, 일회성 이벤트가 아�
          ▼                             ▼                             ▼
 ┌──────────────────┐          ┌──────────────────┐          ┌──────────────────┐
 │   Infrastructure │          │    Enablement    │          │    Governance    │
-│  (AI-Native IDE) │          │  (Vibe Coding)   │          │ (Skill Ontology) │
+│  (AI-Native IDE) │          │  (Vibe Coding)   │          │ ([[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Ontology) │
 └──────────────────┘          └──────────────────┘          └──────────────────┘
 ```
 

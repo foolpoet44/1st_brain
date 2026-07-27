@@ -4,7 +4,7 @@ category: AI-Ops
 tags: ["validation", "verification", "harnessing", "optimization-bias"]
 ---
 
-# Meta-Harnessing Review: Anti-Optimism Bias Checklist
+# [[_ops/[[open-design/skills/editorial-burgundy-principles-template/references/checklist.md|checklist]]s/meta-harnessing-review.md|meta-harnessing-review]]
 
 > "AI는 본능적으로 '할 수 있다'고 말하지만, 인프라는 냉정하게 '되어야 한다'고 답해야 합니다."
 
@@ -22,4 +22,4 @@ tags: ["validation", "verification", "harnessing", "optimization-bias"]
 ## 3. 효율성 점검
 
 - [ ] 불필요하게 높은 Effort(토큰 낭비)가 투입되지는 않았는가?
-- [ ] Resolver가 최적의 파일을 선택했는가?
+- [ ] [[_ops/RESOLVER.md|RESOLVER]]가 최적의 파일을 선택했는가?

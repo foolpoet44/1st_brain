@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\4월\임원모니터링\임원모니터링\(Template)②리더십 모니터링_김성철 담당_v0.3.pptx"
 converted_at: 2026-04-13 11:16:48
 category: Knowledge_Base
@@ -7,7 +9,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <!-- Slide number: 1 -->
 
-![C:\ECM\TEMP\부서함\Brand담당\20년 연간업무계획\디지털 그래픽 모티브 개발★\★1st Manual Official Release\Graphic Asset_v1.0\1. Main motif - Solid color\png\Main_motif-LG_red_solid.png](Picture2.jpg)
+![C:\ECM\TEMP\부서함\Brand담당\20년 연간업무계획\디지털 그래픽 모티브 개발★\★1st Manual Official Release\Graphic Asset_v1.0\1. Main motif - Solid [[open-design/craft/color.md|color]]\png\Main_motif-LG_red_solid.png](Picture2.jpg)
 `25년 리더십 모니터링(김성철 담당 모니터링 점검)
 모니터링 핵심 요약유첨 첨부
 ➊ ///////////////////////////////////////////////// - //////////////////////////// - ////////////////////////////////////➋ ///////////////////////////////////////////////// - //////////////////////////// - ////////////////////////////////////
@@ -121,7 +123,7 @@ Aalto MBA(`20)
 개인이 보유한 역량상의 강점 / 리더십상의 강점
 <역량상의 강점>
 제품(이차전지)에 대한 전문 지식과 요소기술 및 공정 메커니즘에 대한 높은 이해도를 바탕으로 신규 공법 및 기술 개발 상황에서의 Breakthrough 아이디어와 솔루션을 제시하는 역량이 뛰어남. 이러한 역량을 활용하여 양산 현장의 고질적인 문제를 해결하고 중요한 핵심 기술을 직접 개발하는 데 많은 기여를 함.
-생산기술원에서 초창기부터 전지장비를 개발했던 멤버로서 LGES와의 네트워크가 좋으며, 이를 바탕으로 최신 기술 Trend 및 고객의 요구사항을 사전에 파악하는 역량이 뛰어남. 다양한 내/외부 네트워크를 활용하여 중장기 기술 로드맵 수립과 조직의 방향성 제시를 통한 조직 리딩 역량을 보유하고 있음.
+생산기술원에서 초창기부터 전지장비를 개발했던 멤버로서 LGES와의 네트워크가 좋으며, 이를 바탕으로 최신 기술 Tr[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]d 및 고객의 요구사항을 사전에 파악하는 역량이 뛰어남. 다양한 내/외부 네트워크를 활용하여 중장기 기술 로드맵 수립과 조직의 방향성 제시를 통한 조직 리딩 역량을 보유하고 있음.
 
 <리더십상의 강점>
 본인의 성공 체험에 대한 확신이 있어 구성원 역량 향상을 위한 다양한 기회 제공 및 활동을 독려하고 있음. 국내/외 주요 전시회 및 학회 참석을 장려하고 있으며, 내부적으로 정기 기술 세미나도 진행하고 있음. 뿐만 아니라, 조직 내 고참급 책임연구원들에게는 HR과 협업하여 전지아카데미 과정을 지속 개발하는데 적극 참여하기를 요청하고 있으며, 주니어 멤버들도 교육을 통한 성장에 대해 강조함.

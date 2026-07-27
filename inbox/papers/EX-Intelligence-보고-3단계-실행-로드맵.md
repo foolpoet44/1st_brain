@@ -1,4 +1,6 @@
 ---
+status: Inbox
+type: Note
 source: gdrive
 original_title: "EX Intelligence 보고 3단계 실행 로드맵.pdf"
 drive_id: 1Ad9FdOnWwtDEeNNdqQewiIhBb7GF9nfh
@@ -8,7 +10,7 @@ processed: true
 
 EXG 조직문화 · 구성원경험 담당
 
-# EX Intelligence 보고 3단계 실행 로드맵
+# EX Intellig[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ce 보고 3단계 실행 로드맵
 
 왜 해야 하는가 → 무엇을 측정할 것인가 → 어떻게 운영 할 것인가 개념 승인에서 파일럿 실행까지, 세 번의 보고가 만드는 하나의 시스템
 
@@ -92,7 +94,7 @@ CIA — NEED TO KNOW 원칙: "결정이 필요한 사람에게, 필요한 정보
 | 갈등 신호 (Tension) | I04 협업 / I05 심리안전 | HR 담당자 직접 팀 방문 인터뷰 → 팀 워크숍 설계 → 4주 후 재측정 |
 | 리더십 신뢰 (Leadership) | I02 리더십 | 해당 팀장 코칭 세션 연결 → 리더십 개발 프로그램 우선 배치 → 분기 심층 보완 |
 | AX 적응도 (AX Readiness) | I03 AX 불안 | AI 역량 집중 지원 프로그램 배치 → 현장 AX 코치 연결 → 월간 추세 모니터링 |
-| 조직 신뢰 (Trust) | I07 방향·소속감 | C레벨 직접 소통 이벤트 설계 → 전략 공유 세션 → 이직 위험군 조기 파악 |
+| 조직 신뢰 (T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]st) | I07 방향·소속감 | C레벨 직접 소통 이벤트 설계 → 전략 공유 세션 → 이직 위험군 조기 파악 |
 
 언어 전환의 목적 — 리더가 "우리 팀 점수가 낮다"는 방어적 독해 대신, "현재 협업 마찰 신호가 상승 추세다 — 무엇을 해야 하는가"라는 문제 해결자 모드로 전환되게 한다.
 

@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\4월\EXI_inven_2.0_NBLM.pptx"
 converted_at: 2026-04-13 11:16:40
 category: Knowledge_Base

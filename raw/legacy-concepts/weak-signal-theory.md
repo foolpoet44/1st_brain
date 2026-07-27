@@ -1,3 +1,7 @@
+---
+type: Resource
+---
+
 # Weak Signal Theory (Ansoff)
 
 > "노이즈 속에 숨겨진 미래의 징후를 포착하는 전략적 통찰"

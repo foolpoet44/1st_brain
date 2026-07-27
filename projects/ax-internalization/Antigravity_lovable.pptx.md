@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\AX내재화\Antigravity_lovable.pptx"
 converted_at: 2026-04-13 11:14:25
 category: Knowledge_Base

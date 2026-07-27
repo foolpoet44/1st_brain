@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\AX내재화\Antigravity_lovable.docx"
 converted_at: 2026-04-13 11:14:25
 category: Knowledge_Base
@@ -17,14 +19,14 @@ Antigravity는 단순한 에디터가 아니라, "에이전트가 자율적으�
 
 **Antigravity의 위치**
 
-CSP는 이미 Claude Code 기반의 hr-workspace 아키텍처를 운영하고 있습니다. 여기서 Antigravity는 Claude Code를 대체하는 것이 아니라 **병렬 프로토타이핑 레이어**로 기능합니다.
+CSP는 이미 [[CLAUDE.md|CLAUDE]] Code 기반의 hr-workspace 아키텍처를 운영하고 있습니다. 여기서 Antigravity는 Claude Code를 대체하는 것이 아니라 **병렬 프로토타이핑 레이어**로 기능합니다.
 
 2026년 많은 개발자들이 "Antigravity로 빠른 프로토타이핑 + Claude Code로 복잡한 태스크"를 조합해 사용하고 있으며, 비용 측면에서도 강력한 조합으로 평가받고 있습니다. CSP의 상황에 이를 대입하면 이렇게 됩니다.
 
 | **도구**        | **역할**                              | **적용 맥락**                                                    |
 | --------------- | ------------------------------------- | ---------------------------------------------------------------- |
 | **Claude Code** | 복잡한 추론, MCP 연동, ESCON 아키텍처 | Supabase 스키마 설계, PathologyDetector 로직, Pulse Check 백엔드 |
-| **Antigravity** | 빠른 UI 프로토타입, 병렬 에이전트     | EX Intelligence 보고서 HTML, 평가 도구 프론트엔드                |
+| **Antigravity** | 빠른 UI 프로토타입, 병렬 에이전트     | EX Intellig[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce 보고서 HTML, 평가 도구 프론트엔드                |
 | **Lovable**     | 검증용 MVP, 발표자료 데모용 앱        | 경영진 발표용 인터랙티브 데모, 설문 UI 목업                      |
 
 Antigravity의 Planning Mode는 각 단계마다 개입할 기회를 충분히 주기 때문에, 복잡한 프로젝트에서 더 많은 감독과 피드백이 필요할 때 적합합니다. ESCON이나 Pulse Check처럼 HR 도메인 맥락이 깊이 담긴 프로젝트에서는 이 모드가 핵심입니다. AI가 맥락 없이 달려나가는 것을 막아야 하기 때문이죠.
@@ -61,7 +63,7 @@ Antigravity는 에이전트가 작업 목록, 구현 계획, 스크린샷, 브�
 
 **Google Workspace 제약 조건 대응**
 
-LG PRI 사내에서 Google Workspace 사용이 불가하다는 점은 중요한 제약입니다. Antigravity는 Google 계정을 통해 Gemini 3 Pro의 이용 한도 관리와 디바이스 간 프로젝트 동기화가 이루어집니다. 따라서 구성원 교육 맥락에서 Antigravity 사용 시 **개인 Gmail 계정을 활용**해야 하며, 이에 대한 IT 부서와의 사전 협의 및 보안 가이드라인 설정이 선행되어야 합니다.
+LG PRI 사내에서 Google Workspace 사용이 불가하다는 점은 중요한 제약입니다. Antigravity는 Google 계정을 통해 [[GEMINI.md|GEMINI]] 3 Pro의 이용 한도 관리와 디바이스 간 프로젝트 동기화가 이루어집니다. 따라서 구성원 교육 맥락에서 Antigravity 사용 시 **개인 Gmail 계정을 활용**해야 하며, 이에 대한 IT 부서와의 사전 협의 및 보안 가이드라인 설정이 선행되어야 합니다.
 
 실무 데이터를 Antigravity에 직접 입력하는 것은 보안 리스크가 있으므로, 교육 과정에서는 **샘플 데이터 또는 익명화된 데이터만 사용**하는 원칙을 명확히 설정해야 합니다.
 

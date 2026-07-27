@@ -1,3 +1,7 @@
+---
+type: Resource
+---
+
 # 오늘의 인사이트: 지식의 자산화 (Knowledge Capitalization)
 
 ## Compiled Truth

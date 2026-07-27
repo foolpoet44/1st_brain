@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\survey_Q_table_260226.xlsx"
 converted_at: 2026-04-13 11:16:36
 category: Knowledge_Base
@@ -7,7 +9,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 ## 종합
 
-| Category   | DOMAIN                | CODE | QUESTION ITEM                                                                                     | MEASUREMENT GOAL                          | Frequency |
+| Cate[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]ry   | DOMAIN                | CODE | QUESTION ITEM                                                                                     | MEASUREM[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]T GOAL                          | Frequency |
 | ---------- | --------------------- | ---- | ------------------------------------------------------------------------------------------------- | ----------------------------------------- | --------- |
 | Touchpoint | Well-being & Benefits | W1   | 정신/신체 건강을 위한 회사 지원을 이용할 수 있습니다.                                             | W&L Balance                               | NaN       |
 | Touchpoint | Well-being & Benefits | W2   | Work & Life Balance를 주도적으로 계획할 수 있습니다.                                              | W&L Balance                               | NaN       |
@@ -72,7 +74,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 | Value Fit   | V3   | 나는 이 조직에서 나에게 중요한 것들을 추구할 수 있다고 느낀다.                 | 가치 실현 가능성                |
 | Role Fit    | P1   | 나의 현재 역할은 내가 가진 강점을 발휘하기에 적합하다.                         | 강점 활용 적합성                |
 | Role Fit    | P2   | 현재 내게 주어진 업무의 양과 난이도는 내가 감당할 수 있는 수준이다.            | 과부하(Overload) 방향 체크      |
-| Role Fit    | P3   | 나는 내 역량에 비해 더 도전적인 일을 원하지만 기회가 충분하지 않다.            | 과소활용(Underutilization) 체크 |
+| Role Fit    | P3   | 나는 내 역량에 비해 더 도전적인 일을 원하지만 기회가 충분하지 않다.            | 과소활용(Unde[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]tilization) 체크 |
 | Expectation | E1   | 이 조직은 내가 입사할 때 기대했던 것에 대체로 충족해주고 있다.                 | 기대-경험 합 동향 지각          |
 | Expectation | E2   | 내가 조직에 기여하는 것에 비해, 조직이 나에게 돌려주는 것은 적절하다고 느낀다. | 상호성 / 공정균형성 지각        |
 

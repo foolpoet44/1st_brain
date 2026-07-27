@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 ## 당신의 Obsidian 이 Graph RAG 라고요? 맞습니다.
 
 오늘 제 개인 지식 관리 시스템 (csp-brain) 을 분석하다가

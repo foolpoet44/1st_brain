@@ -1,3 +1,7 @@
+---
+type: Person
+---
+
 status: Active
 related_to: "[[Organization-Memory]]"
 # Person: CSP

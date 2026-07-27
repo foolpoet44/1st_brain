@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\[보고자료]EX_AX_Task_260316_v1.2.pptx"
 converted_at: 2026-04-13 10:59:33
 category: Strategy_Planning
@@ -8,7 +10,7 @@ csp_insight: "자비스가 분석 대기 중인 문서입니다. (내용 기반 
 
 <!-- Slide number: 1 -->
 
-『 EX Intelligence 』 체계 구축
+『 EX Intellig[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce 』 체계 구축
 “구성원 신호를 조직 성과로 전환하는 AX 기반 상시 진단 체계”
 추진배경
 작동원리
@@ -405,7 +407,7 @@ Signal Collection
 Risk 분석에 따른 행동 방침 제안
 Analysis · Modeling
 강점 · 기회 도출
-Storage · Structuring · Metadata
+Storage · St[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]cturing · Metadata
 Pulse Data Capture
 
 → 리더의 행동 가이드 및 리더십 개선 000
@@ -702,7 +704,7 @@ Pulse Check UI/UX
 ![preencoded.png](Image12.jpg)
 임직원 참여를 극대화하는 모바일 최적화 전용 UI 개발
 및 직관적 설문 흐름 설계
-PostgreSQL 기반의 관계형 데이터베이스
+Postgre[[Understand-Anything/understand-anything-plugin/skills/understand/languages/sql.md|sql]] 기반의 관계형 데이터베이스
 설계 및 안전한 데이터 레이어 구축
 Engagement, eNPS 등 조직 건강도를 측정하는
 핵심 지표 자동 계산

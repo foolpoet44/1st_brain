@@ -1,3 +1,7 @@
+---
+type: Resource
+---
+
 # 🧠 Zavis_Brain: Strategic Semantic Map v2.1
 
 > **Agentic Memory for CSP** | **Total Assets:** 355 | **Updated:** 2026-04-13 11:44

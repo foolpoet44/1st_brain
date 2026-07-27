@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\4월\임원모니터링\임원모니터링\(Template)②리더십 모니터링_이용찬 상무_v0.3.pptx"
 converted_at: 2026-04-13 11:16:50
 category: Knowledge_Base
@@ -7,7 +9,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <!-- Slide number: 1 -->
 
-![C:\ECM\TEMP\부서함\Brand담당\20년 연간업무계획\디지털 그래픽 모티브 개발★\★1st Manual Official Release\Graphic Asset_v1.0\1. Main motif - Solid color\png\Main_motif-LG_red_solid.png](Picture2.jpg)
+![C:\ECM\TEMP\부서함\Brand담당\20년 연간업무계획\디지털 그래픽 모티브 개발★\★1st Manual Official Release\Graphic Asset_v1.0\1. Main motif - Solid [[open-design/craft/color.md|color]]\png\Main_motif-LG_red_solid.png](Picture2.jpg)
 ’25년 리더십 모니터링(이용찬 상무 리더십점검)
 모니터링 핵심 요약유첨 첨부
 ➊ 일반적이고 개괄적인 인물평 - //////////////////////////// - ////////////////////////////////////➋ ///////////////////////////////////////////////// - //////////////////////////// - ////////////////////////////////////
@@ -122,7 +124,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 개인이 보유한 역량상의 보완점 / 리더십상의 보완점
 <역량상의 보완점>
 장비 개발/사업 부서의 리더로서 성장해오며, 오퍼레이션 전반에 대한 직/간접적인 업무 경험을 보유하고 있음. 다만 구매, 품질, 영업관리에 특화된 전문성과 업무 프로세스에 대해서는 지속적으로 학습이 필요하며, 실질적인 조직 운영 경험을 통해 오퍼레이션담당 전체의 전문성을 확보할 필요가 있음.
-그룹 핵심사업의 공법, 장비 솔루션 지원을 통해 성장했으며, 이를 통해 계열사 사업, 개발, 선행 연구 조직과의 네트워크를 보유함. 반면, 자사의 각 사업본부 및 오퍼레이션 관련 조직과의 네트워크는 다소 부족하여 연초 GOC, VS본부 오퍼레이션그룹 등 유사한 기능을 보유한 조직과의 교류회를 통해 네트워크 확대는 물론 관련 역량을 확보해 나가고 있음.
+그룹 핵심사업의 공법, 장비 솔루션 지원을 통해 성장했으며, 이를 통해 계열사 사업, 개발, 선행 연구 조직과의 네트워크를 보유함. 반면, 자사의 각 사업본부 및 오퍼레이션 관련 조직과의 네트워크는 다소 부족하여 연초 [[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/go.md|go]]C, VS본부 오퍼레이션그룹 등 유사한 기능을 보유한 조직과의 교류회를 통해 네트워크 확대는 물론 관련 역량을 확보해 나가고 있음.
 모듈기술담당 시 미래기술 발굴을 통한 사업아이템 발굴을 진행했으나, 직접적인 사업 성과와 연계된 Seed아이템 발굴에 있어서는 다소 아쉬움이 있음. 중장기적 관점에서 기술 개발 및 사업화 계획을 수립하여 지속 가능한 성장을 도모할 필요가 있음.
 
 <리더십상의 보완점>

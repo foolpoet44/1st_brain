@@ -25,7 +25,7 @@ status: Active
 
 | 요소          | 설명                                 | csp-brain 대응                           |
 | :------------ | :----------------------------------- | :--------------------------------------- |
-| **구조 설계** | 에이전트/스킬 조합, 워크플로우 설계  | `CLAUDE.md`, `.claude/rules/`, `skills/` |
+| **구조 설계** | 에이전트/스킬 조합, 워크플로우 설계  | `[[CLAUDE.md|CLAUDE]].md`, `.claude/rules/`, `[[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s/` |
 | **맥락 관리** | Context, Rule, Hook 을 통한 가드레일 | `wiki/`, `projects/`, `inbox/` 폴더 구조 |
 | **실행 흐름** | 작업이 진행되는 순서와 루프          | Dream Cycle, INGEST, LINT 프로토콜       |
 | **검증 기준** | 결과물의 품질을 측정하는 기준        | LINT 프로토콜 (백링크, frontmatter 점검) |
@@ -156,7 +156,7 @@ status: Active
 ## 5 분 컷 이해
 1. CLAUDE.md 읽기 (2 분)
 2. wiki/concepts/_index.md 스캔 (1 분)
-3. projects/ README.md 확인 (2 분)
+3. projects/ [[README.md|README]].md 확인 (2 분)
 
 ## 첫 작업 시작하기
 - `ingest` — inbox 정리

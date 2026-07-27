@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\[보고자료]EX_AX_Task_260311_v1.0(송부).pptx"
 converted_at: 2026-04-13 10:59:31
 category: Strategy_Planning
@@ -39,7 +41,7 @@ AX 기반 Pulse Check 전환 시 기대 효과
 조직의 상태를 1년에 단 1회 ‘사진 한 장’으로만 본다
 계절·프로젝트 사이클·리더 교체 등 변동 요인이 반영되지 않는다.
 몰입 지수가 연중 어느 시점에 무너졌는지 추적 불가.
-② Trend 추적 → 동적 조직 이해
+② Tr[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]d 추적 → 동적 조직 이해
 Engagement Index의 월별 궤적으로 변화 원인 추론 가능.
 HR 개입 효과를 데이터로 입증·피드백하는 선순환 구조.
 
@@ -568,7 +570,7 @@ DB화
 Risk 분석에 따른 행동 방침 제안
 Analysis · Modeling
 강점 · 기회 도출
-Storage · Structuring · Metadata
+Storage · St[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]cturing · Metadata
 Pulse Data Capture
 
 → 리더의 행동 가이드 및 리더십 개선 000
@@ -659,7 +661,7 @@ Pulse Check UI/UX
 ![preencoded.png](Image12.jpg)
 임직원 참여를 극대화하는 모바일 최적화 전용 UI 개발
 및 직관적 설문 흐름 설계
-PostgreSQL 기반의 관계형 데이터베이스
+Postgre[[Understand-Anything/understand-anything-plugin/skills/understand/languages/sql.md|sql]] 기반의 관계형 데이터베이스
 설계 및 안전한 데이터 레이어 구축
 Engagement, eNPS 등 조직 건강도를 측정하는
 핵심 지표 자동 계산

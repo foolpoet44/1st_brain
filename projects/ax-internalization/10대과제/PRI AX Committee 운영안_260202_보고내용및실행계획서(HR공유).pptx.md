@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\AX내재화\10대과제\PRI AX Committee 운영안_260202_보고내용및실행계획서(HR공유).pptx"
 converted_at: 2026-04-13 10:59:25
 category: Strategy_Planning
@@ -37,7 +39,7 @@ PRI 전략담당｜ 2026. 02.02.
 
 [Step 1] Standardization
 [Step 2] Systemization
-[Step 3] AI Agent
+[Step 3] AI Ag[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t
 추진
 방식
 업무 유형별 Agent 활용안
@@ -381,7 +383,7 @@ PRI AX 10대 과제 추진 계획서
 | 과제 요약 | |
 | --- | --- |
 ▪ 고객관리 전 과정 (Lead 발굴 → 컨택 / 제안 → 수주 / 이행 → Recurring) 에 대한 활동이력 / 산출물 / 의사결정 근거를 CRM 시스템에 일원화하여 고객관리 체계를 구축하고, 누적된 데이터 기반으로 영업활동 지원 Agent 를 구축하고자 함
-SSoT: Single Source of Truth
+SSoT: Single Source of T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]th
 ▪ 파이프라인 / 활동데이터의 분산으로 재활용한 지식 자산이 부재하여, 유사 project 대응 시 재분석 ∙ 재작성이 발생
 
 - 이메일, 메신저, 개인 노트북 등에 정보가 흩어져 있고, 리드발굴 → 고객 컨택/ 제안 →  수주 → Recurring 에 이르는 전체 workflow 상의 데이터 관리 시스템의 부재로 영업 활동  데이터가 체계적으로 남아있지 않음
@@ -3040,7 +3042,7 @@ Y
 
 조사 요약 리포트 자동 메일링 결과 화면
 
-![대 체 부 품 검 색 결 과 발 송 Summarize praigen@lge.com Reply « Reply all Forward v p To: ♡ 오 다 연 / 선 임 연 구 원 /PRI Data Intelligence Task; ♥ 김 나 경 / 연 구 원 /PRI Data Intelligence Task Thu 2025-12-04 16:48 Retention: 185 Day Delete (6 months) Expires: Sun 2026-06-07 16:48 요 약 FAIRINO FR10(10kg 하 중 , 1400mm 작 업 반 경 , 48V DC 전 원 ) 과 유 사 한 사 양 의 중 국 및 한 국 협 동 로 봇 ( 코 봇 ) 모 델 5 종 에 대 한 비 교 표 입 니 다 . 각 로 봇 은 10kg 페 이 로 드 , 약 1.4m 작 업 반 경 , DC 48V 구 동 을 공 통 으 로 가 지 며 , 대 체 로 6 축 협 동 로 봇 으 로 구 성 되 어 있 습 니 다 . 모 든 로 봇 은 IP54 이 상 의 방 진 · 방 수 , 반 복 정 밀 도 ±0.05mm, CE 인 증 을 보 유 하 며 , 한 국 내 대 리 점 이 없 는 경 우 B2B 전 자 상 거 래 플 랫 폼 을 통 해 구 매 가 가 능 합 니 다 . 가 격 과 주 요 특 징 , 제 조 사 신 뢰 도 , 생 산 국 등 이 정 리 되 었 습 니 다 . 협 동 로 봇 대 안 비 교 표 제 조 사 ( 브 랜 드 ) 모 델 명 하 중 / 반 경 / 전 원 추 가 사 양 및 특 징 가 격 (USD) 전 자 상 거 래 링 한 국 대 제 조 사 신 뢰 도 제 조 사 국 생 산 리 점 가 국 주 요 특 징 HITBOT Hitbot Z-Arm 10kg / 1400mm / 6 축 , 반 복 정 밀 도 ±0.05mm, IP54, $7,700 (Huiling-Tech) S1400 48V DC 중 량 45kg ( 대 량 구 매 알 리 바 바 링 크 없 음 2015 년 설 립 , 샤 오 미 생 태 계 참 여 중 국 ( 선 전 (220V AC 호 환 ) 가 능 ) 스 타 트 업 시 ) 중 국 충 돌 감 지 , 민 감 도 조 절 , 저 소 음 (<65dB), CE/FCC 인 증 Busiweier 10kg / 1400mm / $6,187 (Suzhou FR10 (6 축 코 봇 ) 48V DC 6 축 , 반 복 정 밀 도 ±0.05mm, IP54, (1~3 대 ) 메 이 드 인 차 이 없 음 2025 년 설 립 , 자 체 부 품 개 발 , 핵 중 국 ( 쑤 저 ュ 듀 얼 인 코 더 기 반 정 밀 제 어 , 유 지 보 수 용 이 , 그 래 픽 인 터 우 시 ) Buswille) 중 량 40kg $5,568 나 링 크 중 국 T (220V AC 호 환 ) 심 생 산 거 점 3 곳 페 이 스 , 드 래 그 - 티 칭 제 공 (10 대 이 상 ) 10kg / 1400mm / $8,700 Dreamon 6 축 , 반 복 정 밀 도 ±0.05mm, IP54, (1~9 대 ) 대 규 모 생 산 설 비 보 유 , 100 여 개 중 국 ( 즈 보 Robotics FR10 ( 협 동 로 봇 ) 48V DC (30-60V 입 력 ) 중 량 40kg $7,800 알 리 바 바 링 크 없 음 스 마 트 티 치 팬 던 트 , 다 양 한 통 신 프 로 토 콜 (ROS/Modbus 기 업 협 업 시 ) 중 국 . 등 ) 지 원 (10 대 이 상 ) AE Robotics AE 10 (6-DoF 10kg / 1400mm / $6,000 6 축 , 반 복 정 밀 도 ±0.05mm, IP54, (1~7 대 ) 메 이 드 인 차 이 2024 년 설 립 , 심 천 소 재 무 역 회 중 국 ( 심 천 간 편 설 치 , 초 보 자 도 사 용 가 능 한 GUI, 다 양 한 산 업 에 활 용 (Yuelong) Cobot) 48V DC (220V AC 지 원 ) 중 량 40kg $4,500 나 링 크 없 음 사 시 ) 중 국 가 능 (8 대 이 상 ) 10kg / 1400mm / $6,600 48V DC 6 축 , 반 복 정 밀 도 ±0.05mm, IP54, (1 대 ~) 알 리 바 바 링 크 없 음 2016 년 설 립 , 대 형 로 봇 기 업 중 국 ( 광 저 1 중 국 내 구 성 높 은 메 탈 바 디 , 공 압 그 리 퍼 포 함 , ISO KUISO (KOZA) KUISO10 (220V AC 호 환 ) 중 량 약 40kg $5,568 우 시 ) 10218/13849 안 전 기 준 준 수 (10 대 이 상 ) 주 요 특 징 요 약 1. 가 격 경 쟁 력 : $4,500~$8,700 ( 대 량 구 매 시 더 저 렴 ). 2. 사 양 : 모 두 10kg 페 이 로 드 , 1400mm 작 업 반 경 , 반 복 정 밀 도 ±0.05mm, IP54 방 진 · 방 수 . 3. 기 능 : 충 돌 감 지 , 드 래 그 - 티 칭 , GUI 프 로 그 래 밍 , 스 마 트 팬 던 트 등 다 양 한 편 의 기 능 . 4. 제 조 사 신 뢰 성 : 심 천 , 쑤 저 우 , 광 저 우 등 중 국 주 요 제 조 업 도 시 의 신 생 또 는 중 견 기 업 .](Picture2.jpg)
+![대 체 부 품 검 색 결 과 발 송 Summarize praigen@lge.com Reply « Reply all Forward v p To: ♡ 오 다 연 / 선 임 연 구 원 /PRI Data Intelligence Task; ♥ 김 나 경 / 연 구 원 /PRI Data Intelligence Task Thu 2025-12-04 16:48 Retention: 185 Day Delete (6 months) Expires: Sun 2026-06-07 16:48 요 약 FAIRINO FR10(10kg 하 중 , 1400mm 작 업 반 경 , 48V DC 전 원 ) 과 유 사 한 사 양 의 중 국 및 한 국 협 동 로 봇 ( 코 봇 ) 모 델 5 종 에 대 한 비 교 표 입 니 다 . 각 로 봇 은 10kg 페 이 로 드 , 약 1.4m 작 업 반 경 , DC 48V 구 동 을 공 통 으 로 가 지 며 , 대 체 로 6 축 협 동 로 봇 으 로 구 성 되 어 있 습 니 다 . 모 든 로 봇 은 IP54 이 상 의 방 진 · 방 수 , 반 복 정 밀 도 ±0.05mm, CE 인 증 을 보 유 하 며 , 한 국 내 대 리 점 이 없 는 경 우 B2B 전 자 상 거 래 플 랫 폼 을 통 해 구 매 가 가 능 합 니 다 . 가 격 과 주 요 특 징 , 제 조 사 신 뢰 도 , 생 산 국 등 이 정 리 되 었 습 니 다 . 협 동 로 봇 대 안 비 교 표 제 조 사 ( 브 랜 드 ) 모 델 명 하 중 / 반 경 / 전 원 추 가 사 양 및 특 징 가 격 (USD) 전 자 상 거 래 링 한 국 대 제 조 사 신 뢰 도 제 조 사 국 생 산 리 점 가 국 주 요 특 징 HITBOT Hitbot Z-Arm 10kg / 1400mm / 6 축 , 반 복 정 밀 도 ±0.05mm, IP54, $7,700 (Huiling-Tech) S1400 48V DC 중 량 45kg ( 대 량 구 매 알 리 바 바 링 크 없 음 2015 년 설 립 , 샤 오 미 생 태 계 참 여 중 국 ( 선 전 (220V AC 호 환 ) 가 능 ) 스 타 트 업 시 ) 중 국 충 돌 감 지 , 민 감 도 조 절 , 저 소 음 (<65dB), CE/FCC 인 증 Busiweier 10kg / 1400mm / $6,187 (Su[[Understand-Anything/understand-anything-plugin/skills/understand/locales/zh.md|zh]]ou FR10 (6 축 코 봇 ) 48V DC 6 축 , 반 복 정 밀 도 ±0.05mm, IP54, (1~3 대 ) 메 이 드 인 차 이 없 음 2025 년 설 립 , 자 체 부 품 개 발 , 핵 중 국 ( 쑤 저 ュ 듀 얼 인 코 더 기 반 정 밀 제 어 , 유 지 보 수 용 이 , 그 래 픽 인 터 우 시 ) Buswille) 중 량 40kg $5,568 나 링 크 중 국 T (220V AC 호 환 ) 심 생 산 거 점 3 곳 페 이 스 , 드 래 그 - 티 칭 제 공 (10 대 이 상 ) 10kg / 1400mm / $8,700 Dreamon 6 축 , 반 복 정 밀 도 ±0.05mm, IP54, (1~9 대 ) 대 규 모 생 산 설 비 보 유 , 100 여 개 중 국 ( 즈 보 Robotics FR10 ( 협 동 로 봇 ) 48V DC (30-60V 입 력 ) 중 량 40kg $7,800 알 리 바 바 링 크 없 음 스 마 트 티 치 팬 던 트 , 다 양 한 통 신 프 로 토 콜 (ROS/Modbus 기 업 협 업 시 ) 중 국 . 등 ) 지 원 (10 대 이 상 ) AE Robotics AE 10 (6-DoF 10kg / 1400mm / $6,000 6 축 , 반 복 정 밀 도 ±0.05mm, IP54, (1~7 대 ) 메 이 드 인 차 이 2024 년 설 립 , 심 천 소 재 무 역 회 중 국 ( 심 천 간 편 설 치 , 초 보 자 도 사 용 가 능 한 GUI, 다 양 한 산 업 에 활 용 (Yuelong) Cobot) 48V DC (220V AC 지 원 ) 중 량 40kg $4,500 나 링 크 없 음 사 시 ) 중 국 가 능 (8 대 이 상 ) 10kg / 1400mm / $6,600 48V DC 6 축 , 반 복 정 밀 도 ±0.05mm, IP54, (1 대 ~) 알 리 바 바 링 크 없 음 2016 년 설 립 , 대 형 로 봇 기 업 중 국 ( 광 저 1 중 국 내 구 성 높 은 메 탈 바 디 , 공 압 그 리 퍼 포 함 , ISO KUISO (KOZA) KUISO10 (220V AC 호 환 ) 중 량 약 40kg $5,568 우 시 ) 10218/13849 안 전 기 준 준 수 (10 대 이 상 ) 주 요 특 징 요 약 1. 가 격 경 쟁 력 : $4,500~$8,700 ( 대 량 구 매 시 더 저 렴 ). 2. 사 양 : 모 두 10kg 페 이 로 드 , 1400mm 작 업 반 경 , 반 복 정 밀 도 ±0.05mm, IP54 방 진 · 방 수 . 3. 기 능 : 충 돌 감 지 , 드 래 그 - 티 칭 , GUI 프 로 그 래 밍 , 스 마 트 팬 던 트 등 다 양 한 편 의 기 능 . 4. 제 조 사 신 뢰 성 : 심 천 , 쑤 저 우 , 광 저 우 등 중 국 주 요 제 조 업 도 시 의 신 생 또 는 중 견 기 업 .](Picture2.jpg)
 
 2 / 2
 

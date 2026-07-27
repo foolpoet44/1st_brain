@@ -1,7 +1,11 @@
+---
+type: Note
+---
+
 status: Active
 # Toss × AMQS 퀀트 대시보드 — 투자 철학을 이해하자.
 
-> 토스증권 **Open API**로 한국인이 실제로 사고·검색하는 국내 주식·ETF에
+> 토스증권 **Op[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]] API**로 한국인이 실제로 사고·검색하는 국내 주식·ETF에
 > **Adaptive Momentum Quant Strategy (AMQS)** 의 룰을 _기계적으로_ 적용해
 > **매수 / 보유 / 매도** 를 한 화면에서 판단하는 대시보드.
 
@@ -13,7 +17,7 @@ status: Active
 
 - **Concerns Separation**: `connectors/` (통신), `adapters/` (정제), `types/` (규격)로 분리된 견고한 구조.
 - **Fail-Closed Guardrails**: `InvestmentMandate` 기반의 실시간 거래 한도 및 킬 스위치(Kill Switch) 내장.
-- **MCP Enabled**: `mcp/` 서버를 통해 Claude 등 AI 에이전트가 직접 계좌를 조회하고 주문을 실행하는 워크플로우 지원.
+- **MCP Enabled**: `mcp/` 서버를 통해 [[CLAUDE.md|CLAUDE]] 등 AI 에이전트가 직접 계좌를 조회하고 주문을 실행하는 워크플로우 지원.
 - **Vibe Coding Friendly**: 인문학적·심리학적 관점을 반영하여 시장의 노이즈와 인간의 심리를 격리하는 방화벽 역할.
 
 ---
@@ -154,7 +158,7 @@ npm start          # http://localhost:3000 (키 없으면 MOCK 모드로 즉시 
 | [backtest/BACKTEST.md](./backtest/BACKTEST.md)                     | **국내 3년 백테스트 리포트** — AMQS vs KODEX 200 vs 동일가중, 정직한 성과 분석·데이터 한계                                                       |
 | [docs/Toss_OpenAPI_Guide.md](./docs/Toss_OpenAPI_Guide.md)         | **토스증권 Open API 기술 분석** — 인증·토큰 정책, 20개 엔드포인트, 6가지 활용 시나리오(트레이딩 봇·LLM 연동·백테스트), 설계 제약, 정보 검증 등급 |
 | [docs/Toss_OpenAPI_Analysis.pdf](./docs/Toss_OpenAPI_Analysis.pdf) | 위 분석 문서의 **PDF 버전**                                                                                                                      |
-| [docs/](./docs/readme.md)                                          | 문서·스크린샷 인덱스                                                                                                                             |
+| [docs/](./docs/[[README.md|README]].md)                                          | 문서·스크린샷 인덱스                                                                                                                             |
 
 ---
 

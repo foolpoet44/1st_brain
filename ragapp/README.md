@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 ## Single RAGApp deployment
 
 ## Features

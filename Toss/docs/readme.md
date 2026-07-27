@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 # Toss 프로젝트 문서 (docs)
 
 `Toss × AMQS 퀀트 대시보드` 관련 문서·자료 모음입니다.
@@ -7,7 +11,7 @@
 
 | 문서                                                     | 설명                                                                                                                                                                                |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Toss_OpenAPI_Guide.md](./Toss_OpenAPI_Guide.md)         | **토스증권 Open API 기술 분석 문서** — 인증·토큰 정책, 20개 엔드포인트 전체 리스트, 6가지 활용 시나리오(트레이딩 봇·LLM 연동·백테스트 파이프라인 등), 설계 제약사항, 정보 검증 등급 |
+| [Toss_Op[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]API_Guide.md](./Toss_OpenAPI_Guide.md)         | **토스증권 Open API 기술 분석 문서** — 인증·토큰 정책, 20개 엔드포인트 전체 리스트, 6가지 활용 시나리오(트레이딩 봇·LLM 연동·백테스트 파이프라인 등), 설계 제약사항, 정보 검증 등급 |
 | [Toss_OpenAPI_Analysis.pdf](./Toss_OpenAPI_Analysis.pdf) | 위 분석 문서의 **PDF 버전** (배포·인쇄용)                                                                                                                                           |
 
 ## 대시보드 스크린샷
@@ -28,6 +32,6 @@
 
 ## 🔗 상위 문서
 
-- [../README.md](../README.md) — **투자 철학 문서** (왜 이렇게 만들었나 · 주의점)
+- [../[[README.md|README]].md](../README.md) — **투자 철학 문서** (왜 이렇게 만들었나 · 주의점)
 - [../GUIDE.md](../GUIDE.md) — **사용 설명서** (설치 · API 키 연동 · 서버 API · 종목 교체)
 - [../llms.txt](../llms.txt) — AI 에이전트용 프로젝트 요약

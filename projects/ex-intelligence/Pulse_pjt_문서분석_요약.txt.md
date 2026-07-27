@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\Pulse_pjt_문서분석_요약.txt"
 converted_at: 2026-04-13 11:16:34
 category: Knowledge_Base
@@ -16,7 +18,7 @@ Pulse_pjt 폴더 문서 분석 및 요약
 HTML 파일 (웹 기반 프레젠테이션)
 ─────────────────────────────────
 
-1. EX Intelligence · 피칭 가이드.html
+1. EX Intellig[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce · 피칭 가이드.html
    EX Intelligence 체계를 경영진에게 제안할 때 사용하는 피칭 스크립트 가이드.
    타이머 기능이 있어 프레젠테이션 진행 시간을 관리할 수 있음.
 
@@ -37,7 +39,7 @@ HTML 파일 (웹 기반 프레젠테이션)
    LG CHO 포털용 EX Intelligence 포맷 최신 버전 (4월 2일)
 
 7. ex_pos_framework.html
-   EX Intelligence와 POS(Potential, Organizational fit, Skill) 통합 이론 체계도
+   EX Intelligence와 POS(Potential, Organizational fit, [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]) 통합 이론 체계도
 
 8. pitching_final.html
    최종 피칭 자료. 프레젠테이션 타이머, 슬라이드 시퀀스, 스크립트 블록 등

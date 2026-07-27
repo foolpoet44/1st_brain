@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 status: Active
 # csp-brain 🧠
 

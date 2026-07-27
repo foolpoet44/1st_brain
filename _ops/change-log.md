@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 ## 2026-07-25
 
 ### [OPS] 저녁 성찰 스케줄 실행 시 `REFLECT_2026-07-25.md` 선점 확인 — 새 글 쓰지 않고 종료
@@ -54,6 +58,21 @@
   2. `wiki/signals/evolution-gate-hr.md`, `wiki/signals/multiplayer-hr-orchestration.md` INGEST.
   3. `KNOWLEDGE_PULSE.md` 대시보드에서 9 개 지식 원자 가시성 확인.
 
+
+## 2026-07-27
+
+### [BRIEFING] 아침 '돈의 이동' 브리핑 — AI 가 채권을 삼키는 시대, 환율은 신뢰의 온도계
+
+- **무엇이 바뀌었나**: 2026 년 7 월 27 일 자 '돈의 이동' 데일리 브리핑 `outputs/daily-briefing/MONEY_FLOW_2026-07-27.md` 를 생성함. 미국 10 년물 국채 금리 4.6%, 30 년물 5.1%, 원/달러 환율 1,473.4 원 (7 월 21 일 종가) 의 최신 데이터를 [[Economic Freedom]], [[agentic-recruitment-proxy]], [[fde-talent-model]], [[bp-signal-intelligence]] 개념 렌즈로 해석함.
+- **왜 중요한가**: 2026 년 채권 시장은 'AI 기업 실적'이라는 단일 서사에 모든 유동성을 위탁하는 **새로운 우상 숭배**의 형상을 띠고 있다. 하이퍼스케일러 기업들의 회사채 발행 비중은 2.4%(2024) → 16.4%(2026) 로 급증했으며, 이는 **분산투자의 신화가 AI 생태계 순환금융 앞에서 해체**되고 있음을 의미한다. 환율 1,562 원 (6 월 최고치) 은 **집단이 공유하는 불신 **(不信任)의 온도이며, 이를 "서학개미의 쿨한 취향"으로 번역하는 것은 검열이다.
+- **영향 범위**: `outputs/daily-briefing/MONEY_FLOW_2026-07-27.md`, `KNOWLEDGE_PULSE.md` (업데이트 필요), `_ops/change-log.md`. [[Economic Freedom]] 아키텍처에 '금리 - 환율 - 자산배분' 신호 노드 연결. [[agentic-recruitment-proxy]] 의 'Blind Faith → Collaboration' 신뢰 사다리와 연결.
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑의 3 개 핵심 신호 (AI 채권 유동성 흡수, 환율 불신 온도, 상관관계 붕괴) 를 `wiki/signals/` 에 신규 노드로 생성할지 여부.
+  2. **Human Gate 명세**: "AI 추천 포트폴리오" 수용 시 적용할 인간 검증 체크리스트 (Gate 1: 집중도 한도 심사, Gate 2: 자율적 검증 프로세스, Gate 3: CFO 직접 보고) 초안 작성.
+  3. **가시성 점검**: `KNOWLEDGE_PULSE.md` 대시보드 (http://localhost:8080) 에서 오늘 금리/환율 신호가 반영되었는지 확인.
+  4. **Trust Level Disclosure**: 금리 전망 (Medium), 환율 전망 (Low), 자산배분 전략 (Medium) 을 관련 의사결정 문서에 명시.
+
+---
 
 ## 2026-07-26
 
@@ -175,3 +194,19 @@
 - 무엇이 바뀌었나: 2026년 기준 핵심 AI 도구들을 6대 업무 도메인별로 분류한 `AI-TOOLBOX-2026.md`를 생성함.
 - 왜 중요한가: 업무 워크플로우에 최적화된 도구 조합을 제시함으로써 조직의 AX(AI Transformation) 가이드라인을 확보함.
 - 영향 범위: `AI-TOOLBOX-2026.md`, `outputs/daily-reflect/REFLECT_2026-07-08.md`.
+
+## 2026-07-27
+
+### [BRIEFING] 아침 HR Tech 브리핑 — AI 노출의 역설과 하이브리드 공정성의 증거
+
+- **무엇이 바뀌었나**: 2026 년 7 월 27 일 자 HR Tech 데일리 브리핑 `csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-27.md` 를 생성함. arXiv:2603.14963(AI 노출과 의미 있는 작업의 상관관계), arXiv:2603.06240(하이브리드 채용의 공정성 실증), Deloitte 2026 Human Capital Trends(Workforce Intelligence 의 부상), Forbes/Eklavvya(8 가지 HR 에이전트 도구) 의 최신 연구와 시장 데이터를 [[agentic-recruitment-proxy]], [[bp-signal-intelligence]], [[fde-talent-model]] 개념 렌즈로 해석함.
+- **왜 중요한가**: 2026 년은 두 개의 상반된 증거가 공존하는 해다. 한편으로 AI 는 인간이 가장 의미 있다고 느끼는 작업 (창의성, 자율성, 행복) 을 침범하고 있으며, 워커 - 개발자 정렬 불일치는 의미의 침식을 경고한다. 다른 한편으로 134 만 후보자 실증 연구는 Human+AI 가 Human-only 와 AI-only 를 모두 이긴다는 것을 보여준다. 이것은 HR 에게 **Meaning Protection Zone 선언**, **Trust Ladder 설계**, **CFO 의 언어 번역**이라는 세 가지 과제를 부여한다.
+- **영향 범위**: `csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-27.md`, `KNOWLEDGE_PULSE.md` (업데이트 필요), `_ops/change-log.md`. [[agentic-recruitment-proxy]] 의 신뢰 사다리를 실증 데이터로 보강. [[fde-talent-model]] 에 Meaning Protection Zone 근거 추가. [[bp-signal-intelligence]] 에 `evolution_gate` 필드 추가 필요.
+- **다음 확인**:
+  1. **신호 노드 INGEST**: 제안된 4 개 신규 노드 (`[[signal-ai-exposure-meaning-2026]]`, `[[signal-hybrid-recruiting-fairness-2026]]`, `[[signal-wi-pa-split-2026]]`, `[[signal-agentic-hr-tools-2026]]`) 를 `wiki/signals/` 에 생성할지 여부 결정. 각 노드에 **반드시 "인간 게이트 명세" 섹션 포함**.
+  2. **Meaning Protection Zone 선언**: arXiv:2603.14963 의 창의성/자율성/행복 작업 목록을 기반으로, AI 완전 자동화 금지 영역 명시.
+  3. **Trust Level Disclosure**: 하이브리드 채용 프로세스에서 AI 평가의 신뢰 등급 (High/Medium/Low) 을 후보자 리포트에 명시.
+  4. **가시성 점검**: `KNOWLEDGE_PULSE.md` 대시보드 (http://localhost:8080) 에서 오늘 브리핑의 4 개 지식 원자가 조명받고 있는지 확인.
+
+---
+

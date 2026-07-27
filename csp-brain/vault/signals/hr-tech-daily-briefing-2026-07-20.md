@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 # HR Tech Daily Briefing — 2026 년 7 월 20 일
 
 ## 🌅 지평의 확장 (Horizon Scan)

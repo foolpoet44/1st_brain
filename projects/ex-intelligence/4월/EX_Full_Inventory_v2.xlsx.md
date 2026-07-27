@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\4월\EX_Full_Inventory_v2.xlsx"
 converted_at: 2026-04-13 11:16:40
 category: Knowledge_Base
@@ -7,7 +9,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 ## ① 요약
 
-| EX Intelligence Full Inventory v2.0 — 구성원 경험 전체 지도                                               | Unnamed: 1                                                | Unnamed: 2                             | Unnamed: 3                     | Unnamed: 4 | Unnamed: 5 | Unnamed: 6 | Unnamed: 7 | Unnamed: 8                                                | Unnamed: 9        |
+| EX Intellig[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ce Full Inventory v2.0 — 구성원 경험 전체 지도                                               | Unnamed: 1                                                | Unnamed: 2                             | Unnamed: 3                     | Unnamed: 4 | Unnamed: 5 | Unnamed: 6 | Unnamed: 7 | Unnamed: 8                                                | Unnamed: 9        |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | -------------------------------------- | ------------------------------ | ---------- | ---------- | ---------- | ---------- | --------------------------------------------------------- | ----------------- |
 | 11개 현실 이슈 클러스터 (MECE 보완 버전)  ·  Layer 1 직무 / Layer 2 관계 / Layer 3 조직  ·  ★ = 신규 추가 | NaN                                                       | NaN                                    | NaN                            | NaN        | NaN        | NaN        | NaN        | NaN                                                       | NaN               |
 | NaN                                                                                                       | NaN                                                       | NaN                                    | NaN                            | NaN        | NaN        | NaN        | NaN        | NaN                                                       | NaN               |
@@ -33,7 +35,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 ## ② 상세
 
-| EX Intelligence Full Inventory v2.0 — 클러스터별 상세 정보 | Unnamed: 1 | Unnamed: 2                     | Unnamed: 3                             | Unnamed: 4                                             | Unnamed: 5                                     | Unnamed: 6                                       | Unnamed: 7                                                | Unnamed: 8 | Unnamed: 9 | Unnamed: 10 | Unnamed: 11 | Unnamed: 12                                                                                |
+| [[projects/ex-intelligence/README.md|README]] Full Inventory v2.0 — 클러스터별 상세 정보 | Unnamed: 1 | Unnamed: 2                     | Unnamed: 3                             | Unnamed: 4                                             | Unnamed: 5                                     | Unnamed: 6                                       | Unnamed: 7                                                | Unnamed: 8 | Unnamed: 9 | Unnamed: 10 | Unnamed: 11 | Unnamed: 12                                                                                |
 | ---------------------------------------------------------- | ---------- | ------------------------------ | -------------------------------------- | ------------------------------------------------------ | ---------------------------------------------- | ------------------------------------------------ | --------------------------------------------------------- | ---------- | ---------- | ----------- | ----------- | ------------------------------------------------------------------------------------------ |
 | 현장 신호 · 핵심 키워드 · 측정방식 · 설계 노트 전체 포함   | NaN        | NaN                            | NaN                                    | NaN                                                    | NaN                                            | NaN                                              | NaN                                                       | NaN        | NaN        | NaN         | NaN         | NaN                                                                                        |
 | NaN                                                        | NaN        | NaN                            | NaN                                    | NaN                                                    | NaN                                            | NaN                                              | NaN                                                       | NaN        | NaN        | NaN         | NaN         | NaN                                                                                        |

@@ -7,9 +7,9 @@ status: growing
 tags: [project, hr, saas, pulse, health]
 ---
 
-# Pulse Check
+# [[projects/pulse-check/README.md|README]]
 
-## Compiled Truth
+## Compiled T[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/ru.md|ru]]th
 
 조직 건강도 실시간 진단 도구.
 

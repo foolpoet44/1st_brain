@@ -1,3 +1,7 @@
+---
+type: Concept
+---
+
      1|---
      2|title: Skills
      3|created: 2026-04-29

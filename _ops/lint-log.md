@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 status: Active
 ## LINT-LOG: 2026-06-27 (wiki-scoped)
 

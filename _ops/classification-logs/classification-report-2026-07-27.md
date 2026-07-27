@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 # 📊 Type 문서 자동 분류 보고서
 
 **실행 일시**: 2026-07-27 00:15  
@@ -54,7 +58,7 @@
 22. typescript.md → Project
 23. shell.md → Project
 24. html.md → Concept
-25. SKILL.md → Reflection
+25. [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]].md → Reflection
 26. spring.md → Project
 27. rails.md → Project
 28. vue.md → Project
@@ -67,7 +71,7 @@
 35. flask.md → Reflection
 36. SKILL.md → Project
 37. SKILL.md → Project
-38. README.md → Project
+38. [[README.md|README]].md → Project
 39. 2026-03-14-phase2-implementation.md → Project
 40. 2026-03-18-multi-platform-simple-implementation.md → Project
 41. 2026-03-21-language-agnostic-plan.md → Concept

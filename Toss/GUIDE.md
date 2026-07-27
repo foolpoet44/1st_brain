@@ -1,8 +1,12 @@
+---
+type: Note
+---
+
 status: Active
 # 사용 설명서 — Toss × AMQS 퀀트 대시보드
 
-> 설치 · 실행 · 토스 Open API 연동 · 서버 API · 종목 교체 가이드.
-> **전략 철학과 주의점은 [README.md](./README.md)를 먼저 읽어 주세요.**
+> 설치 · 실행 · 토스 Op[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]] API 연동 · 서버 API · 종목 교체 가이드.
+> **전략 철학과 주의점은 [[[README.md|README]].md](./README.md)를 먼저 읽어 주세요.**
 
 > 토스증권 **Open API**로 국내 주식·ETF 시세를 받아,
 > **Adaptive Momentum Quant Strategy (AMQS)** 룰을 기계적으로 적용해
@@ -18,7 +22,7 @@ status: Active
 
 ## 무엇을 보여주나
 
-- **시장 레짐 배너** — KODEX 200(KOSPI200 프록시)의 200일선·5일 수익률·변동성으로 시장 국면 판정
+- **시장 레짐 배너** — [[Understand-Anything/understand-anything-plugin/skills/understand/locales/ko.md|ko]]DEX 200(KOSPI200 프록시)의 200일선·5일 수익률·변동성으로 시장 국면 판정
   - `위험 선호(RISK_ON)` / `위험 회피(RISK_OFF)` / `방어(DEFENSIVE)`
 - **ETF 10종목** — 개인투자자 선호 ETF(KODEX 200, TIGER 미국S&P500/나스닥100/필반 등)에 시그널 표시
 - **섹터별 대표주 8섹터 × 10종목** — 반도체/AI · 2차전지 · 자동차 · 인터넷/게임 · 바이오 · 방산/조선 · 금융 · 엔터

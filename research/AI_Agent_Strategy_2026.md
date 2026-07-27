@@ -6,7 +6,7 @@ tags: [strategy, ai-agent, meta-harness, graph-rag, automation]
 related_to: "[[harness-engineering-insight]]"
 ---
 
-# 2026 AI 에이전트 전략: '도구'에서 '생태계'로의 진화
+# [[research/AI_Agent_Strategy_2026.md|AI_Agent_Strategy_2026]]
 
 ## 개요
 
@@ -19,7 +19,7 @@ related_to: "[[harness-engineering-insight]]"
 기존의 하네스 공학(Harness Engineering)이 안정적인 결과를 위해 구조를 설계하는 것에 집중했다면, **Meta-Harness**는 그 구조 자체를 에이전트가 스스로 생성하게 만드는 기술입니다.
 
 - **핵심 통찰**: 하나의 에이전트에게 모든 것을 시키는 대신, 특정 목적에 특화된 '에이전트 군단'을 `/harness` 명령 한 줄로 즉시 모집합니다.
-- **CSP Brain 적용**: 현재의 `skills/` 구조를 확장하여, 새로운 도메인(예: 채용 전문가, 심리 분석가)이 필요할 때마다 관련 스킬셋과 운영 규칙(`AGENTS.md`)을 자동으로 스캐폴딩하는 메타-스킬을 구축합니다.
+- **CSP Brain 적용**: 현재의 `skills/` 구조를 확장하여, 새로운 도메인(예: 채용 전문가, 심리 분석가)이 필요할 때마다 관련 스킬셋과 운영 규칙(`[[AGENTS.md|AGENTS]].md`)을 자동으로 스캐폴딩하는 메타-스킬을 구축합니다.
 
 ## 2. GraphRAG: 지식의 신진대사 시각화
 

@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\4월\임원모니터링\임원모니터링\(Template)②리더십 모니터링_김석규 상무_v0.2.pptx"
 converted_at: 2026-04-13 11:16:48
 category: Knowledge_Base
@@ -7,7 +9,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <!-- Slide number: 1 -->
 
-![C:\ECM\TEMP\부서함\Brand담당\20년 연간업무계획\디지털 그래픽 모티브 개발★\★1st Manual Official Release\Graphic Asset_v1.0\1. Main motif - Solid color\png\Main_motif-LG_red_solid.png](Picture2.jpg)
+![C:\ECM\TEMP\부서함\Brand담당\20년 연간업무계획\디지털 그래픽 모티브 개발★\★1st Manual Official Release\Graphic Asset_v1.0\1. Main motif - Solid [[open-[[open-design/plugins/_official/design-systems/apple/DESIGN.md|DESIGN]]/craft/color.md|color]]\png\Main_motif-LG_red_solid.png](Picture2.jpg)
 ’25년 리더십 모니터링(김석규 상무 모니터링 점검)
 모니터링 핵심 요약유첨 첨부
 ➊ ///////////////////////////////////////////////// - //////////////////////////// - ////////////////////////////////////➋ ///////////////////////////////////////////////// - //////////////////////////// - ////////////////////////////////////
@@ -132,7 +134,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <리더십상의 보완점>
 장비 개발 및 사업 성과 달성이 필요한 조직에 리더로서 구성원들에게 명확한 비전을 제시할 필요가 있음. 올해 관련 분야에 있어 처음 조직을 이끄는 만큼 기존 리더십의 강점을 활용하여 중장기적인 목표와 방향성을 공유하며 구성원들이 비전을 향해 나아갈 수 있도록 동기부여에 더욱 관심을 쏟을 필요가 있음.
-정확한 개발 방향 설정과 낭비제거를 위한 Detail Managing이 강점이긴 하나, 구성원들에게는 업무적 부담으로 작용하는 경우도 있음. 전략적 의사 결정과 빠른 실행력이 강점인 만큼 다양한 매니징 역량을 활용할 필요가 있음.
+정확한 개발 방향 설정과 낭비제거를 위한 Detail Mana[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]g이 강점이긴 하나, 구성원들에게는 업무적 부담으로 작용하는 경우도 있음. 전략적 의사 결정과 빠른 실행력이 강점인 만큼 다양한 매니징 역량을 활용할 필요가 있음.
 조직 구성원들의 성장에 대한 관심도가 높지만, 내부 리소스를 보호하려는 성향이 강함. 개인의 직무 로테이션 및 조직 이동을 통한 성장에 있어서도 관심을 가지고 지원할 필요가 있음.
 3 / 4
 

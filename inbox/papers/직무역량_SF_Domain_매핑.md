@@ -1,4 +1,6 @@
 ---
+status: Inbox
+type: Note
 source: gdrive
 original_title: "직무역량_SF_Domain 매핑"
 drive_id: 1IerYFTIwlnHD_b8z6X7827xNDdanPQoMLIyomemyIiQ
@@ -6,7 +8,7 @@ pulled: 2026-07-18
 processed: true
 ---
 
-첨부파일 4개 중 taxonomy-mapping.html만 본문에 보입니다. 나머지 3개(CSV 매핑표, expert-area-taxonomy, competency-mapping-report)를 디스크에서 읽어 전체 그림을 파악하겠습니다.핵심 데이터가 잡혔습니다. 매핑 신뢰도와 대분류별 분포를 더 확인합니다.이제 나머지 두 HTML 파일(expert-area-taxonomy, competency-mapping-report)의 구조를 확인해서 어떤 내용을 담고 있는지 파악합니다.전체 그림이 완성됐습니다. 네 개 파일의 관계를 정리하면 — CSV는 원천 데이터(44개 직무역량 × 평가인원 × 점수 × 스킬 매핑), taxonomy-mapping은 대-중-소 분류의 도메인 매핑 점검, expert-area-taxonomy는 도메인별 역량 구성도, competency-mapping-report는 직무역량평가와 Factory Robotics 스킬맵의 연결 지도입니다.
+첨부파일 4개 중 taxonomy-mapping.html만 본문에 보입니다. 나머지 3개(CSV 매핑표, expert-area-taxonomy, compet[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]cy-mapping-report)를 디스크에서 읽어 전체 그림을 파악하겠습니다.핵심 데이터가 잡혔습니다. 매핑 신뢰도와 대분류별 분포를 더 확인합니다.이제 나머지 두 HTML 파일(expert-area-taxonomy, competency-mapping-report)의 구조를 확인해서 어떤 내용을 담고 있는지 파악합니다.전체 그림이 완성됐습니다. 네 개 파일의 관계를 정리하면 — CSV는 원천 데이터(44개 직무역량 × 평가인원 × 점수 × 스킬 매핑), taxonomy-mapping은 대-중-소 분류의 도메인 매핑 점검, expert-area-taxonomy는 도메인별 역량 구성도, competency-mapping-report는 직무역량평가와 Factory Robotics 스킬맵의 연결 지도입니다.
 
 이 모든 것을 관통하는 스토리라인을 텍스트로 구체화하겠습니다.
 
@@ -98,7 +100,7 @@ competency-mapping-report가 보여주는 가장 깊은 통찰은 **매핑이 �
 ```
 [원천 데이터]          [중간 지도]              [프로젝트 스킬]
 직무역량평가 2026   →   4대 도메인 매핑     →   Factory Robotics
-(44개 소분류)          (전문영역 분류)          Skill Map (RSF-xxx)
+(44개 소분류)          (전문영역 분류)          [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Map (RSF-xxx)
 ```
 
 예를 들어 "AI비전(Vision)"이라는 직무역량은 → "데이터 인텔리전스 허브" 도메인으로 분류되고 → 다시 RSF-MVS-001(디지털 이미지 처리), RSF-MVS-007(결함 검출) 같은 **구체적 프로젝트 스킬 ID**로 연결됩니다.

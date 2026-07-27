@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\[보고자료]EX_AX_Task_260309_v0.9.pptx"
 converted_at: 2026-04-13 10:59:29
 category: Strategy_Planning
@@ -39,7 +41,7 @@ AX 기반 Pulse Check 전환 시 기대 효과
 조직의 상태를 1년에 단 1회 ‘사진 한 장’으로만 본다
 계절·프로젝트 사이클·리더 교체 등 변동 요인이 반영되지 않는다.
 몰입 지수가 연중 어느 시점에 무너졌는지 추적 불가.
-② Trend 추적 → 동적 조직 이해
+② Tr[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]d 추적 → 동적 조직 이해
 Engagement Index의 월별 궤적으로 변화 원인 추론 가능.
 HR 개입 효과를 데이터로 입증·피드백하는 선순환 구조.
 
@@ -252,7 +254,7 @@ DB화
 Risk 분석에 따른 행동 방침 제안
 Analysis · Modeling
 강점 · 기회 도출
-Storage · Structuring · Metadata
+Storage · St[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]cturing · Metadata
 Pulse Data Capture
 
 → 리더의 행동 가이드 및 리더십 개선 000
@@ -545,7 +547,7 @@ M2 (8월말):
 
 유첨. 문항 설계(Touchpoint 측정)
 
-| Category   | DOMAIN                | CODE | QUESTION ITEM                                                          | MEASUREMENT GOAL          | Frequency |
+| Cate[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]ry   | DOMAIN                | CODE | QUESTION ITEM                                                          | MEASUREMENT GOAL          | Frequency |
 | ---------- | --------------------- | ---- | ---------------------------------------------------------------------- | ------------------------- | --------- |
 | Touchpoint | Well-being & Benefits | W1   | 정신/신체 건강을 위한 회사 지원을 이용할 수 있습니다.                  | W&L Balance               |           |
 |            | Well-being & Benefits | W2   | Work & Life Balance를 주도적으로 계획할 수 있습니다.                   | W&L Balance               |           |

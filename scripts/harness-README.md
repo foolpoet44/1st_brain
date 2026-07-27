@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 # Zavis_Brain Harness - 최종 요약
 
 > **프로젝트:** HR 지식 자산 하네싱 시스템

@@ -1,4 +1,6 @@
 ---
+status: Inbox
+type: Note
 source: gdrive
 original_title: "ex-oi-integration-strategy.md"
 drive_id: 1ZUCj1K-noVwf52x0_4C5ruLxaJlx8xVm
@@ -77,7 +79,7 @@ L1에서 올라온 데이터는 본질적으로 파편적이다. "A가 Python �
 
 **현재 상태와 한계**
 
-ESCON은 ESCO API 기반 Digital Skill Ontology로서, 구성원 개인의 기술 스택을 표준화된 언어로 정의하는 데 집중해왔다. Temporal Knowledge Graph(TKG)의 valid_from/valid_to 컬럼 설계까지 진행되었고, Vercel 배포 이슈를 해결 중이다.
+ESCON은 ESCO API 기반 Digital [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Ontology로서, 구성원 개인의 기술 스택을 표준화된 언어로 정의하는 데 집중해왔다. Temporal Knowledge Graph(TKG)의 valid_from/valid_to 컬럼 설계까지 진행되었고, Vercel 배포 이슈를 해결 중이다.
 
 그러나 현재의 ESCON은 본질적으로 **'개인의 이력서를 구조화하는 도구'**에 가깝다. "이 사람이 무엇을 할 수 있는가"는 답하지만, "우리 조직이 무엇을 할 수 있는가"에는 답하지 못한다.
 
@@ -234,7 +236,7 @@ Intelligence Layer가 인간의 개입 없이 "Q4 현재 우리 조직의 Physic
 **애플리케이션 레이어:**
 - **프론트엔드:** 커스텀 웹 앱 (Pulse Check UI, 대시보드, 검색 인터페이스)
 - **백엔드 로직:** Supabase Edge Functions + 외부 AI API 호출
-- **AI/LLM:** Claude API (분석 및 인사이트 생성), Google AI Studio (Pulse Check 분석)
+- **AI/LLM:** [[CLAUDE.md|CLAUDE]] API (분석 및 인사이트 생성), Google AI Studio (Pulse Check 분석)
 
 **파이프라인:**
 - **데이터 정제:** MarkItDown (문서 → 구조화 텍스트)

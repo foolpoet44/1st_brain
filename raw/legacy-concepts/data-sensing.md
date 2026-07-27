@@ -1,3 +1,7 @@
+---
+type: Resource
+---
+
 # Data Sensing (L1/L2/L3 Architecture)
 
 > "설문(Declarative)을 넘어 맥락(Context)을 포착하는 3단계 데이터 센싱 체계"

@@ -1,4 +1,6 @@
 ---
+status: Inbox
+type: Note
 source: gdrive
 original_title: "AI_Factory_기술전문가_육성체계_v2_2"
 drive_id: 1tduVec_FwBbD5s4Oee7zArOB30xfg-9b7bRGSGWnp-M
@@ -44,7 +46,7 @@ PHYSICAL AI & ROBOTICS
 5개 설비군 · 주전공제 (최대 규모)
 
 에이전틱 AI
-AGENTIC AI MFG.
+AG[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]TIC AI MFG.
 자율 판단·실행
 34스킬 · 10과목 · 23학점 · 352h
 안전·감사·확산 거버넌스 보유
@@ -131,7 +133,7 @@ STEP 2 · Lv2 심화
 
 STEP 3 · Lv3 전문
 
-GOAL · Tech Leader
+[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]AL · Tech Leader
 
 STEP 0
 공통필수
@@ -219,7 +221,7 @@ DI102·201 비전 데이터 → AA203 품질 판정
 SPC·결함 검출 산출물이 자동 판정·격리의 입력 — 검출율 95% 목표를 함께 짐
 
 DI202 협동 실측 → PA302 인간공학
-실측 데이터(CRO-017)가 RULA/REBA 평가의 정량 근거 — PA 담당과 페어 임베드
+실측 데이터(CRO-017)가 [[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]LA/REBA 평가의 정량 근거 — PA 담당과 페어 임베드
 
 [신규] DTS-023* → MVS-023* 학습 루프
 합성 데이터→모델 학습→검증 게이트 — 승인 시 로봇 AI 학습 데이터 공장이 닫힘

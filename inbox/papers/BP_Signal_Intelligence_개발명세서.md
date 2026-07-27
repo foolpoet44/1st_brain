@@ -1,4 +1,6 @@
 ---
+status: Inbox
+type: Note
 source: gdrive
 original_title: "BP_Signal_Intelligence_개발명세서.md"
 drive_id: 1DK-2gL6YeH6Vdfo5jPUob4bj90T76z9YBzX7qxCAj8o
@@ -6,9 +8,9 @@ pulled: 2026-07-18
 processed: true
 ---
 
-# BP Signal Intelligence — 운영 시스템 개발 명세서
+# BP Signal Intellig[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce — 운영 시스템 개발 명세서
 
-상태 기계(State Machine) × People Context Graph × Claude Code 멀티에이전트 EX Intelligence 아키텍처의 Relation Verification 층을 살아있는 파이프라인으로 전환하는 개발 하네스
+상태 기계(State Machine) × People Context Graph × [[CLAUDE.md|CLAUDE]] Code 멀티에이전트 EX Intelligence 아키텍처의 Relation Verification 층을 살아있는 파이프라인으로 전환하는 개발 하네스
 
 ## 0\. 문서 개요
 
@@ -214,7 +216,7 @@ acting    ──[사람이 액션 종료 표기]─────▶ closed
 
 ## 4\. Claude Code 멀티에이전트 명세
 
-각 서브에이전트는 **하나의 상태 칸을 지키는 문지기**다. ~/.claude/agents/ 하위에 정의하거나 프로젝트 CLAUDE.md의 프로토콜로 등록한다.
+각 서브에이전트는 **하나의 상태 칸을 지키는 문지기**다. ~/.claude/[[AGENTS.md|AGENTS]]/ 하위에 정의하거나 프로젝트 CLAUDE.md의 프로토콜로 등록한다.
 
 ### 4.1 Ingest 에이전트
 

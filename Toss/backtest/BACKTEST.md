@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 # AMQS 국내 3년 백테스트 리포트
 
 > 국내 주요 종목(8섹터 × 10 + ETF 10)에 AMQS 전략을 적용한 **3년 백테스트**.
@@ -8,7 +12,7 @@
 
 ## 먼저 — 정직한 결론
 
-**이 3년 구간에서 AMQS는 KODEX 200 단순보유를 이기지 못했습니다.**
+**이 3년 구간에서 AMQS는 [[Understand-Anything/understand-anything-plugin/skills/understand/locales/ko.md|ko]]DEX 200 단순보유를 이기지 못했습니다.**
 결과를 좋게 포장하지 않고 그대로 적습니다.
 
 | 전략                   |    총수익률 |       CAGR | 변동성 |    **MDD** | **Sharpe** |   Calmar |
@@ -37,7 +41,7 @@ AMQS 원문이 이미 예고한 내용입니다: _"평온한 강세장에서는 
 | ------------------- | ----------------------: | ------: |
 | RISK_ON (풀 투자)   |                      87 |     58% |
 | RISK_OFF (50% 현금) |                  **61** | **41%** |
-| DEFENSIVE (현금화)  |                       1 |      1% |
+| DEF[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]SIVE (현금화)  |                       1 |      1% |
 
 - 전체 주의 **41%를 50% 현금 상태(RISK_OFF)** 로 보냈습니다. 강세장에서 절반을 현금으로 들고 있었으니 상승분의 상당부를 놓쳤습니다.
 - **DEFENSIVE는 단 1회** — 방어 모드가 진가를 발휘할 폭락장이 사실상 없었습니다. _보험료(상승 포기)만 내고 보험금(폭락 회피)을 탈 일이 없던 구간._
@@ -115,7 +119,7 @@ AMQS는 200종목 분산지수(KODEX 200)와 달리 **10종목 집중**입니다
 ```bash
 cd Toss/backtest
 pip install yfinance pandas numpy matplotlib
-python amqs_kr_backtest.py
+[[Understand-Anything/understand-anything-plugin/skills/understand/languages/python.md|python]] amqs_kr_backtest.py
 ```
 
 산출물(CSV): [`../data/`](../data)

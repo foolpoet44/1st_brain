@@ -1,3 +1,7 @@
+---
+type: Resource
+---
+
 # 개념: CSP Brain 시스템
 
 > 등록일: 2026-04-14  

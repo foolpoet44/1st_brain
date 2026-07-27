@@ -1,4 +1,8 @@
-# 🧠 csp-brain Eval Dashboard 실시간 현황
+---
+type: Note
+---
+
+# [[EVAL_STATUS.md|EVAL_STATUS]]
 
 *최종 업데이트: 2026-07-27 00:15*
 *Vault 경로: `/Users/dkmac/Desktop/@26/dev`*
@@ -119,7 +123,7 @@ EVAL_STATUS.md 업데이트
 
 ### 스킬 사용
 ```
-skill: csp-brain-type-auto-classifier
+[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]: csp-brain-type-auto-classifier
 - scripts/auto-classify-types.sh 포함
 - 분류 규칙 및 Pitfalls 문서화됨
 ```

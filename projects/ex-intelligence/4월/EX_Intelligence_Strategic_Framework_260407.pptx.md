@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\4월\EX_Intelligence_Strategic_Framework_260407.pptx"
 converted_at: 2026-04-13 11:16:47
 category: Knowledge_Base

@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\★ LG Way Survey 개편 검토_251212_COO보고_공유 1.pptx"
 converted_at: 2026-04-13 10:59:34
 category: Strategy_Planning
@@ -10,7 +12,7 @@ csp_insight: "자비스가 분석 대기 중인 문서입니다. (내용 기반 
 
 2025. 12. 12㈜LG 인사팀
 
-# LG Way Survey 개편안 보고
+# [[projects/ex-intelligence/★ LG Way Survey 개편 검토_251212_COO보고_공유 1.pptx.md|★ LG Way Survey 개편 검토_251212_COO보고_공유 1.pptx]]
 
 LG Way Survey는 지난 20여년간 목적에 맞게 진화 / 발전해 왔음. 그러나, 동일 Frame (LG Way 이해와 실천 중심)으로 장기간 실시해옴에 따라,Survey 결과가 제공하는 의미있는 정보가 부족하다는 한계가 점점 나타나고 있음.
 그룹 고유의 조직 역량 진단 Tool로서의 LG Way Survey의 상징성과 효용성을 고려할 때, Re-positioning이 필요하다고 판단하였음.
@@ -21,7 +23,7 @@ Survey개편 배경
 개편 전/후 Frame 유첨1 참조
 【설문 목적】
 ‘공통의 가치와 방향성(Value)’ 보다는 ‘조직이 보유한 구체적인 역량 수준’을 측정
-성과 창출을 위한 우리 조직의 건강도(‘성장 역량’)를 점검하고 리스크를 조기 Sensing
+성과 창출을 위한 우리 조직의 건강도(‘성장 역량’)를 점검하고 리스크를 조기 S[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]sing
 【설문 구조】
 공통 설문 중심에서 설문의 Flexibility를 제고하기 위해 ① 그룹 공통 설문, ② 연도별 기획 설문, ③ 각 사 자체 설문 등 3개 Part로 구분
 

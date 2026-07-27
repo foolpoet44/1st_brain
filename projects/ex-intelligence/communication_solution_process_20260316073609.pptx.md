@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\communication_solution_process_20260316073609.pptx"
 converted_at: 2026-04-13 11:16:32
 category: Knowledge_Base
@@ -9,7 +11,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 4 Communication & Solution 제공
 AX System
-Intervention Flow
+Interv[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]tion Flow
 
 ![preencoded.png](Image0.jpg)
 AX 기반 시스템화를 통한 가치 창출 및 AI 자동 분석 프로세스
@@ -59,7 +61,7 @@ Insight
 강/약점 분석 및 리더십 가이드
 Pulse Data
 Capture
-Structuring &
+St[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]cturing &
 Metadata
 Clustering &
 Anomaly Detection

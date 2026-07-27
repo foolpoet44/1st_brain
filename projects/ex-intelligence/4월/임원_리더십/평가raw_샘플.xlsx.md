@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\4월\임원_리더십\평가raw_샘플.xlsx"
 converted_at: 2026-04-13 11:16:47
 category: Knowledge_Base

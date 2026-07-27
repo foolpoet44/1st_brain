@@ -1,4 +1,6 @@
 ---
+status: Inbox
+type: Note
 source: gdrive
 original_title: "PRI_FDE_대화아카이브.md"
 drive_id: 1UGMxyvm4SJVJTiUn5GykBBPTxmJN4rCsyERil1aFAqE
@@ -6,13 +8,13 @@ pulled: 2026-07-18
 processed: true
 ---
 
-# PRI FDE 부트캠프 설계 & 도메인 성장경로 솔루션 컨셉
+# [[inbox/papers/PRI_FDE_대화아카이브.md|PRI_FDE_대화아카이브]]
 
 대화 아카이브 · 2026 · 중요도 ★★★ 핵심 · 상태 진행중 태그: FDE, 부트캠프, ESCON, 스킬온톨로지, ESCO/RSF, 페르소나, 성장경로, 현상학적 귀납
 
 ## 1\. 출발점 — 부트캠프의 위치와 본질
 
-PRI FDE 부트캠프는 5단계 FDE 양성 여정(**선발 → 학습 → 동행 → 자립 → 인증**) 중 두 번째 칸인 **"학습(Integration Bootcamp)"** 단계를 정밀하게 깎아내는 작업이다. 본질은 지식 전달이 아니라 **정체성 변환**. 선발 통과자는 4칼리지(Physical AI · Agentic AI · Digital Twin · 허브 Data Intelligence)에서 각자 다른 봉우리를 오른 사람들 — T자형 세로획(전문 깊이)은 있고 가로획(횡단 역량)이 없는 상태. 부트캠프는 그 가로획을 긋고 "나는 OO 엔지니어다"를 "나는 현장에 들어가 문제 전체를 책임지는 FDE다"로 변환시키는 **용광로**다.
+PRI FDE 부트캠프는 5단계 FDE 양성 여정(**선발 → 학습 → 동행 → 자립 → 인증**) 중 두 번째 칸인 **"학습(Integration Bootcamp)"** 단계를 정밀하게 깎아내는 작업이다. 본질은 지식 전달이 아니라 **정체성 변환**. 선발 통과자는 4칼리지(Physical AI · Ag[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]tic AI · Digital Twin · 허브 Data Intelligence)에서 각자 다른 봉우리를 오른 사람들 — T자형 세로획(전문 깊이)은 있고 가로획(횡단 역량)이 없는 상태. 부트캠프는 그 가로획을 긋고 "나는 OO 엔지니어다"를 "나는 현장에 들어가 문제 전체를 책임지는 FDE다"로 변환시키는 **용광로**다.
 
 **설계 결정(합의):** 상세 일정을 미리 박지 않는다. 모듈을 시간 비종속 '내용 단위'로 먼저 빚고, 일정은 현장 가동·현업 부하·사업장 출입 시점 위에 올려놓는 마지막 단계로 미룬다.
 

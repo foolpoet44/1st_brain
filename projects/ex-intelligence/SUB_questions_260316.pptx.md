@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\SUB_questions_260316.pptx"
 converted_at: 2026-04-13 11:16:36
 category: Knowledge_Base
@@ -15,7 +17,7 @@ Sub 문항 (상세 진단)
 
 Q1. Job-Fit / 자율성
 
-![preencoded.png](Image7.jpg)
+![pre[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]coded.png](Image7.jpg)
 
 나는 현재 맡은 직무가 나의 역량·강점과 잘 맞는다고 느낀다.
 
@@ -208,7 +210,7 @@ Sub Q4-4
 업무 지시가 아닌 '인간적 지지'에 초점.
 심리적 안전감의 기초가 되는 리더십 신뢰 측정.
 
-AI 판정: 부정적 데이터 패턴 경고 (Trigger Signals)
+AI 판정: 부정적 데이터 패턴 경고 (Trigger [[open-design/design-templates/html-ppt-zhangzara-signal/SKILL.md|SKILL]]s)
 
 ![preencoded.png](Image7.jpg)
 "팀원들은 리더와의 소통을 가장 큰 장벽으로 느끼고 있음" (Q4-1 ▼)

@@ -1,4 +1,6 @@
 ---
+status: Inbox
+type: Note
 source: gdrive
 original_title: "ESCON_College_Level_Extension_Design.md"
 drive_id: 1b2TabyxDJyDFOy-FbzvQr0dy5RPMjOFoHLgTu0Rf8Ew
@@ -10,7 +12,7 @@ processed: true
 
 ## 칼리지·레벨 체계 통합 (College & Level Layer Extension)
 
-**문서 목적**: ESCON의 기존 조직 → Enabler → Skill 3계층 온톨로지 위에, 스마트팩토리 칼리지 분류체계와 Lv1~Lv4 양성 레벨 체계를 비파괴적으로 얹기 위한 구현 설계서. **대상**: Claude Code (구현 실행자) **전제 원칙**: 기존 Enabler-Skill 데이터를 변경하지 않는다. 모든 확장은 신규 테이블 + 기존 테이블의 nullable 컬럼 추가로만 이뤄진다. **버전**: v1.0 (Design)
+**문서 목적**: ESCON의 기존 조직 → Enabler → [[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] 3계층 온톨로지 위에, 스마트팩토리 칼리지 분류체계와 Lv1~Lv4 양성 레벨 체계를 비파괴적으로 얹기 위한 구현 설계서. **대상**: [[CLAUDE.md|CLAUDE]] Code (구현 실행자) **전제 원칙**: 기존 Enabler-Skill 데이터를 변경하지 않는다. 모든 확장은 신규 테이블 + 기존 테이블의 nullable 컬럼 추가로만 이뤄진다. **버전**: v1.0 (Design)
 
 ## 0\. TL;DR (Claude Code 작업 요약)
 
@@ -460,4 +462,4 @@ Claude Code는 첫 작업 전 다음을 실독하여 설계의 필드명을 실�
 4.  기존 마이그레이션 파일 최신 번호 (00X의 X 결정)
 5.  scripts/migrate.js의 DB 커넥션·삽입 패턴 (재사용)
 
-*문서 끝. 본 설계는 ESCON v(현행)의 README 기준 작성되었으며, 실제 코드 구조와 차이가 있을 경우 부록 B의 실독 결과를 우선한다.*
+*문서 끝. 본 설계는 ESCON v(현행)의 [[README.md|README]] 기준 작성되었으며, 실제 코드 구조와 차이가 있을 경우 부록 B의 실독 결과를 우선한다.*

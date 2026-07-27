@@ -18,7 +18,7 @@ tags: [ops, ssot, dashboard, navigation]
 | 용도 | 위치 | 갱신 주체 |
 | :--- | :--- | :--- |
 | **사람이 읽는 변화 해석판** | [`_ops/change-log.md`](change-log.md) | 에이전트가 의미 있는 변경마다 4-질문 형식으로 기록 |
-| **자동 통계 대시보드 (라이브)** | GitHub Pages = `_ops/web/` (`index.html`+`data.json`) | `deploy-visual.yml`이 매일 `update_dashboard.py`로 갱신 후 Pages 발행 |
+| **자동 통계 대시보드 (라이브)** | GitHub Pages = `_ops/web/` (`index.html`+`data.[[Understand-Anything/understand-anything-plugin/skills/understand/languages/json.md|json]]`) | `deploy-visual.yml`이 매일 `update_dashboard.py`로 갱신 후 Pages 발행 |
 
 - "이번 주 무엇이, 왜 바뀌었나?" → **change-log.md** 를 본다.
 - "지금 위키 규모·고립·신선도 통계는?" → **Pages 대시보드** 를 본다.
@@ -29,9 +29,9 @@ tags: [ops, ssot, dashboard, navigation]
 
 | 표면 | 상태 | 비고 |
 | :--- | :--- | :--- |
-| `KNOWLEDGE_PULSE.md` (루트) | 로컬 자동생성 | `scripts/know_grow_monitor.py`가 매 싱크 재생성. 단발 스냅샷. |
+| `[[KNOWLEDGE_PULSE.md|KNOWLEDGE_PULSE]].md` (루트) | 로컬 자동생성 | `scripts/know_grow_monitor.py`가 매 싱크 재생성. 단발 스냅샷. |
 | `scripts/dashboard.py` | 로컬 전용(Streamlit) | Pages(정적)에선 동작 불가. Zavis_Brain 시절 잔재. |
-| `outputs/briefs/change-dashboard.html` | 독립 HTML | `generate_change_dashboard.py` 산출. Pages 파이프라인과 무관. |
+| `outputs/briefs/change-dashboard.html` | 독립 HTML | `g[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]erate_change_dashboard.py` 산출. Pages 파이프라인과 무관. |
 
 > 이 레거시 표면들을 물리적으로 제거하려면 이를 재생성하는 로컬 스크립트
 > (`know_grow_monitor.py`, `publish_dashboard.sh`, `sync_brain_auto.sh`)를 함께

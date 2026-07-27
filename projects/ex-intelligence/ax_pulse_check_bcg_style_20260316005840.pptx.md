@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\ax_pulse_check_bcg_style_20260316005840.pptx"
 converted_at: 2026-04-13 11:16:31
 category: Knowledge_Base
@@ -7,7 +9,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <!-- Slide number: 1 -->
 
-![preencoded.png](Image0.jpg)
+![pre[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]coded.png](Image0.jpg)
 1
 LG PRI
 
@@ -193,7 +195,7 @@ NLP 감성 분석 및
 
 Front-End / LG EP SSO
 
-Supabase / PostgreSQL
+Supabase / Postgre[[Understand-Anything/understand-anything-plugin/skills/understand/languages/sql.md|sql]]
 
 Sentiment Model / Edge Function
 
@@ -619,7 +621,7 @@ LG PRI HR Intelligence Report
 
 NOW
 1월
-1월Jan
+1월[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ja.md|ja]]n
 2월
 2월Feb
 3월

@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\4월\ex_intelligence_re_260402.pptx"
 converted_at: 2026-04-13 11:16:45
 category: Knowledge_Base
@@ -45,10 +47,10 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <!-- Slide number: 9 -->
 
-![preencoded.png](Image0.jpg)
+![pre[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]coded.png](Image0.jpg)
 
 ![preencoded.png](Image1.jpg)
-EX Intelligence
+[[projects/ex-intelligence/README.md|README]]
 LG PRI EXG팀 · 2026
 
 Working Backwards Essay

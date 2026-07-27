@@ -1,3 +1,7 @@
+---
+type: Note
+---
+
 status: Active
 # 🛰️ CSP-Brain 지능 리졸버 (Synaptic Resolver)
 
@@ -5,17 +9,17 @@ status: Active
 
 ## 1. 도메인별 라우팅 규칙 (Routing Rules)
 
-| 도메인        | 핵심 키워드                   | 참조 경로 (Target Path)                        | 담당 스킬 (Skill)    |
+| 도메인        | 핵심 키워드                   | 참조 경로 (Target Path)                        | 담당 스킬 ([[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]])    |
 | :------------ | :---------------------------- | :--------------------------------------------- | :------------------- |
 | **HR 전략**   | 채용, 면접, 평가, 조직문화    | `wiki/concepts/hr-*`, `projects/oka/`          | `csp-brain`          |
 | **AI 공학**   | 에이전트, MCP, 토큰, 프롬프트 | `wiki/concepts/ai-*`, `_ops/scripts/`          | `hermes-agent`       |
-| **자기 개선** | 성찰, 대사, 진화, 맥박        | `outputs/daily-reflect/`, `KNOWLEDGE_PULSE.md` | `navigator`          |
+| **자기 개선** | 성찰, 대사, 진화, 맥박        | `outputs/daily-reflect/`, `[[KNOWLEDGE_PULSE.md|KNOWLEDGE_PULSE]].md` | `navigator`          |
 | **투자/경제** | 분석, 레포트, 시장, 지표      | `outputs/analyses/INVESTMENT_*`                | `investment-analyst` |
 
 ## 2. 임계치 관리 (Token Escalation)
 
 - **Warning**: Context > 30,000 tokens 시 리졸버 가동.
-- **Action**: 가장 오래된 L4(산출물) 맥락부터 제거하고 L1(SOUL)과 L3(타임라인)만 유지.
+- **Action**: 가장 오래된 L4(산출물) 맥락부터 제거하고 L1([[SOUL.md|SOUL]])과 L3(타임라인)만 유지.
 
 ## 3. 파일링 컨벤션 (Filing as Logic)
 

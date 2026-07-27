@@ -7,7 +7,7 @@ processed_note: "wiki/tools/rlm-forge.md 신규 생성"
 
 ## rlm-forge 리포지토리 분석
 
-RLM-Forge 리포지토리를 살펴보겠습니다.검색 결과에 `Q00/rlm-forge`라는 리포지토리가 직접 나오지 않았습니다. 직접 해당 URL의 README를 가져와 보겠습니다.찾았습니다. Hype 사이트에서 간략한 설명을 발견했고, GitHub API를 통해 더 자세한 정보를 가져와 보겠습니다.이제 충분한 맥락을 확보했습니다. Hype 사이트의 한 줄 설명과 RLM 생태계 전반을 기반으로 설명드리겠습니다.
+RLM-Forge 리포지토리를 살펴보겠습니다.검색 결과에 `Q00/rlm-forge`라는 리포지토리가 직접 나오지 않았습니다. 직접 해당 URL의 [[README.md|README]]를 가져와 보겠습니다.찾았습니다. Hype 사이트에서 간략한 설명을 발견했고, GitHub API를 통해 더 자세한 정보를 가져와 보겠습니다.이제 충분한 맥락을 확보했습니다. Hype 사이트의 한 줄 설명과 RLM 생태계 전반을 기반으로 설명드리겠습니다.
 
 ---
 
@@ -17,7 +17,7 @@ CSP, 안타깝게도 GitHub의 robots.txt 제한 때문에 `Q00/rlm-forge` 리�
 
 ### 한 줄 요약
 
-Q00/rlm-forge는 "Runtime-lifted Recursive Language Model primitive for Hermes Agent and Ouroboros, with TraceGuard evidence gating"을 구현한 프로젝트이며, 스타 수는 23개 정도입니다.
+Q00/rlm-forge는 "Runtime-lifted Recursive Language Model primitive for Hermes Ag[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t and Ouroboros, with TraceGuard evidence gating"을 구현한 프로젝트이며, 스타 수는 23개 정도입니다.
 
 ### 이 설명을 풀어보면
 
@@ -58,4 +58,4 @@ rlm-forge에서 "TraceGuard evidence gating"이란, RLM의 재귀 호출 과정�
 
 ---
 
-리포지토리 자체의 소스 코드를 직접 분석하고 싶으시다면, 로컬에서 `git clone`으로 받아서 Claude Code로 코드 구조를 탐색하는 것을 추천드립니다. 특정 부분이 더 궁금하신가요?
+리포지토리 자체의 소스 코드를 직접 분석하고 싶으시다면, 로컬에서 `git clone`으로 받아서 [[CLAUDE.md|CLAUDE]] Code로 코드 구조를 탐색하는 것을 추천드립니다. 특정 부분이 더 궁금하신가요?

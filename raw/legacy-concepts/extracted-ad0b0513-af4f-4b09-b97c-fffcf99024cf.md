@@ -1,3 +1,7 @@
+---
+type: Resource
+---
+
 ﻿# Extracted Knowledge from Conv: ad0b0513-af4f-4b09-b97c-fffcf99024cf
 
 **Date**: 2025-11-05T23:40:45.917478Z

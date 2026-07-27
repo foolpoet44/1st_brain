@@ -1,4 +1,6 @@
 ---
+status: Active
+type: Project
 original_path: "S:\★Y26\2월\Pulse_pjt\4월\임원모니터링\임원모니터링\(Template)②리더십 모니터링_박명주 소장_v0.3.pptx"
 converted_at: 2026-04-13 11:16:49
 category: Knowledge_Base
@@ -218,7 +220,7 @@ L&P Task
 김은한 선임
 [레이저기술파트]
 
-Janssen Stefan 책임
+[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/ja.md|ja]]nss[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]] Stefan 책임
 이태호 책임
 한정윤 연구원
 
