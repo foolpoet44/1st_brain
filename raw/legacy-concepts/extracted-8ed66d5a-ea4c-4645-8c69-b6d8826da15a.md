@@ -18,8 +18,8 @@ Layer 1 측정 (Psychology) → 매개 변수
   - POS 지수: "조직이 나의 기여를 가치있게 여긴다" (3문항)
   - SDT 욕구충족: 자율성·유능감·관계성 각 1문항 (3문항)
 
-Layer 2 측정 (Engagement) → 핵심 결과
-  - UWES-9 단축형: Vigor 3 / Dedication 3 / Absorption 3 (9문항)
+Layer 2 측정 ([[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]gagement) → 핵심 결과
+  - UWES-9 단축형: Vi[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]r 3 / Dedication 3 / Absorption 3 (9문항)
   - Job Engagement vs Org. Engagement 구분
 
 Layer 3 측정 (Outcomes) → 선행 지표
@@ -50,7 +50,7 @@ Google Forms / Typeform
 monday.com (응답률 모니터링 + 알림 자동화)
   ↓
 [분석 레이어]
-Google Sheets (원시 데이터) → Python/Claude API (패턴 분석)
+Google Sheets (원시 데이터) → Python/[[CLAUDE.md|CLAUDE]] API (패턴 분석)
   ↓
 [인사이트 레이어]
 Notion (대시보드 + 리포트) + Claude (자연어 해석)

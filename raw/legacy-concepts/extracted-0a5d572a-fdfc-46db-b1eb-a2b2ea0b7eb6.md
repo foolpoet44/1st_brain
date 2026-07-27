@@ -12,7 +12,7 @@ type: Resource
 # 세션 생성
 tmux new -s hr-workspace
 
-# 안에서 Claude Code 실행
+# 안에서 [[CLAUDE.md|CLAUDE]] Code 실행
 claude
 
 # 세션 detach (작업은 계속 돌아감)
@@ -27,6 +27,6 @@ tmux attach -t hr-workspace
 ```bash
 # 프로젝트별 세션
 tmux new -s escon        # ESCON Next.js 작업
-tmux new -s ex-intel     # EX Intelligence
+tmux new -s ex-intel     # EX Intellig[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ce
 tmux new -s ax-strategy  # AX 전략 문서
 ```

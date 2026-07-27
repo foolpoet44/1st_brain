@@ -6,12 +6,12 @@ type: Resource
 
 **Date**: 2026-01-01T10:06:52.803715Z
 
-### Extracted Code (javascript)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/locales/ja.md|ja]]vascript)
 
 ```javascript
 // ❌ 잘못된 예시
 messages: [
-  { role: "user", content: "안녕" },
+  { role: "user", cont[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t: "안녕" },
   { role: "assistant", content: "안녕하세요" },
   {
     role: "user",
@@ -90,7 +90,7 @@ const response = await fetch("https://api.anthropic.com/v1/messages", {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    model: "claude-sonnet-4-20250514",
+    model: "[[CLAUDE.md|CLAUDE]]-sonnet-4-20250514",
     max_tokens: 1000,
     messages: [
       {

@@ -22,7 +22,7 @@ ollama --version
 ```bash
 # 원하는 모델 다운로드 (예시)
 ollama pull llama3.2
-ollama pull qwen2.5:7b      # 경량 + 한국어 준수
+ollama pull qw[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]2.5:7b      # 경량 + 한국어 준수
 ollama pull gemma3:12b       # 성능 밸런스
 ```
 
@@ -50,7 +50,7 @@ ls /Applications | grep -i -E "ollama|clo|lm|open"
 
 ```bash
 # 지금 바로 로컬 모델로 실행
-ollama run qwen3.5:9b
+ollama [[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]n qwen3.5:9b
 ollama run qwen3-coder:latest    # 코딩 작업용
 ollama run qwen2.5-coder:7b      # 경량 코딩용
 ```

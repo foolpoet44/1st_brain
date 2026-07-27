@@ -10,12 +10,12 @@ tags: ["anthropic", "claude-4.8", "prompt-engineering", "infra"]
 url: https://x.com/gonnector/status/2060142082686373933
 ---
 
-# [SIGNAL] Claude Opus 4.8 발표 및 프롬프팅 패러다임의 전환
+# [SIGNAL] [[CLAUDE.md|CLAUDE]] Opus 4.8 발표 및 프롬프팅 패러다임의 전환
 
 ## 핵심 요약 (TL;DR)
 
 - **Anthropic의 전략 변화**: 모델을 '다그치는(anti-laziness)' 스캐폴딩이 아닌, 명시적인 **Effort 파라미터**와 **범위 지정**을 통한 제어로 전환.
-- **문자 그대로의 해석 (Literal Mastery)**: 낮은 effort에서 지시를 극도로 명시적으로 해석함. 일반화(Generalization)를 원할 경우 범위를 직접 명시해야 함.
+- **문자 그대로의 해석 (Literal Mastery)**: 낮은 effort에서 지시를 극도로 명시적으로 해석함. 일반화(G[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]eralization)를 원할 경우 범위를 직접 명시해야 함.
 
 ## 4.8 프롬프팅 7대 핵심 변화
 

@@ -9,8 +9,8 @@ type: Resource
 ### Extracted Code (bash)
 
 ```bash
-npm uninstall -g @anthropic-ai/claude-code
-rm ~/.claude.json
+npm uninstall -g @anthropic-ai/[[CLAUDE.md|CLAUDE]]-code
+rm ~/.claude.[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/json.md|json]]
 rm -rf ~/.claude/
 npm cache clean --force
 npm install -g @anthropic-ai/claude-code

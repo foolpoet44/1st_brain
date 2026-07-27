@@ -28,4 +28,4 @@ tags: ["trading", "psychology", "failed-pattern", "market-sentiment"]
 
 ---
 
-_Reference: Tech Charts Insight (2026-05-30)_
+_Refer[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ce: Tech Charts Insight (2026-05-30)_

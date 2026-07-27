@@ -10,7 +10,7 @@ type: Resource
 
 ```text
 Physical AI 역량 체계
-├── Core Technical Skills
+├── Core Technical [[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s
 │   ├── Robotics & Manipulation
 │   ├── Computer Vision & Perception
 │   ├── Motion Planning & Control
@@ -142,7 +142,7 @@ from pgvector.sqlalchemy import Vector
 class AdvancedPhysicalAIDB:
     def __init__(self, connection_string):
         self.engine = create_engine(connection_string)
-        self.setup_vector_search()
+        self.[[SETUP.md|SETUP]]_vector_search()
 
     def setup_vector_search(self):
         """임베딩 기반 시맨틱 검색 설정"""
@@ -992,7 +992,7 @@ ORDER BY related_skills DESC;
 1. physical_ai_skills.db
    - 완성된 SQLite 데이터베이스
 
-2. README.md
+2. [[README.md|README]].md
    - 데이터베이스 개요
    - 테이블 스키마 설명
    - 사용 예시 (Python/SQL)

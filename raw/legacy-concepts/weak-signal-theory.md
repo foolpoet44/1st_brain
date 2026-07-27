@@ -8,9 +8,9 @@ type: Resource
 
 ---
 
-## 핵심 개념 (Compiled Truth)
+## 핵심 개념 (Compiled T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]th)
 
-H. Igor Ansoff가 제안한 개념으로, 환경의 급격한 변화가 닥치기 전 발생하는 불완전하고 단편적인 정보를 의미합니다. CSP Brain은 조직 내 EX(Employee Experience)의 붕괴나 혁신의 기회를 이 '약한 신호' 단계에서 포착하는 것을 목표로 합니다.
+H. I[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]r Ansoff가 제안한 개념으로, 환경의 급격한 변화가 닥치기 전 발생하는 불완전하고 단편적인 정보를 의미합니다. CSP Brain은 조직 내 EX(Employee Experi[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce)의 붕괴나 혁신의 기회를 이 '약한 신호' 단계에서 포착하는 것을 목표로 합니다.
 
 ### 1. 신호의 단계 (The Levels of Signals)
 

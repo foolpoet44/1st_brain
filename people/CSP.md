@@ -10,12 +10,12 @@ related_to: "[[Organization-Memory]]"
 
 ---
 
-## Compiled Truth
+## Compiled T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]th
 
 ### 🔍 Profile
 
 - **Role**: Creative Solution Provider (CSP)
-- **Background**: 17+ years HR experience
+- **Background**: 17+ years HR experi[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce
 - **Email**: foolpoet44@gmail.com
 - **Identity**: AI Transformation (AX) leader
 

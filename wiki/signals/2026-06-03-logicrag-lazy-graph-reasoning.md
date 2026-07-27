@@ -17,7 +17,7 @@ status: 🟢 INGESTED
 
 ### 🧠 심리학적 유추: 고정 관념 vs 맥락적 사고
 
-- **고정 관념(Pre-rendered Graph)**: 모든 상황에 대비해 미리 판단을 내려두는 것. 변화에 취약하고 유지비가 높다.
+- **고정 관념(Pre-r[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]dered Graph)**: 모든 상황에 대비해 미리 판단을 내려두는 것. 변화에 취약하고 유지비가 높다.
 - **맥락적 사고(LogicRAG)**: 편견 없이 대기하다가, 질문(자극)이 주어지면 그 순간 가장 적합한 논리적 연결을 수행하는 것.
 
 ## 2. 주요 기술적 원자 (Technical Atoms)
@@ -28,7 +28,7 @@ status: 🟢 INGESTED
 
 ## 3. csp-brain에의 적용점 (Actionable Strategy)
 
-- **리졸버(Resolver)의 진화**: 현재의 `resolver_engine.py`가 단순히 파일을 찾는 수준을 넘어, 파일 간의 논리적 우선순위를 결정하여 **'순차적 사고(Chain of Thought for Files)'**를 수행하도록 고도화할 근거가 됨.
+- **리졸버([[_ops/RESOLVER.md|RESOLVER]])의 진화**: 현재의 `resolver_engine.py`가 단순히 파일을 찾는 수준을 넘어, 파일 간의 논리적 우선순위를 결정하여 **'순차적 사고(Chain of Thought for Files)'**를 수행하도록 고도화할 근거가 됨.
 - **가성비의 미학**: gpt-4o-mini 수준의 모델로도 구조적 설계만 뒷받침된다면 64.7%의 압도적 정확도(benchmarked)를 달성할 수 있음을 확인. 이는 FDE(Field Deployment Engineer)가 가져야 할 '실용적 지능 활용'의 모범 사례임.
 
 ## 4. 리졸버의 한마디 (Navigator's Note)

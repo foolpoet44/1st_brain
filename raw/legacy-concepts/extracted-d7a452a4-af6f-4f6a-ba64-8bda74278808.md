@@ -28,7 +28,7 @@ Part 4. Solution & Strategy (BCG 스타일)
 ├─ 전략적 방향성
 └─ 기대 효과
 
-Part 5. Implementation Roadmap (액센츄어 스타일)
+Part 5. Implem[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]tation Roadmap (액센츄어 스타일)
 ├─ 실행 로드맵
 ├─ 세부 액션 플랜
 ├─ 리스크 & 대응책
@@ -268,7 +268,7 @@ Horizon 3 (12-24개월): 최적화
 
 Phase  | Activity           | Owner    | Timeline | Deliverable
 ────────────────────────────────────────────────────────────
-Phase 1: Setup
+Phase 1: [[SETUP.md|SETUP]]
        | 태스크포스 구성    | HR팀     | Week 1-2 | 팀 구성완료
        | 요구사항 정의      | PM       | Week 2-4 | 요구사항 문서
        | 벤더 선정         | 구매팀    | Week 3-6 | 계약 체결
@@ -2699,7 +2699,7 @@ ___ 달성 여부, ___, ___를 공유하고
 ### Extracted Code (text)
 
 ```text
-Claude에게 저장할 재사용 프롬프트:
+[[CLAUDE.md|CLAUDE]]에게 저장할 재사용 프롬프트:
 
 "BCG 텍스트 기반 프레임워크(경어체)를 사용해서 보고서를 작성해줘.
 

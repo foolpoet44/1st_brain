@@ -8,12 +8,12 @@ tags: [investment, robotics, physical-ai, humanoid, smart-factory, labor-market]
 aliases: [로보틱스 초집중 분석, 피지컬 AI 시대]
 ---
 
-# Investment Memo: The Robotics Explosion
+# Investm[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t Memo: The Robotics Explosion
 
 ## 1. 거시 맥락 (Macro Context)
 
 - **지능의 육체화 (The Embodiment)**: 가상의 공간(LLM)에 머물던 지능이 드디어 물리적 실체(Body)를 얻었습니다. 2026년은 실험실이 아닌 '실제 공장 라인'에 휴머노이드가 공식 투입되는 원년입니다.
-- **인구 구조의 역설**: 저출산으로 인한 노동력 부족은 이제 선택이 아닌 생존의 문제가 되었으며, 이는 HR 도메인에서 **"인간 노동력의 재배치(Reskilling)"**라는 거대한 파도를 일으키고 있습니다.
+- **인구 구조의 역설**: 저출산으로 인한 노동력 부족은 이제 선택이 아닌 생존의 문제가 되었으며, 이는 HR 도메인에서 **"인간 노동력의 재배치(Re[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]ing)"**라는 거대한 파도를 일으키고 있습니다.
 - **범용 로봇 OS의 탄생**: 특정 작업만 수행하던 로봇에서, 보고 배우며(End-to-End Learning) 다양한 일을 수행하는 '멀티모달 피지컬 AI'로 진화했습니다.
 
 ## 2. 투자 Thesis (Investment Thesis)

@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-기술 스킬 (Hard Skills)
+기술 스킬 (Hard [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s)
 ├─ 프로그래밍
 │  ├─ 언어
 │  │  ├─ Python
@@ -33,7 +33,7 @@ type: Resource
 
 ```text
 Python --requires--> 프로그래밍 기초
-Python --enables--> 데이터 분석
+Python --[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ables--> 데이터 분석
 Python --similar-to--> R
 Django --requires--> Python
 풀스택 개발 --combines--> 프론트엔드 + 백엔드

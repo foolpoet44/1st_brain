@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (bash)
 
 ```bash
-# Claude Code에 추가 (가장 간단)
+# [[CLAUDE.md|CLAUDE]] Code에 추가 (가장 간단)
 claude mcp add context7 -- npx -y @upstash/context7-mcp
 
 # 또는 HTTP 방식
@@ -20,10 +20,10 @@ claude mcp add --transport http context7 https://mcp.context7.com/mcp
 
 ```bash
 # 프롬프트에 "use context7" 추가
-"use context7 to help me implement FastAPI authentication"
+"use context7 to help me implem[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t FastAPI authentication"
 
 # 또는 자동 규칙 설정
-"Always use context7 when I need code generation, setup or configuration steps, or library/API documentation"
+"Always use context7 when I need code generation, [[SETUP.md|SETUP]] or configuration steps, or library/API documentation"
 ```
 
 ### Extracted Code (bash)

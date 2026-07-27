@@ -47,7 +47,7 @@ type: Resource
 
 💻 나라채권
 - 국고채 전문 거래시스템
-- www.komsco.com
+- www.[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/ko.md|ko]]msco.com
 - 직접 매매 가능
 ```
 

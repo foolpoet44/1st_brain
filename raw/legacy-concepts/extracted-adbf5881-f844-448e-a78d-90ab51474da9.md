@@ -27,7 +27,7 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-리더십 --> has_component --> 전략적 리더십
+리더십 --> has_compon[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t --> 전략적 리더십
          --> has_component --> 변혁적 리더십
          --> has_component --> 관리적 리더십
 
@@ -208,7 +208,7 @@ org:Leadership
   hr:definition "팀의 목표 달성을 주도하는 능력" ;
   hr:hasComponent org:StrategicThinking ;
   hr:hasComponent org:ProblemSolving ;
-  hr:requires org:TrustBuilding ;
+  hr:requires org:T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]stBuilding ;
   hr:applicableLevel "team_lead" .
 
 org:ProblemSolving
@@ -1884,7 +1884,7 @@ LG뿐만 아니라:
 2단계: 평가 시스템 구축
    "조직별 맞춤 행동지표 자동 생성"
    "평가자 가이드 자동 생성"
-   → Claude Code로 자동화
+   → [[CLAUDE.md|CLAUDE]] Code로 자동화
 
 3단계: 발전 경로 설계
    "이 사람이 Level 2에서 3으로 가려면 뭘 해야 하는가?"

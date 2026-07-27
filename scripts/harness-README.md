@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 ---
 
 # Zavis_Brain Harness - 최종 요약
@@ -16,7 +17,7 @@ type: Note
 
 - **핵심 기능:** 문서 메타데이터 실시간 추적
 - **생성 파일:**
-  - `harness/manifest_schema.py` - 스키마 정의 (category, tags, md_path 추가)
+  - `harness/manifest_schema.py` - 스키마 정의 (cate[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]ry, tags, md_path 추가)
   - `harness/watcher.py` - 파일 시스템 감시자
   - `harness/migrate.py` - v2 스키마 마이그레이션
   - `harness/indexer.py` - 역색인 생성기
@@ -46,7 +47,7 @@ type: Note
 
 - **핵심 기능:** 주간보고 초안 자동 생성
 - **생성 파일:**
-  - `harness/report_gen.py` - 보고 생성기 + PPTX 내보내기
+  - `harness/report_g[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]].py` - 보고 생성기 + PPTX 내보내기
 
 - **결과:**
   ```
@@ -129,7 +130,7 @@ python indexer.py
 
 ## 🔧 확장 가이드
 
-### Claude API 연동 (보고 자동화 고도화)
+### [[CLAUDE.md|CLAUDE]] API 연동 (보고 자동화 고도화)
 
 ```python
 # harness/report_gen.py 에서

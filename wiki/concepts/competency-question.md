@@ -8,7 +8,7 @@ tags: [ontology, testing, knowledge-engineering]
 related_to: "[[opq-framework]]"
 ---
 
-# Competency Question (CQ)
+# Compet[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]cy Question (CQ)
 
 ## 1. 개념 (The Lens)
 

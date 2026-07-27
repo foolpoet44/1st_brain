@@ -19,7 +19,7 @@ type: Resource
 │  실시간 응답  │  자율 루프 실행   │  비실시간 대량 처리  │
 │  CSP 직접   │  밤새 빌드/테스트  │  코드리뷰, 문서화    │
 │  대화하며   │  ESCON 자동화     │  Daily Radar 생성   │
-│  코딩       │  CI/CD 파이프라인  │  Skill Ontology     │
+│  코딩       │  CI/CD 파이프라인  │  [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Ontology     │
 └─────────────┴──────────────────┴────────────────────┘
 ```
 
@@ -28,7 +28,7 @@ type: Resource
 ```bash
 # ~/.csp_interactive (Lane 1 - Pro 구독)
 unset ANTHROPIC_API_KEY
-alias csp-interactive="claude"
+alias csp-interactive="[[CLAUDE.md|CLAUDE]]"
 
 # ~/.csp_agent (Lane 2 - API Key)
 export ANTHROPIC_API_KEY="sk-ant-..."

@@ -1,5 +1,6 @@
 ---
 type: Reflection
+status: Active
 ---
 
 # I/O 심리학 브리핑: 2026 년 7 월 22 일 (수)

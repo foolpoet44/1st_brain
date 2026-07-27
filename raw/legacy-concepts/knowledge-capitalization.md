@@ -4,7 +4,7 @@ type: Resource
 
 # 오늘의 인사이트: 지식의 자산화 (Knowledge Capitalization)
 
-## Compiled Truth
+## Compiled T[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/ru.md|ru]]th
 
 **개요**: 기록된 데이터를 AI가 즉각적으로 처리 가능한 '원자 단위'로 분해하고 지각화하는 과정. 단순 백업과 달리, 지식의 **용해성(Solubility)**을 높여 추론의 재료로 만드는 것을 의미한다.
 
@@ -19,7 +19,7 @@ type: Resource
 
 ---
 
-## Timeline (append-only — 절대 수정/삭제 금지)
+## Timeline (app[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]d-only — 절대 수정/삭제 금지)
 
 ### 2026-04-14
 

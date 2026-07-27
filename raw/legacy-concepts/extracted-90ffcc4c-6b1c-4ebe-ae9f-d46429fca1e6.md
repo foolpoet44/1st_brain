@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-① 알아야 할 것의 전체 목록 작성 (Full EX Inventory)
+① 알아야 할 것의 전체 목록 작성 (Full EX Inv[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]tory)
         ↓
 ② 측정 방식 분류 (Pulse / 심층 / 행동데이터 / 대화)
         ↓
@@ -99,7 +99,7 @@ type: Resource
 ──────────────────────────────────────────────────────────────────────────────────────────────
   리더십 분석 근거                          구성원 경험 신호
   ─────────────────────────────────         ──────────────────────────────────────────
-  3.3     Guru 암묵지 시스템 미전수      →  "배울 수 있는 구조가 없다"
+  3.3     Gu[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]] 암묵지 시스템 미전수      →  "배울 수 있는 구조가 없다"
   윤승용  개별 몰입 / 조직 전수 부재    →  기술 성장 경로 단절 체감
   3.1     레거시 조직 인정·보상 부재    →  "열심히 해도 여기선 아무 의미가 없다"
 

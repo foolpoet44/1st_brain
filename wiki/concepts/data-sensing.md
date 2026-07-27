@@ -8,9 +8,9 @@ tags: [data, architecture, ex-intelligence, sensing]
 aliases: [데이터 센싱, L1/L2/L3]
 ---
 
-# Data Sensing (L1/L2/L3 Architecture)
+# Data S[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]sing (L1/L2/L3 Architecture)
 
-## Compiled Truth
+## Compiled T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]th
 
 HR 인텔리전스 시스템에서 데이터의 신뢰도와 깊이를 확보하기 위해, 명시적 답변뿐만 아니라 행동과 맥락을 계층화하여 수집하는 방식입니다.
 

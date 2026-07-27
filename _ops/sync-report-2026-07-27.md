@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 ---
 
 # 🧠 CSP-Brain 일일 기억 공고화 리포트

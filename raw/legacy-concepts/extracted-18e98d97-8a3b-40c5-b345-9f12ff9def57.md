@@ -13,7 +13,7 @@ mkdir ms-google-bridge
 cd ms-google-bridge
 
 # 가상환경 생성
-python -m venv venv
+python -m v[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]v venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # 프로젝트 구조
@@ -48,7 +48,7 @@ pandas==2.1.4
 pyyaml==6.0.1
 
 # 로깅 및 모니터링
-loguru==0.7.2
+logu[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]==0.7.2
 ```
 
 ### Extracted Code (python)
@@ -690,7 +690,7 @@ if __name__ == '__main__':
     cli()
 ```
 
-### Extracted Code (dockerfile)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/dockerfile.md|dockerfile]])
 
 ```dockerfile
 # Dockerfile

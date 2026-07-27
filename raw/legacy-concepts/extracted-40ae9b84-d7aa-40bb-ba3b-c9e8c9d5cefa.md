@@ -46,7 +46,7 @@ type: Resource
 설명 방식 선호: "인문학, 철학, 심리학적 설명", "보고서보다는 에세이적인 설명"을 선호합니다.
 - 증거: userPreferences에 직접 명시됨.
 
-도구 선호: "Claude.ai + Claude Code workflow strongly preferred; Google ecosystem benchmarking considered alongside Microsoft 365 environment."
+도구 선호: "[[CLAUDE.md|CLAUDE]].ai + Claude Code workflow strongly preferred; Google ecosystem benchmarking considered alongside Microsoft 365 environment."
 - 증거: 메모리에 명시됨.
 
 Vibe coding 및 자동화 철학: "do it once, automate it forever"
@@ -68,7 +68,7 @@ Vibe coding 및 자동화 철학: "do it once, automate it forever"
 
 [2026 연간] 2026 핵심 미션 — AX 내재화를 통한 조직 생산성/성과 제고
   ① AI 활용도 제고 (Vibe-Coding 교육, 워크플로우 재설계, 연간 6개 과정 신설)
-  ② Physical AI Tech Leader 육성 (Skill Ontology 기반 LV3+ 30명 Pool)
+  ② Physical AI Tech Leader 육성 ([[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Ontology 기반 LV3+ 30명 Pool)
   ③ AX 역량 고도화 (AI Agent 개발, 생산성 10% 개선)
   ④ 조직 건강도 Pulse Check 체계 구축 (참여율 85%, Well-Being 15% 개선)
   KPI: AX 성숙도 Survey 전사 평균 대비 15% 이상 향상
@@ -95,7 +95,7 @@ Vibe coding 및 자동화 철학: "do it once, automate it forever"
 - 증거: "verifying PM work experience for 50–100 individuals using a SharePoint + Power Automate architecture"
 
 [진행 중] CSP 아키텍처 (Claude Code 기반 hr-workspace)
-  - 4-layer 폴더 구조 (Rules/Skills/Agents/CLAUDE.md)
+  - 4-layer 폴더 구조 (Rules/Skills/[[AGENTS.md|AGENTS]]/CLAUDE.md)
   - Convergence Layer: ConvergenceCalculator, PathologyDetector
   - Ouroboros 자기진화 방법론, DoD 체크포인트
 - 증거: 메모리에 명시됨.

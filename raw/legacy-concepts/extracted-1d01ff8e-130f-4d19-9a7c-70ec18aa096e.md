@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (markdown)
 
 ```markdown
-# CSP Global Claude Rules
+# CSP Global [[CLAUDE.md|CLAUDE]] Rules
 
 ## 나는 누구인가
 
@@ -67,7 +67,7 @@ type: Resource
 
 ## 컨텍스트 로딩 지시
 
-- 프로젝트 워크스페이스에 CLAUDE.md 또는 AGENTS.md가 있으면 반드시 먼저 읽을 것
+- 프로젝트 워크스페이스에 CLAUDE.md 또는 [[AGENTS.md|AGENTS]].md가 있으면 반드시 먼저 읽을 것
 - 하위 폴더에도 CLAUDE.md가 있을 수 있으니 재귀적으로 탐색할 것
 - 읽은 후 "CLAUDE.md 로드 완료" 메시지를 출력할 것
 
@@ -81,7 +81,7 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-~/.gemini/antigravity/skills/
+~/.[[GEMINI.md|GEMINI]]/antigravity/skills/
 ├── csp-communication/
 │   └── SKILL.md          ← 응답 스타일 규칙
 ├── hr-ontology/

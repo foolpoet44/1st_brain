@@ -13,7 +13,7 @@ type: Resource
 sudo apt install ibus-hangul
 sudo apt install fcitx5-hangul
 
-# CentOS/RHEL/Fedora
+# C[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]tOS/RHEL/Fedora
 sudo yum install ibus-hangul
 sudo dnf install fcitx5-hangul
 ```
@@ -45,7 +45,7 @@ rpm -qa | grep ibus-hangul
 dnf list installed | grep ibus
 
 # 사용자 설정으로 활성화
-ibus-setup
+ibus-[[SETUP.md|SETUP]]
 ```
 
 ### Extracted Code (bash)

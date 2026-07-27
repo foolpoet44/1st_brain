@@ -1,5 +1,21 @@
 ---
 type: Note
+status: Active
+---
+
+## 2026-07-28
+
+### [BRIEFING] HR Tech Psychology 일일 브리핑 — 속도 환영, SCAN 프레임워크, 인지적 공동조절
+
+- **무엇이 바뀌었나**: 2026 년 7 월 28 일 오전 9 시 10 분, I/O 심리학·인지 심리학·행동 경제학 최신 논문 4 편을 기반으로 HR Tech Psychology 일일 브리핑 작성 (`outputs/briefings/HR_PSYCHO_BRIEFING_2026-07-28.md`). 핵심 발견: (1) **속도 환영 (Speedup Illusion)** — AI 보조 작업 시간을 57.8 초 과소평가 (p<0.001), (2) **SCAN 프레임워크** — 작업 할당을 4 개 영역 (S-C-A-N) 으로 분류하는 인간 중심 의사결정 모델, (3) **인지적 공동조절 (Cognitive Co-Regulation)** — AI 안전성은 외부 통제가 아닌 인간-AI 시스템 전체의 공동 조절에서 나옴, (4) **Credential Fluency** — 비학위 자격증의 가치는 직무 관련성에 따라 3.8%(관련) vs 1.8%(무관련).
+- **왜 중요한가**: 어제 저녁 성찰 (REFLECT_2026-07-27.md) 이 지적한 **분류기 오류 (python.md → Meeting)** 는 바로 이 속도 환영의 실체다. "성공률 100%"는 프로세스 완료율이지 분류 정확도가 아니다. SCAN 프레임워크의 **N 영역 (Non-negotiable)** 을 채용 프로세스에 명시적으로 정의하지 않으면, AI 는 노동 (labor) 의 영역을 넘어 행위 (action) 의 영역까지 잠식한다. HR 의 새로운 역량은 **AI 를 멈출 수 있는 용기**에서 나온다.
+- **영향 범위**: `outputs/briefings/HR_PSYCHO_BRIEFING_2026-07-28.md`, `KNOWLEDGE_PULSE.md` (업데이트 완료), `_ops/change-log.md`. [[agentic-recruitment-proxy]] 에 SCAN 매핑 필요, [[fde-talent-model]] 에 속도 환영 보정 훈련 필요, [[bp-signal-intelligence]] 에 Evolution Gate YAML 스키마 적용 필요.
+- **다음 확인**: 
+  1. **Evolution Gate 구현**: `scripts/auto-classify-types.sh` 가 YAML 스키마 (required: true, audit_log: true, rollback_enabled: true, validation_sample: 10) 를 준수하도록 수정.
+  2. **N 영역 매핑**: 채용 프로세스 중 인간이 반드시 개입해야 하는 3 단계를 `_ops/human-gates/recruitment-n-zones.md` 에 명세.
+  3. **지식 원자 등록**: 오늘 브리핑의 4 개 통찰을 [[hr-conceptual-atoms]] 에 등록 (통계 + 볼트 연결 + 핵심 통찰 구조).
+  4. **가시성 점검**: KNOWLEDGE_PULSE.md 가 오늘 브리핑을 반영했는지 확인 (완료).
+
 ---
 
 ## 2026-07-25

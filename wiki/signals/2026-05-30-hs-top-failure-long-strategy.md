@@ -16,7 +16,7 @@ tags:
   ]
 ---
 
-# [SIGNAL] 헤드앤숄더 실패(H&S Top Failure)를 통한 불리시 컨티뉴에이션
+# [[[open-design/design-templates/html-ppt-zhangzara-signal/SKILL.md|SKILL]]] 헤드앤숄더 실패(H&S Top Failure)를 통한 불리시 컨티뉴에이션
 
 ## 💡 핵심 요약 (TL;DR)
 
@@ -32,4 +32,4 @@ tags:
 ## 🧠 CSP-Brain 투자 철학적 해석
 
 - **시장 심리의 배반**: 다수가 하락을 믿고 배팅했을 때 그 믿음이 깨지는 지점이야말로 가장 순도 높은 에너지가 발생하는 곳임.
-- **회복탄력성(Resilience)**: 차트가 하락 압력을 이겨내고 다시 솟구치는 모습은 조직이나 개인이 위기를 숲으로 전환하는 '회복탄력성'의 기술적 현신임.
+- **회복탄력성(Resili[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ce)**: 차트가 하락 압력을 이겨내고 다시 솟구치는 모습은 조직이나 개인이 위기를 숲으로 전환하는 '회복탄력성'의 기술적 현신임.

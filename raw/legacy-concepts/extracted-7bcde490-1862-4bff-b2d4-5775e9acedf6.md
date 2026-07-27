@@ -29,7 +29,7 @@ type: Resource
 
 ```python
 # 실시간 모니터링 지표
-currency_flow_indicators = {
+curr[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]cy_flow_indicators = {
     # 직접 지표
     "DXY": "달러 인덱스 (전체 자금 방향)",
     "USDKRW": "원달러 환율 (한국 유출입)",
@@ -40,7 +40,7 @@ currency_flow_indicators = {
     "MOVE": "채권 변동성 (채권시장 스트레스)",
 
     # 크로스 레이트
-    "EURUSD": "유럽→미국 자금 흐름",
+    "EU[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]SD": "유럽→미국 자금 흐름",
     "AUDUSD": "위험선호도 (호주달러=원자재 통화)",
 }
 ```
@@ -239,7 +239,7 @@ class MoneyFlowScanner:
 ├─ 📈 일일 대시보드
 │  ├─ 오늘의 주요 지표 스냅샷
 │  ├─ 이상 신호 감지 로그
-│  └─ AI 해석 (Claude/GPT 요약)
+│  └─ AI 해석 ([[CLAUDE.md|CLAUDE]]/GPT 요약)
 │
 ├─ 📚 플레이북 라이브러리
 │  ├─ 시나리오별 대응 매뉴얼

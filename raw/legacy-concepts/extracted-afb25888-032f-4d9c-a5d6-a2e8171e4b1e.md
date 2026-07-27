@@ -33,11 +33,11 @@ type: Resource
 </body>
 ```
 
-### Extracted Code (javascript)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/locales/ja.md|ja]]vascript)
 
 ```javascript
 // Step 3: JavaScript로 PowerPoint 생성
-const pptxgen = require("pptxgenjs");
+const pptxg[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]] = require("pptxgenjs");
 const { html2pptx } = require("@ant/html2pptx");
 
 const pptx = new pptxgen();
@@ -146,7 +146,7 @@ python scripts/thumbnail.py template.pptx
         {
           "text": "2025년 사업 계획",
           "alignment": "CENTER",
-          "bold": true
+          "bold": t[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]e
         }
       ]
     },

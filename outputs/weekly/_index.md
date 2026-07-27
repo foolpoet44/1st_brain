@@ -9,7 +9,7 @@ tags: [index, digest]
 
 # Weekly Digests
 
-매주 금요일 Dream Cycle 또는 `scripts/generate_weekly.py`에서 생성되는 주간 변화 다이제스트 보관소.
+매주 금요일 Dream Cycle 또는 `scripts/g[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]erate_weekly.py`에서 생성되는 주간 변화 다이제스트 보관소.
 
 ## 생성 규칙
 

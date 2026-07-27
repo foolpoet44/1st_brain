@@ -21,8 +21,8 @@ AI 에이전트나 LLM이 내놓은 결과물이 **실제 비즈니스 기준에
 - 비즈니스 목적에 부합하는지 지속적으로 시험합니다.
 - **HR 도메인 예시**: 인사 평가 데이터 요약 시 편향성 여부, 기업 핵심 가치관 반영 여부, 기밀 정보 유출 방지 등을 자동화된 데이터셋(Eval Dataset)으로 점검합니다.
 
-### ② 벤더 종속(Lock-in) 방지 '독립 보증서' (Vendor Independence)
-- 모델(GPT, Claude, Llama 등)이나 프레임워크를 교체할 때 객관적인 기준점이 됩니다.
+### ② 벤더 종속(Lock-in) 방지 '독립 보증서' (V[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]dor Independence)
+- 모델(GPT, [[CLAUDE.md|CLAUDE]], Llama 등)이나 프레임워크를 교체할 때 객관적인 기준점이 됩니다.
 - "모델을 바꿔도 정확도가 95% 이상 유지되는가?"에 대한 확신을 제공하여 기술적 자유도를 확보합니다.
 
 ### ③ 기업 고유의 '지적 자산' (Internal IP)

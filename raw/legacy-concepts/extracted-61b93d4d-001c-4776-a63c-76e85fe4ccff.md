@@ -13,10 +13,10 @@ Employee:
 - hasEmployeeID: string
 - hasName: string
 - hasEmail: string
-- hasYearsOfExperience: integer
+- hasYearsOfExperi[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce: integer
 - hasJoinDate: date
 
-Skill:
+[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]:
 - hasSkillName: string
 - hasSkillDescription: string
 - hasDifficultyLevel: integer (1-5)

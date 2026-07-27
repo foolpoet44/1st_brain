@@ -8,9 +8,9 @@ type: Resource
 
 ---
 
-## 핵심 개념 (Compiled Truth)
+## 핵심 개념 (Compiled T[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/ru.md|ru]]th)
 
-단순히 AI 도구를 사용하는 것을 넘어, 조직 구성원들이 AI를 '동료(Co-pilot)'로 인식하고 워크플로우 전반에 AI적 사고방식(Agentic Thinking)을 정착시키는 과정입니다.
+단순히 AI 도구를 사용하는 것을 넘어, 조직 구성원들이 AI를 '동료(Co-pilot)'로 인식하고 워크플로우 전반에 AI적 사고방식(Ag[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]tic Thinking)을 정착시키는 과정입니다.
 
 ### 1단계: 도구의 단계 (Tooling)
 

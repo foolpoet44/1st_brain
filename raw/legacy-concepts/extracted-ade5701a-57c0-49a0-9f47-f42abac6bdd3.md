@@ -12,7 +12,7 @@ type: Resource
 Create a modern, visually stunning single-page website that introduces Lovable.dev
 to Korean HR professionals and non-developers.
 
-## Design Requirements
+## Design Requirem[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ts
 - Hero section with animated gradient background (purple → blue → indigo tones)
 - Glassmorphism card design throughout
 - Smooth scroll animations (fade-in on scroll)
@@ -20,7 +20,7 @@ to Korean HR professionals and non-developers.
 - Korean language content
 - Dark mode default
 
-## Page Structure
+## Page St[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]cture
 
 ### 1. Hero Section
 - Large headline: "아이디어가 있다면, 앱을 만들 수 있습니다"
@@ -37,7 +37,7 @@ to Korean HR professionals and non-developers.
 ### 3. Tech Stack Visualization
 - Show the stack: React + Tailwind + Supabase + Vercel
 - Visual flow diagram: "아이디어 → 프롬프트 → 앱 완성"
-- Add small badge: "Powered by Claude Sonnet (Anthropic)"
+- Add small badge: "Powered by [[CLAUDE.md|CLAUDE]] Sonnet (Anthropic)"
 
 ### 4. Who Is It For Section
 - Target persona cards (3 types):

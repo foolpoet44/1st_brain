@@ -6,7 +6,7 @@ type: Resource
 
 **Date**: 2026-01-07T01:52:45.975525Z
 
-### Extracted Code (python)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/python.md|python]])
 
 ```python
 # 가중치 적용 총점 계산
@@ -50,7 +50,7 @@ else: grade = 'D'
 ### Extracted Code (text)
 
 ```text
-[Google Calendar 데이터]
+[[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]ogle Cal[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]dar 데이터]
 - 회의 시간: 월 평균 52시간 (전체 업무시간의 62%)
 - 주도한 회의: 8건 (그 중 6건은 타부서 요청)
 

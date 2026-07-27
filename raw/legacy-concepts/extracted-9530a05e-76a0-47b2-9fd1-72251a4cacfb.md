@@ -10,7 +10,7 @@ type: Resource
 
 ```bash
 # HTTP 전송 방식 (권장)
-claude mcp add --transport http context7 https://mcp.context7.com/mcp --header "CONTEXT7_API_KEY: YOUR_API_KEY"
+[[CLAUDE.md|CLAUDE]] mcp add --transport http context7 https://mcp.context7.com/mcp --header "CONTEXT7_API_KEY: YOUR_API_KEY"
 
 # 또는 stdio 방식
 claude mcp add context7 -- npx -y @upstash/context7-mcp --api-key YOUR_API_KEY
@@ -27,7 +27,7 @@ claude mcp add context7 -- npx -y @upstash/context7-mcp --api-key YOUR_API_KEY
 
 ```bash
 # Next.js 14 프로젝트 시작
-claude "Next.js 14 앱 생성 with App Router, TypeScript, Tailwind
+claude "Next.js 14 앱 생성 with App Router, [[Understand-Anything/understand-anything-plugin/skills/understand/languages/typescript.md|typescript]], Tailwind
 /nextjs/next.js, /shadcn/ui 참조"
 
 # 인증 시스템 구현
@@ -43,7 +43,7 @@ claude "Stripe 결제 통합, webhook 처리 포함
 
 ```bash
 # 1. 스크립트 다운로드 후
-chmod +x setup-context7-workflow.sh
+chmod +x [[SETUP.md|SETUP]]-context7-workflow.sh
 
 # 2. 실행
 ./setup-context7-workflow.sh

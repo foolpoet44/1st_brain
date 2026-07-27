@@ -8,7 +8,7 @@ tags: [investment, ai, macro-trend, energy, robotics, vertical-saas]
 aliases: [반도체 이후 AI 수혜주]
 ---
 
-# Investment Memo: AI Beneficiaries Beyond Semiconductors
+# Investm[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]t Memo: AI Beneficiaries Beyond Semiconductors
 
 ## 1. 거시 맥락 (Macro Context)
 
@@ -29,7 +29,7 @@ aliases: [반도체 이후 AI 수혜주]
 ## 4. 포지셔닝 제안 (Positioning)
 
 - **L3 (Growth - High Beta)**: 에너지 인프라(SMR, 구리 관련주), 로보틱스 테마, 특정 도메인 특화 AI 강소기업.
-- **L2 (Flow - Stability)**: 데이터센터 인프라를 보유한 빅테크(MSFT, GOOGL) 및 현금 흐름이 좋은 전력 인프라 ETF.
+- **L2 (Flow - Stability)**: 데이터센터 인프라를 보유한 빅테크(MSFT, [[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]OGL) 및 현금 흐름이 좋은 전력 인프라 ETF.
 - **L1 (Root - Strategy)**: **HR 자동화 SaaS 개발(본업)**. 타인의 주식에 투자하는 것을 넘어, AI 수혜의 끝단에서 가치를 직접 창출하는 시스템 자체를 구축.
 
 ---

@@ -19,11 +19,11 @@ type: Resource
 ### Extracted Code (bash)
 
 ```bash
-# .claude/commands/record.md 예시
+# .[[CLAUDE.md|CLAUDE]]/commands/record.md 예시
 작업 완료 시:
 1. git log를 분석하여 변경사항 요약
 2. CHANGELOG.md 업데이트
-3. 관련 문서(README, API docs) 업데이트
+3. 관련 문서([[README.md|README]], API docs) 업데이트
 ```
 
 ### Extracted Code (markdown)
@@ -379,7 +379,7 @@ import networkx as nx
 class CompetencyInference:
     def __init__(self, ontology):
         self.ontology = ontology
-        self.reasoner = self.setup_reasoner()
+        self.reasoner = self.[[SETUP.md|SETUP]]_reasoner()
 
     def find_skill_gaps(self, current_skills, target_role):
         """스킬 갭 분석"""

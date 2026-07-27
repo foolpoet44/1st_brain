@@ -6,12 +6,12 @@ type: Resource
 
 **Date**: 2025-12-10T06:04:28.321422Z
 
-### Extracted Code (python)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/python.md|python]])
 
 ```python
 import base64
 
-client_id = "your_client_id"
+cli[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t_id = "your_client_id"
 client_secret = "your_client_secret"
 
 # Base64 인코딩
@@ -55,7 +55,7 @@ courses = response.json()
 print(courses)
 ```
 
-### Extracted Code (javascript)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/locales/ja.md|ja]]vascript)
 
 ```javascript
 const axios = require("axios");

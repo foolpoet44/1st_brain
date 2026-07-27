@@ -1,5 +1,6 @@
 ---
 type: Type
+status: Active
 _icon: link
 _color: "#06b6d4"
 _order: 7

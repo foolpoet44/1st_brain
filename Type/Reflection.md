@@ -1,5 +1,6 @@
 ---
 type: Type
+status: Active
 _icon: lightbulb
 _color: "#f59e0b"
 _order: 6

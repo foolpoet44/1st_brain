@@ -2,6 +2,7 @@
 title: 2026 AI 에이전트 전략 및 메타-하네스 로드맵
 created: 2026-05-26
 type: research
+status: Active
 tags: [strategy, ai-agent, meta-harness, graph-rag, automation]
 related_to: "[[harness-engineering-insight]]"
 ---

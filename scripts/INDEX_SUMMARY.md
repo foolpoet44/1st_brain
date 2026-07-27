@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 ---
 
 # 📊 Zavis_Brain 인덱스 요약
@@ -11,11 +12,11 @@ type: Note
 
 | 카테고리          | 문서 수 |
 | ----------------- | ------- |
-| Uncategorized     | 138     |
+| Uncate[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/go.md|go]]rized     | 138     |
 | Pulse_EX          | 81      |
 | Strategy_Planning | 57      |
 | AX_DX             | 46      |
-| Reference         | 16      |
+| Refer[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce         | 16      |
 | HR_Data           | 10      |
 | Weekly_Report     | 4       |
 | Meeting_Notes     | 3       |

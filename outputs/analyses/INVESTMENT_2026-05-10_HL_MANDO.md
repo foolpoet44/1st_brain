@@ -8,9 +8,9 @@ tags: [investment, robotics, hl-mando, autonomous-driving, parking-robot, physic
 aliases: [HL만도 기업분석, 자율주행 로보틱스]
 ---
 
-# Investment Memo: HL Mando
+# Investm[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]t Memo: HL Mando
 
-## 1. 거시 맥락 (Macro Context)
+## 1. 거시 맥락 (Macro [[open-design/CONTEXT.md|CONTEXT]])
 
 - **자동차에서 로봇으로의 전이**: 자동차는 본질적으로 '거대한 이동형 로봇'입니다. 조향(Steering)과 제동(Brake) 시스템의 글로벌 강자인 HL만도는 물리적 세계를 정밀하게 제어하는 '근육과 신경'을 이미 보유하고 있습니다.
 - **도심 공간의 재구조화**: 도시 인구 밀집과 주차난, 보안 공백은 **'자율주행 주차 로봇(Parkie)'**과 **'순찰 로봇(Pathfinder)'**에 대한 필연적 수요를 창출합니다.

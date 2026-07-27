@@ -13,7 +13,7 @@ status: 🟢 EVOLUTIONARY PEAK
 이번 주는 단순한 정보 수집을 넘어, 시스템의 **'자율적 운영 체계(OS)'**를 확립하는 데 초점을 맞췄습니다.
 
 - **AI 네이티브 조직론 통합**: jyoung105(이정민), Josh Kim의 인사이트를 기반으로 '스킬 기반 가상 직원'과 '리졸버(Resolver)' 아키텍처를 이식했습니다.
-- **Claude 4.8 인프라 최적화**: 고영혁 님의 분석을 바탕으로 'Anti-laziness'에서 'Effort Control'로 프롬프팅 패러다임을 전환했습니다.
+- **[[CLAUDE.md|CLAUDE]] 4.8 인프라 최적화**: 고영혁 님의 분석을 바탕으로 'Anti-laziness'에서 'Effort Control'로 프롬프팅 패러다임을 전환했습니다.
 - **투자 지능 레이어 구축**: '헤드앤숄더 실패(H&S Failure)' 전략을 통해 시장의 심리적 배반을 기회로 환전하는 기술적/철학적 토대를 마련했습니다.
 - **내구적 실행(Durable Execution)**: Obelisk 엔진 사례를 통해 SQLite 기반의 안정적인 에이전트 워크플로 지침을 확보했습니다.
 
@@ -27,7 +27,7 @@ status: 🟢 EVOLUTIONARY PEAK
 
 최근 7일간의 지식 업데이트 밀도입니다.
 
-`▄▄▄ ▄▄▄` (Current Status)
+`▄▄▄ ▄▄▄` (Curr[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t Status)
 
 ## 2. 계층별 지능 밀도 (7-Layer Density)
 
@@ -39,7 +39,7 @@ status: 🟢 EVOLUTIONARY PEAK
 - **[05-30 19:49]** `_ops/change-log.md`
 - **[05-30 19:49]** `wiki/concepts/durable-execution.md`
 - **[05-30 19:49]** `wiki/signals/2026-05-30-obelisk-sqlite-durable-execution.md`
-- **[05-30 19:48]** `KNOWLEDGE_PULSE.md`
+- **[05-30 19:48]** `[[KNOWLEDGE_PULSE.md|KNOWLEDGE_PULSE]].md`
 - **[05-30 19:48]** `wiki/concepts/failed-pattern-trading.md`
 
 ## 3. 리졸버의 제언 (Navigator's Forward Action)

@@ -147,7 +147,7 @@ Week 2: Prototype + Validation
 주요 활동:
 
 - 파일럿 성공 사례 다른 라인/공장 확대
-- Smart Factory AI Skill Ontology 확정
+- Smart Factory AI [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Ontology 확정
 - CoP(Community of Practice) 운영
 - 외부 벤치마킹 (선진 스마트팩토리)
 
@@ -2709,7 +2709,7 @@ D-90: 2기 시작
 │ ├─ 실제 현장 문제 도전
 │ ├─ 24-48시간 집중 개발
 │ ├─ 시상 (Best Solution, Most Creative)
-│ └─ 피자 & 에너지 드링크 무제한
+│ └─ 피자 & 에너지 드링크 [[무제.md|무제]]한
 └─ 참여: 30명 + 초청 게스트
 
 연간 "Smart Factory AI Conference"

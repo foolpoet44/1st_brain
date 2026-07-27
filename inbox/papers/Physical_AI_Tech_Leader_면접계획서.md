@@ -16,7 +16,7 @@ processed: true
 
 # **1. 채용 배경 및 포지션 개요**
 
-Physical AI Tech Leader는 [[Understand-Anything[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Ontology 구축과 Physical AI 기술 인재 풀(LV3 이상 30명) 육성을 이끄는 기술 리더 포지션입니다. 단순 기술 전문성뿐 아니라, 역량 체계를 설계하고 조직 전반에 확산시키는 역할이 핵심입니다.
+Physical AI Tech Leader는 [[Understand-Anything[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills[[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]/SKILL.md|SKILL]] Ontology 구축과 Physical AI 기술 인재 풀(LV3 이상 30명) 육성을 이끄는 기술 리더 포지션입니다. 단순 기술 전문성뿐 아니라, 역량 체계를 설계하고 조직 전반에 확산시키는 역할이 핵심입니다.
 
 **이 면접 계획은 아래 5가지 원칙에 기반해 설계되었습니다.**
 

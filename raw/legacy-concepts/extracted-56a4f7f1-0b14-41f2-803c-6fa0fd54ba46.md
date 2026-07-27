@@ -19,7 +19,7 @@ npm install -g @anthropic-ai/claude-code
 ### Extracted Code (bash)
 
 ```bash
-# Gemini API 키 발급
+# [[GEMINI.md|GEMINI]] API 키 발급
 # https://makersuite.google.com/app/apikey
 
 # 환경 변수 설정 (.bashrc 또는 .zshrc)
@@ -47,7 +47,7 @@ print(response.text)
 
 ```text
 my-agent/
-├── agents/
+├── [[AGENTS.md|AGENTS]]/
 │   ├── researcher.py      # 리서치 에이전트
 │   ├── writer.py          # 작성 에이전트
 │   └── analyzer.py        # 분석 에이전트
@@ -140,7 +140,7 @@ def test_output_quality(md_file_path):
 # 프로젝트 초기화
 git init
 git add .
-git commit -m "Initial agent setup"
+git commit -m "Initial agent [[SETUP.md|SETUP]]"
 
 # 브랜치 전략 (간단하게)
 git checkout -b feature/new-agent

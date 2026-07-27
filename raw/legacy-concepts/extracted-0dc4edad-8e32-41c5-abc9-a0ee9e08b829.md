@@ -10,14 +10,14 @@ type: Resource
 
 ```text
 your-project/
-├── CLAUDE.md          ← 메인 지시 파일
+├── [[CLAUDE.md|CLAUDE]].md          ← 메인 지시 파일
 ├── tasks/
 │   ├── todo.md        ← 작업 계획 및 진행 추적
 │   └── lessons.md     ← 자기개선 루프 기록
 └── ... (실제 프로젝트 파일들)
 ```
 
-### Extracted Code (markdown)
+### Extracted Code ([[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/markdown.md|markdown]])
 
 ```markdown
 # 프로젝트 운영 원칙

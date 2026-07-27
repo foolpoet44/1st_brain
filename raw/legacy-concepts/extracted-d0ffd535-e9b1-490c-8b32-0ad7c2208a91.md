@@ -11,7 +11,7 @@ type: Resource
 ```bash
 # tool use 지원 모델로 교체
 ollama pull llama3.1:8b      # 가볍고 tool 지원
-ollama pull qwen2.5:14b      # tool 지원, 한국어 강함
+ollama pull qw[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]2.5:14b      # tool 지원, 한국어 강함
 ollama pull mistral-nemo     # tool 지원
 ```
 
@@ -20,7 +20,7 @@ ollama pull mistral-nemo     # tool 지원
 ```bash
 # 클라우드 버전 (Ollama 서버에서 실행, 무료 tier 있음)
 ollama pull glm-4.7:cloud
-ollama launch claude --model glm-4.7:cloud
+ollama launch [[CLAUDE.md|CLAUDE]] --model glm-4.7:cloud
 ```
 
 ### Extracted Code (bash)

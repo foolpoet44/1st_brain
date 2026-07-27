@@ -66,7 +66,7 @@ CSP가 "세션 종료해줘" / "오늘 마무리" / "빠른 마무리" 라고 �
 ### Extracted Code (python)
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]v python3
 """
 CSP-OS Notion Sync
 --load : Context Core를 Notion에서 가져와서 출력
@@ -191,7 +191,7 @@ cd ~/csp-os
 python3 scripts/notion_sync.py --load
 ```
 
-### Extracted Code (markdown)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/markdown.md|markdown]])
 
 ```markdown
 ## 세션 시작 시 반드시 할 것
@@ -311,7 +311,7 @@ python3 scripts/notion_sync.py --status
 ✅ --save  작동 확인 (DB row 저장)
 ⬜ --load  테스트 필요 (Context Core 로드)
 ⬜ --status 테스트 필요
-⬜ Antigravity GEMINI.md 연결
+⬜ Antigravity [[GEMINI.md|GEMINI]].md 연결
 ```
 
 ### Extracted Code (bash)

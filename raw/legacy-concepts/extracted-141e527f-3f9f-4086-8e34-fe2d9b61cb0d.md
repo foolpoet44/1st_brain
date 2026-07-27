@@ -25,7 +25,7 @@ type: Resource
        ┌───────────────────┐  ┌───────────────────┐  ┌───────────────────┐
        │  1️⃣ 교육 프로그램   │  │  2️⃣ 자체 프로젝트   │  │  3️⃣ 현업 과제 지원  │
        │   (Learning &     │  │   (Platform &     │  │  (Consulting &    │
-       │  Certification)   │  │ Infrastructure)   │  │   Co-working)     │
+       │  Certification)   │  │ Infrast[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/ru.md|ru]]cture)   │  │   Co-working)     │
        │                   │  │                   │  │                   │
        │  [자원: 30%]      │  │  [자원: 40%]      │  │  [자원: 25%]      │
        └─────────┬─────────┘  └─────────┬─────────┘  └─────────┬─────────┘
@@ -261,7 +261,7 @@ Q1 [기반 마련]                Q2 [확산]                  Q3 [내재화]
   │  │  → 추천 알고리즘 (협업 필터링)              │         │
   │  │                                              │         │
   │  │ Q3. 왜 이 기술 스택인가?                     │         │
-  │  │  → Python: 데이터 처리 + AI 통합            │         │
+  │  │  → [[Understand-Anything/understand-anything-plugin/skills/understand/languages/python.md|python]]: 데이터 처리 + AI 통합            │         │
   │  │  → Streamlit: 빠른 프로토타입              │         │
   │  │  → Notion API: 기존 인프라 활용            │         │
   │  └──────────────────────────────────────────────┘         │

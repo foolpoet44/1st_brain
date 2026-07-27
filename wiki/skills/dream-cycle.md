@@ -19,14 +19,14 @@ aliases: [드림 사이클, 주간 정리]
 1. **inbox 정리**
    - `inbox/` 전체 스캔
    - 각 항목을 적절한 폴더로 이동
-     - 프로젝트 관련 → 해당 `projects/` Timeline 에 append
+     - 프로젝트 관련 → 해당 `projects/` Timeline 에 app[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]d
      - 인물 관련 → `wiki/people/` 파일 생성 또는 업데이트
      - 개념/이론 → `wiki/concepts/` 파일 생성
      - 결정 → `wiki/decisions/` 파일 생성
 
 2. **Compiled Truth 갱신**
    - 이번 주 변화가 있던 프로젝트 파악
-   - 각 프로젝트 README 의 Compiled Truth 업데이트
+   - 각 프로젝트 [[README.md|README]] 의 Compiled Truth 업데이트
 
 3. **Weekly 파일 생성**
    - 파일명: `outputs/weekly/YYYY-WNN.md`

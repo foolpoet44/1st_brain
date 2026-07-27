@@ -10,7 +10,7 @@ tags: ["anthropic", "claude-4.8", "prompt-engineering", "infra"]
 url: https://www.linkedin.com/posts/gonnector_ai-agent-claude-share-7465905827950895105-ZUvt/
 ---
 
-# [SIGNAL] Claude Opus 4.8: 바닐라 모델의 승리와 제어 파라미터의 시대
+# [[[open-design/design-templates/html-ppt-zhangzara-signal/SKILL.md|SKILL]]] [[CLAUDE.md|CLAUDE]] Opus 4.8: 바닐라 모델의 승리와 제어 파라미터의 시대
 
 ## 💡 핵심 철학의 전환
 
@@ -31,6 +31,6 @@ Anthropic은 4.8 모델에서 모델을 다그치는 'Anti-laziness' 스캐폴�
 
 ## 🛠️ CSP-Brain 적용 전략
 
-- **Resolver 고도화**: 질문의 복잡도를 에이전트가 사전 판별하여 API 호출 시 `effort: "xhigh"` 등을 동적으로 할당하는 로직 추가.
+- **[[_ops/RESOLVER.md|RESOLVER]] 고도화**: 질문의 복잡도를 에이전트가 사전 판별하여 API 호출 시 `effort: "xhigh"` 등을 동적으로 할당하는 로직 추가.
 - **Harness Scaffolding 제거**: `CLAUDE.md` 내의 중복된 강조와 모델 다그치기 문구들을 삭제하여 '바닐라 성능' 극대화.
 - **Literal Prompting**: "이 문서 전체에 적용해" 보다는 "전체 문서를 훑고 각 섹션마다 적용해"와 같이 범위를 명시적으로 지정하도록 가이드 수정.

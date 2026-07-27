@@ -10,6 +10,6 @@ type: Resource
 
 ```bash
 # 터미널에서 실행
-defaults write com.apple.screencapture location ~/Desktop/Screenshots
+defaults write com.apple.scre[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]capture location ~/[[open-design/docs/testing/e2e-coverage/desktop.md|desktop]]/Screenshots
 killall SystemUIServer
 ```

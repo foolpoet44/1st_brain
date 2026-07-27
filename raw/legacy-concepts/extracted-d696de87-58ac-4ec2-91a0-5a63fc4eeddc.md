@@ -6,12 +6,12 @@ type: Resource
 
 **Date**: 2026-03-24T00:33:00.577154Z
 
-### Extracted Code (python)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/python.md|python]])
 
 ```python
 from markitdown import MarkItDown
 
-md = MarkItDown(enable_plugins=False)
+md = MarkItDown([[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]able_plugins=False)
 result = md.convert("report.pptx")
 print(result.text_content)
 ```
@@ -43,7 +43,7 @@ markitdown 파일명.pdf > 결과.md
 markitdown 파일명.pptx -o 결과.md
 ```
 
-### Extracted Code (json)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/json.md|json]])
 
 ```json
 {

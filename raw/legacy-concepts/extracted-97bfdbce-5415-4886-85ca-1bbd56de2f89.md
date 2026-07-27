@@ -10,7 +10,7 @@ type: Resource
 
 ```bash
 # Sonnet 3.5로 전환 (가장 안정적)
-/model claude-3-5-sonnet-20241022
+/model [[CLAUDE.md|CLAUDE]]-3-5-sonnet-20241022
 
 # 현재 모델 확인
 /model
@@ -541,7 +541,7 @@ claude config list
 claude plugin uninstall frontend-for-opus-4-5
 
 # 또는 플러그인 캐시 정리
-Remove-Item -Recurse -Force C:\Users\Administrator\.claude\plugins\cache\xavierchoi-skills-marketplace\frontend-for-opus-4-5
+Remove-Item -Recurse -Force C:\Users\Administrator\.claude\plugins\cache\xavierchoi-[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s-marketplace\frontend-for-opus-4-5
 ```
 
 ### Extracted Code (text)

@@ -28,10 +28,10 @@ tags: ["psy-assess", "8-cluster", "talent-management", "competency"]
 - **분석 지표**: "복잡한 문제를 최소 단위로 분해하여 설명할 수 있는가?"
 - **실행 지표**: "압박 상황에서도 마감 기한을 준수하며 품질을 유지하는가?"
 
-## 3. 에이전틱 활용 (Agentic Use Case)
+## 3. 에이전틱 활용 (Ag[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]tic Use Case)
 
 - **면접 질문 생성**: 특정 클러스터의 점수가 낮을 경우, 이를 검증하기 위한 STAR 기법 기반 질문 생성.
-- **인재 배치 추천**: 직무 요구 역량(Job Profile)과 개인의 클러스터 맵을 대조(Matching).
+- **인재 배치 추천**: 직무 요구 역량(Job Profile)과 개인의 클러스터 맵을 대조([[open-design/design-templates/html-ppt-zhangzara-mat/SKILL.md|SKILL]]ching).
 
 ---
 

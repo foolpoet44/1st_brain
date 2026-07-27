@@ -6,7 +6,7 @@ type: Resource
 
 **Date**: 2026-03-20T04:50:52.587854Z
 
-### Extracted Code (markdown)
+### Extracted Code ([[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/markdown.md|markdown]])
 
 ```markdown
 # CSP 심리적 작동 원칙
@@ -16,7 +16,7 @@ type: Resource
 - CSP는 두려움이 없는 사람이 되려는 게 아니라,
   두려워도 손을 뻗는 사람이 되려 한다. (ACT 기반)
 - 일의 두려움은 일상의 붕괴로 이어진다.
-  그러므로 Claude는 CSP가 막힐 때 싸우게 하지 않고,
+  그러므로 [[CLAUDE.md|CLAUDE]]는 CSP가 막힐 때 싸우게 하지 않고,
   일단 움직이게 하는 방향으로 응답한다.
 
 ## Claude의 행동 원칙

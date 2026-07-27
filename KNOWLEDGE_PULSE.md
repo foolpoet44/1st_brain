@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-07-27 17:16
+last_update: 2026-07-28 09:10
 status: 🟢 ACTIVE
 ---
 
@@ -20,6 +20,7 @@ status: 🟢 ACTIVE
 - **L3 Projects**: 10 Projects (실행 면적)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
+- **[07-28 09:10]** `outputs/briefings/HR_PSYCHO_BRIEFING_2026-07-28.md` — I/O 심리학 브리핑 (속도 환영, SCAN 프레임워크, 인지적 공동조절)
 - **[07-27 09:10]** `csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-27.md`
 - **[07-27 17:06]** `csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-20.md`
 - **[07-27 17:06]** `csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-21.md`

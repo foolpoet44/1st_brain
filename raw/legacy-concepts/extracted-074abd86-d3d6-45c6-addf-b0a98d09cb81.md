@@ -10,7 +10,7 @@ type: Resource
 
 ```vba
 Function GetURL(cell As Range) As String
-    If cell.Hyperlinks.Count > 0 Then
+    If cell.Hyperlinks.Count > 0 Th[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]
         GetURL = cell.Hyperlinks(1).Address
     Else
         GetURL = ""

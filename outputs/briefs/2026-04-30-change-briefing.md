@@ -24,11 +24,11 @@ tags: [change-briefing, daily, ops]
 
 ### 주간 변화 다이제스트가 생성됐다
 
-`scripts/generate_weekly.py --date 2026-04-30` 기준으로 `outputs/weekly/2026-W18.md`가 생성됐다. 이번 주 Git 기준 변경 파일은 506건으로 집계되었고, concepts, projects, raw, wiki 영역의 변화가 특히 크다. 이는 아직 “정리된 지식 변화”와 “대량 이관/원자료 변화”가 섞여 있다는 신호다.
+`scripts/g[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]erate_weekly.py --date 2026-04-30` 기준으로 `outputs/weekly/2026-W18.md`가 생성됐다. 이번 주 Git 기준 변경 파일은 506건으로 집계되었고, concepts, projects, raw, wiki 영역의 변화가 특히 크다. 이는 아직 “정리된 지식 변화”와 “대량 이관/원자료 변화”가 섞여 있다는 신호다.
 
 ### Daily note가 변화 감지형으로 정비됐다
 
-`templates/daily-note.md`는 “오늘 새로 들어온 것 / 오늘 바뀐 생각 / 다음에 확인할 변화 / 원문 메모” 구조로 바뀌었다. `.obsidian/daily-notes.json`도 현재 vault 경로에 맞춰 `inbox/notes`와 `templates/daily-note`를 바라보게 수정되었다.
+`templates/daily-note.md`는 “오늘 새로 들어온 것 / 오늘 바뀐 생각 / 다음에 확인할 변화 / 원문 메모” 구조로 바뀌었다. `.obsidian/daily-notes.[[Understand-Anything/understand-anything-plugin/skills/understand/languages/json.md|json]]`도 현재 vault 경로에 맞춰 `inbox/notes`와 `templates/daily-note`를 바라보게 수정되었다.
 
 ## 오늘 주의할 것
 

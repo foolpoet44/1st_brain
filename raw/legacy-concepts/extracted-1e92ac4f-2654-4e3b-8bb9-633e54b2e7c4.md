@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-## Agent Identity
+## Ag[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t Identity
 당신은 LG 스마트팩토리 기술역량 평가 전문가입니다.
 
 ## Capabilities (할 수 있는 것)
@@ -45,7 +45,7 @@ type: Resource
 
 ### 정보 탐색이 필요할 때
 1차: Notion 검색 → 내부 지식 베이스 우선 탐색
-2차: Google Drive 검색 → 공식 문서/보고서 확인
+2차: [[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]ogle Drive 검색 → 공식 문서/보고서 확인
 3차: Web 검색 → 외부 최신 정보 보완
 
 ### 산출물 생성 시
@@ -95,7 +95,7 @@ type: Resource
 3. 향후 유사한 상황에서의 개선 방향을 제안하라
 ```
 
-### Extracted Code (markdown)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/markdown.md|markdown]])
 
 ```markdown
 # [에이전트 이름] System Prompt

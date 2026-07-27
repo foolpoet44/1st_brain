@@ -10,8 +10,8 @@ type: Resource
 
 ```text
 [현재] 기술 아키텍처 중심
-Front-End / Back-End / Analytics + 분기별 개발 로드맵
-→ PostgreSQL, RESTful, Edge Functions 열거
+Front-[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]d / Back-End / Analytics + 분기별 개발 로드맵
+→ Postgre[[Understand-Anything/understand-anything-plugin/skills/understand/languages/sql.md|sql]], RESTful, Edge Functions 열거
 
 [제안] "HR이 할 수 있게 되는 것" 중심 3분할 레이아웃
 

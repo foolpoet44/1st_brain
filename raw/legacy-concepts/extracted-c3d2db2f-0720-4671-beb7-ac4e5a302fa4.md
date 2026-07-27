@@ -83,7 +83,7 @@ SQL --[used_in]--> 데이터 분석
 직원 테이블 (EMPLOYEES)
 - emp_id: E001
 - name: 김철수
-- skills_raw: "파이썬, SQL, 엑셀"
+- [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s_raw: "파이썬, SQL, 엑셀"
 
 교육 이력 (TRAINING_HISTORY)
 - emp_id: E001
@@ -1469,7 +1469,7 @@ Interactive Features:
 
 Skill: "Python" (SKILL_PYTHON_001)
 └─ Created: 2023-01-15
-   └─ Source: Initial Ontology Setup
+   └─ Source: Initial Ontology [[SETUP.md|SETUP]]
 
 Person: 김철수 (EMP_001)
 └─ SkillProficiency: Python (Level 4)

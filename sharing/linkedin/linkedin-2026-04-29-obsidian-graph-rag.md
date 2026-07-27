@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 ---
 
 ## 당신의 Obsidian 이 Graph RAG 라고요? 맞습니다.

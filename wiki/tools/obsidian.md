@@ -10,14 +10,14 @@ aliases: []
 
 # Obsidian
 
-## Compiled Truth
+## Compiled T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]th
 
 로컬 마크다운 기반 지식 관리 도구.
 
 **CSP 의 Working Brain:**
 
 - 이 레포 전체가 Obsidian Vault
-- Claude Code 가 직접 읽고 쓰는 지식 베이스
+- [[CLAUDE.md|CLAUDE]] Code 가 직접 읽고 쓰는 지식 베이스
 - Git 과 연동하여 버전 관리
 - 백링크 기반 지식 그래프 구성
 

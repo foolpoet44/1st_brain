@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 ---
 
 # Toss 프로젝트 문서 (docs)

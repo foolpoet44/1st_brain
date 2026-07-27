@@ -22,7 +22,7 @@ type: Resource
   └── .tb-right: 배지 (index) / 뒤로가기 링크 (하위 페이지)
 
 [hero]
-  └── 배경: linear-gradient(165deg, #0d0d0d → #1a1a2e → #0f3460)
+  └── 배경: linear-gradi[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t(165deg, #0d0d0d → #1a1a2e → #0f3460)
   └── ::before: radial-gradient 레이어 (반투명 red glow)
   └── .hero-eyebrow: 대문자 + letter-spacing (컨텍스트 라벨)
   └── .hero-title: clamp() 반응형
@@ -44,7 +44,7 @@ type: Resource
 
 ```text
 y26-hr-html-builder/
-├── SKILL.md              ← 워크플로우 + 트리거 조건
+├── [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]].md              ← 워크플로우 + 트리거 조건
 └── references/
     ├── design-tokens.md  ← CSS 변수, 컬러 팔레트, 타이포그래피
     ├── components.md     ← top-bar, hero, card, tab 컴포넌트 템플릿

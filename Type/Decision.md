@@ -11,7 +11,7 @@ _sort: "property:onboarding:asc"
 template: "templates/decision.md"
 status: Active
 ---
-# Decision
+# [[[[Understand-Anything/docs/superpowers/plans/2026-03-28-understand-anything-extension-impl.md|2026-03-28-understand-anything-extension-impl]]/Decision.md|Decision]]
 
 의사결정 기록을 위한 타입입니다.
 

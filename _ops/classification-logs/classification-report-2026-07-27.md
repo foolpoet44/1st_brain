@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 ---
 
 # 📊 Type 문서 자동 분류 보고서

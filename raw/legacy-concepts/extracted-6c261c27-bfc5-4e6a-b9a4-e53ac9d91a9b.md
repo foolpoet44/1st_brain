@@ -46,13 +46,13 @@ Physical AI CoE
   ├── Vision AI Team (물체 인식, 결함 검사)
   ├── Edge Computing Team (실시간 추론, 모델 최적화)
   ├── System Integration Team (HW/SW 통합, 현장 배포)
-  └── Solution Architecture Team (전사 표준, 가이드라인)
+  └── Solution [[open-design/docs/architecture.md|architecture]] Team (전사 표준, 가이드라인)
 ```
 
 ### Extracted Code (text)
 
 ```text
-Level 1: Junior Engineer (1-3년)
+Level 1: Junior [[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]gineer (1-3년)
   - 기본 프로젝트 참여
   - 멘토 지도 하 업무 수행
 

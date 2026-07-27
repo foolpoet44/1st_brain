@@ -11,4 +11,4 @@ streamlit==1.31.1
 pandas==2.1.4
 numpy==1.24.3
 plotly==5.18.0
-op[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]pyxl==3.11.0
+op[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/[[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s/[[AGENTS.md|AGENTS]].md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]pyxl==3.11.0

@@ -1,5 +1,6 @@
 ---
 type: Resource
+status: Active
 ---
 
 # Conversation Knowledge Map Index
@@ -9,7 +10,7 @@ type: Resource
 
 | 날짜       | 제목     | UUID      | 경로                                                                                   |
 | :--------- | :------- | :-------- | :------------------------------------------------------------------------------------- |
-| 2026-04-13 | No Title | `unknown` | [unknown](raw/archive/conversations/2026/04/50407bb4-559e-4e2e-aa14-e9bf7f5e5dec.json) |
+| 2026-04-13 | No Title | `unknown` | [unknown](raw/archive/conversations/2026/04/50407bb4-559e-4e2e-aa14-e9bf7f5e5dec.[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/languages/json.md|json]]) |
 | 2026-04-12 | No Title | `unknown` | [unknown](raw/archive/conversations/2026/04/176a4284-e3a6-40e4-a523-357a74eba67f.json) |
 | 2026-04-12 | No Title | `unknown` | [unknown](raw/archive/conversations/2026/04/d9433dad-4153-41aa-82d4-3f9c3bdd000d.json) |
 | 2026-04-11 | No Title | `unknown` | [unknown](raw/archive/conversations/2026/04/eb3839f2-d15d-4d21-a995-17706e3aa933.json) |

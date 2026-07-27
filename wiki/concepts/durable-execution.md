@@ -18,9 +18,9 @@ tags: ["engineering", "reliability", "statebase", "deterministic-workflow"]
 
 ## 2. 핵심 메커니즘
 
-- **Execution Log**: 모든 입력, 출력, 결정을 SQLite 등 데이터베이스에 타임스탬프와 함께 기록.
+- **Execution Log**: 모든 입력, 출력, 결정을 [[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/sql.md|sql]]ite 등 데이터베이스에 타임스탬프와 함께 기록.
 - **Replay**: 상태를 복구하기 위해 이전 로그를 다시 읽어 현재의 인메모리 상태를 재구축.
-- **Idempotency (멱등성)**: 동일한 단계를 여러 번 실행해도 결과가 같음을 보장하여 재실행 부작용 방지.
+- **Idempot[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]cy (멱등성)**: 동일한 단계를 여러 번 실행해도 결과가 같음을 보장하여 재실행 부작용 방지.
 
 ## 3. 에이전트 시대의 중요성
 

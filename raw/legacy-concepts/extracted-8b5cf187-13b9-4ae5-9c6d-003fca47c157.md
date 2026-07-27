@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-[Google Forms]
+[[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]ogle Forms]
     ↓ 응답 수집 (자동)
 [Google Sheets - 원본 데이터]
     ↓ Apps Script 트리거 (자동)
@@ -48,7 +48,7 @@ type: Resource
 감사합니다.
 ```
 
-### Extracted Code (javascript)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/locales/ja.md|ja]]vascript)
 
 ```javascript
 // 트리거: 폼 응답 제출 시 자동 실행
@@ -62,7 +62,7 @@ function onFormSubmit(e) {
     timestamp: 0,
     // EX Touchpoints: 열 1~12
     ex_start: 1,
-    ex_end: 12,
+    ex_[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]d: 12,
     // POS: 열 13~20
     pos_start: 13,
     pos_end: 20,

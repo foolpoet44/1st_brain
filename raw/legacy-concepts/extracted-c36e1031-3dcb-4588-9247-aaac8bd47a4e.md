@@ -6,14 +6,14 @@ type: Resource
 
 **Date**: 2026-04-05T01:51:29.269455Z
 
-### Extracted Code (json)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/json.md|json]])
 
 ```json
-// ~/.claude/settings.json
+// ~/.[[CLAUDE.md|CLAUDE]]/settings.json
 {
   "model": "claude-sonnet-4-6",
   "availableModels": ["claude-sonnet-4-6", "haiku"],
-  "env": {
+  "[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]v": {
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-6",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4-5-20251001"
   }

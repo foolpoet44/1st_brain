@@ -169,7 +169,7 @@ git push origin hotfix/current
 
 ```bash
 # 프로젝트 구조
-~/ontology-skills/
+~/ontology-[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s/
 ├── main/              # 운영 중인 온톨로지 시스템
 ├── dev-esco-api/      # ESCO API 통합 개발
 ├── research-palantir/ # Palantir 방식 연구
@@ -195,7 +195,7 @@ cd ~/ontology-skills/main
 # 대화 아카이빙 시스템 개발
 ~/notion-automation/
 ├── main/                    # 안정 버전
-├── feature-claude-archive/  # Claude 대화 자동 저장
+├── feature-[[CLAUDE.md|CLAUDE]]-archive/  # Claude 대화 자동 저장
 ├── feature-tag-extraction/  # 태그 자동 추출
 └── test/                    # 통합 테스트
 

@@ -19,8 +19,8 @@ tags:
 
 ## 핵심 신호 (Signals)
 1. **Curator의 중요성**: 지식의 양보다 '정제(Curation)'가 에이전트 품질의 핵심 지표가 됨.
-2. **Procedural Memory**: 단순 기억이 아닌 '일하는 방식(Skills)'의 자동 저장 및 재사용.
-3. **Runtime Identity**: 프로필별로 완전히 분리된 SOUL과 Runtime 환경 구축.
+2. **Procedural Memory**: 단순 기억이 아닌 '일하는 방식([[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s)'의 자동 저장 및 재사용.
+3. **Runtime Identity**: 프로필별로 완전히 분리된 [[SOUL.md|SOUL]]과 Runtime 환경 구축.
 4. **GEPA (Evaluation Gate)**: 에이전트의 자기 객관화 부족을 해결하기 위한 외부 평가 루프.
 
 ## csp-brain에의 함의

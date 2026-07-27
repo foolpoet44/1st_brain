@@ -10,7 +10,7 @@ type: Resource
 
 ```bash
 # 플러그인 마켓플레이스 추가
-/plugin marketplace add user-or-org/repo-name
+/plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]] marketplace add user-or-org/repo-name
 
 # 플러그인 설치
 /plugin install plugin-name@marketplace-name
@@ -20,8 +20,8 @@ type: Resource
 
 ```bash
 # Anthropic 공식 마켓플레이스 추가
-/plugin marketplace add anthropics/claude-code
+/plugin marketplace add anthropics/[[CLAUDE.md|CLAUDE]]-code
 
 # 특정 플러그인 설치
-/plugin install frontend-design@claude-code
+/plugin install front[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]d-design@claude-code
 ```

@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 ---
 
 # [[EVAL_STATUS.md|EVAL_STATUS]]

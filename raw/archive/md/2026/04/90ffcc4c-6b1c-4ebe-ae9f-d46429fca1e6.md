@@ -4,10 +4,11 @@ date: 2026-04-06
 time: 00:37
 uuid: 90ffcc4c-6b1c-4ebe-ae9f-d46429fca1e6
 type: conversation
+status: Active
 tags: [archive, conversation]
 ---
 
-# EX Intelligence 보고 회의록 수정 방향
+# EX Intellig[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce 보고 회의록 수정 방향
 
 **날짜**: 2026-04-06 00:37
 
@@ -30,7 +31,7 @@ EX Intelligence의 보고 회의록이 다음과 같을 때 수정해야 하는 
 8. why 3 category
    1. 뭘 수집할 것인가? 손에 잡히는게 뭔가
 
-## Claude (Message 2)
+## [[CLAUDE.md|CLAUDE]] (Message 2)
 
 회의록을 읽으면서, 이 피드백들이 단순한 수정 요청이 아니라는 걸 느꼈을 것 같습니다. 이건 EX Intelligence 시스템의 **설계 철학 자체를 재점검하라**는 신호입니다. 그 방향을 정리해 드리겠습니다.
 
@@ -745,7 +746,7 @@ EX Intelligence 1차 보고 이후, 경영진 피드백의 핵심은 "펄스서�
 
 **"내가 여기서 성장하고 있는지 모르겠다" — 성장 단절 & 의미 상실**
 
-3.3의 Guru 암묵지 고립 문제가 여기 해당합니다. 윤승용 상무의 지식이 시스템으로 전수되지 못하고 있다는 것은, 하위 구성원 입장에서 "배울 수 있는 구조가 없다"는 성장 단절 경험입니다. 리소스 쏠림 현상으로 레거시 조직 구성원들의 "내가 여기서 왜 있어야 하는가"라는 의미 상실도 함께 작동합니다.
+3.3의 Gu[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]] 암묵지 고립 문제가 여기 해당합니다. 윤승용 상무의 지식이 시스템으로 전수되지 못하고 있다는 것은, 하위 구성원 입장에서 "배울 수 있는 구조가 없다"는 성장 단절 경험입니다. 리소스 쏠림 현상으로 레거시 조직 구성원들의 "내가 여기서 왜 있어야 하는가"라는 의미 상실도 함께 작동합니다.
 
 ---
 

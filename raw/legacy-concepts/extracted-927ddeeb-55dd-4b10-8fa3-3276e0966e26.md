@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (bash)
 
 ```bash
-git clone https://github.com/serithemage/claude-code-infrastructure-showcase.git
+git clone https://github.com/serithemage/[[CLAUDE.md|CLAUDE]]-code-infrastructure-showcase.git
 cd claude-code-infrastructure-showcase
 ```
 
@@ -23,7 +23,7 @@ cd /your/project/path
 mkdir -p .claude/hooks
 
 # 필수 Hook 복사
-cp /path/to/showcase/.claude/hooks/skill-activation-prompt.* .claude/hooks/
+cp /path/to/showcase/.claude/hooks/[[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]-activation-prompt.* .claude/hooks/
 cp /path/to/showcase/.claude/hooks/post-tool-use-tracker.sh .claude/hooks/
 ```
 
@@ -86,7 +86,7 @@ cp settings.json settings.json.backup
 ### Extracted Code (bash)
 
 ```bash
-mkdir -p .claude/agents
+mkdir -p .claude/[[AGENTS.md|AGENTS]]
 
 # 필요한 Agent 복사
 cp /path/to/showcase/.claude/agents/code-architecture-reviewer.md .claude/agents/

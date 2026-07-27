@@ -10,7 +10,7 @@ type: Resource
 
 ```html
 <div
-  style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 10px; color: white;"
+  style="background: linear-gradi[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 10px; color: white;"
 >
   <h1 style="text-align: center;">🚀 2025 4분기 SW College</h1>
   <h2 style="text-align: center;">코스워크 신청안내</h2>
@@ -28,7 +28,7 @@ type: Resource
 
 ```html
 <div
-  style="max-width: 800px; margin: 0 auto; font-family: 'Malgun Gothic', sans-serif;"
+  style="max-width: 800px; margin: 0 auto; font-family: 'Malgun [[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]thic', sans-serif;"
 >
   <!-- 헤더 -->
   <div
@@ -260,7 +260,7 @@ type: Resource
 
 ```html
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ko.md|ko]]">
   <head>
     <meta charset="UTF-8" />
     <style>

@@ -17,7 +17,7 @@ Layer 1: 최소 동작 버전 (MVP)
 Layer 2: 모듈화 버전
 └─ 재사용 가능한 함수/클래스로 분리
 └─ 목표: 다른 프로젝트에서도 쓸 수 있게
-└─ 예: hr_analyzer.py, report_generator.py
+└─ 예: hr_analyzer.py, report_g[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]erator.py
 
 Layer 3: 서비스화 버전
 └─ API, 데이터베이스, UI 추가
@@ -54,7 +54,7 @@ report.generate(results, output="report.pptx")
 ```text
 1. 당신: "리더십 평가 점수를 5점 척도로 정규화하고,
          팀별 평균을 계산해서 막대 그래프로 보여줘"
-2. Claude Code: 구현 코드 생성
+2. [[CLAUDE.md|CLAUDE]] Code: 구현 코드 생성
 3. 당신: 결과 확인 → 도메인 관점에서 검증
 4. 피드백 → 개선 반복
 ```
@@ -140,7 +140,7 @@ Level 1: 반복 사용 가능
 └─ 일주일에 한 번씩 쓸 수 있음
 
 Level 2: 남에게 줄 수 있음
-└─ 동료가 README 보고 실행 가능
+└─ 동료가 [[README.md|README]] 보고 실행 가능
 
 Level 3: 제품 수준
 └─ 고객에게 판매 가능

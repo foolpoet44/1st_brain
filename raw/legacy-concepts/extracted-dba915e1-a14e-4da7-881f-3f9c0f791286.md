@@ -27,7 +27,7 @@ triggers:
 
 ## 실행 전 필수 작업
 
-반드시 `.agent/skills/weekly-report/history.md` 파일을 읽어 각 업무의 이전 주차 맥락을 파악한 후 작성을 시작한다.
+반드시 `.ag[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t/[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s/weekly-report/history.md` 파일을 읽어 각 업무의 이전 주차 맥락을 파악한 후 작성을 시작한다.
 
 ## 입력 형식
 

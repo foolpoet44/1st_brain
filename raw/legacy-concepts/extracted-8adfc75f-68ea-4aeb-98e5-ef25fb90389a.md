@@ -76,7 +76,7 @@ def excel_to_markdown(xlsx_path, output_path):
     # 모든 시트를 읽어서 각각 마크다운 테이블로
     excel_file = pd.ExcelFile(xlsx_path)
 
-    with open(output_path, 'w', encoding='utf-8') as f:
+    with op[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]](output_path, 'w', encoding='utf-8') as f:
         f.write(f"# {Path(xlsx_path).stem}\n\n")
 
         for sheet_name in excel_file.sheet_names:
@@ -105,7 +105,7 @@ excel_to_markdown("리더십평가_2024Q4.xlsx", "leadership_eval_2024q4.md")
 from pptx import Presentation
 from pathlib import Path
 
-def pptx_to_markdown(pptx_path, output_path, extract_images=True):
+def pptx_to_markdown(pptx_path, output_path, extract_images=T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]e):
     prs = Presentation(pptx_path)
 
     with open(output_path, 'w', encoding='utf-8') as f:
@@ -300,7 +300,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Python
+      - name: [[SETUP.md|SETUP]] Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"

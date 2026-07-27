@@ -1,5 +1,6 @@
 ---
 type: Signal
+status: Active
 source: LinkedIn
 author: "[[duckjung-kim|Dennis Kim]]"
 tags: [Code-Documentation, Devin, Vibe-Coding]

@@ -11,7 +11,7 @@ type: Resource
 ```text
 워크플로우 = 스킬들이 연결되어 역량이 되는 경로
 
-Skill A → Skill B → Skill C
+[[Understand-Anything[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] A → Skill B → Skill C
    ↓         ↓         ↓
 개별 지식  통합 이해  실행 역량
    ↓         ↓         ↓

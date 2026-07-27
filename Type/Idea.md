@@ -1,5 +1,6 @@
 ---
 type: Type
+status: Active
 _icon: sparkles
 _color: "#ec4899"
 _order: 9

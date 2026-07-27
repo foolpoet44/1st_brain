@@ -11,7 +11,7 @@ type: Resource
 ```text
 [도입] AX의 본질은 일하는 방식의 근본적 전환이다
 
-[Part 1] 리더는 무엇을 해야 하는가 - Jensen Huang
+[Part 1] 리더는 무엇을 해야 하는가 - J[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]sen Huang
 - 위기의식, 장기 비전, 불확실성 속 방향 제시, 직접 체험
 
 [Part 2] 조직은 어떻게 변해야 하는가 - 팔란티어 사례

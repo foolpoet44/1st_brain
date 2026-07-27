@@ -19,7 +19,7 @@ type: Resource
         "width": 300,
         "height": 150,
         "type": "textbox",
-        "content": "제조 AX 아카데미"
+        "cont[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t": "제조 AX 아카데미"
       }
     ]
   },
@@ -276,7 +276,7 @@ def detect_groups(enriched_data):
             })
 
         # 이미지 + 캡션 → figure
-        image_text_pairs = find_adjacent_pairs(shapes, "image", "text")
+        image_text_pairs = find_ad[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ja.md|ja]]cent_pairs(shapes, "image", "text")
         for pair in image_text_pairs:
             slide["groups"].append({
                 "type": "figure",
@@ -1537,7 +1537,7 @@ import google.generativeai as genai
 
 # API 설정
 genai.configure(api_key="YOUR_API_KEY")
-model = genai.GenerativeModel("gemini-2.0-flash-exp")
+model = genai.GenerativeModel("[[GEMINI.md|GEMINI]]-2.0-flash-exp")
 
 # JSON을 컨텍스트로 전달
 with open("parsed_output.json") as f:

@@ -67,7 +67,7 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     steps:
-      # Claude 대화에서 학습 내용 추출
+      # [[CLAUDE.md|CLAUDE]] 대화에서 학습 내용 추출
       - name: Fetch Claude Conversations
         run: python automation/collectors/claude_sync.py
 
@@ -738,7 +738,7 @@ class AutoTagger:
 - [x] Repository 구조 설계
 - [x] Issue/Discussion 템플릿
 - [x] Projects Board 설정
-- [x] 기본 README
+- [x] 기본 [[README.md|README]]
 
 ### Phase 2: Automation (진행 중)
 - [ ] Issue → Markdown 자동 변환
@@ -872,7 +872,7 @@ tar -xzf CSP-Learning-OS.tar.gz
 cd CSP-Learning-OS
 git init
 git add .
-git commit -m "🎉 Initial setup"
+git commit -m "🎉 Initial [[SETUP.md|SETUP]]"
 git remote add origin https://github.com/yourusername/CSP-Learning-OS.git
 git push -u origin main
 ```

@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (bash)
 
 ```bash
-find ~/Library/LaunchAgents -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
+find ~/Library/Launch[[AG[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]TS.md|AGENTS]] -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
 find /Library/LaunchAgents -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
 find /Library/LaunchDaemons -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
 ```

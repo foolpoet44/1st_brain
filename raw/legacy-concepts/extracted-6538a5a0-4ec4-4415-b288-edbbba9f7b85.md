@@ -2,7 +2,7 @@
 type: Resource
 ---
 
-﻿# Extracted Knowledge from Conv: 6538a5a0-4ec4-4415-b288-edbbba9f7b85
+﻿# Extracted [[Understand-Anything/understand-anything-plugin/hooks/auto-update-prompt.md|auto-update-prompt]] [[projects/worldmonitor/docs/user-requests.md|user-requests]] Conv: 6538a5a0-4ec4-4415-b288-edbbba9f7b85
 
 **Date**: 2026-01-31T00:32:51.335862Z
 
@@ -14,5 +14,5 @@ type: Resource
 2. 온톨로지/시맨틱 기술
 3. SaaS 플랫폼 트렌드
 4. 금융 시장 (채권, ETF, 배당 투자)
-5. Claude/AI 에이전트 발전
+5. [[CLAUDE.md|CLAUDE]]/AI 에이전트 발전
 ```

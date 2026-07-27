@@ -6,12 +6,12 @@ type: Resource
 
 **Date**: 2025-11-12T00:39:08.135533Z
 
-### Extracted Code (python)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/python.md|python]])
 
 ```python
 # Python에서 환경 변수 불러오기
 import os
-from dotenv import load_dotenv
+from dot[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]v import load_dotenv
 
 load_dotenv()  # .env 파일 로드
 api_key = os.getenv('OPENAI_API_KEY')
@@ -139,7 +139,7 @@ def diagnose_connection():
             print("✅ API 키 유효함!")
         else:
             print(f"❌ API 오류: {response.status_code}")
-            print(f"상세: {response.json()}")
+            print(f"상세: {response.[[Understand-Anything/understand-anything-plugin/skills/understand/languages/json.md|json]]()}")
     except Exception as e:
         print(f"❌ 요청 실패: {e}")
 

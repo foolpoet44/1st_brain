@@ -12,7 +12,7 @@ type: Resource
 📌 채권 중심 + 배당 + 달러 헤지
 
 • TIGER 미국채10년선물 (25%)
-• KODEX 미국채울트라30년선물 (15%)
+• [[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/ko.md|ko]]DEX 미국채울트라30년선물 (15%)
 • KODEX 국고채10년액티브 (20%)
 • KODEX 배당성장 (15%)
 • ARIRANG 고배당주 (10%)

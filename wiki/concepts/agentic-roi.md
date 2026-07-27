@@ -1,5 +1,6 @@
 ---
 type: Concept
+status: Active
 tags: [agentic, roi, business-metric, hr-tech]
 created: 2026-07-11
 ---

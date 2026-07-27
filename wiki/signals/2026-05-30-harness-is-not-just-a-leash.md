@@ -15,12 +15,12 @@ url: https://www.linkedin.com/posts/hwang-minho_%ED%95%98%EB%84%A4%EC%8A%A4%EB%8
 ## 💡 핵심 요약 (TL;DR)
 
 - **하네스의 재정의**: AI에게 제약을 거는 가드레일이 아니라, 모델이 실제 업무를 완수할 수 있게 감싸는 **실행 구조 전체** 정보를 의미함.
-- **Anthropic & OpenAI 사례**: 모델 성능보다 '작업 환경'과 '검증 루프'의 부재가 에이전트 도입의 가장 큰 병목임.
+- **Anthropic & Op[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]AI 사례**: 모델 성능보다 '작업 환경'과 '검증 루프'의 부재가 에이전트 도입의 가장 큰 병목임.
 
 ## 🚀 하네싱의 3대 최소 요건 (Minimum Viable Harness)
 
 1. **역할 설계 (Role Design)**: 무엇을 판단하고 무엇을 하지 말아야 하는지 명확히 규정.
-2. **스킬 정의 (Skill Definition)**: 반복적 절차, 체크리스트, 판단 기준을 자산화(`SKILL.md`).
+2. **스킬 정의 ([[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Definition)**: 반복적 절차, 체크리스트, 판단 기준을 자산화(`SKILL.md`).
 3. **오케스트레이터 (Orchestrator)**: 기획-실행-검토-수정 과정을 역할별로 분리(Planner-Generator-Evaluator).
 
 ## 🧠 CSP-Brain에의 시사점

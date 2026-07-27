@@ -18,7 +18,7 @@ type: Resource
 
 ```bash
 # 기본 명령
-claude code "Python으로 간단한 계산기 만들어줘"
+[[CLAUDE.md|CLAUDE]] code "[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/python.md|python]]으로 간단한 계산기 만들어줘"
 
 # 특정 파일 작업
 claude code --file app.py "이 파일의 버그를 찾아서 수정해줘"

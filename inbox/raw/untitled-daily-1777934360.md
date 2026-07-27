@@ -1,5 +1,6 @@
 ---
 type: daily
+status: Active
 processed: true
 processed_date: 2026-07-02
 processed_note: "wiki/tools/rlm-forge.md 신규 생성"

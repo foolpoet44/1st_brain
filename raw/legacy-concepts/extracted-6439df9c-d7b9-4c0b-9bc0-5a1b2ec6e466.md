@@ -9,12 +9,12 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-Claude.ai에서 좋은 게 나왔다
+[[CLAUDE.md|CLAUDE]].ai에서 좋은 게 나왔다
         ↓
 CSP가 판단: "이게 도구야, 아니면 기록이야?"
         ↓
 도구 → "템플릿으로 저장해줘"
-        → Claude가 Skills 폴더용 마크다운으로 정리
+        → Claude가 [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s 폴더용 마크다운으로 정리
 
 기록 → "Notion에 저장해줘"
         → Claude가 아카이브 DB에 구조화해서 저장

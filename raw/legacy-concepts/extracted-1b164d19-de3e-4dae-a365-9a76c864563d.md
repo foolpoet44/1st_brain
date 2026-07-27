@@ -12,7 +12,7 @@ type: Resource
 이번 주 [날짜] 주간 실적을 정리해줘.
 
 과제별 진행 현황:
-- EX Intelligence: [한 줄]
+- EX Intellig[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce: [한 줄]
 - ESCON: [한 줄]
 - Pulse Check: [한 줄]
 - AX 교육: [한 줄]
@@ -34,7 +34,7 @@ type: Resource
 
 ## 과제별 진행 현황 (한 줄씩)
 ① AI활용도: [예: AX Survey 결과 분석 완료, 보고서 초안 작성]
-② Physical AI: [예: Skill Inventory LV1~3 레벨링 검증 완료]
+② Physical AI: [예: [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Inventory LV1~3 레벨링 검증 완료]
 ③ AX역량고도화: [예: Starter 인증 시작, 1주차 참여율 62% 집계]
 ④ 조직건강도: [예: 모듈 개발 세부계획 확정, MS Forms 설계 착수]
 ⑤ HR실AX역량강화: [예: LG화학 벤치마킹 결과 정리, 커리큘럼 초안 80%]

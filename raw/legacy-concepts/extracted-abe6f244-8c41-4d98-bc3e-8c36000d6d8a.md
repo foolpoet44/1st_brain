@@ -25,7 +25,7 @@ type: Resource
 - 디렉토리 구조
 - 주요 모듈 설명
 
-## 💻 Claude Code 작업 내역
+## 💻 [[CLAUDE.md|CLAUDE]] Code 작업 내역
 ### 세션 1 (날짜)
 - 작업 내용:
 - 생성된 파일:
@@ -54,7 +54,7 @@ type: Resource
 - [ ] 배포 준비
 ```
 
-### Extracted Code (markdown)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/markdown.md|markdown]])
 
 ```markdown
 # 📋 프로젝트 개요
@@ -111,7 +111,7 @@ type: Resource
 ```text
 ### 생성/수정된 파일
 - `src/main.py` - 새로 생성
-- `requirements.txt` - 업데이트
+- `requirem[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ts.txt` - 업데이트
 -
 
 ### 주요 변경사항

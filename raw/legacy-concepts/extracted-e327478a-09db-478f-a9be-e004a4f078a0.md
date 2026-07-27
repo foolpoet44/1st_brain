@@ -37,7 +37,7 @@ Step 1 분석을 바탕으로, 아래 6개 도메인 구조로 새 데이터를 
 
 ### 타겟 도메인 (6개)
 1. 산업용 로봇 제어 (Industrial Robot Control)
-2. 머신비전 & 센서 통합 (Machine Vision & Sensor Integration)
+2. 머신비전 & 센서 통합 (Machine Vision & S[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]sor Integration)
 3. 협동로봇 운용 (Collaborative Robot Operation)
 4. 자율이동로봇 (AMR/AGV Systems)
 5. 로봇 유지보수 & 진단 (Robot Maintenance & Diagnostics)
@@ -71,7 +71,7 @@ Step 1 분석을 바탕으로, 아래 6개 도메인 구조로 새 데이터를 
 ```text
 ### 데이터 요구사항
 - 6개 도메인 × 최소 20개 스킬 = 최소 120개 스킬 정의
-- 각 스킬마다 knowledge → skill → competence 계층 연결 필수
+- 각 스킬마다 knowledge → [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] → competence 계층 연결 필수
 - 3개 역할(operator/engineer/developer)에 고르게 분포
 - proficiency_level 1~4가 고르게 분포
 - ESCO URI는 실제 ESCO API 패턴(http://data.europa.eu/esco/skill/...)을

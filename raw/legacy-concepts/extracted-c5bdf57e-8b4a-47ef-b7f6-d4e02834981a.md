@@ -30,7 +30,7 @@ type: Resource
 각자 어떤 질문을 던지고, 어떤 액션을 제안할까?"
 ```
 
-### Extracted Code (python)
+### Extracted Code ([[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/python.md|python]])
 
 ```python
 # 기존 코딩 방식
@@ -109,7 +109,7 @@ AI에게 요청:
 리포트: 단일 점수가 아닌 '다면적 인사이트'
 ```
 
-### Extracted Code (markdown)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/markdown.md|markdown]])
 
 ```markdown
 # HR 전략 의사결정용

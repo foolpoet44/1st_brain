@@ -26,7 +26,7 @@ ssh -T git@github.com
 
 ```bash
 # marketplace 설정 파일 위치 확인
-cat ~/.claude/plugins/marketplaces/claude-plugins-official.json
+cat ~/.[[CLAUDE.md|CLAUDE]]/plugins/marketplaces/claude-plugins-official.json
 # 또는
 ls ~/.claude/
 ```
@@ -37,7 +37,7 @@ ls ~/.claude/
 # 플러그인 파일 구조 확인
 ls ~/.claude/plugins/installed/telegram*/
 
-# skill 정의 파일이 있는지 확인
+# [[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] 정의 파일이 있는지 확인
 find ~/.claude/plugins -name "*.skill*" -o -name "skills*" 2>/dev/null
 ```
 
@@ -148,7 +148,7 @@ ls -la ~/.claude/plugins/installed/telegram*/
 
 ```bash
 # 플러그인 문서 직접 읽기
-cat ~/.claude/plugins/installed/telegram*/README.md
+cat ~/.claude/plugins/installed/telegram*/[[README.md|README]].md
 cat ~/.claude/plugins/installed/telegram*/CLAUDE.md
 ```
 

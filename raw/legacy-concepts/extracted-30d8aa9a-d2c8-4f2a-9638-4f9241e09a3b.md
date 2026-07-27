@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-사용자 입력 (Intent)
+사용자 입력 (Int[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t)
       ↓
 [ Dispatcher ]  ← 여기가 핵심
       ↓
@@ -53,9 +53,9 @@ result = dispatcher.dispatch("pulse_check", {"team": "EXG", "period": "2026-Q1"}
 ### Extracted Code (markdown)
 
 ```markdown
-# CLAUDE.md (Orchestrator 역할)
+# [[CLAUDE.md|CLAUDE]].md (Orchestrator 역할)
 
-## Dispatch Rules
+## Dispatch [[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]les
 
 - 사용자 요청에 "설문", "참여율", "Well-Being" 포함 → pulse_check_agent 호출
 - 사용자 요청에 "스킬", "ESCO", "역량" 포함 → escon_agent 호출

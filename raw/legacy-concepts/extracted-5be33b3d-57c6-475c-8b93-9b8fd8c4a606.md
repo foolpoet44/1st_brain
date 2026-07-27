@@ -11,9 +11,9 @@ type: Resource
 ```bash
 # For Linux
    sudo apt-get update
-   sudo apt-get install docker-compose-plugin
+   sudo apt-get install [[open-design/docs/deployment/docker.md|docker]]-compose-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]
 
-   # Or using the Docker convenience script
+   # Or using the Docker conv[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ience script
    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 

@@ -1,5 +1,6 @@
 ---
 type: Type
+status: Active
 _icon: users
 _color: "#8b5cf6"
 _order: 5

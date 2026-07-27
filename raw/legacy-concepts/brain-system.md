@@ -10,7 +10,7 @@ type: Resource
 
 ---
 
-## Compiled Truth
+## Compiled T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]th
 
 CSP Brain은 AI 에이전트와 인간이 함께 운영하는 **공유 메모리 시스템**이다.
 Git 레포지토리를 기반으로 대화 간 컨텍스트를 유지하고, 지식을 축적하며, 의사결정을 추적한다.
@@ -26,7 +26,7 @@ Git 레포지토리를 장기 메모리로 활용해, 모든 대화가 다음 �
 ## 핵심 구성 요소
 
 1. **Compiled Truth**: 현재 상태의 가장 정확한 요약. 새 정보 오면 섹션째 덮어씀. 빠른 컨텍스트 복원용 TL;DR.
-2. **Timeline**: append-only 증거 기록. 절대 수정/삭제 금지. 모든 변화의 증거가 남음.
+2. **Timeline**: app[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]d-only 증거 기록. 절대 수정/삭제 금지. 모든 변화의 증거가 남음.
 3. **Dream Cycle**: 매주 금요일 실행하는 주간 정리 루틴. inbox 비우기 → 상태 갱신 → weekly 파일 생성.
 4. **Inbox 우선 원칙**: 분류가 애매할 때 `raw/inbox.md`에 먼저 투입. 마찰 없이 기록하는 것이 목표.
 
@@ -50,7 +50,7 @@ Git 레포지토리를 장기 메모리로 활용해, 모든 대화가 다음 �
 
 ## 관련 파일
 
-- `CLAUDE.md` — Brain 진입점
+- `[[CLAUDE.md|CLAUDE]].md` — Brain 진입점
 - `raw/inbox.md` — 미분류 수신함
 - `weekly/` — Dream Cycle 결과물
 

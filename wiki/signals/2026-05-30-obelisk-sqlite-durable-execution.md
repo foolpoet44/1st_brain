@@ -16,7 +16,7 @@ tags:
   ]
 ---
 
-# [SIGNAL] Obelisk: SQLite 기반 내구적 워크플로 엔진의 부상
+# [SIGNAL] Obelisk: [[Understand-Anything/understand-anything-plugin/skills/understand/languages/sql.md|sql]]ite 기반 내구적 워크플로 엔진의 부상
 
 ## 💡 핵심 요약 (TL;DR)
 
@@ -31,5 +31,5 @@ tags:
 
 ## 🧠 CSP-Brain 인프라 적용 아이디어
 
-- **Hermes Long-running Task 보존**: 현재 5분 이상 걸리는 복잡한 지식 대사 과정을 `Obelisk` 패턴으로 설계하여, 중단 시에도 처음부터 다시 하지 않고 이어서 수행하도록 개선.
-- **SQLite as Truth**: 이미 `KNOWLEDGE_PULSE`에서 SQLite를 활용 중이므로, 이를 단순 통계용이 아닌 '에이전트 상태 머신'의 저장소로 확장할 근거 확보.
+- **Hermes Long-[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]nning Task 보존**: 현재 5분 이상 걸리는 복잡한 지식 대사 과정을 `Obelisk` 패턴으로 설계하여, 중단 시에도 처음부터 다시 하지 않고 이어서 수행하도록 개선.
+- **SQLite as Truth**: 이미 `[[KNOWLEDGE_PULSE.md|KNOWLEDGE_PULSE]]`에서 SQLite를 활용 중이므로, 이를 단순 통계용이 아닌 '에이전트 상태 머신'의 저장소로 확장할 근거 확보.

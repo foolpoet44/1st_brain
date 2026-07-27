@@ -9,7 +9,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <!-- Slide number: 1 -->
 
-![C:\ECM\TEMP\부서함\Brand담당\20년 연간업무계획\디지털 그래픽 모티브 개발★\★1st Manual Official Release\Graphic Asset_v1.0\1. Main motif - Solid [[open-[[open-design/plugins/_official/[[open-design/docs/design-systems.md|design-systems]]/apple/DESIGN.md|DESIGN]]/craft/color.md|color]]\png\Main_motif-LG_red_solid.png](Picture2.jpg)
+![C:\ECM\TEMP\부서함\Brand담당\20년 연간업무계획\디지털 그래픽 모티브 개발★\★1st Manual Official Release\Graphic Asset_v1.0\1. Main motif - Solid [[op[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]-[[open-design/plugins/_official/[[open-design/docs/design-systems.md|design-systems]]/apple/DESIGN.md|DESIGN]]/craft/color.md|color]]\png\Main_motif-LG_red_solid.png](Picture2.jpg)
 `25년 리더십 모니터링(박재호 담당 모니터링 점검)
 모니터링 핵심 요약유첨 첨부
 ➊ ///////////////////////////////////////////////// - //////////////////////////// - ////////////////////////////////////➋ ///////////////////////////////////////////////// - //////////////////////////// - ////////////////////////////////////

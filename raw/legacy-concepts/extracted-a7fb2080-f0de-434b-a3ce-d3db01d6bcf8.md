@@ -6,12 +6,12 @@ type: Resource
 
 **Date**: 2026-03-24T06:13:58.896890Z
 
-### Extracted Code (json)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/json.md|json]])
 
 ```json
 {
   "type": "message",
-  "attachments": [
+  "attachm[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ts": [
     {
       "contentType": "application/vnd.microsoft.card.adaptive",
       "content": {
@@ -28,7 +28,7 @@ type: Resource
           {
             "type": "TextBlock",
             "text": "3분이면 충분합니다. 여러분의 솔직한 응답이 더 나은 업무 환경을 만듭니다.",
-            "wrap": true,
+            "wrap": t[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]e,
             "color": "Default"
           },
           {

@@ -11,7 +11,7 @@ type: Resource
 ```text
 원본 마크다운 (20명)
   ↓
-Claude API (텍스트 → 구조화)
+[[CLAUDE.md|CLAUDE]] API (텍스트 → 구조화)
   ↓
 점수 매트릭스 (20 × 16)
   ↓
@@ -70,9 +70,9 @@ LDS_360_Project/
 ├── config.py                # 리더십 모델 정의 (17개 지표)
 ├── utils.py                 # 유틸 함수
 │
-├── README.md                # 프로젝트 개요
+├── [[README.md|README]].md                # 프로젝트 개요
 ├── QUICKSTART.md            # 5분 빠른 시작
-├── SETUP_GUIDE_KO.md        # 상세 설치 가이드
+├── [[SETUP.md|SETUP]]_GUIDE_KO.md        # 상세 설치 가이드
 │
 ├── requirements.txt         # Python 의존성
 └── data/                    # 분석 결과 JSON (자동 생성)

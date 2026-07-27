@@ -10,7 +10,7 @@ type: Resource
 
 ```text
 ┌─────────────────────────────────────────────────────┐
-│           COMPETENCY-VALUE CHAIN (CVC)              │
+│           COMPET[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]CY-VALUE CHAIN (CVC)              │
 ├─────────────────────────────────────────────────────┤
 │  Layer 3│ VALUE DATA    │ 가치 환산     │ 보상 정당화 │
 │  Layer 2│ CONTRIBUTION  │ 기여 추적     │ 성과 귀속   │

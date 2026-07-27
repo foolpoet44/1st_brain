@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-Entry FDE (0-2년)
+[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]try FDE (0-2년)
   ↓
 Senior FDE (2-5년) → Tech Lead FDE
   ↓                      ↓
@@ -34,7 +34,7 @@ VP of Customer Success
 ### Extracted Code (text)
 
 ```text
-Month 0-3: SQL, Python 기초, Excel/Tableau
+Month 0-3: [[Understand-Anything/understand-anything-plugin/skills/understand/languages/sql.md|sql]], [[Understand-Anything/understand-anything-plugin/skills/understand/languages/python.md|python]] 기초, Excel/Tableau
 Month 3-6: Pandas, 기본 ETL, PostgreSQL
 Month 6-12: Airflow, Kafka, InfluxDB, Docker
 Month 12-18: Spark, Kubernetes, Cloud (AWS/Azure)

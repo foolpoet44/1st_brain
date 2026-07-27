@@ -9,7 +9,7 @@ tags: [behavioral-economics, ai-agents, psychology, reinforcement-learning]
 
 # 행동경제학 최신 주요 논문 브리프
 
-## Compiled Truth
+## Compiled T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]th
 
 현재 수집된 2025-2026년 행동경제학의 핵심 흐름은 **'AI/강화학습과의 융합'**과 **'LLM의 행동 편향 측정'**으로 요약됩니다. 특히 전통적인 인간 의사결정 모델(전망 이론 등)을 AI 에이전트의 보상 함수에 통합하려는 시도와, 대규모 언어 모델이 인간 고유의 심리적 편향(부정 편향, 위험 회피 등)을 얼마나 복제하는지에 대한 연구가 활발합니다.
 
@@ -17,13 +17,13 @@ tags: [behavioral-economics, ai-agents, psychology, reinforcement-learning]
 
 ## 주요 논문 리스트
 
-### 1. 경제학을 위한 강화학습 서베이 (A Survey of Reinforcement Learning For Economics)
+### 1. 경제학을 위한 강화학습 서베이 (A Survey of Reinforcem[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t Learning For Economics)
 
 - **arXiv ID:** `2603.08956`
 - **핵심 요약:** 강화학습(RL)을 경제학적 의사결정 모델링에 적용하는 최신 기법들을 정리한 서베이입니다. 에이전트 기반 모델링(ABM)에서 행동경제학적 속성을 가진 에이전트를 구축하는 방법론을 다룹니다.
 - **링크:** [https://arxiv.org/abs/2603.08956](https://arxiv.org/abs/2603.08956)
 
-### 2. Debreu-Koopmans 정리: 고전 및 행동경제학의 가교
+### 2. Debreu-[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ko.md|ko]]opmans 정리: 고전 및 행동경제학의 가교
 
 - **arXiv ID:** `2603.17088`
 - **핵심 요약:** 'Star Quasiconvexity' 개념을 통해 신고전파의 합리적 선택 이론과 행동경제학의 비합리적 선택 사이의 수학적 접점을 탐구합니다. 선호 체계의 비일관성을 수리적으로 정교화한 논문입니다.

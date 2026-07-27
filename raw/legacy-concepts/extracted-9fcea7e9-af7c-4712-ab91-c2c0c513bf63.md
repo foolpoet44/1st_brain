@@ -17,7 +17,7 @@ type: Resource
 
 설정 방법:
 1. 추천 블로그 RSS 피드 추가
-2. "AI Solopreneur" 폴더 생성
+2. "AI Solopr[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]eur" 폴더 생성
 3. 우선순위 태그 설정
 ```
 
@@ -36,7 +36,7 @@ type: Resource
 
 ```text
 추천 시작 조합:
-1. The Rundown AI (매일) - 가장 핵심적
+1. The [[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]ndown AI (매일) - 가장 핵심적
 2. Indie Hackers (수시) - 커뮤니티 참여
 3. Lenny's Newsletter (주 1회) - 깊이 있는 인사이트
 ```

@@ -3,10 +3,11 @@ title: "{{date}}"
 created: { { date } }
 updated: { { date } }
 type: daily
+status: Active
 tags: [daily, change-sensing]
 ---
 
-# {{date}}
+# [[[[open-design/specs/current/skills-and-design-[[open-design/plugins/_official/examples/html-ppt/references/full-decks.md|full-decks]].md|skills-and-design-templates]]/daily-note.md|daily-note]]
 
 ## 오늘 새로 들어온 것
 

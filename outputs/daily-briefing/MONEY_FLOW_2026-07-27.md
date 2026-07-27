@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 ---
 
 # 💰 돈의 이동 브리핑 | 2026-07-27

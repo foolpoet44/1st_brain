@@ -13,7 +13,7 @@ type: Resource
 ls -la /Users/dkmac/Desktop/@26/camp/my-day1
 
 # MCP 설정 내용 확인
-cat ~/.claude.json | grep -A 5 "my-plugin"
+cat ~/.[[CLAUDE.md|CLAUDE]].json | grep -A 5 "my-plugin"
 ```
 
 ### Extracted Code (bash)
@@ -40,7 +40,7 @@ ls -la /Users/dkmac/Desktop/@26/camp/my-day1/.claude-plugin/
 ### Extracted Code (bash)
 
 ```bash
-mkdir -p ~/.claude/skills/my-day1
+mkdir -p ~/.claude/[[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s/my-day1
 ln -s ~/my-day1/skills/my-day1.md ~/.claude/skills/my-day1/SKILL.md
 ln -s ~/my-day1/skills/references ~/.claude/skills/my-day1/references
 ```
@@ -54,7 +54,7 @@ ln -s ~/my-day1/skills/references ~/.claude/skills/my-day1/references
 ├── skills/
 │   ├── my-day1.md           ✅ frontmatter 포함
 │   └── references/          ✅ 15개 파일
-└── README.md
+└── [[README.md|README]].md
 ```
 
 ### Extracted Code (text)

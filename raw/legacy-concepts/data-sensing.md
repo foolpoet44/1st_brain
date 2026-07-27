@@ -2,13 +2,13 @@
 type: Resource
 ---
 
-# Data Sensing (L1/L2/L3 Architecture)
+# Data S[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]sing (L1/L2/L3 Architecture)
 
 > "설문(Declarative)을 넘어 맥락(Context)을 포착하는 3단계 데이터 센싱 체계"
 
 ---
 
-## 아키텍처 (Compiled Truth)
+## 아키텍처 (Compiled T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]th)
 
 HR 인텔리전스 시스템에서 데이터의 신뢰도와 깊이를 확보하기 위해, 명시적 답변뿐만 아니라 행동과 맥락을 계층화하여 수집하는 방식입니다.
 

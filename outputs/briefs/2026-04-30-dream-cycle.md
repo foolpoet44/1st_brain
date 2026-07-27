@@ -20,15 +20,15 @@ tags: [dream-cycle, weekly, ops]
 
 ### LINT
 
-`bash scripts/status.sh` 기준으로 상태를 확인했다. 미추적 `dev/` 폴더가 남아 있고, `wiki/frameworks/compiled-truth-timeline.md`가 고립 문서 후보로 확인되었다. `question-log.md`, `bridge-log.md`는 아직 실제 운영 기록이 부족하다.
+`bash scripts/status.sh` 기준으로 상태를 확인했다. 미추적 `dev/` 폴더가 남아 있고, `wiki/frameworks/compiled-t[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]th-timeline.md`가 고립 문서 후보로 확인되었다. `question-log.md`, `bridge-log.md`는 아직 실제 운영 기록이 부족하다.
 
 ### DIGEST
 
-`scripts/generate_weekly.py --date 2026-04-30`을 실행해 `outputs/weekly/2026-W18.md`를 현재 상태로 재생성했다. 최근 변경의 중심은 `ops: add change visibility dashboard` 커밋이며, 현재 작업트리 기준 핵심 미해결 항목은 `dev/` 미추적 폴더다.
+`scripts/g[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]erate_weekly.py --date 2026-04-30`을 실행해 `outputs/weekly/2026-W18.md`를 현재 상태로 재생성했다. 최근 변경의 중심은 `ops: add change visibility dashboard` 커밋이며, 현재 작업트리 기준 핵심 미해결 항목은 `dev/` 미추적 폴더다.
 
 ### DASHBOARD
 
-`scripts/generate_change_dashboard.py`를 실행해 `outputs/briefs/change-dashboard.html`을 재생성했다. 대시보드는 change-log, daily briefing, weekly digest, Git 상태, 운영 로그 건강도, 고립 문서 후보를 한 화면에서 보여준다.
+`scripts/generate_change_dashboard.py`를 실행해 `outputs/briefs/change-dashboard.[[Understand-Anything/understand-anything-plugin/skills/understand/languages/html.md|html]]`을 재생성했다. 대시보드는 change-log, daily briefing, weekly digest, Git 상태, 운영 로그 건강도, 고립 문서 후보를 한 화면에서 보여준다.
 
 ### BRIDGE
 

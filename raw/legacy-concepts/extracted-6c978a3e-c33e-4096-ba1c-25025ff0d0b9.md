@@ -10,10 +10,10 @@ type: Resource
 
 ```text
 pulse-check-webform/
-├── package.json                          (Next.js 14 + Supabase SSR)
+├── package.[[Understand-Anything/understand-anything-plugin/skills/understand/languages/json.md|json]]                          (Next.js 14 + Supabase SSR)
 ├── tsconfig.json / next.config.js
-├── tailwind.config.ts / postcss.config.js
-├── .env.local.example
+├── tailwind.config.ts / post[[Understand-Anything/understand-anything-plugin/skills/understand/languages/css.md|css]].config.js
+├── .[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]v.local.example
 ├── supabase/
 │   └── migrations/
 │       └── 001_initial_schema.sql        ← DoD C-1, C-2, D-1, D-2, D-3 전부 커버

@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 _organized: true
 ---
 

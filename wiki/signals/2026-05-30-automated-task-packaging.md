@@ -13,7 +13,7 @@ tags: ["automation", "skillify", "subagent", "efficiency"]
 
 ## 핵심 요약
 
-- **Skillification**: AI 에이전트가 지난 30일간의 사용자 세션을 분석하여 반복되는 패턴을 포착, 이를 재사용 가능한 'Skill'이나 'Subagent'로 자동 패키징함.
+- **[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]ification**: AI 에이전트가 지난 30일간의 사용자 세션을 분석하여 반복되는 패턴을 포착, 이를 재사용 가능한 'Skill'이나 'Subag[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t'로 자동 패키징함.
 - **필터링 게이트**: 단순 반복이 아닌 '빈도', '구조(명확한 입출력)', '임팩트', '고유성'이라는 4가지 검증을 통과한 항목만 자산화.
 - **Skip의 미학**: 가치가 낮은 작업은 과감히 'Skip'함으로써 시스템의 복잡도를 낮추고 고품질 지능만 유지.
 

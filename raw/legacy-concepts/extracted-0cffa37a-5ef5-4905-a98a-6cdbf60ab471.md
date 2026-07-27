@@ -392,7 +392,7 @@ Notion API:
   1. 관련 OKR의 "현재값" +1
   2. Wins Journal에 새 항목 생성
 ↓
-Claude API 호출:
+[[CLAUDE.md|CLAUDE]] API 호출:
   "이 작업을 한 줄로 축하해줘"
 ↓
 Slack: 축하 메시지 + 🎉
@@ -478,7 +478,7 @@ Claude:
 │                        │                     │                      │              │
 │ [OKR 1] Vibe Coding MVP 5건                                                        │
 │ ●─────●─────●─────●─────●─────────────────────────────────────────●              │
-│ Setup  Pilot  MVP1  MVP2  MVP3              MVP4                  MVP5            │
+│ [[SETUP.md|SETUP]]  Pilot  MVP1  MVP2  MVP3              MVP4                  MVP5            │
 │                                                                                    │
 │ [OKR 2] Physical AI Leader Pool 30명                                              │
 │ ●─────●─────●─────────●─────────●───────────●───────────●─────────●              │
@@ -1400,7 +1400,7 @@ ax-project-manager/
 │
 ├── .env                        # 환경 변수 (API 키 등)
 ├── .gitignore
-├── README.md
+├── [[README.md|README]].md
 ├── requirements.txt
 │
 ├── main.py                     # Streamlit 앱 진입점

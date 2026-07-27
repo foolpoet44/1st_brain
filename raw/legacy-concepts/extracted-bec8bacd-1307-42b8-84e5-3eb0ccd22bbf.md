@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (vb)
 
 ```vb
-Sub SendAllEML()
+Sub S[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]dAllEML()
     Dim folderPath As String
     Dim fileName As String
     Dim olApp As Object

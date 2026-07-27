@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 ---
 
 # AMQS 국내 3년 백테스트 리포트

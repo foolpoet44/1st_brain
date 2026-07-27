@@ -11,7 +11,7 @@ _sort: "property:onboarding:asc"
 template: "templates/project.md"
 status: Active
 ---
-# Project
+# [[[[Understand-Anything/docs/superpowers/plans/2026-03-28-understand-anything-extension-impl.md|2026-03-28-understand-anything-extension-impl]]/Project.md|Project]]
 
 진행 중인 프로젝트와 업무를 위한 타입입니다.
 

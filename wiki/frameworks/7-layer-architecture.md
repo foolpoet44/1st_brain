@@ -16,9 +16,9 @@ aliases: [7레이어 지식 아키텍처, 7-Layers]
 
 | Layer  | 이름                  | 역할                               | 대응 폴더/파일                        |
 | :----- | :-------------------- | :--------------------------------- | :------------------------------------ |
-| **L1** | **COMPASS (방향)**    | 핵심 미션, 페르소나, 운영 원칙     | `CLAUDE.md`, `SOUL.md`, `USER.md`     |
+| **L1** | **COMPASS (방향)**    | 핵심 미션, 페르소나, 운영 원칙     | `CLAUDE.md`, `[[SOUL.md|SOUL]].md`, `USER.md`     |
 | **L2** | **CONCEPT (개념)**    | 원자 단위의 도메인 지식 및 정의    | `wiki/concepts/`, `wiki/frameworks/`  |
-| **L3** | **CONTEXT (맥락)**    | 프로젝트별 최신 상태 및 타임라인   | `projects/`, `projects/*/README.md`   |
+| **L3** | **CONTEXT (맥락)**    | 프로젝트별 최신 상태 및 타임라인   | `projects/`, `projects/*/[[README.md|README]].md`   |
 | **L4** | **CONTENT (콘텐츠)**  | AI가 생성한 실제 산출물 및 초안    | `outputs/`, `sharing/`                |
 | **L5** | **CONNECTION (연결)** | 인물 정보, 네트워크, 이해관계자    | `people/`, `wiki/people/`             |
 | **L6** | **CONDITION (상태)**  | 시스템 운영 로그, 신호, 트렌드     | `_ops/`, `wiki/signals/`, `thinklog/` |

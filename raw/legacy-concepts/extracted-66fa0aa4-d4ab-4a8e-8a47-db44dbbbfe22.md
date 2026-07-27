@@ -11,7 +11,7 @@ type: Resource
 ```yaml
 # escon_context_shell.yaml
 persona: |
-  당신은 LG PRI의 Engineering Skill Competency Navigator입니다.
+  당신은 LG PRI의 Engineering [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Competency Navigator입니다.
   17년 HR 경험과 Production Engineering 도메인 지식을 가진
   전문가의 판단 기준으로 작동합니다.
 
@@ -359,7 +359,7 @@ escon/
 │   └── validator/
 │       ├── ContractValidator.ts        ← DoD 체크 로직
 │       └── DoDJudge.ts                 ← auto_validatable: false 처리
-└── CLAUDE.md                           ← Claude Code용 컨텍스트
+└── [[CLAUDE.md|CLAUDE]].md                           ← Claude Code용 컨텍스트
 ```
 
 ### Extracted Code (json)

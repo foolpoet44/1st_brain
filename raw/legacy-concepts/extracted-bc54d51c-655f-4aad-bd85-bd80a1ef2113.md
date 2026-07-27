@@ -24,7 +24,7 @@ plt.rcParams['axes.unicode_minus'] = False
 # =============================================================================
 
 print("\n" + "="*80)
-print("=== 24년-25년 역량별 평균변화 검증 (Independent t-test) ===")
+print("=== 24년-25년 역량별 평균변화 검증 (Indep[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]dent t-test) ===")
 print("="*80)
 
 ttest_results = []
@@ -78,7 +78,7 @@ for comp in COMPETENCY_LIST:
 df_ttest = pd.DataFrame(ttest_results)
 
 # p값 기준 정렬 (유의한 결과 우선)
-df_ttest_sorted = df_ttest.sort_values('p값').reset_index(drop=True)
+df_ttest_sorted = df_ttest.sort_values('p값').reset_index(drop=T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]e)
 
 # 결과 출력
 print(f"\n{'역량':<15} {'2024평균':>8} {'2025평균':>8} {'변화량':>8} {'t값':>8} {'p값':>10} {'효과크기':>8} {'유의성':>6}")

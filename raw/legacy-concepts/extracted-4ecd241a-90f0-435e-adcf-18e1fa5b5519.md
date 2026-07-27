@@ -32,7 +32,7 @@ CREATE TABLE competencies (
     created_at TIMESTAMP DEFAULT NOW()
 );
 
--- 3. 스킬 (Skills)
+-- 3. 스킬 ([[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s)
 CREATE TABLE skills (
     id SERIAL PRIMARY KEY,
     code VARCHAR(50) UNIQUE NOT NULL,
@@ -340,7 +340,7 @@ curl "http://localhost:8000/competencies?limit=10"
     "type": "TechnicalSkill",
     "category": "AI",
     "market_demand": 96.8,
-    "short_description": "GPT, Claude 등 LLM 활용 능력"
+    "short_description": "GPT, [[CLAUDE.md|CLAUDE]] 등 LLM 활용 능력"
   },
   {
     "competency_id": "PromptEngineering",

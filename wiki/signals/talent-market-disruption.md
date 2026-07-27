@@ -7,7 +7,7 @@ status: Listening
 tags: [signal, hr-market, trend]
 ---
 
-# [SIGNAL] 채용 시장의 권력 이동 (Harper & AI Talent Agents)
+# [SIGNAL] 채용 시장의 권력 이동 (Harper & AI Tal[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]t [[AGENTS.md|AGENTS]])
 
 - **감지 일시**: 2026-05-27 18:33:57
 - **출처**: GeekNews (Harper 사례 분석)

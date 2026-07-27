@@ -26,7 +26,7 @@ Project (상위)
 Task (하위)
 ├── id, project_id (FK)
 ├── title
-├── status: [todo / in_progress / blocked / done]
+├── status: [[[projects/worldmonitor/docs/Docs_To_Review/todo.md|todo]] / in_progress / blocked / done]
 ├── priority: [P1 / P2 / P3]
 ├── due_date
 ├── tags (보고용, 회의용, 검토필요 등)
@@ -49,7 +49,7 @@ System: 당신은 PM의 자연어 입력을 task 데이터로 변환합니다.
         기존 프로젝트 목록: {project_list}
         오늘 날짜: {today}
 
-        반드시 JSON만 반환하세요:
+        반드시 [[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/json.md|json]]만 반환하세요:
         {task_name, project_id, due_date, priority, status, tags}
 
 User: "AX 교육 커리큘럼 초안 내일까지 급하게"

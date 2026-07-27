@@ -7,7 +7,7 @@ tags: [automation, ontology, knowledge-graph, ai-agents]
 status: Active
 ---
 
-# Automated Ontology Generation (AOG)
+# Automated Ontology G[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]eration (AOG)
 
 ## 정의 (Definition)
 
@@ -34,5 +34,5 @@ Automated Ontology Generation (AOG)는 비정형 텍스트(계약서, 정책, �
 
 ## 참조 (References)
 
-- Source: `Towards Automated Ontology Generation from Unstructured Text: A Multi-Agent LLM Approach` (2025)
+- Source: `Towards Automated Ontology Generation from Unst[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]ctured Text: A Multi-Agent LLM Approach` (2025)
 - Path: `/Users/dkmac/Desktop/@26/hermes/automated_ontology_generation.pdf`

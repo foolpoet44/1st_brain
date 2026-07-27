@@ -6,12 +6,12 @@ type: Resource
 
 **Date**: 2025-12-22T07:12:22.849796Z
 
-### Extracted Code (python)
+### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/python.md|python]])
 
 ```python
 # 기본 연결 테스트
 try:
-    response = client.invoke([{"role": "user", "content": "안녕하세요"}])
+    response = cli[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t.invoke([{"role": "user", "content": "안녕하세요"}])
     print("연결 성공!")
     print(f"응답: {response.content}")
     print(f"메타데이터: {response.response_metadata}")
@@ -27,7 +27,7 @@ import requests
 url = "https://dev.apim.lgedx.biz/chatgpt/openai/v1/chat/completions"
 headers = {
     "api-key": key,
-    "Content-Type": "application/json"
+    "Content-Type": "application/[[Understand-Anything/understand-anything-plugin/skills/understand/languages/json.md|json]]"
 }
 data = {
     "model": model,

@@ -8,9 +8,9 @@ type: Resource
 
 ---
 
-## 정의 (Compiled Truth)
+## 정의 (Compiled T[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/ru.md|ru]]th)
 
-**Vibe-Coding**은 코드를 직접 한 줄 한 줄 작성하는 대신, 해결하려는 문제의 **'맥락(Context)'**과 **'의도(Intent)'**를 AI에게 정교하게 전달하여 소프트웨어를 생성하는 방식입니다. 이는 단순한 '코드 복사-붙여넣기'가 아니라, 시스템의 구조와 논리적 흐름을 설계하는 **'심리적 설계'**에 가깝습니다.
+**Vibe-Coding**은 코드를 직접 한 줄 한 줄 작성하는 대신, 해결하려는 문제의 **'맥락(Context)'**과 **'의도(Int[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t)'**를 AI에게 정교하게 전달하여 소프트웨어를 생성하는 방식입니다. 이는 단순한 '코드 복사-붙여넣기'가 아니라, 시스템의 구조와 논리적 흐름을 설계하는 **'심리적 설계'**에 가깝습니다.
 
 ### 핵심 원칙
 

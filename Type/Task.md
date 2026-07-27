@@ -1,5 +1,6 @@
 ---
 type: Type
+status: Active
 _icon: circle-check
 _color: "#10b981"
 _order: 8

@@ -14,7 +14,7 @@ tags: ["database", "automation", "markdown", "git-ops"]
 ## 핵심 요약
 
 - **문제 의식**: 테이블 정의서는 실제 DB와 늘 괴리되어 있음.
-- **해결책**: `td-export` 도구를 통해 DB의 메타데이터를 직접 읽어 Markdown/SQL 등으로 자동 추출하여 Git에 관리.
+- **해결책**: `td-export` 도구를 통해 DB의 메타데이터를 직접 읽어 [[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/markdown.md|markdown]]/[[Understand-Anything/understand-anything-plugin/skills/understand/languages/sql.md|sql]] 등으로 자동 추출하여 Git에 관리.
 - **효과**: 신규 입사자 온보딩 자동화 및 PR 단계에서 스키마 변화 가시화.
 
 ## CSP-Brain 적용

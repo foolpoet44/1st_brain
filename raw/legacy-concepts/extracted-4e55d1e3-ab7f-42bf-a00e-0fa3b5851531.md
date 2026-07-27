@@ -10,8 +10,8 @@ type: Resource
 
 ```bash
 # 이미지 파일 경로를 포함하여 명령 실행
-claude "이미지를 분석해주세요" --files image.png
+[[CLAUDE.md|CLAUDE]] "이미지를 분석해주세요" --files image.png
 
 # 또는 여러 파일 첨부
-claude "이 스크린샷들을 보고 UI를 구현해주세요" --files screenshot1.png screenshot2.png
+claude "이 스크린샷들을 보고 UI를 구현해주세요" --files scre[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]shot1.png screenshot2.png
 ```

@@ -10,8 +10,8 @@ type: Resource
 
 ```text
 일회성 프롬프트(캐싱 없음):
-- Opus: 100K tokens × $5 = $500
-- Haiku: 100K tokens × $1 = $100
+- Opus: 100K tok[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]s × $5 = $500
+- Haiku: 100K [[open-design/specs/change/20260509-token-first-tailwind/token.md|token]]s × $1 = $100
 → 격차: Opus가 $400 더 비쌈
 
 반복 쿼리 시나리오(캐싱 5회 이상):

@@ -1,5 +1,6 @@
 ---
 type: Note
+status: Active
 ---
 
 # HR Tech Daily Briefing — 2026 년 7 월 27 일 (월)

@@ -9,8 +9,8 @@ type: Resource
 ### Extracted Code (python)
 
 ```python
-# Claude Code로 자동화 스크립트 생성
-- Google Sheets API로 평가 데이터 수집
+# [[CLAUDE.md|CLAUDE]] Code로 자동화 스크립트 생성
+- [[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]ogle Sheets API로 평가 데이터 수집
 - Python으로 전처리/분석
 - 결과를 다시 Sheets에 업데이트
 - GitHub Actions로 스케줄링
@@ -22,7 +22,7 @@ type: Resource
 [Phase 1: 빠른 프로토타입]
 Project IDX
 ├─ 브라우저에서 즉시 개발 환경 시작
-├─ Gemini AI로 초기 코드 스캐폴딩
+├─ [[GEMINI.md|GEMINI]] AI로 초기 코드 스캐폴딩
 ├─ 실시간 프리뷰로 UI 검증
 └─ Firebase/Google Cloud 즉시 배포
 

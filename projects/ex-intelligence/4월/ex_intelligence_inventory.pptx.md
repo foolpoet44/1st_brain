@@ -9,7 +9,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <!-- Slide number: 1 -->
 
-EX Intellig[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/skills/AGENTS.md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ce Full Inventory v2.0 — 구성원 경험 전체 지도
+EX Intellig[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/[[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s/[[AGENTS.md|AGENTS]].md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ce Full Inventory v2.0 — 구성원 경험 전체 지도
 11개 핵심 이슈 클러스터 (MECE 보완 버전) · Layer 1 직무 / Layer 2 관계 / Layer 3 조직 · ★ = 신규 추가
 | 레이어 | 이슈 분류명 | 현장 헤드라인 | 펄스 | 심층 | 행동데이터 | 대화 |
 | --- | --- | --- | --- | --- | --- | --- |

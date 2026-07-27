@@ -1,5 +1,6 @@
 ---
 type: Resource
+status: Active
 original_path: "S:\★Y26\3월\weekly\PRI HR실 주간업무 보고 양식.xlsx"
 converted_at: 2026-04-13 11:08:14
 category: People_Intelligence

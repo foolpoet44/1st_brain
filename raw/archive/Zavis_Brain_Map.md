@@ -1,5 +1,6 @@
 ---
 type: Resource
+status: Active
 ---
 
 # 🧠 Zavis_Brain: Strategic Semantic Map v2.1
@@ -214,7 +215,7 @@ type: Resource
 - **[5*(Part2. 교육 및 실습) [공통] 01.AX Playground, 과제 실행을 위한 기본 교육\_LGenie AX의 재정의外\_v01*이경화T](3월/임원AX 역량 강화 강의 내용 관련 건/5*(Part2. 교육 및 실습) [공통] 01.AX Playground, 과제 실행을 위한 기본 교육\_LGenie AX의 재정의外\_v01*이경화T.pdf.md)**  
   _AX Playground, 과제 실행을 위한 기본 교육 CSO부문 AX센터 I 2026. 2. 28. "AI로 뭘 할 수 있지?" 문제를 드러내고, 해결을 위해 AI를 활용한 과제 ＂각 팀별로 쓸만한 AI과제 취합 보고 하세요" ‘조직의 벽’을 허물고 변화를 직접 주도하는 과제 "AI transformation is a chan..._
 - **[AI Engineering Guidebook](1월/AI Engineering Guidebook.pdf.md)**  
-  _2025 EDITION FREE AI Engineering System Design Patterns for LLMs, RAG and Agents Daily Dose of Data Science Akshay Pachaar & Avi Chawla DailyDoseofDS.com DailyDoseofDS.com How to make the most..._
+  _2025 EDITION FREE AI Engineering System Design Patterns for LLMs, RAG and [[AGENTS.md|AGENTS]] Daily Dose of Data Science Akshay Pachaar & Avi Chawla DailyDoseofDS.com DailyDoseofDS.com How to make the most..._
 - **[AX\_초급문제\_40문항\_DB](1월/AX_초급문제_40문항_DB.xlsx.md)**  
   _AX초급문제 | 문번ID | 순번 | 출제 | 난이도 | 모듈명 | 상태 | 문항내용 | 보기1 | 보기2 | 보기3 | 보기4 | 정답 | 해설 | 답안 | 적중률 | 개정이력 | 활용이력 | | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |..._
 - **[AX인증제\_안내문\_AX센처](2월/AX제도안내/AX인증제_안내문_AX센처.pptx.md)**  
@@ -249,7 +250,7 @@ type: Resource
   _<!-- Slide number: 1 --> !preencoded.png(Image0.jpg) Part 02 AX Strategy & Roadmap !preencoded.png(Image2.jpg) Antigravity × Lovable 기반 AX 역량 내재화 전략 비개발자도 체감하는 일하는 방식의 변화. "코드 작성자"에서 "의도 설계자"로의 전..._
 - **[ax_pulse_check_bcg_style_20260316005840](2월/Pulse_pjt/ax_pulse_check_bcg_style_20260316005840.pptx.md)**  
   _<!-- Slide number: 1 --> !preencoded.png(Image0.jpg) 1 LG PRI AX 기반 Pulse Check 체계 구축 경영진 보고서 BCG Situation–Complication–Resolution 구조 !preencoded.png(Image1.jpg) 보고 주체: LG PRI HR실 / EXG팀 Strictl..._
-- **[gemini_prompt_101](gemini_prompt_101.pdf.md)**  
+- **[[[GEMINI.md|GEMINI]]_prompt_101](gemini_prompt_101.pdf.md)**  
   _1 Table of contents Writing effective prompts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 Introduction . . . . . . . . . ...._
 - **[human-ai-collaboration-starts-here-ko_workday](human-ai-collaboration-starts-here-ko_workday.pdf.md)**  
   _1 현장에서의 AI: 업무, 가치, 전략의 재정의 2025년 9월 저자 SASH MUKHERJEE Ecosystm, 인더스트리 인사이트 부사장 2 목차 03. 소개 04. 최전선의 기능: 인간-AI 엔터프라이즈 지원 06. 핵심적인 AI: 생산성에서 전략적 영향력까지 에이전트 AI: 가장 중요한 것에 집중하기 07. 11. 장애물:..._
@@ -503,7 +504,7 @@ type: Resource
   _비정형 데이터 분석 대기 중..._
 - **[trigger-drop](SKON/data_manage/venv/Lib/site-packages/sqlite_web/static/img/trigger-drop.png.md)**  
   _비정형 데이터 분석 대기 중..._
-- **[umath-validation-set-README](SKON/data_manage/venv/Lib/site-packages/numpy/_core/tests/data/umath-validation-set-README.txt.md)**  
+- **[umath-validation-set-[[README.md|README]]](SKON/data_manage/venv/Lib/site-packages/numpy/_core/tests/data/umath-validation-set-README.txt.md)**  
   _Steps to validate transcendental functions: 1) Add a file 'umath-validation-set-<ufuncname>.txt', where ufuncname is name of the function in NumPy you want to validate 2) The file should contain 4..._
 - **[umath-validation-set-arccos](SKON/data_manage/venv/Lib/site-packages/numpy/_core/tests/data/umath-validation-set-arccos.csv.md)**  
   _| dtype | input | output | ulperrortol | | --- | --- | --- | --- | | np.float32 | 0xbddd7f50 | 0x3fd6eec2 | 3 | | np.float32 | 0xbe32a20c | 0x3fdf8182 | 3 | | np.float32 | 0xbf607c09 | 0x4028f84f | 3..._

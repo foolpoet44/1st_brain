@@ -102,7 +102,7 @@ type: Resource
 ```text
 【1단계】 즉시 실행 (환율 고점 대응)
 → 토스뱅크 달러 예금 (연 5%) 30%
-→ KODEX 미국단기국채액티브 20%
+→ [[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/ko.md|ko]]DEX 미국단기국채액티브 20%
 → 현금 대기 50%
 
 【2단계】 환율 1,350원 진입 시
@@ -161,7 +161,7 @@ type: Resource
 
 ```text
 1. 환율 고점 (1,400원+)에서 투자
-   → 달러 예금 or SGOV 대기
+   → 달러 예금 or S[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]V 대기
 
 2. 장기 투자 (1년+)
    → 중장기 국채 ETF (금리 하락 수혜)

@@ -2,7 +2,7 @@
 type: Resource
 ---
 
-﻿# Extracted Knowledge from Conv: feef05bb-ca2b-4c9f-96bf-6963277a5a7d
+﻿# Extracted [[Understand-Anything/understand-anything-plugin/hooks/auto-update-prompt.md|auto-update-prompt]] [[projects/worldmonitor/docs/user-requests.md|user-requests]] Conv: feef05bb-ca2b-4c9f-96bf-6963277a5a7d
 
 **Date**: 2025-11-30T23:49:51.620886Z
 
@@ -28,7 +28,7 @@ type: Resource
 "1년 후 실패했다면?"
    ↓
 예상 실패 원인:
-- README 안 쓸 것 같음
+- [[README.md|README]] 안 쓸 것 같음
 - 프로젝트 완성 안 할 것 같음
 - 협업 경험 없을 것 같음
    ↓

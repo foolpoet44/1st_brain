@@ -24,7 +24,7 @@ status: Active
 ## 속성 예시
 - `role`: 직무/역할
 - `organization`: 소속 조직
-- `skills`: 보유 기술
+- `[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s`: 보유 기술
 
 ## 관련 템플릿
 - [[templates/person]]

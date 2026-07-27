@@ -61,7 +61,7 @@ Part 1: 현재 사용 중인 AI 도구 (ChatGPT, Copilot 등)
 입문 과정 (4주, 주 1회 2시간)
 
   Week 1: AI와 친해지기
-  - ChatGPT/Claude 기본 사용법
+  - ChatGPT/[[CLAUDE.md|CLAUDE]] 기본 사용법
   - 프롬프트 엔지니어링 입문
   - 실습: 회의록 요약 자동화
 
@@ -330,7 +330,7 @@ A. 과제 분량 조정 / 간단한 버전 제시
 ```text
 09:00-09:30 | Ontology 개념 소개
 - 왜 스킬 분류가 중요한가?
-- 사례: IT 업계의 Skill Graph
+- 사례: IT 업계의 [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Graph
 
 09:30-11:00 | 그룹별 브레인스토밍
 - 5개 그룹 (각 8명)

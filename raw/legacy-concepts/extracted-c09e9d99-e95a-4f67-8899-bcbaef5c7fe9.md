@@ -87,7 +87,7 @@ export default function KospiPBRScanner() {
       per: 18.2,
       marketCap: "980조",
       treasuryRatio: "8.2%",
-      dividendYield: "1.2%",
+      divid[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]dYield: "1.2%",
       soakPlan: "15.6조 소각 계획",
     },
     // ... more
@@ -166,7 +166,7 @@ const ALL_STOCKS = [
     mcap: 980,
     treasury: 8.2,
     div: 1.2,
-    soakPlan: true,
+    soakPlan: t[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]e,
   },
   {
     rank: 2,
@@ -826,7 +826,7 @@ export default function KospiPBRScanner() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
+          model: "[[CLAUDE.md|CLAUDE]]-sonnet-4-20250514",
           max_tokens: 1000,
           messages: [{ role: "user", content: prompt }],
         }),

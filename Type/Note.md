@@ -10,7 +10,7 @@ _sort: "property:onboarding:asc"
 template: "templates/note.md"
 status: Active
 ---
-# Note
+# [[[[Understand-Anything/docs/superpowers/plans/2026-03-28-understand-anything-extension-impl.md|2026-03-28-understand-anything-extension-impl]]/Note.md|Note]]
 
 일반 지식 노트를 위한 타입입니다.
 

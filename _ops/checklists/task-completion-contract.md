@@ -1,5 +1,6 @@
 ---
 type: Checklist
+status: Active
 category: AI-Ops
 ---
 

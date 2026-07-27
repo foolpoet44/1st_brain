@@ -30,7 +30,7 @@ Vibe-Coding Domain → Shared Kernel → Physical AI Domain
 ```python
 def test_vibe_coding_capability():
     # 현재 상태: Vibe-Coding 가능 인원 0명
-    current_capability = measure_vibe_coders()
+    curr[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t_capability = measure_vibe_coders()
     assert current_capability >= 50  # FAIL
 ```
 
@@ -70,7 +70,7 @@ And 해당 도구로 주 2시간 이상 업무시간을 절감한다
 [구성원이 MVP 완성]
     → Event: ToolCreated
     → Trigger:
-        - Skill Assessment에 경험치 추가
+        - [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Assessment에 경험치 추가
         - Community에 성공 사례 게시
         - Learning Platform에서 다음 과정 추천
 ```

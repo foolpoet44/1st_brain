@@ -145,7 +145,7 @@ type: Resource
 
 - 가격 모델:
   • 무료: 월 3회 생성
-  • Pro: 월 49,000원 (무제한)
+  • Pro: 월 49,000원 ([[무제.md|무제]]한)
   • 기업: 월 99,000원 (팀 5명)
 
 [연봉 계산기 웹 앱]
@@ -1209,7 +1209,7 @@ pip install fake-useragent tqdm
 ### Extracted Code (python)
 
 ```python
-# setup_folders.py
+# [[SETUP.md|SETUP]]_folders.py
 import os
 
 folders = [

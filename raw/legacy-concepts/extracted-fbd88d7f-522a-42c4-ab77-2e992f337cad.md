@@ -74,7 +74,7 @@ cd my-saas-idea
 # BMAD Method 설치
 npx bmad-method@alpha install
 
-# 또는 Claude Code 전용 버전
+# 또는 [[CLAUDE.md|CLAUDE]] Code 전용 버전
 git clone https://github.com/24601/BMAD-AT-CLAUDE
 npm run install:bmad
 ```
@@ -118,7 +118,7 @@ Project Brief를 기반으로 PRD를 작성해주세요.
 
 ```text
 docs/planning/
-├── prd.md (Product Requirements Document)
+├── prd.md (Product Requirem[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ts Document)
 │   ├── Executive Summary
 │   ├── User Stories
 │   ├── Functional Requirements (FR-001 ~ FR-020)
@@ -180,7 +180,7 @@ docs/planning/architecture.md
 
 생성된 스토리:
 docs/stories/
-├── story-1.1-setup-supabase.md
+├── story-1.1-[[SETUP.md|SETUP]]-supabase.md
 ├── story-1.2-signup-flow.md
 ├── story-1.3-login-flow.md
 └── story-1.4-protected-routes.md

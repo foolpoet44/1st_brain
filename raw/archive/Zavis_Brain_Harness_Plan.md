@@ -1,5 +1,6 @@
 ---
 type: Resource
+status: Active
 ---
 
 # Zavis_Brain Harness Engineering Plan
@@ -56,7 +57,7 @@ Zavis_Brain/
 │  Layer 3: Application                                        │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │
 │  │ 문서 검색   │  │ 보고자동화  │  │ 임원모니터링        │  │
-│  │ (Semantic)  │  │ (Claude)    │  │ 대시보드            │  │
+│  │ (Semantic)  │  │ ([[CLAUDE.md|CLAUDE]])    │  │ 대시보드            │  │
 │  └─────────────┘  └─────────────┘  └─────────────────────┘  │
 ├─────────────────────────────────────────────────────────────┤
 │  Layer 2: Index & Cache                                      │
@@ -174,7 +175,7 @@ Zavis_Brain/
 | **벡터 DB**        | Qdrant                            | LanceDB, ChromaDB  |
 | **백엔드**         | FastAPI                           | Flask              |
 | **오케스트레이션** | Prefect                           | Airflow, cron      |
-| **LLM**            | Claude API                        | Gemini API         |
+| **LLM**            | Claude API                        | [[GEMINI.md|GEMINI]] API         |
 | **프론트엔드**     | React + TanStack Table + Tailwind | Streamlit (간소화) |
 | **PPTX 생성**      | python-pptx                       | ReportLab          |
 

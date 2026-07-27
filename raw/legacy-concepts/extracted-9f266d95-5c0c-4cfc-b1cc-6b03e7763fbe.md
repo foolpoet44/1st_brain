@@ -9,12 +9,12 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-[1] Intent Capture
+[1] Int[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t Capture
     → Guide Mode 방식의 단계별 인터뷰 프롬프트
     → 청중 / 목적 / 데이터 소스 / 슬라이드 수 수집
 
-[2] Research & Structure Agent
-    → Claude web_search로 필요한 데이터 수집
+[2] Research & St[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]cture Agent
+    → [[CLAUDE.md|CLAUDE]] web_search로 필요한 데이터 수집
     → JSON 형태의 슬라이드 아웃라인 생성
     → 각 슬라이드: {title, key_points[], speaker_notes, chart_data}
 

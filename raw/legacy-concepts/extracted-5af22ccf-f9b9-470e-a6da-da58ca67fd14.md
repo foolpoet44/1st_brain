@@ -126,7 +126,7 @@ JSON:   420-514 KB  (3-4배 증가)
 2. Processing (처리): Python / SQL
    → 변환, 분석, 검증
 
-3. Presentation (표현): JSON / HTML
+3. Pres[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]tation (표현): JSON / HTML
    → 전송, 렌더링, 상호작용
 ```
 
@@ -192,7 +192,7 @@ for exam_type in ['기본', '심화', '입문']:
 
 ```sql
 -- 향후 추가 가능: 스킬-문제 매핑
-CREATE TABLE skill_mappings (
+CREATE TABLE [[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]_mappings (
     문제ID TEXT,
     스킬ID TEXT,
     중요도 INTEGER
