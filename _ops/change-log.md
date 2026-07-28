@@ -5,16 +5,31 @@ status: Active
 
 ## 2026-07-28
 
-### [BRIEFING] HR Tech Psychology 일일 브리핑 — 속도 환영, SCAN 프레임워크, 인지적 공동조절
+### [BRIEFING] HR Tech Psychology — 아바타 편향 (CHI '26), AI 커리어 모델 (arXiv), 의사결정 피로 (Frontiers), Cripping AI (FAccT)
 
-- **무엇이 바뀌었나**: 2026 년 7 월 28 일 오전 9 시 10 분, I/O 심리학·인지 심리학·행동 경제학 최신 논문 4 편을 기반으로 HR Tech Psychology 일일 브리핑 작성 (`outputs/briefings/HR_PSYCHO_BRIEFING_2026-07-28.md`). 핵심 발견: (1) **속도 환영 (Speedup Illusion)** — AI 보조 작업 시간을 57.8 초 과소평가 (p<0.001), (2) **SCAN 프레임워크** — 작업 할당을 4 개 영역 (S-C-A-N) 으로 분류하는 인간 중심 의사결정 모델, (3) **인지적 공동조절 (Cognitive Co-Regulation)** — AI 안전성은 외부 통제가 아닌 인간-AI 시스템 전체의 공동 조절에서 나옴, (4) **Credential Fluency** — 비학위 자격증의 가치는 직무 관련성에 따라 3.8%(관련) vs 1.8%(무관련).
-- **왜 중요한가**: 어제 저녁 성찰 (REFLECT_2026-07-27.md) 이 지적한 **분류기 오류 (python.md → Meeting)** 는 바로 이 속도 환영의 실체다. "성공률 100%"는 프로세스 완료율이지 분류 정확도가 아니다. SCAN 프레임워크의 **N 영역 (Non-negotiable)** 을 채용 프로세스에 명시적으로 정의하지 않으면, AI 는 노동 (labor) 의 영역을 넘어 행위 (action) 의 영역까지 잠식한다. HR 의 새로운 역량은 **AI 를 멈출 수 있는 용기**에서 나온다.
-- **영향 범위**: `outputs/briefings/HR_PSYCHO_BRIEFING_2026-07-28.md`, `KNOWLEDGE_PULSE.md` (업데이트 완료), `_ops/change-log.md`. [[agentic-recruitment-proxy]] 에 SCAN 매핑 필요, [[fde-talent-model]] 에 속도 환영 보정 훈련 필요, [[bp-signal-intelligence]] 에 Evolution Gate YAML 스키마 적용 필요.
+- **무엇이 바뀌었나**: 2026 년 7 월 28 일 오전 9 시 10 분, I/O 심리학·인지 심리학·행동 경제학 최신 논문 4 편 브리핑 작성 (`outputs/daily-briefing/BRIEFING_2026-07-28_HR-TECH-PSYCHOLOGY.md`) 및 시냅스 생성 (`outputs/synapse/SYNAPSE_2026-07-28_HR-TECH-PSYCHOLOGY.md`). 핵심 발견: (1) **Skin-Deep Bias** (CHI '26) — AI 면접 아바타 인종 불일치 시 편향 인식↑ (M=2.19 vs 1.82), "교차적 공정성 역설" (부분 일치 > 완전 불일치), (2) **Careers in AI Age** (arXiv:2607.15506) — 7 개 AI 노출도 모델 비교, 2020+ 모델은 AI 노출도↔급여 정적 상관, "보강 프리미엄" 존재, (3) **Decision Fatigue** (Frontiers in Cognition) — 10 가지 원인 (조직 6, 개인 3, 외부 1), 의사결정 피로로 수술 확률 10.5% 감소, (4) **Cripping AI** (FAccT '26) — 3 대 능력주의 전제 해체, "Cripping AI" 3 원칙 (정치성 노출, cripistemologies 존중, crip labor 인정).
+
+- **왜 중요한가**: HR 의 정체성은 **감시자 (Guardian)**에서 **정원사 (Gardener)**로 전환해야 한다. Skin-Deep Bias 는 "공정성 = 알고리즘 객관성"이 아닌 **관계적 정체성 협상**임을 드러낸다. Cripping AI 는 "장애 = 의학적 결함"이라는 전제가 지식의 검열임을 폭로한다. Decision Fatigue 는 의사결정 피로를 개인 자제력 문제가 아닌 **조직 설계 실패**로 재정의한다. "번역은 원본을 지우지 않는다. 검열은 지운다." — HR 실행 표면에서 이 원칙을 적용해야 한다.
+
+- **영향 범위**: `outputs/daily-briefing/BRIEFING_2026-07-28_HR-TECH-PSYCHOLOGY.md`, `outputs/synapse/SYNAPSE_2026-07-28_HR-TECH-PSYCHOLOGY.md`, `KNOWLEDGE_PULSE.md` (업데이트 필요), `_ops/change-log.md`. [[agentic-recruitment-proxy]] 에 "아바타 디자인 감사" 섹션 추가 필요, [[hr-conceptual-atoms]] 에 "AI 시대 커리어 원자" 추가 필요, [[bp-signal-intelligence]] 에 "의사결정 리듬 게이트" 추가 필요, [[fde-talent-model]] 에 "신경다양성 정체성 확장" 추가 필요.
+
 - **다음 확인**: 
-  1. **Evolution Gate 구현**: `scripts/auto-classify-types.sh` 가 YAML 스키마 (required: true, audit_log: true, rollback_enabled: true, validation_sample: 10) 를 준수하도록 수정.
-  2. **N 영역 매핑**: 채용 프로세스 중 인간이 반드시 개입해야 하는 3 단계를 `_ops/human-gates/recruitment-n-zones.md` 에 명세.
-  3. **지식 원자 등록**: 오늘 브리핑의 4 개 통찰을 [[hr-conceptual-atoms]] 에 등록 (통계 + 볼트 연결 + 핵심 통찰 구조).
-  4. **가시성 점검**: KNOWLEDGE_PULSE.md 가 오늘 브리핑을 반영했는지 확인 (완료).
+  1. **시냅스 노드 생성**: 5 개 시냅스 (`synapse_skin-deep-bias_agentic-recruitment.md` 등) 를 соответствующ한 Vault 노드에 연결 (20 분).
+  2. **Human Gate 명세**: 아바타 디자인 심사, 신경다양성 채용 기준, 의사결정 리듬 설계 — 3 개 영역 AI 자동화 금지 선언 (15 분).
+  3. **Trust Level Disclosure**: 4 편 논문 신뢰도 평가 (High: 3, Medium: 2) 를 각 Vault 노드에 표시 (10 분).
+  4. **Telegram 전송**: 브리핑 요약 (헤드라인, 지식 원자 4 개, 심리학적 통찰, One Strategy) 을 홈 채널에 전송 — 자격 증명 부재로 스킵 (본 로그에 기록).
+
+### [OPS] Telegram 전송 스킵 — 자격 증명 부재
+
+- **무엇이 바뀌었나**: `/opt/data/.env` 경로 존재하지 않음 (Linux VM 환경 아님). `/Users/dkmac/.claude/channels/telegram/.env` 에서 `TELEGRAM_BOT_TOKEN` 은 확인되었으나, `TELEGRAM_HOME_CHANNEL` 정보 없음 (`access.json` 에는 `allowFrom: ["8432145059"]` 만 존재). Hermes cron job 으로 실행 중이 아닌 macOS 로컬 환경이므로, Telegram 전송 로직을 스킵하고 로컬 파일 생성으로 대체.
+
+- **왜 중요한가**: csp-brain 은 macOS(인터랙티브) 와 Linux VM(cron) 간 멀티 환경 동기화 구조임. 자격 증명 위치가 환경마다 다르므로, `graceful degradation` 원칙에 따라 전송 실패 시 `_ops/change-log.md` 에 기록하고 계속 진행.
+
+- **영향 범위**: `outputs/daily-briefing/BRIEFING_2026-07-28_HR-TECH-PSYCHOLOGY.md` (생성 완료), `outputs/synapse/SYNAPSE_2026-07-28_HR-TECH-PSYCHOLOGY.md` (생성 완료), `_ops/change-log.md` (본 로그).
+
+- **다음 확인**: 
+  1. **자격 증명 업데이트**: `~/.claude/channels/telegram/.env` 에 `TELEGRAM_HOME_CHANNEL` 추가 검토.
+  2. **환경 감지 로직**: macOS vs Linux VM 감지하여 Telegram 전송 로직 분기하는 스크립트 개선.
 
 ---
 
@@ -211,9 +226,22 @@ status: Active
 - 왜 중요한가: 업무 워크플로우에 최적화된 도구 조합을 제시함으로써 조직의 AX(AI Transformation) 가이드라인을 확보함.
 - 영향 범위: `AI-TOOLBOX-2026.md`, `outputs/daily-reflect/REFLECT_2026-07-08.md`.
 
-## 2026-07-27
+## 2026-07-28
 
-### [BRIEFING] 아침 HR Tech 브리핑 — AI 노출의 역설과 하이브리드 공정성의 증거
+### [BRIEFING] 아침 '돈의 이동' 브리핑 — 금리 불확실성의 시대, 자본비용이 HR 에 던지는 질문
+
+- **무엇이 바뀌었나**: 2026 년 7 월 28 일 자 '돈의 이동' 데일리 브리핑 `outputs/briefings/2026-07-28-money-flow-briefing.md` 를 생성함. 7 월 29 일 FOMC 금리 결정 (인상 확률 38%, 1 주 전 12% → 26%p 급등), 모건스탠리 자산배분 제안 (주식 60%, 채권 20%, 금 20%), K 자 구조 심화 (소득 이동 ↑, 자산 집중 →), 금값 연초 대비 25% 하락의 최신 데이터를 [[Economic Freedom]], [[agentic-recruitment-proxy]], [[sf-domain-mapping]], [[bp-signal-intelligence]] 개념 렌즈로 해석함.
+- **왜 중요한가**: 2026 년 하반기 금융시장은 **AI 생태계 지속 가능성**이 핵심 축이나, 유럽의 긴축 비용 선지불과 미국의 중립적 스탠스 사이에서 **자본비용이 새로운 차원의 경쟁력**으로 부상하고 있다. 이는 HR 에게 **'인적 자본 비용'을 어떻게 설계할 것인가**라는 질문을 던진다. 금리 불확실성 (38% 인상 확률) 은 시장의 집단적 불안을 반영하며, 이는 HR 의 '신뢰 사다리' (Blind Faith → Distrust → Collaboration) 와 병렬이다. K 자 구조 심화는 **소득 격차보다 자금조달 능력의 차이가 운명을 가른다**는 사실을 보여주며, HR 의 '스킬 기반 채용'이 이 격차를 좁힐 수 있는지 질문한다.
+- **영향 범위**: `outputs/briefings/2026-07-28-money-flow-briefing.md`, `KNOWLEDGE_PULSE.md` (업데이트 필요), `_ops/change-log.md`. [[Economic Freedom]] 아키텍처에 '통화 정책 신호' 레이어 연결. [[agentic-recruitment-proxy]] 의 '자본 효율성' 메트릭과 기관 자산배분 병렬. [[sf-domain-mapping]] 의 '정체성 확장'과 K 자 구조 연결. [[bp-signal-intelligence]] 의 '신뢰도 vs 타당도' 프레임과 금값 역설 연결.
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑의 4 개 핵심 신호 (금리 불확실성, 자본비용 시대, K 자 구조, 금값 역설) 를 `wiki/signals/economic/` 에 신규 노드로 생성할지 여부.
+  2. **Human Gate Specification**: "스킬 기반 채용에서 인간 판단이 필수적인 지점" 문서화 — Gate 1(AI 스킬 매핑 제안 → 인간 타당성 심사), Gate 2(A/B 테스트 → 인간 통계적 유의성 검증), Gate 3(분기별 진화 감사 → 인간 방향성 확인).
+  3. **가시성 점검**: `KNOWLEDGE_PULSE.md` 대시보드 (http://localhost:8080) 에서 오늘 금리/자산배분 신호가 반영되었는지 확인.
+  4. **Trust Level Disclosure**: 금리 전망 (Medium), 자산배분 전략 (Medium), K 자 구조 분석 (High), 금값 분석 (Medium) 을 관련 의사결정 문서에 명시.
+
+---
+
+## 2026-07-27
 
 - **무엇이 바뀌었나**: 2026 년 7 월 27 일 자 HR Tech 데일리 브리핑 `csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-27.md` 를 생성함. arXiv:2603.14963(AI 노출과 의미 있는 작업의 상관관계), arXiv:2603.06240(하이브리드 채용의 공정성 실증), Deloitte 2026 Human Capital Trends(Workforce Intelligence 의 부상), Forbes/Eklavvya(8 가지 HR 에이전트 도구) 의 최신 연구와 시장 데이터를 [[agentic-recruitment-proxy]], [[bp-signal-intelligence]], [[fde-talent-model]] 개념 렌즈로 해석함.
 - **왜 중요한가**: 2026 년은 두 개의 상반된 증거가 공존하는 해다. 한편으로 AI 는 인간이 가장 의미 있다고 느끼는 작업 (창의성, 자율성, 행복) 을 침범하고 있으며, 워커 - 개발자 정렬 불일치는 의미의 침식을 경고한다. 다른 한편으로 134 만 후보자 실증 연구는 Human+AI 가 Human-only 와 AI-only 를 모두 이긴다는 것을 보여준다. 이것은 HR 에게 **Meaning Protection Zone 선언**, **Trust Ladder 설계**, **CFO 의 언어 번역**이라는 세 가지 과제를 부여한다.

@@ -54,3 +54,11 @@ shell-init: error retrieving current directory: getcwd: cannot access parent dir
 /bin/bash: /Users/dkmac/Desktop/@26/dev/_ops/scripts/sync_brain_auto.sh: Operation not permitted
 shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted
 /bin/bash: /Users/dkmac/Desktop/@26/dev/_ops/scripts/sync_brain_auto.sh: Operation not permitted
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted
+/bin/bash: /Users/dkmac/Desktop/@26/dev/_ops/scripts/sync_brain_auto.sh: Operation not permitted
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted
+/bin/bash: /Users/dkmac/Desktop/@26/dev/_ops/scripts/sync_brain_auto.sh: Operation not permitted
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted
+/bin/bash: /Users/dkmac/Desktop/@26/dev/_ops/scripts/sync_brain_auto.sh: Operation not permitted
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted
+/bin/bash: /Users/dkmac/Desktop/@26/dev/_ops/scripts/sync_brain_auto.sh: Operation not permitted
