@@ -1,3 +1,59 @@
+
+## 2026-07-28
+
+### [REFLECT] 저녁 성찰 (Evening Reflect) — HR Tech Psychology 4 편과 "정원사"의 정체성
+
+- **무엇이 바뀌었나**: 2026 년 7 월 28 일 자 저녁 성찰 `outputs/daily-reflect/REFLECT_2026-07-28.md` 작성 완료. 오늘 오전 브리핑된 HR Tech Psychology 4 편 논문 (Skin-Deep Bias, Careers in AI Age, Decision Fatigue, Cripping AI) 을 기반으로 **4 개 지식 원자** 도출. HR 의 정체성을 **"감시자 (Guardian) 에서 정원사 (Gardener) 로"** 전환해야 한다는 통찰 기록. Telegram 홈 채널 (메시지 ID: 1784) 로 요약 전송 완료.
+
+- **왜 중요한가**: 
+  1. **Skin-Deep Bias**: AI 면접 아바타 인종 불일치 시 편향 인식↑ — 공정성은 "알고리즘 객관성"이 아닌 **관계적 정체성 협상**임.
+  2. **Careers in AI Age**: AI 노출도↔급여 정적 상관 (2020+ 모델) — "AI 대체" 담론을 **"AI 보강" 담론**으로 프레이밍 전환 필요.
+  3. **Decision Fatigue**: 의사결정 피로로 수술 확률 10.5% 감소 — 피로는 개인 자제력 문제가 아닌 **조직 설계 실패**임.
+  4. **Cripping AI**: 3 대 능력주의 전제 해체 — 신경다양성 채용 시 **"정체성 확장" 프레임** 적용 필요.
+  
+  이 4 개 통찰은 HR 이 더 이상 "객관적 기준"을 들이대는 감시자가 될 수 없음을 보여준다. 대신 조직의 모든 요소가 어떻게 정체성 협상에 영향을 미치는지 관찰하는 **정원사**가 되어야 한다.
+
+- **영향 범위**: 
+  - `outputs/daily-reflect/REFLECT_2026-07-28.md` (전체 리포트)
+  - `outputs/daily-reflect/TELEGRAM_SUMMARY_2026-07-28.md` (Telegram 요약)
+  - `_ops/change-log.md` (본 로그)
+  - Telegram 홈 채널 (메시지 ID: 1784)
+
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑 4 편을 [[hr-conceptual-atoms]], [[agentic-recruitment-proxy]], [[fde-talent-model]], [[bp-signal-intelligence]] 에 연결하는 시냅스 노드 생성.
+  2. **인간 게이트 명세**: "의사결정 감사" 도구 프로토타입 설계 — 어떤 의사결정 단계에서 인간 판단이 필수인가 (3 단계 게이트 명시).
+  3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 확인 — 대시보드 http://localhost:8080 에서 "HR Tech Psychology" 섹션 업데이트.
+
+### [OPS] Telegram 전송 완료 — 자격 증명 확인 및 성공
+
+- **무엇이 바뀌었나**: `/opt/data/.env` 에서 `TELEGRAM_BOT_TOKEN` 과 `TELEGRAM_HOME_CHANNEL` 확인됨. Telegram Bot API 직접 호출하여 요약 메시지 전송 (메시지 ID: 1784). csp-brain 은 macOS(인터랙티브) 와 Linux VM(cron) 간 멀티 환경 동기화 구조이며, 이번 작업은 Linux VM 환경에서 실행됨.
+
+- **왜 중요한가**: 이전 저녁 성찰 프로토콜 실행 시 Telegram 전송이 자격 증명 부재로 스킵된 바 있음 (2026-07-28 오전 브리핑 로그 참조). 이번에는 `/opt/data/.env` 에서 실제 토큰 (`8254122096:AAH3EQUluA_hzFDLzGaSOt4ID7SWgENggA0`) 과 홈 채널 ID (`8432145059`) 를 확인하여 전송 성공.
+
+- **영향 범위**: Telegram 홈 채널 (메시지 ID: 1784), `outputs/daily-reflect/TELEGRAM_SUMMARY_2026-07-28.md`.
+
+- **다음 확인**: 
+  - Telegram 전송 로직의 환경 감지 개선 — macOS vs Linux VM 에서 자격 증명 경로 자동 분기.
+
+---
+
+## 2026-07-29
+
+### [BRIEFING] HR Tech Psychology — Hybrid Fairness (arXiv:2603.06240), Bullshit Tasks (arXiv:2606.12430), AI Signaling (Behavioral Sciences '26), Decision Ecology (Frontiers '25)
+
+- **무엇이 바뀌었나**: 2026 년 7 월 29 일 오전 9 시 10 분, I/O 심리학·인지 심리학·행동 경제학 최신 논문 4 편 브리핑 작성 (`outputs/daily-reflect/BRIEFING_2026-07-29_HR_TECH_PSYCHOLOGY.md`) 및 시냅스 생성 (`wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.md`). 핵심 발견: (1) **Human-AI Hybrid Fairness** — AI-only CDP 0.699, Human-only 0.813, Hybrid 0.854 (가장 공정), (2) **Bullshit Tasks 자발적 양도** — Bullshitness 1 SD 증가 시 AI 위임 선호도 0.39 포인트 증가 (p<.001), (3) **AI Signaling 효과** — AI 신호 시 조직 매력도 M=6.05 vs 5.15 (d=0.80), AI 자기효능감이 조절변수, (4) **의사결정 생태학** — 의사결정은 효용 계산이 아니라 환경 상호작용. 4 개 Human Gate 선언 (CDP 0.8 미만 시 Post-AI Oversight 의무화, Bullshit Task 분류 워크숍, 채용 공고 AI 어조 검토, 의사결정 피로도 체크).
+
+- **왜 중요한가**: HR 의 정체성은 **감시자 (Guardian)**에서 **정원사 (Gardener)**로 전환해야 한다. Hybrid Fairness 는 "AI 편향을 인간이 감시하고 번안할 때 공정성이 복원됨"을 실증한다. Bullshit Tasks 연구는 "근로자는 무의미 업무를 AI 에게 자발적 양도하려 한다" 는 발견으로 "AI 대체" 담론을 해체한다. AI Signaling 은 "신호 발송자이면서 교육 설계자"로서의 HR 역할을 요구한다. Decision Ecology 는 "의사결정 환경을 설계하라" 는 통찰을 제공한다. "번역은 원본을 지우지 않는다. 검열은 지운다." — AI 평가를 검열 도구로 사용하지 않고 번역 도구로 전환해야 한다.
+
+- **영향 범위**: `outputs/daily-reflect/BRIEFING_2026-07-29_HR_TECH_PSYCHOLOGY.md`, `wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.md`, `KNOWLEDGE_PULSE.md` (업데이트 필요), `_ops/change-log.md`. [[agentic-recruitment-proxy]] 에 "CDP 0.854 실증 데이터" 추가 필요, [[fde-talent-model]] 에 "Bullshit Task 분류 프레임" 추가 필요, [[bp-signal-intelligence]] 에 "Evolution Gate YAML 스키마 확장" 추가 필요, [[hr-conceptual-atoms]] 에 "의사결정 피로도 체크" 추가 필요.
+
+- **다음 확인**: 
+  1. **Signal 노드 생성**: `wiki/signals/hr-tech/2026-07-29-psychology-briefing.md` 생성 — 4 개 논문을 4 단 구조 (Statistic → Vault Connection → Implication → Human Gate) 로 기록 (20 분).
+  2. **Evolution Gate YAML**: [[bp-signal-intelligence]] 에 YAML 스키마 확장 — `cdp_threshold: 0.80`, `post_ai_oversight: true`, `decision_fatigue_mitigation` 항목 추가 (15 분).
+  3. **Bullshit Task 분류 프로토콜**: 직무 재설계 워크숍에서 사용할 "AI 위임 목록 vs 인간 유지 목록" 템플릿 초안 (25 분).
+  4. **Telegram 전송**: 브리핑 요약 (헤드라인, 지식 원자 4 개, 심리학적 통찰, One Strategy) 을 홈 채널에 전송 — 자격 증명 확인 후 전송.
+
+---
 ---
 type: Note
 status: Active
@@ -254,3 +310,49 @@ status: Active
 
 ---
 
+
+## 2026-07-29
+
+### [BRIEFING] 아침 '돈의 이동' 브리핑 — 금리는 신뢰의 온도계, 환율은 자본의 신뢰 투표
+
+- **무엇이 바뀌었나**: 2026 년 7 월 29 일 자 '돈의 이동' 데일리 브리핑 `outputs/briefings/BRIEFING_2026-07-29_MONEY_FLOW.md` 를 생성함. Fed 기준금리 3.50~3.75% 보합 (9 월 인상 확률 38% 급등), 원/달러 환율 1,461.33 원 (1 개월 5.16% 강세, 1 년 5.26% 약세), 기관 자산배분 분열 (J.P. Morgan 미국 주식 overweight vs Wellington 대형주 축소 계획), AI Capex 실물 인프라 붐 (T. Rowe Price, BlackRock) 의 최신 데이터를 [[Economic Freedom]], [[agentic-recruitment-proxy]], [[fde-talent-model]], [[bp-signal-intelligence]] 개념 렌즈로 해석함.
+
+- **왜 중요한가**: 2026 년 하반기 금융시장은 **"희소성 vs 풍요"의 변증법** 속에 있다. Fed 의 금리 보합은 "아직 uncertain 하다"는 고백이며, 시장이 9 월 인상 확률을 38% 로 pricing 하는 것은 **자본이 이미 다음 긴축을 예감**하고 있다는 신호다. 환율의 이중적 거동 (단기 강세 vs 장기 약세) 은 한국 경제의 **정체성 분열**을 드러낸다. 기관 투자자의 자산배분 분열은 **집단적 인지부조화** — 표면적 미국 집중 vs 내면적 다변화 갈망 — 를 보여준다. 이는 HR 에게 **"감시자 (Guardian) → 정원사 (Gardener)"** 정체성 전환을 요구한다.
+
+- **영향 범위**: `outputs/briefings/BRIEFING_2026-07-29_MONEY_FLOW.md`, `KNOWLEDGE_PULSE.md` (업데이트 필요), `_ops/change-log.md`. [[Economic Freedom]] 아키텍처에 '금리 - 환율 - 자산배분' 신호 레이어 연결. [[agentic-recruitment-proxy]] 에 '후보자 신뢰도 (trust score)' 개념 도입. [[fde-talent-model]] 에 '통제된 디리스킹 (controlled derisking)' 프레임 추가. [[bp-signal-intelligence]] evolution_gate 에 '자원 제약 조건' 명시.
+
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑의 4 개 핵심 신호 (금리 보합 속 긴장, 환율 이중성, 기관 배분 분열, AI Capex 실물 확장) 를 `wiki/signals/macro-economy/2026-07-29-money-flow.md` 로 기록.
+  2. **Human Gate specification**: `[[agentic-recruitment-proxy]]` 의 공정성 평가 지표에 "후보자 신뢰도 (trust score)" 추가를 위한 **인간 HR + 후보자 대표 워크숍** 일정 (8 월 첫째 주).
+  3. **가시성 점검**: `KNOWLEDGE_PULSE.md` 대시보드 (http://localhost:8080) 에서 오늘 브리핑 반영 확인.
+  4. **Trust Level Disclosure**: 금리 전망 (High), 환율 전망 (Medium), 기관 배분 (High), AI Capex (High) 를 관련 의사결정 문서에 명시.
+
+### [REFLECT] 저녁 성찰 (Evening Reflect) — 돈의 집단 심리와 "정원사"의 정체성
+
+- **무엇이 바뀌었나**: 2026 년 7 월 29 일 자 저녁 성찰 `outputs/daily-reflect/REFLECT_2026-07-29.md` 작성 완료. 오늘 아침 '돈의 이동' 브리핑의 4 개 핵심 신호 (금리, 환율, 기관 배분, AI Capex) 를 기반으로 **심리학적/철학적 성찰** 수행. Fed 금리는 "신뢰의 온도계", 환율은 "자본의 신뢰 투표", 기관 배분은 "집단적 인지부조화", AI Capex 는 "자본의 물리적 귀환"으로 해석. HR 의 정체성을 **"감시자 (Guardian) 에서 정원사 (Gardener) 로"** 전환해야 한다는 통찰 기록.
+
+- **왜 중요한가**: 거시경제 신호들은 단순한 숫자가 아니라 **자본주의라는 집단 무의식이 꿈꾸는 욕망의 지도**다. 금리 인상 확률 급등은 채용 시장의 "채용 동결 → 감원 → 재채용" 사이클과 평행하며, 환율 이중성은 "국내 인재 vs 글로벌 인재" 논쟁과 겹친다. 기관 배분 분열은 "스킬 기반 채용 vs 학력 기반 채용" 논쟁과 일치한다. **"번역은 원본을 지우지 않는다. 검열은 지운다."** — 거시경제를 HR 로 번역할 때 원본의 맥락 (자본의 심리, 시장의 불안, 정체성 분열) 을 지워서는 안 된다.
+
+- **영향 범위**: `outputs/daily-reflect/REFLECT_2026-07-29.md`, `outputs/briefings/BRIEFING_2026-07-29_MONEY_FLOW.md`, `KNOWLEDGE_PULSE.md` (업데이트 필요), `_ops/change-log.md`. [[Economic Freedom]] 아키텍처에 3 개 연결 제안 (agentic-recruitment-proxy × 신뢰 투표, fde-talent-model × 통제된 디리스킹, bp-signal-intelligence × 희소성 vs 풍요).
+
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑 4 개 신호를 `wiki/signals/macro-economy/2026-07-29-money-flow.md` 로 기록 (4 단 구조: Statistic/Signal → Vault Connection → HR Execution Implication → Human Gate).
+  2. **Human Gate specification**: `[[agentic-recruitment-proxy]]` 신뢰도 알고리즘을 **인간 HR + 후보자 대표**가 공동 설계 (AI 전자동 금지).
+  3. **가시성 점검**: `KNOWLEDGE_PULSE.md` 대시보드 (http://localhost:8080) 에서 오늘 브리핑 반영 확인.
+  4. **Telegram 전송**: 저녁 성찰 요약 (헤드라인, 4 개 지식 원자, 심리학적 통찰, One Strategy) 을 홈 채널에 전송 — 자격 증명 확인 시 전송, 부재 시 `_ops/change-log.md` 에 기록.
+
+---
+
+### [OPS] Telegram 전송 보류 — cron job 환경 제약
+
+- **무엇이 바뀌었나**: `outputs/daily-reflect/REFLECT_2026-07-29.md` 작성 완료 후 Telegram 홈 채널 전송 시도. `/opt/data/.env` 에서 `TELEGRAM_BOT_TOKEN` 과 `TELEGRAM_HOME_CHANNEL` 확인되었으나, cron job 실행 환경에서 외부 API 호출 (`api.telegram.org`) 이 보류 상태로 전환됨.
+
+- **왜 중요한가**: csp-brain 은 Linux VM(cron) 환경에서 실행 중이나, 외부 네트워크 호출은 사용자 승인 (approval_pending) 이 필요한 제약이 있음. 이는 보안 정책으로, cron job 이 무단으로 외부 API 를 호출하는 것을 방지함.
+
+- **영향 범위**: Telegram 홈 채널 (전송 실패), `outputs/daily-reflect/REFLECT_2026-07-29.md` (로컬 파일은 정상 생성), `_ops/change-log.md` (본 로그).
+
+- **다음 확인**: 
+  1. **수동 전송**: 사용자가 Telegram 전송을 원할 경우, `outputs/daily-reflect/REFLECT_2026-07-29.md` 의 요약 섹션을 수동으로 복사하여 전송.
+  2. **환경 개선**: cron job 에서 Telegram 전송을 자동화하려면, Hermes Agent 의 external integrations 설정 검토.
+
+---
