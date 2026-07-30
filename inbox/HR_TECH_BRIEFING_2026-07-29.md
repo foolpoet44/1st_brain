@@ -1,5 +1,6 @@
 # HR Tech 브리핑 — 2026 년 7 월 29 일
 
+type: Concept
 **작성 시간**: 2026-07-29 09:10 KST  
 **주제**: Agentic AI 의 운영 정점과 인간-AI 신뢰의 재협상  
 **대시보드**: http://localhost:8080

@@ -37,9 +37,52 @@
 
 ---
 
-## 2026-07-29
+## 2026-07-30
 
-### [BRIEFING] HR Tech Psychology — Hybrid Fairness (arXiv:2603.06240), Bullshit Tasks (arXiv:2606.12430), AI Signaling (Behavioral Sciences '26), Decision Ecology (Frontiers '25)
+### [BRIEFING] HR Tech Market — Agentic AI 보편화와 신뢰의 비대칭 (2026-07-30)
+
+- **무엇이 바뀌었나**: 2026 년 7 월 30 일 오전, HR Tech 시장 브리핑 작성 완료 (`outputs/daily-reflect/BRIEFING_2026-07-30_HR_TECH_MARKET.md`). 4 개 핵심 시그널 포착: (1) **91% 의 recruiter 가 AI Agent 사용** — 보편화의 임계점, (2) **52% 가 Agentic AI 배포** — 엔드 - 투 - 엔드 오케스트레이션, (3) **26% 의 candidate 만 AI 신뢰** — 신뢰의 비대칭, (4) **EU AI Act '고위험' 분류** — 규제의 현실화. 4 개 Human Gate 선언 (3 단계 신뢰 사다리 검증, Evolution Gate YAML 명세, AI 투명성 공개, 연례 편향 감사).
+
+- **왜 중요한가**: 
+  1. **보편화의 임계점**: 91% 는 더 이상 "도입 여부"가 아닌 "협업 방식"이 경쟁력임을 의미. Blind Faith 는 규제 위반.
+  2. **신뢰의 비대칭**: recruiter 91% 사용 vs candidate 26% 신뢰 — 이 65%p 간극을 메우지 못하면 브랜드 리스크 (72% 가 나쁜 경험 온라인 공유).
+  3. **규제의 현실화**: *Mobley v. Workday* 연방 집단 소송 (2026 년 2 월 승인) — AI 벤더만 책임지는 시대 끝, 사용자 기업 공동 피소.
+  4. **정체성 진화**: HR 의 정체성은 **감시자 → 정원사 → 번역자**로 진화. "번역은 원본을 지우지 않는다. 검열은 지운다."
+
+- **영향 범위**: 
+  - `outputs/daily-reflect/BRIEFING_2026-07-30_HR_TECH_MARKET.md` (전문 브리핑)
+  - `wiki/signals/hr-tech/2026-07-30-agentic-adoption.md` (Signal 노드)
+  - `KNOWLEDGE_PULSE.md` (대시보드 업데이트)
+  - `_ops/change-log.md` (본 로그)
+
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑 4 개 시그널을 [[agentic-recruitment-proxy]], [[bp-signal-intelligence]], [[sf-domain-mapping]], [[hr-tech-evidence-bank]] 에 연결하는 시냅스 노드 생성 완료.
+  2. **인간 게이트 명세**: Evolution Gate YAML 스키마를 [[bp-signal-intelligence]] 에 추가 — 3 단계 게이트 (수정 제안, A/B 테스트, 분기별 감사) 명세.
+  3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 완료 — 대시보드 http://localhost:8080 에서 "HR Tech Market" 섹션 업데이트.
+
+---
+
+- **무엇이 바뀌었나**: 2026 년 7 월 30 일 오전, 거시경제 및 투자 뉴스 4 개 핵심 시그널 브리핑 작성 (`outputs/briefings/MONEY_FLOW_2026-07-30.md`). 핵심 발견: (1) **연준의 매파적 동결** — 기준금리 3.75% 동결, 연내 인상 가능성 (9 명 인상 vs 8 명 동결), (2) **외국인 156 조 순매도** — 원화 가치 6% 하락 (주요국 중 3 위), (3) **AI 생태계 자본 집약화** — 테크·금융·사모신용 트라이앵글 형성, (4) **자산배분 재편** — 2026 년은 자산 간 상관관계 낮아지며 분산효과 개선. 4 개 Human Gate 선언 (금리 전망 인간 해석, 환율 안정성 3 개월 모니터링, AI 자본 조달 능력 인간 평가, 상관관계 변화 인간 경고).
+
+- **왜 중요한가**: 
+  1. **금리 동결**: 연준의 우선순위가 '고용'에서 '물가'로 완전히 재편됨. PCE 전망 3.6% 는 2% 목표와 큰 괴리.
+  2. **원화 약세**: 글로벌 자본이 한국을 '신흥국 위험'으로 재분류 중. 24 시간 외환거래 연장이 실제 안정으로 이어지는지 검증 필요.
+  3. **AI 자본 집약화**: AI 버블 붕괴는 기술 실패가 아닌 자본 조달 실패에서 옴. 유럽의 높은 자본비용이 선행 지표.
+  4. **자산배분 재편**: 지역 간 성장 격차 (G2 vs 기타) 확대 → 다각화 전략 필수.
+  
+  HR 의 정체성은 **감시자 (Guardian)**에서 **정원사 (Gardener)**로 전환되어야 한다. 자본시장도 마찬가지 — "자본이 부족하다"고 잘라내는 것이 아니라 "자본을 통해 무엇을 확장할 수 있는가"를 질문해야 한다. "번역은 원본을 지우지 않는다. 검열은 지운다."
+
+- **영향 범위**: `outputs/briefings/MONEY_FLOW_2026-07-30.md`, `KNOWLEDGE_PULSE.md` (업데이트 필요), `_ops/change-log.md`. [[Economic Freedom]] 에 "연준 금리 정책과 개인 자산 배분 자유도" 연결 필요, [[bp-signal-intelligence]] 에 "외국인 자본 유출입 임계점" 추가 필요, [[agentic-recruitment-proxy]] 에 "AI 생태계 자본 조달" 연결 필요, [[hr-conceptual-atoms]] 에 "의사결정 피로도와 자산 배분" 연결 필요.
+
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑 4 개 시그널을 [[Economic Freedom]], [[bp-signal-intelligence]], [[agentic-recruitment-proxy]], [[hr-conceptual-atoms]] 에 연결하는 시냅스 노드 생성.
+  2. **인간 게이트 명세**: 자산 배분 자동화 시스템 설계 시 "상관관계 변화 감지 → 인간 경고" 게이트 YAML 스키마 작성.
+  3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 확인 — 대시보드 http://localhost:8080 에서 "Money Flow" 섹션 업데이트.
+  4. **Telegram 전송**: `/opt/data/.env` 또는 `~/.claude/channels/telegram/.env` 에서 자격 증명 확인 후 요약 메시지 전송 (실패 시 로컬 요약 파일 생성).
+
+---
+
+## 2026-07-29
 
 - **무엇이 바뀌었나**: 2026 년 7 월 29 일 오전 9 시 10 분, I/O 심리학·인지 심리학·행동 경제학 최신 논문 4 편 브리핑 작성 (`outputs/daily-reflect/BRIEFING_2026-07-29_HR_TECH_PSYCHOLOGY.md`) 및 시냅스 생성 (`wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.md`). 핵심 발견: (1) **Human-AI Hybrid Fairness** — AI-only CDP 0.699, Human-only 0.813, Hybrid 0.854 (가장 공정), (2) **Bullshit Tasks 자발적 양도** — Bullshitness 1 SD 증가 시 AI 위임 선호도 0.39 포인트 증가 (p<.001), (3) **AI Signaling 효과** — AI 신호 시 조직 매력도 M=6.05 vs 5.15 (d=0.80), AI 자기효능감이 조절변수, (4) **의사결정 생태학** — 의사결정은 효용 계산이 아니라 환경 상호작용. 4 개 Human Gate 선언 (CDP 0.8 미만 시 Post-AI Oversight 의무화, Bullshit Task 분류 워크숍, 채용 공고 AI 어조 검토, 의사결정 피로도 체크).
 
@@ -354,5 +397,33 @@ status: Active
 - **다음 확인**: 
   1. **수동 전송**: 사용자가 Telegram 전송을 원할 경우, `outputs/daily-reflect/REFLECT_2026-07-29.md` 의 요약 섹션을 수동으로 복사하여 전송.
   2. **환경 개선**: cron job 에서 Telegram 전송을 자동화하려면, Hermes Agent 의 external integrations 설정 검토.
+
+---
+
+## 2026-07-30
+
+### [BRIEFING] I/O Psychology — Decision Fatigue, Cultural Bias, Fairness, AI Adoption (2026-07-30)
+
+- **무엇이 바뀌었나**: 2026 년 7 월 30 일 오전 9 시 10 분, I/O 심리학·인지 심리학·행동 경제학 최신 논문 4 편 브리핑 작성 완료 (`inbox/BRIEFING_2026-07-30_IO_PSYCHOLOGY.md`). 핵심 발견: (1) **Decision Fatigue** — 수술 확률 10.5% 감소, 10 가지 원인 (조직 6, 개인 3, 외부 1), (2) **Cultural Bias in LLM** — 인도 기록이 영국보다 낮음 (p < 0.001), 리전이 유의한 예측 인자 (β = 0.444), (3) **Fairness in AI Recruitment** — 88% 조직 AI 실험, 71% AI 최종 결정 반대, 4/5 규칙 (80% threshold), (4) **AI Adoption Gap** — 자신의 직장 8% 우려 vs 동료 14% vs 다른 산업 29%, 관리자 지지가 79% 사용률 견인. 4 개 Human Gate 선언 (조직 문화 컨텍스트 판단, DEI 아바타 심사, 분기별 진화 감사, 신경다양성 공동 설계).
+
+- **왜 중요한가**: 
+  1. **Decision Fatigue**: "의사결정 피로는 개인의 자제력 실패가 아니라 조직 설계의 실패다." — HR 은 "인내력 훈련"이 아니라 "의사결정 로드 재설계"를 해야 함.
+  2. **Cultural Bias**: "공정성은 알고리즘적 객관성이 아니라 관계적 정체성 협상이다." — AI 평가는 서구 중심 편향을 증폭하며, 문화적 맥락 없는 점수는 검열이다.
+  3. **Fairness Metrics**: "AI 편향은 기술적 결함이 아니라 권력 관계의 증폭이다." — 4 단계 파이프라인 각 단계별 편향 감사와 NYC Local Law 144 준수가 필수.
+  4. **Adoption Gap**: "리더는 기술이 아니라 심리적 장벽을 해체해야 한다." — 낙관 편향과 평균 이상 효과를 인식하고, "정체성 확장" 프레임으로 전환해야 함.
+  
+  HR 의 정체성은 **감시자 (Guardian)**에서 **정원사 (Gardener)**로 전환되어야 한다. "번역은 원본을 지우지 않는다. 검열은 지운다."
+
+- **영향 범위**: 
+  - `inbox/BRIEFING_2026-07-30_IO_PSYCHOLOGY.md` (전문 브리핑)
+  - `KNOWLEDGE_PULSE.md` (대시보드 업데이트 완료)
+  - `_ops/change-log.md` (본 로그)
+  - [[hr-conceptual-atoms]], [[bp-signal-intelligence]], [[fde-talent-model]], [[agentic-recruitment-proxy]] (시냅스 연결 필요)
+
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑 4 편을 [[hr-conceptual-atoms]] 에 시냅스 연결 — "Decision Fatigue", "Cultural Bias", "Fairness Metrics", "Optimism Bias" 각각을 Human Gate 와 짝지어 기록.
+  2. **인간 게이트 명세**: "어떤 채용 단계가 인간 판단을 요구하는가?" 문서화 — (a) 아바타 디자인 심사 (DEI 위원회), (b) 조직 문화 컨텍스트 판단 (Operations Lead), (c) 분기별 진화 감사 (인간 승인), (d) 신경다양성 공동 설계 (이해관계자 참여).
+  3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 완료 — 대시보드 http://localhost:8080 에서 "I/O Psychology" 섹션 업데이트.
+  4. **저녁 성찰**: outputs/daily-reflect/REFLECT_2026-07-30.md 작성 — 오늘 지식의 Human Gate 명세와 "정체성 확장 설계" One Strategy 기록.
 
 ---

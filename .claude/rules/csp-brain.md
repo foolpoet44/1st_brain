@@ -1,3 +1,6 @@
+---
+type: Meeting
+---
 # CSP-Brain 운영 규칙
 
 ## 커뮤니케이션

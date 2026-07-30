@@ -1,5 +1,6 @@
 ---
 name: tomd
+type: Resource
 description: Convert an office/document file (Word .docx, Excel .xlsx, PowerPoint .pptx, PDF, HWP/HWPX 한글, CSV, HTML, images) into a clean Markdown note with YAML frontmatter that matches the surrounding folder's existing notes. Use when the user types /tomd <파일명> or asks to convert/turn a docx/xlsx/pptx/pdf/hwp/한글/엑셀/워드/피피티 file into a .md / markdown note, or to "AI가 읽을 수 있게" 문서를 마크다운으로 변환.
 ---
 
