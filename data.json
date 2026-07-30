@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-07-31T01:00:34.203792",
-  "total_docs": 7765,
+  "timestamp": "2026-07-31T08:00:40.251382",
+  "total_docs": 7766,
   "total_links": 6368,
   "avg_links": 0.82,
-  "orphan_docs": 5541,
+  "orphan_docs": 5542,
   "orphan_rate": 71.36,
-  "recent_docs": 2061,
-  "freshness_rate": 26.54,
+  "recent_docs": 2062,
+  "freshness_rate": 26.55,
   "type_docs": 10,
   "active_docs": 408,
   "eval_score": 31.77,
   "link_score": 3.28,
-  "freshness_score": 7.96,
+  "freshness_score": 7.97,
   "type_score": 20.0,
   "active_score": 0.53
 }
