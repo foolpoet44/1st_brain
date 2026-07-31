@@ -82,6 +82,34 @@
 
 ---
 
+## 2026-07-31
+
+### [BRIEFING] 아침 '돈의 이동' 브리핑 — Fed 불확실성, SK 하이닉스 설택, 금의 구조적 매수, 자본비용의 K 자 구조
+
+- **무엇이 바뀌었나**: 2026 년 7 월 31 일 오전 9 시 10 분, 거시경제 및 투자 뉴스 4 개 핵심 시그널 브리핑 작성 (`outputs/briefings/MONEY_FLOW_BRIEFING_2026-07-31.md`). 핵심 발견: (1) **Fed 금리 결정 불확실성** — 동결 확률 70%↑ vs 25bp 인상 25%↓ (CME FedWatch, 7/29), Kevin Warsh 의장의 불투명 스탠스, (2) **SK 하이닉스 발 반도체 설택** — 미국 상장 후 한 달간 시가총액 $700B 증발,单日 -15% 급락, "AI 붐 정점" 차익실현, (3) **금의 구조적 매수** — 연초 대비 -27.3% ($5,589 → $4,064/온스) 이나 중앙은행 45% 가 향후 12 개월 내 보유량 증가 계획, "가격에 둔감한 50 년 지평", (4) **자본비용의 K 자 구조** — 자산/현금흐름 충분 기업 vs 차입의존도 높 기업 간 양극화 가속, AI 생태계는 자본비용 위에서 성장. 4 개 Human Gate 선언 (자본비용 기반 인재 평가 금지, 신뢰 주기 철학적 해석, 50 년 지평 인재 육성).
+
+- **왜 중요한가**: 
+  1. **Fed 불확실성**: 시장의 불안은 금리 자체가 아니라 **예측 불가능성**에서 비롯됨. 이는 HR 의 "AI 면접 결과 불일치" 불안과 평행.
+  2. **SK 하이닉스 설택**: 자본은 더 이상 "기술력"이라는 타이틀에 속지 않음. **"기술은 자격증, 현금흐름은 실제 성과"** — HR 채용도 마찬가지.
+  3. **금의 구조적 매수**: 중앙은행은 "금리 인상/인하"라는 단기 신호에 반응하지 않음. 50 년 지평으로 "신뢰"를 삽니다. 이는 HR 의 **"신입의 첫 실수에 일희일비하지 않고, 10 년后 인재로 키우는"** 정원사 시선과 겹침.
+  4. **K 자 구조 심화**: "자산 보유 여부와 자금조달 능력의 차이"는 HR 로 치면 **"신규 채용 (차입) 의존 기업" vs "내부 인재풀 (자산) 충분 기업"** 격차.
+
+  HR 의 정체성은 **감시자 (Guardian)**에서 **정원사 (Gardener)**로 전환되어야 한다. "번역은 원본을 지우지 않는다. 검열은 지운다."
+
+- **영향 범위**: 
+  - `outputs/briefings/MONEY_FLOW_BRIEFING_2026-07-31.md` (전문 브리핑)
+  - `KNOWLEDGE_PULSE.md` (업데이트 필요)
+  - `_ops/change-log.md` (본 로그)
+  - [[Economic Freedom]], [[bp-signal-intelligence]], [[agentic-recruitment-proxy]], [[fde-talent-model]] (시냅스 연결 필요)
+
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑 4 개 시그널을 [[Economic Freedom]], [[bp-signal-intelligence]], [[agentic-recruitment-proxy]], [[fde-talent-model]] 에 연결하는 시냅스 노드 생성.
+  2. **인간 게이트 명세**: "자본비용 기반 인재 평가" 금지 영역을 [[bp-signal-intelligence]] 에 YAML 로 명문화.
+  3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 확인 — 대시보드 http://localhost:8080 에서 "Money Flow" 섹션 업데이트.
+  4. **저녁 성찰**: outputs/daily-reflect/REFLECT_2026-07-31.md 작성 — 오늘 지식의 Human Gate 명세와 "자본의 시선으로 인재를 번역하라" One Strategy 기록.
+
+---
+
 ## 2026-07-29
 
 - **무엇이 바뀌었나**: 2026 년 7 월 29 일 오전 9 시 10 분, I/O 심리학·인지 심리학·행동 경제학 최신 논문 4 편 브리핑 작성 (`outputs/daily-reflect/BRIEFING_2026-07-29_HR_TECH_PSYCHOLOGY.md`) 및 시냅스 생성 (`wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.md`). 핵심 발견: (1) **Human-AI Hybrid Fairness** — AI-only CDP 0.699, Human-only 0.813, Hybrid 0.854 (가장 공정), (2) **Bullshit Tasks 자발적 양도** — Bullshitness 1 SD 증가 시 AI 위임 선호도 0.39 포인트 증가 (p<.001), (3) **AI Signaling 효과** — AI 신호 시 조직 매력도 M=6.05 vs 5.15 (d=0.80), AI 자기효능감이 조절변수, (4) **의사결정 생태학** — 의사결정은 효용 계산이 아니라 환경 상호작용. 4 개 Human Gate 선언 (CDP 0.8 미만 시 Post-AI Oversight 의무화, Bullshit Task 분류 워크숍, 채용 공고 AI 어조 검토, 의사결정 피로도 체크).
@@ -425,5 +453,36 @@ status: Active
   2. **인간 게이트 명세**: "어떤 채용 단계가 인간 판단을 요구하는가?" 문서화 — (a) 아바타 디자인 심사 (DEI 위원회), (b) 조직 문화 컨텍스트 판단 (Operations Lead), (c) 분기별 진화 감사 (인간 승인), (d) 신경다양성 공동 설계 (이해관계자 참여).
   3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 완료 — 대시보드 http://localhost:8080 에서 "I/O Psychology" 섹션 업데이트.
   4. **저녁 성찰**: outputs/daily-reflect/REFLECT_2026-07-30.md 작성 — 오늘 지식의 Human Gate 명세와 "정체성 확장 설계" One Strategy 기록.
+
+---
+
+---
+
+## 2026-07-31
+
+### [BRIEFING] HR Tech Psychology — AI Augmentation 함정, Cripping AI, Decision Fatigue, Cognitive Agency Surrender (2026-07-31)
+
+- **무엇이 바뀌었나**: 2026 년 7 월 31 일 오전 9 시 10 분, I/O 심리학·인지 심리학·행동 경제학 최신 논문 4 편 브리핑 작성 완료 (`outputs/briefings/HR_TECH_PSYCHOLOGY_2026-07-31.md`). 핵심 발견: (1) **AI-Augmented HRM** — 독일 기업 410 명 설문, AI 도입 동기 1 위는 효율성 (44.6% 비공식 사용), (2) **Cripping AI** — 3 대 ableist 전제 해체, cripistemologies 존중, (3) **Decision Fatigue** — 10 가지 원인 중 6 가지 조직적, 수술 확률 10.5% 감소, (4) **Cognitive Agency Surrender** — 67.3% 논문이 마찰 없는 사용성 최적화, 인간 인지 주권 13.1% 로 감소. 4 개 Human Gate 선언 (AI 도입 상호작용 시간 심사, 신경다양성 디자인 위원회, 오후 3 시 이후 high-stakes 결정 금지, AI 평가 반대 근거 입력 강제).
+
+- **왜 중요한가**: 
+  1. **AI Augmentation 함정**: "보조"라고 선언되나 실제는 "자동화" — HR 은 "전략적 파트너"가 아닌 "효율성 관리자"로 전락 위험.
+  2. **Cripping AI**: 장애를 "고칠 결함"이 아닌 "고유한 인지 방식"으로 재정의 — HR 의 역할은 "심사"에서 "번역"으로.
+  3. **Decision Fatigue**: DF 는 개인 자제력 실패가 아닌 **조직 설계 실패** — 오후 4 시 이후 주요 결정은 자동 보류 또는 합의제.
+  4. **Cognitive Agency Surrender**: 마찰 없는 AI 는 인간을 "판단하는 존재"에서 "승인하는 존재"로 전락 — **의도적 마찰** 설계 필수.
+  
+  HR 의 정체성은 **감시자 (Guardian)**에서 **정원사 (Gardener)**를 거쳐 **번역가 (Translator)**로 진화. "번역은 원본을 지우지 않는다. 검열은 지운다."
+
+- **영향 범위**: 
+  - `outputs/briefings/HR_TECH_PSYCHOLOGY_2026-07-31.md` (전문 브리핑)
+  - `outputs/synapses/SYNAPSE_2026-07-31_HR_TECH_PSYCHOLOGY.md` (시냅스 제안)
+  - `KNOWLEDGE_PULSE.md` (대시보드 업데이트 필요)
+  - `_ops/change-log.md` (본 로그)
+  - [[hr-conceptual-atoms]], [[agentic-recruitment-proxy]], [[bp-signal-intelligence]], [[fde-talent-model]], [[OKA Project]] (시냅스 연결 필요)
+
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑 4 개 지식 원자를 [[bp-signal-intelligence]] 에 Signal Node 로 등록. 각 Human Gate 선언을 YAML schema 로 변환 (30 분).
+  2. **인간 게이트 명세**: [[agentic-recruitment-proxy]] 에 "Evolution Gate 3 단계" 업데이트 — AI 모델 수정 → A/B 테스트 → 분기별 감사의 각 단계에 인간 심사 항목 추가 (20 분).
+  3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 확인 — 대시보드 http://localhost:8080 에서 "HR Tech Psychology" 섹션 업데이트 (10 분).
+  4. **저녁 성찰**: outputs/daily-reflect/REFLECT_2026-07-31.md 작성 — 오늘 지식의 Human Gate 명세와 "AI 판단을 조직의 언어로 번역하라" One Strategy 기록.
 
 ---
