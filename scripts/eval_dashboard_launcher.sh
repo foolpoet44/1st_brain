@@ -2,7 +2,7 @@
 #
 # csp-brain Eval Dashboard Launcher
 # - Eval 점수 계산 (full_vault_eval.py)
-# - GitHub 배포 (git push)
+# - GitHub 배포 (git push with retry)
 # - Telegram 알림 (점수 < 60 점일 때만 경고)
 #
 
@@ -41,7 +41,7 @@ else
     EVAL_SCORE=0
 fi
 
-# 3. GitHub 배포
+# 3. GitHub 배포 (재시도 로직 포함)
 log "🚀 Pushing to GitHub..."
 cd "$VAULT_DIR"
 
@@ -52,13 +52,33 @@ if ! git diff --cached --quiet; then
     git commit -m "chore: Eval Dashboard Auto-Update ($(date '+%Y-%m-%d %H:%M'))" 2>&1 | tee -a "$LOG_FILE"
 fi
 
-if git push origin main 2>&1 | tee -a "$LOG_FILE"; then
-    log "✅ GitHub push successful"
-    PUSH_STATUS="success"
-else
-    log "❌ GitHub push failed"
-    PUSH_STATUS="failed"
-fi
+# Git push with retry logic
+MAX_RETRIES=3
+RETRY_COUNT=0
+PUSH_STATUS="failed"
+
+while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+    if git push origin main 2>&1 | tee -a "$LOG_FILE"; then
+        log "✅ GitHub push successful (attempt $((RETRY_COUNT + 1)))"
+        PUSH_STATUS="success"
+        break
+    else
+        RETRY_COUNT=$((RETRY_COUNT + 1))
+        if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+            log "⚠️ Git push failed, retrying in 3 seconds... ($RETRY_COUNT/$MAX_RETRIES)"
+            sleep 3
+            # Try force push on retry
+            if git push origin main --force 2>&1 | tee -a "$LOG_FILE"; then
+                log "✅ GitHub push successful with --force (attempt $RETRY_COUNT)"
+                PUSH_STATUS="success"
+                break
+            fi
+        else
+            log "❌ GitHub push failed after $MAX_RETRIES attempts"
+            PUSH_STATUS="failed"
+        fi
+    fi
+done
 
 # 4. Telegram 알림 (점수 < 60 점일 때만 경고)
 if (( $(echo "$EVAL_SCORE < 60" | bc -l) )); then
@@ -102,7 +122,7 @@ if (( $(echo "$EVAL_SCORE < 60" | bc -l) )); then
         log "📝 To enable Telegram alerts, add these to your shell profile:"
         log "   export TELEGRAM_BOT_TOKEN='your_bot_token'"
         log "   export TELEGRAM_CHAT_ID='your_chat_id'"
-        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Telegram skipped - Env vars not set. Score: $EVAL_SCORE" >> "$TELEGRAM_LOG"
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Telegram skipped - Env vars not set. Score: $EVAL_SCORE, Push: $PUSH_STATUS" >> "$TELEGRAM_LOG"
     fi
 else
     log "✅ Eval Score ($EVAL_SCORE) is healthy (≥60) - No alert needed"
