@@ -1,5 +1,6 @@
 # Synapse: 신뢰 사다리 (Trust Ladder)
 
+type: Concept
 **Type**: Conceptual Atom  
 **Created**: 2026-07-31  
 **Tags**: [AI Ethics, Trust, Collaboration, HR Identity]

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 데몬 식별자 -->
+    <key>Label</key>
+    <string>com.csp-brain.eval-dashboard</string>
+    
+    <!-- 실행 스크립트 -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/dkmac/Desktop/@26/dev/scripts/eval_dashboard_launcher.sh</string>
+    </array>
+    
+    <!-- 작업 디렉토리 -->
+    <key>WorkingDirectory</key>
+    <string>/Users/dkmac/Desktop/@26/dev</string>
+    
+    <!-- 실행 간격: 4 시간 (14400 초) -->
+    <key>StartInterval</key>
+    <integer>14400</integer>
+    
+    <!-- 표준 출력 로그 -->
+    <key>StandardOutPath</key>
+    <string>/Users/dkmac/Desktop/@26/dev/_ops/logs/eval-dashboard.log</string>
+    
+    <!-- 표준 에러 로그 -->
+    <key>StandardErrorPath</key>
+    <string>/Users/dkmac/Desktop/@26/dev/_ops/logs/eval-dashboard.err</string>
+    
+    <!-- 환경 변수 유지 -->
+    <key>KeepAlive</key>
+    <false/>
+    
+    <!-- 로그 회전 -->
+    <key>SoftResourceLimits</key>
+    <dict>
+        <key>NumberOfFiles</key>
+        <integer>256</integer>
+    </dict>
+</dict>
+</plist>
