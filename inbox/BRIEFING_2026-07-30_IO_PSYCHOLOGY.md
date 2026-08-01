@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # HR Tech Psychology Daily Briefing
 
 type: Concept

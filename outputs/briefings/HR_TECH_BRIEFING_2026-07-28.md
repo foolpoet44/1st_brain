@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # HR Tech Daily Briefing | 2026 년 7 월 28 일 화요일
 
 **브리핑 시간:** 09:10 KST  

@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 # Telegram 보고 — 2026-08-01 저녁 성찰 요약
 
 **전송 시간:** 2026-08-01 22:00 KST  

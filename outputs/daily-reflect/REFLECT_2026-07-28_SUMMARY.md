@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 # 저녁 성찰 요약 — 2026-07-28
 
 ## 📊 핵심 요약

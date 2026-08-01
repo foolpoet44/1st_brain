@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # Synapse: HR Tech Psychology → Vault Integration
 ## 2026-07-28 Daily Briefing Connections
 

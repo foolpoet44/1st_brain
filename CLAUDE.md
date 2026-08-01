@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 status: Active
 # CSP-Brain — Agent Operating Manual
 

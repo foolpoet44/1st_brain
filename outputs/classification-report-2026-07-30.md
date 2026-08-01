@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # csp-brain Type 문서 자동 분류 결과 보고서
 
 ## 실행 정보

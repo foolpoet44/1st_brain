@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 # Telegram 전송 기록 — 2026-07-30
 
 - **전송 시도 시간**: 2026-07-30 22:15 KST

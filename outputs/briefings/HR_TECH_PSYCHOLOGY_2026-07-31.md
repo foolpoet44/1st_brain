@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # HR Tech Psychology Daily Briefing — 2026-07-31
 
 **브리핑 시간:** 2026-07-31 09:10 KST  

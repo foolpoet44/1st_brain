@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 🧠 csp-brain 일일 성찰 리포트 (2026-07-31)
 
 🔹 **주제**: "AI 는 보조가 아니라 주체다 — 그러나 인간은 번역자여야 한다"

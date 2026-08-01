@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 # Telegram 전송 로그 — 2026-08-01
 
 **전송 시도 시간:** 2026-08-01 22:00 KST  

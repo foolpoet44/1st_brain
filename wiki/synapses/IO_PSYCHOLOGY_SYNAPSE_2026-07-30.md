@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # 시냅스 제안: I/O Psychology 4 편 논문 연결 (2026-07-30)
 
 **생성일:** 2026-07-30  

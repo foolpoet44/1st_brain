@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # HR Tech 브리핑 — 2026 년 7 월 29 일
 
 type: Concept

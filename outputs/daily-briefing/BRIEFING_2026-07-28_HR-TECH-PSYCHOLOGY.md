@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # HR Tech Psychology Daily Briefing
 ## 2026 년 7 월 28 일 (화) | 산업·조직 심리학, 인지 심리학, 행동 경제학
 

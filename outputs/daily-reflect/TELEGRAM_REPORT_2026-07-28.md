@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 # 🌙 csp-brain 일일 기억 공고화 리포트
 ## 📅 2026-07-28 (화) | 22:00 KST
 

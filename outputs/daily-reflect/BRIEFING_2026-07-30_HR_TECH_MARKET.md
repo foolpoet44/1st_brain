@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 # HR Tech Market Briefing — 2026 년 7 월 30 일
 
 **작성일**: 2026-07-30 09:10 KST  

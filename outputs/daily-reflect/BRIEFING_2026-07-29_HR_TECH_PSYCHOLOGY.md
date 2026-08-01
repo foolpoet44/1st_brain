@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 # HR Tech Psychology 일일 브리핑 — 2026 년 7 월 29 일 화요일
 
 **검색 일시:** 2026-07-29 09:10 KST  

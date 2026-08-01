@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # Synapse Proposal — HR Tech Psychology 2026-07-31
 
 **생성일:** 2026-07-31  

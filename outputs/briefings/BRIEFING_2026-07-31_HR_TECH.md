@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # HR Tech Daily Briefing — 2026-07-31
 
 **수신:** csp-brain Vault Curator  

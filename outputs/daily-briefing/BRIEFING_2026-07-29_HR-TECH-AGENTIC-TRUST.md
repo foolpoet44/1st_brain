@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # HR Tech 브리핑 — 2026 년 7 월 29 일
 
 **작성 시간**: 2026-07-29 09:10 KST  

@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 ﻿# Extracted Knowledge from Conv: 9b64bee1-3a2e-4c30-a679-9e6b39758ae8
 
 **Date**: 2026-01-21T07:57:10.855817Z

@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 # Telegram 전송 로그 — 2026-07-31
 
 **전송 시간:** 2026-07-31 14:04:44 KST  

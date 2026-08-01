@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # Conversation Archive
 
 ## 구조

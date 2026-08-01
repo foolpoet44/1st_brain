@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # Knowledge Synapse — HR Tech Psychology 2026-07-29
 
 **생성일:** 2026-07-29 09:10 KST  

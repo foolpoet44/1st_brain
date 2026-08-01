@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # HR Tech Psychology Daily Briefing
 ## 2026-07-28 (화) — "AI 는 시간을 단축한다는 착각: 속도 환영이 조직에 미치는 심리적 영향"
 

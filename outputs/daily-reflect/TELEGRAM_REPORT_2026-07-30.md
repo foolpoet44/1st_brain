@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 # Telegram 성찰 리포트 — 2026-07-30
 
 **전송일**: 2026-07-30 22:30 KST  
