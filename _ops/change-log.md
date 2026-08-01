@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 
 ## 2026-07-28
 
@@ -584,4 +589,3 @@ status: Active
   2. [[agentic-recruitment-proxy]] 에 Human Gate 4 종 YAML 추가
   3. http://localhost:8080 대시보드에서 브리핑 반영 확인
   4. Evening Reflect 는 별도 프로세스에서 작성 (충돌 방지)
-

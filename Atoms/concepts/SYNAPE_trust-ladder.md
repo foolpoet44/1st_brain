@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # Synapse: 신뢰 사다리 (Trust Ladder)
 
 type: Concept
