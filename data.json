@@ -1,19 +1,257 @@
 {
-  "timestamp": "2026-08-01T09:58:13.120145",
-  "total_docs": 2168,
-  "total_links": 6179,
-  "avg_links": 2.85,
-  "orphan_docs": 61,
-  "orphan_rate": 2.81,
-  "recent_docs": 2075,
-  "freshness_rate": 95.71,
-  "type_docs": 1668,
-  "type_rate": 76.94,
-  "active_docs": 455,
-  "active_rate": 20.99,
-  "eval_score": 97.04,
-  "link_score": 38.0,
-  "freshness_score": 20.0,
-  "type_score": 24.04,
-  "active_score": 15.0
+  "timestamp": "2026-08-03T08:04:46.368485",
+  "total_docs": 97,
+  "recent_count": 37,
+  "total_links": 287,
+  "avg_links": 2.96,
+  "orphan_docs": 19,
+  "orphan_rate": 19.59,
+  "freshness_rate": 38.14,
+  "eval_score": 31.32,
+  "link_score": 11.84,
+  "freshness_score": 11.44,
+  "type_score": 0,
+  "active_score": 8.04,
+  "by_folder": {
+    "tools": 6,
+    "projects": 0,
+    "signals": 23,
+    "briefings": 1,
+    "decisions": 1,
+    "synapses": 1,
+    "people": 2,
+    "concepts": 53,
+    "skills": 3,
+    "frameworks": 5,
+    "synapse": 1,
+    "protocols": 1
+  },
+  "by_layer": {
+    "L2": 78,
+    "L3": 19
+  },
+  "recent": [
+    {
+      "path": "wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.md",
+      "name": "HR_TECH_PSYCHOLOGY_2026-07-29",
+      "folder": "synapse",
+      "mtime": "2026-08-01T09:58:08.833095"
+    },
+    {
+      "path": "wiki/synapses/IO_PSYCHOLOGY_SYNAPSE_2026-07-30.md",
+      "name": "IO_PSYCHOLOGY_SYNAPSE_2026-07-30",
+      "folder": "synapses",
+      "mtime": "2026-08-01T09:58:08.699023"
+    },
+    {
+      "path": "wiki/briefings/HR_TECH_PSYCH_2026-07-31.md",
+      "name": "HR_TECH_PSYCH_2026-07-31",
+      "folder": "briefings",
+      "mtime": "2026-08-01T08:35:55.765740"
+    },
+    {
+      "path": "wiki/concepts/agentic-roi.md",
+      "name": "agentic-roi",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:48.535558"
+    },
+    {
+      "path": "wiki/people/duckjung-kim.md",
+      "name": "duckjung-kim",
+      "folder": "people",
+      "mtime": "2026-07-27T18:02:48.535265"
+    },
+    {
+      "path": "wiki/signals/2026-07-11-deepwiki-post.md",
+      "name": "2026-07-11-deepwiki-post",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:48.535096"
+    },
+    {
+      "path": "wiki/frameworks/protocols.md",
+      "name": "protocols",
+      "folder": "frameworks",
+      "mtime": "2026-07-27T18:02:13.566243"
+    },
+    {
+      "path": "wiki/frameworks/compiled-truth-timeline.md",
+      "name": "compiled-truth-timeline",
+      "folder": "frameworks",
+      "mtime": "2026-07-27T18:02:13.565989"
+    },
+    {
+      "path": "wiki/frameworks/7-layer-architecture.md",
+      "name": "7-layer-architecture",
+      "folder": "frameworks",
+      "mtime": "2026-07-27T18:02:13.565617"
+    },
+    {
+      "path": "wiki/skills/dream-cycle.md",
+      "name": "dream-cycle",
+      "folder": "skills",
+      "mtime": "2026-07-27T18:02:13.565043"
+    },
+    {
+      "path": "wiki/concepts/digital-unconscious.md",
+      "name": "digital-unconscious",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.564628"
+    },
+    {
+      "path": "wiki/concepts/failed-pattern-trading.md",
+      "name": "failed-pattern-trading",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.564281"
+    },
+    {
+      "path": "wiki/concepts/8-cluster-model.md",
+      "name": "8-cluster-model",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.561407"
+    },
+    {
+      "path": "wiki/concepts/ai-evaluation-system.md",
+      "name": "ai-evaluation-system",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.558445"
+    },
+    {
+      "path": "wiki/concepts/data-sensing.md",
+      "name": "data-sensing",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.557990"
+    },
+    {
+      "path": "wiki/concepts/automated-ontology-generation.md",
+      "name": "automated-ontology-generation",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.557739"
+    },
+    {
+      "path": "wiki/concepts/gbrain-personal-ai-os.md",
+      "name": "gbrain-personal-ai-os",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.556529"
+    },
+    {
+      "path": "wiki/concepts/knowledge-synthesis-steps.md",
+      "name": "knowledge-synthesis-steps",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.556112"
+    },
+    {
+      "path": "wiki/concepts/durable-execution.md",
+      "name": "durable-execution",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.555750"
+    },
+    {
+      "path": "wiki/concepts/self-determination-theory.md",
+      "name": "self-determination-theory",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.555160"
+    },
+    {
+      "path": "wiki/concepts/competency-question.md",
+      "name": "competency-question",
+      "folder": "concepts",
+      "mtime": "2026-07-27T18:02:13.554843"
+    },
+    {
+      "path": "wiki/signals/2026-05-30-claude-opus-4-8-detailed-harnessing.md",
+      "name": "2026-05-30-claude-opus-4-8-detailed-harnessing",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.553367"
+    },
+    {
+      "path": "wiki/signals/2026-05-30-claude-opus-4-8-launch-and-prompting-shift.md",
+      "name": "2026-05-30-claude-opus-4-8-launch-and-prompting-shift",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.549561"
+    },
+    {
+      "path": "wiki/signals/2026-05-30-db-schema-knowledge-automation.md",
+      "name": "2026-05-30-db-schema-knowledge-automation",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.549111"
+    },
+    {
+      "path": "wiki/signals/talent-market-disruption.md",
+      "name": "talent-market-disruption",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.548794"
+    },
+    {
+      "path": "wiki/signals/transportation-ai-pivot.md",
+      "name": "transportation-ai-pivot",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.548496"
+    },
+    {
+      "path": "wiki/signals/2026-05-30-obelisk-sqlite-durable-execution.md",
+      "name": "2026-05-30-obelisk-sqlite-durable-execution",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.548220"
+    },
+    {
+      "path": "wiki/signals/2026-05-30-dynamic-workflow-harness.md",
+      "name": "2026-05-30-dynamic-workflow-harness",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.547777"
+    },
+    {
+      "path": "wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.md",
+      "name": "2026-06-03-logicrag-lazy-graph-reasoning",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.547413"
+    },
+    {
+      "path": "wiki/signals/2026-05-30-josh-kim-ai-native-company-record.md",
+      "name": "2026-05-30-josh-kim-ai-native-company-record",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.544457"
+    },
+    {
+      "path": "wiki/signals/2026-05-30-automated-task-packaging.md",
+      "name": "2026-05-30-automated-task-packaging",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.544132"
+    },
+    {
+      "path": "wiki/signals/2026-05-30-hs-top-failure-long-strategy.md",
+      "name": "2026-05-30-hs-top-failure-long-strategy",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.543964"
+    },
+    {
+      "path": "wiki/signals/2026-06-13-hermes-agent-infrastructure-shift.md",
+      "name": "2026-06-13-hermes-agent-infrastructure-shift",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.541394"
+    },
+    {
+      "path": "wiki/signals/2026-05-30-harness-is-not-just-a-leash.md",
+      "name": "2026-05-30-harness-is-not-just-a-leash",
+      "folder": "signals",
+      "mtime": "2026-07-27T18:02:13.541111"
+    },
+    {
+      "path": "wiki/tools/obsidian.md",
+      "name": "obsidian",
+      "folder": "tools",
+      "mtime": "2026-07-27T18:02:13.539314"
+    },
+    {
+      "path": "wiki/tools/claude-code.md",
+      "name": "claude-code",
+      "folder": "tools",
+      "mtime": "2026-07-27T18:02:13.539059"
+    },
+    {
+      "path": "wiki/tools/deepwiki.md",
+      "name": "deepwiki",
+      "folder": "tools",
+      "mtime": "2026-07-27T18:02:13.538772"
+    }
+  ]
 }

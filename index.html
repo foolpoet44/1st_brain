@@ -3,160 +3,653 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>csp-brain Eval Dashboard</title>
+    <title>csp-brain Wiki Dashboard</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            color: #f1f5f9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+            background: #f8f9fa;
+            color: #1a1a1a;
             min-height: 100vh;
-            padding: 2rem;
         }
-        .container { max-width: 1200px; margin: 0 auto; }
-        h1 { 
-            font-size: 2.5rem; 
+        
+        /* Layout */
+        .layout { display: flex; min-height: 100vh; }
+        
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            background: #ffffff;
+            border-right: 1px solid #e1e4e8;
+            padding: 1.5rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        
+        .sidebar h2 {
+            font-size: 1.25rem;
+            color: #24292e;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #0366d6;
+        }
+        
+        .nav-section { margin-bottom: 1.5rem; }
+        .nav-section h3 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #586069;
             margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #60a5fa, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.5px;
         }
-        .subtitle { color: #94a3b8; margin-bottom: 2rem; }
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 1.5rem;
+        
+        .nav-list { list-style: none; }
+        .nav-list li { margin-bottom: 0.25rem; }
+        .nav-list a {
+            display: block;
+            padding: 0.375rem 0.5rem;
+            color: #0366d6;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            transition: background 0.2s;
+        }
+        .nav-list a:hover { background: #f6f8fa; }
+        .nav-list a.active { background: #e1e4e8; font-weight: 500; }
+        
+        /* Main Content */
+        .main {
+            margin-left: 280px;
+            flex: 1;
+            padding: 2rem 3rem;
+        }
+        
+        /* Header Stats */
+        .header-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
             margin-bottom: 2rem;
         }
-        .card {
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            backdrop-filter: blur(10px);
-        }
-        .card h3 { color: #94a3b8; font-size: 0.875rem; margin-bottom: 0.5rem; }
-        .card .value { font-size: 2.5rem; font-weight: 700; }
-        .card .unit { font-size: 1rem; color: #64748b; }
-        .score-card { 
-            border: 2px solid #ef4444;
-            background: rgba(239, 68, 68, 0.1);
-        }
-        .score-value { color: #ef4444; }
-        .progress-bar {
-            height: 8px;
-            background: rgba(148, 163, 184, 0.2);
-            border-radius: 4px;
-            margin-top: 1rem;
-            overflow: hidden;
-        }
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #60a5fa, #a78bfa);
-            border-radius: 4px;
-            transition: width 0.5s ease;
-        }
-        .metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-        .metric { 
-            background: rgba(15, 23, 42, 0.5);
+        
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
             padding: 1rem;
-            border-radius: 0.5rem;
         }
-        .metric label { color: #64748b; font-size: 0.75rem; }
-        .metric .val { font-size: 1.25rem; font-weight: 600; margin-top: 0.25rem; }
-        .timestamp { color: #475569; font-size: 0.875rem; text-align: center; margin-top: 2rem; }
-        .status-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
+        
+        .stat-card .label {
             font-size: 0.75rem;
+            color: #586069;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-card .value {
+            font-size: 1.75rem;
             font-weight: 600;
-            background: #ef4444;
-            color: #fff;
+            color: #24292e;
+        }
+        
+        .stat-card .trend {
+            font-size: 0.75rem;
+            color: #28a745;
+            margin-top: 0.25rem;
+        }
+        
+        /* Content Sections */
+        .section {
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section h2 {
+            font-size: 1.125rem;
+            color: #24292e;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        
+        /* Document Grid */
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        
+        .doc-card {
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 1rem;
+            transition: box-shadow 0.2s;
+            background: #fafbfc;
+        }
+        
+        .doc-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #ffffff;
+        }
+        
+        .doc-card h3 {
+            font-size: 0.9375rem;
+            color: #0366d6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .doc-card .meta {
+            font-size: 0.75rem;
+            color: #586069;
+        }
+        
+        /* Recent Activity */
+        .activity-list { list-style: none; }
+        .activity-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e1e4e8;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        .activity-list li:last-child { border-bottom: none; }
+        
+        .activity-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #e1e4e8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+        
+        .activity-content { flex: 1; }
+        .activity-content .title {
+            font-size: 0.875rem;
+            color: #24292e;
+            margin-bottom: 0.25rem;
+            font-family: 'Menlo', 'Monaco', monospace;
+        }
+        .activity-content .time {
+            font-size: 0.75rem;
+            color: #586069;
+        }
+        
+        /* Knowledge Pulse */
+        .pulse-bar {
+            height: 8px;
+            background: #e1e4e8;
+            border-radius: 4px;
+            overflow: hidden;
             margin-top: 0.5rem;
+        }
+        .pulse-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745, #20c997);
+            border-radius: 4px;
+        }
+        
+        /* Orphan Warning */
+        .orphan-warning {
+            background: #fff5f5;
+            border: 1px solid #feb2b2;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .orphan-warning strong { color: #c53030; }
+        
+        /* Footer */
+        .timestamp {
+            text-align: center;
+            color: #586069;
+            font-size: 0.75rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e1e4e8;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🧠 csp-brain Eval Dashboard</h1>
-        <p class="subtitle">지식 건강 상태 실시간 진단</p>
+    <div class="layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h2>🧠 csp-brain</h2>
+            
+            <nav class="nav-section">
+                <h3>지식 레이어</h3>
+                <ul class="nav-list">
+                    <li><a href="#briefings">🚀 Briefings (1)</a></li>
+<li><a href="#concepts">📚 Concepts (53)</a></li>
+<li><a href="#decisions">🚀 Decisions (1)</a></li>
+<li><a href="#frameworks">🚀 Frameworks (5)</a></li>
+<li><a href="#people">📚 People (2)</a></li>
+<li><a href="#projects">🚀 Projects (0)</a></li>
+<li><a href="#protocols">🚀 Protocols (1)</a></li>
+<li><a href="#signals">📚 Signals (23)</a></li>
+<li><a href="#skills">🚀 Skills (3)</a></li>
+<li><a href="#synapse">🚀 Synapse (1)</a></li>
+<li><a href="#synapses">🚀 Synapses (1)</a></li>
+<li><a href="#tools">🚀 Tools (6)</a></li>
+
+                </ul>
+            </nav>
+            
+            <nav class="nav-section">
+                <h3>운영</h3>
+                <ul class="nav-list">
+                    <li><a href="#pulse">💓 Knowledge Pulse</a></li>
+                    <li><a href="#recent">🕐 Recent Activity</a></li>
+                    <li><a href="#orphans">⚠️ Orphan Docs</a></li>
+                </ul>
+            </nav>
+        </aside>
         
-        <div class="grid">
-            <div class="card score-card">
-                <h3>EVAL SCORE</h3>
-                <div class="value score-value">31.84<span class="unit">/100</span></div>
-                <span class="status-badge">개선 필요</span>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 31.84%"></div>
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Header Stats -->
+            <div class="header-stats">
+                <div class="stat-card">
+                    <div class="label">Total Documents</div>
+                    <div class="value">97</div>
+                    <div class="trend">↑ 37 this week</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Concepts (L2)</div>
+                    <div class="value">78</div>
+                    <div class="trend">Core atoms</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Links</div>
+                    <div class="value">287</div>
+                    <div class="trend">2.96 avg/doc</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Metabolism</div>
+                    <div class="value">38.14%</div>
+                    <div class="trend">↑ Active</div>
                 </div>
             </div>
             
-            <div class="card">
-                <h3>TOTAL DOCUMENTS</h3>
-                <div class="value">7778<span class="unit">개</span></div>
-                <div class="metrics" style="margin-top: 1rem;">
-                    <div class="metric">
-                        <label>Type 문서</label>
-                        <div class="val">10개</div>
-                    </div>
-                    <div class="metric">
-                        <label>Active 문서</label>
-                        <div class="val">408개</div>
-                    </div>
+            <!-- Knowledge Pulse -->
+            <section id="pulse" class="section">
+                <h2>💓 Knowledge Pulse (최근 7 일)</h2>
+                <div class="pulse-bar">
+                    <div class="pulse-fill" style="width: 38.14%"></div>
                 </div>
-            </div>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #586069;">
+                    최근 7 일간 37 개 문서 업데이트 (38.14% 활성화)
+                </p>
+            </section>
             
-            <div class="card">
-                <h3>KNOWLEDGE DENSITY</h3>
-                <div class="value">0.83<span class="unit">링크/문서</span></div>
-                <div class="metrics" style="margin-top: 1rem;">
-                    <div class="metric">
-                        <label>총 연결</label>
-                        <div class="val">6457개</div>
-                    </div>
-                    <div class="metric">
-                        <label>고립 문서</label>
-                        <div class="val">5547개 (71.32%)</div>
-                    </div>
-                </div>
+            <!-- Recent Activity -->
+            <section id="recent" class="section">
+                <h2>🕐 Recent Activity</h2>
+                <ul class="activity-list">
+                    <li>
+            <div class="activity-icon">📄</div>
+            <div class="activity-content">
+                <div class="title"><strong>wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.md</strong> 업데이트됨</div>
+                <div class="time">2026-08-01 09:58</div>
             </div>
+        </li>
+<li>
+            <div class="activity-icon">📄</div>
+            <div class="activity-content">
+                <div class="title"><strong>wiki/synapses/IO_PSYCHOLOGY_SYNAPSE_2026-07-30.md</strong> 업데이트됨</div>
+                <div class="time">2026-08-01 09:58</div>
+            </div>
+        </li>
+<li>
+            <div class="activity-icon">📄</div>
+            <div class="activity-content">
+                <div class="title"><strong>wiki/briefings/HR_TECH_PSYCH_2026-07-31.md</strong> 업데이트됨</div>
+                <div class="time">2026-08-01 08:35</div>
+            </div>
+        </li>
+<li>
+            <div class="activity-icon">📄</div>
+            <div class="activity-content">
+                <div class="title"><strong>wiki/concepts/agentic-roi.md</strong> 업데이트됨</div>
+                <div class="time">2026-07-27 18:02</div>
+            </div>
+        </li>
+<li>
+            <div class="activity-icon">📄</div>
+            <div class="activity-content">
+                <div class="title"><strong>wiki/people/duckjung-kim.md</strong> 업데이트됨</div>
+                <div class="time">2026-07-27 18:02</div>
+            </div>
+        </li>
+<li>
+            <div class="activity-icon">📄</div>
+            <div class="activity-content">
+                <div class="title"><strong>wiki/signals/2026-07-11-deepwiki-post.md</strong> 업데이트됨</div>
+                <div class="time">2026-07-27 18:02</div>
+            </div>
+        </li>
+<li>
+            <div class="activity-icon">📄</div>
+            <div class="activity-content">
+                <div class="title"><strong>wiki/frameworks/protocols.md</strong> 업데이트됨</div>
+                <div class="time">2026-07-27 18:02</div>
+            </div>
+        </li>
+<li>
+            <div class="activity-icon">📄</div>
+            <div class="activity-content">
+                <div class="title"><strong>wiki/frameworks/compiled-truth-timeline.md</strong> 업데이트됨</div>
+                <div class="time">2026-07-27 18:02</div>
+            </div>
+        </li>
+<li>
+            <div class="activity-icon">📄</div>
+            <div class="activity-content">
+                <div class="title"><strong>wiki/frameworks/7-layer-architecture.md</strong> 업데이트됨</div>
+                <div class="time">2026-07-27 18:02</div>
+            </div>
+        </li>
+<li>
+            <div class="activity-icon">📄</div>
+            <div class="activity-content">
+                <div class="title"><strong>wiki/skills/dream-cycle.md</strong> 업데이트됨</div>
+                <div class="time">2026-07-27 18:02</div>
+            </div>
+        </li>
+
+                </ul>
+            </section>
             
-            <div class="card">
-                <h3>METABOLISM</h3>
-                <div class="value">26.66<span class="unit">%</span></div>
-                <div class="metric" style="margin-top: 1rem;">
-                    <label>최근 7 일 수정 (2074개)</label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 26.66%"></div>
-                    </div>
-                </div>
+            <!-- Document Sections by Folder -->
+            <section id="briefings" class="section">
+            <h2>🚀 Briefings (1 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>Hr_Tech_Psych_2026 07 31</h3>
+                <div class="meta">Updated: 2026-08-01</div>
             </div>
-        </div>
-        
-        <div class="card">
-            <h3>SCORE BREAKDOWN</h3>
-            <div class="metrics" style="margin-top: 1rem;">
-                <div class="metric">
-                    <label>Link Density (40%)</label>
-                    <div class="val">3.32점</div>
-                </div>
-                <div class="metric">
-                    <label>Freshness (30%)</label>
-                    <div class="val">8.0점</div>
-                </div>
-                <div class="metric">
-                    <label>Type Structure (20%)</label>
-                    <div class="val">20.0점</div>
-                </div>
-                <div class="metric">
-                    <label>Active Rate (10%)</label>
-                    <div class="val">0.52점</div>
-                </div>
+
             </div>
-        </div>
-        
-        <p class="timestamp">Last updated: 2026-07-31T23:05:09.020296</p>
+        </section>
+<section id="concepts" class="section">
+            <h2>📚 Concepts (53 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>Competency Question</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Self Determination Theory</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Durable Execution</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Agentic Roi</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Knowledge Synthesis Steps</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Gbrain Personal Ai Os</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Automated Ontology Generation</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Data Sensing</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Ai Evaluation System</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>8 Cluster Model</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Failed Pattern Trading</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Digital Unconscious</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+
+            </div>
+        </section>
+<section id="decisions" class="section">
+            <h2>🚀 Decisions (1 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>2026 05 10 System Evolution</h3>
+                <div class="meta">Updated: 2026-05-17</div>
+            </div>
+
+            </div>
+        </section>
+<section id="frameworks" class="section">
+            <h2>🚀 Frameworks (5 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>7 Layer Architecture</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Compiled Truth Timeline</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Protocols</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Weak Signal Ansoff</h3>
+                <div class="meta">Updated: 2026-06-30</div>
+            </div>
+<div class="doc-card">
+                <h3>Layer 1 Compass</h3>
+                <div class="meta">Updated: 2026-05-17</div>
+            </div>
+
+            </div>
+        </section>
+<section id="people" class="section">
+            <h2>📚 People (2 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>Duckjung Kim</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Csp</h3>
+                <div class="meta">Updated: 2026-05-02</div>
+            </div>
+
+            </div>
+        </section>
+<section id="projects" class="section">
+            <h2>🚀 Projects (0 docs)</h2>
+            <div class="doc-grid">
+                
+            </div>
+        </section>
+<section id="protocols" class="section">
+            <h2>🚀 Protocols (1 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>Validation Protocol</h3>
+                <div class="meta">Updated: 2026-06-30</div>
+            </div>
+
+            </div>
+        </section>
+<section id="signals" class="section">
+            <h2>📚 Signals (23 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>2026 05 30 Harness Is Not Just A Leash</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>2026 06 13 Hermes Agent Infrastructure Shift</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>2026 05 30 Hs Top Failure Long Strategy</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>2026 05 30 Automated Task Packaging</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>2026 07 11 Deepwiki Post</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>2026 05 30 Josh Kim Ai Native Company Record</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>2026 06 03 Logicrag Lazy Graph Reasoning</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>2026 05 30 Dynamic Workflow Harness</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>2026 05 30 Obelisk Sqlite Durable Execution</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Transportation Ai Pivot</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Talent Market Disruption</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>2026 05 30 Db Schema Knowledge Automation</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+
+            </div>
+        </section>
+<section id="skills" class="section">
+            <h2>🚀 Skills (3 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>Dream Cycle</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Memory Save</h3>
+                <div class="meta">Updated: 2026-05-02</div>
+            </div>
+<div class="doc-card">
+                <h3>Context Restore</h3>
+                <div class="meta">Updated: 2026-05-02</div>
+            </div>
+
+            </div>
+        </section>
+<section id="synapse" class="section">
+            <h2>🚀 Synapse (1 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>Hr_Tech_Psychology_2026 07 29</h3>
+                <div class="meta">Updated: 2026-08-01</div>
+            </div>
+
+            </div>
+        </section>
+<section id="synapses" class="section">
+            <h2>🚀 Synapses (1 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>Io_Psychology_Synapse_2026 07 30</h3>
+                <div class="meta">Updated: 2026-08-01</div>
+            </div>
+
+            </div>
+        </section>
+<section id="tools" class="section">
+            <h2>🚀 Tools (6 docs)</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                <h3>Deepwiki</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Claude Code</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Obsidian</h3>
+                <div class="meta">Updated: 2026-07-27</div>
+            </div>
+<div class="doc-card">
+                <h3>Rlm Forge</h3>
+                <div class="meta">Updated: 2026-07-02</div>
+            </div>
+<div class="doc-card">
+                <h3>Claude Code Skills</h3>
+                <div class="meta">Updated: 2026-07-02</div>
+            </div>
+<div class="doc-card">
+                <h3>Notion</h3>
+                <div class="meta">Updated: 2026-05-02</div>
+            </div>
+
+            </div>
+        </section>
+
+            
+            <!-- Orphan Documents Warning -->
+            <section id="orphans" class="section">
+                <h2>⚠️ Orphan Documents (고립 문서)</h2>
+                <div class="orphan-warning">
+                    <strong>19 개 문서 (19.59%)</strong> 가 다른 문서와 연결되지 않았습니다.
+                    <p style="margin-top: 0.5rem; font-size: 0.8125rem; color: #586069;">
+                        연결 필요: inbox/ 폴더의 미분류 문서들, raw/ 폴더의 원본 자료들
+                    </p>
+                </div>
+            </section>
+            
+            <div class="timestamp">
+                Last updated: 2026-08-03T08:04:46.367323 | csp-brain Wiki Dashboard
+            </div>
+        </main>
     </div>
+    
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

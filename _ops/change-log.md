@@ -168,3 +168,27 @@ status: Active
   3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 확인 — 대시보드 http://localhost:8080 에서 "HR Tech" 섹션 업데이트.
   4. **저녁 성찰 준비**: 오늘 브리핑을 바탕으로 저녁 성찰 (REFLECT_2026-08-03.md) 작성 — 4 개 지식 원자 추출, 심리학적 통찰 (신뢰 사다리 3 단계), One Strategy 명세.
 
+
+### [BRIEFING] Money Flow — 불신의 종말, 협업의 서막 (2026-08-03)
+
+- **무엇이 바뀌었나**: 2026 년 8 월 3 일 월요일 오전, '돈의 이동' 거시경제 브리핑 작성 완료 (`outputs/briefings/MONEY_FLOW_BRIEFING_2026-08-03.md`). 4 개 핵심 시그널 포착: (1) **헤지펀드 자본 $5.22 조** — 사상 최고치, Equity Market Neutral(29%)·Global Macro(27%) 선호, (2) **연준 금리 3.5%~3.75% 동결, 그러나 내부 분열** — Stephen Miran 위원 반대 (0.25%p 인하 주장), (3) **원/달러 환율 1,460 원** — 한국인 해외 포트폴리오 투자 $1,403 억 (2024 년 대비 2 배), (4) **골드 20% 배분론** — 모건스탠리 CIO "주식 60%, 채권 20%, 금 20%". 3 개 Human Gate 선언 (자산배분 Human Gate, 환율 임계점 Human Gate, 인플레이션 헤지 Human Gate).
+
+- **왜 중요한가**: 
+  1. **Beta Removal**: 시장의 질문이 "오를 것인가 내릴 것인가"에서 "어떻게 베타를 제거할 것인가"로 전환 — 방향성 베팅의 종말.
+  2. **중앙은행 권위의 분열**: 연준의 반대 투표는 "통화정책의 불확실성"이 아니라 "다양한 시각의 공존" — 단일 목소리의 종말.
+  3. **자본의 국적 상실**: 한국 투자자들의 해외 투자 급증 (GDP 대비 3.6% → 7.2%) — "원화 자산"이 아니라 "달러 표시 자산" 추종.
+  4. **60/40 포트폴리오의 한계**: 전통적 주식/채권 배분의 붕괴 — 골드·비트코인 등 비전통적 안전자산의 부상.
+  
+  이 4 개 통찰은 자본 시장이 **Trust Ladder 의 3 단계 (Collaboration)**로 이동했음을 보여준다. HR 도메인의 AI 수용 단계 (Blind Faith → Distrust → Collaboration) 와 정확히 평행한다.
+
+- **영향 범위**: 
+  - `outputs/briefings/MONEY_FLOW_BRIEFING_2026-08-03.md` (전체 브리핑)
+  - `_ops/change-log.md` (본 로그)
+  - 제안된 Signal 노드: [[hedge-fund-capital-5.22t-2026]], [[fed-rate-divergence-2026]], [[krw-usd-1460-threshold-2026]], [[gold-20-allocation-2026]]
+  - [[Economic Freedom]] 노드 — 3 층위 모델 (거시/심리/실행) 확장 제안
+
+- **다음 확인**: 
+  1. **INGEST 결정**: 오늘 브리핑 4 개 시그널을 Signal 노드로 생성하고, [[Economic Freedom]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]] 에 연결.
+  2. **Human Gate 명세**: [[bp-signal-intelligence]] 에 "자산배분 Human Gate" YAML 추가 — 단일 자산 30% 초과 금지, 환율 임계점 돌파 시 자동 매도 금지.
+  3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 확인 — 대시보드 http://localhost:8080 에서 "Money Flow" 섹션 업데이트.
+  4. **Trust Ladder 적용**: 돈의 흐름에 대한 신뢰 3 단계 (Blind Faith → Distrust → Collaboration) 를 [[Economic Freedom]] 노드에 명세 — HR 의 AI 수용 단계와 병렬 매핑.
