@@ -1,5 +1,6 @@
 # Telegram 전송 로그 (2026-08-03)
 
+type: Meeting
 ## 전송 상태: **우회 모드 (Cron Job)**
 
 ### 실행 개요
