@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # HR Tech Briefing Summary — 2026 년 8 월 1 일
 
 type: Note

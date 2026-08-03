@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # Type 자동 분류 실행 로그
 
 ## 실행 정보

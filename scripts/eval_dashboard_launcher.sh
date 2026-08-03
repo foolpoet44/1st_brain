@@ -5,7 +5,7 @@
 # - Eval 점수 계산 (full_vault_eval.py)
 # - Human Gate 4 검증 (새로 추가)
 # - GitHub 배포 (git push with retry)
-# - Telegram 알림 (점수 < 60 점일 때만 경고)
+# - Telegram 알림 (점수 < 60 점 또는 Gate 위반)
 #
 
 set -e
@@ -111,27 +111,59 @@ else
 fi
 
 # ========================================
-# 3 단계: Human Gate 4 검증 (새로 추가)
+# 3 단계: Human Gate 4 검증
 # ========================================
 log "🔒 Validating Human Gate compliance..."
 
-HUMAN_GATE_SCHEMA="$VAULT_DIR/csp-brain/vault/protocols/human-gate-schema.yml"
+HUMAN_GATE_SCHEMA="$VAULT_DIR/csp-brain/vault/protocols/human-gate-schema.md"
 GATE_VIOLATIONS=0
 
-# Gate #1: Evolution Gate 검증
+# Gate #1: Evolution Gate 검증 (Markdown 내 YAML)
 if [ -f "$HUMAN_GATE_SCHEMA" ]; then
     log "✅ Human Gate schema exists"
     
-    # YAML 파싱 검증
-    python3 -c "import yaml; yaml.safe_load(open('$HUMAN_GATE_SCHEMA'))" 2>/dev/null
-    if [ $? -eq 0 ]; then
-        log "✅ YAML schema valid"
-    else
+    # Python 으로 YAML 검증
+    cd "$VAULT_DIR"
+    python3 << 'PYEOF'
+import yaml
+import re
+import sys
+
+try:
+    with open("csp-brain/vault/protocols/human-gate-schema.md", 'r') as f:
+        content = f.read()
+    
+    # YAML 코드 블록 추출
+    yaml_match = re.search(r'```yaml\n(.*?)```', content, re.DOTALL)
+    if yaml_match:
+        yaml_content = yaml_match.group(1)
+        yaml.safe_load(yaml_content)
+        print("✅ YAML schema valid")
+        sys.exit(0)
+    else:
+        # frontmatter 에서 YAML 추출
+        fm_match = re.match(r'^---\n(.*?)\n---\n', content, re.DOTALL)
+        if fm_match:
+            yaml.safe_load(fm_match.group(1))
+            print("✅ YAML frontmatter valid")
+            sys.exit(0)
+        else:
+            print("⚠️ No YAML found")
+            sys.exit(0)
+except yaml.YAMLError as e:
+    print(f"❌ YAML error: {e}")
+    sys.exit(1)
+except Exception as e:
+    print(f"❌ Error: {e}")
+    sys.exit(1)
+PYEOF
+    
+    if [ $? -ne 0 ]; then
         log "❌ YAML schema invalid - Alert!"
         GATE_VIOLATIONS=$((GATE_VIOLATIONS + 1))
     fi
 else
-    log "⚠️ Human Gate schema not found - Creating alert..."
+    log "⚠️ Human Gate schema not found"
     GATE_VIOLATIONS=$((GATE_VIOLATIONS + 1))
 fi
 
@@ -142,7 +174,7 @@ if [ -d "$AUDIT_DIR" ]; then
     if [ -n "$LATEST_AUDIT" ]; then
         log "✅ Latest bias audit: $(basename "$LATEST_AUDIT")"
     else
-        log "⚠️ No bias audit found - Directory empty"
+        log "ℹ️ Bias audit directory exists but empty"
     fi
 else
     log "ℹ️ Bias audit directory not found - Will be created on first audit"
@@ -151,7 +183,7 @@ fi
 # Gate #3: Trust Ladder 인증서 확인
 CERT_DIR="$VAULT_DIR/outputs/certifications"
 if [ -d "$CERT_DIR" ]; then
-    CERT_COUNT=$(ls "$CERT_DIR"/*.md 2>/dev/null | wc -l)
+    CERT_COUNT=$(ls "$CERT_DIR"/*.md 2>/dev/null | wc -l | tr -d ' ')
     log "✅ Trust Ladder certifications: $CERT_COUNT"
 else
     log "ℹ️ Certification directory not found - Will be created on first graduation"
@@ -160,7 +192,7 @@ fi
 # Gate #4: Rollback 이력 확인
 ROLLBACK_LOG="$LOG_DIR/rollback-history.log"
 if [ -f "$ROLLBACK_LOG" ]; then
-    ROLLBACK_COUNT=$(wc -l < "$ROLLBACK_LOG")
+    ROLLBACK_COUNT=$(wc -l < "$ROLLBACK_LOG" | tr -d ' ')
     log "ℹ️ Rollback history: $ROLLBACK_COUNT events"
 else
     log "✅ No rollback history (clean record)"
@@ -216,31 +248,28 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
 done
 
 # ========================================
-# 5 단계: Telegram 알림 (점수 < 60 점 또는 Gate 위반)
+# 5 단계: Telegram 알림 (점수 < 60 또는 Gate 위반)
 # ========================================
 SEND_ALERT=false
 ALERT_REASON=""
 
-# 조건 1: Eval 점수 < 60
 if (( $(echo "$EVAL_SCORE < 60" | bc -l) )); then
     SEND_ALERT=true
     ALERT_REASON="Eval Score below threshold"
 fi
 
-# 조건 2: Human Gate 위반
 if [ $GATE_VIOLATIONS -gt 0 ]; then
     SEND_ALERT=true
-    ALERT_REASON="${ALERT_REASON:+$ALERT_REASON, }Human Gate violations detected"
+    ALERT_REASON="${ALERT_REASON:+$ALERT_REASON, }Human Gate violations"
 fi
 
-# 조건 3: Git push 실패
 if [ "$PUSH_STATUS" = "failed" ]; then
     SEND_ALERT=true
     ALERT_REASON="${ALERT_REASON:+$ALERT_REASON, }Git push failed"
 fi
 
 if [ "$SEND_ALERT" = true ]; then
-    log "⚠️ Alert condition met: $ALERT_REASON - Checking Telegram config..."
+    log "⚠️ Alert condition met: $ALERT_REASON"
     
     if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
         log "📱 Sending Telegram alert..."
@@ -277,14 +306,11 @@ if [ "$SEND_ALERT" = true ]; then
             log "❌ Telegram API call failed"
         fi
     else
-        log "⚠️ TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set"
-        log "📝 To enable Telegram alerts, add to ~/.zshrc:"
-        log "   export TELEGRAM_BOT_TOKEN='your_bot_token'"
-        log "   export TELEGRAM_CHAT_ID='your_chat_id'"
-        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Telegram skipped - Env vars not set. Score: $EVAL_SCORE, Gates: $GATE_VIOLATIONS, Push: $PUSH_STATUS" >> "$TELEGRAM_LOG"
+        log "⚠️ Telegram not configured (TELEGRAM_BOT_TOKEN/CHAT_ID not set)"
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Alert: $ALERT_REASON | Score: $EVAL_SCORE | Gates: $GATE_VIOLATIONS | Push: $PUSH_STATUS" >> "$TELEGRAM_LOG"
     fi
 else
-    log "✅ All checks passed - No alert needed (Score: $EVAL_SCORE, Gates: $GATE_VIOLATIONS, Push: $PUSH_STATUS)"
+    log "✅ All checks passed (Score: $EVAL_SCORE, Gates: $GATE_VIOLATIONS, Push: $PUSH_STATUS)"
 fi
 
 log "=== Eval Dashboard Update Completed ==="

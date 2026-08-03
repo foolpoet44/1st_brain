@@ -1,3 +1,8 @@
+---
+type: Reflection
+status: Active
+---
+
 # Telegram 전송 로그
 
 **날짜**: 2026-08-02 22:00  

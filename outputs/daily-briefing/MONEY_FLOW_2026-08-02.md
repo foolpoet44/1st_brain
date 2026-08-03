@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # MONEY_FLOW_2026-08-02.md
 
 ## 📊 2026 년 8 월 2 일: 돈의 거시적 흐름 브리핑

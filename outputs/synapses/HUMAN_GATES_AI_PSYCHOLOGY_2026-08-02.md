@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # 시냅스: AI 심리학 Human Gates 8 개
 
 **생성일:** 2026-08-02  

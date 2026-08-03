@@ -1,3 +1,8 @@
+---
+type: Note
+status: Active
+---
+
 # MONEY_FLOW_BRIEFING_2026-08-03.md
 
 ## [돈의 이동 브리핑] 2026 년 8 월 3 일 — "불신의 종말, 협업의 서막"
