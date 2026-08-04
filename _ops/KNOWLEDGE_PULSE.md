@@ -9,6 +9,45 @@ status: Active
 
 ---
 
+## 2026-08-05 (수요일) — "의미의 자동화 역설과 신뢰 사다리의 완성"
+
+### 오늘의 브리핑
+
+#### [I/O Psychology] 의미의 자동화, Bullshit Task 위임, 의사결정 피로, AI 신뢰 및 가중치 (09:10)
+
+- **파일**: `outputs/briefings/BRIEFING_IO-PSYCH_2026-08-04.md`
+- **핵심 시그널**: 
+  1. **의미의 자동화 역설** — AI 는 창의성·자율성·행복감 높은 작업을 대체 (arXiv:2603.14963)
+  2. **Bullshit Task 위임** — 무의미함 상위 20% 작업을 AI 위임 1 순위로 (arXiv:2606.12430v2)
+  3. **의사결정 피로는 조직 설계 실패** — 휴식 리듬 설계의 문제 (Frontiers in Cognition, 2026)
+  4. **AI 신뢰 및 가중치** — AI 를 통계적 도구로 위치지어라, 가중치 25-30% (Frontiers in Organizational Psychology, 2025)
+- **Human Gates**: 4 개 선언 (의미 보호 구역, Bullshit Task 심사, 의사결정 아키텍처, AI 신뢰 및 가중치)
+- **정체성 전환**: 감시자 → 정원사 (AI 를 대체자가 아닌 협력자로 재설계)
+
+#### [HR Tech] Agentic Recruitment 의 확산과 Human Agency 의 재정의 (09:10)
+
+- **파일**: `outputs/briefings/BRIEFING_HR-TECH_2026-08-04.md`
+- **핵심 시그널**:
+  1. **52% 자율 에이전트 배포 계획** (Korn Ferry) — Agentic Recruitment 주류화
+  2. **People Analytics AI 스케일링** — 1 인당 3,080 명 지원, AI Adoption 29% (Revelio Labs)
+  3. **Human Agency 역설** — 조직 요인이 AI 영향력의 67% 설명 (Microsoft Work Trend Index)
+  4. **Self-Evolving Agents 등장** — 진화 방향성 질문 (arXiv:2507.21046, 77 페이지)
+- **Human Gates**: 4 개 선언 (에이전트 진화 감사, AI 예측 검증 질문, 매니저 AI 모델링, 스킬 유지 의도적 연습)
+- **정체성 전환**: 감시자 → 정원사 → 번역자
+
+---
+
+## 2026-08-04 (화요일) — 커맨드센터 신설과 스케줄러 단일화
+
+### 오늘의 주요 변화
+
+- **커맨드센터 신설**: 위키 진화 상태를 하나의 화면에서 보는 대시보드 (`command-center.html`)
+- **스케줄러 단일화**: launchd 에서 Hermes cron 으로 통합 — 이중 등록이 실패를 은폐하던 구조 종료
+- **Vault 이전**: `~/Desktop/@26/dev` → `~/csp-brain` (TCC 문제 해결)
+- **브리핑 11 건 INGEST**: 7/23 ~ 8/03 적체 해소 (신규 3 / 병합 4 / 중복 종결 4)
+
+---
+
 ## 2026-08-03 (월요일) — "에이전트 네이티브 조직과 Joy of Work 의 보호"
 
 ### 오늘의 브리핑
@@ -36,32 +75,36 @@ status: Active
 
 ## 지식 대사율 (Knowledge Metabolism Rate)
 
-| 지표                    | 금일 | 전주 평균 | 변화 |
-| ----------------------- | ---- | --------- | ---- |
-| **Signal Nodes**        | 4    | 3.2       | +25% |
-| **Human Gates**         | 8    | 4.5       | +78% |
-| **Synapse Connections** | 4    | 3.0       | +33% |
-| **Identity Shifts**     | 1    | 0.8       | +25% |
+| 지표                    | 08-05 | 08-03 | 전주 평균 | 변화 (vs 평균) |
+| ----------------------- | ----- | ----- | --------- | -------------- |
+| **Knowledge Atoms**     | 8     | 4     | 3.2       | **+150%**      |
+| **Human Gates**         | 8     | 8     | 4.5       | **+78%**       |
+| **Synapse Connections** | 4     | 4     | 3.0       | **+33%**       |
+| **Identity Shifts**     | 1     | 1     | 0.8       | **+25%**       |
+
+**주석:** 08-05 는 8 개 Knowledge Atom 으로 최대치 경신. Bullshit Task, Blocked Agency, Self-Evolving Agents 등 신규 개념 추가.
 
 ---
 
-## 성찰: "AI 는 대체자가 아닌 협력자"
+## 성찰: "신뢰 사다리의 3 단계로"
 
-오늘의 4 편 논문은 하나의 통찰로 수렴합니다: **AI 는 인간 조직을 모방하지 않는다. AI 는 AI 네이티브 조직을 가진다.**
+오늘의 8 개 Knowledge Atom 은 하나의 통찰로 수렴합니다: **HR Tech 시장은 Trust Ladder 의 2 단계 (Distrust) 에서 3 단계 (Collaboration) 로 전환 중**입니다.
 
-Paper #1 (Agentic AI) 이 드러낸 진실은 충격적입니다. 인간 조직 구조를 모방한 AI 형태 (Hierarchy, Committee) 는 오히려 성능이 42% 저하된다는 것. 이는 HR 이 AI 를 '인간 대체자'가 아니라 '에이전트 네이티브 협력자'로 재설계해야 함을 의미합니다.
+**1 단계 (Blind Faith):** "AI rejected, so rejected" — AI 설명을 그대로 수용하는 미성숙 상태.  
+**2 단계 (Distrust):** "AI can be wrong" — AI 를 불신하고 재검토하는 과도기.  
+**3 단계 (Collaboration):** "AI 는 가설이다. 인간이 검증한다." — AI 판단을 가설로 삼아 인간이 검증하는 성숙한 협력.
 
-Paper #2 (Joy of Work) 는 더 깊은 통찰을 제공합니다. AI 는 단순 반복 업무가 아니라 **창의성·자율성·행복감**이 높은 작업을 노출시킵니다. 이는 "AI 가 인간의 의미를 앗아간다"는 공포가 아니라, **"어떤 작업을 인간이 보유할 것인가"**라는 설계 질문으로 전환해야 함을 시사합니다.
+arXiv:2603.14963 은 3 단계 전환의 위험을 경고합니다: AI 가 창의성과 자율성을 침범할 때, 근로자는 의미 상실을 경험합니다. arXiv:2606.12430v2 는 3 단계 전환의 기회를 제시합니다: 무의미한 작업을 AI 에 위임하고, 인간은 의미 있는 작업에 집중할 수 있습니다.
 
 **"번역은 원본을 지우지 않는다. 검열은 지운다."**
 
-AI 자동화가 '의미 있는 작업'을 침해할 때, 우리는 그것을 '효율성'이라는 이름으로 검열해서는 안 됩니다. 대신, 인간의 창의성과 자율성이 확장되도록 **번안**해야 합니다.
+AI 편향을 검열하려 하지 말고, 맥락에 맞게 번역하라. HR 은 감시자 (Guardian) 가 아닌 정원사 (Gardener) 다.
 
-감시자 (Guardian) 는 AI 를 '후보자를 탈락시키는 도구'로 사용합니다. 정원사 (Gardener) 는 AI 를 '후보자의 역량을 발견하는 도구'로 재설계합니다.
+감시자는 AI 를 '후보자를 탈락시키는 도구'로 사용합니다. 정원사는 AI 를 '후보자의 역량을 발견하는 도구'로 재설계합니다. 번역자는 AI 의 예측을 '조직 문화라는 토양에서 꽃피울 언어'로 번안합니다.
 
-내일의 질문: **"오늘 우리가 설계한 Human Gate 는 감시자의 것인가, 정원사의 것인가?"**
+내일의 질문: **"오늘 우리가 설계한 Human Gate 는 감시자의 것인가, 정원사의 것인가, 번역자의 것인가?"**
 
 ---
 
-**Last Updated:** 2026-08-03 09:15 KST  
+**Last Updated:** 2026-08-05 21:00 KST  
 **Dashboard:** http://localhost:8080
