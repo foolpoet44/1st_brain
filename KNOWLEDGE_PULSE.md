@@ -2,7 +2,7 @@
 type: Dashboard
 _icon: brain
 _color: "#ff00ff"
-last_update: 2026-08-04 09:10
+last_update: 2026-08-04 15:30
 status: 🟢 ACTIVE
 ---
 
@@ -16,11 +16,13 @@ status: 🟢 ACTIVE
 `     ▄▄▄▄ ` (Current Status — HR Tech Briefing 08-04)
 
 ## 2. 계층별 지능 밀도 (7-Layer Density)
-- **L2 Concepts**: 54 Atoms (개념 원자 자산)
+- **L2 Concepts**: 55 Atoms (개념 원자 자산) — **+1: Human Agency Paradox**
 - **L3 Projects**: 10 Projects (실행 면적)
-- **L4 Signals**: 4 New Signals (오늘 추가: Agentic Recruitment, People Analytics Scaling, Human Agency Paradox, Self-Evolving Governance)
+- **L4 Signals**: 5 New Signals (오늘 추가: Agentic Recruitment, People Analytics Scaling, Human Agency Paradox, Self-Evolving Governance, Microsoft Work Trend Index 2026)
 
 ## 3. 최근의 지능적 도약 (Recent Synapses)
+- **[08-04 15:30]** `concepts/human-agency-paradox.md` — Human Agency 역설 개념화 (Microsoft 2026)
+- **[08-04 15:30]** `signals/signal-human-agency-paradox-microsoft-2026.md` — Microsoft Work Trend Index 2026 신호 포착
 - **[08-04 09:10]** `outputs/briefings/BRIEFING_HR-TECH_2026-08-04.md` — Agentic Recruitment 주류화 (52%), Human Agency 역설
 - **[08-03 23:02]** `_ops/change-log.md` — HR Tech Briefing 08-04 기록 추가
 - **[08-03 19:04]** `reports/type-classification-result-2026-08-04.md`
@@ -32,6 +34,9 @@ status: 🟢 ACTIVE
 > 
 > AI 의 예측을 **가설**로 취급하고, 인간이 **검증 질문**을 던지는 신뢰 사다리 3 단계 (Collaboration) 로 전환.
 > Blocked Agency(10%) 해소를 위해 조직 시스템 재설계 필요 — 매니저 AI 모델링, 스킬 유지 의도적 연습.
+> 
+> **Human Agency 의 역설**: AI 를 가장 잘 쓰는 Frontier Professionals 일수록 43% 는 스킬 유지를 위해 **의도적으로 AI 없이 작업한다**.
+> 조직 요인의 영향력 (67%) 이 개인 요인 (32%) 의 2 배 — 매니저의 AI 모델링이 신뢰도 +30%p, 고빈도 사용자 1.4 배 증가.
 
 ## 5. I/O 심리학 브리핑 (08-04 09:10)
 > **"의미는 자동화의 대상이 아닌, 보호의 대상이다."**
