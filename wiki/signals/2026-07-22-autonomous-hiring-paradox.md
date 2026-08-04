@@ -5,7 +5,14 @@ updated: 2026-07-22
 status: growing
 type: signal
 date: 2026-07-22
-tags: [agentic-recruitment, ai-hiring-agents, candidate-trust, human-oversight, constructed-fit]
+tags:
+  [
+    agentic-recruitment,
+    ai-hiring-agents,
+    candidate-trust,
+    human-oversight,
+    constructed-fit,
+  ]
 importance: High
 source: i4cp, Korn Ferry, GoTo Workplace Intelligence, Eximius.ai
 ---
@@ -192,13 +199,33 @@ HR 리더의 새로운 역할은 **판단자가 아닌 해석자 (Interpreter)**
 
 ## 7. 참고 문헌 (References)
 
-- i4cp. (2026). *4 Priorities for People Analytics Leaders in 2026*. Institute for Corporate Productivity.
-- Korn Ferry. (2026). *TA Trends 2026: Human-AI Power Couple*.
-- GoTo & Workplace Intelligence. (2026). *The Pulse of Work in 2026: Opportunity, Risk, and Responsibility in an AI-Driven Workplace*.
-- Gartner. (2025). *Cost Per Hire and Time-to-Fill Benchmarks*.
-- GoodTime. (2025). *AI Scheduling Efficiency Report*.
-- Eximius.ai. (2025). *HR Technology Trends 2026: How AI Recruitment Platforms Lead the Transformation*.
-- Glassdoor. (2024). *Candidate Trust in AI Hiring Survey*.
+- i4cp. (2026). _4 Priorities for People Analytics Leaders in 2026_. Institute for Corporate Productivity.
+- Korn Ferry. (2026). _TA Trends 2026: Human-AI Power Couple_.
+- GoTo & Workplace Intelligence. (2026). _The Pulse of Work in 2026: Opportunity, Risk, and Responsibility in an AI-Driven Workplace_.
+- Gartner. (2025). _Cost Per Hire and Time-to-Fill Benchmarks_.
+- GoodTime. (2025). _AI Scheduling Efficiency Report_.
+- Eximius.ai. (2025). _HR Technology Trends 2026: How AI Recruitment Platforms Lead the Transformation_.
+- Glassdoor. (2024). _Candidate Trust in AI Hiring Survey_.
+
+---
+
+## Timeline
+
+append-only 증거 기록. 삭제·수정하지 않는다.
+
+### 2026-08-04 — 07-23·07-24 브리핑 INGEST (확증)
+
+`inbox/HR_Tech_Briefing_2026-07-23.md`, `inbox/HR_Tech_Briefing_2026-07-24.md` 두 브리핑을 편입했다. **신규 문서를 만들지 않고 이 문서에 병합한 이유**는, 두 브리핑의 핵심 수치가 이 문서의 2절과 사실상 동일했기 때문이다 — 자율 에이전트 도입 52%, 후보자 불신 74%(수용 26%), 채용당 $1,400 절감, 스케줄링 5.1일 → 1.4일(73% 단축), 인재 풀 3-5배, 다양성 +16%. 별도 문서를 세우면 같은 사실이 두 곳에서 각자 늙어간다.
+
+두 브리핑이 **새로 더한 것**은 다음 세 가지다.
+
+1. **조정 비용의 역설** (07-24): 개별 단계를 최적화했음에도 **60%의 기업이 2024년 오히려 채용 기간이 길어졌다**. 원인은 단계별 속도가 아니라 **인간 게이트 간 조정 비용(coordination cost)의 누적**이다. 즉 자동화의 병목은 '느린 인간'이 아니라 '설계되지 않은 인계(handoff)'다.
+2. **에이전트 3세대 모델** (07-24): 필터(1세대) → 어시스턴트(2세대) → **컨덕터(3세대)**. 3세대의 정의는 "에이전트 간 handoff를 설계하고 인간 개입 좌표를 명시하는 메타 시스템"이다. recruiter의 새 KPI는 채용 기간이 아니라 **에이전트 파이프라인의 신뢰도 감사**가 된다.
+3. **SDT 3축 훼손의 명시화** (07-23): 현재의 AI 채용 시스템은 후보자의 **자율성**(AI가 나를 평가한다), **유능감**(AI가 나를 덜 똑똑하게 만든다 — 39%), **관계성**(인간을 한 번도 만나지 못한다)을 동시에 훼손한다. 인간 게이트는 단순한 '검토 단계'가 아니라 **유능감과 관계성을 회복시키는 심리적 장치**로 재설계되어야 한다.
+
+두 브리핑 모두 `signal-autonomous-hiring-economics`, `signal-trust-design-patterns`, `signal-skill-adjacency-matching` 세 노드의 신규 생성을 제안했으나, **채택하지 않았다.** 세 주제 모두 이 문서의 2.1~2.4절이 이미 담고 있으며, 분리하면 백링크만 늘고 사실의 소유권이 흐려진다. 대신 위 세 가지 증분만 이 Timeline에 기록한다.
+
+**후속 확인**: 조정 비용 역설(60%)은 현재 Vault에 정량 근거가 이 한 건뿐이다. 다음 HR Tech 브리핑에서 재확인되면 별도 신호로 승격을 검토한다.
 
 ---
 

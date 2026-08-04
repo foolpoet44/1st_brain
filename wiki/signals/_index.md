@@ -29,8 +29,14 @@ tags: [index, wiki]
 - [[2026-05-30-claude-opus-4-8-launch-and-prompting-shift|Claude Opus 4.8 발표 및 프롬프팅 패러다임 전환]]
 - [[2026-05-30-automated-task-packaging|자율형 태스크 패키징]] — 반복 작업을 스킬·서브에이전트로
 - [[2026-06-22-agentic-orchestration-shift|에이전틱 오케스트레이션으로의 전환]]
+- [[2026-07-26-self-evolving-agents-evolution-gate|자기진화 에이전트와 Evolution Gate]] — 진화를 위임하되 방향은 인간이 설계한다
 - [[2026-06-13-hermes-agent-infrastructure-shift|AI Agent as an Operating Layer]]
 - [[2026-05-20-google-io-sign-of-agentic-shift|Google I/O 2026: 에이전틱 전환의 신호]]
+
+### AI 시대의 인간 역량 & 의미 (I/O 심리학)
+
+- [[2026-07-23-wadi-human-centric-design|WADI 프레임워크: 인간 중심성은 도덕이 아니라 경제다]] — 의사결정 권한(W2)이 병목
+- [[2026-07-24-cognitive-offloading-skill-decay|인지적 오프로딩과 스킬 디케이]] — AI가 빼앗는 것은 지루함이 아니라 기쁨
 
 ### 채용 & 노동시장
 

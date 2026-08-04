@@ -26,12 +26,12 @@ csp-brain 운영을 위한 6 가지 프로토콜 + 검증 체계.
 
 ### LINT 프로토콜 (검증 체크리스트)
 
-| 항목                    | 기준                                  | 조치                       |
-| :---------------------- | :------------------------------------ | :------------------------- |
-| **백링크 0 개 문서**    | 고립 문서 감지                        | 관련 문서에 링크 추가 제안 |
-| **frontmatter 누락**    | title, created, updated, type, status | 필수 필드 보강             |
-| **Compiled Truth 갱신** | 6 주 이상 미갱신                      | 갱신 필요 플래그           |
-| **스킬 동작 검증**      | [[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s/ 문서가 실제 사용 가능한가?    | 동작 테스트                |
+| 항목                    | 기준                                                                                  | 조치                                 |
+| :---------------------- | :------------------------------------------------------------------------------------ | :----------------------------------- | ----------- |
+| **백링크 0 개 문서**    | 고립 문서 감지                                                                        | 관련 문서에 링크 추가 제안           |
+| **frontmatter 누락**    | title, created, updated, type, status                                                 | 필수 필드 보강                       |
+| **Compiled Truth 갱신** | 6 주 이상 미갱신                                                                      | 갱신 필요 플래그                     |
+| **스킬 동작 검증**      | [[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md | SKILL]]s/ 문서가 실제 사용 가능한가? | 동작 테스트 |
 
 자세한 것은 [[[[CLAUDE.md|CLAUDE]].md]] 참조.
 

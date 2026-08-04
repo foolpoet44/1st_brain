@@ -17,6 +17,7 @@ status: Active
 의사결정 피로 연구 (Frontiers in Cognition, 2026) 는 **10 가지 원인** (조직 6, 개인 3, 외부 1) 과 **4 가지 효과** (비효과적 결정, 보수화, 오류, 회피) 를 규명했다. 이는 [[bp-signal-intelligence]] 의 **Human Gate 설계**와 직접 연결된다.
 
 **시냅스 노드 제안:**
+
 ```yaml
 # wiki/synapses/decision-fatigue-human-gate.md
 source: "Frontiers in Cognition (2026) - Decision Fatigue Framework"
@@ -35,6 +36,7 @@ human_gate:
 ```
 
 **양방향 링크:**
+
 - `[[bp-signal-intelligence]]` → `[[wiki/synapses/decision-fatigue-human-gate]]`
 - `[[hr-conceptual-atoms]]` → `[[wiki/synapses/decision-fatigue-human-gate]]` (조직 설계 실패 프레임)
 
@@ -46,6 +48,7 @@ human_gate:
 LLM 기반 채용 평가 연구 (arXiv:2508.16673) 는 **인도 출신 기록이 영국 출신보다 낮음** (p < 0.001) 을 발견했다. 리전 변수가 통제 후에도 유의한 예측 인자 (β = 0.444) 였다. 이는 [[agentic-recruitment-proxy]] 의 **AI 편향 필터**와 연결된다.
 
 **시냅스 노드 제안:**
+
 ```yaml
 # wiki/synapses/cultural-bias-llm-hiring.md
 source: "arXiv:2508.16673 (2025) - Invisible Filters: Cultural Bias in LLM Hiring"
@@ -64,6 +67,7 @@ human_gate:
 ```
 
 **양방향 링크:**
+
 - `[[agentic-recruitment-proxy]]` → `[[wiki/synapses/cultural-bias-llm-hiring]]`
 - `[[hr-conceptual-atoms]]` → `[[wiki/synapses/cultural-bias-llm-hiring]]` (공정성의 관계적 협상 프레임)
 
@@ -75,6 +79,7 @@ human_gate:
 AI 기반 채용 공정성 연구 (arXiv:2405.19699v3) 는 **88% 조직이 AI 실험**, **71% 가 AI 최종 결정 반대**임을 보고했다. EEOC 의 **4/5 (80%) 규칙**과 NYC Local Law 144 (2023) 를 준수해야 한다. 이는 [[bp-signal-intelligence]] 의 **Evolution Gate YAML 스키마**와 연결된다.
 
 **시냅스 노드 제안:**
+
 ```yaml
 # wiki/synapses/fairness-ai-recruitment-gate.md
 source: "arXiv:2405.19699v3 (2024) - Fairness in AI-Driven Recruitment"
@@ -97,6 +102,7 @@ human_gate:
 ```
 
 **양방향 링크:**
+
 - `[[bp-signal-intelligence]]` → `[[wiki/synapses/fairness-ai-recruitment-gate]]`
 - `[[sf-domain-mapping]]` → `[[wiki/synapses/fairness-ai-recruitment-gate]]` (Trust Level Disclosure)
 
@@ -108,6 +114,7 @@ human_gate:
 Irrational Labs 연구 (2025) 는 **자신의 직장 8% 우려 vs 동료 14% vs 다른 산업 29%**라는 인식 격차를 발견했다. **관리자 지지**가 79% 사용률을 견인한다. 이는 [[fde-talent-model]] 의 **Identity Extension 프레임**과 연결된다.
 
 **시냅스 노드 제안:**
+
 ```yaml
 # wiki/synapses/ai-adoption-identity-extension.md
 source: "Irrational Labs (2025) - The AI Workplace: Employee AI Adoption"
@@ -130,6 +137,7 @@ human_gate:
 ```
 
 **양방향 링크:**
+
 - `[[fde-talent-model]]` → `[[wiki/synapses/ai-adoption-identity-extension]]`
 - `[[hr-conceptual-atoms]]` → `[[wiki/synapses/ai-adoption-identity-extension]]` (Guardian → Gardener 전환)
 
@@ -146,6 +154,7 @@ human_gate:
 - **AI Adoption**: HR 은 기술을 강제하는 감시자가 아니라, 심리적 장벽을 해체하는 **정원사**다.
 
 **시냅스 노드 제안:**
+
 ```yaml
 # wiki/synapses/guardian-to-gardener-identity.md
 theme: "HR 의 정체성 전환: 감시자 → 정원사"
@@ -164,6 +173,7 @@ philosophical_anchor:
 ---
 
 **다음 액션:**
+
 1. 위 5 개 시냅스 노드를 `wiki/synapses/` 에 실제 파일로 생성 (각 15 분 × 5 = 75 분)
 2. 각 소스 문서 ([[bp-signal-intelligence]], [[agentic-recruitment-proxy]], [[fde-talent-model]], [[hr-conceptual-atoms]]) 에 양방향 링크 추가
 3. KNOWLEDGE_PULSE.md 에 "Recent Synapses" 섹션에 5 개 노드 기록
@@ -171,4 +181,4 @@ philosophical_anchor:
 
 ---
 
-*이 시냅스는 csp-brain Vault 의 지식 대사 프로토콜에 따라 생성되었습니다. 지식은 연결될 때 비로소 지능이 됩니다.*
+_이 시냅스는 csp-brain Vault 의 지식 대사 프로토콜에 따라 생성되었습니다. 지식은 연결될 때 비로소 지능이 됩니다._

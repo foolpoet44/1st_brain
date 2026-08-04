@@ -4,7 +4,15 @@ created: 2026-07-18
 updated: 2026-07-18
 type: concept
 status: seed
-tags: [smart-factory, competency-mapping, escon, skill-ontology, physical-ai, talent-pool]
+tags:
+  [
+    smart-factory,
+    competency-mapping,
+    escon,
+    skill-ontology,
+    physical-ai,
+    talent-pool,
+  ]
 aliases: [SF Domain 매핑, 직무역량 도메인 매핑, 4대 도메인 매핑]
 ---
 
@@ -20,7 +28,7 @@ aliases: [SF Domain 매핑, 직무역량 도메인 매핑, 4대 도메인 매핑
 
 **매핑 신뢰도의 정직성**: high 25 / medium 3 / low 16. low의 상당수가 에이전틱 AI에 몰려 있어, 이 도메인이 "딱 맞지 않는 직무를 임시로 담는 바구니" 역할을 하고 있다는 신호 — 향후 세분화 대상으로 표시해야 한다.
 
-**세 겹 매핑 구조**: 직무역량평가(44 소분류) → 4대 도메인(좌표계) → Factory Robotics Skill Map(RSF-xxx 프로젝트 스킬 ID). 이 구조가 추상(도메인)과 구체(스킬)를 동시에 잡아, 임원에게는 "데이터 인텔리전스에 111명"으로 말하고 교육 설계자에게는 "RSF-MVS-007 결함 검출을 가르쳐야 한다"로 말한다. [[escon]] 설계의 College→Level→Enabler→Skill 5계층과 정확히 포개진다 — 직무역량평가가 *현재 위치*, 프로젝트 스킬맵이 *도달 목표*, 4대 도메인이 그 둘을 잇는 *좌표계*.
+**세 겹 매핑 구조**: 직무역량평가(44 소분류) → 4대 도메인(좌표계) → Factory Robotics Skill Map(RSF-xxx 프로젝트 스킬 ID). 이 구조가 추상(도메인)과 구체(스킬)를 동시에 잡아, 임원에게는 "데이터 인텔리전스에 111명"으로 말하고 교육 설계자에게는 "RSF-MVS-007 결함 검출을 가르쳐야 한다"로 말한다. [[escon]] 설계의 College→Level→Enabler→Skill 5계층과 정확히 포개진다 — 직무역량평가가 _현재 위치_, 프로젝트 스킬맵이 _도달 목표_, 4대 도메인이 그 둘을 잇는 _좌표계_.
 
 **함의**: 총 273명 평가 인원이라는 원석 풀에서 30명 Physical AI Tech Leader Pool(projects/physical-ai-talent, [[fde-talent-model]] 양성 트랙)을 길어 올린다. 이 매핑이 "인재가 있는가 / 어디가 비었는가 / 무엇을 가르칠 것인가" 세 질문에 답하며, 커리큘럼 설계의 배경은 [[k-smart-model]]이 제공한다. [[constructed-fit]]의 관점처럼, 적합은 발견되는 것이 아니라 이 번역을 통해 구성된다.
 

@@ -4,7 +4,15 @@ created: 2026-07-18
 updated: 2026-07-18
 type: concept
 status: seed
-tags: [smart-factory, talent-development, benchmark, ot-it, learning-factory, industry-4-0]
+tags:
+  [
+    smart-factory,
+    talent-development,
+    benchmark,
+    ot-it,
+    learning-factory,
+    industry-4-0,
+  ]
 aliases: [K-SMART, 스마트팩토리 전문가 육성, K-Lernfabrik]
 ---
 

@@ -35,7 +35,6 @@ Vibe Coder에게 워크플로우란 '직관'을 '신뢰할 수 있는 계획'으
 _Source: 정상록(SangRok Jung) LinkedIn_
 _Last Updated: {now}_
 
-
 ---
 
 ## Timeline

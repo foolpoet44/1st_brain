@@ -7,7 +7,7 @@ status: growing
 tags: [index, wiki]
 ---
 
-# [[wiki/[[[[Understand-Anything/docs/superpowers/plans/2026-03-28-understand-anything-extension-impl.md|2026-03-28-understand-anything-extension-impl]]/Project.md|Project]]s/_index.md|_index]]
+# [[wiki/[[[[Understand-Anything/docs/superpowers/plans/2026-03-28-understand-anything-extension-impl.md|2026-03-28-understand-anything-extension-impl]]/Project.md|Project]]s/\_index.md|\_index]]
 
 이 폴더는 진행 중인 프로젝트들에서 축적된 지식을 담습니다.
 

@@ -42,7 +42,7 @@ OPQ32 sten(1–10) 32개를 입력으로, 두 개의 성격이 다른 프로파�
 
 **그림자 점등 규칙 (두 층을 잇는 다리)**: `IF Edge_score ≥ 8 AND Counterbalancer ≤ 3 → Dark-risk 플래그`. 예: Influence↑ + People↓ → 지배형, Drive↑ + People↓ → 소진형, Strategic↑ + UCF#6(Organising)↓ → 공상형. 이 플래그가 **선험적 경보 — EX 신호가 검증할 가설**입니다. OPQ가 사전확률(예: "변화 압력 하 지배형 탈선 가능성")을 던지고, 이후 360·Pulse·BP Report가 행동 데이터로 A–D 등급 확인하면 Watch→Alert→Critical로 수렴합니다. 출력 문법은 판결이 아니라 가설 — "~형이다"가 아니라 "~경향이 ~만큼 잠재되어 있고 관측이 ~만큼 지지한다".
 
-이 Disposition 레이어의 출력이 [[bp-signal-intelligence]] Signal Generation의 *선행* 소스로 들어가 People Context Graph 개인 노드 속성을 채웁니다. 심리 프레임 매핑(Direction&Meaning·LMX·JD-R·SDT·POS)은 [[ex-insight-mining-pipeline]]의 연역 평정 격자와 동일 좌표계입니다. 리더 선발 역량은 projects/physical-ai-talent 면접 키트와 교차 검증됩니다.
+이 Disposition 레이어의 출력이 [[bp-signal-intelligence]] Signal Generation의 _선행_ 소스로 들어가 People Context Graph 개인 노드 속성을 채웁니다. 심리 프레임 매핑(Direction&Meaning·LMX·JD-R·SDT·POS)은 [[ex-insight-mining-pipeline]]의 연역 평정 격자와 동일 좌표계입니다. 리더 선발 역량은 projects/physical-ai-talent 면접 키트와 교차 검증됩니다.
 
 ---
 
@@ -51,7 +51,7 @@ OPQ32 sten(1–10) 32개를 입력으로, 두 개의 성격이 다른 프로파�
 ### 2026-07-18
 
 - Drive 설계문서에서 편입: **OPQ → UCF / Leader Edge 산출 로직** (Opq-ucf-le).
-- 공통 산출 엔진: OPQ32 sten → 가중 선형합(Σw=1.0, 역채점 s*=11−s), normative 입력 전제.
+- 공통 산출 엔진: OPQ32 sten → 가중 선형합(Σw=1.0, 역채점 s\*=11−s), normative 입력 전제.
 - UCF Great Eight(잠재력 평면) + Leader Edge 5종(우위이자 칼날, 그림자 모델링).
 - 그림자 점등 규칙(Edge≥8 & 균형추≤3)이 EX 신호가 검증할 선험적 가설 → [[bp-signal-intelligence]] Disposition 선행 소스.
 - 다음 갈래(대기): (1) 가중치 JSON/파이썬 계산 엔진, (2) Watch/Alert/Critical 간극 정량화 판정 로직.

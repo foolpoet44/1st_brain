@@ -36,3 +36,23 @@ BP Signal Intelligence는 [[ex-intelligence]]의 Relation Verification 층을 �
 - Supabase 스키마: `signal_status` enum, `reliability_grade`(A–D), `action_tier`(watch/alert/critical), persons·orgs·ex_clusters 마스터, signal_edges 그래프, status_transitions 로그.
 - People Context Graph에서 동일 인물 누적 신호로 약신호 증폭 감지([[weak-signal-theory]] Ansoff).
 - 감사 가능성: PostToolUse hook → JSONL, swim-lane 대시보드. Triage 엔진은 [[ex-insight-mining-pipeline]]이 수행.
+
+### 2026-08-04
+
+7월 넷째 주 브리핑 5건(HR Tech 07-26·07-29, I/O 심리학 07-23·07-24) INGEST 과정에서, 이 문서의 스키마에 대한 **동일한 확장 제안이 네 번 반복**되어 기록한다. 반복 자체가 신호다.
+
+**1) `evolution_gate` 필드 확장** — 자기진화 에이전트가 평가 모델을 인간 승인 없이 수정할 수 있다는 문제 제기(07-26, 07-29). 상세 근거와 3단계 게이트 설계는 [[2026-07-26-self-evolving-agents-evolution-gate]]에 있다.
+
+```yaml
+evolution_gate:
+  required: true # 모델 수정 시 인간 승인 필수
+  audit_log: true # 진화를 촉발한 데이터 기록
+  rollback_enabled: true # 이전 버전 복원 권한
+  validation_sample: 10 # 분기별 무작위 검증 샘플
+```
+
+**2) `ai-offloading-risk` 태그를 `action_tier`에 추가** — "이 작업은 학습 필수이므로 AI 사용 금지"를 명시하는 장치. 근거는 [[2026-07-24-cognitive-offloading-skill-decay]](폴란드 대장내시경 연구: AI 도입 3개월 후 AI 없이 용종 발견율 -6%p).
+
+**3) `stress_level` 속성 검토** — 고스트레스 상태의 의사결정은 편도체 지배로 오류율이 오르므로 자동 에스컬레이션 트리거로 삼자는 제안. 근거는 [[2026-07-23-wadi-human-centric-design]]. 다만 생체 신호 수집은 감시 문제와 직결되므로, 이 문서의 첫 번째 윤리적 못("돌봄이지 감시가 아니다")과 충돌하지 않는지 별도 판단이 필요하다. **보류.**
+
+**4) 이론적 뒷받침 확보** — WADI 프레임워크의 W2(의사결정 권한 배분)가 문헌 120편 중 14편만 다룬 병목이라는 발견은, 이 문서의 "사람이 지키는 칸은 단 하나(조치)" 원칙에 외부 근거를 제공한다. 또한 LLM 성격 평가 연구(ICC 0.81~1.00 vs Pearson r 0.27)는 `reliability_grade` 설계가 전제한 **"신뢰도와 타당도는 다르다"**는 명제의 정량적 실증이다.
