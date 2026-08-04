@@ -5,7 +5,7 @@ source: LinkedIn
 url: https://www.linkedin.com/posts/duckjungkim_aihr-또는-hr-ax을-설계할-때는-먼저-hr의-운영-구조를-어떻게-share-7480848867920457728-3NFx/
 author: "[[duckjung-kim|김덕중]]"
 tags: [AIHR, HR-AX, TOM, SDM, Framework]
-related_to: ["[[AIHR]]", "[[HR-AX]]"]
+related_to: ["AIHR", "HR-AX"]
 ---
 
 # AIHR 설계 프레임워크: TOM과 SDM의 재정의

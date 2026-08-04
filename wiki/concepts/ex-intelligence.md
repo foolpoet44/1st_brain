@@ -59,12 +59,12 @@ CIA(1947) 의 철학에서 영감받았습니다:
 
 - **자율성**, **유능감**, **관계성** 3 가지 기본 심리 욕구
 - 내재적 동기의 심리학적 토대
-- [[Self-Determination Theory (자기결정이론)]] 참조
+- [[self-determination-theory|Self-Determination Theory (자기결정이론)]] 참조
 
 ### 2. Leader-Member Exchange (LMX)
 
 - 리더 - 구성원 관계의 질이 경험에 영향
-- [[Leader-Member Exchange (LMX)]] 참조
+- [[leader-member-exchange|Leader-Member Exchange (LMX)]] 참조
 
 ### 3. Positive Organizational Scholarship (POS)
 
@@ -121,9 +121,9 @@ CIA(1947) 의 철학에서 영감받았습니다:
 
 ## 관련 프로젝트
 
-- [[EX Intelligence]] — 실제 구현 프로젝트
-- [[Pulse Check]] — 상시 진단 설문
-- [[AX Internalization (AI Transformation)]] — AI 내재화 기반
+- [[ex-intelligence|EX Intelligence]] — 실제 구현 프로젝트
+- [[pulse-check|Pulse Check]] — 상시 진단 설문
+- [[ax-internalization|AX Internalization (AI Transformation)]] — AI 내재화 기반
 
 ---
 

@@ -15,7 +15,7 @@ tags: ["atoms", "hr-theory", "conceptual-framework"]
 ### 🔵 P-O Fit (Person-Organization Fit)
 
 - **과거**: 고정된 가치관의 매칭 (정적 모델).
-- **현재**: [[Constructed Fit]] 기반의 동적 구성 모델. 적합성은 상호작용의 결과물임.
+- **현재**: [[constructed-fit|Constructed Fit]] 기반의 동적 구성 모델. 적합성은 상호작용의 결과물임.
 
 ### 🟢 Self-Determination Theory (SDT)
 

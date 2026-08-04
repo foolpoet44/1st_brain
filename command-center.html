@@ -39,32 +39,32 @@ padding-top:16px;border-top:1px solid var(--line)}
 </style></head><body><div class="wrap">
 
 <h1>🧠 CSP-Brain 커맨드센터</h1>
-<div class="meta">2026-08-04 14:25 갱신 · 5분마다 자동 새로고침 ·
-HEAD <code>b29d710 ops: 스케줄러를 Hermes cron 으로 단일화, 자동 커밋기를 분류 커밋으로 전환</code> · 미커밋 1건</div>
+<div class="meta">2026-08-04 14:36 갱신 · 5분마다 자동 새로고침 ·
+HEAD <code>54f98fa merge: 워크스페이스 INGEST 결과 통합 (신규 3, 병합 2, inbox 11건 마킹)</code> · 미커밋 24건</div>
 
 <div class="grid">
-<div class="card ok"><div class="lbl">위키 문서</div><div class="val">98</div><div class="sub">숲 단계 — 자기 진화하는 지식 생태계</div></div>
-<div class="card crit"><div class="lbl">소화율</div><div class="val">54.5%</div><div class="sub">미편입 25건 · 최고 8일</div></div>
-<div class="card ok"><div class="lbl">7일 대사</div><div class="val">4</div><div class="sub">신규 4 · 일평균 0.6</div></div>
-<div class="card ok"><div class="lbl">연결 밀도</div><div class="val">2.8</div><div class="sub">총 272개 링크</div></div>
-<div class="card warn"><div class="lbl">고립 문서</div><div class="val">2</div><div class="sub">백링크 2개 미만</div></div>
-<div class="card ok"><div class="lbl">노후 문서</div><div class="val">14.3%</div><div class="sub">6주 이상 미갱신 14건</div></div>
+<div class="card ok"><div class="lbl">위키 문서</div><div class="val">101</div><div class="sub">숲 단계 — 자기 진화하는 지식 생태계</div></div>
+<div class="card crit"><div class="lbl">소화율</div><div class="val">74.5%</div><div class="sub">미편입 14건 · 최고 3일</div></div>
+<div class="card ok"><div class="lbl">7일 대사</div><div class="val">32</div><div class="sub">신규 7 · 일평균 4.6</div></div>
+<div class="card ok"><div class="lbl">연결 밀도</div><div class="val">2.7</div><div class="sub">총 275개 링크</div></div>
+<div class="card warn"><div class="lbl">고립 문서</div><div class="val">8</div><div class="sub">백링크 2개 미만</div></div>
+<div class="card ok"><div class="lbl">노후 문서</div><div class="val">2.0%</div><div class="sub">6주 이상 미갱신 2건</div></div>
 </div>
 
 <h2>경보</h2>
-<div class="panel"><ul><li class="crit">미편입 자료 25건 (최고 8일 경과) — 소화율 54.5%</li><li class="warn">고립 문서 2건 (백링크 2개 미만)</li><li class="warn">해결되지 않는 링크 72종</li></ul></div>
+<div class="panel"><ul><li class="crit">미편입 자료 14건 (최고 3일 경과) — 소화율 74.5%</li><li class="warn">고립 문서 8건 (백링크 2개 미만)</li><li class="warn">해결되지 않는 링크 49종</li></ul></div>
 
 <h2>파이프라인</h2>
 <div class="panel"><table>
 <tr><th>스케줄</th><th>Job</th><th>활성</th><th>최근</th><th>상태</th></tr>
-<tr class="ok"><td>0 10 * * *</td><td>csp-health-watchdog</td><td>●</td><td>-</td><td>ok</td></tr><tr class="ok"><td>0 22 * * *</td><td>csp-evening-reflect</td><td>●</td><td>7h</td><td>ok</td></tr><tr class="ok"><td>0 23 * * *</td><td>daily-knowledge-sync</td><td>●</td><td>6h</td><td>ok</td></tr><tr class="ok"><td>0 4 * * *</td><td>csp-brain Type 자동 분류</td><td>●</td><td>10h</td><td>ok</td></tr><tr class="ok"><td>0 8 * * *</td><td>Daily Financial Flow Briefing</td><td>●</td><td>6h</td><td>ok</td></tr><tr class="paused"><td>0 8,12,16,20 * * *</td><td>csp-brain-auto-sync</td><td>○</td><td>294h</td><td>paused</td></tr><tr class="paused"><td>0 8,12,16,20 * * *</td><td>Eval Dashboard Auto-Update</td><td>○</td><td>78h</td><td>paused</td></tr><tr class="ok"><td>10 8 * * *</td><td>Daily HR Tech Insight Briefing</td><td>●</td><td>6h</td><td>ok</td></tr><tr class="ok"><td>30 8 * * *</td><td>Daily Psychology Paper Briefing</td><td>●</td><td>6h</td><td>ok</td></tr><tr class="ok"><td>30 9 * * *</td><td>csp-brain-ingest</td><td>●</td><td>-</td><td>ok</td></tr><tr class="ok"><td>50 7 * * *</td><td>Daily Knowledge Metabolism Report</td><td>●</td><td>22h</td><td>ok</td></tr>
+<tr class="ok"><td>0 10 * * *</td><td>csp-health-watchdog</td><td>●</td><td>-</td><td>ok</td></tr><tr class="ok"><td>0 22 * * *</td><td>csp-evening-reflect</td><td>●</td><td>8h</td><td>ok</td></tr><tr class="ok"><td>0 23 * * *</td><td>daily-knowledge-sync</td><td>●</td><td>6h</td><td>ok</td></tr><tr class="ok"><td>0 4 * * *</td><td>csp-brain Type 자동 분류</td><td>●</td><td>10h</td><td>ok</td></tr><tr class="ok"><td>0 8 * * *</td><td>Daily Financial Flow Briefing</td><td>●</td><td>7h</td><td>ok</td></tr><tr class="paused"><td>0 8,12,16,20 * * *</td><td>csp-brain-auto-sync</td><td>○</td><td>294h</td><td>paused</td></tr><tr class="paused"><td>0 8,12,16,20 * * *</td><td>Eval Dashboard Auto-Update</td><td>○</td><td>78h</td><td>paused</td></tr><tr class="ok"><td>10 8 * * *</td><td>Daily HR Tech Insight Briefing</td><td>●</td><td>6h</td><td>ok</td></tr><tr class="ok"><td>30 8 * * *</td><td>Daily Psychology Paper Briefing</td><td>●</td><td>6h</td><td>ok</td></tr><tr class="ok"><td>30 9 * * *</td><td>csp-brain-ingest</td><td>●</td><td>-</td><td>ok</td></tr><tr class="ok"><td>45 9,23 * * *</td><td>csp-command-center</td><td>●</td><td>-</td><td>ok</td></tr><tr class="ok"><td>50 7 * * *</td><td>Daily Knowledge Metabolism Report</td><td>●</td><td>22h</td><td>ok</td></tr>
 </table></div>
 
 <h2>미편입 대기열</h2>
-<div class="panel"><ul><li><code>inbox/IO_PSYCHOLOGY_BRIEFING_2026-07-24.md</code> <em>8일</em></li><li><code>inbox/HR_Tech_Briefing_2026-07-24.md</code> <em>8일</em></li><li><code>inbox/HR_Tech_Briefing_2026-07-23.md</code> <em>8일</em></li><li><code>inbox/IO_PSYCHOLOGY_BRIEFING_2026-07-23.md</code> <em>8일</em></li><li><code>inbox/HR_Tech_Briefing_2026-07-26.md</code> <em>8일</em></li><li><code>inbox/notes/2026-07-14.md</code> <em>8일</em></li><li><code>inbox/BRIEFING_2026-07-30_IO_PSYCHOLOGY.md</code> <em>3일</em></li><li><code>inbox/HR_TECH_BRIEFING_2026-07-29.md</code> <em>3일</em></li><li><code>outputs/briefings/HR_TECH_PSYCHOLOGY_2026-07-31.md</code> <em>3일</em></li><li><code>outputs/briefings/BRIEFING_2026-08-01_IO_PSYCHOLOGY.md</code> <em>3일</em></li></ul></div>
+<div class="panel"><ul><li><code>outputs/briefings/HR_TECH_PSYCHOLOGY_2026-07-31.md</code> <em>3일</em></li><li><code>outputs/briefings/BRIEFING_2026-08-01_IO_PSYCHOLOGY.md</code> <em>3일</em></li><li><code>outputs/briefings/BRIEFING_2026-07-29_MONEY_FLOW.md</code> <em>3일</em></li><li><code>outputs/briefings/MONEY_FLOW_2026-07-30.md</code> <em>3일</em></li><li><code>outputs/briefings/HR_PSYCHO_BRIEFING_2026-07-28.md</code> <em>3일</em></li><li><code>outputs/briefings/BRIEFING_2026-07-31_HR_TECH.md</code> <em>3일</em></li><li><code>outputs/briefings/MONEY_FLOW_BRIEFING_2026-07-31.md</code> <em>3일</em></li><li><code>outputs/briefings/2026-07-28-money-flow-briefing.md</code> <em>3일</em></li><li><code>outputs/briefings/HR_TECH_BRIEFING_2026-07-28.md</code> <em>3일</em></li><li><code>outputs/briefings/BRIEFING_2026-08-02_HR_PSYCHOLOGY.md</code> <em>1일</em></li></ul></div>
 
 <h2>폴더 분포</h2>
-<div class="panel"><span class="chip">concepts <b>53</b></span><span class="chip">signals <b>23</b></span><span class="chip">tools <b>6</b></span><span class="chip">frameworks <b>5</b></span><span class="chip">skills <b>3</b></span><span class="chip">people <b>2</b></span><span class="chip">hr-tech <b>1</b></span><span class="chip">briefings <b>1</b></span><span class="chip">decisions <b>1</b></span><span class="chip">synapses <b>1</b></span><span class="chip">synapse <b>1</b></span><span class="chip">protocols <b>1</b></span></div>
+<div class="panel"><span class="chip">concepts <b>53</b></span><span class="chip">signals <b>26</b></span><span class="chip">tools <b>6</b></span><span class="chip">frameworks <b>5</b></span><span class="chip">skills <b>3</b></span><span class="chip">people <b>2</b></span><span class="chip">hr-tech <b>1</b></span><span class="chip">briefings <b>1</b></span><span class="chip">decisions <b>1</b></span><span class="chip">synapses <b>1</b></span><span class="chip">synapse <b>1</b></span><span class="chip">protocols <b>1</b></span></div>
 
 <div class="quote">
 "지능은 저장의 양이 아니라, 연결의 밀도와 변화의 속도로 증명됩니다."<br>

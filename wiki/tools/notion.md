@@ -21,7 +21,7 @@ aliases: []
 - Claude 대화 아카이브 (d012343e-b2a2-461e-944b-6f166e91d8e9)
 - 외부 공유용 문서
 
-[[Obsidian]] 과의 양방향 연동 ([[BRIDGE]] 프로토콜) 으로 동기화.
+[[obsidian|Obsidian]] 과의 양방향 연동 (BRIDGE 프로토콜) 으로 동기화.
 
 ---
 

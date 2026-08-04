@@ -29,8 +29,8 @@ aliases: [컨텍스트 복원, 세션 복원]
 
 **관련 스킬**
 
-- [[Memory Save (대화 종료 기록)]] — 대화 종료 시 기록
-- [[Dream Cycle (주간 정리 루틴)]] — 주간 정리
+- [[memory-save|Memory Save (대화 종료 기록)]] — 대화 종료 시 기록
+- [[dream-cycle|Dream Cycle (주간 정리 루틴)]] — 주간 정리
 
 ---
 

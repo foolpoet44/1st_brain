@@ -43,7 +43,7 @@ H. Igor Ansoff 가 제안한 개념으로, 환경의 급격한 변화가 닥치�
 ### 2026-04-29
 
 - wiki 초기화와 함께 마이그레이션
-- [[EX Intelligence]], [[Pulse Check]] 프로젝트의 필터링 알고리즘 설계 원칙으로 사용됨
+- [[ex-intelligence|EX Intelligence]], [[pulse-check|Pulse Check]] 프로젝트의 필터링 알고리즘 설계 원칙으로 사용됨
 
 ### 2026-04-14
 

@@ -28,8 +28,8 @@ aliases: [메모리 저장, 대화 저장]
 
 **관련 스킬**
 
-- [[Context Restore (세션 복원)]] — 대화 시작 시 복원
-- [[Dream Cycle (주간 정리 루틴)]] — 주간 정리
+- [[context-restore|Context Restore (세션 복원)]] — 대화 시작 시 복원
+- [[dream-cycle|Dream Cycle (주간 정리 루틴)]] — 주간 정리
 
 ---
 

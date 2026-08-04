@@ -19,9 +19,9 @@ related_to: "[[agent-friendly-redesign]]", "[[token-maxing]]"
 ## 5대 핵심 성공 원칙
 
 1. **구간(Segment) 분해**: 업무를 원자 단위로 쪼개어 에이전트 간 연쇄(Chain)를 설계.
-2. **에이전트 친화적 도구**: UI가 아닌 상태 조작 중심으로 도구 재설계 ([[[agent-friendly-redesign]]]).
+2. **에이전트 친화적 도구**: UI가 아닌 상태 조작 중심으로 도구 재설계 ([[agent-friendly-redesign|[agent-friendly-redesign]]]).
 3. **검증 독립화**: 작업 에이전트와 검증 에이전트를 분리하여 오차율 감소.
-4. **인간의 끈기 (토큰 맥싱)**: AI가 해결할 수 있을 때까지 문맥을 공급하며 포기하지 않는 태도 ([[[token-maxing]]]).
+4. **인간의 끈기 (토큰 맥싱)**: AI가 해결할 수 있을 때까지 문맥을 공급하며 포기하지 않는 태도 ([[token-maxing|[token-maxing]]]).
 5. **주관적 작업 위임**: 팀 내 합의된 '라벨(Label)' 규칙을 통해 주관적 판단 영역까지 자동화 확장.
 
 ## HR 도메인 시사점

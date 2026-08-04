@@ -104,9 +104,9 @@ aliases: [펄스 서베이, 상시 진단]
 
 ## 관련 개념
 
-- [[EX Intelligence]] — 전체 시스템
-- [[Self-Determination Theory (자기결정이론)]] — 문항 설계 근거
-- [[Leader-Member Exchange (LMX)]] — 리더십 측정
+- [[ex-intelligence|EX Intelligence]] — 전체 시스템
+- [[self-determination-theory|Self-Determination Theory (자기결정이론)]] — 문항 설계 근거
+- [[leader-member-exchange|Leader-Member Exchange (LMX)]] — 리더십 측정
 
 ---
 

@@ -31,7 +31,7 @@ aliases: [지식 자산화]
 ### 2026-04-29
 
 - wiki 초기화와 함께 마이그레이션
-- [[AX Internalization]] 프로젝트의 핵심 원칙으로 설정됨
+- [[ax-internalization|AX Internalization]] 프로젝트의 핵심 원칙으로 설정됨
 
 ### 2026-04-14
 

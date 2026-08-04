@@ -24,7 +24,7 @@ aliases: [COMPASS 섹션]
 - **Do it once, automate it forever**: 반복은 죄악이며, 자동화는 미학이다.
 - **Vibe Coding**: 기술적 형식보다 맥락과 직관을 우선한다.
 - **Knowledge Capitalization**: 모든 경험은 원자화되어 자산화되어야 한다.
-- **[[Economic Freedom (경제적 자유)]]**: 창의적 폭주를 위한 최상위 재무 인프라.
+- **[[economic-freedom|Economic Freedom (경제적 자유)]]**: 창의적 폭주를 위한 최상위 재무 인프라.
 
 ### 3. Operating Manual (운영 지침)
 
