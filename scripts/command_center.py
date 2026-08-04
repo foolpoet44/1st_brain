@@ -5,12 +5,16 @@ CSP-Brain 커맨드센터 — 위키 진화 관제탑
 왜 8 번째 대시보드를 만들지 않는가
 ----------------------------------
 2026-08-04 조사 결과, 이 Vault 에는 대시보드 생성 스크립트 7 개와 산출물 6 개가
-난립하고 절반이 죽어 있었다. knowledge.html 은 6/13, METABOLISM_SNAPSHOT.html(1.3MB)은
-6/10, manifest.json 은 5/02 에 멈췄다. 그런데 아무도 몰랐다. 오늘 launchd job 이
-142 회 실패한 것을 아무도 모른 것과 같은 구조다.
+난립하고 있었다. 파일 수정 시각만 보면 절반이 죽은 것처럼 보였다.
 
-그래서 이 스크립트는 **새 대시보드가 아니라 통합 대시보드**다. 기존 산출물을 대체하고,
-나머지는 은퇴시킨다. 하나만 살아 있으면 그것이 멈췄을 때 바로 보인다.
+그런데 참조를 세어보니 셋은 살아 있었다. manifest.json 은 Understand-Anything 이
+54 곳에서 쓰고, knowledge.html 은 GitHub Actions 가 매일 만들며, _ops/web/index.html 은
+localhost:8080 서버가 지금도 서빙 중이다. **수정 시각으로 생사를 판단하면 살아 있는
+것을 죽인다.** 실제로 멈춘 것은 둘뿐이었다(METABOLISM_SNAPSHOT.html, index_wiki.html).
+
+그래서 이 스크립트는 새 대시보드가 아니라 **통합 대시보드이자 지도**다. 지표를 한곳에
+모으고, 어느 화면이 무엇이며 누가 만드는지를 DASHBOARD_MAP 으로 함께 띄운다.
+난립의 진짜 비용은 개수가 아니라 '무엇이 무엇인지 모르는 것'이기 때문이다.
 
 무엇을 보여주는가
 -----------------
@@ -50,7 +54,28 @@ INBOX = ROOT / "inbox"
 BRIEFINGS = ROOT / "outputs" / "briefings"
 OUT_JSON = ROOT / "_ops" / "command-center.json"
 OUT_HTML = ROOT / "command-center.html"
+HISTORY = ROOT / "_ops" / "command-center-history.jsonl"
 JOBS_JSON = Path.home() / ".hermes/cron/jobs.json"
+
+# 대시보드 지도 — 이 Vault 의 화면이 무엇이고 누가 만드는지.
+#
+# 2026-08-04 조사에서 "죽은 대시보드 5개"로 보였던 것 중 셋은 살아 있었다.
+#   manifest.json      — Understand-Anything 플러그인이 54 곳에서 참조
+#   knowledge.html     — gen_knowledge_index.py 가 만들고 GitHub Actions 가 발행
+#   _ops/web/index.html — localhost:8080 서버가 실제로 서빙 중
+# 파일 수정 시각만 보고 죽었다고 판단하면 살아 있는 것을 죽인다. 참조를 세어야 한다.
+#
+# 이 지도를 화면에 띄우는 이유: 난립의 진짜 비용은 개수가 아니라 '무엇이 무엇인지
+# 모르는 것'이다. 어느 화면이 현재를 보여주는지 알면 멈춘 화면을 현재로 착각하지 않는다.
+DASHBOARD_MAP = [
+    ("command-center.html", "이 화면 — 위키 진화 관제", "csp-command-center (09:45/23:45)", "live"),
+    ("index.html", "GitHub Pages 공개 대시보드", "eval_dashboard.py + Actions", "live"),
+    ("knowledge.html", "지식 인덱스", "gen_knowledge_index.py + Actions", "live"),
+    ("_ops/web/index.html", "로컬 대시보드 :8080", "update_dashboard.py + server.py", "live"),
+    ("METABOLISM_SNAPSHOT.html", "대사 스냅샷 (1.3MB)", "생성 주체 없음 · 06-10 멈춤", "dead"),
+    ("index_wiki.html", "위키 인덱스", "생성 주체 없음 · 07-26 멈춤", "dead"),
+]
+RETIRED_DASHBOARDS = [(n, s) for n, _, s, st in DASHBOARD_MAP if st == "dead"]
 
 STALE_WEEKS = 6          # CLAUDE.md LINT 규칙: 6 주 이상 미갱신은 점검 대상
 MIN_BACKLINKS = 2        # CLAUDE.md: 한 문서에 최소 2 개 백링크
@@ -141,6 +166,73 @@ def digestion():
     return {"total": total, "pending": len(pending), "rate": rate,
             "oldest_days": pending[0]["age_days"] if pending else 0,
             "items": pending[:10]}
+
+
+# ---------------------------------------------------------------- 전체 규모
+
+def vault_scale():
+    """Vault 전체 규모와 type 분류율.
+
+    기존 EVAL_STATUS.md 가 담당하던 지표를 흡수했다. wiki 만 보면 이 Vault 의
+    5% 만 보는 셈이다 — 전체 2,200 여 문서 중 위키는 100 개 남짓이다.
+    나머지는 원자료·산출물·프로젝트 문서이며, 그것들의 type 분류율이
+    '검색 가능한 상태인가'를 말해준다."""
+    total = typed = 0
+    for p in ROOT.rglob("*.md"):
+        s = str(p)
+        if "/.git/" in s or "/node_modules/" in s or "/Understand-Anything/" in s:
+            continue
+        total += 1
+        head = p.read_text(encoding="utf-8", errors="ignore")[:400]
+        if re.search(r"^type:\s*\S", head, re.M):
+            typed += 1
+    return {"total_md": total, "typed": typed,
+            "typed_ratio": round(typed / total * 100, 1) if total else 0}
+
+
+def recent_changes(n=8):
+    """최근 변경된 위키 문서 — KNOWLEDGE_PULSE.md 의 '최근의 지능적 도약'을 흡수."""
+    out = sh("git", "log", "-40", "--pretty=format:%ad|%h|%s", "--date=format:%m-%d %H:%M",
+             "--name-only", "--", "wiki/")
+    items, cur = [], None
+    for line in out.splitlines():
+        if "|" in line and line.count("|") >= 2:
+            cur = line.split("|")
+        elif line.strip() and cur:
+            items.append({"date": cur[0], "file": line.strip().replace("wiki/", "")})
+            if len(items) >= n:
+                break
+    return items
+
+
+def trend(today):
+    """전일 대비 추이. 절대값보다 방향이 중요하다 — 늘고 있는가 줄고 있는가."""
+    prev = None
+    if HISTORY.exists():
+        for line in HISTORY.read_text(encoding="utf-8").splitlines():
+            try:
+                r = json.loads(line)
+                if r.get("date") != today["date"]:
+                    prev = r
+            except Exception:
+                pass
+    if not prev:
+        return {}
+    d = {}
+    for k in ("docs", "digestion_rate", "links", "isolated", "pending"):
+        if k in prev and k in today:
+            d[k] = round(today[k] - prev[k], 1)
+    return d
+
+
+def save_history(row):
+    HISTORY.parent.mkdir(parents=True, exist_ok=True)
+    lines = []
+    if HISTORY.exists():
+        lines = [l for l in HISTORY.read_text(encoding="utf-8").splitlines()
+                 if l.strip() and json.loads(l).get("date") != row["date"]]
+    lines.append(json.dumps(row, ensure_ascii=False))
+    HISTORY.write_text("\n".join(lines[-120:]) + "\n", encoding="utf-8")
 
 
 # ---------------------------------------------------------------- 파이프라인
@@ -240,8 +332,23 @@ def collect():
                        "msg": f"{STALE_WEEKS}주 이상 미갱신 {len(stale)}건 (전체의 "
                               f"{round(len(stale)/n*100)}%)"})
 
+    scale = vault_scale()
+    today_row = {
+        "date": datetime.now().strftime("%Y-%m-%d"),
+        "docs": n, "digestion_rate": dig["rate"], "links": total_links,
+        "isolated": len(isolated), "pending": dig["pending"],
+        "broken": len(broken), "typed_ratio": scale["typed_ratio"],
+    }
+    delta = trend(today_row)
+    save_history(today_row)
+
     return {
         "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "scale": scale,
+        "recent": recent_changes(),
+        "delta": delta,
+        "retired": RETIRED_DASHBOARDS,
+        "dashboard_map": DASHBOARD_MAP,
         "growth": {
             "docs": n, "stage": stage, "stage_desc": stage_desc,
             "by_folder": dict(Counter(d["folder"] for d in docs.values()).most_common()),
@@ -272,9 +379,22 @@ def collect():
 # ---------------------------------------------------------------- 렌더
 
 def render_html(d):
-    def card(label, value, sub="", tone="ok"):
+    dl = d.get("delta", {})
+
+    def arrow(key, invert=False):
+        """전일 대비 화살표. invert=True 면 감소가 좋은 지표(미편입, 고립 등)."""
+        v = dl.get(key)
+        if v is None or v == 0:
+            return ""
+        good = (v < 0) if invert else (v > 0)
+        cls = "up" if good else "down"
+        sign = "+" if v > 0 else ""
+        return f'<span class="delta {cls}">{sign}{v}</span>'
+
+    def card(label, value, sub="", tone="ok", dkey=None, invert=False):
+        a = arrow(dkey, invert) if dkey else ""
         return (f'<div class="card {tone}"><div class="lbl">{label}</div>'
-                f'<div class="val">{value}</div><div class="sub">{sub}</div></div>')
+                f'<div class="val">{value}{a}</div><div class="sub">{sub}</div></div>')
 
     dig, met, den, fre = d["digestion"], d["metabolism"], d["density"], d["freshness"]
     dig_tone = "ok" if dig["pending"] == 0 else ("warn" if dig["pending"] < 5 else "crit")
@@ -340,6 +460,10 @@ margin:3px 4px 3px 0;font-size:12px;color:var(--dim)}}
 .chip b{{color:var(--fg)}}
 .quote{{color:var(--dim);font-size:12px;font-style:italic;margin-top:32px;
 padding-top:16px;border-top:1px solid var(--line)}}
+.delta{{font-size:12px;margin-left:7px;font-weight:500;vertical-align:middle}}
+.delta.up{{color:var(--ok)}} .delta.down{{color:var(--crit)}}
+.dim{{color:var(--dim)}}
+p.dim{{font-size:12px;line-height:1.5}}
 </style></head><body><div class="wrap">
 
 <h1>🧠 CSP-Brain 커맨드센터</h1>
@@ -347,14 +471,18 @@ padding-top:16px;border-top:1px solid var(--line)}}
 HEAD <code>{d['git']['head']}</code> · 미커밋 {d['git']['uncommitted']}건</div>
 
 <div class="grid">
-{card("위키 문서", d['growth']['docs'], f"{d['growth']['stage']} 단계 — {d['growth']['stage_desc']}")}
-{card("소화율", f"{dig['rate']}%", f"미편입 {dig['pending']}건 · 최고 {dig['oldest_days']}일", dig_tone)}
+{card("위키 문서", d['growth']['docs'], f"{d['growth']['stage']} 단계 — {d['growth']['stage_desc']}", dkey="docs")}
+{card("소화율", f"{dig['rate']}%", f"미편입 {dig['pending']}건 · 최고 {dig['oldest_days']}일", dig_tone, "digestion_rate")}
 {card("7일 대사", met['changed_7d'], f"신규 {met['new_7d']} · 일평균 {met['daily_avg']}", met_tone)}
-{card("연결 밀도", den['avg_per_doc'], f"총 {den['total_links']}개 링크")}
+{card("연결 밀도", den['avg_per_doc'], f"총 {den['total_links']}개 링크", "ok", "links")}
 {card("고립 문서", den['isolated'], f"백링크 {MIN_BACKLINKS}개 미만",
-      "ok" if den['isolated']==0 else "warn")}
+      "ok" if den['isolated']==0 else "warn", "isolated", invert=True)}
 {card("노후 문서", f"{fre['ratio']}%", f"{STALE_WEEKS}주 이상 미갱신 {fre['stale']}건",
       "ok" if fre['ratio']<50 else "warn")}
+{card("Vault 전체", f"{d['scale']['total_md']:,}", f"type 분류 {d['scale']['typed_ratio']}%",
+      "ok" if d['scale']['typed_ratio']>95 else "warn")}
+{card("깨진 링크", den['broken'], "해결되지 않는 링크 종수",
+      "ok" if den['broken']==0 else "warn")}
 </div>
 
 <h2>경보</h2>
@@ -369,8 +497,23 @@ HEAD <code>{d['git']['head']}</code> · 미커밋 {d['git']['uncommitted']}건</
 <h2>미편입 대기열</h2>
 <div class="panel"><ul>{pending}</ul></div>
 
+<h2>최근 지식 변동</h2>
+<div class="panel"><ul>{"".join(f'<li><span class="dim">{r["date"]}</span> <code>{r["file"]}</code></li>' for r in d.get("recent", [])) or "<li>최근 7일 위키 변경 없음</li>"}</ul></div>
+
 <h2>폴더 분포</h2>
 <div class="panel">{folders}</div>
+
+<h2>대시보드 지도</h2>
+<div class="panel"><p class="dim" style="margin:0 0 10px">
+난립의 진짜 비용은 개수가 아니라 <b>무엇이 무엇인지 모르는 것</b>이다.
+어느 화면이 현재를 보여주는지 알면 멈춘 화면을 현재로 착각하지 않는다.</p>
+<table>
+<tr><th>화면</th><th>역할</th><th>생성 주체</th><th></th></tr>
+{"".join(f'<tr class="{"" if st=="live" else "paused"}"><td><code>{n}</code></td>'
+         f'<td>{r}</td><td class="dim">{s}</td>'
+         f'<td>{"●" if st=="live" else "은퇴"}</td></tr>'
+         for n, r, s, st in d.get("dashboard_map", []))}
+</table></div>
 
 <div class="quote">
 "지능은 저장의 양이 아니라, 연결의 밀도와 변화의 속도로 증명됩니다."<br>
