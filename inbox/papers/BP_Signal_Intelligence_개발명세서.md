@@ -29,21 +29,21 @@ BP(Business Partner) 아카이브에 축적된 신호 데이터는 현재 **모�
 
 ### 0.3 현재 데이터 진단 (49건 기준)
 
-| 항목 | 상태 | 문제 |
-| :-: | :-: | :-: |
-| status | 49/49 전부 접수 | Actionable Intelligence 층 미작동 |
-| opinions (BP 해석) | 17건 공란 + 다수 무의미값(".", "test222") | verifier 역할 미작동 |
-| tags | 7/49만 채움, 통제어휘 없음 | EX 클러스터 태깅 미작동 |
-| author | 동일 BP가 4종 표기로 분산 | 마스터 정규화 부재 |
-| target | 자유텍스트 27종 | **개인 레벨 그래프 연결 불가** |
-| 신뢰도 등급(A–D) | 스키마에 부재 | 설계–데이터 갭 |
-| 심리 프레임워크 메타 | 스키마에 부재 | 설계–데이터 갭 |
-| 테스트 더미 | 운영 데이터에 2건 혼입 | 환경 분리 부재 |
+|         항목         |                   상태                    |               문제                |
+| :------------------: | :---------------------------------------: | :-------------------------------: |
+|        status        |              49/49 전부 접수              | Actionable Intelligence 층 미작동 |
+|  opinions (BP 해석)  | 17건 공란 + 다수 무의미값(".", "test222") |       verifier 역할 미작동        |
+|         tags         |        7/49만 채움, 통제어휘 없음         |      EX 클러스터 태깅 미작동      |
+|        author        |         동일 BP가 4종 표기로 분산         |        마스터 정규화 부재         |
+|        target        |              자유텍스트 27종              |  **개인 레벨 그래프 연결 불가**   |
+|   신뢰도 등급(A–D)   |               스키마에 부재               |          설계–데이터 갭           |
+| 심리 프레임워크 메타 |               스키마에 부재               |          설계–데이터 갭           |
+|     테스트 더미      |          운영 데이터에 2건 혼입           |          환경 분리 부재           |
 
 ### 0.4 범위
 
-  - **포함**: Supabase 스키마 마이그레이션, 상태 기계 정의, 5+1 서브에이전트 명세, 오케스트레이션, observability, 49건 정제 절차.
-  - **제외**: Pulse Check·리더십 평가 등 Signal Generation 상류 소스(별도 문서), 프론트엔드 대시보드 UI(후속).
+- **포함**: Supabase 스키마 마이그레이션, 상태 기계 정의, 5+1 서브에이전트 명세, 오케스트레이션, observability, 49건 정제 절차.
+- **제외**: Pulse Check·리더십 평가 등 Signal Generation 상류 소스(별도 문서), 프론트엔드 대시보드 UI(후속).
 
 ## 1\. 시스템 아키텍처
 
@@ -188,14 +188,14 @@ create index on status_transitions (signal_id, at);
 
 ### 3.1 상태 정의 및 담당
 
-| 상태 | 의미 | 담당 | 산출 |
-| :-: | :-: | :-: | :-: |
-| received | raw 기록 입력 | **Ingest 에이전트** | 정규화·더미 제거 |
-| verifying | 신뢰도 평가 | **Verifier 에이전트** | A–D 등급, verified_by |
-| rejected | 신뢰도 D 환류 | Verifier → 접수 | 반려 사유 |
-| triaged | 클러스터·티어 부여 | **Triage 에이전트** | EX 클러스터, watch/alert/critical |
-| acting | 개입 할당·추적 | **사람(HR/리더십)** | 액션 항목 |
-| closed | 그래프 귀속 | **Graph 에이전트** | 노드·간선, 증폭 스캔 |
+|   상태    |        의미        |         담당          |               산출                |
+| :-------: | :----------------: | :-------------------: | :-------------------------------: |
+| received  |   raw 기록 입력    |  **Ingest 에이전트**  |         정규화·더미 제거          |
+| verifying |    신뢰도 평가     | **Verifier 에이전트** |       A–D 등급, verified_by       |
+| rejected  |   신뢰도 D 환류    |    Verifier → 접수    |             반려 사유             |
+|  triaged  | 클러스터·티어 부여 |  **Triage 에이전트**  | EX 클러스터, watch/alert/critical |
+|  acting   |   개입 할당·추적   |  **사람(HR/리더십)**  |             액션 항목             |
+|  closed   |    그래프 귀속     |  **Graph 에이전트**   |       노드·간선, 증폭 스캔        |
 
 ### 3.2 전이 규칙 (가드 조건)
 
@@ -220,52 +220,52 @@ acting    ──[사람이 액션 종료 표기]─────▶ closed
 
 ### 4.1 Ingest 에이전트
 
-  - **트리거**: status = received
-  - **책임**: author/target을 persons·orgs 마스터에 매칭(없으면 신규 노드 생성 후보 큐로), is_test 판별, 스키마 정규화.
-  - **도구**: Supabase MCP(read/write), 인물 alias 매칭 로직.
-  - **출력 전이**: received → verifying
-  - **판단 골자**:
+- **트리거**: status = received
+- **책임**: author/target을 persons·orgs 마스터에 매칭(없으면 신규 노드 생성 후보 큐로), is_test 판별, 스키마 정규화.
+- **도구**: Supabase MCP(read/write), 인물 alias 매칭 로직.
+- **출력 전이**: received → verifying
+- **판단 골자**:
 
 입력 레코드의 author·target 문자열에서 인물을 식별하라. persons.aliases와 대조해 동일 인물이면 person_id를 연결하고, 신규로 보이면 후보로 표시하되 자동 생성하지 마라(사람 승인 큐). 'test'·'테스트'·무의미 본문은 is_test=true로 격리하라.
 
 ### 4.2 Verifier 에이전트 (Relation Verification 핵심)
 
-  - **트리거**: status = verifying
-  - **책임**: opinions·source_desc 충실도와 교차검증 가능성을 근거로 A–D 신뢰도 부여.
-  - **출력 전이**: A/B/C → triaged, D → rejected
-  - **판단 골자**:
+- **트리거**: status = verifying
+- **책임**: opinions·source_desc 충실도와 교차검증 가능성을 근거로 A–D 신뢰도 부여.
+- **출력 전이**: A/B/C → triaged, D → rejected
+- **판단 골자**:
 
 신호의 신뢰도를 평가하라. A=교차검증된 1차 관찰, B=단일 BP의 근거 있는 해석, C=정황·전언, D=해석·근거 없는 단발 보고. opinions가 공란이거나 무의미하면 D를 부여하고 반려 사유를 명시해 접수로 환류하라. **신뢰도 근거를 반드시 status_transitions.reason에 기록하라.**
 
 ### 4.3 Triage 에이전트
 
-  - **트리거**: status = triaged_pending(verifying 통과 직후)
-  - **책임**: summary·opinions 본문을 EX 8-클러스터(3-레이어)로 코딩하고 심리 프레임워크(SDT/LMX/POS/JD-R) 메타를 부착, watch/alert/critical 티어 결정.
-  - **출력 전이**: triaged → acting
-  - **판단 골자**:
+- **트리거**: status = triaged_pending(verifying 통과 직후)
+- **책임**: summary·opinions 본문을 EX 8-클러스터(3-레이어)로 코딩하고 심리 프레임워크(SDT/LMX/POS/JD-R) 메타를 부착, watch/alert/critical 티어 결정.
+- **출력 전이**: triaged → acting
+- **판단 골자**:
 
 신호 본문을 Energy&Survival / Direction&Meaning / Relationship&Trust 3-레이어 중 해당 클러스터로 코딩하라. '이탈'이라는 표면 현상이 생존(처우·과중)인지 의미(업무 침식)인지 관계(리더십·신뢰)인지 분리하라. JD-R·SDT 관점 메타를 부착하고, 신뢰도×조직 누적도를 반영해 티어를 정하라.
 
 ### 4.4 (사람) 조치 — 자동화하지 않는 칸
 
-  - **트리거**: status = acting
-  - **책임**: HR/리더십이 실제 개입을 할당·추적. 에이전트는 알림·맥락 브리핑만 제공하고 **판단은 하지 않는다.**
-  - **출력 전이**: acting → closed (사람이 종료 표기)
+- **트리거**: status = acting
+- **책임**: HR/리더십이 실제 개입을 할당·추적. 에이전트는 알림·맥락 브리핑만 제공하고 **판단은 하지 않는다.**
+- **출력 전이**: acting → closed (사람이 종료 표기)
 
 ### 4.5 Graph 에이전트
 
-  - **트리거**: status = closed
-  - **책임**: 종결 신호를 People Context Graph에 노드·간선으로 박고, 동일 person_id·org_id의 누적 신호를 스캔해 **약신호 증폭** 경보 생성.
-  - **도구**: Supabase MCP, signal_edges write, pgvector 유사 신호 탐색.
-  - **판단 골자**:
+- **트리거**: status = closed
+- **책임**: 종결 신호를 People Context Graph에 노드·간선으로 박고, 동일 person_id·org_id의 누적 신호를 스캔해 **약신호 증폭** 경보 생성.
+- **도구**: Supabase MCP, signal_edges write, pgvector 유사 신호 탐색.
+- **판단 골자**:
 
 종결 신호를 그래프에 연결하라(about/belongs_to/tagged). 동일 인물에 critical·alert가 시간축으로 N건(기본 N=3) 누적되면 증폭 경보를 생성하라 — Ansoff Weak Signal: 개별로는 일회성 면담이나 누적되면 강신호다. pgvector로 의미 유사 신호를 related_to 간선으로 연결하라.
 
 ### 4.6 Digest 에이전트
 
-  - **트리거**: cron(주기적, 예: 일 1회) 또는 critical 증폭 경보 발생 시
-  - **책임**: 그래프 상태를 경영진 언어로 요약, hermes-telegram 파이프라인으로 전달.
-  - **출력**: 조직×레이어 히트맵 요약, 신규 증폭 경보, time-to-action 추이.
+- **트리거**: cron(주기적, 예: 일 1회) 또는 critical 증폭 경보 발생 시
+- **책임**: 그래프 상태를 경영진 언어로 요약, hermes-telegram 파이프라인으로 전달.
+- **출력**: 조직×레이어 히트맵 요약, 신규 증폭 경보, time-to-action 추이.
 
 ## 5\. 오케스트레이션
 
@@ -284,8 +284,8 @@ lane:digest    → cron daily               → run digest_agent
 
 ### 5.2 트리거 메커니즘 (택1 또는 병행)
 
-  - **Webhook**: Supabase Database Webhook → status 변경 시 Claude Code 실행 엔드포인트 호출(즉시성).
-  - **Polling**: tmux 세션에서 N초 주기 status 스캔(단순·견고). 초기에는 polling 권장, 안정화 후 webhook 전환.
+- **Webhook**: Supabase Database Webhook → status 변경 시 Claude Code 실행 엔드포인트 호출(즉시성).
+- **Polling**: tmux 세션에서 N초 주기 status 스캔(단순·견고). 초기에는 polling 권장, 안정화 후 webhook 전환.
 
 ## 6\. Observability
 
@@ -310,9 +310,9 @@ lane:digest    → cron daily               → run digest_agent
 
 ### 6.2 Swim-lane 대시보드
 
-  - 가로축: 시간. 세로 레인: 에이전트(ingest/verifier/triage/graph/digest).
-  - 각 신호가 레인을 가로질러 흐르는 모습 → 어디서 정체되는지, 어떤 판단이 내려졌는지 한눈에.
-  - JSONL 스트림을 소스로 하는 정적/준실시간 뷰.
+- 가로축: 시간. 세로 레인: 에이전트(ingest/verifier/triage/graph/digest).
+- 각 신호가 레인을 가로질러 흐르는 모습 → 어디서 정체되는지, 어떤 판단이 내려졌는지 한눈에.
+- JSONL 스트림을 소스로 하는 정적/준실시간 뷰.
 
 ## 7\. 데이터 마이그레이션 절차 (기존 49건)
 
@@ -333,14 +333,14 @@ Phase F · 그래프 적재: Graph 에이전트로 노드·간선 생성 + 증�
 
 ## 8\. 운영 KPI
 
-| 지표 | 정의 | 출처 |
-| :-: | :-: | :-: |
-| **time-to-action** | received → acting 평균 경과 | status_transitions |
-| 반려율 | verifying → rejected 비율 | status_transitions |
-| 신뢰도 분포 | A/B/C/D 구성 | bp_reports.reliability |
-| 증폭 경보 수 | 인물 누적 강신호 건 | graph 스캔 |
-| 클러스터 히트맵 | 조직×레이어 신호 밀도 | signal_edges 집계 |
-| 종결율 | closed / 전체 | bp_reports.status |
+|        지표        |            정의             |          출처          |
+| :----------------: | :-------------------------: | :--------------------: |
+| **time-to-action** | received → acting 평균 경과 |   status_transitions   |
+|       반려율       |  verifying → rejected 비율  |   status_transitions   |
+|    신뢰도 분포     |        A/B/C/D 구성         | bp_reports.reliability |
+|    증폭 경보 수    |     인물 누적 강신호 건     |       graph 스캔       |
+|  클러스터 히트맵   |    조직×레이어 신호 밀도    |   signal_edges 집계    |
+|       종결율       |        closed / 전체        |   bp_reports.status    |
 
 ## 9\. 구현 로드맵
 
@@ -382,7 +382,7 @@ bp-signal-intelligence/
 
 ### 부록 · 설계 결정 요약
 
-  - **③ 운영 설계 채택**: status를 work queue로 보는 관점이 운영 설계와 에이전트 설계를 하나로 통합.
-  - **사람 칸 1개 유지**: 조치 단계는 의도적으로 자동화하지 않음(감시 아닌 돌봄).
-  - **People Context Graph의 관문**: target → person_id 정규화가 개인 레벨 층 구조적 갭을 메우는 단일 결정점.
-  - **감사 가능성**: 모든 신뢰도·클러스터 판단의 근거를 JSONL·transitions.reason에 기록.
+- **③ 운영 설계 채택**: status를 work queue로 보는 관점이 운영 설계와 에이전트 설계를 하나로 통합.
+- **사람 칸 1개 유지**: 조치 단계는 의도적으로 자동화하지 않음(감시 아닌 돌봄).
+- **People Context Graph의 관문**: target → person_id 정규화가 개인 레벨 층 구조적 갭을 메우는 단일 결정점.
+- **감사 가능성**: 모든 신뢰도·클러스터 판단의 근거를 JSONL·transitions.reason에 기록.

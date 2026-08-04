@@ -6,7 +6,7 @@ processed_date: 2026-07-02
 processed_note: "hermes-agent 도커 재시작 메모 — 운영 스크랩(보류)"
 ---
 
-# docker_[[inbox/raw/2605.md|2605]]02
+# docker\_[[inbox/raw/2605.md|2605]]02
 
 (base) dkmac@MacBook-Air-5 dev % cd /Users/dkmac/.hermes/hermes-ag[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]t
 

@@ -1,6 +1,9 @@
 ---
 type: Note
 status: Active
+processed: true
+processed_date: 2026-08-04
+processed_note: "wiki/signals/2026-07-26-self-evolving-agents-evolution-gate.md 에 병합(신뢰 사다리 3단계, Human Gate 4개)"
 ---
 
 # HR Tech 브리핑 — 2026 년 7 월 29 일
@@ -24,68 +27,72 @@ type: Concept
 
 ### 🔹 Signal 1: Agentic AI 의 운영 정점 — "52% 가 이미 자율 에이전트를 사용한다"
 
-**Statistic/Signal**: 
+**Statistic/Signal**:
+
 - Deloitte: "2025 년 조직의 25% 가 Generative AI 파일럿을 시작했고, 2027 년까지 50% 로 성장할 것"
 - iMocha: "AI 를 사용하는 조직은 채용 기간을 **최대 75% 단축**했다"
 - Talent MSH: "87% 의 회사가 채용에 AI 를 사용하지만, **단 20% 만 end-to-end orchestration**을 갖췄다"
 
 **Vault Connection**: [[agentic-recruitment-proxy]] 의 "신뢰 사다리" (1 단계 Blind Faith → 2 단계 Distrust → 3 단계 Collaboration)
 
-**HR Execution Implication**: 
+**HR Execution Implication**:
 Agentic AI 는 더 이상 "미래 기술"이 아니다. 52% 의 조직이 이미 **자율 에이전트**를 운영 중이다. 그러나 80% 는 여전히 **부분 자동화**에 머물러 있다. 이는 **"AI 가 모든 것을 할 수 있다"는 과장**과 **"AI 는 아무것도 할 수 없다"는 과소평가** 사이의 **인지부조화**를 드러낸다.
 
-**Human Gate #1**: 
+**Human Gate #1**:
 **에이전트 진화 감사 (Agent Evolution Audit)** — 분기별로 AI 에이전트의 의사결정 이력을 인간이 감사한다. "AI 가 이 후보자를 탈락시킨 이유"를 **무작위 10 개 샘플** 추출하여 인간 HR 이 검증한다. (AI 전자동 금지)
 
 ---
 
 ### 🔹 Signal 2: 스킬 기반 채용의 역설 — "81% 가 스킬을 우선시하지만, 여전히 명문대를 본다"
 
-**Statistic/Signal**: 
+**Statistic/Signal**:
+
 - Talent MSH: "2024 년 고용주의 81% 가 스킬 기반 채용을 채택했다"
 - 그러나 "여전히 37% 만이 학력을 신뢰할 만한 신호로 본다"
 - iMocha: "Skills-Based Hiring 은 다양한 인재 풀을 확보하지만, **여전히 대형주 (명문대) 편향**이 존재한다"
 
 **Vault Connection**: [[fde-talent-model]] 의 "정체성 확장" (Identity Extension) vs "정체성 대체" (Identity Replacement)
 
-**HR Execution Implication**: 
+**HR Execution Implication**:
 조직은 표면적으로 "스킬 기반"을 외치지만, 내면적으로는 **학력이라는 휴리스틱**에 의존한다. 이는 **집단적 인지부조화**다. 스킬 기반 채용이 진정으로 작동하려면, "당신은 새로운 사람이 되어야 한다"는 **정체성 대체** 프레임이 아닌, "당신은 기존 능력을 확장할 수 있다"는 **정체성 확장** 프레임을 사용해야 한다.
 
-**Human Gate #2**: 
+**Human Gate #2**:
 **채용 알고리즘 집중도 한도 심사** — 특정 대학/기업 출신이 최종 합격자의 30% 를 초과할 경우, **인간 감사 트리거**가 발동된다. (AI 자동화 금지)
 
 ---
 
 ### 🔹 Signal 3: 인간-AI 협력의 심리학 — "71% 는 AI 의 최종 결정에 반대한다"
 
-**Statistic/Signal**: 
+**Statistic/Signal**:
+
 - Talent MSH: "미국 성인의 71% 가 AI 가 최종 채용 결정을 내리는 것에 반대한다"
 - iMocha: "NetGain Technologies: '위협의 맥락을 설명할 때 50% 가 AI 보다 인간을 더 신뢰한다'"
 - One-Way Interview: "후보자는 AI 사용 시 **투명성**과 **인간 대체 경로 (human fallback)** 를 요구한다"
 
 **Vault Connection**: [[bp-signal-intelligence]] 의 "신뢰도 (Reliability) vs 타당도 (Validity)" 경고 — 100% 신뢰도 (일관된 출력) 가 0% 타당도 (올바른 출력) 를 가질 수 있다
 
-**HR Execution Implication**: 
+**HR Execution Implication**:
 후보자는 AI 가 **편향될 수 있다**는 것을 안다. 그들은 "AI 가 나를 평가했다"는 사실을 **수용**하지만, "AI 가 최종 결정한다"는 사실은 **거부**한다. 이는 **신뢰의 사다리 3 단계 (Collaboration)** 로의 진화를 요구한다: "AI 는 가설을 제시하고, 인간이 검증한다."
 
-**Human Gate #3**: 
+**Human Gate #3**:
 **후보자 신뢰도 점수 (Trust Score) 도입** — AI 평가 리포트에 "이 평가의 신뢰 수준 (High/Medium/Low)"을 명시한다. 신뢰 수준이 Medium 이하일 경우, **인간 재심사 필수**.
 
 ---
 
 ### 🔹 Signal 4: 자기 진화 에이전트의 부상 — "AI 가 자신의 코드를 다시 쓴다"
 
-**Statistic/Signal**: 
+**Statistic/Signal**:
+
 - arXiv:2507.21046 (TMLR 2026): "Self-Evolving Agents Survey" — AI 에이전트가 **자신의 소스 코드를 다시 작성**하여 약점을 개선한다
 - Requesty (2026-05): "MOSS paper — 에이전트가 자신의 논리 약점을 식별하고, **자동 테스트로 검증**한 후 개선된 버전을 배포한다"
 - HyperAgents (arXiv:2603.19461): "8 개 기관 공동 연구 — 자기 개선 에이전트의 첫 주 4,262 likes"
 
 **Vault Connection**: [[hr-conceptual-atoms]] 의 "진화 게이트 (Evolution Gate)" — AI 모델 수정 시 인간 승인 필수
 
-**HR Execution Implication**: 
+**HR Execution Implication**:
 자기 진화 AI 는 **"인간이 재설계하지 않아도 스스로 개선된다"** 는 경제적 가치를 지닌다. 그러나 이는 **안전성 리스크**를 동반한다: AI 가 스스로를 **악화시킬 수 있다**. Ratchet paper 는 "비분산 분석 (non-divergence analysis)"을 통해 **가드레일**을 제안한다.
 
-**Human Gate #4**: 
+**Human Gate #4**:
 **3 단계 진화 게이트** — (1) 수정 제안 → 인간 심사, (2) A/B 테스트 → 인간 검증, (3) 분기별 감사 → 진화 방향성 확인. (AI 전자동 금지)
 
 ---
