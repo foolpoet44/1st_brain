@@ -14,9 +14,9 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 # 설정
-VAULT_PATH = Path("/Users/dkmac/Desktop/@26/dev")
-DATA_JSON_PATH = Path("/Users/dkmac/Desktop/@26/dev/data.json")
-INDEX_HTML_PATH = Path("/Users/dkmac/Desktop/@26/dev/index.html")
+VAULT_PATH = Path("/Users/dkmac/csp-brain")
+DATA_JSON_PATH = Path("/Users/dkmac/csp-brain/data.json")
+INDEX_HTML_PATH = Path("/Users/dkmac/csp-brain/index.html")
 EVAL_THRESHOLD = 60  # 임계치 (이 미만일 때 알림)
 TELEGRAM_CHAT_ID = "8432145059"  # 사용자님의 Telegram Home 채널 ID
 

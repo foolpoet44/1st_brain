@@ -9,7 +9,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-VAULT_PATH = Path("/Users/dkmac/Desktop/@26/dev")
+VAULT_PATH = Path("/Users/dkmac/csp-brain")
 
 # 핵심 문서 패턴 (우선순위 순)
 CORE_PATTERNS = [

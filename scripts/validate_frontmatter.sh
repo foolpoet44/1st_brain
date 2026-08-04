@@ -3,7 +3,7 @@
 # Validate all Markdown files have proper YAML frontmatter
 #
 
-VAULT_DIR="/Users/dkmac/Desktop/@26/dev"
+VAULT_DIR="/Users/dkmac/csp-brain"
 INVALID_FILES=()
 
 echo "🔍 Scanning for Markdown files without frontmatter..."

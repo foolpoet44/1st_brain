@@ -2,7 +2,7 @@
 # csp-brain Type 문서 자동 분류 스크립트
 # 사용법: ./auto-classify-types.sh [limit]
 
-VAULT_PATH="/Users/dkmac/Desktop/@26/dev"
+VAULT_PATH="/Users/dkmac/csp-brain"
 LIMIT=${1:-100}
 
 echo "🔍 csp-brain Vault 스캔 시작..."

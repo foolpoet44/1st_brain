@@ -4,7 +4,7 @@ from hermes_tools import read_file, write_file, session_search, send_message
 
 def evening_reflect():
     today = datetime.now().strftime("%Y-%m-%d")
-    vault_path = "/Users/dkmac/Desktop/@26/dev"
+    vault_path = "/Users/dkmac/csp-brain"
     changelog_path = f"{vault_path}/_ops/change-log.md"
     output_dir = f"{vault_path}/outputs/daily-reflect"
     

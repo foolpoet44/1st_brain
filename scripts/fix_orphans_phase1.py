@@ -12,7 +12,7 @@ from pathlib import Path
 from datetime import datetime
 
 # Vault configuration
-VAULT_ROOT = Path("/Users/dkmac/Desktop/@26/dev")
+VAULT_ROOT = Path("/Users/dkmac/csp-brain")
 DRY_RUN = False  # Set True to test without writing
 
 # Directory to Type mapping

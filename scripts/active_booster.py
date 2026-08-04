@@ -9,7 +9,7 @@ import re
 from pathlib import Path
 from datetime import datetime, timedelta
 
-VAULT_ROOT = Path("/Users/dkmac/Desktop/@26/dev")
+VAULT_ROOT = Path("/Users/dkmac/csp-brain")
 SKIP_DIRS = ['.git', '.obsidian', '.claude', '.agents', 'node_modules', '__pycache__', 'attachments', 'raw/legacy-concepts', 'open-design']
 
 ACTIVE_FOLDERS = ['csp-brain', 'outputs/daily-reflect', 'outputs/daily-briefing', 'outputs/weekly', 'projects', 'wiki/signals', 'inbox/articles', 'inbox/papers']

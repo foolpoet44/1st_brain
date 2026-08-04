@@ -5,7 +5,7 @@ def create_harness(project_name):
     """
     CSP Brain 표준 하네스 스캐폴딩 스크립트
     """
-    base_path = f"/Users/dkmac/Desktop/@26/dev/projects/{project_name}"
+    base_path = f"/Users/dkmac/csp-brain/projects/{project_name}"
     
     if os.path.exists(base_path):
         print(f"⚠️ 이미 존재하는 프로젝트입니다: {base_path}")

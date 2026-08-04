@@ -10,12 +10,12 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/dkmac/Desktop/@26/dev/scripts/eval_dashboard_launcher.sh</string>
+        <string>/Users/dkmac/csp-brain/scripts/eval_dashboard_launcher.sh</string>
     </array>
     
     <!-- 작업 디렉토리 -->
     <key>WorkingDirectory</key>
-    <string>/Users/dkmac/Desktop/@26/dev</string>
+    <string>/Users/dkmac/csp-brain</string>
     
     <!-- 실행 간격: 4 시간 (14400 초) -->
     <key>StartInterval</key>
@@ -23,11 +23,11 @@
     
     <!-- 표준 출력 로그 -->
     <key>StandardOutPath</key>
-    <string>/Users/dkmac/Desktop/@26/dev/_ops/logs/eval-dashboard.log</string>
+    <string>/Users/dkmac/csp-brain/_ops/logs/eval-dashboard.log</string>
     
     <!-- 표준 에러 로그 -->
     <key>StandardErrorPath</key>
-    <string>/Users/dkmac/Desktop/@26/dev/_ops/logs/eval-dashboard.err</string>
+    <string>/Users/dkmac/csp-brain/_ops/logs/eval-dashboard.err</string>
     
     <!-- 환경 변수 유지 -->
     <key>KeepAlive</key>

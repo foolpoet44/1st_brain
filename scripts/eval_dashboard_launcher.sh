@@ -11,7 +11,7 @@
 set -e
 
 # 설정
-VAULT_DIR="/Users/dkmac/Desktop/@26/dev"
+VAULT_DIR="/Users/dkmac/csp-brain"
 SCRIPTS_DIR="$VAULT_DIR/scripts"
 LOG_DIR="$VAULT_DIR/_ops/logs"
 LOG_FILE="$LOG_DIR/eval-dashboard.log"

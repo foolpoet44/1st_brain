@@ -8,8 +8,8 @@ import re
 from urllib.parse import urlparse, parse_qs
 
 PORT = 8080
-ROOT_DIR = "/Users/dkmac/Desktop/@26/dev"
-WEB_DIR = "/Users/dkmac/Desktop/@26/dev/_ops/web"
+ROOT_DIR = "/Users/dkmac/csp-brain"
+WEB_DIR = "/Users/dkmac/csp-brain/_ops/web"
 
 class DashboardHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):

@@ -7,7 +7,7 @@ import os
 import re
 from pathlib import Path
 
-VAULT_ROOT = Path("/Users/dkmac/Desktop/@26/dev")
+VAULT_ROOT = Path("/Users/dkmac/csp-brain")
 SKIP_DIRS = ['.git', '.obsidian', '.claude', '.agents', 'node_modules', '__pycache__']
 
 def load_all_titles():

@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 # csp-brain Vault 경로
-VAULT_PATH = Path("/Users/dkmac/Desktop/@26/dev")
+VAULT_PATH = Path("/Users/dkmac/csp-brain")
 OUTPUT_DIR = VAULT_PATH
 DATA_JSON_PATH = OUTPUT_DIR / "data.json"
 INDEX_HTML_PATH = OUTPUT_DIR / "index.html"

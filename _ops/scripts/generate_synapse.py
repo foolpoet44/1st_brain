@@ -5,7 +5,7 @@ import re
 from datetime import datetime
 
 # Root path configuration
-ROOT = "/Users/dkmac/Desktop/@26/dev"
+ROOT = "/Users/dkmac/csp-brain"
 
 def read_md_content(rel_path):
     full_path = os.path.join(ROOT, rel_path)

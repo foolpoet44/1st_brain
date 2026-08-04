@@ -23,7 +23,7 @@ def verify_oka_summary(file_path):
     return errors
 
 if __name__ == "__main__":
-    path = "/Users/dkmac/Desktop/@26/dev/outputs/analyses/PSY_ASSESS_SUMMARY.md"
+    path = "/Users/dkmac/csp-brain/outputs/analyses/PSY_ASSESS_SUMMARY.md"
     results = verify_oka_summary(path)
     if not results:
         print("PASS: OKA Summary follows all basic protocols.")

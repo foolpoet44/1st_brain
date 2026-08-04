@@ -10,7 +10,7 @@ import re
 from datetime import datetime, timedelta
 from pathlib import Path
 
-VAULT_ROOT = Path("/Users/dkmac/Desktop/@26/dev")
+VAULT_ROOT = Path("/Users/dkmac/csp-brain")
 OUTPUT_JSON = VAULT_ROOT / "data.json"
 OUTPUT_HTML = VAULT_ROOT / "index.html"
 

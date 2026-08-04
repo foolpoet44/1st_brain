@@ -8,17 +8,17 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/dkmac/Desktop/@26/dev/_ops/scripts/sync_brain_auto.sh</string>
+        <string>/Users/dkmac/csp-brain/_ops/scripts/sync_brain_auto.sh</string>
     </array>
     
     <key>WorkingDirectory</key>
-    <string>/Users/dkmac/Desktop/@26/dev</string>
+    <string>/Users/dkmac/csp-brain</string>
     
     <key>StandardOutPath</key>
-    <string>/Users/dkmac/Desktop/@26/dev/_ops/logs/sync-auto.log</string>
+    <string>/Users/dkmac/csp-brain/_ops/logs/sync-auto.log</string>
     
     <key>StandardErrorPath</key>
-    <string>/Users/dkmac/Desktop/@26/dev/_ops/logs/sync-auto.err</string>
+    <string>/Users/dkmac/csp-brain/_ops/logs/sync-auto.err</string>
     
     <key>StartInterval</key>
     <integer>14400</integer>

@@ -9,7 +9,7 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-VAULT_PATH = Path("/Users/dkmac/Desktop/@26/dev")
+VAULT_PATH = Path("/Users/dkmac/csp-brain")
 WIKI_PATH = VAULT_PATH / "wiki"
 OUTPUT_HTML = VAULT_PATH / "index.html"
 OUTPUT_JSON = VAULT_PATH / "data.json"
