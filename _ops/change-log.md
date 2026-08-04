@@ -1,5 +1,61 @@
 ---
 
+## [2026-08-04] I/O 심리학 브리핑
+
+### 무엇이 바뀌었나
+- **I/O 심리학 브리핑 작성 완료** (`outputs/briefings/BRIEFING_IO-PSYCH_2026-08-04.md`)
+- **4 개 핵심 논문 포착**: 
+  1. **의미의 자동화 역설** (arXiv:2603.14963) — AI 노출 작업은 창의성·자율성·행복감 높음, 개발자 - 근로자 정렬 불일치 (16 개 섹터)
+  2. **Bullshit Task 위임** (arXiv:2606.12430v2) — Bullshitness 1 SD 증가 → AI 위임 선호도 0.39 포인트 증가, 인간 감독 필요성 0.216 포인트 감소
+  3. **의사결정 피로는 조직 설계 실패** (Frontiers in Cognition, 2026) — 10 가지 원인 (조직 6, 개인 3, 외부 1), 수술 확률 10.5% 감소
+  4. **AI 신뢰와 가중치** (Frontiers in Organizational Psychology, 2025) — 신뢰 → AI 가중치 (β = 0.35), AI 자유의지 지각은 부정적 조절 (Index = -0.67)
+- **Human Gate 4 개 선언**: 의미 보호 구역 심사, Bullshit Task 심사, 의사결정 아키텍처 심사, AI 신뢰 및 가중치 심사
+
+### 왜 중요한가
+1. **Meaning Protection**: AI 가 의미 있는 작업 (창의성, 자율성, 행복감) 을 침범할 때, 근로자는 **대량 사기 저하 (mass demoralization)** 경험 — Digital Twin, Physical AI Tech Leader Pool 은 AI full-automation 금지
+2. **Bullshit Task Audit**: 근로자가 무의미하다고 느끼는 작업 (상위 20%) 을 AI 위임 1 순위로 지정 — freed-up capacity 를 의미 있는 작업으로 재배치
+3. **Decision Architecture**: 의사결정 피로는 개인의 실패가 아니라 **조직 설계의 실패** — 오전 11 시 이전 결정, 90 분 작업 후 휴식, 3 개 통합 플랫폼 설계
+4. **Trust Ladder 3 단계**: AI 를 자유의지 존재가 아닌 **통계적 도구**로 위치지어라 — AI 가중치 25-30% 제한, 검증 질문 3 개 의무화
+
+### 영향 범위
+- Vault Nodes: [[hr-conceptual-atoms]], [[agentic-recruitment-proxy]], [[bp-signal-intelligence]], [[fde-talent-model]]
+- 제안된 Signal 노드: [[Meaning-Protection-Zone-2026]], [[Bullshit-Task-Audit-2026]], [[Decision-Architecture-Redesign-2026]], [[AI-Weight-Governance-2026]]
+- Execution Surface: Digital Twin, Physical AI Tech Leader Pool (Meaning Protection Zone 적용)
+- Dashboard: http://localhost:8080
+
+### 다음 확인
+1. **INGEST 결정**: 오늘 브리핑 4 개 논문을 Signal 노드로 생성하고, [[hr-conceptual-atoms]], [[bp-signal-intelligence]] 에 연결.
+2. **Human Gate 명세**: [[bp-signal-intelligence]] 에 "Human Gate 4 개" 추가 — 의미 보호 구역, Bullshit Task, 의사결정 아키텍처, AI 신뢰 및 가중치.
+3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 I/O 심리학 브리핑 기록 반영 확인 — 대시보드 http://localhost:8080 에서 "I/O Psychology" 섹션 업데이트.
+4. **저녁 성찰 준비**: 오늘 브리핑을 바탕으로 저녁 성찰 (REFLECT_2026-08-04.md) 작성 — 4 개 지식 원자 추출, 심리학적 통찰 (Kant 의 계몽, Guardian → Gardener), One Strategy 명세.
+
+---
+
+### 무엇이 바뀌었나
+- **HR Tech 시장 브리핑 작성 완료** (`outputs/briefings/BRIEFING_HR-TECH_2026-08-04.md`)
+- **4 개 핵심 시그널 포착**: (1) **52% 자율 에이전트 배포 계획** (Korn Ferry) — Agentic Recruitment 주류화, (2) **People Analytics AI 스케일링** (1 인당 3,080 명 지원, AI Adoption 29%) — 노조 대비 2 배 빠른 도입, (3) **Human Agency 역설** (조직 요인이 AI 영향력의 67% 설명) — Blocked Agency 10% 존재, (4) **Self-Evolving Agents 등장** (arXiv:2507.21046, 77 페이지) — 진화 방향성 질문
+- **Human Gate 4 개 선언**: 에이전트 진화 감사 (분기별), AI 예측 검증 질문 (의무화), 매니저 AI 모델링 (교육 필수), 스킬 유지 의도적 연습 (주 1 회)
+
+### 왜 중요한가
+1. **Trust Ladder 3 단계**: 시장 전체가 2 단계 (Distrust) → 3 단계 (Collaboration) 전환 중 — AI 판단을 **가설**로 취급, 인간이 **검증**
+2. **Blocked Agency 해소**: 개인은 AI 활용 준비됨 (Frontier 16%), 조직 시스템이 미흡 (10% Blocked) — HR 이 조직 재설계 주도 필요
+3. **Self-Evolution Governance**: 에이전트가 스스로 진화할 때, **진화 방향성**은 인간의 가치와 일치해야 함 — 3 단계 Gate (제안/A/B/감사)
+4. **정원사 정체성**: HR 은 **감시자 (Guardian)**가 아닌 **정원사 (Gardener)** — AI 예측을 걸러내는 게이트키퍼가 아니라, 데이터가 조직 문화에서 꽃피우도록 설계하는 양육자
+
+### 영향 범위
+- Vault Nodes: [[agentic-recruitment-proxy]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]], [[fde-talent-model]]
+- 제안된 Signal 노드: [[Agentic-Recruitment-Adoption-2026]], [[People-Analytics-AI-Scaling-2026]], [[Human-Agency-Paradox-2026]], [[SelfEvolving-Agents-Governance-2026]]
+- Execution Surface: Digital Twin, Physical AI Tech Leader Pool (Meaning Protection Zone 적용)
+- Dashboard: http://localhost:8080
+
+### 다음 확인
+1. **INGEST 결정**: 오늘 브리핑 4 개 시그널을 Signal 노드로 생성하고, [[agentic-recruitment-proxy]], [[bp-signal-intelligence]] 에 연결.
+2. **Human Gate 명세**: [[bp-signal-intelligence]] 에 "Evolution Gate YAML Schema" 업데이트 — audit_frequency: quarterly 추가.
+3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 확인 — 대시보드 http://localhost:8080 에서 "HR Tech" 섹션 업데이트.
+4. **저녁 성찰 준비**: 오늘 브리핑을 바탕으로 저녁 성찰 (REFLECT_2026-08-04.md) 작성 — 4 개 지식 원자 추출, 심리학적 통찰 (Guardian → Gardener), One Strategy 명세.
+
+---
+
 ## [2026-08-03] Evening Reflect
 
 ### 무엇이 바뀌었나

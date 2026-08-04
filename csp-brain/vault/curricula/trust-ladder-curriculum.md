@@ -288,3 +288,34 @@ certification:
 - **2026-08-01**: 초기 작성 (Trust Ladder Curriculum v1.0.0)
 - **2026-08-01**: Human Gate #3 연동 명세 추가
 
+
+---
+
+## Identity Extension 프레임 연결
+
+이 커리큘럼은 **[[fde-talent-model]]**의 Identity Extension 프레임과 연결됩니다.
+
+### 3 단계 정체성 진화
+
+```
+감시자 (Guardian)
+  ↓ Identity Extension Stage 1
+정원사 (Gardener)
+  ↓ Identity Extension Stage 2
+번역자 (Translator)
+```
+
+### Trust Ladder 와의 대응
+
+| Trust Ladder Stage | Identity Extension | 학습 목표 |
+|-------------------|-------------------|----------|
+| **1 단계: 이해** | Guardian Awareness | "내 편향은 무엇인가?" |
+| **2 단계: 공감** | Gardener Empathy | "타인 정체성은 어떻게 협상되는가?" |
+| **3 단계: 중개** | Translator Mediation | "인간-AI 간 의미는 어떻게 중개되는가?" |
+
+### FDE Talent Model 연결
+
+- **F (Foundation)**: Stage 1 (이해) — AI 편향 기초
+- **D (Development)**: Stage 2 (공감) — 정체성 협상 능력
+- **E (Extension)**: Stage 3 (중개) — 인간-AI 중재자 역할
+

@@ -253,3 +253,48 @@ audit_month: YYYY-MM
 - **2026-08-01**: 초기 작성 (Bias Audit Protocol v1.0.0)
 - **2026-08-01**: Human Gate #2 연동 명세 추가
 
+
+---
+
+## Evolution Gate YAML Schema 연동
+
+Bias Audit 는 **Human Gate #1 (Evolution Gate)** YAML 스키마와 연동됩니다.
+
+### YAML 스키마 위치
+
+```
+csp-brain/vault/protocols/human-gate-schema.md
+```
+
+### 연동 메커니즘
+
+```yaml
+bias_audit_gate:
+  enabled: true
+  audit_frequency: monthly
+  metrics:
+    - skin_deep_bias: 0.3
+    - decision_fatigue: 0.15
+    - narrative_ratio: 0.7
+  
+  escalation:
+    - level: 1
+      condition: "metric.threshold_exceeded"
+      action: "telegram_alert"
+    
+    - level: 2
+      condition: "threshold_exceeded_count >= 2"
+      action: "gate_activation"
+    
+    - level: 3
+      condition: "human_complaint_count >= 3"
+      action: "immediate_rollback"
+```
+
+### 자동화 플로우
+
+1. **Eval 런처**가 `human-gate-schema.md` YAML 검증
+2. **편향 감사** 결과 YAML 임계치와 비교
+3. **임계치 초과** 시 Telegram 알림 + Gate 발동
+4. **Gate #4 (Rollback)** 트리거 시 즉시 중지
+
