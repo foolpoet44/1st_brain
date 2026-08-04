@@ -39,11 +39,11 @@ inbox/ 에서 wiki/ 로 자료가 수집된 기록입니다.
 
 대시보드 Action Queue 의 INGEST 카드로 발행된 일감. inbox 16건 전체 처리.
 
-| 처리 | 건수 | 내용 |
-| :-- | :-: | :-- |
-| 신규 생성 | 5 | [[fde-talent-model]], [[social-ide]], [[claude-code-skills]], [[rlm-forge]], [[poststroke-depression-network]] |
-| Timeline 병합 | 4 | [[graph-rag]](BigQuery Graph), [[knowledge-capitalization]](셀피쉬클럽), [[agentic-engineering]](하네스 세션), [[claude-code-workflow]](Karpathy LLM=OS) |
-| 처리 마킹(보류) | 7 | 일일 메모 4, 빈 파일 2, ADK 셋업 프롬프트 1 — 각 파일 frontmatter 의 processed_note 에 사유 기록 |
+| 처리            | 건수 | 내용                                                                                                                                                     |
+| :-------------- | :--: | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 신규 생성       |  5   | [[fde-talent-model]], [[social-ide]], [[claude-code-skills]], [[rlm-forge]], [[poststroke-depression-network]]                                           |
+| Timeline 병합   |  4   | [[graph-rag]](BigQuery Graph), [[knowledge-capitalization]](셀피쉬클럽), [[agentic-engineering]](하네스 세션), [[claude-code-workflow]](Karpathy LLM=OS) |
+| 처리 마킹(보류) |  7   | 일일 메모 4, 빈 파일 2, ADK 셋업 프롬프트 1 — 각 파일 frontmatter 의 processed_note 에 사유 기록                                                         |
 
 모든 inbox 파일에 `processed: true` + `processed_date` + `processed_note` 마킹.
 
@@ -69,3 +69,33 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 - `2026_AX_역량강화_업무계획.md` → projects/ax-internalization/README.md / **merge**
 
 신규 5(bp-signal-intelligence, ex-insight-mining-pipeline, k-smart-model, sf-domain-mapping, projects/physical-ai-talent) / 병합 9 / 처리 inbox 14건 전부 `processed: true`.
+
+---
+
+## 2026-08-04 밀린 브리핑 일괄 INGEST
+
+7/23 ~ 8/03 사이 inbox 에 적체된 브리핑 11 건 처리. 생산(매일 브리핑 자동 생성)은 돌아갔으나 소화(INGEST)가 멈춰 있던 구간을 해소.
+
+**신규 3 건**
+
+- `IO_PSYCHOLOGY_BRIEFING_2026-07-23.md` → wiki/signals/2026-07-23-wadi-human-centric-design.md / **new**
+- `IO_PSYCHOLOGY_BRIEFING_2026-07-24.md` → wiki/signals/2026-07-24-cognitive-offloading-skill-decay.md / **new**
+- `HR_Tech_Briefing_2026-07-26.md` → wiki/signals/2026-07-26-self-evolving-agents-evolution-gate.md / **new**
+
+**병합 4 건**
+
+- `HR_Tech_Briefing_2026-07-23.md` → wiki/signals/2026-07-22-autonomous-hiring-paradox.md / **merge**
+- `HR_Tech_Briefing_2026-07-24.md` → wiki/signals/2026-07-22-autonomous-hiring-paradox.md / **merge**
+- `HR_TECH_BRIEFING_2026-07-29.md` → wiki/signals/2026-07-26-self-evolving-agents-evolution-gate.md / **merge**
+- (스키마 확장) → wiki/concepts/bp-signal-intelligence.md / **merge**
+
+**중복 종결 4 건** — 이미 편입되었거나 신규 정보가 없어 마킹만 수행
+
+- `BRIEFING_2026-07-30_IO_PSYCHOLOGY.md` — wiki/synapses/IO_PSYCHOLOGY_SYNAPSE_2026-07-30.md 에 기수록
+- `BRIEFING_2026-08-01.md` / `BRIEFING_2026-08-03.md` — \_ops/change-log.md + csp-brain/vault/ 에 기편입
+- `REFLECT_2026-08-01_SUMMARY.md` — 08-01 브리핑의 요약본
+- `notes/2026-07-14.md` — 브리핑 아닌 스킬 작업 메모
+
+**판단 근거**: 브리핑들이 반복 제안한 `signal-autonomous-hiring-economics`, `signal-trust-design-patterns`, `signal-skill-adjacency-matching` 3 개 노드는 **생성하지 않았다.** 세 주제의 핵심 수치(52% / 74% / $1,400 / 73% / 3-5 배 / 16%)가 이미 `2026-07-22-autonomous-hiring-paradox.md` 2 절에 전부 들어 있어, 분리 시 같은 사실이 두 곳에서 따로 낡아간다. 대신 두 브리핑이 실제로 더한 증분(조정 비용 역설 60%, 에이전트 3 세대 컨덕터 모델, SDT 3 축 훼손)만 해당 문서 Timeline 에 기록했다.
+
+신규 3 / 병합 4 / 중복 종결 4 / inbox 11 건 전부 `processed: true`.

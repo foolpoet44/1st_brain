@@ -3,6 +3,7 @@ type: Note
 ---
 
 status: Active
+
 # [[_ops/bridge-log.md|bridge-log]]
 
 Notion ↔ Obsidian 양방향 동기화 기록입니다.

@@ -115,11 +115,17 @@
       <div class="flex items-center gap-6">
         <!-- Loop stages -->
         <div class="hidden md:flex items-center gap-1 text-[9px] font-mono">
-          <span class="px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400">SENSE</span>
+          <span class="px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400"
+            >SENSE</span
+          >
           <span class="text-gray-700">→</span>
-          <span class="px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-400">ACT</span>
+          <span class="px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-400"
+            >ACT</span
+          >
           <span class="text-gray-700">→</span>
-          <span class="px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-400">LEARN</span>
+          <span class="px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-400"
+            >LEARN</span
+          >
         </div>
         <!-- System Heartbeat -->
         <div class="text-right">
@@ -217,7 +223,9 @@
               >
                 Density
               </p>
-              <p class="text-3xl font-black font-['Outfit'] flex items-baseline gap-1">
+              <p
+                class="text-3xl font-black font-['Outfit'] flex items-baseline gap-1"
+              >
                 <span id="total-atoms">--</span>
                 <span id="density-delta" class="text-[11px] font-mono"></span>
               </p>
@@ -261,35 +269,67 @@
           <!-- Health score + sparkline -->
           <div class="flex items-end gap-4 mb-3">
             <div class="flex flex-col">
-              <span class="text-[9px] text-gray-500 uppercase tracking-widest">Health</span>
+              <span class="text-[9px] text-gray-500 uppercase tracking-widest"
+                >Health</span
+              >
               <div class="flex items-baseline gap-2">
-                <span id="health-score" class="text-4xl font-black font-['Outfit'] text-indigo-300">--</span>
+                <span
+                  id="health-score"
+                  class="text-4xl font-black font-['Outfit'] text-indigo-300"
+                  >--</span
+                >
                 <span id="health-delta" class="text-[10px] font-mono"></span>
               </div>
             </div>
             <div class="flex-1">
-              <div id="spark" class="h-14 w-full flex items-end justify-between gap-0.5" title="health trend"></div>
-              <div class="flex justify-between mt-1 text-[8px] text-gray-600 font-mono">
-                <span id="spark-start"></span><span class="text-indigo-400">NOW</span>
+              <div
+                id="spark"
+                class="h-14 w-full flex items-end justify-between gap-0.5"
+                title="health trend"
+              ></div>
+              <div
+                class="flex justify-between mt-1 text-[8px] text-gray-600 font-mono"
+              >
+                <span id="spark-start"></span
+                ><span class="text-indigo-400">NOW</span>
               </div>
             </div>
           </div>
           <!-- LINT metrics row -->
-          <div class="grid grid-cols-3 gap-2 pt-3 border-t border-white/5 text-center">
+          <div
+            class="grid grid-cols-3 gap-2 pt-3 border-t border-white/5 text-center"
+          >
             <div>
-              <p class="text-[8px] text-gray-500 uppercase tracking-widest">Isolated</p>
-              <p class="text-lg font-bold font-['Outfit']"><span id="lint-orphans">--</span><span id="d-orphans" class="text-[9px] font-mono ml-1"></span></p>
+              <p class="text-[8px] text-gray-500 uppercase tracking-widest">
+                Isolated
+              </p>
+              <p class="text-lg font-bold font-['Outfit']">
+                <span id="lint-orphans">--</span
+                ><span id="d-orphans" class="text-[9px] font-mono ml-1"></span>
+              </p>
             </div>
             <div>
-              <p class="text-[8px] text-gray-500 uppercase tracking-widest">Stale 6w+</p>
-              <p class="text-lg font-bold font-['Outfit']"><span id="lint-stale">--</span><span id="d-stale" class="text-[9px] font-mono ml-1"></span></p>
+              <p class="text-[8px] text-gray-500 uppercase tracking-widest">
+                Stale 6w+
+              </p>
+              <p class="text-lg font-bold font-['Outfit']">
+                <span id="lint-stale">--</span
+                ><span id="d-stale" class="text-[9px] font-mono ml-1"></span>
+              </p>
             </div>
             <div>
-              <p class="text-[8px] text-gray-500 uppercase tracking-widest">Frontmatter</p>
-              <p class="text-lg font-bold font-['Outfit'] text-emerald-400"><span id="lint-fm">--</span></p>
+              <p class="text-[8px] text-gray-500 uppercase tracking-widest">
+                Frontmatter
+              </p>
+              <p class="text-lg font-bold font-['Outfit'] text-emerald-400">
+                <span id="lint-fm">--</span>
+              </p>
             </div>
           </div>
-          <p id="metabolism-summary" class="text-[9px] text-gray-500 mt-3 leading-relaxed"></p>
+          <p
+            id="metabolism-summary"
+            class="text-[9px] text-gray-500 mt-3 leading-relaxed"
+          ></p>
         </div>
 
         <!-- Strategy Insight (Evolution Digest) -->
@@ -384,11 +424,15 @@
 
         // LINT metrics + deltas
         const lint = data.lint || {};
-        document.getElementById("lint-orphans").innerText = lint.orphans ?? "--";
+        document.getElementById("lint-orphans").innerText =
+          lint.orphans ?? "--";
         document.getElementById("lint-stale").innerText = lint.stale ?? "--";
         document.getElementById("lint-fm").innerText =
           `${lint.frontmatter_ok}/${lint.frontmatter_total}`;
-        document.getElementById("d-orphans").innerHTML = fmtDelta(d.orphans, true);
+        document.getElementById("d-orphans").innerHTML = fmtDelta(
+          d.orphans,
+          true,
+        );
         document.getElementById("d-stale").innerHTML = fmtDelta(d.stale, true);
 
         // Sparkline from history (health over time)
@@ -415,18 +459,42 @@
         document.getElementById("metabolism-summary").innerHTML =
           `직전 기록 대비 위키 ${fmtDelta(d.wiki_total)} 문서 · 고립 ${fmtDelta(d.orphans, true)} · 정체 ${fmtDelta(d.stale, true)} (정체율 ${stalePct}%).<br/>` +
           `<span class="text-gray-400">대사</span>: inbox ${mb.inbox_pending ?? 0}건 대기` +
-          (mb.inbox_oldest_days ? ` <span class="text-yellow-500">(최고령 ${mb.inbox_oldest_days}일)</span>` : "") +
+          (mb.inbox_oldest_days
+            ? ` <span class="text-yellow-500">(최고령 ${mb.inbox_oldest_days}일)</span>`
+            : "") +
           ` · 7일 내 갱신 ${mb.updated_7d ?? 0}건 · 중위 문서나이 ${mb.median_age_days ?? 0}일` +
-          (arch ? ` · <span class="text-purple-400">아카이브 대기 ${arch}건</span>` : "");
+          (arch
+            ? ` · <span class="text-purple-400">아카이브 대기 ${arch}건</span>`
+            : "");
       }
 
       // Action Queue: 관측 → 일감. Issue 프리필 링크가 루프를 닫는 '운동신경'이다.
       const ACTION_STYLE = {
-        INGEST: { color: "text-blue-400", border: "border-blue-500/20", label: "수집" },
-        CONNECT: { color: "text-emerald-400", border: "border-emerald-500/20", label: "연결" },
-        STRUCTURE: { color: "text-sky-400", border: "border-sky-500/20", label: "정규화" },
-        BRIDGE: { color: "text-purple-400", border: "border-purple-500/20", label: "교차" },
-        REVIEW: { color: "text-yellow-400", border: "border-yellow-500/20", label: "복습" },
+        INGEST: {
+          color: "text-blue-400",
+          border: "border-blue-500/20",
+          label: "수집",
+        },
+        CONNECT: {
+          color: "text-emerald-400",
+          border: "border-emerald-500/20",
+          label: "연결",
+        },
+        STRUCTURE: {
+          color: "text-sky-400",
+          border: "border-sky-500/20",
+          label: "정규화",
+        },
+        BRIDGE: {
+          color: "text-purple-400",
+          border: "border-purple-500/20",
+          label: "교차",
+        },
+        REVIEW: {
+          color: "text-yellow-400",
+          border: "border-yellow-500/20",
+          label: "복습",
+        },
       };
 
       function renderActionQueue(actions) {
@@ -735,7 +803,10 @@
         [/^content:/, ["콘텐츠", "text-purple-400 bg-purple-500/10"]],
         [/^archive:/, ["아카이브", "text-gray-400 bg-gray-500/10"]],
         [/^ops:/, ["운영", "text-sky-400 bg-sky-500/10"]],
-        [/auto-?sync|autosync|cloud sync/i, ["자동", "text-gray-500 bg-gray-500/10"]],
+        [
+          /auto-?sync|autosync|cloud sync/i,
+          ["자동", "text-gray-500 bg-gray-500/10"],
+        ],
         [/^merge/i, ["머지", "text-indigo-400 bg-indigo-500/10"]],
       ];
       function tagOf(msg) {

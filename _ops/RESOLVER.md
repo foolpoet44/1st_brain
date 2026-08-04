@@ -3,18 +3,19 @@ type: Note
 ---
 
 status: Active
+
 # 🛰️ CSP-Brain 지능 리졸버 (Synaptic Resolver)
 
 > "리졸버는 지식의 조직도입니다. 모든 것을 알 필요는 없습니다. 누구에게 물어봐야 할지 아는 것이 지능의 본질입니다."
 
 ## 1. 도메인별 라우팅 규칙 (Routing Rules)
 
-| 도메인        | 핵심 키워드                   | 참조 경로 (Target Path)                        | 담당 스킬 ([[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]])    |
-| :------------ | :---------------------------- | :--------------------------------------------- | :------------------- |
-| **HR 전략**   | 채용, 면접, 평가, 조직문화    | `wiki/concepts/hr-*`, `projects/oka/`          | `csp-brain`          |
-| **AI 공학**   | 에이전트, MCP, 토큰, 프롬프트 | `wiki/concepts/ai-*`, `_ops/scripts/`          | `hermes-agent`       |
-| **자기 개선** | 성찰, 대사, 진화, 맥박        | `outputs/daily-reflect/`, `[[KNOWLEDGE_PULSE.md|KNOWLEDGE_PULSE]].md` | `navigator`          |
-| **투자/경제** | 분석, 레포트, 시장, 지표      | `outputs/analyses/INVESTMENT_*`                | `investment-analyst` |
+| 도메인        | 핵심 키워드                   | 참조 경로 (Target Path)                         | 담당 스킬 ([[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md | SKILL]])    |
+| :------------ | :---------------------------- | :---------------------------------------------- | :----------------------------------------------------------------------------------------------- | ----------- |
+| **HR 전략**   | 채용, 면접, 평가, 조직문화    | `wiki/concepts/hr-*`, `projects/oka/`           | `csp-brain`                                                                                      |
+| **AI 공학**   | 에이전트, MCP, 토큰, 프롬프트 | `wiki/concepts/ai-*`, `_ops/scripts/`           | `hermes-agent`                                                                                   |
+| **자기 개선** | 성찰, 대사, 진화, 맥박        | `outputs/daily-reflect/`, `[[KNOWLEDGE_PULSE.md | KNOWLEDGE_PULSE]].md`                                                                            | `navigator` |
+| **투자/경제** | 분석, 레포트, 시장, 지표      | `outputs/analyses/INVESTMENT_*`                 | `investment-analyst`                                                                             |
 
 ## 2. 임계치 관리 (Token Escalation)
 

@@ -14,18 +14,21 @@ status: Active
 ### 오늘의 브리핑
 
 #### [I/O Psychology] 에이전트 네이티브 조직, Joy of Work, 의사결정 피로, 알고리즘 투명성 (09:10)
+
 - **파일**: `outputs/briefings/BRIEFING_2026-08-03_IO_PSYCH.md`
 - **핵심 시그널**: Agent-native forms 395% 효율적, AI 노출=창의성·자율성·행복감 작업, 의사결정 피로=조직 설계 실패, 투명성→공정성→신뢰
 - **Human Gates**: 4 개 선언 (에이전트 조직 설계 심의, Meaning Protection Zone, Operations Lead 판단, 알고리즘 투명성 심사)
 - **정체성 전환**: 감시자 → 정원사 (AI 를 대체자가 아닌 협력자로 재설계)
 
 #### [HR Tech] 신뢰의 사다리, 그리고 정원사의 다짐 (09:10)
+
 - **파일**: `inbox/BRIEFING_2026-08-03.md`
 - **핵심 시그널**: AI 채용 도입률 62%, EU AI Act/NYC Law 편향 감사 의무화, 인간 판단 프리미엄 73%, 신뢰 사다리 3 단계
 - **Human Gates**: 4 개 선언 (에이전트 진화 감사, 편향 감사 결과 검토, 신뢰도 등급 재심사, 정체성 확장 언어 검증)
 - **정체성 전환**: 감시자 → 정원사 → 번역자
 
 #### [Money Flow] 불신의 종말, 협업의 서막
+
 - **핵심 시그널**: 자본 시장 Trust Ladder 3 단계 진입 — Blind Faith(2020) → Distrust(2023) → Collaboration(2026)
 - **HR Tech 대조**: 자본 시장은 3 단계, HR Tech 는 2 단계 — "왜 HR 은 자본 시장보다 3 년 뒤처지는가?"
 
@@ -33,12 +36,12 @@ status: Active
 
 ## 지식 대사율 (Knowledge Metabolism Rate)
 
-| 지표 | 금일 | 전주 평균 | 변화 |
-|---|---|---|---|
-| **Signal Nodes** | 4 | 3.2 | +25% |
-| **Human Gates** | 8 | 4.5 | +78% |
-| **Synapse Connections** | 4 | 3.0 | +33% |
-| **Identity Shifts** | 1 | 0.8 | +25% |
+| 지표                    | 금일 | 전주 평균 | 변화 |
+| ----------------------- | ---- | --------- | ---- |
+| **Signal Nodes**        | 4    | 3.2       | +25% |
+| **Human Gates**         | 8    | 4.5       | +78% |
+| **Synapse Connections** | 4    | 3.0       | +33% |
+| **Identity Shifts**     | 1    | 0.8       | +25% |
 
 ---
 

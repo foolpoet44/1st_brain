@@ -13,28 +13,30 @@ status: Active
 
 ## 📈 실행 요약
 
-| 항목 | 값 |
-|------|-----|
+| 항목      | 값    |
+| --------- | ----- |
 | 배치 제한 | 50 개 |
 | 실제 분류 | 50 개 |
-| 성공률 | 100% |
+| 성공률    | 100%  |
 
 ---
 
 ## 📊 분류 결과 상세
 
 ### Type 별 분포
-| Type | 수량 | 비율 |
-|------|------|------|
-| Project | 22 | 44% |
-| Concept | 11 | 22% |
-| Meeting | 7 | 14% |
-| Reflection | 6 | 12% |
-| Task | 1 | 2% |
-| Resource | 1 | 2% |
-| Note | 2 | 4% |
+
+| Type       | 수량 | 비율 |
+| ---------- | ---- | ---- |
+| Project    | 22   | 44%  |
+| Concept    | 11   | 22%  |
+| Meeting    | 7    | 14%  |
+| Reflection | 6    | 12%  |
+| Task       | 1    | 2%   |
+| Resource   | 1    | 2%   |
+| Note       | 2    | 4%   |
 
 ### 분류된 문서 목록
+
 1. ko.md → Concept
 2. swift.md → Meeting
 3. markdown.md → Project
@@ -90,18 +92,19 @@ status: Active
 
 ## 📊 Vault 전체 현황 (분류 후)
 
-| 지표 | 값 |
-|------|-----|
-| 총 문서 수 | 2,120 개 |
-| type 할당됨 | 353 개 (16.7%) |
-| 미분류 | 1,767 개 (83.3%) |
-| EVAL SCORE | 16.7 / 100 |
+| 지표        | 값               |
+| ----------- | ---------------- |
+| 총 문서 수  | 2,120 개         |
+| type 할당됨 | 353 개 (16.7%)   |
+| 미분류      | 1,767 개 (83.3%) |
+| EVAL SCORE  | 16.7 / 100       |
 
 ---
 
 ## 🔍 관찰 사항
 
 ### 분류 패턴 분석
+
 1. **기술 언어 문서**: python.md, javascript.md 등이 Meeting 으로 분류됨
    - 이는 키워드 매칭의 한계로, 실제 내용은 언어 레퍼런스일 가능성
    - 분류 규칙 정교화 필요
@@ -111,6 +114,7 @@ status: Active
 3. **SKILL.md 파일**: 맥락에 따라 Reflection 또는 Project 로 분류
 
 ### 개선 제안
+
 1. 언어 이름 키워드는 Concept 또는 Resource 로 재매핑 고려
 2. 파일 경로 기반 분류 규칙 추가 (예: `skills/**` → Concept)
 3. frontmatter 에 `tags:` 필드도 함께 분석하는 규칙 추가
@@ -125,4 +129,4 @@ status: Active
 
 ---
 
-*보고서 생성: csp-brain Type 자동 분류 시스템*
+_보고서 생성: csp-brain Type 자동 분류 시스템_
