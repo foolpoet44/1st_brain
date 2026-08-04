@@ -77,6 +77,17 @@ DASHBOARD_MAP = [
 ]
 RETIRED_DASHBOARDS = [(n, s) for n, _, s, st in DASHBOARD_MAP if st == "dead"]
 
+# Obsidian vault 이름 = vault 폴더 basename. obsidian:// 딥링크로 문서를 바로 연다.
+# 관제 화면에서 문제를 발견했을 때, 그 문서까지 가는 데 클릭이 여러 번 필요하면
+# 사람은 '나중에'로 미룬다. 한 번에 편집기 앞에 앉게 하는 것이 목적이다.
+VAULT = ROOT.name
+
+
+def obsidian(rel_path):
+    from urllib.parse import quote
+    return f"obsidian://open?vault={quote(VAULT)}&file={quote(rel_path)}"
+
+
 STALE_WEEKS = 6          # CLAUDE.md LINT 규칙: 6 주 이상 미갱신은 점검 대상
 MIN_BACKLINKS = 2        # CLAUDE.md: 한 문서에 최소 2 개 백링크
 WIKILINK = re.compile(r"\[\[([^\]|#]+)")
@@ -358,7 +369,9 @@ def collect():
         "density": {
             "total_links": total_links,
             "avg_per_doc": round(total_links / n, 1) if n else 0,
-            "isolated": len(isolated), "isolated_items": sorted(isolated)[:10],
+            "isolated": len(isolated),
+            "isolated_items": [{"name": s, "path": docs[s]["path"]}
+                               for s in sorted(isolated)[:10]],
             "broken": len(broken), "broken_items": broken[:10],
             "missing_frontmatter": len(missing_fm),
         },
@@ -418,8 +431,14 @@ def render_html(d):
     )
 
     pending = "".join(
-        f'<li><code>{i["path"]}</code> <em>{i["age_days"]}일</em></li>'
+        f'<li><a href="{obsidian(i["path"])}"><code>{i["path"]}</code></a> '
+        f'<em>{i["age_days"]}일</em></li>'
         for i in dig["items"]
+    ) or "<li>없음</li>"
+
+    isolated_list = "".join(
+        f'<li><a href="{obsidian(i["path"])}"><code>{i["name"]}</code></a></li>'
+        for i in d["density"]["isolated_items"]
     ) or "<li>없음</li>"
 
     return f"""<!DOCTYPE html>
@@ -454,6 +473,7 @@ th,td{{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line)}}
 th{{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.4px}}
 tr.fail td,tr.stale td{{color:var(--crit)}} tr.paused td{{color:var(--dim)}}
 code{{background:#1a1f27;padding:1px 6px;border-radius:5px;font-size:12px}}
+li a{{text-decoration:none}} li a:hover code{{color:var(--acc);background:#1e2530}}
 em{{color:var(--warn);font-style:normal;font-size:12px}}
 .chip{{display:inline-block;background:#1a1f27;border-radius:20px;padding:3px 11px;
 margin:3px 4px 3px 0;font-size:12px;color:var(--dim)}}
@@ -494,11 +514,14 @@ HEAD <code>{d['git']['head']}</code> · 미커밋 {d['git']['uncommitted']}건</
 {rows}
 </table></div>
 
+<h2>고립 문서 <span class="dim" style="font-weight:400;text-transform:none">— 백링크 2개 미만</span></h2>
+<div class="panel"><ul>{isolated_list}</ul></div>
+
 <h2>미편입 대기열</h2>
 <div class="panel"><ul>{pending}</ul></div>
 
 <h2>최근 지식 변동</h2>
-<div class="panel"><ul>{"".join(f'<li><span class="dim">{r["date"]}</span> <code>{r["file"]}</code></li>' for r in d.get("recent", [])) or "<li>최근 7일 위키 변경 없음</li>"}</ul></div>
+<div class="panel"><ul>{"".join(f'<li><span class="dim">{r["date"]}</span> <a href="{obsidian("wiki/" + r["file"])}"><code>{r["file"]}</code></a></li>' for r in d.get("recent", [])) or "<li>최근 7일 위키 변경 없음</li>"}</ul></div>
 
 <h2>폴더 분포</h2>
 <div class="panel">{folders}</div>

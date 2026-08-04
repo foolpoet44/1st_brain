@@ -32,6 +32,7 @@ import json
 import socketserver
 import subprocess
 import sys
+import urllib.parse
 import time
 from pathlib import Path
 
@@ -41,6 +42,21 @@ GEN = ROOT / "scripts" / "command_center.py"
 KGEN = ROOT / "_ops" / "scripts" / "gen_knowledge_index.py"
 KJSON = ROOT / "_data" / "knowledge.json"
 PAGES_URL = "https://foolpoet44.github.io/1st_brain/knowledge/"
+PAGES_ROOT = "https://foolpoet44.github.io/1st_brain"
+
+# Obsidian vault 이름 = vault 폴더의 basename. ~/Library/Application Support/obsidian/
+# obsidian.json 에 등록된 이름과 일치해야 obsidian:// 스킴이 열린다.
+VAULT = ROOT.name
+
+
+def obsidian_url(rel_path):
+    """vault 루트 기준 상대경로를 Obsidian 딥링크로.
+
+    지식 인덱스에서 문서를 '읽는' 것과 '고치는' 것은 다른 행위다. 공개 페이지는
+    읽기용이고, 실제로 무언가를 바꾸려면 편집기가 열려야 한다. 한 번의 클릭으로
+    바로 그 문서 앞에 앉게 하는 것이 이 링크의 목적이다."""
+    return (f"obsidian://open?vault={urllib.parse.quote(VAULT)}"
+            f"&file={urllib.parse.quote(rel_path)}")
 PORT = 8090
 STALE_MIN = 10          # 이보다 오래된 데이터면 요청 시 자동 재계산
 
@@ -88,8 +104,10 @@ def knowledge_html():
     rows = "".join(
         f'<tr data-dir="{it.get("dir","")}" data-t="{(it.get("title","") + " " + it.get("path","")).lower()}">'
         f'<td class="dt">{it.get("date","")}</td>'
-        f'<td><a href="{PAGES_URL.rsplit("/knowledge/")[0]}{it.get("url","")}" target="_blank">'
-        f'{it.get("title") or it.get("path")}</a></td>'
+        f'<td><a href="{obsidian_url(it["path"])}" title="Obsidian 에서 열기">'
+        f'{it.get("title") or it.get("path")}</a>'
+        f'<a class="ext" href="{PAGES_ROOT}{it.get("url","")}" target="_blank"'
+        f' title="공개 페이지에서 보기">↗</a></td>'
         f'<td class="dim">{it.get("dir","")}</td></tr>'
         for it in items
     )
@@ -119,10 +137,13 @@ td a{{color:var(--fg);text-decoration:none}} td a:hover{{color:var(--acc)}}
 .dt{{color:var(--dim);white-space:nowrap;font-size:12px;width:88px}}
 .dim{{color:var(--dim);font-size:12px;white-space:nowrap}}
 tr.hide{{display:none}}
+a.ext{{color:var(--dim);font-size:11px;margin-left:8px;opacity:.45;text-decoration:none}}
+a.ext:hover{{opacity:1;color:var(--acc)}}
 </style></head><body><div class="wrap">
 <h1>🧠 지식 인덱스</h1>
 <div class="meta">{len(items)}개 문서 · 최신 수정순(git 커밋 기준) · 방금 생성 ·
-<a href="/">← 커맨드센터</a> · <a href="{PAGES_URL}" target="_blank">공개 페이지 ↗</a></div>
+<a href="/">← 커맨드센터</a> · <a href="{PAGES_URL}" target="_blank">공개 페이지 ↗</a><br>
+제목을 클릭하면 <b>Obsidian</b>(vault: {VAULT})에서 열립니다 · ↗ 는 공개 페이지</div>
 <input id="q" placeholder="제목·경로 검색…" autofocus>
 <div class="chips"><button class="chip on" data-dir="">전체 <b>{len(items)}</b></button>{chips}</div>
 <table>{rows}</table>
