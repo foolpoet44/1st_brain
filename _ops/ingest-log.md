@@ -99,3 +99,36 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 **판단 근거**: 브리핑들이 반복 제안한 `signal-autonomous-hiring-economics`, `signal-trust-design-patterns`, `signal-skill-adjacency-matching` 3 개 노드는 **생성하지 않았다.** 세 주제의 핵심 수치(52% / 74% / $1,400 / 73% / 3-5 배 / 16%)가 이미 `2026-07-22-autonomous-hiring-paradox.md` 2 절에 전부 들어 있어, 분리 시 같은 사실이 두 곳에서 따로 낡아간다. 대신 두 브리핑이 실제로 더한 증분(조정 비용 역설 60%, 에이전트 3 세대 컨덕터 모델, SDT 3 축 훼손)만 해당 문서 Timeline 에 기록했다.
 
 신규 3 / 병합 4 / 중복 종결 4 / inbox 11 건 전부 `processed: true`.
+
+---
+
+## 2026-08-05 — INGEST 프로토콜 수행
+
+### 판정 요약
+
+- **신규 생성**: 0 건
+- **병합**: 1 건
+  - `outputs/briefings/BRIEFING_HR-TECH_2026-08-05.md` → `wiki/signals/2026-07-22-autonomous-hiring-paradox.md` (Timeline 에 증분 기록)
+- **중복 종결**: 4 건 (브리핑이 제안한 signal 노드 모두 기존 문서에 포함됨)
+  - `signal-ai-trust-gap-2026` (기존: 2026-07-22 문서 2.2 절)
+  - `signal-algorithmic-monoculture-2026` (기존: 2026-07-22 문서 2.3 절 + 2026-07-26 문서)
+  - `signal-autonomous-agent-adoption-2026` (기존: 2026-07-22 문서 2.1 절)
+  - `signal-skills-based-hiring-acceleration-2026` (기존: 2026-07-22 문서 2.4 절)
+
+### 판정 근거
+
+1. **중복 대조 완료**: `wiki/signals/` 에서 브리핑의 핵심 통계 (52% 자율 에이전트, 71-74% 후보자 불신, 26% 인종 편향) 검색.
+2. **기존 문서 확인**: `2026-07-22-autonomous-hiring-paradox.md` 가 동일 주제를 포괄하며, 2026-07-26, 2026-07-29 브리핑이 이미 Timeline 에 병합됨.
+3. **증분 추가**: 신뢰의 사다리 프레임, Stanford HAI 알고리즘 모노컬처 통계, Human Gate 4 종 명세를 Timeline 에 기록.
+4. **신규 노드 생성 금지**: 브리핑이 제안한 4 개 signal 노드는 모두 기존 문서의 2.1~2.4 절이 이미 포함. 분리 시 백링크만 늘고 사실의 소유권이 흐려짐.
+
+### 사람 판단 필요 항목
+
+- **없음**. 모든 통계가 복수 출처 (Greenhouse, Stanford HAI, Perelson & Associates) 에 기반하며, 개인정보·생체정보·감시와 관련된 스키마 변경도 없음.
+
+### 후속 조치
+
+- [ ] Human Gate 4 종을 [[bp-signal-intelligence]] 의 `evolution_gate` 스키마에 명세화
+- [ ] 알고리즘 모노컬처 통계 (Stanford HAI) 다음 브리핑에서 재확인 시 별도 신호 승격 검토
+
+---

@@ -57,6 +57,37 @@
 
 ---
 
+## [2026-08-05] HR Tech 브리핑 — 신뢰의 사다리, 감시자에서 정원사로
+
+### 무엇이 바뀌었나
+- **HR Tech 브리핑 작성 완료** (`outputs/briefings/BRIEFING_HR-TECH_2026-08-05.md`)
+- **4 개 시장 신호 포착**: 
+  1. **신뢰의 간극** — 87% 기업 AI 사용 vs 26% 후보 신뢰 (Greenhouse 2026)
+  2. **알고리즘 모노컬처** — Stanford HAI 연구 (340 만 명), 단일 벤더 사용 시 흑인 26% 차별, 10% 체계적 탈락
+  3. **자율 에이전트 부상** — 52% 인재 리더 2026 년 통합 계획, end-to-end 자동화 (GoPerfect 1 위)
+  4. **스킬 기반 가속** — 자격증명 신뢰 37%, 84% 리더는 비판적 사고·관계 구축 우선
+- **프레임 도입**: "신뢰의 사다리 (1:맹신 → 2:불신 → 3:협력)", "감시자 (Guardian) → 정원사 (Gardener)"
+
+### 왜 중요한가
+1. **신뢰 붕괴의 실증**: 71% 구직자가 AI 채용 불공정 규정 — 기술 실패가 아닌 **정체성 실패**. HR 이 감시자 (문지기) 로 작동하는 한 신뢰 회복 불가.
+2. **시장 구조 리스크**: 단일 AI 벤더 장악 시 **체계적 탈락** (correlated rejection) — 금융 시스템의 '시스템적 리스크'와 동형. 벤더 다각화는 조달 이슈가 아닌 **리스크 관리**.
+3. **번역 vs 검열**: AI 편향을 검열 (무조건 수용/거부) 하지 않고 번역 (맥락 해체 → 재해석 → 인간 검증) 하는 설계 필요. "번역은 원본을 지우지 않는다. 검열은 지운다."
+4. **Human Gate 명세화**: 4 개 금지 구역 선언 (편향 감사, 모노컬처 검토, 진화 감사, 벤더 다각화) — AI 자율성에 대한 인간 감독의 공식적 통로.
+
+### 영향 범위
+- Vault Nodes: [[agentic-recruitment-proxy]], [[hr-conceptual-atoms]], [[bp-signal-intelligence]], [[fde-talent-model]]
+- 제안된 Signal 노드: [[signal-ai-trust-gap-2026]], [[signal-algorithmic-monoculture-2026]], [[signal-autonomous-agent-adoption-2026]], [[signal-skills-based-hiring-acceleration-2026]]
+- Execution Surface: evolution_gate YAML 스키마 갱신 (Human Gate 4 개 추가)
+- Dashboard: http://localhost:8080
+
+### 다음 확인
+- [ ] INGEST Job 이 signal-* 노드 4 개 생성/중복 검사 완료했는가?
+- [ ] KNOWLEDGE_PULSE.md 에 오늘 브리핑 반영되었는가?
+- [ ] 대시보드 (http://localhost:8080) 에 "신뢰의 사다리" 시각화 추가되었는가?
+- [ ] Evening Reflect (22:00) 가 오늘 브리핑을 4 Knowledge Atom 으로 합성했는가?
+
+---
+
 ### 무엇이 바뀌었나
 - **HR Tech 시장 브리핑 작성 완료** (`outputs/briefings/BRIEFING_HR-TECH_2026-08-04.md`)
 - **4 개 핵심 시그널 포착**: (1) **52% 자율 에이전트 배포 계획** (Korn Ferry) — Agentic Recruitment 주류화, (2) **People Analytics AI 스케일링** (1 인당 3,080 명 지원, AI Adoption 29%) — 노조 대비 2 배 빠른 도입, (3) **Human Agency 역설** (조직 요인이 AI 영향력의 67% 설명) — Blocked Agency 10% 존재, (4) **Self-Evolving Agents 등장** (arXiv:2507.21046, 77 페이지) — 진화 방향성 질문
@@ -214,5 +245,38 @@ status: Active
   2. **Human Gate 명세**: [[agentic-recruitment-proxy]] 에 \"Evolution Gate YAML Schema\" 추가.
   3. **가시성 점검**: KNOWLEDGE_PULSE.md 에 오늘 브리핑 기록 반영 확인 — 대시보드 http://localhost:8080 에서 \"HR Tech\" 섹션 업데이트.
   4. **저녁 성찰 준비**: 오늘 브리핑을 바탕으로 저녁 성찰 (REFLECT_2026-08-01.md) 작성 — 4 개 지식 원자 추출, 심리학적 통찰 (Guardian → Gardener), One Strategy 명세.
+
+---
+
+## 2026-08-05 — INGEST: HR Tech 브리핑 (신뢰의 사다리, 알고리즘 모노컬처)
+
+### 무엇이 바뀌었나
+
+- **편입 대상**: `outputs/briefings/BRIEFING_HR-TECH_2026-08-05.md`
+- **판정**: **병합** (신규 노드 생성 안 함)
+- **병합 위치**: `wiki/signals/2026-07-22-autonomous-hiring-paradox.md` 의 Timeline 섹션
+- **증분 기록**:
+  1. 신뢰의 사다리 (Trust Ladder) 3 단계 프레임 — 1 단계 (맹신) → 2 단계 (불신) → 3 단계 (협력)
+  2. 알고리즘 모노컬처 위험성 — Stanford HAI 연구 (340 만 명, 26% 인종 편향, 10% 체계적 탈락)
+  3. 스킬 기반 채용 가속화 — 자격증명 신뢰도 37%
+  4. Human Gate 4 종 명세 (AI 편향 감사, 알고리즘 집중도 한도, 진화 감사, 벤더 다각화)
+
+### 왜 중요한가
+
+- **지식 중복 방지**: 브리핑이 제안한 4 개 signal 노드는 모두 기존 문서 (2026-07-22, 2026-07-26) 에 이미 포함됨. 분리 시 "같은 사실이 두 곳에서 따로 낡아감".
+- **증분의 명시화**: 브리핑의 고유 기여 (신뢰의 사다리 프레임, Stanford HAI 통계, Human Gate 4 종) 만 Timeline 에 기록하여 "지식의 계보"를 보존.
+- **Human Gate 구체화**: AI 편향 감사, 알고리즘 집중도 한도 (50%), 진화 감사 (3-Stage Gate), 벤더 다각화 — 모두 **실행 가능한 트리거**로 명세화됨.
+
+### 영향 범위
+
+- **직접 영향**: `wiki/signals/2026-07-22-autonomous-hiring-paradox.md` (Timeline 확장)
+- **2 차 영향**: `[[bp-signal-intelligence]]` 의 `evolution_gate` 스키마에 Human Gate 4 종 명세화 필요
+- **영향 없음**: inbox 파일 (3 건), outputs/briefings 파일 (1 건) 은 `processed: true` 마킹만 수행
+
+### 다음 확인
+
+- [ ] Human Gate 4 종을 [[bp-signal-intelligence]] 의 `evolution_gate` 스키마에 명세화
+- [ ] 알고리즘 모노컬처 통계 (Stanford HAI) 다음 HR Tech 브리핑에서 재확인 시 별도 signal 노드 승격 검토
+- [ ] inbox/ 폴더의 미처리 파일 (3 건: 16 powerful Agent skills, 하네스 엔지니어링, 이름 없는 보드) 처리 여부 검토
 
 ---

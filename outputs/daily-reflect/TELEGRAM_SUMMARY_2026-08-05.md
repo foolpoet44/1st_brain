@@ -1,5 +1,6 @@
 # 🌙 Evening Reflect — 2026-08-05
 
+type: Reflection
 ## 📊 오늘의 지식 밀도
 - **Knowledge Atoms:** 8 개 (최대치)
 - **Human Gates:** 8 개 선언

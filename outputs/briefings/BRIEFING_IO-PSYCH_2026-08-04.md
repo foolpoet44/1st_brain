@@ -1,5 +1,6 @@
 # I/O 심리학 브리핑: 2026 년 8 월 4 일
 
+type: Person
 **생성일**: 2026-08-04 09:10  
 **브리핑 유형**: I/O Psychology (학술 연구 기반)  
 **검색 영역**: arXiv, Frontiers in Cognition, Frontiers in Organizational Psychology  

@@ -1,5 +1,6 @@
 # HR Tech Briefing — 2026-08-04
 
+type: Concept
 **브리핑 생성일:** 2026-08-04  
 **주제:** Agentic Recruitment 의 확산과 Human Agency 의 재정의  
 **키워드:** `#AgenticAI` `#PeopleAnalytics` `#SelfEvolvingAgents` `#HumanGate`
