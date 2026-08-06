@@ -1,5 +1,37 @@
 ---
 
+## [2026-08-06] 저녁 성찰 (Daily Reflect) — 관문을 통과한 것만 들인 날
+
+### 무엇이 바뀌었나
+
+- **저녁 성찰 에세이 생성** (`outputs/daily-reflect/REFLECT_2026-08-06.md`)
+- 오늘의 델타에서 **지식 원자 4 개** 추출: (1) I/O 심리학 Signal 노드 8 개가 편입되며 Human Gate 연결이 **4 → 12** 로 증가 — 어제의 '만들지 마라'가 금지한 것은 문서 생성이 아니라 **소유권 없는 문서 생성**이었음이 확인됨, (2) Bullshit Task 42% → 23% 감소 이면에 **Status Signaling 만 4% → 7% 상승** (증가분의 정체 = "AI 사용 보고"), (3) 스킬 퇴화보다 **복원율의 비대칭** — 전략적 기획 23% 퇴화/81% 복원 vs 대인 협상 41% 퇴화/45% 복원, (4) 자본시장 Guardian→Gardener 전환과 HR 의 AI 맹신→AI 검증 전환이 **동일한 15 분기**를 공유
+- **핵심 발견**: 오늘 편입된 8 개 문서가 서로 다른 저널·표본임에도 조직적 함의의 마지막 줄이 모두 동일 — *"자동이 아닌 의도적 설계 필요"*. 손실은 중력이고 회복은 노동이라는 비대칭을 오늘의 관통 명제로 채택
+- **측정 분열 포착**: 같은 날 `EVAL_STATUS.md` 는 **100.0/100**(type 필드 할당률), `KNOWLEDGE_PULSE.md` 는 **97.2/100, 고립률 3.1%**(링크 밀도) 를 기록 — 형식의 완결과 연결의 완결이 서로 다른 점수판에서 측정되고 있음
+
+### 왜 중요한가
+
+1. **절제와 확장은 모순이 아니다**: 어제 0 건, 오늘 8 건이지만 8 건 전부가 [[human-gate-schema]] 의 최소 2 개 관문에 접속한 채 편입됨. 신규 채용의 건전성이 머릿수가 아니라 **첫날 접속한 기존 프로세스의 수**로 판별되는 것과 동형 — 조직도를 넓히지 않고 관문을 두껍게 만든 사례.
+2. **AX 성과 지표의 함정**: 활용률을 측정하면 구성원은 활용률을 생산한다. AI 활용 실적 보고·대시보드·우수 사례 발표회가 **신종 Bullshit 7% 로 계상**된다는 것은, AX 내재화 KPI 설계를 '활용률'에서 떼어내야 할 정량적 근거.
+3. **리스킬링 예산 배분 원칙의 역전**: 퇴화율 순이 아니라 **복원율 역순**으로 우선순위를 매겨야 한다. 복원율 45% 인 대인 협상은 잃기 전에 지켜야 하고, 81% 인 전략적 기획은 나중에 회수 가능 — 교육을 사후 복구가 아닌 **감가상각 방지 장치**로 재정의.
+4. **100 점의 해석**: 100 점은 달성의 증거가 아니라 **측정 범위의 고백**이다. 필수 교육 이수율 100% 가 학습을 증명하지 않는 것과 같은 구조. 만점이 표시될수록 그 만점이 세지 않기로 한 3.1% 를 손으로 짚어야 한다.
+
+### 영향 범위
+
+- Vault Nodes: [[human-gate-schema]], [[hr-conceptual-atoms]], [[self-determination-theory]], [[weak-signal-theory]], [[fde-talent-model]], [[trust-ladder-curriculum]], [[bp-signal-intelligence]], [[economic-freedom]], [[hr-identity-evolution]], [[bias-audit-protocol]]
+- 신규 Signal 8 종: meaning-protection-zone-2026 · bullshit-task-audit-2026 · decision-architecture-redesign-2026 · ai-weight-governance-2026 · agent-native-org-efficiency-2026 · blocked-agency-resolution-2026 · self-evolving-agents-governance-2026 · intentional-skill-maintenance-2026
+- Execution Surface: AX 내재화 KPI 재설계(활용률 지표 재검토), 리스킬링 예산 배분 기준(복원율 역순), 거시경제 신호의 HR 번역 규칙(bp-signal-intelligence 확장)
+- 운영 규율: 신규 노드 편입 시 **Gate 최소 2 개 접속을 입국 조건**으로 관행화
+
+### 다음 확인
+
+1. **고립 문서 3.1% 재연결** — 08-05 에서 이월된 미결. 상위 10 개를 오늘 편입된 8 개 Signal 노드에 직접 연결
+2. **점수판 통합 판단** — `EVAL_STATUS.md`(형식 100.0) 와 `KNOWLEDGE_PULSE.md`(연결 97.2) 의 이원 측정을 유지할지, 단일 지표로 합칠지 결정. 유지한다면 각 점수가 무엇을 세지 않는지 문서 상단에 명시
+3. **Money Flow 브리핑의 wiki 정식 편입** — 시냅스 문서는 생성되었으나 브리핑 자체는 아직 INGEST 미완, Evidence Level B(상관 관계) 표기 유지 여부 확인
+4. **inbox 잔여 3 건** — 08-05 에서 계속 이월 중, 처리 또는 종결 판정 필요
+
+---
+
 ## [2026-08-05] 저녁 성찰 (Daily Reflect) — 만들지 않기로 한 날
 
 ### 무엇이 바뀌었나
