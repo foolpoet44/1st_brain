@@ -309,5 +309,16 @@ status: Active
 - [ ] Human Gate 4 종을 [[bp-signal-intelligence]] 의 `evolution_gate` 스키마에 명세화
 - [ ] 알고리즘 모노컬처 통계 (Stanford HAI) 다음 HR Tech 브리핑에서 재확인 시 별도 signal 노드 승격 검토
 - [ ] inbox/ 폴더의 미처리 파일 (3 건: 16 powerful Agent skills, 하네스 엔지니어링, 이름 없는 보드) 처리 여부 검토
+## [2026-08-06] Money Flow Briefing
+
+### [BRIEFING] 거시경제 브리핑: 돈의 이동과 욕망의 지형
+- **무엇이 바뀌었나**: Fed 금리 동결 (3.5-3.75%, 3 명 dissent), Hedge Fund AUM $5.6T (15 분기 연속 증가), Equity Market Neutral 29% 선호, KRW/USD 1,460 원 (외국인 35 조 매도 vs 개인 32 조 매수)
+- **왜 중요한가**: 자본시장이 Guardian(방향성 베팅) 에서 Gardener(시장 중립) 으로 정체성 전환 중 — HR 의 AI 수용 Trust Ladder 와 병렬 진화
+- **영향 범위**: [[Economic Freedom]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]] 연결, Human Gate 3 가지 제안 (단일 자산 30% 초과 금지, 환율 임계치 자동 매도 금지, 인플레이션 헤지 20% 미만 금지)
+- **다음 확인**:
+  - [ ] INGEST Job 이 BRIEFING_MONEY-FLOW_2026-08-06.md wiki 편입
+  - [ ] SYNAPSE_ECONOMIC-FREEDOM-TRUST-LADDER.md 생성 여부
+  - [ ] 대시보드 (http://localhost:8080) 에 Money Flow Signals 섹션 추가
+  - [ ] [[bp-signal-intelligence]] 에 Human Gate YAML 추가
 
 ---

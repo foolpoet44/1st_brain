@@ -298,3 +298,18 @@ bias_audit_gate:
 3. **임계치 초과** 시 Telegram 알림 + Gate 발동
 4. **Gate #4 (Rollback)** 트리거 시 즉시 중지
 
+
+---
+
+## Evolution Gate YAML Schema (Human Gate #1)
+
+evolution_gate:
+  required: true
+  audit_log: true
+  rollback_enabled: true
+  validation_sample: 10
+  audit_frequency: quarterly
+  stages:
+    - gate_1: proposal_review  # 수정 제안 → 인간 승인
+    - gate_2: ab_test_review    # A/B 테스트 결과 → 인간 검증
+    - gate_3: quarterly_audit   # 분기별 진화 감사
