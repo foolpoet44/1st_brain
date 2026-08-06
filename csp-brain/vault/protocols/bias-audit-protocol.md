@@ -313,3 +313,36 @@ evolution_gate:
     - gate_1: proposal_review  # 수정 제안 → 인간 승인
     - gate_2: ab_test_review    # A/B 테스트 결과 → 인간 검증
     - gate_3: quarterly_audit   # 분기별 진화 감사
+
+---
+
+## Macro-to-HR Signal Translation (자본시장 → HR 번역)
+
+bp_signal_extension:
+  macro_to_hr_mapping:
+    - macro_signal: "Fed 3.5-3.75% 동결, 3 명 dissent (인상)"
+      hr_translation: "AI 채용 결정 100% 자동화 금지, 3 명 이상 인간 심사위원회 필수"
+      gate_link: "[[human-gate-schema]]#Gate-1"
+      
+    - macro_signal: "Equity Market Neutral 29% 선호"
+      hr_translation: "AI 점수 단독 사용 금지, 인간 면접 + AI 점수 가중치 50:50"
+      gate_link: "[[human-gate-schema]]#Gate-2"
+      
+    - macro_signal: "$5.6T Hedge Fund AUM (15 분기 연속 증가)"
+      hr_translation: "AI 편향 모니터링 분기별 감사 의무화 (15 분기 학습 곡선)"
+      gate_link: "[[human-gate-schema]]#Gate-3"
+      
+    - macro_signal: "KRW/USD 1,460 원, 개인 32 조 순매수"
+      hr_translation: "한국 HR 의 AI 수용도 = 개인 투자자 심리 (Blind Faith 단계)"
+      gate_link: "[[trust-ladder-curriculum]]#Stage-1"
+
+### 번역 원칙
+
+1. **단일 신호 의존 금지**: 자본시장의 분산 투자 ↔ HR 의 다중 평가
+2. **학습 곡선 존중**: 15 분기 학습 기간 ↔ 분기별 감사 의무화
+3. **소수의견 보호**: Fed dissent 기록 ↔ 인간 심사위원회 3 명 이상
+4. **성숙 단계 고려**: 한국 시장 Blind Faith ↔ Trust Ladder Stage 1 교육
+
+### 관련 Synapse
+
+- [[SYNAPSE_ECONOMIC-FREEDOM-TRUST-LADDER]] — 자본시장-HR 병렬 진화 통찰
