@@ -1,6 +1,7 @@
 ---
 type: Note
 status: Active
+processed: true
 ---
 
 # 💰 돈의 이동 브리핑 — 2026 년 7 월 29 일 화요일

@@ -1,6 +1,7 @@
 ---
 type: Note
 status: Active
+processed: true
 ---
 
 # HR Tech Daily Briefing — 2026-07-31

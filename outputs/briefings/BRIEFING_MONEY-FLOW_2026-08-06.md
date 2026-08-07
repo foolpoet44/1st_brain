@@ -18,7 +18,10 @@ synapse_connections:
   - "[[bp-signal-intelligence]]"
   - "[[hr-conceptual-atoms]]"
 dashboard_url: "http://localhost:8080"
----
+
+processed: true
+processed_date: 2026-08-06 18:30:54
+processed_note: Merged into 2026-05-30-harness-is-not-just-a-leash.md---
 
 # 거시경제 브리핑: 돈의 이동과 욕망의 지형 (2026-08-06)
 

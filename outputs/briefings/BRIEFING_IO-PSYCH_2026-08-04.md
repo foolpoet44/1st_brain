@@ -1,3 +1,9 @@
+---
+type: Briefing
+status: Active
+created: 2026-08-04
+processed: true
+---
 # I/O 심리학 브리핑: 2026 년 8 월 4 일
 
 type: Person

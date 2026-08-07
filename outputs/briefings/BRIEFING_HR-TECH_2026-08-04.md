@@ -1,3 +1,9 @@
+---
+type: Briefing
+status: Active
+created: 2026-08-04
+processed: true
+---
 # HR Tech Briefing — 2026-08-04
 
 type: Concept

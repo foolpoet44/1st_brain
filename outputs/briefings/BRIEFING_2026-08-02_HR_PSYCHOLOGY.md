@@ -1,6 +1,7 @@
 ---
 type: Note
 status: Active
+processed: true
 ---
 
 # HR 심리학 브리핑: AI 시대의 일의 의미와 인간 의사결정

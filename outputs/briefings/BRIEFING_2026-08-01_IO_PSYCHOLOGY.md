@@ -3,6 +3,7 @@ type: Briefing
 status: Active
 date: 2026-08-01
 time: 09:10 KST
+processed: true
 ---
 
 # HR Tech Psychology Briefing — 2026-08-01 (토요일)

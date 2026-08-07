@@ -1,6 +1,7 @@
 ---
 type: Note
 status: Active
+processed: true
 ---
 
 # HR Tech Psychology Daily Briefing

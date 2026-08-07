@@ -1,6 +1,7 @@
 ---
 type: Note
 status: Active
+processed: true
 ---
 
 # MONEY_FLOW_BRIEFING_2026-08-03.md
