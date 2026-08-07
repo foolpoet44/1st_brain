@@ -132,3 +132,12 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 - [ ] 알고리즘 모노컬처 통계 (Stanford HAI) 다음 브리핑에서 재확인 시 별도 신호 승격 검토
 
 ---
+
+## 2026-08-06 18:30:54
+
+- **신규**: 0건
+- **병합**: 1건
+- **중복 종결**: 0건
+
+### 상세
+병합: BRIEFING_MONEY-FLOW_2026-08-06.md → 2026-05-30-harness-is-not-just-a-leash.md (통계 중복: 2026)

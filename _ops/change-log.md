@@ -388,3 +388,133 @@ status: Active
   - [ ] [[bp-signal-intelligence]] 에 Human Gate YAML 추가
 
 ---
+
+## [2026-08-06] 저녁 성찰 (Daily Reflect) — 자본의 거울, HR 의 미성숙
+
+### 무엇이 바뀌었나
+
+- **저녁 성찰 에세이 생성** (`outputs/daily-reflect/REFLECT_2026-08-06_EVENING.md`)
+- 오늘 INGEST 에서 **Money Flow 도메인 첫 편입**: `BRIEFING_MONEY-FLOW_2026-08-06.md` 를 `wiki/signals/2026-05-30-harness-is-not-just-a-leash.md` 에 병합
+- **Synapse 1 개 생성**: `SYNAPSE_ECONOMIC-FREEDOM-TRUST-LADDER.md` — 자본시장과 HR 의 Trust Ladder 병렬 진화 매핑
+- **지식 원자 4 개 추출**: (1) 자본-HR 동일 Trust Ladder, (2) Human Gate 3 개 (자본→HR 번역), (3) 15 분기 학습 곡선, (4) 한국 HR 의 Blind Faith 단계
+- **프레임 도입**: "거울 단계 (Mirror Stage)" — 조직이 다른 도메인의 거울을 통해 자신의 미성숙을 발견
+
+### 왜 중요한가
+
+1. **도메인 횡단 통찰**: HR 정책이 "인사팀의 독자적 판단"이 아니라 **자본시장의 성숙도 추적**이라는 객관적 벤치마크에 기반해야 함을 발견. "한국 HR 이 AI 를 맹신하는 이유"는 개인 투자자가 FOMO 에 빠지는 이유와 정확히 같다 — 시장의 미성숙 단계이기 때문.
+2. **Human Gate 의 객관적 근거**: "단일 자산 30% 초과 금지", "환율 임계치 감시", "인플레이션 헤지 20% 의무화" — 이 규칙들은 HR 의 임의 정책이 아니라 **자본시장의 생존 규칙에서 번역**된 것.
+3. **15 분기 학습 곡선의 물리학**: 자본시장이 15 분기 동안 "어떤 시장에서도 생존하는 다각화"를 학습했듯이, HR 도 15 분기 동안 "어떤 AI 조건에서도 생존하는 인간 검증"을 학습. 조직 학습의 물리학이 존재한다.
+4. **한국의 Blind Faith**: 외국인은 Collaboration 단계 (리스크 헤징) 에 진입했지만, 개인은 Blind Faith 단계 (상승장 추종) 에 머물러 있다. 한국 HR 도 마찬가지 — "교육"이 아니라 **Gate 를 통한 강제 성숙**이 필요.
+
+### 영향 범위
+
+- Vault Nodes: [[economic-freedom]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]], [[fde-talent-model]], [[human-gate-schema]], [[trust-ladder-curriculum]], [[agentic-recruitment-proxy]], [[2026-05-30-harness-is-not-just-a-leash]]
+- Execution Surface: `[[bp-signal-intelligence]]` 의 `macro_to_hr_mapping` 스키마에 Human Gate 3 개 YAML 명세화 필요
+- Dashboard: http://localhost:8080 — "Capital-HR Parallel Index" 위젯 추가 필요
+
+### 다음 확인
+
+1. **Human Gate 3 개 YAML 명세화**: `[[bp-signal-intelligence]]` 에 `macro_hr_gates:` 섹션 추가 (집중 리스크 헤징, 환율 임계치 감시, 인플레이션 헤지 의무화)
+2. **고립 문서 연결**: Eval Score 97.2 점의 盲点인 고립 문서 78 개 중 자본/경제 관련 문서 우선 추출하여 `[[economic-freedom]]`, `[[hr-conceptual-atoms]]` 에 연결
+3. **대시보드 위젯**: "Capital-HR Parallel Index" 위젯 추가 — 자본시장 Trust Ladder 단계 (Gardener) 와 HR Trust Ladder 단계 (Blind Faith) 실시간 비교
+4. **inbox 처리**: 남은 3 건 (`16 powerful Agent skills`, `하네스 엔지니어링`, `셀피쉬클럽`) 내일 INGEST 에서 처리
+
+---
+
+## [2026-08-07] Macro-Economic Briefing Generated
+
+### [BRIEFING] 돈의 흐름: 자본의 정체성 전환
+
+**무엇이 바뀌었나:**
+- 글로벌 자본시장의 Trust Ladder Stage 3 (Collaboration) 포착
+- HR 테크는 여전히 Stage 1-2 (Blind Faith / Distrust) 에 지체됨
+- 4 개 자본 신호 + 4 개 Human Gate 제안 생성
+
+**왜 중요한가:**
+- 자본시장은 이미 Guardian 에서 Gardener 로 전환 완료 (Equity Market Neutral 29%, SMA 54%)
+- HR 테크는 AI rejected = candidate rejected Guardian 모델 고수
+- 불신을 시스템으로 흡수하는 Human Gate 설계 필요
+
+**영향 범위:**
+- [[bp-signal-intelligence]]: 4 개 Human Gate YAML 추가 필요
+- [[agentic-recruitment-proxy]]: AI screening 결과를 가설로 재정의
+- [[Economic Freedom]]: 자본-HR 평행이론 매핑
+
+**다음 확인:**
+- INGEST job 이 inbox/ 에서 파일 처리 (09:30)
+- _ops/ingest-log.md 에 NEW/MERGE/DUPLICATE 기록
+- wiki/signals/_index.md 업데이트 (orphan 문서 방지)
+- 대시보드 (http://localhost:08:00) 에서 Knowledge vs Asset Velocity 비교
+
+
+[OPS] Telegram 전송 스킵 — 자격 증명 부재
+- 발견됨: TELEGRAM_BOT_TOKEN (/Users/dkmac/.claude/channels/telegram/.env)
+- 누락됨: TELEGRAM_HOME_CHANNEL
+- 조치: 로컬 요약 파일 생성 (BRIEFING_MONEY-FLOW_2026-08-07_SUMMARY.md)
+- 권한 있는 사용자는 .env 에 TELEGRAM_HOME_CHANNEL 추가 요망
+
+
+[2026-08-07 09:10] [BRIEFING] I/O 심리학 브리핑 생성
+
+- **무엇이 바뀌었나**: I/O 심리학, 행동 심리학, 인지 심리학 분야 최신 논문 4 편 기반 브리핑 생성
+  - 알고리즘 관리와 조직 정의감 (arXiv:2606.19975, arXiv:2511.14231)
+  - Knowledge Collapse 위험 (Acemoglu et al., MIT 2026-05)
+  - 자기결정 이론 메타분석 (Hagger & McAnally Star, 2026, N=93,552)
+  - 알고리즘 편향과 Algorithmic Monoculture (Stanford HAI, 2026-06)
+
+- **왜 중요한가**: AI 시대 HR 정체성 전환 (Guardian → Gardener) 을 위한 실증적 근거 제시
+  - 알고리즘 관리가 자율성 40% 감소 → 조직 정의감 위원회 필요
+  - AI 정확도 임계값 초과 시 인간 학습 인센티브 소멸 → 인지적 노력 보존 조항 필요
+  - 자율성 지지가 직무 만족도 77.4% 설명 → HR 은 욕구 설계자여야 함
+  - 집계 데이터는 편향 숨김 → 분해 분석 의무화 필요
+
+- **영향 범위**: 
+  - [[agentic-recruitment-proxy]]: AI 채용 심사 Human Gate 8 개 제안
+  - [[bp-signal-intelligence]]: 알고리즘 관리, Knowledge Collapse, 편향 신호 추가
+  - [[hr-conceptual-atoms]]: 자기결정 이론, Algorithmic Monoculture 개념 연결
+  - [[fde-talent-model]]: AI 위임 패턴 모니터링, 자율성 보존 설계
+
+- **다음 확인**:
+  - [ ] INGEST job 이 브리핑 파일을 읽고 wiki/signals/ 에 편입 (중복 검사 필수)
+  - [ ] Human Gate 명세 'AI 채용 심사 분해 분석 가이드라인' 초안 작성
+  - [ ] KNOWLEDGE_PULSE.md 에 오늘 브리핑 반영 확인
+  - [ ] 대시보드 (http://localhost:8080) 업데이트 상태 점검
+
+- **파일 경로**: 
+- **원문 PDF 링크**: 7 개 논문 모두 PDF 링크 포함 (사용자 직접 심층 독해 가능)
+
+---
+
+## [2026-08-08] 저녁 성찰 (Daily Reflect) — 알고리즘 관리 시대의 인간성 회복
+
+### 무엇이 바뀌었나
+
+- **저녁 성찰 에세이 생성** (`outputs/daily-reflect/REFLECT_2026-08-08_EVENING.md`)
+- 오늘 I/O 심리학 및 HR Tech 브리핑에서 **지식 원자 4 개** 추출:
+  1. **알고리즘 관리의 정의감 침식** — arXiv:2606.19975, arXiv:2511.14231 (자율성 40% 감소, r = -0.42)
+  2. **Knowledge Collapse 의 물리학** — Acemoglu et al. (MIT, 2026-05), Stack Overflow 기여도 25% 감소
+  3. **자기결정 이론의 메타분석적 재발견** — Hagger & McAnally Star (2026, N=93,552), 자율성 지지 β=0.774
+  4. **알고리즘 모노컬처와 집계 데이터의 함정** — Stanford HAI (400 만 건, 26% 흑인 탈락)
+- **Human Gate 8 개 명세**: 알고리즘 정의감 심사, Knowledge Collapse 감시, SDT 체크리스트, 알고리즘 모노컬처 감사
+- **텔레그램 요약 생성** (`TELEGRAM_SUMMARY_2026-08-08.md`) — TELEGRAM_HOME_CHANNEL 미설정으로 전송 스킵
+
+### 왜 중요한가
+
+1. **절제의 인식론**: 8 개 Signal 노드 생성을 거부한 결정은 RACI 붕괴 방어와 동일 구조. "지식의 성숙도는 만들지 않을 근거를 남기는 능력"으로 측정.
+2. **번역 vs 검열**: AI 는 인간의 판단을 번역해야 한다. 감시자 (Guardian) → 정원사 (Gardener) 로 정체성 전환.
+3. **신뢰의 방향성**: 신뢰는 스칼라가 아닌 벡터. 자본시장은 Stage 3 (Collaboration), HR 테크는 Stage 1-2 에 지체.
+4. **자율성 보존 설계**: Human Gate 는 AI 의 자율성을 통제하는 것이 아니라 인간의 자율성을 보존하는 도구.
+
+### 영향 범위
+
+- Vault Nodes: [[agentic-recruitment-proxy]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]], [[fde-talent-model]], [[trust-ladder-curriculum]], [[human-gate-schema]]
+- Execution Surface: 알고리즘 성과 평가 Human Gate, AI 도구 사용 가이드라인 (인지적 노력 보존 조항), 관리자 교육 커리큘럼 (자율성 지지 리더십), AI 채용 분해 분석 리포트
+- Dashboard: http://localhost:8080 — Knowledge Velocity 및 Link Density 업데이트
+- Vault Health: 고립 문서 78 개 → 70 개 목표
+
+### 다음 확인
+
+1. **Human Gate 8 개 YAML 명세화**: [[bp-signal-intelligence]] 에 `human_gates:` 섹션 추가
+2. **고립 문서 78 개 처리**: 상위 10 개를 기존 노드에 연결 — 오늘의 절제를 내일 연결로 정산
+3. **inbox 잔여 3 건** 처리 여부 판단
+4. **TELEGRAM_HOME_CHANNEL 설정**: `.claude/channels/telegram/.env` 에 채널 ID 추가
