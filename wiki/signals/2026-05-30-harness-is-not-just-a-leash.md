@@ -27,3 +27,7 @@ url: https://www.linkedin.com/posts/hwang-minho_%ED%95%98%EB%84%A4%EC%8A%A4%EB%8
 
 - **Evaluator 독립**: 현재 헤르메스가 직접 생성하고 검증하는 구조에서, '검증 전담 서브에이전트'를 활용한 객관적 평가 체계 강화 필요.
 - **환경의 자산화**: 리포지토리를 단순 코드 보관소가 아닌 에이전트의 '기록 시스템(System of Record)'으로 대우해야 함.
+
+
+## Timeline
+- 2026-08-06: 증분 추가 (출처: BRIEFING_MONEY-FLOW_2026-08-06.md)
