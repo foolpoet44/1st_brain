@@ -1,5 +1,6 @@
 # csp-brain Type 자동 분류 결과 보고서
 
+type: Meeting
 **실행 일시**: 2026-08-06 13:02  
 **스크립트**: `scripts/auto-classify-types.sh 50`  
 **Vault 경로**: `/Users/dkmac/csp-brain`
