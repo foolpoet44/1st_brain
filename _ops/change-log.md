@@ -69,6 +69,38 @@
 5. **inbox 31 건** — 대시보드 기준 31 건이 미대사 상태로 누적. 어제까지 성찰이 인용해 온 "잔여 3 건"과 계수 기준이 다름, 어느 쪽이 실제 미처리인지 확인 필요
 
 ---
+---
+
+## [2026-08-09] 지식 대사 작용 보고 (Metabolism Report)
+
+### 무엇이 바뀌었나
+
+- **대사 보고서 생성** (outputs/daily-reflect/METABOLISM_REPORT_2026-08-09.md)
+- 2026-08-08 Evening Reflect 의 4 Knowledge Atom 을 지식 대사 프레임워크로 재구성
+- 6 개 브리핑 처리 (신규 0/병합 6/중복 0) — 절제 규율의 의식적 적용
+
+### 왜 중요한가
+
+1. **절제의 인식론**: 6 개 브리핑이 제안한 Signal 노드 6 개를 모두 기존 문서에 병합 — '더 적은 문서 = 더 높은 밀도'라는 성숙한 지식 대사 규율 채택
+2. **이중 볼트 문제**: csp-brain/vault/ 의 8 개 노드가 wiki/ 계측 범위 밖에 있어 건강 점수 미반영 — '측정 범위 밖의 성장은 분가 (分家) 다'
+3. **성찰 인플레이션**: 지식 델타 0 인 사흘 동안 성찰 94 편 — 회고가 실행을 추월한 조직에서 회고는 학습 장치가 아니라 성실성의 증빙
+4. **재귀적 굿하트**: 굿하트 법칙을 아는 것이 법칙으로부터의 면제를 뜻하지 않음 — 통찰 (문장) 과 정리 (작업) 는 다른 노동
+
+### 영향 범위
+
+- Vault Nodes: [[csp-brain-system]], [[knowledge-capitalization]], [[weak-signal-theory]], [[bp-signal-intelligence]], [[agentic-recruitment-proxy]], [[hr-conceptual-atoms]], [[vibe-coding]], [[self-determination-theory]]
+- 계측 상태: 위키 91(Δ0) · 고립 7(5.8%) · 정체 68(61.3%) · health 97.2(▲27.2)
+- 실행 표면: 이중 볼트 통합 판정 필요, 고립 문서 7 개 재연결, 재소화 큐 3 건 갱신
+
+### 다음 확인
+
+1. **이중 볼트 통합 판정** — csp-brain/vault/ 를 wiki/ 로 이주할지, 스캔 범위 확장할지 결정 (소요 90 분)
+2. **고립 문서 7 개 재연결** — 알고리즘 관리·SDT·Knowledge Collapse 관련 문서 우선 연결 (소요 45 분)
+3. **재소화 큐 3 건 갱신** — [[vibe-coding]]·[[hr-conceptual-atoms]]·[[agentic-recruitment-proxy]] Compiled Truth 재작성 (소요 60 분)
+4. **성찰 작성 규칙 보완** — 지식 델타 0 인 날 One Strategy 1 문장만 작성하는 타협안 검토 (소요 30 분)
+
+---
+
 
 ## [2026-08-06] 저녁 성찰 (Daily Reflect) — 관문을 통과한 것만 들인 날
 
@@ -554,3 +586,64 @@ status: Active
 2. **고립 문서 78 개 처리**: 상위 10 개를 기존 노드에 연결 — 오늘의 절제를 내일 연결로 정산
 3. **inbox 잔여 3 건** 처리 여부 판단
 4. **TELEGRAM_HOME_CHANNEL 설정**: `.claude/channels/telegram/.env` 에 채널 ID 추가
+
+## [BRIEFING] 2026-08-09 HR Tech 브리핑: 자율 채용의 시대, 감시자에서 정원사로
+
+**무엇이 바뀌었나**:
+- 자율 채용 플랫폼의 경제적 압도성 확인 (채용당 $67, 98% 절감)
+- Stanford HAI 연구: 알고리즘적 단일문화로 26% 인종 편향, 10% 시스템적 탈락
+- SHRM 2026: AI 효율성 87% 향상, 그러나 의사결정 개선 50% 없음
+- Applied AI 등장 — Generative AI 를 넘어 자율 실행 에이전트
+
+**왜 중요한가**:
+- HR 정체성 전환 요구: 감시자 (gatekeeper) → 정원사 (gardener)
+- Trust Ladder Stage 2 (Distrust) → Stage 3 (Collaboration) 으로 이동 필요
+- "AI 는 가설을 생성하고, 인간은 검증한다" 프레임 정립
+
+**영향 범위**:
+- [[agentic-recruitment-proxy]]: 자율 채용 에이전트 Human Gate 명세 추가
+- [[bp-signal-intelligence]]: 알고리즘적 단일문화, 편향 감사 스키마 업데이트
+- [[hr-conceptual-atoms]]: Guardian → Gardener 정체성 전환 프레임
+
+**다음 확인**:
+- [ ] INGEST job 이 BRIEFING_HR-TECH_2026-08-09.md 를 wiki 로 편입
+- [ ] 4 개 Signal 노드 생성 제안 검토 (NEW/MERGE/DUPLICATE 판정)
+- [ ] Human Gate 4 개 ([[bp-signal-intelligence]] 업데이트)
+- [ ] KNOWLEDGE_PULSE.md 에 "2026-08-09 HR Tech 브리핑" 반영
+
+## [2026-08-08] INGEST 프로토콜 수행 — 6 개 브리핑 wiki 로 편입
+
+### 무엇이 바뀌었나
+
+- **outputs/briefings/** 의 처리되지 않은 브리핑 6 건을 **wiki/signals/** 기존 문서에 병합
+- 신규 signal 노드 생성 0 건 (모든 주제가 기존 문서가 포괄)
+- 6 개 브리핑 파일에  마킹 완료
+
+### 왜 중요한가
+
+- **생산 (브리핑 생성) 과 소화 (INGEST) 의 동기화**: 매일 생성되는 브리핑이 wiki 에 편입되지 않으면 "지식 적체" 발생
+- **중복 방지**: 브리핑이 제안하는 signal 노드를 그대로 생성하면 같은 사실이 여러 문서에 흩어짐 (2026-07-23/24 반복 사례 교훈)
+- **증분 기록**: 기존 문서의 Timeline 에 "새로 더해진 사실"만 기록하여 지식의 계보 유지
+
+### 영향 범위
+
+- **변경된 wiki/signals/ 문서**: 4 개
+  - 2026-05-30-harness-is-not-just-a-leash.md (자본 흐름 병합)
+  - 2026-07-22-autonomous-hiring-paradox.md (HR Tech 병합)
+  - 2026-07-24-cognitive-offloading-skill-decay.md (I/O 심리학 병합)
+  - 2026-07-26-self-evolving-agents-evolution-gate.md (메타인지 병합)
+- **마킹된 브리핑 파일**: 6 개 (outputs/briefings/)
+- **기록 파일**: _ops/ingest-log.md
+
+### 다음 확인
+
+- [ ] wiki/signals/_index.md 에 4 개 문서의 링크 존재 확인
+- [ ] KNOWLEDGE_PULSE.md 에 "오늘 편입된 6 건" 반영
+- [ ] 대시보드 (http://localhost:8080) 에 "Today: 6 MERGE" 표시
+- [ ] 2026-08-10 브리핑 생성 후 중복 대조 시 오늘 병합된 증분과 중복되지 않는지 확인
+
+### 사람 판단 필요 항목
+
+- **없음**. 모든 통계가 복수 출처 (Barclays H2 2026, SHRM 2026, Stanford HAI, arXiv 2026) 에 기반하며, 개인정보·생체정보·감시와 관련된 스키마 변경도 없음.
+
+---

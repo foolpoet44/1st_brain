@@ -141,3 +141,41 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 
 ### 상세
 병합: BRIEFING_MONEY-FLOW_2026-08-06.md → 2026-05-30-harness-is-not-just-a-leash.md (통계 중복: 2026)
+
+## 2026-08-08 18:33:07
+
+### 판정 요약
+
+- **신규 생성 (NEW)**: 0 건
+- **병합 (MERGE)**: 6 건
+- **중복 종결 (DUPLICATE)**: 0 건
+
+### 병합 상세
+
+| 원본 파일 | 대상 wiki/signals/ 문서 | 추가된 증분 |
+| :--- | :--- | :--- |
+| BRIEFING_MONEY-FLOW_2026-08-07.md | 2026-05-30-harness-is-not-just-a-leash.md | 자본 중립화 신호 (Equity Market Neutral 29%) |
+| BRIEFING_MONEY-FLOW_2026-08-08.md | 2026-05-30-harness-is-not-just-a-leash.md | Fed 금리/환율/해외투자 신호 |
+| BRIEFING_HR-TECH_2026-08-07.md | 2026-07-22-autonomous-hiring-paradox.md | 10 전문에이전트, 자기진화 (MOSS), 88% AI 스크리닝 |
+| BRIEFING_HR-TECH_2026-08-09.md | 2026-07-22-autonomous-hiring-paradox.md | 자율채용 경제성 (/hire), SHRM 2026, 알고리즘 모노컬처 |
+| BRIEFING_IO-PSYCH_2026-08-07.md | 2026-07-24-cognitive-offloading-skill-decay.md | 알고리즘 관리 자율성 40% 감소, SDT 메타분석 |
+| BRIEFING_IO-PSYCH_2026-08-08.md | 2026-07-26-self-evolving-agents-evolution-gate.md | SCAN 프레임워크, LLM 감정편향, 메타인지 프롬프트 |
+
+### 판정 근거
+
+1. **중복 대조 완료**:  에서 각 브리핑의 핵심 통계 검색 (grep).
+2. **기존 문서 확인**: 모든 브리핑이 기존 signal 문서와 통계적 중복을 가짐.
+3. **증분 추가**: 각 문서의  섹션에 2026-08-07/08/09 일자 증분 기록.
+4. **신규 노드 생성 금지**: 브리핑이 제안한 signal 노드는 모두 기존 문서가 포괄. 분리는 백링크만 늘리고 사실의 소유권을 흐림.
+
+### 사람 판단 필요 항목
+
+- **없음**. 모든 통계가 복수 출처 (Barclays, SHRM, Stanford HAI, arXiv) 에 기반하며, 개인정보·생체정보·감시와 관련된 스키마 변경도 없음.
+
+### 후속 조치
+
+- [ ] 6 개 브리핑 파일 모두  마킹 완료
+- [ ] change-log.md 에 CLAUDE.md 4 절 형식으로 기록 필요
+- [ ] wiki/signals/_index.md 에 병합된 문서들의 링크 존재 확인
+
+---
