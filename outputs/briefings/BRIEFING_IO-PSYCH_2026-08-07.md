@@ -4,6 +4,9 @@ date: 2026-08-07
 domain: IO-PSYCH
 status: Active
 tags: [IO-Psychology, AI-Workplace, Algorithmic-Management, Self-Determination-Theory, Knowledge-Collapse]
+processed: true
+processed_date: 2026-08-08
+processed_note: "MERGE → 2026-07-24-cognitive-offloading-skill-decay.md (알고리즘관리/SDT)"
 ---
 
 # I/O 심리학 브리핑: 알고리즘 관리 시대의 인간성 회복 (2026-08-07)

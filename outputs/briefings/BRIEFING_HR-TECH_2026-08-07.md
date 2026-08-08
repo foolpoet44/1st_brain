@@ -5,6 +5,9 @@ domain: HR-TECH
 status: Active
 title: "HR Tech Daily Briefing — 2026-08-07: 자율성의 역설과 감시자의 그늘"
 tags: [agentic-recruitment, self-evolving-agents, AI-bias, talent-acquisition-market]
+processed: true
+processed_date: 2026-08-08
+processed_note: "MERGE → 2026-07-22-autonomous-hiring-paradox.md (10 에이전트/자기진화)"
 ---
 
 # HR Tech Daily Briefing — 2026-08-07: 자율성의 역설과 감시자의 그늘

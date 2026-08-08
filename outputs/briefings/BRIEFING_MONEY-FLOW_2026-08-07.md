@@ -10,6 +10,9 @@ tags:
   - 헤지펀드
   - 환율
   - 금리
+processed: true
+processed_date: 2026-08-08
+processed_note: "MERGE → 2026-05-30-harness-is-not-just-a-leash.md (자본 중립화 신호)"
 ---
 
 # 자본의 정체성 전환: 감시자에서 정원사로
