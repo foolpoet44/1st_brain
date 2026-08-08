@@ -39,6 +39,8 @@ tags: [index, wiki]
 - [[2026-07-24-cognitive-offloading-skill-decay|인지적 오프로딩과 스킬 디케이]] — AI가 빼앗는 것은 지루함이 아니라 기쁨
 
 ### 채용 & 노동시장
+- [[2026-07-22-autonomous-hiring-paradox|자율 채용의 역설과 감시자의 그늘]] — 88% AI 스크리닝 vs 71% 반대
+
 
 - [[2026-06-13-agentic-ta-mainstream-shift|에이전틱 채용의 주류화]] — 인간-AI 파워 커플의 등장
 - [[2026-06-15-agentic-ta-reset|Agentic TA 리셋과 슈퍼제너럴리스트의 부상]]

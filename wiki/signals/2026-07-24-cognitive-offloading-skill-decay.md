@@ -120,3 +120,7 @@ joy가 먼저 자동화된다는 발견은 방어 전략을 뒤집는다. 지금
 - [[bp-signal-intelligence]] — 신뢰도 vs 타당도 경고의 실증. `ai-offloading-risk` 태그 추가 대상.
 - [[fde-talent-model]] — "빌딩 우선" 원칙이 스킬 디케이 방어 장치.
 - [[2026-07-22-autonomous-hiring-paradox]] — AI 평가 불신(74%)의 심리학적 근거를 이 문서가 보강한다.
+## Timeline
+
+### 2026-08-08
+- 알고리즘 관리 자율성 40% 감소, Stack Overflow 25% 감소, SDT 메타분석 (k=192)

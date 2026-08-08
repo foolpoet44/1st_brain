@@ -30,4 +30,10 @@ url: https://www.linkedin.com/posts/hwang-minho_%ED%95%98%EB%84%A4%EC%8A%A4%EB%8
 
 
 ## Timeline
+### 2026-08-08
+- Fed 금리 3.75% 동결, KRW/USD 1,416 원, 해외 포트폴리오 $1,403 억 (2 배 증가)
+
+### 2026-08-08
+- 자본의 중립화 신호 추가: Equity Market Neutral 29% 선호도 (Barclays H2 2026)
+
 - 2026-08-06: 증분 추가 (출처: BRIEFING_MONEY-FLOW_2026-08-06.md)

@@ -139,3 +139,7 @@ evolution_gate:
 - [[bp-signal-intelligence]] — `evolution_gate` 필드 확장의 직접 대상.
 - [[sf-domain-mapping]] — Trust Level Disclosure가 신뢰 사다리 3단계의 구조적 장치.
 - [[fde-talent-model]] — 스킬 기반 채용이 요구하는 '정체성 확장' 언어.
+## Timeline
+
+### 2026-08-08
+- SCAN 프레임워크 (arXiv:2606.15601), LLM 감정 편향 (arXiv:2607.12631), 메타인지 프롬프트 (93% 편향 식별)
