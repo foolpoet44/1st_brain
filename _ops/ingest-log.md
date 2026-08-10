@@ -179,3 +179,42 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 - [ ] wiki/signals/_index.md 에 병합된 문서들의 링크 존재 확인
 
 ---
+
+## 2026-08-10 — INGEST 프로토콜 수행 (아침 브리핑 5 건)
+
+**집계**:
+- **신규 (NEW)**: 1 건 — 2026-08-10-capital-flow-market-neutral.md (MONEY-FLOW 도메인 첫 신호)
+- **병합 (MERGE)**: 4 건 — BRIEFING_IO-PSYCH_2026-08-10.md, BRIEFING_HR-TECH_2026-08-09.md, BRIEFING_MONEY-FLOW_2026-08-09.md, BRIEFING_MONEY-FLOW_2026-08-07_SUMMARY.md, BRIEFING_MONEY-FLOW_2026-08-10.md
+- **중복 종결 (DUPLICATE)**: 0 건
+
+**판정 근거**:
+1. **BRIEFING_IO-PSYCH_2026-08-10.md** → MERGE to 2026-07-22-autonomous-hiring-paradox.md
+   - 이유: 26% 편향 통계, agent-native 조직 개념이 기존 문서와 중복
+2. **BRIEFING_HR-TECH_2026-08-09.md** → MERGE to 2026-07-22-autonomous-hiring-paradox.md
+   - 이유: Trust Ladder, autonomous hiring, Human Gate 개념이 기존 문서와 중복
+3. **BRIEFING_MONEY-FLOW_2026-08-09.md** → MERGE to 2026-08-10-capital-flow-market-neutral.md (신규 생성)
+   - 이유: MONEY-FLOW 도메인의 자본시장 신호 — 기존 문서 없음
+4. **BRIEFING_MONEY-FLOW_2026-08-07_SUMMARY.md** → MERGE to 2026-08-10-capital-flow-market-neutral.md
+   - 이유: 동일 도메인 (MONEY-FLOW), 헤지펀드 중심 — 신규 문서에 통합
+5. **BRIEFING_MONEY-FLOW_2026-08-10.md** → MERGE to 2026-08-10-capital-flow-market-neutral.md
+   - 이유: 동일 도메인 (MONEY-FLOW), 시장 중립 전략 — 신규 문서에 통합
+
+**인용된 Human Gate**:
+- Human Gate #1: 에이전트 조직 설계 심의회 (IO-PSYCH)
+- Human Gate #2: DEI 위원회 벤더 심사 (IO-PSYCH)
+- Human Gate #3: 실무자 참여 AI 설계 심의 (IO-PSYCH)
+- Human Gate #4: 직무 의미 재정의 심의회 (IO-PSYCH)
+- Human Gate #1: 에이전트 조직 설계 심의회 (HR-TECH)
+- Human Gate #2: 집중 한도 심의 (HR-TECH)
+- Human Gate #3: 신뢰 점수 재검토 (HR-TECH)
+- Human Gate #4: 3 단계 진화 게이트 (HR-TECH)
+- Human Gate #1: 단일 자산 한도 심의 (MONEY-FLOW)
+- Human Gate #2: 환율 임계치 돌파 자동매도 금지 (MONEY-FLOW)
+- Human Gate #3: 인플레이션 헤지 20% 할당 심의 (MONEY-FLOW)
+
+**후속 작업**:
+- [ ] 2026-07-22-autonomous-hiring-paradox.md 의 Timeline 에 IO-PSYCH, HR-TECH 브리핑 내용 추가
+- [ ] 2026-08-10-capital-flow-market-neutral.md 의 Timeline 에 MONEY-FLOW 브리핑 3 건 내용 추가
+- [ ] _ops/change-log.md 에 [INGEST] 엔트리 추가
+
+---
