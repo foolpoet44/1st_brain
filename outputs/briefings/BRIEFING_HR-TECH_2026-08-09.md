@@ -5,6 +5,10 @@ domain: HR-TECH
 status: Active
 title: "HR Tech 브리핑 2026-08-09 — 에이전트 채용의 신뢰 사다리"
 tags: [HR-Tech, AI-Agent, Autonomous-Hiring, People-Analytics]
+
+processed: true
+processed_date: 2026-08-10
+processed_note: INGEST MERGE -> 2026-07-22-autonomous-hiring-paradox.md
 ---
 
 # HR Tech 브리핑 2026-08-09 — 에이전트 채용의 신뢰 사다리

@@ -2,6 +2,10 @@
 type: summary
 date: 2026-08-07
 domain: MONEY-FLOW
+
+processed: true
+processed_date: 2026-08-10
+processed_note: INGEST MERGE -> 2026-08-10-capital-flow-market-neutral.md
 ---
 
 # 돈의 흐름 브리핑 요약 (2026-08-07)

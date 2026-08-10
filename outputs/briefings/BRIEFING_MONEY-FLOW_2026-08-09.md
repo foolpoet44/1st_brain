@@ -4,6 +4,10 @@ date: 2026-08-09
 domain: MONEY-FLOW
 status: Active
 title: "[Money Flow] 60/20/20 포트폴리오의 등장과 기관의 '베타 제거' 신호 — 자본시장은 가디언을 버렸다"
+
+processed: true
+processed_date: 2026-08-10
+processed_note: INGEST MERGE -> 2026-08-10-capital-flow-market-neutral.md
 ---
 
 # Money Flow Briefing: 2026-08-09
