@@ -18,11 +18,50 @@ import os
 import re
 import fnmatch
 
-# 발행 대상 지식 폴더 (knowledge.html / _config.yml 과 일치시킬 것)
-DIRS = ["wiki", "concepts", "projects", "outputs", "people",
-        "decisions", "weekly", "research"]
-EXCLUDE_GLOBS = ["concepts/extracted-*.md"]
-EXCLUDE_FILES = {"outputs/weekly/2026-W18.md"}
+# 발행 대상 지식 폴더 (전체 Vault + 루트 파일)
+# raw/, inbox/ 는 미처리 자료이므로 제외
+DIRS = [
+    "",              # 루트 파일 (SOUL.md, AGENTS.md, README.md 등)
+    "wiki",          # HR Tech 신호, 브리핑
+    "concepts",      # 개념 원자
+    "projects",      # 프로젝트
+    "outputs",       # 브리핑, 성찰, 분석
+    "people",        # 인물
+    "decisions",     # 결정
+    "weekly",        # 주간 리포트
+    "research",      # 연구
+    "signals",       # Signal 노드
+    "vault",         # csp-brain Vault
+    "synapses",      # Synapse 문서
+    "protocols",     # 프로토콜
+    "curricula",     # 커리큘럼
+    "scripts",       # 스크립트
+    "reports",       # 보고서
+    "analysis",      # 분석
+    "Atoms",         # Atom 개념
+    "moc",           # MOC (Map of Content)
+    "templates",     # 템플릿
+    "references",    # 레퍼런스
+    "Type",          # Type 정의
+    "Toss",          # Toss 프로젝트
+    "sync",          # 동기화 로그
+    "1st_brain",     # 1st_brain 대시보드
+    "csp-brain",     # csp-brain Vault
+    "_ops",          # 운영 로그
+]
+
+EXCLUDE_GLOBS = [
+    "concepts/extracted-*.md",
+    "outputs/temp-*.md",
+    "vault/attachments/*",
+    "raw/*",          # 미처리 raw 자료 제외
+    "inbox/*",        # 미처리 inbox 자료 제외
+]
+
+EXCLUDE_FILES = {
+    "outputs/weekly/2026-W18.md",
+    ".gitmodules",
+}
 
 
 def last_commit_dates():
@@ -62,28 +101,36 @@ def title_of(path):
     h = re.search(r"^#\s+(.+)$", txt, re.M)
     if h:
         return h.group(1).strip()
-    return os.path.basename(path)[:-3]
+    # 루트 파일은 H1 이 없으면 파일명을 제목으로
+    return os.path.basename(path)[:-3] if path.endswith(".md") else os.path.basename(path)
 
 
 def main():
     mtime = last_commit_dates()
     tracked = subprocess.run(
-        ["git", "ls-files", *DIRS], capture_output=True, text=True
+        ["git", "ls-files"], capture_output=True, text=True
     ).stdout.split()
 
     items = []
     for path in tracked:
         if not path.endswith(".md"):
             continue
-        if path.split("/")[0] not in DIRS:
+        
+        # raw/, inbox/ 제외
+        if path.startswith("raw/") or path.startswith("inbox/"):
             continue
+        
         if excluded(path) or not os.path.exists(path):
             continue
+        
+        # 첫 폴더명 추출 (루트 파일은 "")
+        first_dir = path.split("/")[0] if "/" in path else ""
+        
         items.append({
             "path": path,
             "url": "/" + path[:-3] + ".html",
             "title": title_of(path),
-            "dir": path.split("/")[0],
+            "dir": first_dir if first_dir else "root",
             "date": mtime.get(path, "")[:10],
         })
 
