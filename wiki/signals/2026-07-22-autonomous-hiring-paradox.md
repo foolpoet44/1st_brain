@@ -259,6 +259,49 @@ append-only 증거 기록. 삭제·수정하지 않는다.
 
 **사람 판단 필요 항목 없음**. 모든 통계가 복수 출처 (Greenhouse, Stanford HAI, Perelson & Associates) 에 기반하며, 개인정보·생체정보·감시와 관련된 스키마 변경도 없다.
 
+
+### 2026-08-10 — I/O 심리학 브리핑 INGEST (에이전트 네이티브 조직, 알고리즘 모노컬처)
+
+`outputs/briefings/BRIEFING_IO-PSYCH_2026-08-10.md` 를 편입했다. **신규 문서를 만들지 않고 이 문서에 병합한 이유**는, 브리핑의 핵심 통계 (26% 편향, agent-native 조직) 가 이 문서의 2.2 절 및 2026-08-05/08-08 타임라인과 중복되기 때문이다.
+
+브리핑이 **새로 더한 것**은 다음 네 가지다.
+
+1. **에이전트 네이티브 조직 (Agent-Native Organization)**: arXiv:2606.30986 — 인간 모방 조직 형태 (Committee debate) 는 에이전트 네이티브 형태 (Adaptive meta-organization) 대비 **효율 91% 감소**. **"AI 는 인간 조직을 모방하지 않는다. AI 는 AI 네이티브 조직을 가진다."**
+
+2. **알고리즘 모노컬처의 실증 (Stanford HAI)**: 340 만 명, 400 만 건 지원 분석 — **26% 의 Black 지원자**가 AI 편향 포지션에 노출, **10% 의 지원자**가 동일 벤더 사용 기업 4 곳에 모두 탈락. 이는 이 문서 2.2 절의 '후보자 불신'을 **시장 구조적 위험**으로 확장한다.
+
+3. **정체성 확장 프레임 (arXiv:2603.14963)**: AI 노출 업무는 **창의성, 자율성, 행복감**과 강하게 상관. 개발자의 "상상적/엄격한" AI 는 실무자에게 "마찰/지연"으로 경험됨. **"규율을 강요하지 말고, 정체성을 확장하라."**
+
+4. **Human Gate 4 종 명세**:
+   - **Human Gate #1: 에이전트 조직 설계 심의회** — 인간 모방 구조 (Committee, Hierarchy) 를 에이전트 조직에 적용 금지.
+   - **Human Gate #2: DEI 위원회 벤더 심사** — 단일 벤더 점유율 50% 초과 금지, 분기별 position-by-position 편향 감사.
+   - **Human Gate #3: 실무자 참여 AI 설계 심의** — AI 시스템 도입 시 실무자가 trait 우선순위 심의.
+   - **Human Gate #4: 직무 의미 재정의 심의회** — AI 도입 시 '사라지는 업무'보다 '새로 생기는 업무'를 먼저 정의.
+
+**후속 확인**: 에이전트 네이티브 조직 (91% 효율 감소) 은 현재 Vault 에 정량 근거가 이 한 건뿐이다. 다음 HR Tech 브리핑에서 재확인되면 별도 신호로 승격을 검토한다.
+
+### 2026-08-10 — HR Tech 브리핑 INGEST (신뢰의 사다리, Applied AI)
+
+`outputs/briefings/BRIEFING_HR-TECH_2026-08-09.md` 를 편입했다. **신규 문서를 만들지 않고 이 문서에 병합한 이유**는, 브리핑의 핵심 주제 (자율 에이전트, 신뢰 사다리, Human Gate) 가 이 문서의 2.1~2.4 절 및 기존 타임라인과 중복되기 때문이다.
+
+브리핑이 **새로 더한 것**은 다음 네 가지다.
+
+1. **Applied AI 의 부상**: Phenom 2026 보고서 — HR 팀이 기본 AI 에서 **Applied AI**로 확장 (자율 실행, 지능적 의사결정, 워크플로우 오케스트레이션). 10 가지 전문 에이전트 (Intake, Sourcing, Personalization, Voice Screening, Self-Scheduling, Interview, Fraud Detection, Compliance, Onboarding, Workforce Planning).
+
+2. **자율 채용의 경제학**: shortlistd.io 2026 — 인간 채용담당자 ~,300/채용 vs 자율 채용 ~7/채용 (**76% 절감**). ATS 방식 3-4 주 vs 자율 채용 3-5 일 (**85% 단축**). **"85% 비용 절감은 효율이 아니다. 이는 채용의 권력 구조 재편이다."**
+
+3. **신뢰 사다리 (Trust Ladder) 3 단계**:
+   - **1 단계 (Blind Faith)**: "AI rejected, so rejected"
+   - **2 단계 (Distrust)**: "AI can be wrong"
+   - **3 단계 (Collaboration)**: "AI judged this way. How do I verify this judgment?"
+
+4. **Human Gate 4 종 명세**:
+   - **Human Gate #1: 에이전트 조직 설계 심의회** — AI 가 10 가지 에이전트로 오케스트레이션될 때, 어느 단계가 "인간 최종 결정"을 필요로 하는지 명시.
+   - **Human Gate #2: 집중 한도 심의 (Concentration Limit Review)** — "70-80% 를 AI 에 위임"할 때, 나머지 20-30% 가 실제로 "인간 고유 영역"인지 검증.
+   - **Human Gate #3: 신뢰 점수 재검토 (Trust Score Re-review)** — AI 의 "fit score"나 "ranking"을 그대로 수용하지 않고, 데이터 기반 검증.
+   - **Human Gate #4: 3 단계 진화 게이트** — AI 에이전트의 진화 (수정 제안, A/B 테스트, 분기별 감사) 는 인간이 방향성을 설계.
+
+**후속 확인**: 신뢰 사다리 3 단계 프레임은 현재 Vault 에 이 한 건뿐이다. 다음 HR Tech 브리핑에서 재확인되면 별도 신호로 승격을 검토한다.
 ---
 
 **생성일**: 2026-07-22 08:00 KST  
