@@ -1,0 +1,2893 @@
+[
+ {
+  "path": ".agents/skills/tomd/SKILL.md",
+  "url": "/.agents/skills/tomd/SKILL.html",
+  "title": "tomd — 문서 → 마크다운 변환 스킬",
+  "dir": ".agents",
+  "date": ""
+ },
+ {
+  "path": ".claude/rules/csp-brain.md",
+  "url": "/.claude/rules/csp-brain.html",
+  "title": "CSP-Brain 운영 규칙",
+  "dir": ".claude",
+  "date": ""
+ },
+ {
+  "path": ".claude/skills/tomd/SKILL.md",
+  "url": "/.claude/skills/tomd/SKILL.html",
+  "title": "tomd — 문서 → 마크다운 변환 스킬",
+  "dir": ".claude",
+  "date": ""
+ },
+ {
+  "path": "AGENTS.md",
+  "url": "/AGENTS.html",
+  "title": "AGENTS.md — Tolaria Vault",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "AI-TOOLBOX-2026.md",
+  "url": "/AI-TOOLBOX-2026.html",
+  "title": "AI 툴 업무별 정리 가이드 (2026 Ver.)",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "Atoms/Fabro-Philosophy.md",
+  "url": "/Atoms/Fabro-Philosophy.html",
+  "title": "Fabro: AI 에이전트 워크플로우 오케스트레이터의 철학",
+  "dir": "Atoms",
+  "date": ""
+ },
+ {
+  "path": "Atoms/concepts/SYNAPE_trust-ladder.md",
+  "url": "/Atoms/concepts/SYNAPE_trust-ladder.html",
+  "title": "Synapse: 신뢰 사다리 (Trust Ladder)",
+  "dir": "Atoms",
+  "date": ""
+ },
+ {
+  "path": "Atoms/hermes-agent-as-ai-os.md",
+  "url": "/Atoms/hermes-agent-as-ai-os.html",
+  "title": "Hermes Agent: AI를 위한 운영체제 (Operating System for AI)",
+  "dir": "Atoms",
+  "date": ""
+ },
+ {
+  "path": "CLAUDE.md",
+  "url": "/CLAUDE.html",
+  "title": "CSP-Brain — Agent Operating Manual",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "EVAL_STATUS.md",
+  "url": "/EVAL_STATUS.html",
+  "title": "[[EVAL_STATUS.md|EVAL_STATUS]]",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "GEMINI.md",
+  "url": "/GEMINI.html",
+  "title": "GEMINI",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "KNOWLEDGE_PULSE.md",
+  "url": "/KNOWLEDGE_PULSE.html",
+  "title": "🧠 CSP-Brain 지식 진화 대시보드 (Know-Grow)",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "README.md",
+  "url": "/README.html",
+  "title": "csp-brain 🧠",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "SETUP.md",
+  "url": "/SETUP.html",
+  "title": "[[SETUP.md|SETUP]]",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "SOUL.md",
+  "url": "/SOUL.html",
+  "title": "[[SOUL.md|SOUL]]",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "Toss/GUIDE.md",
+  "url": "/Toss/GUIDE.html",
+  "title": "사용 설명서 — Toss × AMQS 퀀트 대시보드",
+  "dir": "Toss",
+  "date": ""
+ },
+ {
+  "path": "Toss/README.md",
+  "url": "/Toss/README.html",
+  "title": "Toss × AMQS 퀀트 대시보드 — 투자 철학을 이해하자.",
+  "dir": "Toss",
+  "date": ""
+ },
+ {
+  "path": "Toss/backtest/BACKTEST.md",
+  "url": "/Toss/backtest/BACKTEST.html",
+  "title": "AMQS 국내 3년 백테스트 리포트",
+  "dir": "Toss",
+  "date": ""
+ },
+ {
+  "path": "Toss/docs/Toss_OpenAPI_Guide.md",
+  "url": "/Toss/docs/Toss_OpenAPI_Guide.html",
+  "title": "토스증권 Op[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]] API 기술 분석 문서",
+  "dir": "Toss",
+  "date": ""
+ },
+ {
+  "path": "Toss/docs/readme.md",
+  "url": "/Toss/docs/readme.html",
+  "title": "Toss 프로젝트 문서 (docs)",
+  "dir": "Toss",
+  "date": ""
+ },
+ {
+  "path": "Type/Concept.md",
+  "url": "/Type/Concept.html",
+  "title": "Concept",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "Type/Decision.md",
+  "url": "/Type/Decision.html",
+  "title": "[[[[Understand-Anything/docs/superpowers/plans/2026-03-28-understand-anything-extension-impl.md|2026-03-28-understand-anything-extension-impl]]/Decision.md|Decision]]",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "Type/Idea.md",
+  "url": "/Type/Idea.html",
+  "title": "Idea",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "Type/Meeting.md",
+  "url": "/Type/Meeting.html",
+  "title": "Meeting",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "Type/Note.md",
+  "url": "/Type/Note.html",
+  "title": "[[[[Understand-Anything/docs/superpowers/plans/2026-03-28-understand-anything-extension-impl.md|2026-03-28-understand-anything-extension-impl]]/Note.md|Note]]",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "Type/Person.md",
+  "url": "/Type/Person.html",
+  "title": "Person",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "Type/Project.md",
+  "url": "/Type/Project.html",
+  "title": "[[[[Understand-Anything/docs/superpowers/plans/2026-03-28-understand-anything-extension-impl.md|2026-03-28-understand-anything-extension-impl]]/Project.md|Project]]",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "Type/Reflection.md",
+  "url": "/Type/Reflection.html",
+  "title": "Reflection",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "Type/Resource.md",
+  "url": "/Type/Resource.html",
+  "title": "Resource",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "Type/Signal.md",
+  "url": "/Type/Signal.html",
+  "title": "Signal",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "Type/Task.md",
+  "url": "/Type/Task.html",
+  "title": "Task",
+  "dir": "Type",
+  "date": ""
+ },
+ {
+  "path": "_ops/2026-04-29-work-log.md",
+  "url": "/_ops/2026-04-29-work-log.html",
+  "title": "2026-04-29 작업 일지",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/KNOWLEDGE_PULSE.md",
+  "url": "/_ops/KNOWLEDGE_PULSE.html",
+  "title": "KNOWLEDGE_PULSE — csp-brain 지식 맥박",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/README.md",
+  "url": "/_ops/README.html",
+  "title": "운영 내비게이션 — 현황은 어디서 보는가 (SSOT)",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/RESOLVER.md",
+  "url": "/_ops/RESOLVER.html",
+  "title": "🛰️ CSP-Brain 지능 리졸버 (Synaptic Resolver)",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/bridge-log.md",
+  "url": "/_ops/bridge-log.html",
+  "title": "[[_ops/bridge-log.md|bridge-log]]",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/change-log.md",
+  "url": "/_ops/change-log.html",
+  "title": "change-log",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/checklists/meta-harnessing-review.md",
+  "url": "/_ops/checklists/meta-harnessing-review.html",
+  "title": "[[_ops/[[open-design/skills/editorial-burgundy-principles-template/references/checklist.md|checklist]]s/meta-harnessing-review.md|meta-harnessing-review]]",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/checklists/task-completion-contract.md",
+  "url": "/_ops/checklists/task-completion-contract.html",
+  "title": "[[_ops/checklists/task-completion-contract.md|task-completion-contract]]",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/classification-logs/classification-report-2026-07-27.md",
+  "url": "/_ops/classification-logs/classification-report-2026-07-27.html",
+  "title": "📊 Type 문서 자동 분류 보고서",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/classification/classification_report_20260802.md",
+  "url": "/_ops/classification/classification_report_20260802.html",
+  "title": "Type 문서 자동 분류 보고서 (2026-08-02)",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/classification_report_20260731.md",
+  "url": "/_ops/classification_report_20260731.html",
+  "title": "csp-brain Type 자동 분류 결과 보고서",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/eval-alert-report.md",
+  "url": "/_ops/eval-alert-report.html",
+  "title": "Eval 시스템 경고 대응 보고서",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/ingest-log.md",
+  "url": "/_ops/ingest-log.html",
+  "title": "Ingest Log",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/lint-log.md",
+  "url": "/_ops/lint-log.html",
+  "title": "Lint Log",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/onboarding.md",
+  "url": "/_ops/onboarding.html",
+  "title": "CSP Brain Onboarding",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/question-log.md",
+  "url": "/_ops/question-log.html",
+  "title": "[[_ops/question-log.md|question-log]]",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "_ops/sync-report-2026-07-27.md",
+  "url": "/_ops/sync-report-2026-07-27.html",
+  "title": "🧠 CSP-Brain 일일 기억 공고화 리포트",
+  "dir": "_ops",
+  "date": ""
+ },
+ {
+  "path": "analysis/graph-backlink-analysis.md",
+  "url": "/analysis/graph-backlink-analysis.html",
+  "title": "Graph Backlink Analysis Report",
+  "dir": "analysis",
+  "date": ""
+ },
+ {
+  "path": "analysis/harness-engineering-insight.md",
+  "url": "/analysis/harness-engineering-insight.html",
+  "title": "Harness Engineering 인사이트",
+  "dir": "analysis",
+  "date": ""
+ },
+ {
+  "path": "classification_report_20260801.md",
+  "url": "/classification_report_20260801.html",
+  "title": "csp-brain Type 자동 분류 결과 보고서",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "concepts/human-agency-paradox.md",
+  "url": "/concepts/human-agency-paradox.html",
+  "title": "Human Agency 의 역설 (Paradox of Human Agency)",
+  "dir": "concepts",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/concepts/hr-identity-evolution.md",
+  "url": "/csp-brain/vault/concepts/hr-identity-evolution.html",
+  "title": "HR 정체성 진화: 감시자 → 정원사 → 번역자",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/curricula/trust-ladder-curriculum.md",
+  "url": "/csp-brain/vault/curricula/trust-ladder-curriculum.html",
+  "title": "신뢰 사다리 3 단계 교육 커리큘럼",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/protocols/bias-audit-protocol.md",
+  "url": "/csp-brain/vault/protocols/bias-audit-protocol.html",
+  "title": "편향 감사 결과 공개 프로토콜",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/protocols/human-gate-schema.md",
+  "url": "/csp-brain/vault/protocols/human-gate-schema.html",
+  "title": "Human Gate 4 명세 (AI Prohibition Zones)",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/SIGNAL_AI_RECRUITMENT_2026-07-28.md",
+  "url": "/csp-brain/vault/signals/SIGNAL_AI_RECRUITMENT_2026-07-28.html",
+  "title": "Signal: 2026 년 HR Tech 의 3 대 메가트렌드 — Applied AI, 인재 전쟁, 자기진화 에이전트",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/agent-native-org-efficiency-2026.md",
+  "url": "/csp-brain/vault/signals/agent-native-org-efficiency-2026.html",
+  "title": "Signal: Agent-Native Organization Efficiency 2026",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/ai-weight-governance-2026.md",
+  "url": "/csp-brain/vault/signals/ai-weight-governance-2026.html",
+  "title": "Signal: AI Weight Governance 2026",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/blocked-agency-resolution-2026.md",
+  "url": "/csp-brain/vault/signals/blocked-agency-resolution-2026.html",
+  "title": "Signal: Blocked Agency Resolution 2026",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/bullshit-task-audit-2026.md",
+  "url": "/csp-brain/vault/signals/bullshit-task-audit-2026.html",
+  "title": "Signal: Bullshit Task Audit 2026",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/decision-architecture-redesign-2026.md",
+  "url": "/csp-brain/vault/signals/decision-architecture-redesign-2026.html",
+  "title": "Signal: Decision Architecture Redesign 2026",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-20.md",
+  "url": "/csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-20.html",
+  "title": "HR Tech Daily Briefing — 2026 년 7 월 20 일",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-21.md",
+  "url": "/csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-21.html",
+  "title": "HR Tech Daily Briefing — 2026 년 7 월 21 일 (화)",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-27.md",
+  "url": "/csp-brain/vault/signals/hr-tech-daily-briefing-2026-07-27.html",
+  "title": "HR Tech Daily Briefing — 2026 년 7 월 27 일 (월)",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/meaning-protection-zone-2026.md",
+  "url": "/csp-brain/vault/signals/meaning-protection-zone-2026.html",
+  "title": "Signal: Meaning Protection Zone 2026",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/signal-algorithmic-monoculture-hiring.md",
+  "url": "/csp-brain/vault/signals/signal-algorithmic-monoculture-hiring.html",
+  "title": "Signal: Algorithmic Monoculture in Hiring",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/signal-autonomous-agent-adoption-2026.md",
+  "url": "/csp-brain/vault/signals/signal-autonomous-agent-adoption-2026.html",
+  "title": "Signal: Autonomous Agent Adoption 2026",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/signal-generative-ai-gender-bias-language.md",
+  "url": "/csp-brain/vault/signals/signal-generative-ai-gender-bias-language.html",
+  "title": "Signal: Generative AI Gender Bias in Language",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "csp-brain/vault/signals/signal-human-algorithm-bias-amplification.md",
+  "url": "/csp-brain/vault/signals/signal-human-algorithm-bias-amplification.html",
+  "title": "Signal: Human-Algorithm Bias Amplification",
+  "dir": "csp-brain",
+  "date": ""
+ },
+ {
+  "path": "harness/INDEX_SUMMARY.md",
+  "url": "/harness/INDEX_SUMMARY.html",
+  "title": "📊 Zavis_Brain 인덱스 요약",
+  "dir": "harness",
+  "date": ""
+ },
+ {
+  "path": "kimi-k3-cost-curve.md",
+  "url": "/kimi-k3-cost-curve.html",
+  "title": "📈 AI 모델 원가곡선 (Cost Curve) 경쟁과 Eval 의 전략적 가치",
+  "dir": "root",
+  "date": ""
+ },
+ {
+  "path": "moc/AI-Agent-Playbook.md",
+  "url": "/moc/AI-Agent-Playbook.html",
+  "title": "AI Agent Playbook",
+  "dir": "moc",
+  "date": ""
+ },
+ {
+  "path": "moc/HR-Tech-Ecosystem.md",
+  "url": "/moc/HR-Tech-Ecosystem.html",
+  "title": "HR Tech Ecosystem",
+  "dir": "moc",
+  "date": ""
+ },
+ {
+  "path": "moc/Organization-Memory.md",
+  "url": "/moc/Organization-Memory.html",
+  "title": "Organization Memory",
+  "dir": "moc",
+  "date": ""
+ },
+ {
+  "path": "outputs/analyses/AI_NATIVE_COMPANY_MASTER_PLAN.md",
+  "url": "/outputs/analyses/AI_NATIVE_COMPANY_MASTER_PLAN.html",
+  "title": "[MASTER PLAN] AI 네이티브 조직으로의 진화: Josh Kim & Jeongmin Lee 통합 모델",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/analyses/INSIGHT_2026-05-21_Data_Bridge_Strategy.md",
+  "url": "/outputs/analyses/INSIGHT_2026-05-21_Data_Bridge_Strategy.html",
+  "title": "[CSP-Brain] 데이터 브릿지 & AI 네이티브 컴퍼니 구축 전략 (LinkedIn Josh Kim 인사이트)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/analyses/INTERVIEW_GUIDE_MOCK_2026-05-30.md",
+  "url": "/outputs/analyses/INTERVIEW_GUIDE_MOCK_2026-05-30.html",
+  "title": "[MOCK TEST] 8-Cluster 기반 자동 면접 가이드 생성 결과",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/analyses/INVESTMENT_2026-05-10_AI_NEXT.md",
+  "url": "/outputs/analyses/INVESTMENT_2026-05-10_AI_NEXT.html",
+  "title": "Investment Memo: AI Beneficiaries Beyond Semiconductors",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/analyses/INVESTMENT_2026-05-10_HL_MANDO.md",
+  "url": "/outputs/analyses/INVESTMENT_2026-05-10_HL_MANDO.html",
+  "title": "Investment Memo: HL Mando (Robotics & Autonomous Evolution)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/analyses/INVESTMENT_2026-05-10_ROBOTICS.md",
+  "url": "/outputs/analyses/INVESTMENT_2026-05-10_ROBOTICS.html",
+  "title": "Investment Memo: The Robotics Explosion (Physical AI Age)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/analyses/MASTER_PLAN_2026-05-21_Hermes_CSP_Integration.md",
+  "url": "/outputs/analyses/MASTER_PLAN_2026-05-21_Hermes_CSP_Integration.html",
+  "title": "[CSP-Brain] 헤르메스 에이전트 마스터 플랜: 3대 핵심 모델의 통합 전략",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/analyses/PSY_ASSESS_SUMMARY.md",
+  "url": "/outputs/analyses/PSY_ASSESS_SUMMARY.html",
+  "title": "[OKA Project] 심리 진단(OPQ) 통합 분석 및 인사이트 (최종본)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/analyses/psy-assess-summary.md",
+  "url": "/outputs/analyses/psy-assess-summary.html",
+  "title": "PSY_ASSESS.pdf (OPQ 진단) 핵심 요약",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/2026-07-28-money-flow-briefing.md",
+  "url": "/outputs/briefings/2026-07-28-money-flow-briefing.html",
+  "title": "💰 돈의 이동 브리핑 | 2026 년 7 월 28 일 화요일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_2026-07-29_MONEY_FLOW.md",
+  "url": "/outputs/briefings/BRIEFING_2026-07-29_MONEY_FLOW.html",
+  "title": "💰 돈의 이동 브리핑 — 2026 년 7 월 29 일 화요일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_2026-07-31_HR_TECH.md",
+  "url": "/outputs/briefings/BRIEFING_2026-07-31_HR_TECH.html",
+  "title": "HR Tech Daily Briefing — 2026-07-31",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_2026-08-01_IO_PSYCHOLOGY.md",
+  "url": "/outputs/briefings/BRIEFING_2026-08-01_IO_PSYCHOLOGY.html",
+  "title": "HR Tech Psychology Briefing — 2026-08-01 (토요일)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_2026-08-02_HR_PSYCHOLOGY.md",
+  "url": "/outputs/briefings/BRIEFING_2026-08-02_HR_PSYCHOLOGY.html",
+  "title": "HR 심리학 브리핑: AI 시대의 일의 의미와 인간 의사결정",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_2026-08-03_IO_PSYCH.md",
+  "url": "/outputs/briefings/BRIEFING_2026-08-03_IO_PSYCH.html",
+  "title": "HR Tech Psychology Daily Briefing",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_HR-TECH_2026-08-04.md",
+  "url": "/outputs/briefings/BRIEFING_HR-TECH_2026-08-04.html",
+  "title": "HR Tech Briefing — 2026-08-04",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_HR-TECH_2026-08-05.md",
+  "url": "/outputs/briefings/BRIEFING_HR-TECH_2026-08-05.html",
+  "title": "HR Tech 브리핑: 신뢰의 사다리, 그리고 감시자에서 정원사로의 전환",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_HR-TECH_2026-08-07.md",
+  "url": "/outputs/briefings/BRIEFING_HR-TECH_2026-08-07.html",
+  "title": "HR Tech Daily Briefing — 2026-08-07: 자율성의 역설과 감시자의 그늘",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_HR-TECH_2026-08-09.md",
+  "url": "/outputs/briefings/BRIEFING_HR-TECH_2026-08-09.html",
+  "title": "HR Tech 브리핑 2026-08-09 — 에이전트 채용의 신뢰 사다리",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_HR-TECH_2026-08-10.md",
+  "url": "/outputs/briefings/BRIEFING_HR-TECH_2026-08-10.html",
+  "title": "에이전틱 채용의 2026: 도구에서 조직 구조로의 전환",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_IO-PSYCH_2026-08-04.md",
+  "url": "/outputs/briefings/BRIEFING_IO-PSYCH_2026-08-04.html",
+  "title": "I/O 심리학 브리핑: 2026 년 8 월 4 일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_IO-PSYCH_2026-08-07.md",
+  "url": "/outputs/briefings/BRIEFING_IO-PSYCH_2026-08-07.html",
+  "title": "I/O 심리학 브리핑: 알고리즘 관리 시대의 인간성 회복 (2026-08-07)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_IO-PSYCH_2026-08-08.md",
+  "url": "/outputs/briefings/BRIEFING_IO-PSYCH_2026-08-08.html",
+  "title": "I/O 심리학 브리핑 2026-08-08: AI 시대, 인간 의사결정의 재발견",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_IO-PSYCH_2026-08-10.md",
+  "url": "/outputs/briefings/BRIEFING_IO-PSYCH_2026-08-10.html",
+  "title": "I/O 심리학 브리핑 2026-08-10: AI 노출은 창의성을 침해하는가, 해방하는가",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-06.md",
+  "url": "/outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-06.html",
+  "title": "거시경제 브리핑: 돈의 이동과 욕망의 지형 (2026-08-06)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-07.md",
+  "url": "/outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-07.html",
+  "title": "자본의 정체성 전환: 감시자에서 정원사로",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-07_SUMMARY.md",
+  "url": "/outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-07_SUMMARY.html",
+  "title": "돈의 흐름 브리핑 요약 (2026-08-07)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-08.md",
+  "url": "/outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-08.html",
+  "title": "[2026-08-08] 자본의 중립화: 베타를 거부하는 기관의 침묵",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-09.md",
+  "url": "/outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-09.html",
+  "title": "[Money Flow] 60/20/20 포트폴리오의 등장과 기관의 '베타 제거' 신호 — 자본시장은 가디언을 버렸다",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-10.md",
+  "url": "/outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-10.html",
+  "title": "자본의 심리학: 분산의 복귀와 시장 중립의 시대",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/HR_PSYCHO_BRIEFING_2026-07-28.md",
+  "url": "/outputs/briefings/HR_PSYCHO_BRIEFING_2026-07-28.html",
+  "title": "HR Tech Psychology Daily Briefing",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/HR_TECH_BRIEFING_2026-07-28.md",
+  "url": "/outputs/briefings/HR_TECH_BRIEFING_2026-07-28.html",
+  "title": "HR Tech Daily Briefing | 2026 년 7 월 28 일 화요일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/HR_TECH_PSYCHOLOGY_2026-07-31.md",
+  "url": "/outputs/briefings/HR_TECH_PSYCHOLOGY_2026-07-31.html",
+  "title": "HR Tech Psychology Daily Briefing — 2026-07-31",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/MONEY_FLOW_2026-07-30.md",
+  "url": "/outputs/briefings/MONEY_FLOW_2026-07-30.html",
+  "title": "💰 돈의 이동 브리핑 — 2026 년 7 월 30 일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/MONEY_FLOW_BRIEFING_2026-07-31.md",
+  "url": "/outputs/briefings/MONEY_FLOW_BRIEFING_2026-07-31.html",
+  "title": "💰 돈의 이동 브리핑 — 2026 년 7 월 31 일 금요일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefings/MONEY_FLOW_BRIEFING_2026-08-03.md",
+  "url": "/outputs/briefings/MONEY_FLOW_BRIEFING_2026-08-03.html",
+  "title": "MONEY_FLOW_BRIEFING_2026-08-03.md",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefs/2026-04-30-change-briefing.md",
+  "url": "/outputs/briefs/2026-04-30-change-briefing.html",
+  "title": "2026-04-30 Change Briefing",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefs/2026-04-30-dream-cycle.md",
+  "url": "/outputs/briefs/2026-04-30-dream-cycle.html",
+  "title": "2026-04-30 Dream Cycle",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefs/MULTI_AGENT_ONTOLOGY_INGESTION.md",
+  "url": "/outputs/briefs/MULTI_AGENT_ONTOLOGY_INGESTION.html",
+  "title": "Multi-Agent Artifact-Driven Ingestion Model",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/briefs/behavioral-economics-papers-20260512.md",
+  "url": "/outputs/briefs/behavioral-economics-papers-20260512.html",
+  "title": "행동경제학 최신 주요 논문 브리프 (2025-2026)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/classification-report-2026-07-30.md",
+  "url": "/outputs/classification-report-2026-07-30.html",
+  "title": "csp-brain Type 문서 자동 분류 결과 보고서",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/classification/classification_log_20260803.md",
+  "url": "/outputs/classification/classification_log_20260803.html",
+  "title": "Type 자동 분류 실행 로그",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-briefing/BRIEFING_2026-07-28_HR-TECH-PSYCHOLOGY.md",
+  "url": "/outputs/daily-briefing/BRIEFING_2026-07-28_HR-TECH-PSYCHOLOGY.html",
+  "title": "HR Tech Psychology Daily Briefing",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-briefing/BRIEFING_2026-07-29_HR-TECH-AGENTIC-TRUST.md",
+  "url": "/outputs/daily-briefing/BRIEFING_2026-07-29_HR-TECH-AGENTIC-TRUST.html",
+  "title": "HR Tech 브리핑 — 2026 년 7 월 29 일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-briefing/BRIEFING_2026-07-31.md",
+  "url": "/outputs/daily-briefing/BRIEFING_2026-07-31.html",
+  "title": "HR Tech Daily Briefing — 2026-07-31",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-briefing/MONEY_FLOW_2026-07-27.md",
+  "url": "/outputs/daily-briefing/MONEY_FLOW_2026-07-27.html",
+  "title": "💰 돈의 이동 브리핑 | 2026-07-27",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-briefing/MONEY_FLOW_2026-08-02.md",
+  "url": "/outputs/daily-briefing/MONEY_FLOW_2026-08-02.html",
+  "title": "MONEY_FLOW_2026-08-02.md",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/BRIEFING_2026-07-29_HR_TECH_PSYCHOLOGY.md",
+  "url": "/outputs/daily-reflect/BRIEFING_2026-07-29_HR_TECH_PSYCHOLOGY.html",
+  "title": "HR Tech Psychology 일일 브리핑 — 2026 년 7 월 29 일 화요일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/BRIEFING_2026-07-30_HR_TECH_MARKET.md",
+  "url": "/outputs/daily-reflect/BRIEFING_2026-07-30_HR_TECH_MARKET.html",
+  "title": "HR Tech Market Briefing — 2026 년 7 월 30 일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/CRONJOB_REPORT_2026-08-01.md",
+  "url": "/outputs/daily-reflect/CRONJOB_REPORT_2026-08-01.html",
+  "title": "Evening Reflect 크론잡 실행 보고서 — 2026-08-01",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/CRONJOB_REPORT_2026-08-03.md",
+  "url": "/outputs/daily-reflect/CRONJOB_REPORT_2026-08-03.html",
+  "title": "🔧 sync_brain.sh 크론잡 실행 보고서 (2026-08-03)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/IO_PSYCHOLOGY_BRIEFING_2026-07-22.md",
+  "url": "/outputs/daily-reflect/IO_PSYCHOLOGY_BRIEFING_2026-07-22.html",
+  "title": "I/O 심리학 브리핑: 2026 년 7 월 22 일 (수)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/METABOLISM_REPORT_2026-08-03.md",
+  "url": "/outputs/daily-reflect/METABOLISM_REPORT_2026-08-03.html",
+  "title": "지식 대사 작용 및 복리 리포트 (2026-08-03)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/METABOLISM_REPORT_2026-08-05.md",
+  "url": "/outputs/daily-reflect/METABOLISM_REPORT_2026-08-05.html",
+  "title": "지식 대사 작용 및 복리 리포트 (2026-08-05)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/METABOLISM_REPORT_2026-08-09.md",
+  "url": "/outputs/daily-reflect/METABOLISM_REPORT_2026-08-09.html",
+  "title": "지식 대사 작용 보고 (Knowledge Metabolism Report) — 2026-08-09",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/METABOLISM_REPORT_2026-08-10.md",
+  "url": "/outputs/daily-reflect/METABOLISM_REPORT_2026-08-10.html",
+  "title": "지식 대사 작용 보고서 — 2026-08-10 (朝)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-05-21.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-05-21.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect): 2026-05-21",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-05-22.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-05-22.html",
+  "title": "저녁 성찰 (Evening Reflect)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-05-23.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-05-23.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-05-23",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-05-26.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-05-26.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-05-26",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-05-27.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-05-27.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect): 2026-05-27",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-05-28.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-05-28.html",
+  "title": "Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect: 2026-05-28",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-05-29.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-05-29.html",
+  "title": "Evening Reflect: 2026-05-29",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-05-30.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-05-30.html",
+  "title": "Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect: 2024-05-30",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-05-31.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-05-31.html",
+  "title": "🌙 Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect: 2026-05-31",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-01.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-01.html",
+  "title": "🌙 Evening Reflect: 2026-06-01",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-02.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-02.html",
+  "title": "Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect: 2026-06-02 - 소셜 IDE와 현장 건축가의 탄생",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-03.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-03.html",
+  "title": "Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect: 2026-06-03 — 지능의 레이지(Lazy)한 도약과 완전한 소화",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-04.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-04.html",
+  "title": "Evening Reflect: 2026-06-04 - 신경망의 재연결(Reconnection)과 지능의 백질(White Matter)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-10.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-10.html",
+  "title": "Evening Reflect: 2026-06-10 - 부의 외골격과 신뢰의 가드레일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-11.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-11.html",
+  "title": "🌙 Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect: 2026-06-11",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-12.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-12.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-12",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-13.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-13.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-13",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-14.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-14.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-14",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-15.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-15.html",
+  "title": "Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect: 지능의 외골격과 '인지적 슬롭(Thinkslop)'의 경계",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-16.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-16.html",
+  "title": "Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect: 재귀적 지능(RLM)과 신뢰의 관문(TraceGuard)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-17.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-17.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-17",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-18.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-18.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-18",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-19.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-19.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-19",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-20.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-20.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-20",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-21.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-21.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-21",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-22.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-22.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-22",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-23.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-23.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-06-23",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-24.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-24.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-06-24",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-25.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-25.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-25",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-26.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-26.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect): 2026-06-26",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-27.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-27.html",
+  "title": "저녁 성찰(Evening Reflect): 자율적 대사와 무결성의 시대",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-28.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-28.html",
+  "title": "저녁 성찰(Evening Reflect): 지능의 자산화와 그로스해킹의 이식",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-06-30.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-06-30.html",
+  "title": "Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect: 2026-06-30 — 지능의 정화와 신뢰의 재구축",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-01.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-01.html",
+  "title": "Evening Reflect: 2026-07-01 — 지능의 외골격(Harness)과 공학적 신뢰의 설계",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-02.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-02.html",
+  "title": "Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect: 2026-07-02 — 관찰자에서 실행기로, 지능의 자가 동력 루프 완성",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-03.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-03.html",
+  "title": "Evening Reflect: 2026-07-03 — 지능의 안식일, 자율적 대사의 첫 번째 파동",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-04.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-04.html",
+  "title": "📔 2026-07-04 성찰: 시스템의 항상성과 정적 평형",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-05.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-05.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect): 2026-07-05",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-06.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-06.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect): 2026-07-06",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-08.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-08.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ing Reflect) - 2026-07-08",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-09.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-09.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect) - 2026-07-09",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-10.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-10.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect) - 2026-07-10",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-11.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-11.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect) - 2026-07-11",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-12.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-12.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect): 2026-07-12",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-13.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-13.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect): 2026-07-13",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-15.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-15.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect): 2026-07-15",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-16.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-16.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect): 2026-07-16",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-17.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-17.html",
+  "title": "저녁 성찰 (Ev[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]ing Reflect): 2026-07-17",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-18.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-18.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-07-18",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-20.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-20.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-07-20",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-21.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-21.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-07-21",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-22.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-22.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-07-22",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-23.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-23.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-07-23",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-24.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-24.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-07-24",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-25.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-25.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-07-25 (토)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-26.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-26.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-07-26 (일)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-26_EVENING.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-26_EVENING.html",
+  "title": "저녁 성찰 (Evening Reflect): 2026-07-26 (일)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-27.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-27.html",
+  "title": "저녁 성찰 (Daily Reflect): 2026-07-27 (월)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-28.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-28.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-07-28",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-28_SUMMARY.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-28_SUMMARY.html",
+  "title": "저녁 성찰 요약 — 2026-07-28",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-29.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-29.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026 년 7 월 29 일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-30.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-30.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026 년 7 월 30 일",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-07-31.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-07-31.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-07-31",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-01.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-01.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-08-01",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-02.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-02.html",
+  "title": "저녁 성찰 (Evening Reflect)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-03.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-03.html",
+  "title": "Evening Reflect — 2026-08-03",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-04.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-04.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-08-04",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-05.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-05.html",
+  "title": "Evening Reflect — 2026-08-05",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-05_EVENING.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-05_EVENING.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-08-05 (夜)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-06.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-06.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-08-06 (夜)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-06_EVENING.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-06_EVENING.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-08-06 (夜)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-07.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-07.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-08-07 (夜)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-08.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-08.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-08-08 (夜)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-08_EVENING.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-08_EVENING.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-08-08",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-09.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-09.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-08-09 (夜)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/REFLECT_2026-08-10.md",
+  "url": "/outputs/daily-reflect/REFLECT_2026-08-10.html",
+  "title": "저녁 성찰 (Evening Reflect) — 2026-08-10 (夜)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/SUPPLEMENT_2026-07-25.md",
+  "url": "/outputs/daily-reflect/SUPPLEMENT_2026-07-25.html",
+  "title": "보완 성찰 (Supplemental Reflect): 2026-07-25 (토) 저녁",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_REPORT_2026-07-28.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_REPORT_2026-07-28.html",
+  "title": "🌙 csp-brain 일일 기억 공고화 리포트",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_REPORT_2026-07-30.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_REPORT_2026-07-30.html",
+  "title": "Telegram 성찰 리포트 — 2026-07-30",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_REPORT_2026-07-31.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_REPORT_2026-07-31.html",
+  "title": "TELEGRAM_REPORT_2026-07-31",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_REPORT_2026-08-01.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_REPORT_2026-08-01.html",
+  "title": "Telegram 보고 — 2026-08-01 저녁 성찰 요약",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_REPORT_2026-08-02.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_REPORT_2026-08-02.html",
+  "title": "TELEGRAM_REPORT_2026-08-02",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_REPORT_2026-08-03.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_REPORT_2026-08-03.html",
+  "title": "🌙 csp-brain 일일 성찰 리포트 (2026-08-03)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_REPORT_2026-08-05.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_REPORT_2026-08-05.html",
+  "title": "🌙 csp-brain 일일 성찰 리포트 (2026-08-05)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-07-30.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-07-30.html",
+  "title": "Telegram 전송 기록 — 2026-07-30",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-07-31.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-07-31.html",
+  "title": "Telegram 전송 로그 — 2026-07-31",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-01.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-01.html",
+  "title": "Telegram 전송 로그 — 2026-08-01",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-02.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-02.html",
+  "title": "Telegram 전송 로그",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-03.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-03.html",
+  "title": "📤 Telegram 전송 로그 (2026-08-03)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-05.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-05.html",
+  "title": "📤 Telegram 전송 로그 (2026-08-05)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-06.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-06.html",
+  "title": "TELEGRAM_SEND_LOG_2026-08-06",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SUMMARY_2026-07-28.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SUMMARY_2026-07-28.html",
+  "title": "🌙 저녁 성찰 요약 — 2026-07-28",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-02.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-02.html",
+  "title": "🌙 저녁 성찰 요약 — 2026-08-02 (일요일)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-05.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-05.html",
+  "title": "🌙 csp-brain 저녁 성찰 (2026-08-05)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-06.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-06.html",
+  "title": "🌙 저녁 성찰 (2026-08-06) — 자본의 거울, HR 의 미성숙",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-08.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-08.html",
+  "title": "🌙 저녁 성찰 요약 — 2026-08-08",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-10.md",
+  "url": "/outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-10.html",
+  "title": "🌙 저녁 성찰 요약 — 2026-08-10",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/proposals/PROPOSAL_2026-05-30.md",
+  "url": "/outputs/proposals/PROPOSAL_2026-05-30.html",
+  "title": "🧭 자율 지능의 항해 지시서 (Task Proposal - 2026-05-30)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/synapse/SYNAPSE_2026-07-28_HR-TECH-PSYCHOLOGY.md",
+  "url": "/outputs/synapse/SYNAPSE_2026-07-28_HR-TECH-PSYCHOLOGY.html",
+  "title": "Synapse: HR Tech Psychology → Vault Integration",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/synapse/SYNAPSE_2026-07-29_AGENTIC-TRUST.md",
+  "url": "/outputs/synapse/SYNAPSE_2026-07-29_AGENTIC-TRUST.html",
+  "title": "시냅스 — Agentic 신뢰와 HR 의 정체성 전환 (2026-07-29)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/synapse/SYNAPSE_2026-07-31.md",
+  "url": "/outputs/synapse/SYNAPSE_2026-07-31.html",
+  "title": "Synapse — 2026-07-31 HR Tech Briefing",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/synapses/HUMAN_GATES_AI_PSYCHOLOGY_2026-08-02.md",
+  "url": "/outputs/synapses/HUMAN_GATES_AI_PSYCHOLOGY_2026-08-02.html",
+  "title": "시냅스: AI 심리학 Human Gates 8 개",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/synapses/SYNAPSE_2026-07-31_HR_TECH_PSYCHOLOGY.md",
+  "url": "/outputs/synapses/SYNAPSE_2026-07-31_HR_TECH_PSYCHOLOGY.html",
+  "title": "Synapse Proposal — HR Tech Psychology 2026-07-31",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/synapses/SYNAPSE_ECONOMIC-FREEDOM-TRUST-LADDER.md",
+  "url": "/outputs/synapses/SYNAPSE_ECONOMIC-FREEDOM-TRUST-LADDER.html",
+  "title": "Synapse: 자본시장의 Trust Ladder 와 HR 의 Trust Ladder 는 병렬 진화한다",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/weekly/2026-W16.md",
+  "url": "/outputs/weekly/2026-W16.html",
+  "title": "Weekly — 2026-W16 (2026-04-13 ~ 2026-04-19)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/weekly/2026-W17.md",
+  "url": "/outputs/weekly/2026-W17.html",
+  "title": "Weekly — 2026-W17 (2026-04-20 ~ 2026-04-26)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/weekly/2026-W20.md",
+  "url": "/outputs/weekly/2026-W20.html",
+  "title": "Weekly Digest: 2026-W20 — 지식의 임계점 돌파",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/weekly/2026-W26.md",
+  "url": "/outputs/weekly/2026-W26.html",
+  "title": "주간 다이제스트 2026-W26",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/weekly/2026-W27.md",
+  "url": "/outputs/weekly/2026-W27.html",
+  "title": "주간 다이제스트 2026-W27",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/weekly/2026-W28.md",
+  "url": "/outputs/weekly/2026-W28.html",
+  "title": "주간 다이제스트 2026-W28",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/weekly/2026-W29.md",
+  "url": "/outputs/weekly/2026-W29.html",
+  "title": "주간 다이제스트 2026-W29",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/weekly/2026-W31.md",
+  "url": "/outputs/weekly/2026-W31.html",
+  "title": "주간 다이제스트 2026-W31",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/weekly/WEEKLY_DIGEST_2026-05-30.md",
+  "url": "/outputs/weekly/WEEKLY_DIGEST_2026-05-30.html",
+  "title": "🛰️ CSP-Brain 주간 지식 진화 보고서 (Week 22, 2026)",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "outputs/weekly/_index.md",
+  "url": "/outputs/weekly/_index.html",
+  "title": "Weekly Digests",
+  "dir": "outputs",
+  "date": ""
+ },
+ {
+  "path": "people/CSP.md",
+  "url": "/people/CSP.html",
+  "title": "Person: CSP",
+  "dir": "people",
+  "date": ""
+ },
+ {
+  "path": "projects/AI-Native-Company-Roadmap.md",
+  "url": "/projects/AI-Native-Company-Roadmap.html",
+  "title": "AI 네이티브 컴퍼니 구축 로드맵 (Builder Josh's Insight)",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ax-internalization/Antigravity_lovable.docx.md",
+  "url": "/projects/ax-internalization/Antigravity_lovable.docx.html",
+  "title": "Antigravity_lovable.docx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ax-internalization/Antigravity_lovable.pptx.md",
+  "url": "/projects/ax-internalization/Antigravity_lovable.pptx.html",
+  "title": "Antigravity_lovable.pptx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ax-internalization/README.md",
+  "url": "/projects/ax-internalization/README.html",
+  "title": "AX Internalization",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ax-internalization/antigravity_lovable_ax_capability_20260319014044.pptx.md",
+  "url": "/projects/ax-internalization/antigravity_lovable_ax_capability_20260319014044.pptx.html",
+  "title": "of Apps",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/escon/README.md",
+  "url": "/projects/escon/README.html",
+  "title": "ESCON",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ex-intelligence/README.md",
+  "url": "/projects/ex-intelligence/README.html",
+  "title": "EX Intelligence",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ex-intelligence/SUB_questions_260316.pptx.md",
+  "url": "/projects/ex-intelligence/SUB_questions_260316.pptx.html",
+  "title": "SUB_questions_260316.pptx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ex-intelligence/ax_pulse_check_bcg_style_20260316005840.pptx.md",
+  "url": "/projects/ex-intelligence/ax_pulse_check_bcg_style_20260316005840.pptx.html",
+  "title": "ax_pulse_check_bcg_style_20260316005840.pptx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ex-intelligence/cia_ex_intelligence_mono.pptx.md",
+  "url": "/projects/ex-intelligence/cia_ex_intelligence_mono.pptx.html",
+  "title": "cia_ex_intelligence_mono.pptx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ex-intelligence/communication_solution_process_20260316073609.pptx.md",
+  "url": "/projects/ex-intelligence/communication_solution_process_20260316073609.pptx.html",
+  "title": "communication_solution_process_20260316073609.pptx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ex-intelligence/employee_experience_3theo_260226.pptx.md",
+  "url": "/projects/ex-intelligence/employee_experience_3theo_260226.pptx.html",
+  "title": "employee_experience_3theo_260226.pptx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ex-intelligence/employee_experience_three_theories_20260226064441.pptx.md",
+  "url": "/projects/ex-intelligence/employee_experience_three_theories_20260226064441.pptx.html",
+  "title": "employee_experience_three_theories_20260226064441.pptx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ex-intelligence/ex-intelligence-working-backwards-v6.docx.md",
+  "url": "/projects/ex-intelligence/ex-intelligence-working-backwards-v6.docx.html",
+  "title": "ex-intelligence-working-backwards-v6.docx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ex-intelligence/quarterly_pulse_check_survey_20260311002242.pptx.md",
+  "url": "/projects/ex-intelligence/quarterly_pulse_check_survey_20260311002242.pptx.html",
+  "title": "quarterly_pulse_check_survey_20260311002242.pptx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/ex-intelligence/survey_Q_table_260226.xlsx.md",
+  "url": "/projects/ex-intelligence/survey_Q_table_260226.xlsx.html",
+  "title": "survey_Q_table_260226.xlsx",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/investment/README.md",
+  "url": "/projects/investment/README.html",
+  "title": "Global Investment Strategy 2026",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/lds-360/LDS_360_Project/requirements.txt.md",
+  "url": "/projects/lds-360/LDS_360_Project/requirements.txt.html",
+  "title": "requirements.txt",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/lds-360/README.md",
+  "url": "/projects/lds-360/README.html",
+  "title": "LDS 360",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/llm-knowledge-base/README.md",
+  "url": "/projects/llm-knowledge-base/README.html",
+  "title": "LLM Knowledge Base",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/oka/README.md",
+  "url": "/projects/oka/README.html",
+  "title": "OKA Project",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/physical-ai-talent/README.md",
+  "url": "/projects/physical-ai-talent/README.html",
+  "title": "Physical AI / AI Factory Tech Leader 육성",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "projects/pulse-check/README.md",
+  "url": "/projects/pulse-check/README.html",
+  "title": "Pulse Check",
+  "dir": "projects",
+  "date": ""
+ },
+ {
+  "path": "ragapp/README.md",
+  "url": "/ragapp/README.html",
+  "title": "README",
+  "dir": "ragapp",
+  "date": ""
+ },
+ {
+  "path": "references/agentic-readability.md",
+  "url": "/references/agentic-readability.html",
+  "title": "Ag[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]tic Readability Guidelines (에이전틱 가독성 가이드라인)",
+  "dir": "references",
+  "date": ""
+ },
+ {
+  "path": "reports/classification_log_20260811_0402.md",
+  "url": "/reports/classification_log_20260811_0402.html",
+  "title": "csp-brain Type 자동 분류 로그",
+  "dir": "reports",
+  "date": ""
+ },
+ {
+  "path": "reports/classification_result_20260805_1302.md",
+  "url": "/reports/classification_result_20260805_1302.html",
+  "title": "csp-brain Type 자동 분류 결과 보고서",
+  "dir": "reports",
+  "date": ""
+ },
+ {
+  "path": "reports/classification_result_20260806_1302.md",
+  "url": "/reports/classification_result_20260806_1302.html",
+  "title": "csp-brain Type 자동 분류 결과 보고서",
+  "dir": "reports",
+  "date": ""
+ },
+ {
+  "path": "reports/classification_result_20260807_0402.md",
+  "url": "/reports/classification_result_20260807_0402.html",
+  "title": "자동 분류 결과 보고서 (2026-08-07 04:02)",
+  "dir": "reports",
+  "date": ""
+ },
+ {
+  "path": "reports/classification_result_20260810_1301.md",
+  "url": "/reports/classification_result_20260810_1301.html",
+  "title": "csp-brain Type 자동 분류 결과 보고서",
+  "dir": "reports",
+  "date": ""
+ },
+ {
+  "path": "reports/daily_consolidation_2026-08-10.md",
+  "url": "/reports/daily_consolidation_2026-08-10.html",
+  "title": "🧠 csp-brain 일일 기억 공고화 리포트",
+  "dir": "reports",
+  "date": ""
+ },
+ {
+  "path": "reports/type-classification-result-2026-08-04.md",
+  "url": "/reports/type-classification-result-2026-08-04.html",
+  "title": "csp-brain Type 자동 분류 결과 보고서",
+  "dir": "reports",
+  "date": ""
+ },
+ {
+  "path": "research/AI_Agent_Strategy_2026.md",
+  "url": "/research/AI_Agent_Strategy_2026.html",
+  "title": "2026 AI 에이전트 전략 및 메타-하네스 로드맵",
+  "dir": "research",
+  "date": ""
+ },
+ {
+  "path": "scripts/INDEX_SUMMARY.md",
+  "url": "/scripts/INDEX_SUMMARY.html",
+  "title": "📊 Zavis_Brain 인덱스 요약",
+  "dir": "scripts",
+  "date": ""
+ },
+ {
+  "path": "scripts/README.md",
+  "url": "/scripts/README.html",
+  "title": "Zavis_Brain Harness - 최종 요약",
+  "dir": "scripts",
+  "date": ""
+ },
+ {
+  "path": "scripts/harness-README.md",
+  "url": "/scripts/harness-README.html",
+  "title": "Zavis_Brain Harness - 최종 요약",
+  "dir": "scripts",
+  "date": ""
+ },
+ {
+  "path": "sharing/linkedin/linkedin-2026-04-29-obsidian-graph-rag.md",
+  "url": "/sharing/linkedin/linkedin-2026-04-29-obsidian-graph-rag.html",
+  "title": "linkedin-2026-04-29-obsidian-graph-rag",
+  "dir": "sharing",
+  "date": ""
+ },
+ {
+  "path": "signals/intentional-skill-maintenance-2026.md",
+  "url": "/signals/intentional-skill-maintenance-2026.html",
+  "title": "Signal: Intentional Skill Maintenance 2026",
+  "dir": "signals",
+  "date": ""
+ },
+ {
+  "path": "signals/self-evolving-agents-governance-2026.md",
+  "url": "/signals/self-evolving-agents-governance-2026.html",
+  "title": "Signal: Self-Evolving Agents Governance 2026",
+  "dir": "signals",
+  "date": ""
+ },
+ {
+  "path": "signals/signal-human-agency-paradox-microsoft-2026.md",
+  "url": "/signals/signal-human-agency-paradox-microsoft-2026.html",
+  "title": "Signal #3: Human Agency 의 역설 (Microsoft Work Trend Index 2026)",
+  "dir": "signals",
+  "date": ""
+ },
+ {
+  "path": "signals/signal-minimax-m3-hermes-oauth-2026.md",
+  "url": "/signals/signal-minimax-m3-hermes-oauth-2026.html",
+  "title": "미니맥스 M3 출시 및 헤르메스 OAuth 연동",
+  "dir": "signals",
+  "date": ""
+ },
+ {
+  "path": "templates/daily-note.md",
+  "url": "/templates/daily-note.html",
+  "title": "{{date}}",
+  "dir": "templates",
+  "date": ""
+ },
+ {
+  "path": "templates/project-note.md",
+  "url": "/templates/project-note.html",
+  "title": "{ { title } }",
+  "dir": "templates",
+  "date": ""
+ },
+ {
+  "path": "templates/signal.md",
+  "url": "/templates/signal.html",
+  "title": "{{title}}",
+  "dir": "templates",
+  "date": ""
+ },
+ {
+  "path": "templates/weekly-digest.md",
+  "url": "/templates/weekly-digest.html",
+  "title": "{{year}}-W{{week}} Weekly Change Digest",
+  "dir": "templates",
+  "date": ""
+ },
+ {
+  "path": "templates/wiki-note.md",
+  "url": "/templates/wiki-note.html",
+  "title": "{{title}}",
+  "dir": "templates",
+  "date": ""
+ },
+ {
+  "path": "wiki/briefings/HR_TECH_PSYCH_2026-07-31.md",
+  "url": "/wiki/briefings/HR_TECH_PSYCH_2026-07-31.html",
+  "title": "HR Tech 심리학 브리핑: 인간-AI 협업의 신뢰와 인지 편향",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/8-cluster-model.md",
+  "url": "/wiki/concepts/8-cluster-model.html",
+  "title": "8-Cluster 심리 역량 모델 (8-Cluster Model)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/_index.md",
+  "url": "/wiki/concepts/_index.html",
+  "title": "Concepts Index",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/agent-friendly-redesign.md",
+  "url": "/wiki/concepts/agent-friendly-redesign.html",
+  "title": "에이전트 친화적 재설계 (Agent-friendly Redesign)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/agentic-engineering.md",
+  "url": "/wiki/concepts/agentic-engineering.html",
+  "title": "Agentic Engineering (에이전틱 엔지니어링)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/agentic-recruitment-proxy.md",
+  "url": "/wiki/concepts/agentic-recruitment-proxy.html",
+  "title": "Agentic Recruitment Proxy (에이전틱 채용 대리인)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/agentic-roi.md",
+  "url": "/wiki/concepts/agentic-roi.html",
+  "title": "Agentic ROI (에이전틱 투자 수익률)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/ai-evaluation-system.md",
+  "url": "/wiki/concepts/ai-evaluation-system.html",
+  "title": "AI Evaluation System (Eval)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/ai-recruitment-behavioral-economics.md",
+  "url": "/wiki/concepts/ai-recruitment-behavioral-economics.html",
+  "title": "AI Recruitment Solutions: Collaboration & Behavioral Economics",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/aihr-design-framework-tom-sdm.md",
+  "url": "/wiki/concepts/aihr-design-framework-tom-sdm.html",
+  "title": "AIHR 설계 프레임워크: TOM과 SDM의 재정의",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/antigravity-2-0.md",
+  "url": "/wiki/concepts/antigravity-2-0.html",
+  "title": "Antigravity 2.0 (Agent Hub)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/automated-ontology-generation.md",
+  "url": "/wiki/concepts/automated-ontology-generation.html",
+  "title": "Automated Ontology Generation (AOG)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/ax-internalization.md",
+  "url": "/wiki/concepts/ax-internalization.html",
+  "title": "AX Internalization (AI Transformation)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/bp-signal-intelligence.md",
+  "url": "/wiki/concepts/bp-signal-intelligence.html",
+  "title": "BP Signal Intelligence (신호 생애주기 상태 기계)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/claude-code-workflow.md",
+  "url": "/wiki/concepts/claude-code-workflow.html",
+  "title": "Claude Code 워크플로우 (Explore-Plan-Code-Commit)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/codegraph-efficiency.md",
+  "url": "/wiki/concepts/codegraph-efficiency.html",
+  "title": "CodeGraph Efficiency (지능적 인덱싱과 비용 효율성)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/competency-question.md",
+  "url": "/wiki/concepts/competency-question.html",
+  "title": "Competency Question (CQ): 지식 검증의 척도",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/constructed-fit.md",
+  "url": "/wiki/concepts/constructed-fit.html",
+  "title": "[JOOP] Constructed Fit (구성적 적합성)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/context-corpus.md",
+  "url": "/wiki/concepts/context-corpus.html",
+  "title": "[Concept] Context Corpus: 지능의 토양, 진실의 저수지",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/contextual-ingestion.md",
+  "url": "/wiki/concepts/contextual-ingestion.html",
+  "title": "Contextual Ingestion (맥락적 적재)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/csp-brain-system.md",
+  "url": "/wiki/concepts/csp-brain-system.html",
+  "title": "CSP Brain System",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/data-sensing.md",
+  "url": "/wiki/concepts/data-sensing.html",
+  "title": "Data Sensing (L1/L2/L3 Architecture)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/digital-unconscious.md",
+  "url": "/wiki/concepts/digital-unconscious.html",
+  "title": "Digital Unconscious (디지털 무의식)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/durable-execution.md",
+  "url": "/wiki/concepts/durable-execution.html",
+  "title": "내구적 실행 (Durable Execution)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/economic-freedom.md",
+  "url": "/wiki/concepts/economic-freedom.html",
+  "title": "Economic Freedom (경제적 자유)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/eval.md",
+  "url": "/wiki/concepts/eval.html",
+  "title": "Eval (Evaluation): 지능의 독립 보증서이자 기업의 핵심 IP",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/ex-insight-mining-pipeline.md",
+  "url": "/wiki/concepts/ex-insight-mining-pipeline.html",
+  "title": "EX Insight Mining Pipeline (귀납 × 연역 교차 분석 엔진)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/ex-intelligence.md",
+  "url": "/wiki/concepts/ex-intelligence.html",
+  "title": "EX Intelligence (Employee Experience Intelligence)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/execution-surface.md",
+  "url": "/wiki/concepts/execution-surface.html",
+  "title": "실행 표면 (Execution Surface)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/failed-pattern-trading.md",
+  "url": "/wiki/concepts/failed-pattern-trading.html",
+  "title": "실패한 패턴 트레이딩 (Failed Pattern Trading)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/fde-talent-model.md",
+  "url": "/wiki/concepts/fde-talent-model.html",
+  "title": "FDE(Field Deployment Engineer) 인재 모델 — 현장의 해결사",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/gbrain-personal-ai-os.md",
+  "url": "/wiki/concepts/gbrain-personal-ai-os.html",
+  "title": "정교한 지능 체계 (GBrain): 단순 저장소를 넘어선 개인용 AI OS",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/gemini-spark.md",
+  "url": "/wiki/concepts/gemini-spark.html",
+  "title": "Gemini Spark",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/graph-rag.md",
+  "url": "/wiki/concepts/graph-rag.html",
+  "title": "GraphRAG (Graph-based Retrieval-Augmented Generation)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/hermes-pi-philosophy.md",
+  "url": "/wiki/concepts/hermes-pi-philosophy.html",
+  "title": "Hermes Pi: 인지부하 감소와 하네스의 개인화",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/hr-conceptual-atoms.md",
+  "url": "/wiki/concepts/hr-conceptual-atoms.html",
+  "title": "HR 핵심 지식 원자 (HR Conceptual Atoms)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/k-smart-model.md",
+  "url": "/wiki/concepts/k-smart-model.html",
+  "title": "K-SMART 모델 (한국형 스마트 제조 기술전문가 육성 아키텍처)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/knowledge-capitalization.md",
+  "url": "/wiki/concepts/knowledge-capitalization.html",
+  "title": "Knowledge Capitalization (지식의 자산화)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/knowledge-graph-as-map.md",
+  "url": "/wiki/concepts/knowledge-graph-as-map.html",
+  "title": "Knowledge Graph as a Map (지식그래프: 에이전트의 관계 지도)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/knowledge-synthesis-steps.md",
+  "url": "/wiki/concepts/knowledge-synthesis-steps.html",
+  "title": "지식 합성 5단계 (MEMO 학습법)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/leader-member-exchange.md",
+  "url": "/wiki/concepts/leader-member-exchange.html",
+  "title": "Leader-Member Exchange (리더 - 구성원 교환이론)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/linkedin-agent-automation-20260525.md",
+  "url": "/wiki/concepts/linkedin-agent-automation-20260525.html",
+  "title": "LinkedIn 에이전트 자동화 실전 원칙 분석 (정승현 님 사례)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/maximal-knowledge-exactness.md",
+  "url": "/wiki/concepts/maximal-knowledge-exactness.html",
+  "title": "Maximal Knowledge Exactness (지식의 최대 정합성)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/memo-architecture.md",
+  "url": "/wiki/concepts/memo-architecture.html",
+  "title": "MEMO (Memory as a Model)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/meta-harnessing.md",
+  "url": "/wiki/concepts/meta-harnessing.html",
+  "title": "메타-하네스 (Meta-Harnessing)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/opq-framework.md",
+  "url": "/wiki/concepts/opq-framework.html",
+  "title": "OPQ32 (Occupational Personality Questionnaire) Framework",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/poststroke-depression-network.md",
+  "url": "/wiki/concepts/poststroke-depression-network.html",
+  "title": "뇌졸중 후 우울증의 네트워크 단절성 (Sihvonen 2026)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/pulse-check.md",
+  "url": "/wiki/concepts/pulse-check.html",
+  "title": "Pulse Check (펄스 체크)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/self-determination-theory.md",
+  "url": "/wiki/concepts/self-determination-theory.html",
+  "title": "Self-Determination Theory (자기결정이론)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/sf-domain-mapping.md",
+  "url": "/wiki/concepts/sf-domain-mapping.html",
+  "title": "스마트팩토리 4대 도메인 × 직무역량 매핑",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/skillopt.md",
+  "url": "/wiki/concepts/skillopt.html",
+  "title": "SkillOpt (자기 진화형 기술 최적화)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/social-ide.md",
+  "url": "/wiki/concepts/social-ide.html",
+  "title": "소셜 IDE — 대화형 인터페이스로 진화하는 지능망",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/token-maxing.md",
+  "url": "/wiki/concepts/token-maxing.html",
+  "title": "토큰 맥싱 (Token Maxing)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/vibe-coding.md",
+  "url": "/wiki/concepts/vibe-coding.html",
+  "title": "Vibe Coding",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/concepts/weak-signal-theory.md",
+  "url": "/wiki/concepts/weak-signal-theory.html",
+  "title": "Weak Signal Theory (Ansoff)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/decisions/2026-05-10-system-evolution.md",
+  "url": "/wiki/decisions/2026-05-10-system-evolution.html",
+  "title": "2026-05-10 System Evolution: Transition to Coding Factory Control Tower",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/decisions/_index.md",
+  "url": "/wiki/decisions/_index.html",
+  "title": "Decisions",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/frameworks/7-layer-architecture.md",
+  "url": "/wiki/frameworks/7-layer-architecture.html",
+  "title": "7-Layer Knowledge Architecture (COMPASS~COMPOST)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/frameworks/_index.md",
+  "url": "/wiki/frameworks/_index.html",
+  "title": "Frameworks",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/frameworks/compiled-truth-timeline.md",
+  "url": "/wiki/frameworks/compiled-truth-timeline.html",
+  "title": "Compiled Truth + Timeline",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/frameworks/layer-1-compass.md",
+  "url": "/wiki/frameworks/layer-1-compass.html",
+  "title": "Layer 1: COMPASS (방향)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/frameworks/protocols.md",
+  "url": "/wiki/frameworks/protocols.html",
+  "title": "CSP-Brain Protocols",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/frameworks/weak-signal-ansoff.md",
+  "url": "/wiki/frameworks/weak-signal-ansoff.html",
+  "title": "Ansoff's Weak Signal Framework: 비즈니스 안테나",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/people/_index.md",
+  "url": "/wiki/people/_index.html",
+  "title": "People",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/people/csp.md",
+  "url": "/wiki/people/csp.html",
+  "title": "CSP (Creative Solution Provider)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/people/duckjung-kim.md",
+  "url": "/wiki/people/duckjung-kim.html",
+  "title": "김덕중 (Duckjung Kim)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/projects/_index.md",
+  "url": "/wiki/projects/_index.html",
+  "title": "Projects",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/protocols/_index.md",
+  "url": "/wiki/protocols/_index.html",
+  "title": "Protocols",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/protocols/validation-protocol.md",
+  "url": "/wiki/protocols/validation-protocol.html",
+  "title": "OKA 프로젝트 독립 검증 프로토콜 (Validator Protocol)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-18-ai-boom-labor-distribution.md",
+  "url": "/wiki/signals/2026-05-18-ai-boom-labor-distribution.html",
+  "title": "AI Boom and Labor Distribution",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-20-google-io-sign-of-agentic-shift.md",
+  "url": "/wiki/signals/2026-05-20-google-io-sign-of-agentic-shift.html",
+  "title": "Google I/O 2026: 에이전틱 전환의 신호",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-30-automated-task-packaging.md",
+  "url": "/wiki/signals/2026-05-30-automated-task-packaging.html",
+  "title": "[SIGNAL] 자율형 태스크 패키징: 반복 작업을 스킬과 서브에이전트로 전환",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-30-claude-opus-4-8-detailed-harnessing.md",
+  "url": "/wiki/signals/2026-05-30-claude-opus-4-8-detailed-harnessing.html",
+  "title": "[SIGNAL] Claude Opus 4.8: 바닐라 모델의 승리와 제어 파라미터의 시대",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-30-claude-opus-4-8-launch-and-prompting-shift.md",
+  "url": "/wiki/signals/2026-05-30-claude-opus-4-8-launch-and-prompting-shift.html",
+  "title": "[SIGNAL] Claude Opus 4.8 발표 및 프롬프팅 패러다임의 전환",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-30-db-schema-knowledge-automation.md",
+  "url": "/wiki/signals/2026-05-30-db-schema-knowledge-automation.html",
+  "title": "[SIGNAL] DB 스키마의 지식 자산화: td-export와 Git-Ops",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-30-dynamic-workflow-harness.md",
+  "url": "/wiki/signals/2026-05-30-dynamic-workflow-harness.html",
+  "title": "[SIGNAL] 에이전트 팀에서 '다이내믹 워크플로우'로의 진화",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-30-harness-is-not-just-a-leash.md",
+  "url": "/wiki/signals/2026-05-30-harness-is-not-just-a-leash.html",
+  "title": "[SIGNAL] 하네스는 목줄이 아닌 '작업 운영체제'다: 황민호 님의 하네싱 통찰",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-30-hs-top-failure-long-strategy.md",
+  "url": "/wiki/signals/2026-05-30-hs-top-failure-long-strategy.html",
+  "title": "[SIGNAL] 헤드앤숄더 실패(H&S Top Failure)를 통한 불리시 컨티뉴에이션",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-30-josh-kim-ai-native-company-record.md",
+  "url": "/wiki/signals/2026-05-30-josh-kim-ai-native-company-record.html",
+  "title": "[SIGNAL] Josh Kim의 AI 네이티브 컴퍼니 구축 기록: 데이터 적재와 자가 개선",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-05-30-obelisk-sqlite-durable-execution.md",
+  "url": "/wiki/signals/2026-05-30-obelisk-sqlite-durable-execution.html",
+  "title": "[SIGNAL] Obelisk: SQLite 기반 내구적 워크플로 엔진의 부상",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.md",
+  "url": "/wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.html",
+  "title": "[SIGNAL] LogicRAG: 지도를 미리 그리지 않는 '레이지(Lazy)' 추론의 승리",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-06-13-agentic-ta-mainstream-shift.md",
+  "url": "/wiki/signals/2026-06-13-agentic-ta-mainstream-shift.html",
+  "title": "[Signal] 에이전틱 채용의 주류화와 '인간-AI 파워 커플'의 등장",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-06-13-hermes-agent-infrastructure-shift.md",
+  "url": "/wiki/signals/2026-06-13-hermes-agent-infrastructure-shift.html",
+  "title": "[Weak Signal] AI Agent as an Operating Layer",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-06-15-agentic-ta-reset.md",
+  "url": "/wiki/signals/2026-06-15-agentic-ta-reset.html",
+  "title": "[Signal] 2026-06-15: Agentic TA 리셋과 '슈퍼제너럴리스트'의 부상",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-06-22-agentic-orchestration-shift.md",
+  "url": "/wiki/signals/2026-06-22-agentic-orchestration-shift.html",
+  "title": "2026-06-22 에이전틱 오케스트레이션으로의 전환 (The Orchestration Shift)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-06-25-hr-performance-architect-pivot.md",
+  "url": "/wiki/signals/2026-06-25-hr-performance-architect-pivot.html",
+  "title": "HR의 역할 대전환: 행정의 파수꾼에서 '성과 시스템의 설계자(Architect)'로",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-06-27-autonomous-talent-agency-shift.md",
+  "url": "/wiki/signals/2026-06-27-autonomous-talent-agency-shift.html",
+  "title": "자율적 인재 에이전시로의 이동: '에이전틱 협상'과 '완결적 대리'의 시대",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-07-06-dawn-of-hr-superagents.md",
+  "url": "/wiki/signals/2026-07-06-dawn-of-hr-superagents.html",
+  "title": "[Signal] 2026-07-06: 슈퍼에이전트의 서막 - '판단의 종말'에서 '오케스트레이션의 시대'로",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-07-11-deepwiki-post.md",
+  "url": "/wiki/signals/2026-07-11-deepwiki-post.html",
+  "title": "돈키호테 레포 정리를 위한 DeepWiki 활용",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-07-22-autonomous-hiring-paradox.md",
+  "url": "/wiki/signals/2026-07-22-autonomous-hiring-paradox.html",
+  "title": "[Signal] 2026-07-22: 자율 채용의 역설 - '신뢰의 위임'과 '인간성의 상실' 사이",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-07-23-wadi-human-centric-design.md",
+  "url": "/wiki/signals/2026-07-23-wadi-human-centric-design.html",
+  "title": "[Signal] 2026-07-23: WADI 프레임워크 — 인간 중심성은 도덕이 아니라 경제다",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-07-24-cognitive-offloading-skill-decay.md",
+  "url": "/wiki/signals/2026-07-24-cognitive-offloading-skill-decay.html",
+  "title": "[Signal] 2026-07-24: 인지적 오프로딩과 스킬 디케이 — AI가 빼앗는 것은 지루함이 아니라 기쁨이다",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-07-26-self-evolving-agents-evolution-gate.md",
+  "url": "/wiki/signals/2026-07-26-self-evolving-agents-evolution-gate.html",
+  "title": "[Signal] 2026-07-26: 자기진화 에이전트와 Evolution Gate — 진화를 위임하되 방향은 인간이 설계한다",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/2026-08-10-capital-flow-market-neutral.md",
+  "url": "/wiki/signals/2026-08-10-capital-flow-market-neutral.html",
+  "title": "[Signal] 2026-08-10: 자본의 심리학 — 분산의 복귀와 시장 중립의 시대",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/BRIEFING_2026-07-30_IO_PSYCHOLOGY.md",
+  "url": "/wiki/signals/BRIEFING_2026-07-30_IO_PSYCHOLOGY.html",
+  "title": "HR Tech Psychology Daily Briefing",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/BRIEFING_2026-08-01.md",
+  "url": "/wiki/signals/BRIEFING_2026-08-01.html",
+  "title": "HR Tech Briefing: 2026 년 8 월 1 일",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/BRIEFING_2026-08-03.md",
+  "url": "/wiki/signals/BRIEFING_2026-08-03.html",
+  "title": "HR Tech — 신뢰의 사다리, 그리고 정원사의 다짐 (2026-08-03)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/HR_TECH_BRIEFING_2026-07-29.md",
+  "url": "/wiki/signals/HR_TECH_BRIEFING_2026-07-29.html",
+  "title": "HR Tech 브리핑 — 2026 년 7 월 29 일",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/HR_Tech_Briefing_2026-07-23.md",
+  "url": "/wiki/signals/HR_Tech_Briefing_2026-07-23.html",
+  "title": "[HR Tech Briefing] 2026-07-23: 자율성의 역설과 신뢰의 재설계",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/HR_Tech_Briefing_2026-07-24.md",
+  "url": "/wiki/signals/HR_Tech_Briefing_2026-07-24.html",
+  "title": "📡 HR Tech Briefing: 2026-07-24",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/HR_Tech_Briefing_2026-07-26.md",
+  "url": "/wiki/signals/HR_Tech_Briefing_2026-07-26.html",
+  "title": "HR Tech Morning Briefing: 2026-07-26 (일)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/IO_PSYCHOLOGY_BRIEFING_2026-07-23.md",
+  "url": "/wiki/signals/IO_PSYCHOLOGY_BRIEFING_2026-07-23.html",
+  "title": "I/O 심리학 일일 브리핑 — AI 시대, 인간 중심성의 재발견",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/IO_PSYCHOLOGY_BRIEFING_2026-07-24.md",
+  "url": "/wiki/signals/IO_PSYCHOLOGY_BRIEFING_2026-07-24.html",
+  "title": "I/O Psychology Daily Briefing — 2026-07-24 (금)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/REFLECT_2026-08-01_SUMMARY.md",
+  "url": "/wiki/signals/REFLECT_2026-08-01_SUMMARY.html",
+  "title": "HR Tech Briefing Summary — 2026 년 8 월 1 일",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/_index.md",
+  "url": "/wiki/signals/_index.html",
+  "title": "Signals",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/hr-tech/2026-07-30-agentic-adoption.md",
+  "url": "/wiki/signals/hr-tech/2026-07-30-agentic-adoption.html",
+  "title": "Agentic AI Adoption & Trust Asymmetry — 2026-07-30",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/talent-market-disruption.md",
+  "url": "/wiki/signals/talent-market-disruption.html",
+  "title": "[SIGNAL] 채용 시장의 권력 이동 (Harper & AI Talent Agents)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/signals/transportation-ai-pivot.md",
+  "url": "/wiki/signals/transportation-ai-pivot.html",
+  "title": "[SIGNAL] AI 인프라의 실핏줄, 물류 섹터의 브레이크아웃",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/skills/_index.md",
+  "url": "/wiki/skills/_index.html",
+  "title": "_index",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/skills/context-restore.md",
+  "url": "/wiki/skills/context-restore.html",
+  "title": "Context Restore (세션 복원)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/skills/dream-cycle.md",
+  "url": "/wiki/skills/dream-cycle.html",
+  "title": "Dream Cycle (주간 정리 루틴)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/skills/memory-save.md",
+  "url": "/wiki/skills/memory-save.html",
+  "title": "Memory Save (대화 종료 기록)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.md",
+  "url": "/wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.html",
+  "title": "Knowledge Synapse — HR Tech Psychology 2026-07-29",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/synapses/IO_PSYCHOLOGY_SYNAPSE_2026-07-30.md",
+  "url": "/wiki/synapses/IO_PSYCHOLOGY_SYNAPSE_2026-07-30.html",
+  "title": "시냅스 제안: I/O Psychology 4 편 논문 연결 (2026-07-30)",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/tools/_index.md",
+  "url": "/wiki/tools/_index.html",
+  "title": "Tools Index",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/tools/claude-code-skills.md",
+  "url": "/wiki/tools/claude-code-skills.html",
+  "title": "Claude Code Skills — 재사용 가능한 에이전트 역량 패키지",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/tools/claude-code.md",
+  "url": "/wiki/tools/claude-code.html",
+  "title": "Claude Code",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/tools/deepwiki.md",
+  "url": "/wiki/tools/deepwiki.html",
+  "title": "DeepWiki",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/tools/notion.md",
+  "url": "/wiki/tools/notion.html",
+  "title": "Notion",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/tools/obsidian.md",
+  "url": "/wiki/tools/obsidian.html",
+  "title": "Obsidian",
+  "dir": "wiki",
+  "date": ""
+ },
+ {
+  "path": "wiki/tools/rlm-forge.md",
+  "url": "/wiki/tools/rlm-forge.html",
+  "title": "RLM-Forge — 재귀적 언어모델(RLM) 실험 리포지토리",
+  "dir": "wiki",
+  "date": ""
+ }
+]
