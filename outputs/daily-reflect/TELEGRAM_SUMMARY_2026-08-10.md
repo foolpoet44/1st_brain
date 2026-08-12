@@ -1,5 +1,6 @@
 # 🌙 저녁 성찰 요약 — 2026-08-10
 
+type: Note
 ## 📊 오늘의 델타
 - **위키 편입:** 신규 1 건 (자본 흐름 도메인) + 병합 4 건 (IO-PSYCH·HR-TECH)
 - **Human Gate:** 11 종 명세화 완료 (IO-PSYCH 4, HR-TECH 4, MONEY-FLOW 3)
