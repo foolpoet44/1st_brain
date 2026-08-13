@@ -5,6 +5,9 @@ domain: MONEY-FLOW
 status: Active
 title: "자본의 정체성 전환: 방향성 베팅에서 중립 전략으로"
 tags: [금리, 환율, 자산배분, 헤지펀드, 기관투자]
+processed: true
+processed_date: 2026-08-13
+processed_note: INGEST 프로토콜 수행 — MERGE 판정 (기존 문서에 병합)
 ---
 
 # 자본의 정체성 전환: 방향성 베팅에서 중립 전략으로

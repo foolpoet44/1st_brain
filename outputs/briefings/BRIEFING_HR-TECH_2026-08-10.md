@@ -5,6 +5,9 @@ domain: HR-TECH
 status: Active
 title: "에이전틱 채용의 2026: 도구에서 조직 구조로의 전환"
 tags: [agentic-ai, recruitment, bias-audit, candidate-experience, skills-based-hiring]
+processed: true
+processed_date: 2026-08-13
+processed_note: INGEST 프로토콜 수행 — MERGE 판정 (기존 문서에 병합)
 ---
 
 # HR Tech 브리핑: 에이전틱 채용의 2026 — 도구에서 조직 구조로의 전환

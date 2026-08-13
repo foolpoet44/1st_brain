@@ -3,6 +3,35 @@ type: Note
 status: Active
 ---
 
+## 2026-08-13 — INGEST 프로토콜 수행 (아침 브리핑 6 건)
+
+**집계**:
+- **신규 (NEW)**: 0 건
+- **병합 (MERGE)**: 6 건
+- **중복 종결 (DUPLICATE)**: 0 건
+
+**판정 근거**:
+- **HR-TECH 3 건** (08-10, 08-11, 08-12): 2026-07-22-autonomous-hiring-paradox.md 에 병합
+  - 이유: 52% 에이전트 도입, 26% 편향, Eightfold FCRA, 70% vs 8% 신뢰 격차 — 모두 기존 문서에 있음
+- **IO-PSYCH 1 건** (08-11): 2026-07-22-autonomous-hiring-paradox.md 에 병합
+  - 이유: arXiv:2603.14963 (의미 보호 구역), arXiv:2605.28680 (Decency vs Meaningfulness) — HR 실행 함의 중복
+- **MONEY-FLOW 2 건** (08-11, 08-12): 2026-08-10-capital-flow-market-neutral.md 에 병합
+  - 이유: Fed 금리, 환율 1460 원, 5:5 자산배분 — 자본시장 신호 중복
+
+**인용된 Human Gate**:
+- Human Gate #1-4: 에이전트 조직 설계, DEI 벤더 심사, 의미 보호 구역, 도메인별 AI 영향 평가 (IO-PSYCH)
+- Human Gate #1-4: 편향 감사, 법적 리스크 모니터링, 후보자 경험 심의회, 진화 게이트 (HR-TECH)
+- Human Gate #1-3: Fed 금리 감시, 환율 임계치, 자산배분 심의 (MONEY-FLOW)
+
+**후속 작업**:
+- [ ] 2026-07-22-autonomous-hiring-paradox.md 의 Timeline 에 4 건 브리핑 내용 추가
+- [ ] 2026-08-10-capital-flow-market-neutral.md 의 Timeline 에 2 건 브리핑 내용 추가
+- [ ] _ops/change-log.md 에 [INGEST] 엔트리 추가
+- [ ] wiki/signals/_index.md 에 링크 존재 확인
+
+---
+
+
 # Ingest Log
 
 inbox/ 에서 wiki/ 로 자료가 수집된 기록입니다.

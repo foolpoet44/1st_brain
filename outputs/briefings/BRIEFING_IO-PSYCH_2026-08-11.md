@@ -5,6 +5,9 @@ domain: IO-PSYCH
 status: Active
 title: "I/O 심리학 브리핑 2026-08-11 — AI 노출 작업의 의미와 의사결정 피로"
 tags: [I/O-Psychology, AI-Workplace, Decision-Fatigue, Meaningful-Work, Algorithmic-Fairness]
+processed: true
+processed_date: 2026-08-13
+processed_note: INGEST 프로토콜 수행 — MERGE 판정 (기존 문서에 병합)
 ---
 
 # I/O 심리학 브리핑 2026-08-11

@@ -4,6 +4,9 @@ date: 2026-08-12
 domain: MONEY-FLOW
 status: Active
 title: "자본의 심리적 계약 재협상: 1460 원 환율과 Fed 의 매파적 동결이 드러내는 것"
+processed: true
+processed_date: 2026-08-13
+processed_note: INGEST 프로토콜 수행 — MERGE 판정 (기존 문서에 병합)
 ---
 
 # 자본의 심리적 계약 재협상: 1460 원 환율과 Fed 의 매파적 동결이 드러내는 것

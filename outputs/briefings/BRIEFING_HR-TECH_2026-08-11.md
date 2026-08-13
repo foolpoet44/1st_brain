@@ -4,6 +4,9 @@ date: 2026-08-11
 domain: HR-TECH
 status: Active
 tags: [AI, recruitment, bias, agents, fairness]
+processed: true
+processed_date: 2026-08-13
+processed_note: INGEST 프로토콜 수행 — MERGE 판정 (기존 문서에 병합)
 ---
 
 # HR Tech 브리핑: 알고리즘 단일문화와 신뢰의 사다리 (2026-08-11)

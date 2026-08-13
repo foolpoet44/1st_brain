@@ -5,6 +5,9 @@ domain: HR-TECH
 status: Active
 title: "2026 년 8 월 12 일 HR Tech 브리핑: 에이전트 채용의 주류화와 신뢰의 비대칭성"
 tags: [autonomous-hiring, ai-agents, candidate-experience, algorithmic-bias, fcra]
+processed: true
+processed_date: 2026-08-13
+processed_note: INGEST 프로토콜 수행 — MERGE 판정 (기존 문서에 병합)
 ---
 
 # 2026 년 8 월 12 일 HR Tech 브리핑: 에이전트 채용의 주류화와 신뢰의 비대칭성
