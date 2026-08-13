@@ -7,18 +7,27 @@ permalink: /knowledge/
 <h1>🧠 CSP-Brain 지식 인덱스</h1>
 
 <p>
-  Vault에 축적된 지식 문서를 폴더 구분 없이 <strong>전체 최신 수정순</strong>
-  (git 마지막 커밋 기준)으로 나열합니다. 새 문서가 동기화되면 다음 배포에서 자동 갱신됩니다.
+  Vault 에 축적된 지식 문서를 폴더 구분 없이 <strong>전체 최신 수정순</strong>
+  (git 마지막 커밋 기준) 으로 나열합니다. 새 문서가 동기화되면 다음 배포에서 자동 갱신됩니다.
   <a href="{{ '/' | relative_url }}">← 대시보드로 돌아가기</a>
 </p>
 
 {%- comment -%}
-  데이터(_data/knowledge.json)는 _ops/scripts/gen_knowledge_index.py 가 빌드 전에
+  데이터 (_data/knowledge.json) 는 _ops/scripts/gen_knowledge_index.py 가 빌드 전에
   파일별 git 마지막 커밋 시각으로 전역 최신순 정렬해 생성한다. 여기서는 폴더 그룹 없이
-  하나의 목록(최근 변경 피드)으로 그대로 출력한다. 폴더는 항목 옆 태그로 표시.
+  하나의 목록 (최근 변경 피드) 으로 그대로 출력한다. 폴더는 항목 옆 태그로 표시.
 {%- endcomment -%}
 
-<p>총 {{ site.data.knowledge | size }}개 · 최신 수정순</p>
+<!-- 디버깅: 데이터 크기 출력 -->
+{%- assign data_size = site.data.knowledge | size -%}
+<p>총 {{ data_size }}개 · 최신 수정순</p>
+
+{%- if data_size == 0 -%}
+<div style="background:#fff3cd; padding:1rem; border-radius:0.5rem; margin:1rem 0;">
+  <strong>⚠️ 경고:</strong> <code>_data/knowledge.json</code> 이 비어있거나 로드되지 않았습니다.
+  <br>GitHub Actions 로그를 확인하세요: <code>Generateknowledge index</code> 단계 실행 여부
+</div>
+{%- endif -%}
 
 <ul class="knowledge-feed">
   {% for d in site.data.knowledge %}

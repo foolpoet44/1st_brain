@@ -1,14 +1,5 @@
 name: Deploy Pages (submodule-safe)
 
-# 레거시 "Deploy from a branch" Jekyll 빌더를 대체한다.
-# 레거시 빌더는 actions/checkout 을 submodules:recursive 로 호출해, 깨진
-# gitlink(예: .gitmodules 에 URL 없는 tmp_deploy)가 하나라도 생기면
-# exit 128 로 배포 전체가 죽었다. 이 워크플로는 submodules:false 로
-# 체크아웃하므로 서브모듈 메타데이터가 어긋나도 Pages 배포가 영향받지 않는다.
-#
-# 전제: Settings > Pages > Build and deployment > Source = "GitHub Actions"
-# (레거시 "Deploy from a branch" 에서 한 번만 전환해야 이 워크플로가 발행한다.)
-
 on:
   push:
     branches: [main]
@@ -19,7 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-# 동시 배포 충돌 방지(진행 중 배포는 취소하지 않고 직렬화)
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -31,25 +21,47 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: false # 핵심: 깨진 gitlink 가 배포를 깨뜨리지 못하게 한다
-          fetch-depth: 0 # 지식 인덱스의 '최신 수정순' 계산에 전체 커밋 히스토리 필요
+          submodules: false
+          fetch-depth: 0
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 지식 인덱스 데이터 생성: 파일별 git 마지막 커밋 시각으로 최신순 정렬해
-      # _data/knowledge.json 을 떨군다. knowledge.html 이 이를 폴더별로 렌더링한다.
+      # 지식 인덱스 데이터 생성 + 디버깅
       - name: Generate knowledge index
-        run: python3 _ops/scripts/gen_knowledge_index.py
+        run: |
+          echo "🔍 Before: _data/knowledge.json exists? $(test -f _data/knowledge.json && echo YES || echo NO)"
+          echo "🔍 Running gen_knowledge_index.py..."
+          python3 _ops/scripts/gen_knowledge_index.py
+          echo "🔍 After: _data/knowledge.json exists? $(test -f _data/knowledge.json && echo YES || echo NO)"
+          if [ -f _data/knowledge.json ]; then
+            echo "📊 Document count: $(python3 -c 'import json; print(len(json.load(open(\"_data/knowledge.json\"))))')"
+          fi
 
-      # 지식 위키 발행: Jekyll 로 vault 마크다운을 웹페이지로 렌더링한다.
-      # 빌드를 깨뜨리는 {{ }} 마크다운(자동추출 덤프·템플릿)은 _config.yml exclude 에서
-      # 걸러내므로 Liquid 오류 없이 빌드된다. 대시보드(index.html+data.json)도 함께 발행됨.
+      # Jekyll 빌드 전 _data 확인
+      - name: Debug _data directory
+        run: |
+          echo "📁 _data contents:"
+          ls -la _data/ || echo "_data directory not found"
+          if [ -f _data/knowledge.json ]; then
+            echo "📊 knowledge.json size: $(wc -l < _data/knowledge.json) lines"
+          fi
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+
+      # 빌드 후 _site 확인
+      - name: Debug _site/knowledge.html
+        run: |
+          echo "📁 _site contents:"
+          ls -la _site/ | head -20
+          if [ -f _site/knowledge/index.html ]; then
+            echo "📄 knowledge/index.html first 50 lines:"
+            head -50 _site/knowledge/index.html | grep -E "(총|개|knowledge|data)"
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
