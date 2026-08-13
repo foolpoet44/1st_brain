@@ -1,5 +1,44 @@
 ---
 
+## [2026-08-13] 지식 인덱스 정지의 진짜 원인 — 사이트가 6 일간 얼어붙어 있었다
+
+### 무엇이 바뀌었나
+
+- **원인 규명**: 지식 인덱스가 294 개에 멈춰 있던 이유는 Jekyll 데이터 로드 실패도, CDN 캐시도, 빌드 순서도, `_data` 권한 문제도 아니었다. **GitHub Pages 배포 자체가 2026-08-07 이후 한 번도 실행되지 않았다.** Pages 워크플로 실행 #229(`31225773484`, 08-07 23:01:52Z)의 `deploy` 잡이 `queued` 상태로 멈춘 뒤 **6 일간 그대로**였고, `concurrency.cancel-in-progress: false` 때문에 그 실행이 `pages` 그룹을 계속 점유했다. GitHub 은 그룹당 대기 실행을 하나만 유지하므로, 이후 밀려온 #230~#242 는 서로를 밀어내며 **전부 `cancelled`** 로 사라졌고 #243 은 `pending` 인 채 잡을 하나도 만들지 못했다. 마지막으로 실제 배포에 성공한 것은 #228(08-07 10:15, 커밋 `e4d14c3`)이다
+- **294 라는 수의 정체를 재현으로 확정**: `e4d14c3` 시점의 구(舊) 생성기(폴더 화이트리스트 8 개: `wiki concepts projects outputs people decisions weekly research`)를 그 커밋의 파일 목록에 그대로 돌리면 **정확히 294** 가 나온다. 즉 화면의 294 는 버그가 아니라 **8 월 7 일 빌드의 정확한 스냅샷**이었다. 이후 커밋된 개선(루트 파일 + 폴더 19 개 확장 → 413)은 커밋만 되고 한 번도 발행되지 않았다
+- **숨어 있던 두 번째 버그 — 날짜 전량 소실**: `gen_knowledge_index.py` 의 `DIRS` 첫 항목이 루트를 뜻하는 빈 문자열 `""` 이었다. git 은 이를 거부하며(`fatal: empty string is not a valid pathspec`) 즉시 죽는데 `last_commit_dates()` 가 반환코드를 보지 않아 **실패가 조용히 삼켜졌다**. 그 결과 `_data/knowledge.json` 413 건의 `date` 가 **전부 빈 문자열**이었고(413/413), 정렬 키가 모두 같아져 이 페이지의 존재 이유인 **「최신 수정순」이 완전히 무력화**돼 있었다. Actions 의 `Generate knowledge index` 단계가 1 초 미만에 끝난 것이 그 흔적이다
+- **세 번째 버그 — 유령 링크 35 건**: 인덱스가 `git ls-files` 로 전체를 훑으면서 `_config.yml` 의 `exclude` 에 걸려 발행되지 않는 경로(`_ops/`, `.agents/`, `.claude/`, `Toss/`, `templates/`, `scripts/`, `harness/`, `ragapp/`)까지 담았다. 목록에는 보이지만 클릭하면 404 인 항목이 413 건 중 35 건
+- **수정**: (1) `pages.yml` 의 `cancel-in-progress: true` 전환 + 두 잡에 `timeout-minutes: 15`, (2) `git log` pathspec 제거 및 실패 시 `SystemExit` 로 중단, 날짜 0 건이면 배포 차단, (3) `publishable()` 도입해 미발행 경로 제외, (4) 깨져 있던 디버그 스텝의 따옴표 수정(`\"` 가 파이썬에 그대로 넘어가 `SyntaxError` 였고 `$( )` 실패가 `echo` 를 죽이지 않아 로그에도 안 보였다), (5) 빌드 산출물의 문서 수를 실제로 검증하는 `Verify rendered index` 스텝 추가
+- **결과**: 389 건 · **날짜 389/389** · 유령 링크 **0 건** · 최신 수정순 정상 동작 (413 → 389 은 발행되지 않는 24 건을 걷어낸 것)
+
+### 왜 중요한가
+
+1. **`cancelled` 는 `failed` 가 아니라서 알림이 오지 않는다.** 이 사고가 6 일간 보이지 않은 이유는 실패가 없어서가 아니라 **실패로 분류되지 않았기** 때문이다. Actions 목록은 온통 회색 취소 표시였고 빨간 X 는 하나도 없었다. 조용한 정지는 시끄러운 실패보다 훨씬 오래 산다.
+2. **가설 네 개가 모두 빌드 단계를 향하고 있었다.** 최초 분석표의 네 후보(Jekyll 데이터 로드·CDN 캐시·빌드 순서·`_data` 권한)는 전부 "빌드가 잘못 돌았다"를 전제한다. 실제로는 **빌드는 애초에 돌지 않았다.** 산출물이 낡았을 때 첫 질문은 "어떻게 잘못 만들어졌나"가 아니라 **"만들어지기는 했나"** 여야 한다.
+3. **원자료가 옳다는 사실이 알리바이가 됐다.** `_data/knowledge.json` 이 413 건이라는 것을 로컬에서 확인했기 때문에 의심이 그 아래 단계로 내려가지 못했다. 그러나 그 413 건은 **날짜가 전부 비어 있는** 413 건이었다. 수를 세는 검증은 통과했고 내용을 보는 검증은 없었다.
+4. **조용한 실패는 조용한 성공처럼 보인다.** 세 버그(`git log` 실패, 따옴표 오류, 배포 정지)의 공통 서명은 동일하다 — 반환코드를 아무도 읽지 않았다. `set -euo pipefail` 과 명시적 `SystemExit` 는 스타일이 아니라 **정지를 가시화하는 유일한 장치**다.
+5. **`cancel-in-progress: false` 는 GitHub 공식 Pages 템플릿의 기본값이지만 이 저장소에는 맞지 않는다.** 그 기본값은 "진행 중인 프로덕션 배포를 지킨다"는 전제 위에 있는데, 여기서는 자동화가 하루에 여러 번 `main` 에 푸시하고 **아무도 실행을 지켜보지 않는다.** 지켜야 할 것은 진행 중 배포가 아니라 **최신 상태가 반드시 나가는 것**이다.
+6. **정지 상태에서도 계측기는 413 을 보고하고 있었다.** 어제 성찰이 기록한 "지식 인덱스 413 유지"는 저장소의 파일을 읽은 값이지 사이트에 발행된 값이 아니다. **자기 계측이 배포 경계를 넘지 못하면 시스템은 자기가 죽어 있는 줄 모른다.**
+
+### 영향 범위
+
+- 변경 파일: `.github/workflows/pages.yml` · `_ops/scripts/gen_knowledge_index.py` · `knowledge.html` · `_data/knowledge.json`
+- 발행 인덱스: 294(사이트 실측, 08-07 빌드) → 389 · 날짜 0/413 → **389/389** · 유령 링크 35 → **0**
+- 폴더 분포: `outputs` 180 · `wiki` 121 · `projects` 23 · `csp-brain` 18 · 루트 11 · `Type` 11 · `reports` 7 · `signals` 4 · `Atoms` 3 · `moc` 3 · `analysis` 2 · `logs` 1
+- 영향 없는 것: 위키 문서 내용, `data.json` 대시보드(별도 워크플로 `deploy-visual.yml` 로 배포되며 정상)
+- 미해결(권한 밖): 실행 #229 취소는 `contents: read` 토큰으로 불가 — **사람이 한 번 눌러야 한다**
+
+### 다음 확인
+
+1. **실행 #229 를 웹 UI 에서 취소한다** — https://github.com/foolpoet44/1st_brain/actions/runs/31225773484 → Cancel workflow. 이것이 `pages` 그룹의 잠금을 즉시 푸는 유일한 방법이다. (이 PR 이 `main` 에 병합되면 `cancel-in-progress: true` 가 다음 푸시에서 자동으로 밀어내지만, 수동 취소가 즉시 복구다)
+2. 병합 후 첫 Pages 실행에서 `Verify rendered index` 스텝이 `총 389개` 를 출력하는지 확인
+3. 사이트 https://foolpoet44.github.io/1st_brain/knowledge/ 가 389 건 · 날짜 내림차순으로 뜨는지 육안 확인
+4. `_config.yml` 의 `exclude` 와 `gen_knowledge_index.py` 의 `NOPUBLISH_DIRS` 는 **손으로 맞춰야 하는 쌍둥이 목록**이다 — 한쪽만 고치면 유령 링크가 되돌아온다. 장기적으로 `_config.yml` 을 파싱해 단일 출처로 만들 것
+5. `EVAL_STATUS.md` 의 frontmatter `title` 이 `[[EVAL_STATUS.md|EVAL_STATUS]]` 라 인덱스 제목에 위키링크 문법이 그대로 노출된다 — 별건이나 확인 필요
+6. **다른 워크플로에도 같은 조용한 정지가 있는지 점검**: `weekly-digest.yml`, `deploy-visual.yml` 의 최근 실행 상태와 `timeout-minutes` 부재 여부
+
+---
+
 ## [2026-08-12] 저녁 성찰 (Daily Reflect) — 아무 일도 일어나지 않은 날을 기록할 자리가 없다
 
 ### 무엇이 바뀌었나
