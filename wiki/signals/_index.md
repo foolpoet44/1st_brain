@@ -1,7 +1,7 @@
 ---
 title: Signals
 created: 2026-04-29
-updated: 2026-06-27
+updated: 2026-08-14
 type: project
 status: growing
 tags: [index, wiki]
