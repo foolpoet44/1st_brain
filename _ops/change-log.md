@@ -1,3 +1,27 @@
+## [2026-08-14] INGEST — HR Tech 및 I/O 심리학 브리핑 편입
+
+**무엇이 바뀌었나:**
+- `outputs/briefings/BRIEFING_HR-TECH_2026-08-14.md` 의 인종 편향 통계 (85.1% 백인 선호, 100% 흑인 불이익, 35% 아프리카계 감소) 가 `wiki/signals/2026-07-22-autonomous-hiring-paradox.md` 의 Timeline 에 추가됨
+- `outputs/briefings/BRIEFING_IO-PSYCH_2026-08-14.md` 의 Human Gate 명세가 `wiki/signals/BRIEFING_2026-07-30_IO_PSYCHOLOGY.md` 의 Timeline 에 재명세됨
+- **신규 노드 0 건, 병합 2 건** — 기존 문서의 지식을 심화하는 MERGE 중심 편입
+
+**왜 중요한가:**
+- 인종 편향 통계 (Stanford HAI, 2026) 는 현재 Vault 에 정량 근거가 이 한 건뿐 — "편향은 기술적 실패가 아니라 시장 집중의 구조적 결과"라는 통찰의 실증적 기반
+- Human Gate 4 종 (의사결정 아키텍처, 에이전트 조직 설계, 알고리즘 공정성 감사, AI 신뢰 수준 공개) 은 [[bp-signal-intelligence]] 의 YAML 스키마로 명세화되어야 할 실행 표면
+
+**영향 범위:**
+- **Vault**: `wiki/signals/2026-07-22-autonomous-hiring-paradox.md` (Timeline 확장), `wiki/signals/BRIEFING_2026-07-30_IO_PSYCHOLOGY.md` (Human Gate 재명세)
+- **실행**: Human Gate 4 종의 운영 프로토콜 초안 작성 필요 (P1)
+- **대시보드**: "Human Gate" 태그 검색 가능 여부 확인 (P2)
+
+**다음 확인:**
+1. [[bp-signal-intelligence]] 에 Human Gate YAML 스키마 제안 추가 (소요 90 분)
+2. `KNOWLEDGE_PULSE.md` 에 오늘 브리핑의 4 개 핵심 통찰 반영 (소요 30 분)
+3. 대시보드 (http://localhost:8080) 에서 "Human Gate" 태그 검색 가능 여부 확인 (소요 10 분)
+4. **사람 판단 필요 항목**: 없음 — 모든 통계가 복수 출처에 기반하며, 개인정보·생체정보·감시 관련 스키마 변경 없음
+
+---
+
 ---
 
 ## [2026-08-16] 저녁 성찰 (Daily Reflect) — 계기판이 자기가 못 세는 것을 좋은 쪽으로 처리하고 있던 날
@@ -1049,3 +1073,51 @@ status: Active
 - **없음**. 모든 통계가 복수 출처 (Barclays H2 2026, SHRM 2026, Stanford HAI, arXiv 2026) 에 기반하며, 개인정보·생체정보·감시와 관련된 스키마 변경도 없음.
 
 ---
+
+## [2026-08-14 09:30] HR Tech 브리핑 — 에이전트 채용의 신뢰 사다리
+
+### 무엇이 바뀌었나
+- 4 개의 시장 신호 포착: (1) 에이전트 채용 주류화 (52% 조직 추가), (2) 알고리즘 편향의 시장 집중 원인 (85.1% 백인 선호), (3) 신뢰 격차 (70% vs 8%), (4) 스킬 기반 채용 인프라 격차 (53% 학위 제거 vs 3.5%p 증가)
+- Human Gate 4 개 추출: 편향 감사 위원회, 법적 리스크 모니터링 (24h), 에이전트 조직 설계 심의회, 후보자 경험 심의회
+- Vault 연결 제안: [[agentic-recruitment-proxy]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]], [[fde-talent-model]]
+
+### 왜 중요한가
+- 2026 년 시장은 '신뢰 사다리' 2 단계 (불신) 에 위치 — 87% 기업 AI 사용 vs 8% 후보자 신뢰
+- 편향을 '기술적 결함'이 아닌 '시장 집중의 구조적 결과'로 재정의 필요
+- HR 정체성 전환: 감시자 (Guardian) → 정원사 (Gardener)
+
+### 영향 범위
+- 브리핑 파일: 
+- INGEST job 이 읽어서 wiki/signals/ 에 편입 예정 (MERGE 또는 NEW 판정)
+- 오늘 저녁 Evening Reflect 에 4 Knowledge Atom 으로 통합 예정
+
+### 다음 확인
+1. [ ] INGEST job 이 브리핑을 읽어서 wiki/signals/ 에 편입했는가? (processed: true 확인)
+2. [ ] 편입 시 MERGE (기존 신호 확장) 인가 NEW (새 신호 생성) 인가?
+3. [ ] Evening Reflect 에 4 신호가 Knowledge Atom 으로 반영되었는가?
+4. [ ] Human Gate 4 개가 [[bp-signal-intelligence]] 에 YAML 스키마로 제안되었는가?
+
+
+
+### [2026-08-14 09:10] [BRIEFING] I/O 심리학 브리핑 생성
+
+**무엇이 바뀌었나:**
+- I/O 심리학, 인지 심리학, 행동 경제학 분야 2026 년 최신 논문 4 편 curating
+- 의사결정 피로 (Frontiers in Cognition), 에이전트 AI 조직론 (arXiv:2511.17332v2), 알고리즘 공정성 (arXiv:2309.13933v4), AI 신뢰성 모델 (arXiv:2601.06223v1)
+
+**왜 중요한가:**
+- "의사결정 피로는 조직 설계 실패다" — 개인 self-care 가 아닌 조직 아키텍처 재설계 필요
+- "AI 는 인간 조직을 모방하지 않는다" — 인간 HR 은 프로세스 관리자가 아닌 조직 디자이너로 정체성 전환
+- "공정성은 정치적 선택이다" — 벤더 보고서 맹신 금지, 제 3 자 감사 필수
+- "자율성은 검증이다" — AI 도입은 심리적 계약 재협상, 신뢰 사다리 (맹신→불신→협력)
+
+**영향 범위:**
+- Human Gate 4 개 명세: 의사결정 아키텍처 심의회, 에이전트 조직 설계 심의회, 알고리즘 공정성 감사 위원회, AI 신뢰 수준 공개 의무
+- Vault 연결: [[hr-conceptual-atoms]], [[bp-signal-intelligence]], [[agentic-recruitment-proxy]], [[fde-talent-model]]
+
+**다음 확인:**
+- [ ] INGEST job 이 본 브리핑을 읽어 wiki/signals/ 에 4 개 신호 노드 생성 (중복 판정 필수)
+- [ ] Human Gate YAML 스키마가 [[bp-signal-intelligence]] 에 반영되었는가
+- [ ] KNOWLEDGE_PULSE.md 에 오늘 브리핑의 4 개 핵심 통찰이 반영되었는가
+- [ ] 대시보드 (http://localhost:8080) 에서 "Human Gate" 태그 검색 가능한가
+
