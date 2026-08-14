@@ -1,5 +1,6 @@
 # Type 자동 분류 로그 - 2026-08-13 04:01
 
+type: Meeting
 ## 실행 개요
 - **실행 시간**: 2026-08-13 04:01
 - **Vault 경로**: /Users/dkmac/csp-brain
