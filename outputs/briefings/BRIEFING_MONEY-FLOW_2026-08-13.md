@@ -10,6 +10,10 @@ tags:
   - 금리
   - 환율
   - 기관투자자
+
+processed: true
+processed_date: 2026-08-15 18:31:17
+processed_note: Merged into 2026-08-10-capital-flow-market-neutral.md (MERGE - Timeline append)
 ---
 
 # 자본의 정체성 전환: 60/20/20 포트폴리오가 말해주는 것
