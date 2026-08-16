@@ -260,3 +260,25 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 - [ ] _ops/change-log.md 에 [INGEST] 엔트리 추가
 
 ---
+
+## 2026-08-15 — MONEY-FLOW 브리핑 INGEST
+
+- **NEW**: 0 건
+- **MERGE**: 2 건
+  -  →  (Timeline append)
+  -  →  (Timeline append)
+- **DUPLICATE**: 1 건
+  -  (이미 2026-08-06 에 처리됨, processed: true)
+
+**판정 근거**:
+- 2026-08-13 브리핑: 60/20/20 포트폴리오 제안은 기존 60/40 논의의 연장선 (MERGE)
+- 2026-08-15 브리핑: 신뢰 사다리 프레임은 기존 Trust Ladder 개념의 심화 (MERGE)
+- 2026-08-06 브리핑: 이미 processed 마킹 완료 (DUPLICATE)
+
+**인출된 Human Gate**: 4 개
+1. 안전자산 재정의 심의회 (AI automation prohibited)
+2. 베타 제거 평가 위원회 (분기 1 회 배경 영향 감사)
+3. 환율 레짐 시프트 수용 선언 (연 1 회 정책 재설계)
+4. 골드 20% 할당론의 HR 번역 (반기 1 회 담론 테스트)
+
+---

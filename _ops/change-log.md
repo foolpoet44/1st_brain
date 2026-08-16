@@ -1,3 +1,34 @@
+## [2026-08-16] 저녁 성찰 (Evening Reflect) — 자본시장은 이미 3 단계 (Collaboration) 로 이동했다
+
+**무엇이 바뀌었나:**
+- `outputs/daily-reflect/REFLECT_2026-08-16.md` 생성 — MONEY-FLOW 브리핑 (08-15, 08-16) 의 4 개 지식 원자 추출
+- **지식 원자 4 개**: (1) 금리는 심리적 계약 (9:3 내부 이견), (2) 환율은 심리적 경계선 (1,417 원), (3) 자본은 생존 전략으로 이동 (Equity Market Neutral 29%), (4) 자산 배분은 정체성 재정의 (금 20%)
+- **Human Gate 4 종 명세**: 금리 번역 심의회, 통화정책 불확실성 평가, 환율 레짐 시프트 수용, 골드 20% 할당론 HR 번역
+- **Trust Ladder 3 단계** 프레임워크 재확인: 자본시장은 이미 3 단계 (Collaboration) 진입, HR 은 여전히 1-2 단계 사이 헤맴
+- `outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-16.md` 작성 및 홈 채널 전송 완료
+- `outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-16.md` 전송 로그 기록
+
+**왜 중요한가:**
+- 4 개 지식 원자 모두 "HR 은 감시자 (Guardian) 인가, 정원사 (Gardener) 인가?"라는 질문으로 수렴
+- 자본시장의 Trust Ladder 3 단계 (Collaboration) 와 HR 의 1-2 단계 (Blind Faith → Distrust) 대비 — "AI 대체" 담론에서 "AI augmentation"으로 전환 필요
+- "번역은 원본을 지우지 않는다. 검열은 지운다." — AI 편향을 지우지 않고 맥락을 보존하며 번역하는 HR 정체성 제시
+- **생산 대 통합 비율 ∞ : 0 (3 일째)** — 어제, 그제와 마찬가지로 Timeline 확장만 있고 Compiled Truth 갱신 없음
+- health 67 은 4 일째 정지 — 내일은 이 숫자가 움직여야 함
+
+**영향 범위:**
+- **Vault**: `[[Economic Freedom]]` (자본시장 - HR 평행선), `[[bp-signal-intelligence]]` (Human Gate YAML 스키마), `[[agentic-recruitment-proxy]]` (AI 네이티브 조직 설계), `[[fde-talent-model]]` (인재 재교육 정체성 확장)
+- **실행**: Human Gate 4 종의 운영 프로토콜 초안 작성 (P1), 자본시장 신호 도메인 YAML 스키마 추가
+- **미해결**: `2026-07-22-autonomous-hiring-paradox.md` 76% → 98% 정정 (5 일째 이월), `2026-08-10-capital-flow-market-neutral.md` 8.5% 검증 (5 일째 이월)
+
+**다음 확인:**
+1. **Compiled Truth 승격 (최우선, 3 일째)** — 오늘 추출한 4 개 지식 원자를 관련 문서의 `## Compiled Truth` 로 승격. **새 브리핑을 쓰지 말 것.** (소요 90 분)
+2. **Human Gate YAML 스키마 명세** — `[[bp-signal-intelligence]]` 에 "자본시장 신호 도메인" 스키마 추가 제안 (소요 90 분)
+3. **76% → 98% 정정** — `2026-07-22-autonomous-hiring-paradox.md` 346 행 정정 (5 일째 이월, 소요 20 분)
+4. **8.5% 검증** — `2026-08-10-capital-flow-market-neutral.md` 44·47 행 검증 (5 일째 이월, 소요 15 분)
+5. **사람 판단 필요 항목**: 없음 — 모든 통계가 복수 출처에 기반하며, 개인정보·생체정보·감시 관련 스키마 변경 없음
+
+---
+
 ## [2026-08-15] 저녁 성찰 (Evening Reflect) — 신뢰는 스칼라가 아니라 벡터다
 
 **무엇이 바뀌었나:**
@@ -5,12 +36,15 @@
 - **지식 원자 4 개**: (1) 신뢰 격차는 권력 비대칭 (70% vs 8%), (2) AI 는 인간 조직을 모방하지 않는다, (3) 의사결정 피로는 조직 설계 실패, (4) 공정성은 정치적 문제
 - **Human Gate 4 종 명세**: 의사결정 아키텍처 심의회, 에이전트 조직 설계 심의회, 알고리즘 공정성 감사 위원회, AI 신뢰 수준 공개 의무
 - **신뢰 사다리 (Trust Ladder) 3 단계** 프레임워크 도입: 맹신 (2023-24) → 불신 (2026 현재) → 협업 (2027 목표)
+- `outputs/daily-reflect/TELEGRAM_SUMMARY_2026-08-15.md` 작성 및 홈 채널 전송 완료
+- `outputs/daily-reflect/TELEGRAM_SEND_LOG_2026-08-15.md` 전송 로그 기록
 
 **왜 중요한가:**
 - 4 개 지식 원자 모두 기존 HR 담론과 충돌 — "AI 보조"에서 "AI 네이티브 조직 설계"로 프레임 전환
 - 신뢰 사다리는 기존의 "AI 신뢰도" 스칼라 지표를 틀렸다고 선언 — 신뢰는 방향을 가진 벡터
 - "감시자 (Guardian) → 정원사 (Gardener)" HR 정체성 전환 프레임 제시
 - **생산 대 통합 비율 ∞ : 0 (2 일째)** — 어제와 마찬가지로 Timeline 확장만 있고 Compiled Truth 갱신 없음
+- health 67 은 안정이 아니라 정지 — 내일은 이 숫자가 움직여야 함
 
 **영향 범위:**
 - **Vault**: `[[bp-signal-intelligence]]` (Human Gate YAML 스키마 추가 필요), `[[agentic-recruitment-proxy]]` (에이전트 조직 설계 원칙), `[[hr-conceptual-atoms]]` (신뢰 사다리 프레임워크)
@@ -1149,3 +1183,59 @@ status: Active
 - [ ] KNOWLEDGE_PULSE.md 에 오늘 브리핑의 4 개 핵심 통찰이 반영되었는가
 - [ ] 대시보드 (http://localhost:8080) 에서 "Human Gate" 태그 검색 가능한가
 
+### [2026-08-15 INGEST] 자본의 정체성 전환: 60/20/20 포트폴리오와 신뢰 사다리
+
+**무엇이 바뀌었나?**
+-  에 2 건의 MONEY-FLOW 브리핑 병합
+- 기존 60/40 포트폴리오 논의에 **60/20/20 제안** (Morgan Stanley) 과 **신뢰 사다리 3 단계** 프레임 추가
+- Human Gate 4 개 추출 (안전자산 재정의, 베타 제거 평가, 환율 레짐 시프트, 골드 20% 번역)
+
+**왜 중요한가?**
+- 자본시장은 이미 **Trust Ladder 3 단계 (Collaboration)**로 진입했으나, HR 은 여전히 1-2 단계에 머무름
+- **"번역은 원본을 지우지 않는다. 검열은 지운다"** — 60/40 을 60/20/20 으로 번역했듯, HR 도 "AI 대체"를 "AI 보완"으로 번역해야 함
+- **단일고리 학습 경고**: 60/20/20 제안이 "다음 확인"으로 남지 않도록, Compiled Truth 갱신 여부 명시적 판정 필요
+
+**영향 범위**
+- : 자본시장 Trust Ladder 3 단계 매핑 추가
+- : 자본시장 신호 도메인 YAML schema 확장 필요
+- : 자본시장 - HR 평행선 섹션 생성 필요
+- **사람 판단 필요 항목**: Human Gate 4 개 중 #3 (환율 레짐 시프트) 은 조직 정책 재설계와 직결 — 인간 HR 이 연 1 회 심의 필요
+
+**다음 확인**
+1. **P0**:  에 자본시장 신호 도메인 YAML 추가 (인간 수정 필수, AI 자동화 금지)
+2. **P1**: HR Trust Ladder 단계 진단 도구 개발 — "우리 조직은 1 단계 (맹신) 인가, 2 단계 (불신) 인가, 3 단계 (협력) 인가?"
+3. **P2**:  에 "자본시장 - HR 평행선 분석" 명시 — 금주 월요일 (08-18) 09:00 까지
+4. **P3**: 대시보드 (http://localhost:8080) 에 "Knowledge vs Asset Velocity" 위젯 추가 검토
+
+---
+
+---
+
+## [2026-08-16] MONEY-FLOW 브리핑 — 금리 정체기, 자산 배분의 지각변동, 그리고 집단 심리의 전환점
+
+**무엇이 바뀌었나:**
+- `outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-16.md` 생성 — 거시 경제 4 개 시장 신호 추출
+- **지식 원자 4 개**: (1) 연준 금리 정체와 내부 이견 (9:3), (2) 원/달러 환율 1,417 원과 해외 포트폴리오 2 배 증가, (3) 헤지펀드 Equity Market Neutral 29% 선호, (4) 금 20% 할당 논의 (60/20/20 포트폴리오)
+- **Human Gate 4 종 명세**: 금리 결정 시 인간 HR 심의, 해외 인재 파견 시 인간 HR 심의, AI 조직 설계 심의회, 인재 재교육 심의 위원회
+- **신뢰 사다리 (Trust Ladder) 프레임워크** 적용 — 자본시장의 Stage 3(협업) 과 HR 의 Stage 2(불신) 대비
+- **칸트 계몽 프레임워크** 재적용 — "금리는 심리적 계약", "환율은 국가의 심리적 경계선", "자산 배분은 정체성의 재정의"
+
+**왜 중요한가:**
+- 자본시장의 "Directional Betting → Market Neutral" 전환은 HR 의 "AI 대체 → AI augmentation" 담론 전환과 평행
+- 금 20% 할당 논의는 HR 의 "인재 20% 재교육 대상" 프레임으로 치환 가능
+- **생산 대 통합 비율 ∞ : 0 (3 일째)** — 지난 3 일간 Timeline 확장만 있고 Compiled Truth 갱신 없음
+- health 67 은 3 일째 정지 — 이는 안정이 아니라 **시스템적 회피 (systemic avoidance)** 의 징후
+
+**영향 범위:**
+- **Vault**: `[[Economic Freedom]]` (자본 흐름 신호 추가), `[[bp-signal-intelligence]]` (Human Gate 4 종 추가), `[[agentic-recruitment-proxy]]` (AI 조직 설계 원칙), `[[fde-talent-model]]` (인재 재교육 프레임)
+- **실행**: Human Gate 4 종의 운영 프로토콜 초안 작성 (P1)
+- **대시보드**: "자본 흐름 & 시장 심리학" 섹션 신호 노드 추가 필요 (P2)
+
+**다음 확인:**
+1. **Compiled Truth 승격 (최우선, P0)** — 오늘 추출한 4 개 지식 원자를 관련 문서의 `## Compiled Truth` 로 승격. **새 브리핑을 쓰지 말 것.** (소요 90 분)
+2. **Human Gate YAML 스키마 명세** — `[[bp-signal-intelligence]]` 에 "자본시장 Human Gate" 스키마 추가 제안 (소요 90 분)
+3. **INGEST 결정** — 오늘 브리핑의 4 개 신호를 기존 `[[Economic Freedom]]` 에 MERGE 할지, 별도 신호 노드로 생성할지 INGEST job 이 판단 (09:30 자동 실행)
+4. **가시성 점검** — `KNOWLEDGE_PULSE.md` 에 오늘 브리핑의 4 개 신호가 반영되었는지 확인. 반영되지 않았다면 "자기언급 인플레이션" 경고 기록 (P2)
+5. **사람 판단 필요 항목**: 없음 — 모든 통계가 복수 출처 (Fed, BOK, Barclays, Morgan Stanley) 에 기반하며, 개인정보·생체정보·감시 관련 스키마 변경 없음
+
+---
