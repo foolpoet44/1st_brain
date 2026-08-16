@@ -1,7 +1,7 @@
 ---
 title: "[Signal] 2026-08-10: 자본의 심리학 — 분산의 복귀와 시장 중립의 시대"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-15
 status: growing
 type: signal
 date: 2026-08-10
@@ -177,6 +177,28 @@ HR Tech 도 동일한 질문을 던진다: **"당신은 AI 의 지도 없이는 
 - BOK (한국은행). (2026). _BOK Issue Note: 해외 포트폴리오 투자 동향_.
 
 ---
+
+### 2026-08-15 — MONEY-FLOW 브리핑 INGEST (2026-08-15: 신뢰 사다리)
+
+`outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-15.md` 를 편입했다. **MERGE 판정 이유**는 핵심 통계 (29% EMN, Fed 3.5-3.75%, 환율 1,418 원) 가 기존 문서와 중복되기 때문이다.
+
+브리핑이 **새로 더한 것**:
+1. **신뢰 사다리 3 단계 프레임**: 자본시장 (3 단계 Collaboration) vs HR (1-2 단계 머무름) — 간극 문서화
+2. **Human Gate #3**: "환율 레짐 시프트 수용 선언" — 원/달러 1,400 원 '뉴노멀' 전제로 정책 재설계
+3. **Human Gate #4**: "골드 20% 할당론의 HR 번역" — 'AI 대체' 담론의 Stagflation 테스트
+
+**후속 확인**: HR 의 Trust Ladder 단계 진단 도구 개발 필요 (P1).
+
+### 2026-08-15 — MONEY-FLOW 브리핑 INGEST (2026-08-13: 60/20/20 포트폴리오)
+
+`outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-13.md` 를 편입했다. **MERGE 판정 이유**는 핵심 통계 (29% EMN, 43% 순투자자) 가 기존 문서와 중복되기 때문이다.
+
+브리핑이 **새로 더한 것**:
+1. **60/20/20 포트폴리오 제안** (Morgan Stanley): 채권 40% → 20% 축소, 금 20% 편입
+2. **Human Gate #1**: "안전자산 재정의 심의회" — AI 채용 도구 평가 시 절차적 공정성 대신 정체성 안전성 평가
+3. **Human Gate #2**: "베타 제거 평가 위원회" — 채용 평가 시 지원자 배경 (학벌, 전 직장) 영향 통계 측정
+
+**후속 확인**: 60/20/20 포트폴리오 제안이 다음 분기 Morgan Stanley 보고서에서 재확인되면 Compiled Truth 갱신 검토.
 
 ## Timeline
 ### 2026-08-13 — MONEY-FLOW 브리핑 INGEST
