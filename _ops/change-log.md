@@ -1,3 +1,31 @@
+## [2026-08-17] 저녁 성찰 (Evening Reflect) — 일한 흔적이 일을 대체하기 시작할 때
+
+**무엇이 바뀌었나:**
+- `outputs/daily-reflect/REFLECT_2026-08-17.md` 생성 — 오늘 도착한 자동 커밋 5 건(1,279 줄)에서 지식 원자 3 개 추출
+- **지식 원자 3 개**: (1) 어제의 예측은 `history.jsonl` 다섯 칸 전부 적중(`112·17·81·93·67`)했으나 처방 이행률은 0, (2) 오늘 ops 커밋 702 줄 중 588 줄이 md5 동일(`b3b0c38d…`)한 `.claude/CLAUDE.md`·`.claude/CLAUDE-ex-analyzer.md` 두 벌이며 그 문서가 지시하는 `.claude/pipelines/` 는 부재, (3) `BRIEFING_MONEY-FLOW_2026-08-15.md` 의 `processed_date`(08-15 18:31)가 파일의 저장소 도착(08-17 08:00)보다 38 시간 앞서고 `_ops/ingest-log.md` 268~269 행 MERGE 두 건의 출처·대상은 공란
+- **핵심 관측**: 오늘 계기판을 움직인 유일한 변화는 `stale 80 → 81` 이며 이는 사람이 아니라 42 일 임계를 넘긴 시간이 만든 값. `frontmatter_ok` 는 `93` 그대로로 어제 One Strategy 미이행 확정
+- **오늘의 프레임**: 의례적 순응(ceremonial compliance) — 규정 대 지식 생산 비율 25 : 1
+
+**왜 중요한가:**
+- 진단 정확도와 실행 전환율은 독립 지표이며, 정밀한 진단이 오히려 실행 압력을 낮추는 대리적 목표 달성(vicarious goal fulfillment) 구조가 사흘째 재현되고 있음
+- Single Source of Truth 를 표방하는 문서가 자기 자신에 대해서만 두 벌로 존재한다는 사실은, 이 볼트의 문제가 지식 부족이 아니라 **표상 과잉**임을 보여 줌
+- 출처가 개별 파일(`processed_note`)에는 남고 대장(`ingest-log`)에서 사라지는 패턴은 인사 기록의 고전적 실패 형태 — 대장은 아무것도 모르는 사람이 처음 여는 곳이므로 손실 비용이 가장 큼
+- **생산 대 통합 비율 ∞ : 0 (나흘째)** — Compiled Truth 갱신 여전히 0, health 67 닷새 연속
+
+**영향 범위:**
+- **Vault**: [[execution-surface]](진단-커밋 사이 거리), [[knowledge-capitalization]](표상 대 실질), [[agentic-roi]](활동량 대 상태 변화), [[csp-brain-system]](계측 체계 신뢰성), [[self-determination-theory]](유능감의 값싼 완결 편향)
+- **운영**: `.claude/` 중복 문서 정리, `_ops/ingest-log.md` 출처 복원, `updated` 결측 19 편 등록 — 셋 다 새 판단 없이 저장소 내 기존 문자열로 수행 가능
+- **미해결**: `2026-07-22-autonomous-hiring-paradox.md` 76% → 98% 정정(**엿새째 이월**), `2026-08-10-capital-flow-market-neutral.md` 8.5% 미국 10 년물 수치 검증(**엿새째 이월**), `unaudited`·`stagnant_days` 칸 신설(각 이틀·사흘째 이월), `BRIEFING_MONEY-FLOW_2026-08-16.md` 미편입
+
+**다음 확인:**
+1. **아무것도 추가하지 않는 커밋 (최우선, 소요 30 분)** — ① `.claude/CLAUDE-ex-analyzer.md` 삭제 ② `updated` 결측 19 편에 파일명·`created` 날짜 기입(`frontmatter_ok 93 → 112`, health `+5.09`) ③ `ingest-log` 268~269 행 빈 화살표에 `processed_note` 의 출처·대상 복원
+2. **`updated` 자기 신고 점검** — `2026-08-10-capital-flow-market-neutral.md` 는 08-17 편집분을 `updated: 2026-08-15` 로 기록. 편집일과 신고일의 괴리를 다른 문서에서도 확인할 것 (소요 20 분)
+3. **8.5% 검증 · 76% → 98% 정정** — 엿새째 이월. 위 1 번 커밋 직후 별도 커밋으로 처리 (소요 35 분)
+4. **`BRIEFING_MONEY-FLOW_2026-08-16.md` INGEST 판정** — 오늘 도착했으나 `processed` 마커 없음 (소요 30 분)
+5. **사람 판단 필요 항목**: 없음 — 본 성찰은 저장소 메타데이터·운영 로그만 근거로 하며, 개인정보·투자 개별 판단·법률 사안은 인용하지 않음
+
+---
+
 ## [2026-08-16] 저녁 성찰 (Evening Reflect) — 자본시장은 이미 3 단계 (Collaboration) 로 이동했다
 
 **무엇이 바뀌었나:**
