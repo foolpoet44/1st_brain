@@ -1,5 +1,6 @@
 # csp-brain Type 자동 분류 로그
 
+type: Meeting
 ## 실행 정보
 - **실행 일시**: 2026-08-17 04:01
 - **스크립트**: `scripts/auto-classify-types.sh`
