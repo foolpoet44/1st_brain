@@ -1,32 +1,37 @@
-<<<<<<< HEAD
-## [2026-08-18] 저녁 성찰 (Evening Reflect) — AI 네이티브 조직의 등장, HR 은 감시자인가 정원사인가
+## [2026-08-20] 저녁 성찰 (Evening Reflect) — 배가 돌아왔고, 화물칸에는 사흘치가 실려 있었다
 
 **무엇이 바뀌었나:**
-- `outputs/daily-reflect/REFLECT_2026-08-18.md` 생성 — 오늘 HR Tech 브리핑 (179 줄) 에서 지식 원자 4 개 추출
-- **지식 원자 4 개**: (1) 52% 조직이 2026 년 자율 AI 에이전트 도입 (인간 $100K vs AI $20K), (2) 신뢰 사다리 Stage 1.5 퇴행 (채용담당자 70% 신뢰 vs 후보자 8%), (3) People Analytics → Organizational Intelligence 진화 (63% 가 비즈니스 전략 연결), (4) 후보자 AI vs 채용팀 AI 양방향 협상 시대
-- **Human Gate 4 종 명세**: 에이전트 조직 설계 심의회, Human-AI Handoff 검증 위원회 (오후 2-4 시 AI 금지), 조직 인텔리전스 거버넌스 위원회, 후보자 경험 위원회 (인간 소명 버튼)
-- **핵심 관측**: 오늘 계기판은 `stale 81 → 82` (시간의 악화), health `73 → 72` (-1), `stagnant_days = 5` (08-13~08-17). `unaudited` 는 0 (등록 완료)
-- **오늘의 프레임**: 번역은 원본을 지우지 않는다, 검열은 지운다 — HR 정체성 전환 (감시자 → 정원사)
+- `outputs/daily-reflect/REFLECT_2026-08-20.md` 생성 — 오늘 08:00~08:03 KST 로컬발 3 커밋(`9f9b920`·`1ad9686`·`1be229d`, **18 파일**)의 유입을 근거로 지식 원자 5 개 추출
+- **정정 ① 생산자는 멈춘 적이 없다**: 화물칸 내용물이 `BRIEFING_HR-TECH_2026-08-18.md`(08-18 생산), `classification_log` 08-17·08-18(각 **04:01 실행** 기록), `command-center-history.jsonl` 08-18·08-19 두 행, `EVAL_STATUS.md`(08-20 04:01 갱신). 새벽 4 시 1 분 작업들은 매일 돌고 있었음 → 어제 성찰의 「생산자 셋 동시 정지」 진단은 오류. 정지한 것은 **운송 한 줄**
+- **정정 ② 원인은 권한이 아니라 주소**: `_ops/logs/sync-auto.err` 142 행의 실패 경로는 `/Users/dkmac/Desktop/@26/dev/…` 이나, `_ops/scripts/com.csp-brain.auto-sync.plist` 의 등록 경로·작업 디렉터리와 `scripts/auto-classify-types.sh` 의 `VAULT_PATH` 는 모두 `/Users/dkmac/csp-brain`. 두 파일은 **같은 커밋 `116d1b5`(08-13 10:20)로 함께 유입** — 설정이 이미 새 주소를 가리키던 시점에 데몬은 옛 주소를 두드리고 있었음. 필요한 조치는 전체 디스크 접근 권한 부여가 아니라 `launchctl unload && load` **재등록**
+- **정정 ③ 편입은 0 이 아니었다**: `98e8c25`(08-17 08:00)가 `wiki/signals/2026-08-10-capital-flow-market-neutral.md` 에 **+23 줄**(MONEY-FLOW 브리핑 2 건 MERGE 판정 Timeline, `updated` 08-10 → 08-15) 을 append. 어제 성찰 시점에 이미 저장소에 존재. 「08-14 이후 wiki 커밋 0 건」·「편입 0, 이레째」 서술은 반증됨
+- **원인**: `history.jsonl` 의 다섯 칸은 전부 **문서 개수** 기반이므로 기존 문서 Timeline append 를 구조적으로 볼 수 없음. 08-17~08-20 **네 행 연속 `112·17·81·93·67` 동일**은 무변화가 아니라 **사각지대**
+- **볼트 총량 대비 지식**: 전체 문서 2,312 → **2,329**(+17), type 할당 100% 유지. 그러나 `wiki/` 는 **121 편 불변** — 늘어난 17 개는 성찰·텔레그램·분류 로그, 즉 볼트의 **자기 관찰 기록**. 같은 기간 소화율 97.1(08-16) → **93.1**, 미처리 2 → **5**
+- **관제판 복구**: `_ops/change-log.md` 1·29·90 행의 병합 충돌 마커(`8005f29`, 08-20 08:02 자동 병합이 미해결 커밋)를 제거하고 세 항목을 시간순(08-19 → 08-18 원격 → 08-18 로컬)으로 배치. **어느 항목도 삭제하지 않음**
 
 **왜 중요한가:**
-- AI 에이전트 등장은 기술 진화가 아니라 **정체성의 재협상** — "조직의 구성원 정의"를 다시 쓰는 사건
-- 시장은 Stage 3(협업) 이 아니라 **Stage 1.5(맹신의 변종)**로 퇴행 중 — AI 를 검증 가능한 도구가 아닌 권한 있는 주체로 승격
-- **생산 대 통합 비율 ∞ : 0 (엿새째)** — 브리핑 179 줄 생산, 위키 편입 0 줄
-- 건강 점수 하락은 **시간의 악화** — 사람이 만든 변화가 아니라 42 일 임계를 넘긴 시간이 만든 값
+- **조용한 팀과 마이크가 꺼진 팀은 회의록에서 같은 모양이지만 처방이 정반대다.** 사흘간 마이크가 꺼진 쪽에 동기 부여 처방을 썼음
+- **제도 개정과 제도 시행 사이에는 「누가 다시 읽었는가」라는 공정이 하나 더 있다.** 설정 파일은 고쳐졌고 데몬은 다시 읽지 않았으며, 그 결과는 「규정 미준수」처럼 보였음 ([[execution-surface]])
+- **성실함이 오류의 조건이었다.** 사흘간 계기판을 정확히 읽고 정확히 옮겨 적었으나, 「0」이 「변화 없음」과 「이 계기가 볼 수 없는 변화」를 구분하지 못했음 ([[data-sensing]])
+- **두 감사자가 같은 자를 들고 있으면 대조는 검증이 되지 못한다.** 이중 계측 체계가 동일 단위(문서 수)로 세는 한 눈금 오류는 두 계통에서 같은 답을 냄 ([[csp-brain-system]])
+- **귀인의 궤적**: 사람 탓(08-17·18) → 설비 탓(08-19) → 계측 체계(08-20). 설명이 쉬운 원인부터 소진되는 인지 경로이며, 신호는 숨은 적 없이 매끄러운 서사에 매일 흡수되었음 ([[weak-signal-theory]])
+- **자동화가 만든 것은 속도이고 정확성은 여전히 수동이다.** ROI 를 생산량으로 계산하는 한 오늘 같은 날은 영원히 성공한 날로 집계됨 ([[agentic-roi]])
 
 **영향 범위:**
-- **Vault**: [[agentic-recruitment-proxy]](AI 네이티브 조직), [[bp-signal-intelligence]](Human Gate 스키마), [[hr-conceptual-atoms]](신뢰 사다리), [[bias-audit-protocol]](후보자 경험), [[self-determination-theory]](자율성·유능감·관계성)
-- **운영**: `_ops/human-gates.md` 에 4 개 Human Gate 명세 필요, 오늘 4 개 Signal 노드 wiki 편입 필요
-- **미해결**: `unaudited`·`stagnant_days` 칸 신설 (진행 중), 76% → 98% 정정 (7 일째 이월), 8.5% 검증 (7 일째 이월)
+- **Vault**: [[durable-execution]](기록 보장 ≠ 기록 단위의 타당성), [[data-sensing]](0 의 두 의미), [[execution-surface]](주소 불일치), [[weak-signal-theory]](서사에 흡수된 신호), [[knowledge-capitalization]](세어지는 일로의 적응), [[self-determination-theory]](「내가 한 것이 보이지 않는다」형 유능감 손상), [[csp-brain-system]](동일 단위 이중 계측의 한계), [[agentic-roi]](속도 대 정확성), [[hermes-pi-philosophy]](충돌은 이중화가 두 개였다는 증거)
+- **운영**: `_ops/change-log.md` 충돌 해소 완료. `history.jsonl` 에 깊이 계측 칸(`wiki_lines`/`ingest_appends`) 신설 필요. `com.csp-brain.auto-sync` 재등록 필요(사람만 가능)
+- **미해결**: 빈칸 51 개 등록(엿새째), `last_producer_run`·`unaudited`·`stagnant_days` 칸 신설, `REFLECT_2026-08-17_EVENING.md` 정정 박스(나흘째), 아흐레째 이월 두 건
 
 **다음 확인:**
-1. **`unaudited` 칸 신설 완료** — `update_dashboard.py` 에 `unaudited` 집계 로직 추가, 대시보드 첫 화면 노출
-2. **`stagnant_days` 칸 신설 완료** — `history.jsonl` 직전 행과 비교하여 연속 무변화 일수 집계
-3. **4 개 Signal 노드 INGEST** — 오늘 브리핑의 4 개 제안 노드를 `wiki/signals/` 로 편입
-4. **Human Gate 명세** — `_ops/human-gates.md` 에 오늘 4 개 Gate 추가
-5. **충돌 검증** — 오늘 편입이 [[2026-07-22-autonomous-hiring-paradox]] 의 76% → 98% 정정, [[2026-08-10-capital-flow-market-neutral]] 의 8.5% 검증과 충돌하는지 확인
-6. **사람 판단 필요 항목**: 없음 — 모든 통계가 복수 출처에 기반하며, 개인정보·생체정보·감시 관련 스키마 변경 없음
-=======
+1. **깊이 계측 칸 신설(최우선)** — `history.jsonl` 에 `wiki_lines` 또는 `ingest_appends`. 이 칸이 생기기 전까지 이 볼트의 모든 「편입 0」 보고는 사실의 진술이 아니라 사각지대의 진술로 읽어야 함
+2. **데몬 재등록** — `launchctl unload && load`. 어제의 권한 부여 처방은 **취소**. `.plist` 는 이미 정상 경로 보유. **사람만 가능**
+3. **재등록 이후 `sync-auto.err` 갱신 여부 확인** — 갱신되면 원인 확정, 안 되면 별도 경로
+4. **과거 성찰 3 편 정정 박스** — 08-17·08-18·08-19 의 「편입 0」 서술은 `98e8c25` 로 반증. append-only 준수하여 본문 수정 금지
+5. **아흐레째 이월 재범위 산정** — `2026-08-10-capital-flow-market-neutral.md` 는 08-17 에 Timeline 2 건 append 완료. 8.5% 검증의 잔여 범위 재확인
+6. **사람 판단 필요 항목**: 2 번(데몬 재등록). 본 성찰은 저장소 메타데이터·git 이력·운영 로그·대시보드 시계열만 근거로 하며 `inbox/` 개인 사안은 조회·인용하지 않음
+
+---
+
 ## [2026-08-19] 저녁 성찰 (Evening Reflect) — 멈춘 것은 사람이 아니라 설비였다
 
 **무엇이 바뀌었나:**
@@ -87,7 +92,36 @@
 3. **`unaudited`·`stagnant_days` 칸 신설** — 오늘 `stagnant_days` 실측값 1
 4. **이레째 이월 두 건** — `2026-07-22-autonomous-hiring-paradox.md` 76% → 98%, `2026-08-10-capital-flow-market-neutral.md` 8.5% 검증
 5. **사람 판단 필요 항목**: 없음 — 저장소 메타데이터·git 이력·운영 로그만 근거로 하며 `inbox/` 개인 사안(소득·법률·투자 개별 건)은 조회·인용하지 않음
->>>>>>> origin/main
+
+---
+
+## [2026-08-18] 저녁 성찰 (Evening Reflect) — AI 네이티브 조직의 등장, HR 은 감시자인가 정원사인가
+
+**무엇이 바뀌었나:**
+- `outputs/daily-reflect/REFLECT_2026-08-18.md` 생성 — 오늘 HR Tech 브리핑 (179 줄) 에서 지식 원자 4 개 추출
+- **지식 원자 4 개**: (1) 52% 조직이 2026 년 자율 AI 에이전트 도입 (인간 $100K vs AI $20K), (2) 신뢰 사다리 Stage 1.5 퇴행 (채용담당자 70% 신뢰 vs 후보자 8%), (3) People Analytics → Organizational Intelligence 진화 (63% 가 비즈니스 전략 연결), (4) 후보자 AI vs 채용팀 AI 양방향 협상 시대
+- **Human Gate 4 종 명세**: 에이전트 조직 설계 심의회, Human-AI Handoff 검증 위원회 (오후 2-4 시 AI 금지), 조직 인텔리전스 거버넌스 위원회, 후보자 경험 위원회 (인간 소명 버튼)
+- **핵심 관측**: 오늘 계기판은 `stale 81 → 82` (시간의 악화), health `73 → 72` (-1), `stagnant_days = 5` (08-13~08-17). `unaudited` 는 0 (등록 완료)
+- **오늘의 프레임**: 번역은 원본을 지우지 않는다, 검열은 지운다 — HR 정체성 전환 (감시자 → 정원사)
+
+**왜 중요한가:**
+- AI 에이전트 등장은 기술 진화가 아니라 **정체성의 재협상** — "조직의 구성원 정의"를 다시 쓰는 사건
+- 시장은 Stage 3(협업) 이 아니라 **Stage 1.5(맹신의 변종)**로 퇴행 중 — AI 를 검증 가능한 도구가 아닌 권한 있는 주체로 승격
+- **생산 대 통합 비율 ∞ : 0 (엿새째)** — 브리핑 179 줄 생산, 위키 편입 0 줄
+- 건강 점수 하락은 **시간의 악화** — 사람이 만든 변화가 아니라 42 일 임계를 넘긴 시간이 만든 값
+
+**영향 범위:**
+- **Vault**: [[agentic-recruitment-proxy]](AI 네이티브 조직), [[bp-signal-intelligence]](Human Gate 스키마), [[hr-conceptual-atoms]](신뢰 사다리), [[bias-audit-protocol]](후보자 경험), [[self-determination-theory]](자율성·유능감·관계성)
+- **운영**: `_ops/human-gates.md` 에 4 개 Human Gate 명세 필요, 오늘 4 개 Signal 노드 wiki 편입 필요
+- **미해결**: `unaudited`·`stagnant_days` 칸 신설 (진행 중), 76% → 98% 정정 (7 일째 이월), 8.5% 검증 (7 일째 이월)
+
+**다음 확인:**
+1. **`unaudited` 칸 신설 완료** — `update_dashboard.py` 에 `unaudited` 집계 로직 추가, 대시보드 첫 화면 노출
+2. **`stagnant_days` 칸 신설 완료** — `history.jsonl` 직전 행과 비교하여 연속 무변화 일수 집계
+3. **4 개 Signal 노드 INGEST** — 오늘 브리핑의 4 개 제안 노드를 `wiki/signals/` 로 편입
+4. **Human Gate 명세** — `_ops/human-gates.md` 에 오늘 4 개 Gate 추가
+5. **충돌 검증** — 오늘 편입이 [[2026-07-22-autonomous-hiring-paradox]] 의 76% → 98% 정정, [[2026-08-10-capital-flow-market-neutral]] 의 8.5% 검증과 충돌하는지 확인
+6. **사람 판단 필요 항목**: 없음 — 모든 통계가 복수 출처에 기반하며, 개인정보·생체정보·감시 관련 스키마 변경 없음
 
 ---
 
