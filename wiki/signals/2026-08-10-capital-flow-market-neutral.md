@@ -1,21 +1,15 @@
 ---
-title: "[Signal] 2026-08-10: 자본의 심리학 — 분산의 복귀와 시장 중립의 시대"
+title: [Signal] 2026-08-10: 자본의 심리학 — 분산의 복귀와 시장 중립의 시대
 created: 2026-08-10
-updated: 2026-08-15
+updated: 2026-08-20
 status: growing
 type: signal
 date: 2026-08-10
-tags:
-  [
-    capital-flow,
-    market-neutral,
-    hedge-fund,
-    asset-allocation,
-    economic-freedom,
-  ]
+tags: 
 importance: High
 source: HFR, AlternativeSoft, BOK, Fed FOMC
 ---
+
 
 # [Signal] 2026-08-10: 자본의 심리학 — 분산의 복귀와 시장 중립의 시대
 

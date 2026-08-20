@@ -1,21 +1,20 @@
 ---
-title: "[Signal] 2026-07-22: 자율 채용의 역설 - '신뢰의 위임'과 '인간성의 상실' 사이"
+title: [Signal] 2026-07-22: 자율 채용의 역설 - '신뢰의 위임'과 '인간성의 상실' 사이
 created: 2026-07-22
-updated: 2026-08-14
+updated: 2026-08-20
 status: growing
 type: signal
 date: 2026-07-22
-tags:
-  [
-    agentic-recruitment,
-    ai-hiring-agents,
-    candidate-trust,
-    human-oversight,
-    constructed-fit,
-  ]
+tags: 
 importance: High
 source: i4cp, Korn Ferry, GoTo Workplace Intelligence, Eximius.ai
 ---
+
+
+
+
+
+
 
 # [Signal] 2026-07-22: 자율 채용의 역설 - '신뢰의 위임'과 '인간성의 상실' 사이
 
