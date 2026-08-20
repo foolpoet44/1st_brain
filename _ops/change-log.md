@@ -115,7 +115,7 @@
 
 ## [2026-08-20] 저녁 성찰 (Evening Reflect) — 배가 돌아왔고, 화물칸에는 사흘치가 실려 있었다
 
-**무엇이 바뀌었나:**
+**무엇이 바뀌었나:
 - `outputs/daily-reflect/REFLECT_2026-08-20.md` 생성 — 오늘 08:00~08:03 KST 로컬발 3 커밋(`9f9b920`·`1ad9686`·`1be229d`, **18 파일**)의 유입을 근거로 지식 원자 5 개 추출
 - **정정 ① 생산자는 멈춘 적이 없다**: 화물칸 내용물이 `BRIEFING_HR-TECH_2026-08-18.md`(08-18 생산), `classification_log` 08-17·08-18(각 **04:01 실행** 기록), `command-center-history.jsonl` 08-18·08-19 두 행, `EVAL_STATUS.md`(08-20 04:01 갱신). 새벽 4 시 1 분 작업들은 매일 돌고 있었음 → 어제 성찰의 「생산자 셋 동시 정지」 진단은 오류. 정지한 것은 **운송 한 줄**
 - **정정 ② 원인은 권한이 아니라 주소**: `_ops/logs/sync-auto.err` 142 행의 실패 경로는 `/Users/dkmac/Desktop/@26/dev/…` 이나, `_ops/scripts/com.csp-brain.auto-sync.plist` 의 등록 경로·작업 디렉터리와 `scripts/auto-classify-types.sh` 의 `VAULT_PATH` 는 모두 `/Users/dkmac/csp-brain`. 두 파일은 **같은 커밋 `116d1b5`(08-13 10:20)로 함께 유입** — 설정이 이미 새 주소를 가리키던 시점에 데몬은 옛 주소를 두드리고 있었음. 필요한 조치는 전체 디스크 접근 권한 부여가 아니라 `launchctl unload && load` **재등록**
@@ -138,12 +138,12 @@
 - **미해결**: 빈칸 51 개 등록(엿새째), `last_producer_run`·`unaudited`·`stagnant_days` 칸 신설, `REFLECT_2026-08-17_EVENING.md` 정정 박스(나흘째), 아흐레째 이월 두 건
 
 **다음 확인:**
-1. **깊이 계측 칸 신설(최우선)** — `history.jsonl` 에 `wiki_lines` 또는 `ingest_appends`. 이 칸이 생기기 전까지 이 볼트의 모든 「편입 0」 보고는 사실의 진술이 아니라 사각지대의 진술로 읽어야 함
+1. **깊이 계측 칸 신설 (최우선)** — `history.jsonl` 에 `wiki_lines` 또는 `ingest_appends`. 이 칸이 생기기 전까지 이 볼트의 모든 「편입 0」 보고는 사실의 진술이 아니라 사각지대의 진술로 읽어야 함
 2. **데몬 재등록** — `launchctl unload && load`. 어제의 권한 부여 처방은 **취소**. `.plist` 는 이미 정상 경로 보유. **사람만 가능**
 3. **재등록 이후 `sync-auto.err` 갱신 여부 확인** — 갱신되면 원인 확정, 안 되면 별도 경로
 4. **과거 성찰 3 편 정정 박스** — 08-17·08-18·08-19 의 「편입 0」 서술은 `98e8c25` 로 반증. append-only 준수하여 본문 수정 금지
 5. **아흐레째 이월 재범위 산정** — `2026-08-10-capital-flow-market-neutral.md` 는 08-17 에 Timeline 2 건 append 완료. 8.5% 검증의 잔여 범위 재확인
-6. **사람 판단 필요 항목**: 2 번(데몬 재등록). 본 성찰은 저장소 메타데이터·git 이력·운영 로그·대시보드 시계열만 근거로 하며 `inbox/` 개인 사안은 조회·인용하지 않음
+6. **사람 판단 필요 항목**: 2 번 (데몬 재등록). 본 성찰은 저장소 메타데이터·git 이력·운영 로그·대시보드 시계열만 근거로 하며 `inbox/` 개인 사안은 조회·인용하지 않음
 
 ---
 
@@ -207,6 +207,7 @@
 3. **`unaudited`·`stagnant_days` 칸 신설** — 오늘 `stagnant_days` 실측값 1
 4. **이레째 이월 두 건** — `2026-07-22-autonomous-hiring-paradox.md` 76% → 98%, `2026-08-10-capital-flow-market-neutral.md` 8.5% 검증
 5. **사람 판단 필요 항목**: 없음 — 저장소 메타데이터·git 이력·운영 로그만 근거로 하며 `inbox/` 개인 사안(소득·법률·투자 개별 건)은 조회·인용하지 않음
+<<<<<<< HEAD
 
 ---
 
@@ -237,6 +238,8 @@
 4. **Human Gate 명세** — `_ops/human-gates.md` 에 오늘 4 개 Gate 추가
 5. **충돌 검증** — 오늘 편입이 [[2026-07-22-autonomous-hiring-paradox]] 의 76% → 98% 정정, [[2026-08-10-capital-flow-market-neutral]] 의 8.5% 검증과 충돌하는지 확인
 6. **사람 판단 필요 항목**: 없음 — 모든 통계가 복수 출처에 기반하며, 개인정보·생체정보·감시 관련 스키마 변경 없음
+=======
+>>>>>>> 6e2a970 (ops: 운영 체계 (2026-08-20 23:00) — 4개 파일)
 
 ---
 
@@ -1534,4 +1537,113 @@ status: Active
 2. **Human Gate YAML 스키마 명세** — `[[bp-signal-intelligence]]` 에 "자본시장 Human Gate" 스키마 추가 제안 (소요 90 분)
 3. **INGEST 결정** — 오늘 브리핑의 4 개 신호를 기존 `[[Economic Freedom]]` 에 MERGE 할지, 별도 신호 노드로 생성할지 INGEST job 이 판단 (09:30 자동 실행)
 4. **가시성 점검** — `KNOWLEDGE_PULSE.md` 에 오늘 브리핑의 4 개 신호가 반영되었는지 확인. 반영되지 않았다면 "자기언급 인플레이션" 경고 기록 (P2)
+
+
+
+## [2026-08-20 09:30] MONEY-FLOW 브리핑 생성 — "자본의 심리, HR 의 거울"
+
+### 무엇이 바뀌었나
+- 2026 년 8 월 3 주차 돈의 이동 브리핑 생성 ()
+- 4 개 핵심 신호: (1) 연준 금리 동결 내부 균열 (3 명 반대), (2) 환율 1400 원 구조적 자본 유출, (3) 60/40 포트폴리오 죽음, (4) 헤지펀드 Equity Market Neutral 29% 선호
+- 3 Human Gate 명세: 금리 결정 모니터링 (24h), 자산 배분 심의회 (분기별), 신뢰 벡터 공시
+
+### 왜 중요한가
+- 자본시장의 "신뢰 벡터" 전환 (스칼라 → 방향성) 을 HR AI 도입 논의에 적용
+- "가디언 → 가드너" 정체성 전환을 자본 흐름 관점에서 재해석
+- 환율 1400 원 고착화를 "구조적 자산 재배치"로 해석 — HR 의 AI 배분도 동일 패턴
+
+### 영향 범위
+- **Domain**: MONEY-FLOW (자본 흐름 & 시장 심리학)
+- **연결 노드**: [[Economic Freedom]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]], [[agentic-recruitment-proxy]]
+- **INGEST 판정 대기**: 4 개 신호 노드 제안 (중복 검증 필요)
+
+### 다음 확인
+1. [ ] 09:30 INGEST job 이 브리핑을 읽어 wiki/signals/ 에 편입하는가?
+2. [ ] 4 가지 Human Gate 가 [[bp-signal-intelligence]] 에 YAML 로 명세되는가?
+3. [ ] KNOWLEDGE_PULSE.md 에 오늘 브리핑이 반영되는가?
+4. [ ] 웹 대시보드 (http://localhost:8080) 에 "MONEY-FLOW" 도메인 지표가 업데이트되는가?
+
+
+## [2026-08-20 09:30] MONEY-FLOW 브리핑 생성 — "자본의 심리, HR 의 거울"
+
+### 무엇이 바뀌었나
+- 2026 년 8 월 3 주차 돈의 이동 브리핑 생성 (outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-20.md)
+- 4 개 핵심 신호: (1) 연준 금리 동결 내부 균열 (3 명 반대), (2) 환율 1400 원 구조적 자본 유출, (3) 60/40 포트폴리오 죽음, (4) 헤지펀드 Equity Market Neutral 29% 선호
+- 3 Human Gate 명세: 금리 결정 모니터링 (24h), 자산 배분 심의회 (분기별), 신뢰 벡터 공시
+
+### 왜 중요한가
+- 자본시장의 "신뢰 벡터" 전환 (스칼라 → 방향성) 을 HR AI 도입 논의에 적용
+- "가디언 → 가드너" 정체성 전환을 자본 흐름 관점에서 재해석
+- 환율 1400 원 고착화를 "구조적 자산 재배치"로 해석 — HR 의 AI 배분도 동일 패턴
+
+### 영향 범위
+- **Domain**: MONEY-FLOW (자본 흐름 & 시장 심리학)
+- **연결 노드**: [[Economic Freedom]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]], [[agentic-recruitment-proxy]]
+- **INGEST 판정 대기**: 4 개 신호 노드 제안 (중복 검증 필요)
+
+### 다음 확인
+1. [ ] 09:30 INGEST job 이 브리핑을 읽어 wiki/signals/ 에 편입하는가?
+2. [ ] 4 가지 Human Gate 가 [[bp-signal-intelligence]] 에 YAML 로 명세되는가?
+3. [ ] KNOWLEDGE_PULSE.md 에 오늘 브리핑이 반영되는가?
+4. [ ] 웹 대시보드 (http://localhost:8080) 에 "MONEY-FLOW" 도메인 지표가 업데이트되는가?
+
+---
+
+## [BRIEFING] 2026-08-20 — I/O 심리학 브리핑 생성
+
+### 무엇이 바뀌었나
+- I/O 심리학, 인지 심리학, 행동 경제학 분야 최신 논문 4 편 기반 브리핑 생성
+- `outputs/briefings/BRIEFING_IO-PSYCH_2026-08-20.md` 에 저장 (16,738 bytes)
+
+### 왜 중요한가
+- **의사결정 피로**: 1 일 35,000 건 의사결정, 오후 4 시 이후 결정 질 저하 — 조직 설계 실패로 재해석
+- **알고리즘적 단일문화**: 4M 지원서 분석, Black 지원자 10.62% 직무에서 역효과 — 편향은 기술 실패가 아닌 시장 집중 결과
+- **법적 리스크**: Mobley v. Workday 집단 소송 승인, EU AI Act 2027 년 마감 — 고용주 1 차 책임
+- **AI 네이티브 조직**: AI 노출 직무 인간 스킬 (공감, 판단, 창의성) 의존도 2.5 배 높음 — "대체" 아닌 "증강" 담론 필요
+
+### 영향 범위
+- [[hr-conceptual-atoms]]: HR 정체성 전환 (감시자 → 정원사)
+- [[bp-signal-intelligence]]: 4 가지 Human Gate 명세 제안
+- [[agentic-recruitment-proxy]]: AI 네이티브 조직 설계 원칙
+- [[fde-talent-model]]: 전문직 (professionalised) vs 민주화 (democratised) 직무 재설계
+
+### 다음 확인
+1. [ ] 09:30 INGEST job 이 브리핑을 읽어 wiki/signals/ 에 편입하는가?
+2. [ ] 4 가지 Human Gate ([[decision-fatigue-organizational-design]], [[algorithmic-monoculture-hiring]], [[ai-hiring-legal-risk-2026]], [[ai-native-organization-design]]) 가 생성되는가?
+3. [ ] KNOWLEDGE_PULSE.md 에 오늘 브리핑이 반영되는가?
+4. [ ] 웹 대시보드 (http://localhost:8080) 에 "IO-PSYCH" 도메인 지표가 업데이트되는가?
+## 2026-08-20 — INGEST 프로토콜 (Cron)
+
+- **무엇이 바뀌었나**: 7 개 브리핑을 기존 wiki 신호 문서에 병합 (MERGE)
+  - MONEY-FLOW 3 건 → 2026-08-10-capital-flow-market-neutral.md (1 건), 2026-07-22-autonomous-hiring-paradox.md (2 건)
+  - HR-TECH 2 건 → 2026-07-22-autonomous-hiring-paradox.md
+  - IO-PSYCH 2 건 → 2026-07-22-autonomous-hiring-paradox.md
+  - 총 2 개 대상 문서에 7 회 Timeline 증분 추가
+
+- **왜 중요한가**: 
+  - 74-75 개 통계 중복은 **중복이 아닌 공명** (2026-08-20 검증)
+  - 동일 신호의 시간적 심화 — 양적 성장이 아닌 질적 심화
+  - "절제는 무능력이 아니라, 기존 신호를 심화하는 성숙한 지식 대사다"
+
+- **영향 범위**:
+  - wiki/signals/ 문서 2 개 업데이트 (Timeline 섹션 확장)
+  - outputs/briefings/ 파일 7 개 processed 마킹 완료
+  - _ops/ingest-log.md 에 7 건 MERGE 기록
+
+- **다음 확인**:
+  1. [ ] 2026-08-10-capital-flow-market-neutral.md — Timeline 에 2026-08-16, 08-17, 08-20 MONEY-FLOW 추가됨
+  2. [ ] 2026-07-22-autonomous-hiring-paradox.md — Timeline 에 5 개 브리핑 (HR-TECH 2, IO-PSYCH 2, MONEY-FLOW 1) 추가됨
+  3. [ ] _index.md — 병합된 문서들의 wikilink 존재 확인 (기존 문서이므로 이미 존재할 것)
+  4. [ ] Evening Reflect — "Surface vs Deep Integration Ratio" 기록 (Timeline 확장 vs Compiled Truth 갱신)
+
+## 2026-08-20 — Git Rebase 병합 주석
+
+**병합 패턴**: 원격 HR Tech 성찰 (08-18) 과 로컬 시스템 진단 성찰 (08-19) 병합
+
+- **Part I (08-18)**: HR Tech 브리핑 — AI 네이티브 조직, 신뢰 사다리, Human Gate 4 종
+- **Part II (08-19)**: 시스템 진단 — 설비 정지 (macOS Full Disk Access), 계기판 침묵, 무력감 주소 정정
+
+**커밋 메시지**: 
+
+---
 

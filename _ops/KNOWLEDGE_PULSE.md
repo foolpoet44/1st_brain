@@ -110,6 +110,14 @@ AI 편향을 검열하려 하지 말고, 맥락에 맞게 번역하라. HR 은 �
 **Dashboard:** http://localhost:8080
 
 ## Recent Synapses
+### 2026-08-20 — I/O 심리학 브리핑
+
+- **주제**: 알고리즘적 단일문화와 의사결정 피로
+- **핵심 통계**: 1 일 35,000 건 의사결정, 4M 지원서 분석, Black 지원자 10.62% 역효과
+- **Human Gate**: 의사결정 피로 감사 위원회, 알고리즘 공정성 감사 위원회 (DEI), 법적 리스크 모니터링 (24h), 에이전트 조직 설계 심의회
+- **Vault 연결**: [[decision-fatigue-organizational-design]] (제안), [[algorithmic-monoculture-hiring]] (제안), [[ai-hiring-legal-risk-2026]] (제안), [[ai-native-organization-design]] (제안)
+- **정체성 전환**: "감시자 (Guardian) → 정원사 (Gardener)" — AI 판단을 가설로 취급하는 협업 모델
+
 
 - **2026-08-14 09:10** — [I/O 심리학 브리핑](2026-08-14-io-psych.md) 생성:
   - **핵심 통찰 4:** (1) "의사결정 피로는 조직 설계 실패다" (Frontiers in Cognition), (2) "AI 는 인간 조직을 모방하지 않는다" (arXiv:2511.17332v2), (3) "공정성은 정치적 선택이다" (arXiv:2309.13933v4), (4) "자율성은 검증이다" (arXiv:2601.06223v1)
