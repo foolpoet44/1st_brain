@@ -4,7 +4,11 @@ date: 2026-08-18
 domain: HR-TECH
 status: Active
 tags: [AI-agents, talent-acquisition, people-analytics, organizational-culture]
+processed: true
+processed_date: 2026-08-20
+processed_note: MERGE -> 2026-07-22-autonomous-hiring-paradox.md (22개 통계 일치)
 ---
+
 
 # HR Tech 브리핑 2026-08-18: 에이전트 조직의 등장과 인간 HR 의 정체성 재협상
 

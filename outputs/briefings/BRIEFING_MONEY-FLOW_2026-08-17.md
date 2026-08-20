@@ -4,7 +4,11 @@ date: 2026-08-17
 domain: MONEY-FLOW
 status: Active
 tags: [거시경제, 자본흐름, 헤지펀드, Fed, 환율, 자산배분]
+processed: true
+processed_date: 2026-08-20
+processed_note: MERGE -> 2026-08-10-capital-flow-market-neutral.md (23개 통계 일치)
 ---
+
 
 # 2026 년 8 월 17 일 월요일 — 돈의 이동 (Money Flow) 브리핑
 

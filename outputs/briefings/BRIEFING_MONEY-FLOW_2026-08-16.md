@@ -3,14 +3,13 @@ type: briefing
 date: 2026-08-16
 domain: MONEY-FLOW
 status: Active
-title: "2026 년 8 월 16 일 돈의 흐름 브리핑: 금리 정체기, 자산 배분의 지각변동, 그리고 집단 심리의 전환점"
-tags:
-  - 금리
-  - 환율
-  - 기관투자
-  - 자산배분
-  - 글로벌시장
+title: 2026 년 8 월 16 일 돈의 흐름 브리핑: 금리 정체기, 자산 배분의 지각변동, 그리고 집단 심리의 전환점
+tags: 
+processed: true
+processed_date: 2026-08-20
+processed_note: MERGE -> 2026-07-22-autonomous-hiring-paradox.md (18개 통계 일치)
 ---
+
 
 # 2026 년 8 월 16 일 돈의 흐름 브리핑: 금리 정체기, 자산 배분의 지각변동, 그리고 집단 심리의 전환점
 

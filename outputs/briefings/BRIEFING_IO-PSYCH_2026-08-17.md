@@ -3,15 +3,13 @@ type: briefing
 date: 2026-08-17
 domain: IO-PSYCH
 status: Active
-title: "I/O 심리학 브리핑 2026-08-17 — AI 시대의 Job Crafting, 조직 설계, 그리고 알고리즘 공정성"
-tags:
-  - IO-Psychology
-  - AI-Adoption
-  - Job-Crafting
-  - Algorithmic-Fairness
-  - Organizational-Behavior
-processed: false
+title: I/O 심리학 브리핑 2026-08-17 — AI 시대의 Job Crafting, 조직 설계, 그리고 알고리즘 공정성
+tags: 
+processed: true
+processed_date: 2026-08-20
+processed_note: MERGE -> 2026-07-22-autonomous-hiring-paradox.md (20개 통계 일치)
 ---
+
 
 # I/O 심리학 브리핑 2026-08-17
 
