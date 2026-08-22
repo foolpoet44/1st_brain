@@ -10,6 +10,9 @@ tags:
   - exchange-rate
   - Fed
   - asset-allocation
+processed: true
+processed_date: 2026-08-22
+processed_note: MERGE -> 2026-05-30-harness-is-not-just-a-leash.md
 ---
 
 # 자본의 심리학: 베타 제거의 시대와 환율의 역설
