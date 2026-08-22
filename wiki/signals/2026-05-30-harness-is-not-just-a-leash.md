@@ -1,7 +1,7 @@
 ---
 title: "[SIGNAL] 하네스는 목줄이 아닌 '작업 운영체제'다: 황민호 님의 하네싱 통찰"
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-08-22
 status: growing
 type: signal
 source: LinkedIn (Hwang Minho)
@@ -9,6 +9,7 @@ date: 2026-05-31
 tags: ["harnessing", "agentic-workflow", "anthropic", "openai", "reliability"]
 url: https://www.linkedin.com/posts/hwang-minho_%ED%95%98%EB%84%A4%EC%8A%A4%EB%8A%94-%EB%8B%A8%EC%88%9C%ED%9E%88-ai%EC%97%90%EA%B2%8C-%EB%AA%A9%EC%A4%84%EC%9D%84-%EC%B1%84%EC%9A%B0%EB%8A%94-%EA%B0%80%EB%93%9C%EB%A0%88%EC%9D%BC%EB%A7%8C%EC%9D%84-%EB%9C%BB%ED%95%98%EC%A7%80-%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4-%EC%98%A4%ED%9E%88%EB%A0%A4-ugcPost-7466405691155451904-nrNV/
 ---
+
 
 # [SIGNAL] 하네스는 목줄이 아닌 '작업 운영체제'다: 황민호 님의 하네싱 통찰
 
@@ -30,6 +31,29 @@ url: https://www.linkedin.com/posts/hwang-minho_%ED%95%98%EB%84%A4%EC%8A%A4%EB%8
 
 
 ## Timeline
+
+### 2026-08-22 — MONEY-FLOW 브리핑 INGEST
+
+**출처:** 자본의 심리학: 베타 제거의 시대와 환율의 역설
+
+**핵심 통계:** 2026, 08, 21, 1, 1
+
+**편입 내용:**
+1. 핵심 신호 (Key Signals)
+
+### 신호 1: "방향성 베팅의 종말" — 헤지펀드 자산 배분의 구조적 전환
+- **통계**: Barclays H2 2026 보고서, 340 명 투자자 설문 ($8.7 조 AUM)
+  - **29%** → Equity Market Neutral (주식 시장 중립)
+  - **27%** → Global Macro (글로벌 매크로)
+  - **23%** → Quant Multi-Strat (양적 다중 전략)
+  - **단일 방향성 전략 (Directional) 은 Top 5 중 1 개만 진입** (Equity Sector Long/Short, 24%)
+- **핵심 통찰**: **"자본은 더 이상 '상승장'을 예측하지 않는다. 모든 시장에서 생존하는 '베타 제거'를 선택한다."**
+- **Vault 연결**: [[Economic Freedom]], [[bp-signal-intelligence]]
+
+### 신호 2: "풍요 속의 가뭄" — 원/달...
+
+---
+
 ### 2026-08-08
 - Fed 금리 3.75% 동결, KRW/USD 1,416 원, 해외 포트폴리오 $1,403 억 (2 배 증가)
 

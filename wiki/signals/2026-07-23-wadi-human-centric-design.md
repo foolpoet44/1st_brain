@@ -1,7 +1,7 @@
 ---
 title: "[Signal] 2026-07-23: WADI 프레임워크 — 인간 중심성은 도덕이 아니라 경제다"
 created: 2026-07-23
-updated: 2026-08-04
+updated: 2026-08-22
 status: growing
 type: signal
 date: 2026-07-23
@@ -24,6 +24,7 @@ tags:
   ]
 importance: High
 ---
+
 
 # [Signal] 2026-07-23: WADI 프레임워크와 의사결정 권한의 병목
 
@@ -118,3 +119,21 @@ Challenge Theory는 HR 의사결정에 직접 적용된다. 조직의 기본값�
 - [[ax-internalization]] — 임계값 정리가 AX 내재화의 성공 조건을 규정한다.
 - [[2026-07-24-cognitive-offloading-skill-decay]] — 같은 주간의 I/O 심리학 신호. 인지 부하의 반대편 위험.
 - [[2026-07-22-autonomous-hiring-paradox]] — HR Tech 측에서 본 동일한 '권한' 문제.
+
+## Timeline
+
+### 2026-08-22 — IO-PSYCH 브리핑 INGEST
+
+**출처:** I/O 심리학 브리핑 2026-08-22 — 알고리즘 단일경작, 아바타 편향, 그리고 인간-AI 협업의 공정성
+
+**핵심 통계:** 2026, 08, 22, 2026, 08
+
+**편입 내용:**
+알고리즘 단일경작, 아바타 편향, 그리고 인간-AI 협업의 공정성
+
+---
+
+
+
+---
+

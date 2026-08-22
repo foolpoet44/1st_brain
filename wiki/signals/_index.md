@@ -69,3 +69,4 @@ tags: [index, wiki]
 ### 채용 & 노동시장 (Autonomous Hiring)
 
 - [[2026-07-22-autonomous-hiring-paradox]]
+- [[BRIEFING_2026-08-03|Briefing_2026 08 03]]
