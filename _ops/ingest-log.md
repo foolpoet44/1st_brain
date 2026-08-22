@@ -1,3 +1,22 @@
+## 2026-08-22 — INGEST 수행
+
+- **신규 (NEW):** 0 개
+- **병합 (MERGE):** 3 개
+- **중복 종결 (DUPLICATE):** 0 개
+
+### 병합 상세
+
+- BRIEFING_MONEY-FLOW_2026-08-22.md -> BRIEFING_2026-08-03.md
+- BRIEFING_IO-PSYCH_2026-08-22.md -> 2026-07-23-wadi-human-centric-design.md
+- BRIEFING_MONEY-FLOW_2026-08-21.md -> 2026-05-30-harness-is-not-just-a-leash.md
+
+### 판정 근거
+
+- 통계 매칭 기준: 2 개 이상 일치 시 MERGE
+- 3 개 브리핑 모두 기존 문서와 4-6 개 통계 일치로 MERGE 판정
+
+---
+
 ## 2026-08-14
 
 - **신규 (NEW)**: 0 건
