@@ -1687,3 +1687,25 @@ status: Active
 
 ---
 
+
+### [BRIEFING] 2026-08-24 — HR Tech 브리핑 생성
+
+- **무엇이 바뀌었나**: outputs/briefings/BRIEFING_HR-TECH_2026-08-24.md 생성 — 4 개 시장 신호 (AI 수퍼에이전트 tipping point, 알고리즘적 단일문화, EU AI Act, 신뢰 비대칭)
+- **왜 중요한가**: 2026 년 AI 채용 시장은 **자율 에이전트 시대**로 진입 — 인간 HR 은 executor → orchestrator 로 정체성 전환 필요
+- **영향 범위**: [[agentic-recruitment-proxy]], [[hr-conceptual-atoms]], [[bp-signal-intelligence]] — 4 개 Human Gate 제안 (Agent Org Design, Algorithm Fairness Audit, Legal Risk Monitoring, Candidate Experience)
+- **다음 확인**:
+  1. INGEST job 이 중복 판정 후 wiki 편입 완료
+  2. KNOWLEDGE_PULSE.md 에 오늘 브리핑 반영
+  3. Human Gate YAML 이 [[bp-signal-intelligence]] 에 추가
+  4. 대시보드 (http://localhost:8080) Knowledge Velocity 증가
+
+### 2026-08-24 18:32 — INGEST 프로토콜 실행
+
+- **무엇이 바뀌었나**: wiki/signals/ 기존 문서 2 개에 Timeline 3 건 추가
+- **왜 중요한가**: 3 개 브리핑이 지식 저장소로 편입 (모두 MERGE 판정)
+- **영향 범위**: wiki/signals/2026-07-22-autonomous-hiring-paradox.md, wiki/signals/2026-08-10-capital-flow-market-neutral.md
+- **다음 확인**:
+  1. _index.md 에 링크 유지 확인
+  2. 백링크 2 개 이상 생성 확인
+  3. Human Gate 명세 추출 확인
+

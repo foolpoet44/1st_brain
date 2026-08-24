@@ -1,7 +1,7 @@
 ---
 title: [Signal] 2026-07-22: 자율 채용의 역설 - '신뢰의 위임'과 '인간성의 상실' 사이
 created: 2026-07-22
-updated: 2026-08-20
+P26-08-24
 status: growing
 type: signal
 date: 2026-07-22
@@ -379,3 +379,16 @@ append-only 증거 기록. 삭제·수정하지 않는다.
 **생성일**: 2026-07-22 08:00 KST  
 **생성자**: Hermes Cron Job (HR Tech Horizon Scan)  
 **다음 브리핑**: 2026-07-23 08:00 KST
+
+### 2026-08-24 — IO-PSYCH 브리핑 INGEST
+
+- **원본**: `BRIEFING_IO-PSYCH_2026-08-24.md`
+- **핵심 통계**: 30%, 40%, 12%, 140%, 79%
+- **판정**: MERGE (기존 문서와 통계 일치)
+
+### 2026-08-24 — HR-TECH 브리핑 INGEST
+
+- **원본**: `BRIEFING_HR-TECH_2026-08-24.md`
+- **핵심 통계**: 52%, 30%, 70%, 26%, 15%
+- **판정**: MERGE (기존 문서와 통계 일치)
+

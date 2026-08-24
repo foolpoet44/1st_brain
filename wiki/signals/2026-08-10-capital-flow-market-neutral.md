@@ -1,7 +1,7 @@
 ---
 title: [Signal] 2026-08-10: 자본의 심리학 — 분산의 복귀와 시장 중립의 시대
 created: 2026-08-10
-updated: 2026-08-20
+P26-08-24
 status: growing
 type: signal
 date: 2026-08-10
@@ -233,3 +233,10 @@ append-only 증거 기록. 삭제·수정하지 않는다.
 ---
 
 *이 신호 문서는 csp-brain Vault 의 지식 대사 시스템에 편입되었습니다. MONEY-FLOW 도메인의 첫 번째 신호 문서입니다.*
+
+### 2026-08-24 — MONEY-FLOW 브리핑 INGEST
+
+- **원본**: `BRIEFING_MONEY-FLOW_2026-08-24.md`
+- **핵심 통계**: 0.36%, 6.98%, 21%, 0.59%, 1.8%
+- **판정**: MERGE (기존 문서와 통계 일치)
+
