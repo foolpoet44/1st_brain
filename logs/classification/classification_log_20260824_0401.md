@@ -1,3 +1,6 @@
+---
+type: Meeting
+---
 # Classification Log - 2026-08-24 04:01
 
 ## 실행 개요
