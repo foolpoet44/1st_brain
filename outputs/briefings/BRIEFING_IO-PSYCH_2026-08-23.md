@@ -10,6 +10,9 @@ tags:
   - algorithmic-fairness
   - neurodiversity
   - meaningful-work
+processed: true
+processed_date: 2026-08-25
+processed_note: MERGE — 2026-07-22-autonomous-hiring-paradox.md 에 편입 (Stanford HAI 26% 편향, 의사결정 피로 35,000 건/10 가지 원인 중복)
 ---
 
 # I/O 심리학 일일 브리핑 — 2026-08-23

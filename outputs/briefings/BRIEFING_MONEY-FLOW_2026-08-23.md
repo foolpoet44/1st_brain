@@ -5,6 +5,9 @@ domain: MONEY-FLOW
 status: Active
 title: "자본의 심리학: 60/40 의 붕괴와 시장 중립의 시대"
 tags: [자산배분, 헤지펀드, 금리, 환율, 시장심리]
+processed: true
+processed_date: 2026-08-25
+processed_note: MERGE — 2026-08-10-capital-flow-market-neutral.md 에 편입 (핵심 통계 중복: $5.22 조, 29% EMN, Fed 3.5-3.75%, 환율 1,414 원)
 ---
 
 # 자본의 심리학: 60/40 의 붕괴와 시장 중립의 시대
