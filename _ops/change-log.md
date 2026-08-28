@@ -2000,3 +2000,44 @@ status: Active
 2. [ ] `wiki/signals/_index.md` 에 새 노드가 반영되었는가?
 3. [ ] `KNOWLEDGE_PULSE.md` "Recent Synapses" 에 브리핑 링크가 있는가?
 4. [ ] Human Gate 5 개가 [[bp-signal-intelligence]] 에 YAML 로 명세되었는가?
+
+---
+
+## [2026-08-29] I/O 심리학 브리핑 — 심리적 안전성, 에이전트 조직, 알고리즘 편향, 의사결정 피로
+
+**무엇이 바뀌었나:**
+
+- `outputs/briefings/BRIEFING_IO-PSYCH_2026-08-29.md` 생성 및 커밋 — arXiv, PubMed, 산업계 보고서에서 **4 편 논문** 선별 (심리적 안전성과 AI 도입, 에이전트 AI 의 조직 행동, 알고리즘 채용 편향, 의사결정 피로)
+- **4 Knowledge Atoms:**
+  1. **심리적 안전성은 AI 도입의 문턱이다 (그러나 지속 사용은 아니다)** — arXiv:2602.23279 (2026.02), 2,257 명 대상, PS 1 단위 증가 → AI 도입 확률 29.6% 증가 (p<.001), 그러나 사용 빈도/지속 시간과 무관 (p>.13)
+  2. **에이전트 AI 는 인간 조직을 모방하지 않는다 (395% 효율성의 교훈)** — arXiv:2606.30986 (2026.06), 8,000 task × 7 조직 형태 × 5 LLM, 인간 모방 형태 (위원회) 효율성 -12.69%, 에이전트 네이티브 형태 +11.43% (**395.26% 차이**)
+  3. **알고리즘 채용 편향은 기술 실패가 아니라 시장 집중의 결과다** — OVI Blog (2026.07), arXiv 2507.11548 인용, Stanford HAI 연구 (400 만 건 지원, 150+ 고용주, 동일 AI 플랫폼 사용 시 흑인 26%·아시아인 15% 불리한 영향)
+  4. **의사결정 피로는 조직 설계 실패다 (개인의 자제력 문제가 아니다)** — Frontiers in Cognition (2026), 10 가지 원인 중 6 가지 조직적, 의사결정 피로가 수술 확률 10.5% 감소
+- **Human Gate 4 종 추출:**
+  1. **AI 도입 단계별 개입 심의회** — 도입률과 지속률을 별도 보고 (단일 KPI 금지)
+  2. **에이전트 조직 설계 심의회** — 인간 모방 구조 (위원회, 계층) 금지, 에이전트 네이티브 (블랙보드 메모리, 적응형 메타조직) 만 허용
+  3. **알고리즘 공정성 감사 위원회 (DEI)** — 교차성 편향 분기별 감사, 단일 벤더 채용 파이프라인 50% 제한
+  4. **의사결정 아키텍처 심의회** — 승인 계층 3 단계 이하, 오후 2 시 이후 AI 기반 최종 거부 금지
+
+**왜 중요한가:**
+
+- **Trust Ladder 3 단계로 읽는 HR 의 AI 수용 성숙도:** 1 단계 (Blind Faith) → 2 단계 (Distrust) → 3 단계 (Collaboration). 오늘의 4 편 논문은 모두 **3 단계 (Collaboration)** 를 지향 — "AI 판단은 인간 검증의 가설이다"
+- **정체성 전환: "감시자 (Guardian) → 정원사 (Gardener)"** — HR 은 AI 의 자동화를 금지하는 감시자가 아니라, 인간과 AI 가 각자의 네이티브 환경에서 최고의 효율을 내도록 컨텍스트를 설계하는 정원사
+- **"번역은 원본을 지우지 않는다. 검열은 지운다."** — AI 의 효율성을 지우지 않으면서 더 공정한 언어 (분류·검증·성찰) 로 번안하는 것이 HR 의 새로운 역할
+
+**영향 범위:**
+
+- **Vault 연결 제안 (INGEST job 판정 대기):**
+  - [[agentic-recruitment-proxy]] — 심리적 안전성 → AI 도입 문턱 확장
+  - [[bp-signal-intelligence]] — 에이전트 네이티브 조직 심화
+  - [[hr-conceptual-atoms]] — 알고리즘 편향 → 시장 집중 교차
+  - [[fde-talent-model]] — 의사결정 피로 → 조직 설계 확장
+- **INGEST 프로토콜:** 09:30 `csp-brain-ingest` job 이 본 브리핑을 읽어서 wiki/signals/ 로 편입 (NEW/MERGE/DUPLICATE 판정). **브리핑은 자기가 무엇과 중복되는지 모른다** — INGEST job 이 기존 wiki/ 문서와 통계적 매칭 (2+ 일치 = MERGE) 을 수행할 것
+
+**다음 확인:**
+
+1. **INGEST 자동 실행 (09:30)** — `outputs/briefings/BRIEFING_IO-PSYCH_2026-08-29.md` 가 `processed: true` 로 마킹되는지, wiki/signals/ 에 NEW/MERGE 노드가 생성되는지
+2. **Human Gate 명세 정제** — 4 종 Human Gate 를 [[bp-signal-intelligence]] frontmatter 에 YAML 로 명세화 (소요 30 분)
+3. **지식 펄스 업데이트** — `KNOWLEDGE_PULSE.md` 의 "Recent Synapses" 에 오늘 4 Knowledge Atom 반영 (소요 10 분)
+4. **대시보드 연동** — http://localhost:8080 의 "지식 대사율" 지표가 오늘 브리핑 반영 후 갱신되는지 확인 (소요 5 분)
+
