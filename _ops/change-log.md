@@ -1931,3 +1931,28 @@ status: Active
 - [ ] macOS launchd 데몬 재등록 (사람만 가능)
 - [ ] 미병합 브랜치 19 개 통독 (사람 판단)
 
+
+## [2026-08-28 09:10] I/O 심리학 브리핑 생성 — 알고리즘 편향, 의사결정 피로, 일의 의미
+
+### 무엇이 바뀌었나
+- `outputs/briefings/BRIEFING_IO-PSYCH_2026-08-28.md` 생성
+- 4 편 논문 요약 (FAccT '26 2 편, Frontiers in Cognition 1 편, arXiv 1 편)
+- 5 개 Human Gate 명세 추출
+
+### 왜 중요한가
+- **알고리즘 단일재배**: 편향은 기술 실패가 아니라 시장 집중의 구조적 결과
+- **하이브리드 지능**: Human+AI 가 가장 공정 (CDP 0.854) — AI 는 가설, 인간은 검증
+- **의사결정 피로**: 개인 자제력 실패가 아니라 조직 설계 실패
+- **Design Multiplier**: AI 증강은 기술 투자보다 직장 설계가 중요
+
+### 영향 범위
+- [[bp-signal-intelligence]] — Human Gate 5 개 추가
+- [[agentic-recruitment-proxy]] — 알고리즘 단일재배 위험 항목
+- [[fde-talent-model]] — Meaning Protection Zone 확장
+- [[hr-conceptual-atoms]] — Trust Vector, WADI 프레임워크
+
+### 다음 확인
+1. [ ] 09:30 INGEST job 이 브리핑을 처리했는가? (NEW/MERGE/DUPLICATE 판정)
+2. [ ] `wiki/signals/_index.md` 에 새 노드가 반영되었는가?
+3. [ ] `KNOWLEDGE_PULSE.md` "Recent Synapses" 에 브리핑 링크가 있는가?
+4. [ ] Human Gate 5 개가 [[bp-signal-intelligence]] 에 YAML 로 명세되었는가?
