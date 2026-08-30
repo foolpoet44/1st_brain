@@ -1,5 +1,6 @@
 # 🧠 csp-brain 일일 기억 공고화 (Consolidation) 리포트
 
+type: Meeting
 **실행 시각**: 2026-08-26 23:08 KST  
 **상태**: ✅ 완료
 

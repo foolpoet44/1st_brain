@@ -1,5 +1,6 @@
 # 🧠 csp-brain 일일 기억 공고화 리포트
 ## 2026-08-26 23:06 KST
+type: Meeting
 
 ---
 
