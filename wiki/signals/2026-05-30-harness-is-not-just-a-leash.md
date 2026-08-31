@@ -1,7 +1,7 @@
 ---
 title: "[SIGNAL] 하네스는 목줄이 아닌 '작업 운영체제'다: 황민호 님의 하네싱 통찰"
 created: 2026-05-31
-updated: 2026-08-22
+updated: 2026-08-31
 status: growing
 type: signal
 source: LinkedIn (Hwang Minho)
@@ -31,6 +31,54 @@ url: https://www.linkedin.com/posts/hwang-minho_%ED%95%98%EB%84%A4%EC%8A%A4%EB%8
 
 
 ## Timeline
+
+
+### 2026-08-31 — MONEY-FLOW 브리핑 INGEST
+
+Untitled
+
+- 출처: `BRIEFING_MONEY-FLOW_2026-08-31.md`
+- 편입일: 2026-08-31
+
+
+### 2026-08-25 — MONEY-FLOW 브리핑 INGEST
+
+"자본의 심리, 방향성을 잃다 — 2026 년 8 월 25 일 돈의 흐름 브리핑"
+
+- 출처: `BRIEFING_MONEY-FLOW_2026-08-25.md`
+- 편입일: 2026-08-31
+
+
+### 2026-08-29 — IO-PSYCH 브리핑 INGEST
+
+"I/O 심리학 브리핑 — 심리적 안전성과 에이전트 조직의 행동 (2026-08-29)"
+
+- 출처: `BRIEFING_IO-PSYCH_2026-08-29.md`
+- 편입일: 2026-08-31
+
+
+### 2026-08-28 — IO-PSYCH 브리핑 INGEST
+
+"I/O 심리학 브리핑 2026-08-28 — 알고리즘 편향, 의사결정 피로, 그리고 일의 의미"
+
+- 출처: `BRIEFING_IO-PSYCH_2026-08-28.md`
+- 편입일: 2026-08-31
+
+
+### 2026-08-29 — MONEY-FLOW 브리핑 INGEST
+
+"💰 Money Flow 브리핑 — 2026-08-29"
+
+- 출처: `BRIEFING_MONEY-FLOW_2026-08-29.md`
+- 편입일: 2026-08-31
+
+
+### 2026-08-31 — IO-PSYCH 브리핑 INGEST
+
+"I/O 심리학 브리핑 — 2026-08-31 — AI 의사결정의 준비도, 그리고 알고리즘 자기선호 편향"
+
+- 출처: `BRIEFING_IO-PSYCH_2026-08-31.md`
+- 편입일: 2026-08-31
 
 ### 2026-08-22 — MONEY-FLOW 브리핑 INGEST
 

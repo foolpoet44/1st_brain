@@ -140,3 +140,12 @@ HR Tech 신호를 HR 전략으로 **번역**할 때, 우리는 **원본의 맥�
 **브리핑 완료**.  
 이 지식은 `outputs/daily-briefing/BRIEFING_2026-07-29_HR-TECH-AGENTIC-TRUST.md` 로 저장되었습니다.  
 저녁 성찰 (Evening Reflect) 에서 이 신호들을 종합하여 **정체성 전환**의 통찰을 도출하세요.
+
+## Timeline
+
+### 2026-08-28 — HR-TECH 브리핑 INGEST
+
+"2026 HR Tech 브리핑: 에이전트 채용의 전환점 — 자동화에서 자율성으로"
+
+- 출처: `BRIEFING_HR-TECH_2026-08-28.md`
+- 편입일: 2026-08-31

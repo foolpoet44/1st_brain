@@ -1,7 +1,7 @@
 ---
 title: "[Signal] 2026-07-23: WADI 프레임워크 — 인간 중심성은 도덕이 아니라 경제다"
 created: 2026-07-23
-updated: 2026-08-22
+updated: 2026-08-31
 status: growing
 type: signal
 date: 2026-07-23
@@ -135,5 +135,12 @@ Challenge Theory는 HR 의사결정에 직접 적용된다. 조직의 기본값�
 
 
 
----
 
+### 2026-08-30 — IO-PSYCH 브리핑 INGEST
+
+"I/O 심리학 브리핑 — 2026-08-30 — AI 시대의 일과 의미, 그리고 인간 웰빙의 이질성"
+
+- 출처: `BRIEFING_IO-PSYCH_2026-08-30.md`
+- 편입일: 2026-08-31
+
+---

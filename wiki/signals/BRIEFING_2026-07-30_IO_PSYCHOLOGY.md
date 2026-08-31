@@ -206,6 +206,14 @@ _이 브리핑은 csp-brain Vault 의 지식 대사 프로토콜에 따라 생�
 
 ## Timeline
 
+
+### 2026-08-30 — HR-TECH 브리핑 INGEST
+
+Untitled
+
+- 출처: `BRIEFING_HR-TECH_2026-08-30.md`
+- 편입일: 2026-08-31
+
 ### 2026-08-14 — I/O 심리학 브리핑 INGEST (의사결정 피로 재확인)
 
 `outputs/briefings/BRIEFING_IO-PSYCH_2026-08-14.md` 를 편입했다. **신규 문서를 만들지 않고 이 문서에 병합한 이유**는, 브리핑의 핵심 통계 (의사결정 피로 10.5% 감소, 23 편 논문 리뷰, 10 가지 원인) 가 이 문서의 1 절 (Decision Fatigue) 에 이미 편입되어 있기 때문이다.

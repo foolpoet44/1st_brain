@@ -195,6 +195,14 @@ HR Tech 도 동일한 질문을 던진다: **"당신은 AI 의 지도 없이는 
 **후속 확인**: 60/20/20 포트폴리오 제안이 다음 분기 Morgan Stanley 보고서에서 재확인되면 Compiled Truth 갱신 검토.
 
 ## Timeline
+
+
+### 2026-08-30 — MONEY-FLOW 브리핑 INGEST
+
+Untitled
+
+- 출처: `BRIEFING_MONEY-FLOW_2026-08-30.md`
+- 편입일: 2026-08-31
 ### 2026-08-13 — MONEY-FLOW 브리핑 INGEST
 
 `outputs/briefings/BRIEFING_MONEY-FLOW_2026-08-12.md` 를 편입했다. **신규 문서를 만들지 않고 기존 문서에 병합한 이유**는, 브리핑의 핵심 통계와 통찰이 기존 문서와 중복되기 때문이다.

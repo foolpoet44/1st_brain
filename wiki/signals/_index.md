@@ -34,15 +34,18 @@ tags: [index, wiki]
 - [[2026-05-20-google-io-sign-of-agentic-shift|Google I/O 2026: 에이전틱 전환의 신호]]
 
 ### AI 시대의 인간 역량 & 의미 (I/O 심리학)
+- [[BRIEFING_2026-07-30_IO_PSYCHOLOGY]] — I/O 심리학 브리핑 (2026-07-30)
 
 - [[2026-07-23-wadi-human-centric-design|WADI 프레임워크: 인간 중심성은 도덕이 아니라 경제다]] — 의사결정 권한(W2)이 병목
 - [[2026-07-24-cognitive-offloading-skill-decay|인지적 오프로딩과 스킬 디케이]] — AI가 빼앗는 것은 지루함이 아니라 기쁨
-
 ### 채용 & 노동시장
+
 - [[2026-07-22-autonomous-hiring-paradox|자율 채용의 역설과 감시자의 그늘]] — 88% AI 스크리닝 vs 71% 반대
+- [[HR_TECH_BRIEFING_2026-07-29]] — HR Tech 브리핑 (2026-07-29)
+- [[BRIEFING_2026-08-01]] — HR Tech 브리핑 (2026-08-01)
+- [[HR_Tech_Briefing_2026-07-24]] — HR Tech 브리핑 (2026-07-24)
 
-
-- [[2026-06-13-agentic-ta-mainstream-shift|에이전틱 채용의 주류화]] — 인간-AI 파워 커플의 등장
+- [[2026-06-13-agentic-ta-mainstream-shift|에이전틱 채용의 주류화]]
 - [[2026-06-15-agentic-ta-reset|Agentic TA 리셋과 슈퍼제너럴리스트의 부상]]
 - [[2026-06-25-hr-performance-architect-pivot|HR의 역할 대전환: 성과 시스템의 설계자로]]
 - [[2026-06-27-autonomous-talent-agency-shift|자율적 인재 에이전시로의 이동]] — 에이전틱 협상과 완결적 대리
