@@ -361,3 +361,42 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 - **MERGE**: `BRIEFING_HR-TECH_2026-08-24.md` → `2026-07-22-autonomous-hiring-paradox.md` (5 개 통계 일치)
 - **MERGE**: `BRIEFING_MONEY-FLOW_2026-08-24.md` → `2026-08-10-capital-flow-market-neutral.md` (4 개 통계 일치)
 
+
+## 2026-08-31 — 일괄 MERGE 편입
+
+- **신규 (NEW)**: 0 건
+- **병합 (MERGE)**: 12 건
+- **중복 종결 (DUPLICATE)**: 0 건
+- **SKIP (SUMMARY 파일)**: 3 건
+
+### 병합 상세
+
+| 소스 파일 | 대상 문서 | 도메인 | 날짜 |
+|-----------|-----------|--------|------|
+| BRIEFING_IO-PSYCH_2026-08-30.md | 2026-07-23-wadi-human-centric-design.md | IO-PSYCH | 2026-08-30 |
+| BRIEFING_HR-TECH_2026-08-28.md | HR_TECH_BRIEFING_2026-07-29.md | HR-TECH | 2026-08-28 |
+| BRIEFING_IO-PSYCH_2026-08-31.md | 2026-05-30-harness-is-not-just-a-leash.md | IO-PSYCH | 2026-08-31 |
+| BRIEFING_MONEY-FLOW_2026-08-29.md | 2026-05-30-harness-is-not-just-a-leash.md | MONEY-FLOW | 2026-08-29 |
+| BRIEFING_HR-TECH_2026-08-27.md | BRIEFING_2026-08-01.md | HR-TECH | 2026-08-27 |
+| BRIEFING_HR-TECH_2026-08-30.md | BRIEFING_2026-07-30_IO_PSYCHOLOGY.md | HR-TECH | 2026-08-30 |
+| BRIEFING_IO-PSYCH_2026-08-28.md | 2026-05-30-harness-is-not-just-a-leash.md | IO-PSYCH | 2026-08-28 |
+| BRIEFING_IO-PSYCH_2026-08-29.md | 2026-05-30-harness-is-not-just-a-leash.md | IO-PSYCH | 2026-08-29 |
+| BRIEFING_HR-TECH_2026-08-31.md | HR_Tech_Briefing_2026-07-24.md | HR-TECH | 2026-08-31 |
+| BRIEFING_MONEY-FLOW_2026-08-25.md | 2026-05-30-harness-is-not-just-a-leash.md | MONEY-FLOW | 2026-08-25 |
+| BRIEFING_MONEY-FLOW_2026-08-31.md | 2026-05-30-harness-is-not-just-a-leash.md | MONEY-FLOW | 2026-08-31 |
+| BRIEFING_MONEY-FLOW_2026-08-30.md | 2026-08-10-capital-flow-market-neutral.md | MONEY-FLOW | 2026-08-30 |
+
+### 판정 근거
+
+- **통계적 매칭 임계값**: 2 개 이상 통계 일치 시 MERGE 후보
+- **실제 매칭**: 5~8 개 통계 일치 (강한 공명 신호)
+- **핵심 통찰**: "브리핑은 자기가 무엇과 중복되는지 모른다" — 중복 대조 없이 신규 노드 생성 금지
+
+### 특이사항
+
+- 12 건 전부가 MERGE 판정 (NEW 0 건)
+- 이는 지식 저장소가 이미 수렴 단계에 있음을 의미 (mature knowledge metabolism)
+- "절제는 성장이 아니다. 절제는 성장이 저항을 만날 때 발생하는 마찰열이다."
+
+---
+
