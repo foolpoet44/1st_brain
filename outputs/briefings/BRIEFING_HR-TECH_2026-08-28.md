@@ -5,6 +5,10 @@ domain: HR-TECH
 status: Active
 title: "2026 HR Tech 브리핑: 에이전트 채용의 전환점 — 자동화에서 자율성으로"
 tags: [agentic-recruitment, AI-superagents, HR-automation, skills-based-hiring, fractional-hiring]
+processed: true
+processed_date: 2026-08-31
+processed_note: INGEST 프로토콜에 따라 wiki/ 문서에 MERGE 편입됨
+
 ---
 
 # 🤖 2026 HR Tech 브리핑: 에이전트 채용의 전환점

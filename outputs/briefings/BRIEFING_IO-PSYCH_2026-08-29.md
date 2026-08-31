@@ -5,6 +5,10 @@ domain: IO-PSYCH
 status: Active
 title: "I/O 심리학 브리핑 — 심리적 안전성과 에이전트 조직의 행동 (2026-08-29)"
 tags: [psychological-safety, AI-adoption, agentic-AI, organizational-behavior, decision-fatigue]
+processed: true
+processed_date: 2026-08-31
+processed_note: INGEST 프로토콜에 따라 wiki/ 문서에 MERGE 편입됨
+
 ---
 
 # 🧠 I/O 심리학 브리핑 — 심리적 안전성과 에이전트 조직의 행동

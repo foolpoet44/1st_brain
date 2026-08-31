@@ -6,6 +6,10 @@ status: Active
 title: "I/O 심리학 브리핑 — 2026-08-30 — AI 시대의 일과 의미, 그리고 인간 웰빙의 이질성"
 tags: [io-psychology, ai-automation, worker-wellbeing, decision-fatigue, behavioral-economics, CHI2026, arXiv]
 processed: false
+processed: true
+processed_date: 2026-08-31
+processed_note: INGEST 프로토콜에 따라 wiki/ 문서에 MERGE 편입됨
+
 ---
 
 # 🧠 I/O 심리학 브리핑 — 2026-08-30

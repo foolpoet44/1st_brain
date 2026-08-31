@@ -4,6 +4,10 @@ date: 2026-08-30
 domain: MONEY-FLOW
 status: Active
 tags: [weekend-rest, capital-flow, institutional-allocation, trust-ladder]
+processed: true
+processed_date: 2026-08-31
+processed_note: INGEST 프로토콜에 따라 wiki/ 문서에 MERGE 편입됨
+
 ---
 
 # 🌊 2026-08-30 周末 성찰: 자본시장의 '의도적 정지'와 HR 의 성찰

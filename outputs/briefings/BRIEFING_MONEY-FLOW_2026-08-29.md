@@ -10,6 +10,10 @@ tags:
   - asset-allocation
   - interest-rate
   - exchange-rate
+processed: true
+processed_date: 2026-08-31
+processed_note: INGEST 프로토콜에 따라 wiki/ 문서에 MERGE 편입됨
+
 ---
 
 # 💰 Money Flow 브리핑 — 2026-08-29
