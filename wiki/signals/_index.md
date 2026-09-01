@@ -65,6 +65,7 @@ tags: [index, wiki]
 - [[transportation-ai-pivot|AI 인프라의 실핏줄, 물류 섹터의 브레이크아웃]]
 
 ### 자본 흐름 & 시장 심리학 (Money Flow)
+- [[2026-08-10-capital-flow-market-neutral]]
 
 - [[2026-08-10-capital-flow-market-neutral|자본의 심리학 — 분산의 복귀와 시장 중립의 시대]] — 29% EMN, 60/40 종말, 11.2% CAGR
 
