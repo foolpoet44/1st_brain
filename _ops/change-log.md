@@ -97,6 +97,27 @@
 ---
 
 
+[2026-09-01 INGEST] MONEY-FLOW 브리핑 편입 — 자본 중립성의 HR 번역
+
+**무엇이 바뀌었나**
+- `outputs/briefings/BRIEFING_MONEY-FLOW_2026-09-01.md` 를 `wiki/signals/2026-08-10-capital-flow-market-neutral.md` 의 Timeline 에 병합
+- 신규 노드 0 개, MERGE 1 건, Human Gate 4 종 추출
+
+**왜 중요한가**
+- "브리핑은 자기가 무엇과 중복되는지 모른다" 원칙 검증 — 10 개 통계 일치로 MERGE 판정
+- 자본시장의 "방향성 베팅 → 중립성 추출" 전환을 HR 실행 언어로 번역 (인사 예산 60/20/20 설계)
+
+**영향 범위**
+- [[Economic Freedom]] — 자본의 자유를 "생존의 자유"로 재해석
+- [[bp-signal-intelligence]] — Human Gate 4 종 추가 (단일 자산 30% 금지, 금리 민감도 공개, 환율 임계치 감시, 인플레이션 헤지 예산)
+
+**다음 확인**
+1. HR Trust Ladder 단계 진단 도구 개발 (P1)
+2. 인사 예산 60/20/20 설계 파일럿 (전통 60%, 헤지 20%, 실험 20%)
+3. `KNOWLEDGE_PULSE.md` "Recent Synapses" 에 오늘 브리핑 반영 확인 (위키 문서 링크 20% 이상)
+4. 사람 판단 필요 항목: 없음 (모든 Human Gate 가 검증 가능한 규칙으로 명세화됨)
+
+
 ### 2026-08-31 — INGEST 프로토콜 일괄 MERGE 편입
 
 - **무엇이 바뀌었나**: 12 개의 일일 브리핑 파일이 wiki/ 신호 문서에 병합 편입됨 (MERGE 12 건, NEW 0 건)
