@@ -1,5 +1,6 @@
 # csp-brain Type 자동 분류 로그
 
+type: Note
 ## 실행 정보
 - **실행 날짜**: 2026-08-31 13:02
 - **스크립트**: `scripts/auto-classify-types.sh`
