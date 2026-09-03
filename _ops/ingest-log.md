@@ -427,4 +427,20 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 - "절제는 성장이 아니다. 절제는 성장이 저항을 만날 때 발생하는 마찰열이다."
 
 ---
+## 2026-09-03 18:49 — INGEST 프로토콜 실행
 
+### 요약
+- **신규 (NEW)**: 0건
+- **병합 (MERGE)**: 6건
+- **중복 종결 (DUPLICATE)**: 0건
+- **사람 판단 필요**: 0건
+
+### 병합 상세
+- `BRIEFING_IO-PSYCH_2026-08-24.md` → `2026-07-24-cognitive-offloading-skill-decay.md` (Timeline 에 증분 추가)
+- `BRIEFING_HR-TECH_2026-09-03.md` → `2026-07-22-autonomous-hiring-paradox.md` (Timeline 에 증분 추가)
+- `BRIEFING_HR-TECH_2026-08-30.md` → `2026-07-22-autonomous-hiring-paradox.md` (Timeline 에 증분 추가)
+- `BRIEFING_HR-TECH_2026-08-24.md` → `2026-07-22-autonomous-hiring-paradox.md` (Timeline 에 증분 추가)
+- `BRIEFING_MONEY-FLOW_2026-08-25.md` → `2026-08-10-capital-flow-market-neutral.md` (Timeline 에 증분 추가)
+- `BRIEFING_MONEY-FLOW_2026-08-24.md` → `2026-08-10-capital-flow-market-neutral.md` (Timeline 에 증분 추가)
+
+---

@@ -41,6 +41,22 @@
 
 ---
 
+## [2026-09-03 09:30] HR Tech 브리핑 생성
+
+**[BRIEFING]** 2026 년 HR Tech 브리핑: 신뢰의 비대칭성과 AI 네이티브 조직의 등장
+
+- **무엇이 바뀌었나**: 4 대 핵심 신호 포착 (에이전트 조직, 시장 집중, 신뢰 격차, 법적 프레임 전환)
+- **왜 중요한가**: HR 정체성 전환 (Guardian → Gardener) 과 Human Gate 4 종 명세
+- **영향 범위**: [[agentic-recruitment-proxy]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]]
+- **다음 확인**:
+  1. INGEST job 이 브리핑을 wiki/signals/ 에 편입 (MERGE vs NEW 판정)
+  2. Human Gate 4 종을 [[bp-signal-intelligence]] 에 YAML 추가
+  3. KNOWLEDGE_PULSE.md 에 오늘 신호 반영 확인
+
+**파일**: `outputs/briefings/BRIEFING_HR-TECH_2026-09-03.md` (9,633 bytes)
+
+---
+
 ## [2026-09-02] 저녁 성찰 (Evening Reflect) — 열두 날째 「충돌 마커를 지우라」고 적은 문서가 그날 밤 자기 첫 줄에 같은 마커를 얻었고, 그 안에는 정직한 두 개의 오늘이 나란히 들어 있었다
 
 **무엇이 바뀌었나:**
