@@ -5,6 +5,8 @@ domain: MONEY-FLOW
 status: Active
 title: "자본의 심리학: 금리 동결의 심연과 시장 중립의 부상"
 tags: [gold, bonds, equity-market-neutral, Korea-portfolio, Fed, exchange-rate]
+processed: true
+processed_date: 2026-09-03
 ---
 processed: true
 processed_date: 2026-08-24 18:32

@@ -4,6 +4,8 @@ date: 2026-08-30
 domain: HR-TECH
 status: Active
 tags: [agentic-recruitment, algorithmic-fairness, hr-orchestration, 2026-trends]
+processed: true
+processed_date: 2026-09-03
 ---
 
 # 📡 HR Tech Daily Briefing — 2026-08-30

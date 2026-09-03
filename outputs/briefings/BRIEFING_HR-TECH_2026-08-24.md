@@ -5,6 +5,8 @@ domain: HR-TECH
 status: Active
 title: "HR Tech 브리핑 — 2026-08-24 — AI 수퍼에이전트의 tipping point, 그리고 인간 HR 의 정체성 전환"
 tags: [agentic-recruitment, ai-bias, hr-tech-2026, algorithmic-monoculture]
+processed: true
+processed_date: 2026-09-03
 ---
 processed: true
 processed_date: 2026-08-24 18:32

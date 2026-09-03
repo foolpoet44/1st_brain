@@ -5,6 +5,8 @@ domain: IO-PSYCH
 status: Active
 title: "I/O 심리학 브리핑 2026-08-24 — AI 노출 작업의 역설과 하이브리드 채용의 공정성"
 tags: [io-psychology, ai-automation, algorithmic-fairness, decision-fatigue, meaningful-work]
+processed: true
+processed_date: 2026-09-03
 ---
 processed: true
 processed_date: 2026-08-24 18:32

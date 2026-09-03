@@ -1,5 +1,6 @@
 # csp-brain Type 자동 분류 결과 보고서
 
+type: Meeting
 **실행 일시**: 2026-09-02 13:01  
 **스크립트**: `scripts/auto-classify-types.sh`  
 **배치 제한**: 50 개 문서

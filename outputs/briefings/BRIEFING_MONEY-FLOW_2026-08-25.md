@@ -10,6 +10,8 @@ tags:
   - 자산배분
   - 헤지펀드
   - 기관투자
+processed: true
+processed_date: 2026-09-03
 ---
 
 # 자본의 심리, 방향성을 잃다
