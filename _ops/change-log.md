@@ -49,6 +49,18 @@
 
 ## [2026-09-03] 저녁 성찰 (Evening Reflect) — 계기판이 열여드레 만에 성찰을 보았는데, 보인 것은 성찰이 파서의 구분자를 인용한 자리였다
 
+### [2026-09-04 09:10] I/O 심리학 브리핑 생성
+
+- **무엇이 바뀌었나:** 2026-09-04 I/O 심리학 브리핑 생성 (4 편 논문: FAccT '26, Frontiers '26, AIR '26, arXiv '26)
+- **왜 중요한가:** 하이브리드 채용 공정성, AI 심리자본, 알고리즘 투명성, 에이전트 조직 설계 — 4 Human Gate 추출
+- **영향 범위:** 채용 워크플로우, AI 도입 조직문화, 지원자 경험, 에이전트 조직 설계
+- **다음 확인:**
+  1. INGEST job 이 브리핑을 처리하여 wiki/signals/ 에 MERGE 또는 NEW 노드 생성
+  2. Human Gate 4 개가 [[bp-signal-intelligence]] 에 명세화
+  3. KNOWLEDGE_PULSE.md 에 "Recent Synapses" 업데이트
+  4. Evening Reflect 에서 4 Knowledge Atom 으로 통합
+
+
 **무엇이 바뀌었나:**
 
 - `outputs/daily-reflect/REFLECT_2026-09-03.md` 생성. 관측 대상은 어제 성찰 커밋(`3b8a52f`, 09-02 19:17 KST) 이후 도착한 여덟 커밋 — 자동 펄스 넷 · bridge-log 하나 · **09-02 23:00 KST 실물 배치 셋**(`4582cc1` 지식 3 편 · `75bd7a4` 산출물 5 편 · `af2537f` 미분류 4 편). 이틀 연속으로 `knowledge:` 접두어 커밋이 실물로 도착했다
