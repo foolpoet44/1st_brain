@@ -2438,3 +2438,29 @@ status: Active
 3. **지식 펄스 업데이트** — `KNOWLEDGE_PULSE.md` 의 "Recent Synapses" 에 오늘 4 Knowledge Atom 반영 (소요 10 분)
 4. **대시보드 연동** — http://localhost:8080 의 "지식 대사율" 지표가 오늘 브리핑 반영 후 갱신되는지 확인 (소요 5 분)
 
+
+---
+## [INGEST] 2026-09-05 09:30 — I/O 심리학 브리핑 INGEST 완료
+
+**무엇이 바뀌었나:**
+- `BRIEFING_IO-PSYCH_2026-09-05.md` 를 `wiki/signals/2026-07-22-autonomous-hiring-paradox.md` 의 Timeline 에 병합
+- 4 편 논문 (Joy Paradox, Algorithmic Monoculture, Hybrid Fairness, Decision Fatigue) 모두 기존 문서와 중복 → MERGE 판정
+- Human Gate 4 종의 구체적 명세 (시간·임계치·검증 주기) 추가
+
+**왜 중요한가:**
+- MERGE 1 건이지만, 4 편 논문 모두를 포괄하는 강한 공명 (6 개 통계 매칭)
+- "브리핑은 자기가 무엇과 중복되는지 모른다" — INGEST 프로토콜이 정상 작동 (중복 대조 → MERGE, Blind Follow 금지)
+- "절제는 성장이 아니다. 절제는 성장이 저항을 만날 때 발생하는 마찰열이다."
+
+**영향 범위:**
+- `wiki/signals/2026-07-22-autonomous-hiring-paradox.md` — Timeline 에 2026-09-05 증분 추가
+- `outputs/briefings/BRIEFING_IO-PSYCH_2026-09-05.md` — `processed: true` 마킹 완료
+- `_ops/ingest-log.md` — 2026-09-05 INGEST 기록 추가
+
+**다음 확인:**
+1. **Human Gate YAML 명세** — 4 종 Human Gate 를 [[bp-signal-intelligence]] frontmatter 에 추가 (소요 30 분)
+2. **KNOWLEDGE_PULSE.md 업데이트** — "Recent Synapses" 에 오늘 4 Knowledge Atom 반영 (소요 10 분)
+3. **Trust Vector 보고서** — 분기별 "누가 누구를 신뢰하는가" 보고서 초안 작성 (소요 60 분)
+4. **측정 단위 감사** — "0 에는 두 가지 의미가 있다: '변화 없음'과 '이 도구는 이 변화를 볼 수 없음'" — dashboard 가 MERGE 연산을 보는가? (소요 15 분)
+
+---

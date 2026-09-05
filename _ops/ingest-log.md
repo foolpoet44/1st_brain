@@ -444,3 +444,30 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 - `BRIEFING_MONEY-FLOW_2026-08-24.md` → `2026-08-10-capital-flow-market-neutral.md` (Timeline 에 증분 추가)
 
 ---
+## 2026-09-05 09:30 — INGEST 프로토콜 실행
+
+### 요약
+- **신규 (NEW)**: 0 건
+- **병합 (MERGE)**: 1 건
+- **중복 종결 (DUPLICATE)**: 0 건
+- **사람 판단 필요**: 0 건
+
+### 병합 상세
+- `BRIEFING_IO-PSYCH_2026-09-05.md` → `2026-07-22-autonomous-hiring-paradox.md` (Timeline 에 증분 추가)
+
+### 판정 근거
+- **통계적 매칭 임계값**: 2 개 이상 통계 일치 시 MERGE 후보
+- **실제 매칭**: 6 개 통계 일치 (26% Black adverse impact, 0.854 CDP, 0.876 Post-AI Oversight, arXiv:2603.14963, Frontiers in Cognition, 10 가지 원인)
+- **핵심 통찰**: "브리핑은 자기가 무엇과 중복되는지 모른다" — 중복 대조 없이 신규 노드 생성 금지
+- **공명 신호**: 오늘의 4 편 논문 모두 기존 문서에 이미 편입된 주제들 (Joy Paradox, Algorithmic Monoculture, Hybrid Fairness, Decision Fatigue)
+
+### 새로 더한 것
+1. 최신 논문 업데이트 (2026-09-05 현재)
+2. Human Gate 4 종의 구체적 명세 (오후 2 시 이후 거부 금지 등)
+3. Trust Vector 분석 (신뢰의 방향성: 누구를 향한 신뢰인가)
+
+### 특이사항
+- MERGE 1 건이지만, 4 편 논문 모두를 포괄하는 강한 공명
+- "절제는 성장이 아니다. 절제는 성장이 저항을 만날 때 발생하는 마찰열이다."
+
+---
