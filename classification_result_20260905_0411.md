@@ -1,5 +1,6 @@
 # csp-brain Type 자동 분류 결과 보고서
 
+type: Meeting
 ## 실행 정보
 - **실행 일시**: 2026-09-05 04:11
 - **Vault 경로**: `/Users/dkmac/csp-brain`
