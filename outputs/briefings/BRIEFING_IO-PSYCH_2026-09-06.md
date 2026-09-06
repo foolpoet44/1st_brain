@@ -3,6 +3,9 @@ type: briefing
 date: 2026-09-06
 domain: IO-PSYCH
 status: Active
+processed: true
+processed_date: 2026-09-06
+processed_note: MERGE → 2026-07-22-autonomous-hiring-paradox.md
 title: "I/O 심리학 브리핑 — 알고리즘 불안과 일의 의미 (2026-09-06)"
 tags: [algorithmic-anxiety, meaningful-work, psychological-capital, job-crafting, AI-workplace]
 processed: false

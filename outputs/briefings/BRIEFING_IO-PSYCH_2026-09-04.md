@@ -3,6 +3,9 @@ type: briefing
 date: 2026-09-04
 domain: IO-PSYCH
 status: Active
+processed: true
+processed_date: 2026-09-06
+processed_note: MERGE → 2026-07-22-autonomous-hiring-paradox.md
 title: "I/O 심리학 브리핑 2026-09-04 — 하이브리드 채용의 역설과 AI 네이티브 조직"
 tags: [io-psychology, algorithmic-fairness, agentic-ai, psychological-capital, human-gate]
 processed: false

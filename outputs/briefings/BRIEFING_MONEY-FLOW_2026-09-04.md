@@ -3,6 +3,9 @@ type: briefing
 date: 2026-09-04
 domain: MONEY-FLOW
 status: Active
+processed: true
+processed_date: 2026-09-06
+processed_note: MERGE → 2026-08-10-capital-flow-market-neutral.md (연준 9-3 이견, 환율 1,355 원, EMN 29%)
 title: "2026 년 9 월 제 1 주 돈의 이동 브리핑 — 분열된 연준, 중립을 향한 자본의 도피"
 tags:
   - 금리정책
