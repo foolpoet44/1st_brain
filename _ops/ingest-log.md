@@ -1,4 +1,44 @@
 
+
+## 2026-09-06 — INGEST 수행 (아침 브리핑 3 건)
+
+- **신규 (NEW):** 0 개
+- **병합 (MERGE):** 3 개
+- **중복 종결 (DUPLICATE):** 0 개
+- **사람 판단 필요:** 0 건
+
+### 병합 상세
+
+1. **BRIEFING_MONEY-FLOW_2026-09-04.md** → `2026-08-10-capital-flow-market-neutral.md`
+   - 핵심 통계: 연준 9 대 3 이견, 환율 1,355 원 (+5.17%), 29% EMN, 5.17% 환율 변동, 3.5% 기준금리
+   - 판정: 29% EMN, 26% 편향, 20% 대안자산은 기존 문서와 중복. **연준 9-3 이견과 환율 1,355 원**은 새 신호 → MERGE
+   - Human Gate 3 종 추출 (금리 시나리오 공개, 환율 임계치 감시, 중립 전략 HR 예산)
+
+2. **BRIEFING_IO-PSYCH_2026-09-04.md** → `2026-07-22-autonomous-hiring-paradox.md`
+   - 핵심 통계: 395.26% 효율성, 27 개월, 1,348,916 명, CDP 0.854, N=449, 33.2% 제조, 25.4% IT, 18.0% 교육
+   - 판정: 30%, 27, 24 는 기존 신뢰 사다리 통계와 중복. **395% 효율성과 449 명 PsyCap 연구**는 새 신호 → MERGE
+   - Human Gate 4 종 추출 (하이브리드 채용 심의회, 심리자본 모니터링, 알고리즘 투명성, 에이전트 조직 설계)
+
+3. **BRIEFING_IO-PSYCH_2026-09-06.md** → `2026-07-22-autonomous-hiring-paradox.md`
+   - 핵심 통계: bullshitness α=0.877, 0.39 점 증가, 202 명, 171 개 task, 52.2% vs 51.1%, 67% Fear-Sadness, 353 명
+   - 판정: 67%, 26%, 30% 는 기존 신뢰 사다리 통계와 중복. **bullshitness 0.39 점과 52.2%/51.1% 맥락적 풍자**는 새 신호 → MERGE
+   - Human Gate 4 종 추출 (일의 의미 감사, 신뢰 벡터 공개, 알고리즘 맞춤 검증, 오후 2 시 이후 거부 금지)
+
+### 판정 근거
+
+- 통계 매칭 기준: 2 개 이상 일치 시 MERGE
+- MONEY-FLOW: 29% EMN, 26%, 20% 는 기존 문서에 존재. 연준 9-3 이견과 환율 1,355 원은 새 신호
+- IO-PSYCH 09-04: 30%, 27, 24 는 기존 문서에 존재. 395% 효율성과 449 명 PsyCap 연구는 새 신호
+- IO-PSYCH 09-06: 67%, 26%, 30% 는 기존 문서에 존재. bullshitness 와 맥락적 풍자는 새 신호
+- **핵심 원칙**: "브리핑은 자기가 무엇과 중복되는지 모른다" — 브리핑이 제안한 신규 노드를 생성하지 않고, 기존 문서의 Timeline 에 병합
+- **Resonance 패턴**: 0 NEW + 3 MERGE + 11 Human Gates = resonance (공명), not avoidance. "절제는 성장이 저항을 만날 때 발생하는 마찰열이다."
+
+### 후속 조치
+
+- `_ops/change-log.md` 에 [INGEST] 항목 추가 (4 절 질문 형식)
+- `wiki/signals/_index.md` 에 병합된 문서들의 wikilink 확인 (이미 존재함)
+- `KNOWLEDGE_PULSE.md` 에 오늘 INGEST 결과 반영 (저녁 Reflect job 이 수행)
+
 ## 2026-09-02 — INGEST 실행
 
 - **수집**: 1 개 파일 (BRIEFING_MONEY-FLOW_2026-09-02.md)
