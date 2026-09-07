@@ -2562,3 +2562,26 @@ status: Active
 4. [ ] `_ops/ingest-log.md` 에 INGEST 결과 기록
 
 ---
+
+## [2026-09-08] I/O 심리학 브리핑 생성
+
+### 무엇이 바뀌었나
+- `outputs/briefings/BRIEFING_IO-PSYCH_2026-09-08.md` 생성 (15,173 바이트)
+- 4 개 지식 원자: (1) Dynamic Employee Agents, (2) Recruiting Agents, (3) Psychometric Validity, (4) Prompt Framing
+- 4 개 Human Gate 명세 (YAML schema 포함)
+
+### 왜 중요한가
+- AI 에이전트 시대에 인간 HR 의 정체성 전환 (감시자 → 정원사 → 번역자) 요구
+- "브리핑은 자기가 무엇과 중복되는지 모른다" — INGEST job 이 중복 판정 수행
+- Kant 의 Public Reason 프레임워크: AI 한계를 조직 언어로 번역하는 공정
+
+### 영향 범위
+- `wiki/signals/` — 4 개 논문 MERGE 판정 예상 (기존 I/O 심리학 신호 심화)
+- `[[bp-signal-intelligence]]` — 4 개 Human Gate YAML 추가 필요
+- `KNOWLEDGE_PULSE.md` — Recent Synapses 섹션 업데이트 필요
+
+### 다음 확인
+1. INGEST job 이 MERGE 판정 후 Timeline 에 정상 편입하는가?
+2. Human Gate 4 종이 `[[bp-signal-intelligence]]` frontmatter 에 YAML 로 추가되는가?
+3. KNOWLEDGE_PULSE.md 에 자기언급 인플레이션 경고 (wiki 링크 20% 미만) 가 없는가?
+4. 대시보드 (http://localhost:8080) 에 오늘 브리핑이 반영되는가?
