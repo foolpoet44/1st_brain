@@ -2539,3 +2539,26 @@ status: Active
 4. **측정 단위 감사** — "0 에는 두 가지 의미가 있다: '변화 없음'과 '이 도구는 이 변화를 볼 수 없음'" — dashboard 가 MERGE 연산을 보는가? (소요 15 분)
 
 ---
+
+## [2026-09-07] MONEY-FLOW 브리핑 생성
+
+### 무엇을 더했는가
+- `outputs/briefings/BRIEFING_MONEY-FLOW_2026-09-07.md` — 자본 흐름 브리핑 (60/40 붕괴, Market Neutral, 환율 심리)
+
+### 왜 중요한가
+- 자본시장의 3 층 신뢰 사다리 (Blind Faith → Distrust → Collaboration) 를 HR 정체성 전환 (Guardian → Gardener → Translator) 으로 번역
+- 금 20% 배분 → "금속성 인재" 20% 배정 아날로지
+- 연준 9-3 분열 → HR 예산 심의 이견 공개 의무화
+
+### 영향 범위
+- **Domain**: MONEY-FLOW (자본 흐름 & 시장 심리학)
+- **Human Gates**: 4 개 (자산배분/금리시나리오/Market Neutral/환율임계치)
+- **Signal Nodes 제안**: 4 개 ([[capital-market-trust-ladder]], [[market-neutral-talent-design]], [[exchange-rate-psychology-hr]], [[gold-allocation-hr-analogy]])
+
+### 다음 확인 (INGEST Job 에게)
+1. [ ] 기존 `wiki/signals/` 와 통계적 중복 검사 (2+ match threshold)
+2. [ ] NEW/MERGE/DUPLICATE 판정 — 브리핑 제안 blind follow 금지
+3. [ ] Human Gate 4 개를 [[bp-signal-intelligence]] 에 YAML 명세화
+4. [ ] `_ops/ingest-log.md` 에 INGEST 결과 기록
+
+---

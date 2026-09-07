@@ -127,6 +127,8 @@ AI 편향을 검열하려 하지 말고, 맥락에 맞게 번역하라. HR 은 �
 **Dashboard:** http://localhost:8080
 
 ## Recent Synapses
+- **2026-09-07** [[MONEY-FLOW Briefing]] — 60/40 붕괴와 Market Neutral 탄생 (자본시장 신뢰 사다리 ↔ HR 정체성 전환)
+
 ### 2026-08-20 — I/O 심리학 브리핑
 
 - **주제**: 알고리즘적 단일문화와 의사결정 피로
