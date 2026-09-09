@@ -1,3 +1,26 @@
+## 2026-09-09
+
+- **신규:** 0개
+- **병합:** 5개
+- **중복 종결:** 0개
+- **Human Gate 추출:** 15개
+
+**병합 대상:**
+- `2026-07-22-autonomous-hiring-paradox.md`: BRIEFING_HR-TECH_2026-09-07.md, BRIEFING_HR-TECH_2026-09-08.md, BRIEFING_MONEY-FLOW_2026-09-07.md, BRIEFING_IO-PSYCH_2026-09-08.md
+- `2026-08-10-capital-flow-market-neutral.md`: BRIEFING_MONEY-FLOW_2026-09-08.md
+
+**추출된 Human Gate:**
+- Human Gate #1: 에이전트 조직 설계 심의회
+- Human Gate #2: 벤더 다양성 영향 평가 (Bias Audit Committee)
+- Human Gate #1: 금리 시나리오 공개 의무화 (24 시간 CFO+CHRO joint sign-off)
+- Human Gate #2: 환율 임계치 초과 시 해외 채용 자동 중단 금지
+- Human Gate #1: 에이전트 조직 설계 심의회
+- Human Gate #2: 벤더 다양성 영향 평가 (DEI 감사)
+- Human Gate #1: 에이전트 시뮬레이션 감사위원회** — 분기별로 시뮬레이션 결과와 실제 직원 반응 비교 검증 (오차 20% 초과 시 사용 중지)
+- Human Gate #2: 증거检索 감사** — AI 가 제시한 증거의 신선도 (7 일 이내), 출처 검증 (회사 도메인/정부 사이트), 권한 테스트 (무단 아웃리치 금지)
+
+---
+
 
 
 ## 2026-09-06 — INGEST 수행 (아침 브리핑 3 건)
