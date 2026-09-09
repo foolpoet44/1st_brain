@@ -1,0 +1,74 @@
+name: Daily Ingest (수문)
+
+# 수문 — 볼트 밖 수원(Drive 설계명세서, 이후 Notion 대화 아카이브)을 inbox 로 들여온다.
+# Hermes 대시보드 갱신(09:00 KST)보다 앞선 07:00 KST 에 돌아 inbox 를 먼저 채운다.
+# 그 다음 기존 Hermes 신진대사가 inbox → wiki 편입을 처리한다.
+# 로컬 Mac/Windows 에 의존하지 않는 Cloud Agent 전용 경로.
+#
+# 활성화 전제(모두 CSP 가 GitHub 에서 설정):
+#   - 이 워크플로가 main 에 머지돼야 schedule/dispatch 목록에 뜬다.
+#   - Secrets: GDRIVE_SA_JSON(서비스계정 JSON 전문), GDRIVE_FOLDER_ID(대상 폴더 ID).
+#     대상 Drive 폴더는 서비스계정 이메일에 '뷰어'로 공유돼 있어야 한다.
+#   - Secret 미설정 시 스텝은 조용히 스킵한다(실패하지 않음).
+
+on:
+  schedule:
+    - cron: "0 22 * * *" # 07:00 KST (Hermes 대시보드 09:00 KST 보다 앞)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: false # Hermes 관례: 깨진 gitlink 가 실행을 깨뜨리지 못하게
+          fetch-depth: 0 # push 전 rebase 에 히스토리 필요
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install rclone
+        run: sudo apt-get update && sudo apt-get install -y rclone
+
+      # 수문 A — Drive. SA JSON 을 파일로 떨구고 rclone 을 순수 env 로 구성.
+      - name: Pull from Google Drive
+        env:
+          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
+          RCLONE_CONFIG_GDRIVE_TYPE: drive
+          RCLONE_CONFIG_GDRIVE_SCOPE: drive.readonly
+          RCLONE_CONFIG_GDRIVE_SERVICE_ACCOUNT_FILE: ${{ github.workspace }}/sa.json
+          RCLONE_CONFIG_GDRIVE_ROOT_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
+        run: |
+          if [ -z "$GDRIVE_SA_JSON" ] || [ -z "$RCLONE_CONFIG_GDRIVE_ROOT_FOLDER_ID" ]; then
+            echo "GDRIVE secret 미설정 — Drive 수문 스킵"
+            exit 0
+          fi
+          printf '%s' "$GDRIVE_SA_JSON" > "$RCLONE_CONFIG_GDRIVE_SERVICE_ACCOUNT_FILE"
+          python3 _ops/scripts/drive_pull.py
+          rm -f "$RCLONE_CONFIG_GDRIVE_SERVICE_ACCOUNT_FILE"
+
+      # 수문 B(Notion)는 S3 에서 이 아래에 스텝으로 추가된다.
+
+      - name: Commit inbox changes
+        run: |
+          git config user.name "Hermes Ingress"
+          git config user.email "hermes-ingress@agentic.engineering"
+          git add inbox/papers _ops/drive-manifest.json _ops/drive-pull-log.md
+          if git diff --cached --quiet; then
+            echo "유입 없음 — 커밋 스킵"
+            exit 0
+          fi
+          git commit -m "archive: 수문 A — Drive 설계명세서 유입 [Automated]"
+          git pull --rebase origin main || true
+          git push origin main
