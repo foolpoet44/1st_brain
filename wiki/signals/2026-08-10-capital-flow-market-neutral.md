@@ -196,6 +196,14 @@ HR Tech 도 동일한 질문을 던진다: **"당신은 AI 의 지도 없이는 
 
 ## Timeline
 
+
+### 2026-09-09 — MONEY-FLOW 브리핑 INGEST
+
+**Human Gates:**
+- Human Gate #1: 금리 시나리오 공개 의무화 (24 시간 CFO+CHRO joint sign-off)
+- Human Gate #2: 환율 임계치 초과 시 해외 채용 자동 중단 금지
+- Human Gate #3: 분기별 HR 예산 감시위원회 (헤지펀드 allocation 신호 기반)
+
 ### 2026-09-01 — MONEY-FLOW 브리핑 INGEST
 
 `outputs/briefings/BRIEFING_MONEY-FLOW_2026-09-01.md` 를 편입했다. **MERGE 판정 이유**는 핵심 통계 (29% EMN, $5.22 조, 60/20/20 포트폴리오) 가 기존 문서와 중복되기 때문이다.

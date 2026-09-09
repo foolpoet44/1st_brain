@@ -495,6 +495,38 @@ AI 에이전트는 더 이상 "인간 채용담당자를 보조하는 도구"가
 - 14:00 이후 AI 거부 시 16:00 까지 인간 bias 검증 수행 여부
 
 
+## Timeline
+
+
+### 2026-09-09 — IO-PSYCH 브리핑 INGEST
+
+**Human Gates:**
+- Human Gate #1: 에이전트 시뮬레이션 감사위원회** — 분기별로 시뮬레이션 결과와 실제 직원 반응 비교 검증 (오차 20% 초과 시 사용 중지)
+- Human Gate #2: 증거检索 감사** — AI 가 제시한 증거의 신선도 (7 일 이내), 출처 검증 (회사 도메인/정부 사이트), 권한 테스트 (무단 아웃리치 금지)
+- Human Gate #3: 심리측정 타당성 검증** — LLM 생성 응답 사용 전 반드시 (1) Cronbach's α 인간 데이터와 비교, (2) HTMT < 0.85 검증, (3) Gaussian Copula baseline 보다 우월한지 확인
+- Human Gate #4: 프롬프트 품질 감사** — 분기별로 AI 사용 로그에서 강압적 프롬프트 비율 확인 (10% 초과 시 교육 의무화)
+
+
+### 2026-09-09 — MONEY-FLOW 브리핑 INGEST
+
+
+### 2026-09-09 — HR-TECH 브리핑 INGEST
+
+**Human Gates:**
+- Human Gate #1: 에이전트 조직 설계 심의회
+- Human Gate #2: 벤더 다양성 영향 평가 (DEI 감사)
+- Human Gate #3: Entry-level 역할 소멸 모니터링
+- Human Gate #4: AI 스코어링 투명성 공개
+
+### 2026-09-09 — HR-TECH 브리핑 INGEST
+
+**Human Gates:**
+- Human Gate #1: 에이전트 조직 설계 심의회
+- Human Gate #2: 벤더 다양성 영향 평가 (Bias Audit Committee)
+- Human Gate #3: AI 추천 목록 검증 의무 (24h Golden Time)
+- Human Gate #4: 오후 2 시 이후 최종 거부 금지
+
+
 ---
 
 **생성일**: 2026-07-22 08:00 KST  
