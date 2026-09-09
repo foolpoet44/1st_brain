@@ -1,4 +1,7 @@
 ---
+processed: true
+processed_date: 2026-09-09
+processed_note: MERGE → 2026-08-10-capital-flow-market-neutral.md
 type: briefing
 date: 2026-09-08
 domain: MONEY-FLOW

@@ -1,4 +1,7 @@
 ---
+processed: true
+processed_date: 2026-09-09
+processed_note: MERGE → 2026-07-22-autonomous-hiring-paradox.md
 type: briefing
 domain: MONEY-FLOW
 date: 2026-09-07
