@@ -2695,3 +2695,33 @@ status: Active
 2. Human Gate 4 종이 `[[bp-signal-intelligence]]` frontmatter 에 YAML 로 추가되는가?
 3. KNOWLEDGE_PULSE.md 에 자기언급 인플레이션 경고 (wiki 링크 20% 미만) 가 없는가?
 4. 대시보드 (http://localhost:8080) 에 오늘 브리핑이 반영되는가?
+
+## [2026-09-10] I/O 심리학 브리핑 — AI 피로도, 알고리즘적 신뢰, 인간 자율성
+
+**무엇이 바뀌었나:**
+
+- `outputs/briefings/BRIEFING_IO-PSYCH_2026-09-10.md` 생성 — 4 편 논문 (HBR Brain Fry, Frontiers TRUST-AI, Annals of Neurosciences AI Anxiety, Stanford HAI Algorithmic Monoculture)
+- **핵심 신호**: (1) AI 에이전트 감시는 인지적 부하를 줄이지 않는다 (r = 0.905 정신적 소진), (2) 알고리즘적 신뢰는 벡터다 (누가 누구를 신뢰하는가), (3) 의사결정 근육은 AI 의존 시 위축된다 (r = -0.360 자신감), (4) 벤더 단일문화는 Black 26%·Asian 15% 시스템적 거부 생성
+- **Human Gate 4 개 추출**: (1) 에이전트 오케스트레이션 감시 금지, (2) 알고리즘적 해석 투명성 의무화 (24h), (3) 오후 2 시 이후 AI 기반 최종 거부 금지, (4) 벤더 다양성 영향 평가 (분기별, 30% 임계치)
+- **INGEST 판정 제안**: 4 개 논문 전부 MERGE — [[decision-fatigue]], [[bp-signal-intelligence]], [[fde-talent-model]], [[agentic-recruitment-proxy]] 문서의 Timeline 에 추가 (NEW 노드 생성 금지, "브리핑은 자기가 무엇과 중복되는지 모른다")
+
+**왜 중요한가:**
+
+- [[decision-fatigue]] — **AI 는 인지적 부하의 원천이 될 수 있다.** 단순 작업에서는 부하를 줄이지만, 에이전트 오케스트레이션에서는 감시 자체가 작업이 된다
+- [[bp-signal-intelligence]] — **신뢰는 스칼라가 아니라 벡터다.** HR Tech 시장이 "70% 신뢰"라고 말할 때, 그 신뢰의 방향성 (상향/하향/수평) 을 명시해야 한다
+- [[fde-talent-model]] — **의사결정 근육은 사용しないと 위축된다.** AI 추천을 '가설'로만 사용하고 인간이 최종 결정 근거를 기록해야 한다
+- [[agentic-recruitment-proxy]] — **편향은 기술적 실패가 아니라 시장 구조의 결과다.** 단일 벤더 의존도 30% 초과 시 시스템적 거부 발생
+
+**영향 범위:**
+
+- `outputs/briefings/BRIEFING_IO-PSYCH_2026-09-10.md` — 신규 브리핑 1 편 (지식 원자 4 종, Human Gate 4 종)
+- `wiki/signals/` — MERGE 작업 예정 (INGEST job 09:30 실행)
+- `KNOWLEDGE_PULSE.md` — "Recent Synapses" 에 오늘 브리핑 반영 필요 (wiki 문서 비율 20% 미만 시 자기언어 인플레이션 경고)
+
+**다음 확인:**
+
+1. **INGEST job 실행 결과 확인** — 09:30 에 자동 실행되며, 4 개 논문을 MERGE 판정할 것 (사람 판단)
+2. **Human Gate YAML 등록** — [[bp-signal-intelligence]] 에 4 개 게이트를 `{행위} 금지/의무화 + {시간/임계치} + {검증 주기} + {검증 주체}` 형식으로 추가 (소요 20 분)
+3. **KNOWLEDGE_PULSE.md 갱신 확인** — 오늘 브리핑이 "Recent Synapses" 에 반영되었는지, wiki 문서 비율이 20% 이상인지 확인 (소요 5 분)
+4. **대시보드 건강성 점검** — http://localhost:8080 에서 `median_age_days`, `wiki_total`, `deltas` 가 갱신되었는지 확인 (09:30 이후)
+
