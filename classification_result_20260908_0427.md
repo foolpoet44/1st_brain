@@ -1,5 +1,6 @@
 # csp-brain Type 자동 분류 결과 (2026-09-08 04:27)
 
+type: Meeting
 ## 📊 작업 개요
 
 - **실행 스크립트**: `scripts/auto-classify-types.sh`
