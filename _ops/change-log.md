@@ -34,6 +34,30 @@
 ---
 ## [2026-09-10] 저녁 성찰 (Evening Reflect) · 19:30 KST 2 차 관측 — 「사흘째 멈춤」은 세 시간 삼십 분짜리 진실이었다
 
+### [2026-09-11 09:30] INGEST 프로토콜 — MERGE 4 건 (Resonance 패턴)
+
+**무엇이 바뀌었나**:
+- 4 건 브리핑 (IO-PSYCH 2, HR-TECH 1, MONEY-FLOW 1) 이 wiki/signals/ 기존 문서에 병합됨
+- 신규 노드 0 건, MERGE 4 건 — 모든 브리핑이 기존 신호의 시간적 심화 (temporal deepening) 로 판정됨
+- `2026-07-22-autonomous-hiring-paradox.md` 에 3 건, `2026-08-10-capital-flow-market-neutral.md` 에 1 건 편입
+
+**왜 중요한가**:
+- **"브리핑은 자기가 무엇과 중복되는지 모른다"** 원칙의 재확인 — blind follow 금지 프로토콜이 정상 작동
+- **Resonance 패턴**: 6-9 개 통계 일치는 중복이 아니라 **동일 신호의 시간적 심화** ("절제는 성장이 저항을 만날 때 발생하는 마찰열이다")
+- 12 개 Human Gate 추출 — MERGE operations 에서도 새로운 실행 함의가 도출됨
+
+**영향 범위**:
+- `wiki/signals/2026-07-22-autonomous-hiring-paradox.md`: Timeline 3 항목 추가
+- `wiki/signals/2026-08-10-capital-flow-market-neutral.md`: Timeline 1 항목 추가
+- `outputs/briefings/`: 4 건 브리핑에 `processed: true` 마킹 완료
+
+**다음 확인**:
+1. [ ] 대시보드 `wiki_total` 은 변화 없음 (MERGE 는 파일 수를 바꾸지 않음) — Δ0 예상
+2. [ ] `updated_7d` 는 2 개 문서가 갱신되었으므로 반영되어야 함
+3. [ ] KNOWLEDGE_PULSE.md 의 "Recent Synapses" 에 두 문서가 포함되는지 확인
+4. [ ] **사람 판단 필요 항목**: 없음 (오늘은 모두 기존 문서의 확장에 그침)
+
+
 **무엇이 바뀌었나:**
 
 - `outputs/daily-reflect/REFLECT_2026-09-10.md` 에 **저녁 2 차 관측 판본을 이어 붙였다.** 아침 판본(커밋 `1b15653`, 07:02 KST)은 덮어쓰지 않았다 — 오늘 성찰의 주제가 「정확한 것이 사라지는 구조」인 이상 앞 판본을 지우는 것은 자기모순이다. 관측 대상은 어제 성찰(09-09 19:30) 이후 도착한 전부다
