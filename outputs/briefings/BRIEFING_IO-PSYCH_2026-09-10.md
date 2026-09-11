@@ -5,6 +5,9 @@ domain: IO-PSYCH
 status: Active
 title: "I/O 심리학 브리핑 2026-09-10 — AI 피로도, 알고리즘적 신뢰, 그리고 인간 자율성의 재협상"
 tags: [decision-fatigue, algorithmic-management, trust, AI-anxiety, HR-analytics]
+processed: true
+processed_date: 2026-09-11
+processed_note: MERGE — wiki/signals/ 에 편입 완료
 ---
 
 # 🧠 I/O 심리학 브리핑 2026-09-10

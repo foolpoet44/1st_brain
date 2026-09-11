@@ -9,6 +9,9 @@ tags:
   - ai-bias
   - trust-ladder
   - algorithmic-monoculture
+processed: true
+processed_date: 2026-09-11
+processed_note: MERGE — wiki/signals/ 에 편입 완료
 ---
 
 # 🤖 HR Tech 브리핑 2026-09-10 — AI 수퍼에이전트의 전환점과 신뢰의 비대칭성

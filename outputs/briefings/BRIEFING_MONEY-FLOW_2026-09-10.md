@@ -11,7 +11,9 @@ tags:
   - 기관투자
   - Fed
   - 국민연금
-processed: false
+processed: true
+processed_date: 2026-09-11
+processed_note: MERGE — wiki/signals/ 에 편입 완료
 ---
 
 # 2026-09-10 머니플로우 브리핑 — 신뢰의 벡터와 자본의 도피
