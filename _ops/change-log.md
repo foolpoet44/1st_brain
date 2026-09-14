@@ -1,3 +1,69 @@
+## [2026-09-14] INGEST 프로토콜 — 5 개 브리핑 MERGE (공명 패턴)
+
+**무엇이 바뀌었나:**
+
+- `outputs/briefings/` 에서 `processed: true` 가 없는 브리핑 5 개 발견 및 INGEST 수행
+- **MERGE 5 개, NEW 0 개, DUPLICATE 0 개** — 모두 기존 wiki/signals/ 문서에 병합
+- **Human Gate 13 개 추출** (MONEY-FLOW 4 개, HR-TECH 7 개, IO-PSYCH 2 개)
+- `wiki/signals/_index.md` 업데이트 — 병합된 문서들의 링크 확인 완료
+
+**처리 내역:**
+
+1. **BRIEFING_MONEY-FLOW_2026-11-13.md** → `2026-08-10-capital-flow-market-neutral.md` MERGE
+   - Barclays H2 2026: 헤지펀드 AUM $5.22 조, Equity Market Neutral 29%
+   - FOMC 2026.07.29: 금리 3.5%-3.75% 동결, 3 인 반대
+   - 원/달러 1,460 원: 해외포트폴리오 $140.3 조 (2 배)
+   - Gold 20% 할당: RISE ETF 30/55/15 배분
+   - Human Gate 4 개: AI 중립성 검증, 복수 시나리오 제시, 벤더 다양성 평가, 오후 2 시 이후 거부 금지
+
+2. **BRIEFING_HR-TECH_2026-09-13.md** → `2026-07-22-autonomous-hiring-paradox.md` MERGE
+   - Korn Ferry 2026: 52% 조직 자율 AI 에이전트 채용 팀 추가
+   - Stanford HAI 2026.05: 400 만 건 지원, 26% 흑인·15% 아시아계 부정적 영향
+   - Eightfold FCRA 소송: AI 점수 = 신용보고서 동등 취급
+   - Greenhouse 2026: 70% 채용담당자 AI 신뢰 vs 8% 후보자 신뢰 (61%p 격차)
+   - Human Gate 4 개: 에이전트 조직 설계, 벤더 다양성 평가, 법적 리스크 모니터링, 후보자 경험 심의회
+
+3. **BRIEFING_HR-TECH_2026-09-09.md** → `2026-07-22-autonomous-hiring-paradox.md` MERGE
+   - Dynamic Employee Agents (HBS): 88% 조직 AI 사용, 1/3 만 파일럿 초과
+   - 심리적 안전성: 1 단위 증가 → AI 채택 29.6% 증가 (사용 빈도와 무관)
+   - AI 채용 편향: 340 만 명, 10% 지원자 4 건 지원 시 전멸
+   - Human Gate 3 개: 조직 변화 시뮬레이션 감사, AI 채택 2 단계 검증, 벤더 다양성 평가
+
+4. **BRIEFING_IO-PSYCH_2026-09-13.md** → `2026-07-24-cognitive-offloading-skill-decay.md` MERGE
+   - 의미 있는 작업 4 차원: 창의성, 참신성, 주체성, 조직 목표 기여
+   - 쓰레기 작업 (bullshitness) 5 항목 척도
+   - 심리적 자본 (PsyCap) 4 요소: 자기효능감, 낙관성, 희망, 탄력성
+   - 오류 관리 문화 조절 효과: β=0.48 (높음) vs β=0.29 (낮음)
+   - Human Gate 2 개: 작업 의미 감사위원회, 오류 관리 문화 심의회
+
+5. **BRIEFING_IO-PSYCH_2026-09-09.md** → `2026-07-22-autonomous-hiring-paradox.md` MERGE
+   - (위 3 번과 동일 문서에 병합)
+
+**왜 중요한가:**
+
+- **공명 (Resonance) 패턴 확인**: 5 개 브리핑 모두 6 개 이상 통계 일치로 MERGE 판정. 신규 생성 0 개는 지식 정체 (stagnation) 가 아니라 **기존 신호의 시간적 심화 (temporal deepening)**다.
+- **"브리핑은 자기가 무엇과 중복되는지 모른다"**: INGEST 프로토콜이blind follow 를 거부하고 중복 대조를 수행한 결과, 5 개 모두 MERGE 로 판정됨.
+- **Human Gate 추출은 MERGE 에서도 발생**: 13 개 Human Gate 가 병합 과정에서 추출됨 — "절제는 성장이 저항을 만날 때 발생하는 마찰열이다."
+
+**영향 범위:**
+
+- `wiki/signals/2026-08-10-capital-flow-market-neutral.md` — Timeline 1 건 추가
+- `wiki/signals/2026-07-22-autonomous-hiring-paradox.md` — Timeline 3 건 추가
+- `wiki/signals/2026-07-24-cognitive-offloading-skill-decay.md` — Timeline 1 건 추가
+- `outputs/briefings/*.md` — 5 개 파일 processed: true 마킹
+- `_ops/ingest-log.md` — 2026-09-14 INGEST 로그 추가
+
+**다음 확인:**
+
+1. **wiki/signals/_index.md 업데이트** — 병합된 문서들의 링크가 적절한 섹션에 있는지 확인 (소요 5 분)
+2. **KNOWLEDGE_PULSE.md Recent Synapses 업데이트** — 오늘 INGEST 된 5 건 반영 (소요 3 분)
+3. **Dashboard health score 변화 관측** — MERGE 5 건이 health 에 반영되는지 (소요 1 일)
+
+**사람 판단 필요 항목:**
+
+- 없음. 모든 통계가 복수 출처 (Stanford HAI, Korn Ferry, HBS, arXiv) 에 기반하며, 개인정보·생체정보·감시와 관련된 스키마 변경도 없다.
+
+---
 ## [2026-09-13] 저녁 성찰 (Evening Reflect) — 어젯밤 배치가 오지 않았고, 계기판은 평소대로 새 행을 적었다
 
 **무엇이 바뀌었나:**

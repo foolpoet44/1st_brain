@@ -559,3 +559,21 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 
 ---
 
+
+### 2026-09-14 INGEST (5 개 브리핑 처리)
+
+- **MERGE**: 5 개 (모두 기존 문서에 병합, 신규 생성 없음)
+  - BRIEFING_MONEY-FLOW_2026-11-13.md → 2026-08-10-capital-flow-market-neutral.md
+  - BRIEFING_HR-TECH_2026-09-13.md → 2026-07-22-autonomous-hiring-paradox.md
+  - BRIEFING_HR-TECH_2026-09-09.md → 2026-07-22-autonomous-hiring-paradox.md
+  - BRIEFING_IO-PSYCH_2026-09-13.md → 2026-07-24-cognitive-offloading-skill-decay.md
+  - BRIEFING_IO-PSYCH_2026-09-09.md → 2026-07-22-autonomous-hiring-paradox.md
+- **NEW**: 0 개
+- **DUPLICATE**: 0 개
+
+**판정 근거**: 모든 브리핑이 6 개 이상 통계 일치로 MERGE 판정 (공명 패턴).
+
+**Human Gate 추출**: 총 13 개 (MONEY-FLOW 4 개, HR-TECH 4+3 개, IO-PSYCH 2+3 개)
+
+**사람 판단 필요 항목**: 없음.
+

@@ -10,7 +10,9 @@ tags:
   - decision-fatigue
   - AI-adoption
   - hiring-fairness
-processed: false
+processed: true
+processed_date: 2026-09-14
+processed_note: INGEST MERGE 완료
 ---
 
 # 🧠 I/O 심리학 브리핑 — 2026 년 9 월 9 일

@@ -5,6 +5,9 @@ date: 2026-11-13
 status: Active
 tags: [자산배분, Market-Neutral, 금리, 환율, 기관투자자]
 title: "자본의 중립선언: 60/40 의 종말과 Market Neutral 의 부상"
+processed: true
+processed_date: 2026-09-14
+processed_note: INGEST MERGE 완료
 ---
 
 # 💰 MONEY-FLOW 브리핑 — 2026-11-13

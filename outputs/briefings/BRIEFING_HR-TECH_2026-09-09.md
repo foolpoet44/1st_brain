@@ -5,6 +5,9 @@ domain: HR-TECH
 status: Active
 title: "HR Tech 브리핑 2026-09-09 — 에이전트 채용의 성숙기와 신뢰의 벡터"
 tags: [agentic-recruitment, candidate-experience, trust-ladder, human-gate]
+processed: true
+processed_date: 2026-09-14
+processed_note: INGEST MERGE 완료
 ---
 
 # 📰 HR Tech 브리핑 2026-09-09
