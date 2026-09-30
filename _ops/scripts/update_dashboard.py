@@ -1,4 +1,4 @@
-import os, json, re, subprocess
+import os, sys, json, re, subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import quote
@@ -11,6 +11,64 @@ REQUIRED_FM = ["title", "created", "updated", "type", "status"]
 STALE_DAYS = 42
 HISTORY_KEEP = 60
 REPO_URL = "https://github.com/foolpoet44/1st_brain"
+
+# 단계 A: 편입 상태는 처리기와 같은 공통 함수(scripts/ingest_state.py)로 판정한다.
+# 대시보드와 처리기가 같은 문서를 다르게 읽는 문제를 막기 위해서다.
+sys.path.insert(0, str(ROOT / "scripts"))
+try:
+    import ingest_state as _ist
+except Exception:  # 공통 모듈을 못 읽어도 대시보드 전체가 멈추지는 않게 한다
+    _ist = None
+# 처리 기록(SQLite) 위치 — Vault 밖. GitHub Actions 에는 없으므로 그곳에선 '집계 불가'가 정상이다.
+STAGE_A_STATE_DIR = Path(os.environ.get(
+    "STAGE_A_STATE_DIR", str(Path.home() / ".csp-brain" / "stage-a-state")))
+
+
+def ingest_status_summary(root=None, state_dir=None):
+    """
+    원문(inbox, outputs/briefings)의 편입 상태를 집계한다.
+      marker    : frontmatter 의 processed 표시 (기존 완료 표시 포함, 검증 아님)
+      effective : 처리 기록 + 실제 대상 본문 재검증 결과 (verified 는 여기서만 나온다)
+    처리 기록이 없거나 PyYAML 이 없으면 available=False — 검증 완료를 추정하지 않는다.
+    """
+    root = Path(root or ROOT)
+    state_dir = Path(state_dir or STAGE_A_STATE_DIR)
+    if _ist is None or _ist.yaml is None:
+        return {"available": False, "reason": "공통 상태 모듈 또는 PyYAML 없음 — 집계 불가",
+                "marker": None, "effective": None, "inbox_not_marked": None}
+    files, errors = _ist.iter_markdown(root, _ist.SOURCE_ROOTS)
+    try:
+        conn = _ist.open_db_readonly(state_dir)
+    except Exception as exc:  # 손상된 DB 등
+        conn, errors = None, errors + [{"root": str(state_dir), "error": str(exc)}]
+    marker, effective, inbox_not_marked = {}, ({} if conn else None), []
+    for p in files:
+        rel = str(p.relative_to(root))
+        try:
+            a = _ist.analyze_source_text(p.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError):
+            marker["read_error"] = marker.get("read_error", 0) + 1
+            continue
+        ms = a["marker_state"]
+        marker[ms] = marker.get(ms, 0) + 1
+        if rel.startswith("inbox/") and ms != "marked_true":
+            inbox_not_marked.append(p)
+        if conn is not None:
+            try:
+                es, _ = _ist.effective_status(root, rel, a, conn)
+            except Exception:
+                es = "failed"
+            effective[es] = effective.get(es, 0) + 1
+    if conn is not None:
+        conn.close()
+    return {
+        "available": conn is not None,
+        "reason": None if conn is not None else "처리 기록(SQLite) 없음 — 검증 완료 집계 불가",
+        "marker": marker,          # 표시 기준 (legacy 포함)
+        "effective": effective,    # 검증 기준 (verified/legacy_unverified/pending/held/failed/conflict)
+        "input_errors": errors,
+        "inbox_not_marked": inbox_not_marked,
+    }
 
 
 def issue_url(title, body):
@@ -322,10 +380,16 @@ def build():
     # 1) INGEST — inbox 적체 (대사의 입구가 막히면 루프 전체가 멈춘다)
     # processed: true 로 마킹된 파일은 이미 대사를 마친 것 — 카운트에서 제외해야
     # 처리 커밋 후 카드가 사라지며 루프가 실제로 닫힌다.
-    inbox_files = [
-        p for p in ((ROOT / "inbox").rglob("*.md") if (ROOT / "inbox").exists() else [])
-        if "processed: true" not in p.read_text(encoding="utf-8", errors="ignore")[:500]
-    ]
+    # 단계 A: frontmatter 안의 단일 processed: true 만 표시로 인정한다
+    # (본문 속 문자열·중복 키는 표시로 읽지 않음). 검증 완료 여부는 ingest_status 에서 따로 본다.
+    ingest_status = ingest_status_summary()
+    if ingest_status["inbox_not_marked"] is not None:
+        inbox_files = ingest_status["inbox_not_marked"]
+    else:  # 공통 모듈을 못 쓰는 환경(CI 등)의 기존 방식 — 정확도 낮음
+        inbox_files = [
+            p for p in ((ROOT / "inbox").rglob("*.md") if (ROOT / "inbox").exists() else [])
+            if "processed: true" not in p.read_text(encoding="utf-8", errors="ignore")[:500]
+        ]
     if inbox_files:
         names = "\n".join(f"- `{p.relative_to(ROOT)}`" for p in inbox_files[:10])
         actions.append({
@@ -454,6 +518,8 @@ def build():
         "events": knowledge_events(),
         "archive_queue": archive_queue,
         "metabolism": metabolism,
+        # 단계 A: 표시 완료(marker)와 검증 완료(effective)를 분리해 보고
+        "ingest_status": {k: v for k, v in ingest_status.items() if k != "inbox_not_marked"},
         "graph": {"nodes": nodes, "edges": edges},
     }
 
