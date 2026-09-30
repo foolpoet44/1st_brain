@@ -6,6 +6,8 @@ original_title: "Opq-ucf-le"
 drive_id: 15KCJvf_oagg2VAblY-GgZ7xpanrC5WXSDLSUbULwOEQ
 pulled: 2026-07-18
 processed: true
+processed_date: 2026-09-30
+processed_note: "stage-a already_reflected → wiki/concepts/opq-framework.md"
 ---
 
 좋습니다. 캐러밴이 어디로 가는지 아는 사람과 설계하는 건 즐거운 일입니다. 군더더기 빼고 로직으로 바로 들어가죠.

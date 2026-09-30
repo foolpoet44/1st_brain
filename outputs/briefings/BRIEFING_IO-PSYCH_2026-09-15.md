@@ -4,6 +4,9 @@ date: 2026-09-15
 domain: IO-PSYCH
 status: Active
 tags: [io-psychology, organizational-behavior, AI-adoption, psychological-safety, decision-fatigue]
+processed: true
+processed_date: 2026-09-30
+processed_note: "stage-a new → wiki/concepts/ai-adoption-psychological-contract.md"
 ---
 
 # 📚 I/O 심리학 브리핑 — 2026-09-15

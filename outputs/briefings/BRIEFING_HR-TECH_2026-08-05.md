@@ -5,9 +5,8 @@ domain: HR-TECH
 status: Active
 title: "HR Tech 브리핑: 신뢰의 사다리, 그리고 감시자에서 정원사로의 전환"
 processed: true
-processed_date: 2026-08-05
-processed_note: "병합 - wiki/signals/2026-07-22-autonomous-hiring-paradox.md 의 Timeline 에 증분 기록. 신규 노드 생성 안 함 (중복)."
-
+processed_date: 2026-09-30
+processed_note: "stage-a already_reflected → wiki/signals/2026-07-22-autonomous-hiring-paradox.md"
 ---
 
 # HR Tech 브리핑: 신뢰의 사다리, 그리고 감시자에서 정원사로의 전환

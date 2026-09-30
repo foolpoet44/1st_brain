@@ -4,6 +4,9 @@ date: 2026-09-16
 domain: IO-PSYCH
 status: Active
 tags: [io-psychology, cognitive-psychology, behavioral-economics, organizational-behavior, AI-transformation]
+processed: true
+processed_date: 2026-09-30
+processed_note: "stage-a new → wiki/concepts/gma-predictive-validity.md, wiki/signals/2026-07-22-autonomous-hiring-paradox.md"
 ---
 
 # 📚 I/O 심리학 일일 브리핑 — 2026-09-16

@@ -6,7 +6,9 @@ status: Active
 title: "자기진화 에이전트의 시대 — 채용은 '권한 위임'이 아닌 '진화 방향 설계'로"
 tags: [agentic-recruitment, self-evolving-agents, evolution-gate, hr-tech-2026]
 source: web_search + arXiv curation
-processed: false
+processed: true
+processed_date: 2026-09-30
+processed_note: "stage-a merge → wiki/signals/2026-07-26-self-evolving-agents-evolution-gate.md"
 ---
 
 # 🤖 HR Tech Daily Briefing — 2026 년 9 월 16 일

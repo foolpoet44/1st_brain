@@ -5,7 +5,9 @@ domain: IO-PSYCH
 status: Active
 title: "I/O 심리학 브리핑 2026-09-17 — AI 협업, 결정 피로, 신경다양성"
 tags: ["IO-Psychology", "AI-Collaboration", "Decision-Fatigue", "Neurodiversity", "Work-Engagement"]
-processed: false
+processed: true
+processed_date: 2026-09-30
+processed_note: "stage-a new → wiki/signals/2026-09-17-ai-era-human-capacity.md"
 ---
 
 # 🧠 I/O 심리학 브리핑 2026-09-17

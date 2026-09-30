@@ -10,7 +10,9 @@ tags:
   - capital-flow
   - hr-translation
   - economic-freedom
-processed: false
+processed: true
+processed_date: 2026-09-30
+processed_note: "stage-a merge → wiki/signals/2026-08-10-capital-flow-market-neutral.md"
 ---
 
 # 📊 MONEY-FLOW 브리핑 — 2026 년 9 월 16 일 수요일

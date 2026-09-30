@@ -5,6 +5,9 @@ domain: IO-PSYCH
 status: Active
 title: "I/O 심리학 브리핑 2026-09-21 — 몰입의 붕괴와 인지적 부하의 시대"
 tags: [employee-engagement, burnout, self-determination-theory, psychological-safety, cognitive-bias, hiring]
+processed: true
+processed_date: 2026-09-30
+processed_note: "stage-a new → wiki/signals/2026-09-21-engagement-collapse-cognitive-load.md, wiki/concepts/self-determination-theory.md"
 ---
 
 # 🧠 I/O 심리학 브리핑 2026-09-21

@@ -6,10 +6,7 @@ status: Active
 title: "I/O 심리학 브리핑 — 2026-08-31 — AI 의사결정의 준비도, 그리고 알고리즘 자기선호 편향"
 tags: [io-psychology, ai-decision-making, algorithmic-bias, hiring-fairness, CHI2026, arXiv]
 processed: false
-processed: true
-processed_date: 2026-08-31
-processed_note: INGEST 프로토콜에 따라 wiki/ 문서에 MERGE 편입됨
-
+processed_note: "stage-a 2026-09-30: 반영 증거 없음 — 대기로 정리"
 ---
 
 # 🧠 I/O 심리학 브리핑 — 2026-08-31

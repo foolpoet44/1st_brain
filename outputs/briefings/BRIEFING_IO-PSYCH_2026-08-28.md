@@ -6,10 +6,7 @@ status: Active
 title: "I/O 심리학 브리핑 2026-08-28 — 알고리즘 편향, 의사결정 피로, 그리고 일의 의미"
 tags: [algorithmic-fairness, decision-fatigue, AI-augmentation, workplace-psychology]
 processed: false
-processed: true
-processed_date: 2026-08-31
-processed_note: INGEST 프로토콜에 따라 wiki/ 문서에 MERGE 편입됨
-
+processed_note: "stage-a 2026-09-30: 반영 증거 없음 — 대기로 정리"
 ---
 
 # 📋 I/O 심리학 브리핑 — 2026-08-28

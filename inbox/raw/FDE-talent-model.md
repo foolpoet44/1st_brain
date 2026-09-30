@@ -3,8 +3,8 @@ type: Note
 status: Active
 tags: [AX, HR, Talent-Model, Palantir, FDE]
 processed: true
-processed_date: 2026-07-02
-processed_note: "wiki/concepts/fde-talent-model.md 신규 생성"
+processed_date: 2026-09-30
+processed_note: "stage-a already_reflected → wiki/concepts/fde-talent-model.md"
 ---
 
 # 현장의 해결사, FDE(Field Deploym[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/[[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s/[[AGENTS.md|AGENTS]].md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]t Engineer) 인재 모델

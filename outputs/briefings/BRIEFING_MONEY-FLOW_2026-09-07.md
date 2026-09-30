@@ -1,7 +1,4 @@
 ---
-processed: true
-processed_date: 2026-09-09
-processed_note: MERGE → 2026-07-22-autonomous-hiring-paradox.md
 type: briefing
 domain: MONEY-FLOW
 date: 2026-09-07
@@ -9,6 +6,7 @@ title: "자본은 방향을 잃지 않는다 — 60/40 의 죽음과 Market Neut
 status: Active
 tags: [asset-allocation, gold, hedge-fund, interest-rate, exchange-rate, korean-market]
 processed: false
+processed_note: "stage-a 2026-09-30: 반영 증거 없음 — 대기로 정리"
 ---
 
 # 💰 MONEY-FLOW Briefing — 2026 년 9 월 7 일
