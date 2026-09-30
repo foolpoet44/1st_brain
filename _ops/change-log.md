@@ -310,6 +310,32 @@ HR 함의는 네 줄이다. 첫째, **임계값은 안전 여유가 아니라 �
 
 ---
 
+## [2026-09-30] 단계 A 편입 처리기 도입 — 완료 표시를 본문 검증 뒤에만 [ops/knowledge]
+
+**무엇이 바뀌었나:**
+
+- `scripts/stage_a_ingest.py`·`scripts/ingest_state.py` 추가, `scripts/ingest_protocol.py` 의 자동 병합·완료 표시 제거(읽기 전용 미리보기), 대시보드 `data.json` 에 `ingest_status`(표시 기준 `marker` / 검증 기준 `effective`) 추가. 커밋 `1376f13`.
+- 운영 첫 적용 20 건: 검증 완료 11(새 내용 반영 6 + 기존 반영 증거 확인 5), 대기 정리 5, 보류 4, 실패 0. 신규 노트 4 개(`ai-adoption-psychological-contract`, `gma-predictive-validity`, `2026-09-17-ai-era-human-capacity`, `2026-09-21-engagement-collapse-cognitive-load`), 기존 문서 4 곳에 출처 포함 반영 블록. 커밋 `e69a611`·`766eb46`.
+- 상태 충돌 8 건 → 완료 2 · 대기 5 · 보류 1 (MONEY-FLOW 08-10, 수치 오귀속).
+- 이 파일이 작업 트리에서 35 줄로 잘려 있던 것을 HEAD 버전으로 복구하고 09-25 항목을 보존했다.
+
+**왜 중요한가:**
+
+- 8 월 31 일 일괄 "MERGE 편입" 중 6 건이 대상에 제목·출처·날짜만 남긴 허위 완료였다. 이제 `processed: true` 는 실제 반영 문단과 처리 기록(`~/.csp-brain/stage-a-state`)이 있어야만 남고, 재실행해도 내용이 중복되지 않는다.
+
+**영향 범위:**
+
+- `outputs/briefings/` 16 개·`inbox/` 2 개 원문의 frontmatter 상태 행, `wiki/signals`·`wiki/concepts` 6 개 문서(추가만, 삭제 0), 인덱스 2 곳.
+- 근거·절차: `/Users/dkmac/26/gpt_cowor/reports/stage-a-build/` (conflict-review, runbook, scheduler-proposal).
+
+**다음 확인:**
+
+1. `csp-brain-ingest` 를 판정 초안 모드(적용 없음)로 재연결 — 첫 실행 결과의 판정 품질 검토.
+2. 기존 표시 101 건(`legacy_unverified`)을 소량씩 검증.
+3. change-log 를 통째로 덮어쓴 작업을 찾아 추가(append) 방식으로 고치기.
+
+---
+
 ## [2026-09-30] 저녁 성찰 — 부재가 완료로 계수되었다: 등록 6 건을 전부 맞힌 날에 어제 강화해 둔 확정 사실이 무너졌다 [Daily Reflect]
 
 **무엇이 바뀌었나:**
@@ -496,6 +522,38 @@ HR 함의는 세 줄이다. 첫째, **상태를 뜻하는 필드는 덧붙이지
 
 ---
 
+## [2026-09-25] 저녁 성찰 — HR 의 정체성 전환: 감시자에서 정원사로 [REFLECT]
+
+**무엇이 바뀌었나:**
+
+- `outputs/daily-reflect/REFLECT_2026-09-25.md` 생성 — 4 개 핵심 HR 신호 (심리적 안전성 · 자기결정성 이론 · 의사결정 피로 · 신경다양성), 4 개 Human Gate 명세, 심리학적/철학적 성찰, One Strategy.
+- **오늘의 핵심 통계:** 심리적 안전성 95% 직무 만족 (vs 61% 스트레스 · 41% 이직 의향) · SDT 메타분석 r=.40~.60 · 의사결정 피로 수술 확률 10.5% 감소 · 신경다양성 76% 진단 미공개.
+- **Human Gate 4 종 명세:** (1) 심리적 안전성 감사위원회 (분기별 · 3.0 미만 팀 리더십 코칭), (2) 자율성 침해 모니터링 (24 시간 골든타임 · 15% 하락 시 개입), (3) 오후 2 시 이후 최종 거부 금지 (채용·승진·해고), (4) 신경다양성 정체성 확장 심의회 (채용 공고 전 필수 검증).
+- **철학적 앵커:** "감시자 (Guardian) → 정원사 (Gardener)" 정체성 전환 — HR 은 자격 없는 지원자를 걸러내는 게이트키퍼가 아니라, 각 지원자의 고유 역량이 꽃필 토양을 설계하는 정원사다. "번역은 원본을 지우지 않는다, 검열은 지운다" — AI 편향과 신경다양성 낙인을 지우는 것이 아니라 명시하고 Human Gate 를 설계한다.
+- **텔레그램 전송 완료:** message_id: 2598 — 홈 채널로 4 개 Human Gate 요약 전송.
+- **09:10 I/O 심리학 브리핑 생성:** `outputs/briefings/BRIEFING_IO-PSYCH_2026-09-25.md` — 의사결정 피로 (Frontiers in Cognition 2025), 넛지 메타분석 (Behavioral Economics Guide 2025), AI 편향 거울 연구 (UW 2025), 심리적 안전 재해석 (Google Project Aristotle 2025 재분석). 4 개 Human Gate 명세 포함.
+
+**왜 중요한가:**
+
+- **4 개 신호는 하나의 질문으로 수렴한다: "HR 은 누구를 위한 존재인가?"** 심리적 안전성은 허용이 아니라 전제조건이며, 자율성은 허가가 아니라 욕구 충족이며, 신경다양성은 예외가 아니라 정체성 확장이다. 이는 HR 의 정체성 전환을 요구한다 — 감시자에서 정원사로.
+- **신뢰는 벡터다 (2026-09-05/09-11/09-23 검증):** 상향 신뢰 (인간→AI), 하향 신뢰 (인간→지원자), 수평 신뢰 (인간↔인간) 의 방향과 크기를 명시해야 한다. 오늘 4 개 Human Gate 는 이 벡터들을 조정하는 구체적 명세서다.
+- **INGEST protocol 준수:** "브리핑은 자기가 무엇과 중복되는지 모른다" — 직접 wiki/ 를 수정하지 않았다. 중복 판정과 기존 문서와의 MERGE/DUPLICATE 판정은 09:30 `csp-brain-ingest` job 이 수행한다.
+
+**영향 범위:**
+
+- `outputs/daily-reflect/REFLECT_2026-09-25.md` — 본 성찰 (type: Reflection, domain: IO-PSYCH)
+- `outputs/briefings/BRIEFING_IO-PSYCH_2026-09-25.md` — I/O 심리학 브리핑 (type: briefing, domain: IO-PSYCH)
+- `outputs/telegram/TELEGRAM_SEND_LOG_2026-09-25.md` — 텔레그램 전송용 요약 (message_id: 2598)
+- **Human Gate YAML 명세 대기:** [[bp-signal-intelligence]] 에 4 개 Gate 추가 필요 (One Strategy #1)
+- **INGEST job 대기 중:** 09:30 자동 실행 — 09-25 브리핑 `wiki/signals/` 편입 (NEW/MERGE/DUPLICATE 판정), `_ops/ingest-log.md` 업데이트
+- **KNOWLEDGE_PULSE.md 업데이트 대기:** "Recent Synapses" 섹션에 09-25 브리핑 반영 (자기언급 인플레이션 방지 — wiki 링크 최소 1 개 포함)
+
+**다음 확인:**
+
+1. **09:30 INGEST job 성공적 실행** — `_ops/ingest-log.md` 에 `2026-09-25` 항목 추가, NEW/MERGE/DUPLICATE 카운트 확인 (소요 30 분)
+2. **Human Gate YAML 명세** — [[bp-signal-intelligence]] 에 4 개 Gate 추가, `updated:` 날짜 갱신 (소요 90 분)
+3. **KNOWLEDGE_PULSE.md 업데이트** — "Recent Synapses" 에 09-25 브리핑 링크 추가, wiki 링크 1 개 이상 포함 (소요 30 분)
+4. **대시보드 반영** — http://localhost:8080 에서 `l4` +1 확인, Eval Score 변동 모니터링 (소요 2 시간 — GitHub Pages 캐시 갱신)
 ## [2026-09-25] 저녁 성찰 — 31 번의 「등록한다」와 0 번의 쓰기, 그리고 컨테이너의 생일을 지식의 생일로 읽은 계기판 [Daily Reflect]
 
 **무엇이 바뀌었나:**
