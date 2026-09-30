@@ -363,3 +363,13 @@ append-only 증거 기록. 삭제·수정하지 않는다.
 - 9 월 16 일 FOMC 결과에 따른 Human Gate #1 실행 여부
 - 한국은행 추가 인상 시 Human Gate #2 활성화
 
+<!-- stage-a:begin id=8b74c6ec5c0bd2cd source=outputs/briefings/BRIEFING_MONEY-FLOW_2026-09-16.md rev=6d9f91a7165d sha=d94c43a948bdcbe3441727b3340356425b4f5cb78b6ea2963534e98dafe4a7f8 -->
+### 2026-09-16 — MONEY-FLOW 브리핑 편입: 동결 속 이견과 원화 임계치
+
+- **연준**: FOMC 9월 회의록(2026-09-14) 기준 3.50~3.75% 동결 유지, 다만 '실질 금리가 중립 금리 상단을 상회'한다며 선제적 인하를 주장한 이견이 표면화.
+- **시장 중립 선호의 지속**: 방향성 베팅 선호 41% → 35% 감소, Equity Market Neutral 이 2분기 연속 1위(AUM $5.22조 중 29%). ⚠️ 같은 29% 를 이 문서 2.1절은 HFR 2026 Q2, 이 원문은 Barclays H2 2026 으로 인용 — 원출처 확인 필요.
+- **원/달러 1,484원**: 1,460원 심리선 돌파 후 3일 연속 고공행진, 한국 기관 해외 포트폴리오 $1,403억(전년비 2배) — 국내 주식보다 해외 채권·사모펀드 선호(한국은행, 2026-09-15).
+- **금 20% 할당론의 확산**: Morgan Stanley(2026-09-12) '금 20% 할당 필수' — 2.2절 자본시장연구원 논의가 글로벌 IB 로 확장. 60/40 이 인플레이션 헤지에 실패한다는 진단의 반복 확인.
+
+- 출처: [[BRIEFING_MONEY-FLOW_2026-09-16]] (`outputs/briefings/BRIEFING_MONEY-FLOW_2026-09-16.md`)
+<!-- stage-a:end id=8b74c6ec5c0bd2cd -->

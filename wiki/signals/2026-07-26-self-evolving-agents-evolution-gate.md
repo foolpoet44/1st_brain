@@ -143,3 +143,15 @@ evolution_gate:
 
 ### 2026-08-08
 - SCAN 프레임워크 (arXiv:2606.15601), LLM 감정 편향 (arXiv:2607.12631), 메타인지 프롬프트 (93% 편향 식별)
+
+<!-- stage-a:begin id=3588cbbcc0d1b5fd source=outputs/briefings/BRIEFING_HR-TECH_2026-09-16.md rev=b8fc1f6e0312 sha=f9c2276cbbe81173465c51da7f72d56d9df6cd8ac1447447c382923c35ea83c0 -->
+### 2026-09-16 — HR Tech 브리핑 편입: Skill-Harness 진화와 진화 감사
+
+- **재학습 없는 자기진화**: arXiv 2608.11350 "Self-Evolving Embodied Agents via Skill-Harness Evolution"(2026.08) — 에이전트가 스킬 재조합·컨텍스트 갱신·실행 하네스 수정만으로 성능을 올린다. 질문은 '어디까지 진화해도 되는가'가 아니라 '진화 방향을 누가 정의하는가'로 옮겨간다.
+- **진화 감사 위원회(Evolution Audit)**: 모델 수정 제안의 인간 심사, A/B 결과의 통계적 유의성 검증, 분기별 진화 방향과 조직 가치(DEI·FCRA·EU AI Act) 일치성 확인, 그리고 에이전트 판단의 신뢰 수준(high/medium/low) 공개를 묶는다. 이 문서 4절 Evolution Gate 의 운영 절차 후보.
+- **배포 확산 속도**: Korn Ferry(1,674명) — 인재 리더 84% 가 AI 채용 도입 계획, 그중 52% 가 자율 에이전트 추가 예정. KPMG — 엔터프라이즈 에이전트 배포가 6개월 만에 11% → 42%.
+- **규제가 벤더 선정 기준을 바꾼다**: EU AI Act 벌금 최대 €15M 또는 글로벌 매출 3%(2026-08-02 시행), NYC LL144·Colorado AI Act 동시 가동 → 기능 중심에서 감사 추적·편향 문서화·인간 개입 훅 중심 평가로.
+- **AI Doom Loop**: 후보자 41% 가 prompt injection 사용(Fortune), 채용 담당자 65% 가 AI 부정 사용 적발 — AI 아웃리치→AI 지원→AI 스크리닝→AI 의심의 순환에서 신호가 소멸하므로, 관계 중심 채용(멀티채널 시퀀스 응답률 +38%, Pin)이 차별 요인이 된다.
+
+- 출처: [[BRIEFING_HR-TECH_2026-09-16]] (`outputs/briefings/BRIEFING_HR-TECH_2026-09-16.md`)
+<!-- stage-a:end id=3588cbbcc0d1b5fd -->

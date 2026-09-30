@@ -74,3 +74,5 @@ tags: [index, wiki, concepts]
 ### 투자
 
 - [[failed-pattern-trading]] — 실패 패턴 트레이딩
+- [[ai-adoption-psychological-contract]]
+- [[gma-predictive-validity]]

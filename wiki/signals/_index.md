@@ -74,3 +74,5 @@ tags: [index, wiki]
 
 - [[2026-07-22-autonomous-hiring-paradox]]
 - [[BRIEFING_2026-08-03|Briefing_2026 08 03]]
+- [[2026-09-17-ai-era-human-capacity]]
+- [[2026-09-21-engagement-collapse-cognitive-load]]
