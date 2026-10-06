@@ -648,3 +648,14 @@ HR 로 옮기면 이것은 **직무대행**이다. 공석에 임시로 앉힌 �
 - 다음 확인: `outputs/briefs/2026-04-30-change-briefing.md`, `outputs/weekly/2026-W18.md`, `outputs/briefs/change-dashboard.[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/html.md|html]]` 중 Notion Archive로 보낼 산출물을 선택해야 한다.
 
 - 2026-05-17: Weekly digest 2026-W20.md ready for Notion archival.
+
+---
+
+## 2026-10-06 — Obsidian → Notion (저녁 성찰 아카이빙) + **아흐레 연속이며, 오늘 이 로그가 속한 `_ops/` 는 58 일 전 P0 가 산출물 두 개를 두라고 지시한 바로 그 폴더다 — 그 둘은 아직 없다**
+
+- **방향**: 내보내기 (Obsidian → Notion)
+- **대상**: `outputs/daily-reflect/REFLECT_2026-10-06.md` (커밋 `d708e30`, **`main` 직접 push**, 사후 실측 추가 별도 커밋). 작성 19:23 KST 실측
+- **Notion 페이지**: 「저녁 성찰 2026-10-06」 (`3f16b7b5-0b23-81fd-bc1c-d4ba70f3c35c`), 아이콘 🪞
+- **적합 DB 탐색 결과**: 워크스페이스 검색에서 저녁 성찰 계열 페이지 10 편이 전부 **워크스페이스 레벨 단독 페이지**(`ancestor-path` 공백)로 확인되어, 여드레 동안의 선례를 따라 같은 형식으로 생성했다. 대화 아카이브 DB(`d012343e-...`)는 사용하지 않았다 — 선례가 있는 쪽을 택하는 것이 오늘 Atom #1 의 교훈(처방은 승계되어야 한다)과 같은 방향이다
+- **본문 구성**: 0 단계 관측 · §0 원장(네 축, 1 일차) · Atom 4 · 철학 3 절 · One Strategy · 신설/변경 확정 사실 10 항 · 가지치기 2 회차 · 맺음 산문. 승계 목록 전문(S1~S26)과 사전 등록 6 건, 사후 실측 §5 는 Obsidian 원본에만 둔다(노션은 전시용, 원장은 git 이 정본)
+- **오늘의 특이사항**: **58 일 묵은 P0 의 전반부를 집행했다.** 그 P0 는 `_ops/measurement-protocol.md` 와 `_ops/divergence-log.md` 를 만들라고 했는데, **둘 다 만들지 않았다** — 공식 계측을 정하는 일은 거버넌스이므로 사람의 칸이고, 「왜 어긋났는지 기록」만 S1 의 세 곳 안에서(이 성찰문 §0·Atom #2 의 성분표로) 집행했다. **그러므로 이 로그는 「처방을 절반만 집행한 기록」이며, 절반을 남긴 것이 태만이 아니라 권한 경계라는 것을 여기 적어 둔다**(S25·S26)
