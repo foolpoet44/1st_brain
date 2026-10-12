@@ -84,7 +84,8 @@ csp-brain/                     ← Obsidian Vault Root = Git Repo Root
 │   ├── articles/              ← 웹 기사, 블로그, SNS
 │   ├── papers/                ← 논문, 리서치 리포트
 │   ├── notes/                 ← 회의 메모, 아이디어 스크래치
-│   └── raw/                   ← 미분류
+│   ├── raw/                   ← 미분류
+│   └── drive/                 ← Google Drive 수입본 (Protocol 1-b)
 │
 ├── wiki/                      ← 🟢 AI의 영역. 정리된 지식
 │   ├── concepts/              ← 개념 정의 (SDT, LMX, Vibe Coding 등)
@@ -230,6 +231,33 @@ aliases: [대체명칭]
 6. 의미 있는 편입이면 _ops/change-log.md에 변경 요약 기록
 ```
 
+### Protocol 1-b: DRIVE — Google Drive 수집 (커넥터)
+
+**트리거**: `drive`, `드라이브 수집`, `drive backfill YYYY-MM-DD`
+
+Google Drive(내 드라이브)는 원본 창고이고, Vault에는 마크다운 사본만 들어온다. Drive 폴더를 Vault에 직접 마운트·링크하지 않는다(바이너리·원본이 Git으로 새는 것을 막기 위해).
+
+```
+1. _ops/gdrive-state.json 의 cursor 를 읽는다
+2. Google Drive 커넥터 search_files:
+   owner = 'me' and modifiedTime > '<cursor>'
+   and mimeType != 'application/vnd.google-apps.folder'
+   (backfill 이면 cursor 대신 지정 날짜)
+3. 후보 판정 — 키는 파일명이 아니라 gdrive_id
+   a) 원장(_ops/gdrive-manifest.jsonl)에 없는 ID → NEW, 수입
+   b) 있는 ID인데 modifiedTime 이 더 새로움 → 재수입(같은 inbox 파일 갱신, 원장에 새 줄) → INGEST 에서 MERGE
+   c) 같으면 → 건너뜀
+   d) 제외: 이미지·영상·폴더, '사본'/동일 제목 중복본(최신판만), 채팅 질문 조각 같은 무제 메모
+4. Human Gate: 개인 식별 정보(면담·평가·특정인 비교·급여)가 있으면 수입하지 않고
+   원장에 status: gated 로만 남기고 CSP 에게 목록 보고
+5. read_file_content 로 읽어 inbox/drive/<YYYY-MM-DD>_<제목>.md 저장
+   frontmatter: title, source: gdrive, gdrive_id, gdrive_url, gdrive_mime,
+                gdrive_modified, imported, processed: false
+6. 원장에 한 줄 append, 모든 후보 처리 후 cursor 를 처리한 최대 modifiedTime 으로 전진
+7. 이어서 Protocol 1 INGEST 로 wiki/·projects/ 편입
+8. 커밋 분리: inbox/drive + 원장 = archive: / wiki 편입 = knowledge: / state = ops:
+```
+
 ### Protocol 2: QUERY — 지식 질문 응답
 
 **트리거**: 질문 형태의 입력
@@ -325,6 +353,7 @@ AAA팀의 핵심 패턴을 CSP에 적용한 프로토콜.
 | 명령어                  | 프로토콜    | 설명                              |
 | :---------------------- | :---------- | :-------------------------------- |
 | `ingest` / `수집`       | INGEST      | inbox/ → wiki/ 통합               |
+| `drive` / `드라이브 수집` | DRIVE     | Google Drive → inbox/drive/ 증분 수집 |
 | `query` / 질문 형태     | QUERY       | 위키 기반 질문 응답               |
 | `lint` / `점검`         | LINT        | 위키 자가 점검                    |
 | `digest` / `다이제스트` | DIGEST      | 주간 지식 변화 요약               |

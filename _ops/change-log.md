@@ -4103,3 +4103,13 @@ status: Active
 4. sync_brain.sh 실행으로 Git 동기화
 
 ---
+
+---
+## [2026-10-12] Google Drive 커넥터 수집 경로 개설 — 내 드라이브 → inbox/drive/ [ops]
+
+### Google Drive(내 드라이브)를 LLM 위키의 정식 유입 경로로 등록
+
+- 무엇이 바뀌었나: CLAUDE.md 에 Protocol 1-b(DRIVE)를 신설했다. Claude 의 Google Drive 커넥터로 내 드라이브 전체(owner=me)를 `modifiedTime > cursor` 로 증분 조회하고, 마크다운 사본을 `inbox/drive/` 에 넣은 뒤 기존 INGEST 로 넘긴다. 중복 판정 키는 파일명이 아니라 `gdrive_id` 이며, `_ops/gdrive-manifest.jsonl`(수입 원장, append-only)과 `_ops/gdrive-state.json`(커서, 초기값 2026-10-01)을 만들었다. 시범으로 2 건(워크인텔리전스 6대전략 시사점, AF 오퍼레이션 메타모델 v0.3)을 수입했다.
+- 왜 중요한가: 07-18 에 Drive 설계문서 14 건을 손으로 들여온 적이 있지만 절차가 없어 반복되지 않았다. 최근 작업 문서(AF 메타모델, 벤치마킹 보고서 등)는 대부분 Drive 에서 태어나므로, 이 경로가 없으면 위키는 실제 작업과 계속 어긋난다.
+- 영향 범위: `inbox/drive/`(신규), `_ops/gdrive-*`, CLAUDE.md §3·§6·§8. 개인 식별 정보가 있는 문서는 수입하지 않고 `gated` 로만 기록한다(Human Gate).
+- 다음 확인: 시범 2 건의 INGEST(AF 메타모델 → projects/ AF 계열 MERGE 후보, 워크인텔리전스 → wiki/signals 또는 frameworks NEW 후보). 첫 정식 `drive` 실행에서 10-01 이후 후보 목록을 CSP 가 훑어보고 제외 규칙이 맞는지 확인.
