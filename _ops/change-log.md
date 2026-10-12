@@ -4113,3 +4113,13 @@ status: Active
 - 왜 중요한가: 07-18 에 Drive 설계문서 14 건을 손으로 들여온 적이 있지만 절차가 없어 반복되지 않았다. 최근 작업 문서(AF 메타모델, 벤치마킹 보고서 등)는 대부분 Drive 에서 태어나므로, 이 경로가 없으면 위키는 실제 작업과 계속 어긋난다.
 - 영향 범위: `inbox/drive/`(신규), `_ops/gdrive-*`, CLAUDE.md §3·§6·§8. 개인 식별 정보가 있는 문서는 수입하지 않고 `gated` 로만 기록한다(Human Gate).
 - 다음 확인: 시범 2 건의 INGEST(AF 메타모델 → projects/ AF 계열 MERGE 후보, 워크인텔리전스 → wiki/signals 또는 frameworks NEW 후보). 첫 정식 `drive` 실행에서 10-01 이후 후보 목록을 CSP 가 훑어보고 제외 규칙이 맞는지 확인.
+
+---
+## [2026-10-12] Drive 일일 규칙 확정 — 당일 신규만 편입, 나머지는 관찰 [ingest]
+
+### 첫 Drive 일일 INGEST: 개념 3 편 신규, AF 프로젝트 1 건 병합, 43 건 관찰
+
+- 무엇이 바뀌었나: CSP 결정으로 Drive 수집 규칙을 "증분 수집"에서 **"당일(KST) 생성분만 wiki 편입, 나머지는 관찰"**로 바꿨다(Protocol 1-b 재작성). 첫 실행에서 [[autonomous-factory]] · [[work-network-data-governance]] · [[vibe-to-prompt-music]] 세 개념이 새로 생겼고, `projects/physical-ai-talent` Compiled Truth 에 "육성 목표 = 암묵지의 명시화·검증 능력" 단락이 추가됐다. 관찰 일지 `_ops/gdrive-watch.md` 를 신설해 10-01 이후 비신규 43 건을 주제 다섯 묶음(AF 운영 · 워크 인텔리전스 · 외부 연사 · 불교철학 유튜브 · 기타)으로 기록했다. 어제 시범 수입한 2 건은 규칙에 맞춰 `observed` 로 내렸다.
+- 왜 중요한가: 드라이브는 하루에도 수십 개 파일이 생기는 곳이라, 전부 편입하면 위키가 드라이브의 사본이 된다. "태어난 날 들어오고 이후 변화는 지켜본다"는 규칙은 수집량이 아니라 **편입 시점**을 기준으로 삼아 매일의 변화를 해석 가능하게 만든다. 또 Work Network 엑셀처럼 지식(관리원칙)과 개인정보(작성자 실명·이메일)가 한 파일에 섞인 경우 시트 단위 발췌가 기본 처리 방식이 되었다.
+- 영향 범위: wiki/concepts 3 편 신규(+ `_index`), projects/physical-ai-talent, inbox/drive 4 편, `_ops/gdrive-*`, CLAUDE.md §6·§8.
+- 다음 확인: 내일 실행에서 ① AF 메타모델 v0.4 가 생기면 신규 편입하며 관찰 중인 v0.3 를 함께 MERGE 하는지, ② 불교철학 유튜브 2편이 생겨 시리즈로 판단되는지, ③ 매일 생기는 HR 운영 명단이 빠짐없이 gated 처리되는지.
