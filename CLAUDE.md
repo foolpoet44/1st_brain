@@ -308,6 +308,20 @@ AAA팀의 핵심 패턴을 CSP에 적용한 프로토콜.
 
 ---
 
+### Protocol 7: EVENING REFLECT — 저녁 성찰
+
+**트리거**: 매일 저녁 예약 실행, `reflect`, `저녁 성찰`
+
+```
+1. 오늘의 변화(커밋·wiki·inbox·계기판)를 확인한다
+2. outputs/daily-reflect/REFLECT_YYYY-MM-DD.md 를 쓴다
+   — 문체와 구성은 반드시 .claude/rules/evening-reflect-writing.md 를 따른다
+   — 독자는 개발 배경이 없는 CSP 다: 맨 위 「오늘의 세 줄」, 쉬운 말 본문 3,000자 이내,
+     해시·명령어·함수명·규칙 번호는 맨 아래 「기술 부록」으로만
+3. 저장 전 지침의 자기 점검 5문항을 통과시킨다
+4. _ops/change-log.md 에 기록, 노션에는 세 줄 + 본문만 전시
+```
+
 ## 7. Dream Cycle (매주 금요일)
 
 ```

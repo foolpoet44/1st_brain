@@ -202,6 +202,8 @@ ex-analyzer 실행 당일의 Evening Reflect (`outputs/daily-reflect/REFLECT_YYY
 2. **심리학적 성찰:** "데이터는 침묵한다. 경험은 말한다" — Guardian → Gardener 정체성 전환
 3. **One Strategy:** 내일 아침 구체적인 실행 과제 3 가지
 
+**문체·구성:** `.claude/rules/evening-reflect-writing.md` 를 따른다 — 비개발자 CSP 가 3 분 안에 읽을 수 있는 말로, 통계·해시·명령어는 맨 아래 「기술 부록」으로 (2026-10-12, 위 스킬 지침보다 우선)
+
 **참조:** `knowledge-management` 스킬의 `references/evening-reflect-protocol.md`
 
 ---
@@ -224,6 +226,7 @@ ex-analyzer 실행 당일의 Evening Reflect (`outputs/daily-reflect/REFLECT_YYY
 
 - ✅ **에세이 형식:** 불렛 리스트 나열 지양, 철학적 성찰 포함
 - ✅ **한국어:** 명확하고 품격 있는 한국어 사용
+- ✅ **비개발자 가독성:** 본문에 기술 용어·해시·함수명 금지, 숫자는 의미와 함께 (`.claude/rules/evening-reflect-writing.md`)
 - ✅ **One Strategy:** 내일 아침 실행 가능한 구체적 과제 3 가지
 - ✅ **Human Gate:** AI 자동화 금지 영역 명시
 
