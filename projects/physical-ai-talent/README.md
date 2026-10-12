@@ -1,7 +1,7 @@
 ---
 title: Physical AI / AI Factory Tech Leader 육성
 created: 2026-07-18
-updated: 2026-07-18
+updated: 2026-10-12
 type: project
 status: growing
 tags: [project, physical-ai, ai-factory, talent-pool, escon, skill-ontology, hr]
@@ -22,6 +22,8 @@ Skill Ontology(ESCO 기반 커스터마이징)를 활용해 **Physical AI 영역
 
 이 세 문서는 **선발(면접) → 육성(커리큘럼) → 배치(Pool 조직)** 한 사이클을 이룬다. 상위 스킬 온톨로지는 [[escon]](projects/escon)의 College→Level→Enabler→Skill 확장이, 이론적 배경은 [[k-smart-model]]이, 부트캠프 정체성 변환은 [[fde-talent-model]]이 담당한다. 도달 목표 스킬맵과 현재 인재 분포의 좌표계는 [[sf-domain-mapping]]이 제공한다.
 
+
+**정의의 갱신 (2026-10-12).** 이 프로젝트가 길러내려는 인재상의 상위 정의가 명문화되었다 — [[autonomous-factory]]는 "AI가 공장을 대신 운영하는 기술"이 아니라 "공정 지식을 데이터·모델로 표현하고 검증 가능한 행동으로 전환하며 결과로 갱신하는 시스템"이다. 따라서 육성의 중심은 로봇·AI·디지털트윈 조작 기술이 아니라 **암묵지를 꺼내 모델로 표현하고 실험으로 검증해 운영에 연결하는 능력**이며, 위 ③의 '이중 폐루프'와 '현장 과제 증빙 기반 인증'이 바로 이 정의의 교육적 번역이다.
 ---
 
 ## Timeline
@@ -33,3 +35,8 @@ Skill Ontology(ESCO 기반 커스터마이징)를 활용해 **Physical AI 영역
 - **Physical AI Tech Leader 면접 계획서**(2026-07-07): 6역량 × 3인 패널 구조화 면접 키트, 스코어카드·디브리프.
 - **AI Factory 기술전문가 육성체계 v2.2**(2026-07-09, LGE Internal): 4칼리지·159스킬·36과목·101학점·1,500h, 3레벨, 이중 폐루프, 현장 증빙 기반 인증, 신규 스킬 8건 제안(초안 고지).
 - 연결: [[escon]] 스킬 온톨로지 · [[sf-domain-mapping]] 좌표계 · [[k-smart-model]] 벤치마크 · [[fde-talent-model]] 부트캠프.
+
+### 2026-10-12
+
+- Drive 「Autonomous Factory — 공정 지식을 검증 가능한 행동으로 전환하는 시스템」(10-12) MERGE: AF 정의를 [[autonomous-factory]] 개념 문서로 분리하고, Compiled Truth에 육성 목표의 재정의(기술 조작 → 암묵지의 명시화·검증 능력) 한 단락 추가.
+- 관련 데이터 정비: [[work-network-data-governance]] (ACT-0019 교육 결과보고 Run의 증거 공백 추적).
