@@ -577,3 +577,23 @@ Google Drive 유입 설계문서 14건 처리. EX Intelligence 하위 시스템 
 
 **사람 판단 필요 항목**: 없음.
 
+
+---
+
+## 2026-10-12 Drive 일일 INGEST (첫 실행 — 당일 신규만)
+
+Protocol 1-b 일일 규칙 첫 적용. 오늘(KST) 생성된 Drive 파일 6 건 중 4 건을 3 개 지식 단위로 편입, 2 건 제외. 10-01~10-11 비신규 43 건은 `_ops/gdrive-watch.md` 에 관찰만.
+
+- `Autonomous Factory — 공정 지식을 검증 가능한 행동으로…` → wiki/concepts/autonomous-factory.md / **new** + projects/physical-ai-talent/README.md / **merge**
+- `Work_Network_데이터정비_ACT0019_…_추론보충.xlsx` (`00_관리원칙` 시트만) → wiki/concepts/work-network-data-governance.md / **new**
+- `Https://youtu.be/RBdl7z_JabE…` + `앞단의 시작하는 기타리프가 좋은데…` → wiki/concepts/vibe-to-prompt-music.md / **new** (질문-후속 질문 짝)
+- `pending_self_2026-1_20261012.xlsx` → **gated** (운영 명단)
+- `…32명_개인과제…261002 - 복사.xlsx` → **skip** (바로가기)
+- 10-08 시범 수입 2 건(워크인텔리전스 6대전략, AF 메타모델 v0.3) → **observed** 로 재분류, wiki 편입 보류
+
+---
+
+## 2026-10-13 정정 — vibe-to-prompt-music 이전
+
+- 10-12 편입한 `wiki/concepts/vibe-to-prompt-music.md` 는 개인 취향 신호(긱스 〈짝사랑〉 도입부 기타 리프 선호, 유튜브 링크)를 담고 있었다. 위키는 Pages로 공개 발행되므로, CSP 결정에 따라 비공개 취향 묶음 `personal/taste/concepts/vibe-to-prompt-music.md` 로 옮기고 위키에서 삭제했다. 원장에 `relocated` 줄을 추가했다.
+- 앞으로 드라이브 수집에서 취향 신호를 만나면 처음부터 취향 묶음으로 보낸다(Protocol 1-b c').

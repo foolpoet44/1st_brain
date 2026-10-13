@@ -1,0 +1,9 @@
+{
+  "_doc": "Google Drive(내 드라이브) 일일 수집 상태. CLAUDE.md Protocol 1-b 참조.",
+  "scope": "My Drive (owner = me, 하위 폴더 포함, 휴지통 제외)",
+  "rule": "당일(KST) createdTime 인 파일만 wiki 편입. 그 밖의 modifiedTime 변화는 _ops/gdrive-watch.md 에 관찰 기록만.",
+  "last_day": "2026-10-12",
+  "cursor": "2026-10-12T07:08:44.921Z",
+  "cursor_note": "처리한 마지막 createdTime. 다음 실행은 이 시각 이후 생성분 중 실행일(KST) 에 해당하는 것만 편입하고, 그 사이 날짜에 생긴 것은 관찰로 돌린다.",
+  "observe_since": "2026-10-01T00:00:00Z"
+}

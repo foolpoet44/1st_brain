@@ -84,7 +84,8 @@ csp-brain/                     ← Obsidian Vault Root = Git Repo Root
 │   ├── articles/              ← 웹 기사, 블로그, SNS
 │   ├── papers/                ← 논문, 리서치 리포트
 │   ├── notes/                 ← 회의 메모, 아이디어 스크래치
-│   └── raw/                   ← 미분류
+│   ├── raw/                   ← 미분류
+│   └── drive/                 ← Google Drive 수입본 (Protocol 1-b)
 │
 ├── wiki/                      ← 🟢 AI의 영역. 정리된 지식
 │   ├── concepts/              ← 개념 정의 (SDT, LMX, Vibe Coding 등)
@@ -240,6 +241,36 @@ Compiled Truth의 소절이나 문장에 `[confirmed]`(CSP 직접 진술·원문
 6. 의미 있는 편입이면 _ops/change-log.md에 변경 요약 기록
 ```
 
+### Protocol 1-b: DRIVE — Google Drive 일일 수집 (커넥터)
+
+**트리거**: `drive`, `드라이브 수집` (하루 한 번), `drive backfill YYYY-MM-DD` (CSP 가 명시할 때만)
+
+Google Drive(내 드라이브)는 원본 창고이고, Vault에는 마크다운 사본만 들어온다. Drive 폴더를 Vault에 직접 마운트·링크하지 않는다.
+
+**일일 규칙 (2026-10-12 CSP 결정)**: **당일(KST) 새로 생성된 문서만** wiki 에 편입한다. 나머지 — 이전에 생성됐거나 수정만 된 문서 — 는 확인하고 관찰만 하며 수입하지 않는다. 지식은 태어난 날 들어오고, 그 뒤의 변화는 지켜본다.
+
+```
+1. _ops/gdrive-state.json 읽기 (cursor, last_day)
+2. 당일 신규: search_files
+   owner = 'me' and createdTime >= '<당일 00:00 KST = 전날 15:00Z>'
+   and mimeType != 'application/vnd.google-apps.folder'
+3. 당일 신규 판정 — 키는 gdrive_id
+   a) 지식 문서 → read_file_content → inbox/drive/<YYYY-MM-DD>_<제목>.md
+      (frontmatter: title, source: gdrive, gdrive_id, gdrive_url, gdrive_mime,
+       gdrive_created, gdrive_modified, imported) → 곧바로 Protocol 1 INGEST
+   b) xlsx/pptx 대용량 → 개인정보 없는 시트·장만 발췌 (import_scope 에 명시)
+   c) Human Gate: 실명·이메일·평가·명단 등 개인 식별 운영 데이터 → 수입 안 함, gated
+   c') 개인 취향 신호(좋아하는 음악·유머·작품에 대한 반응) → wiki/ 가 아니라 personal/taste/ 또는 inbox/taste/ 캡처 카드로 (비공개, .claude/rules/personal-taste.md)
+   d) skip: 바로가기·이미지·zip·동일 제목 중복본(먼저 생긴 것 하나만)
+4. 관찰: modifiedTime >= observe_since 이고 당일 생성이 아닌 파일을 메타데이터로만 훑어
+   _ops/gdrive-watch.md 에 그날 섹션(주제 묶음 · 반복 신호 · 중복/게이트 소견 · 내일 볼 것) 추가
+   — 본문을 읽지 않고, 수입하지 않는다
+5. 원장(_ops/gdrive-manifest.jsonl)에 판정 한 줄씩 append
+   (status: imported | observed | gated | skipped)
+6. state 의 cursor·last_day 갱신, _ops/ingest-log.md · _ops/change-log.md 기록
+7. 커밋 분리: inbox/drive + 원장 = archive: / wiki·projects 편입 = knowledge:·project: / watch·state·로그 = ops:
+```
+
 ### Protocol 2: QUERY — 지식 질문 응답
 
 **트리거**: 질문 형태의 입력
@@ -337,6 +368,7 @@ AAA팀의 핵심 패턴을 CSP에 적용한 프로토콜.
 | 명령어                  | 프로토콜    | 설명                              |
 | :---------------------- | :---------- | :-------------------------------- |
 | `ingest` / `수집`       | INGEST      | inbox/ → wiki/ 통합               |
+| `drive` / `드라이브 수집` | DRIVE     | 당일 신규 Drive 문서 편입 + 나머지 관찰 |
 | `query` / 질문 형태     | QUERY       | 위키 기반 질문 응답               |
 | `lint` / `점검`         | LINT        | 위키 자가 점검                    |
 | `digest` / `다이제스트` | DIGEST      | 주간 지식 변화 요약               |
