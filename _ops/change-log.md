@@ -4145,6 +4145,40 @@ status: Active
 ---
 
 ---
+## [2026-10-12] Google Drive 커넥터 수집 경로 개설 — 내 드라이브 → inbox/drive/ [ops]
+
+### Google Drive(내 드라이브)를 LLM 위키의 정식 유입 경로로 등록
+
+- 무엇이 바뀌었나: CLAUDE.md 에 Protocol 1-b(DRIVE)를 신설했다. Claude 의 Google Drive 커넥터로 내 드라이브 전체(owner=me)를 `modifiedTime > cursor` 로 증분 조회하고, 마크다운 사본을 `inbox/drive/` 에 넣은 뒤 기존 INGEST 로 넘긴다. 중복 판정 키는 파일명이 아니라 `gdrive_id` 이며, `_ops/gdrive-manifest.jsonl`(수입 원장, append-only)과 `_ops/gdrive-state.json`(커서, 초기값 2026-10-01)을 만들었다. 시범으로 2 건(워크인텔리전스 6대전략 시사점, AF 오퍼레이션 메타모델 v0.3)을 수입했다.
+- 왜 중요한가: 07-18 에 Drive 설계문서 14 건을 손으로 들여온 적이 있지만 절차가 없어 반복되지 않았다. 최근 작업 문서(AF 메타모델, 벤치마킹 보고서 등)는 대부분 Drive 에서 태어나므로, 이 경로가 없으면 위키는 실제 작업과 계속 어긋난다.
+- 영향 범위: `inbox/drive/`(신규), `_ops/gdrive-*`, CLAUDE.md §3·§6·§8. 개인 식별 정보가 있는 문서는 수입하지 않고 `gated` 로만 기록한다(Human Gate).
+- 다음 확인: 시범 2 건의 INGEST(AF 메타모델 → projects/ AF 계열 MERGE 후보, 워크인텔리전스 → wiki/signals 또는 frameworks NEW 후보). 첫 정식 `drive` 실행에서 10-01 이후 후보 목록을 CSP 가 훑어보고 제외 규칙이 맞는지 확인.
+
+---
+## [2026-10-12] Drive 일일 규칙 확정 — 당일 신규만 편입, 나머지는 관찰 [ingest]
+
+### 첫 Drive 일일 INGEST: 개념 3 편 신규, AF 프로젝트 1 건 병합, 43 건 관찰
+
+- 무엇이 바뀌었나: CSP 결정으로 Drive 수집 규칙을 "증분 수집"에서 **"당일(KST) 생성분만 wiki 편입, 나머지는 관찰"**로 바꿨다(Protocol 1-b 재작성). 첫 실행에서 [[autonomous-factory]] · [[work-network-data-governance]] · [[vibe-to-prompt-music]] 세 개념이 새로 생겼고, `projects/physical-ai-talent` Compiled Truth 에 "육성 목표 = 암묵지의 명시화·검증 능력" 단락이 추가됐다. 관찰 일지 `_ops/gdrive-watch.md` 를 신설해 10-01 이후 비신규 43 건을 주제 다섯 묶음(AF 운영 · 워크 인텔리전스 · 외부 연사 · 불교철학 유튜브 · 기타)으로 기록했다. 어제 시범 수입한 2 건은 규칙에 맞춰 `observed` 로 내렸다.
+- 왜 중요한가: 드라이브는 하루에도 수십 개 파일이 생기는 곳이라, 전부 편입하면 위키가 드라이브의 사본이 된다. "태어난 날 들어오고 이후 변화는 지켜본다"는 규칙은 수집량이 아니라 **편입 시점**을 기준으로 삼아 매일의 변화를 해석 가능하게 만든다. 또 Work Network 엑셀처럼 지식(관리원칙)과 개인정보(작성자 실명·이메일)가 한 파일에 섞인 경우 시트 단위 발췌가 기본 처리 방식이 되었다.
+- 영향 범위: wiki/concepts 3 편 신규(+ `_index`), projects/physical-ai-talent, inbox/drive 4 편, `_ops/gdrive-*`, CLAUDE.md §6·§8.
+- 다음 확인: 내일 실행에서 ① AF 메타모델 v0.4 가 생기면 신규 편입하며 관찰 중인 v0.3 를 함께 MERGE 하는지, ② 불교철학 유튜브 2편이 생겨 시리즈로 판단되는지, ③ 매일 생기는 HR 운영 명단이 빠짐없이 gated 처리되는지.
+## [2026-10-13] 인식 상태 표시 1단계 — 확인된 것과 해석한 것을 나눠 쓰기 시작 [ops/knowledge]
+
+### CSP_Taste_OKF 의 confirmed/inferred/unknown 구분을 위키 전체 규칙으로 도입
+
+- 무엇이 바뀌었나: `.claude/rules/epistemic-status.md` 를 신설했다. 세 가지 표시의 정의, 출처별 기본값, 승격 규칙(`CSP 확인 YYYY-MM-DD` 기록이 있어야 inferred → confirmed)을 담았다. CLAUDE.md §5 에는 frontmatter 필드 `generated`·`evidence` 와 표시 규칙을, Protocol 3 LINT 에는 표시율 보고와 "승격 기록 없는 confirmed" 점검을 추가했다. 링크 부스팅으로 깨져 있던 `templates/wiki-note.md` 는 확인/해석/모름 세 소절이 들어간 형식으로 복구했다. 시범으로 `vibe-coding`·`knowledge-capitalization` 두 편의 Compiled Truth 를 출처별로 나눴다. 삭제한 내용은 없다.
+- 왜 중요한가: 지금까지 Compiled Truth 는 CSP 의 말, 원문의 사실, AI 의 해석이 같은 목소리로 섞여 있었다. 그래서 AI 의 해석이 시간이 지나며 사실로 굳을 수 있었다. 시범 두 편에서만 이미 두 가지가 드러났다. `knowledge-capitalization` 의 정의는 누가 썼는지 알 수 없고, Timeline 이 말하는 `scripts/brain_build.py` 는 저장소에 존재하지 않는다.
+- 영향 범위: 앞으로 새로 만들거나 고치는 wiki/projects 문서. 기존 120 편은 소급하지 않는다. 기준선은 표시율 0% → 5.6%(2/36) 로 `_ops/lint-log.md` 에 기록했다. 별건으로, 7-27 링크 부스팅 손상이 wiki 25 편을 포함해 약 430 개 파일에 있음을 발견해 lint-log 에 기록했다.
+- 다음 확인: CSP 가 `knowledge-capitalization` 정의를 직접 썼는지 확인(→ confirmed 승격). 링크 부스팅 손상 일괄 복원을 별도 작업으로 할지 결정. 2단계(취향 묶음을 `personal/taste/` 에 비공개 편입)로 진행.
+## [2026-10-13] 취향 묶음 편입 (2단계) — personal/taste/ 비공개 영역 신설 [ops/knowledge]
+
+### OKF v1.0 + Taste Profile v1.2(HTML)를 비공개 마크다운 묶음 하나로 병합
+
+- 무엇이 바뀌었나: `personal/taste/` 를 새로 만들었다. 개념 9 편, 운영법, 색인, 출처 대장, 변경 이력이 들어 있다. 두 출처를 저장소 형식(Compiled Truth + 인식 상태 + Timeline)으로 병합했고 원본은 `_sources/` 에 보존했다. CSP 결정은 세 가지다. Taste Statement 는 v1.2 문장으로 확정했다. 이적은 교차 근거 2 건으로 [confirmed] 승격했다. 공개 위키 후보였던 `vibe-to-prompt-music` 은 이 묶음으로 옮겼다. `personal/` 은 `_config.yml` 과 지식 색인 생성기 두 곳에서 발행을 막았다. `.claude/rules/personal-taste.md`(외부 인용 금지, 첫 문장은 CSP가, 원자료 금지)도 신설했다.
+- 왜 중요한가: 취향은 언제든 고칠 수 있는 가설이어야 가치가 있다. 공개되는 순간 AI의 추정이 본인의 말로 읽히고, 고쳐 쓰기도 어려워진다. 같은 사람을 다른 창으로 본 두 문서를 한 곳으로 모았기 때문에 앞으로 서로 다른 말을 하지 않는다.
+- 영향 범위: 새 폴더 `personal/`, `_config.yml`, `_ops/scripts/gen_knowledge_index.py`, CLAUDE.md §3(폴더 구조·읽기/쓰기 표), 규칙 파일. 공개 위키는 변화 없음(PR #26 쪽에서 `vibe-to-prompt-music` 삭제를 별도로 반영).
+- 다음 확인: Pages 재발행 후 `personal/` 경로가 404인지, 지식 색인 문서 수에 포함되지 않았는지 확인. 첫 캡처 카드는 `inbox/taste/` 에 CSP 가 직접 쓴다.
 ## [2026-10-13] 링크 부스팅 손상 일괄 복원 — 487 개 파일, 1,089 줄 [ops/archive]
 
 ### 7-27 자동 링커가 망가뜨린 본문을 원래 문장으로 되돌림

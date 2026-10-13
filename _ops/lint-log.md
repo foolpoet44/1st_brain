@@ -4,6 +4,29 @@ type: Note
 
 status: Active
 
+## LINT-LOG: 2026-10-13 — 인식 상태 기준선 (1단계 도입)
+
+> `.claude/rules/epistemic-status.md` 도입 시점의 기준선. 앞으로 LINT 는 이 표와 비교해 보고한다.
+
+| 항목 | 도입 전 | 시범 적용 후 |
+| :-- | --: | --: |
+| wiki 문서 (`_index.md` 제외) | 122 | 122 |
+| Compiled Truth 구조 보유 | 36 | 36 |
+| 인식 상태 표시 보유 | 0 | 2 (`vibe-coding`, `knowledge-capitalization`) |
+| `generated` 기록 보유 | 0 | 2 |
+| 표시율 (표시 보유 / Compiled Truth 보유) | 0% | 5.6% |
+
+- 소급 일괄 표시는 하지 않는다. 새로 만들거나 Compiled Truth 를 고치는 문서부터 늘어난다.
+- 시범 2 편에서 나온 사실: `knowledge-capitalization` 의 정의·원칙은 이관 문서라 작성 주체가 [unknown]이고, Timeline 이 언급한 `scripts/brain_build.py` 는 저장소와 이력 어디에도 없다.
+
+### 별건 발견 — 링크 부스팅 손상 (수정 보류, CSP 확인 필요)
+
+- 2026-07-27 Hermes Agent 의 `chore: bulk update - Type assignment, link boosting` 커밋(`82164c3`) 계열이 단어 일부를 위키링크로 치환했다. 예: `Compiled Truth` → `Compiled T[[Understand-Anything/…|ru]]th`, `Table of Contents` → `Cont[[…]]ts`.
+- 영향: `[[Understand-Anything/understand-anything-plu` 문자열 보유 파일이 저장소 전체 약 430 개, 그중 `wiki/` 25 편, `projects/` 44, `outputs/` 55, `raw/` 241, `templates/` 3.
+- 조치: 이번에는 `templates/wiki-note.md` 만 복구했다(같은 커밋에서 새 필드를 넣느라 직접 다시 썼다). 나머지는 손상 이전 판본과 대조해 자동 복원할 수 있지만 범위가 커서 별도 작업으로 제안한다.
+
+---
+
 ## LINT-LOG: 2026-06-27 (wiki-scoped)
 
 > 대시보드 고아 탐지가 레포 전체를 스캔해 루트 스크래치 파일(`2605.md`, `KNOWLEDGE_PULSE.md` 등)을 오탐하던 문제를 발견. `wiki/`만 정밀 스캔하니 실제 구조적 부채가 드러남.
