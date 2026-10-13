@@ -21,7 +21,6 @@ tags: [index, wiki, concepts]
 ### AI & 워크플로우
 
 - [[vibe-coding|Vibe Coding]] — AI와 함께하는 흐름 코딩
-- [[vibe-to-prompt-music|Vibe를 프롬프트로]] — 음악 생성 AI 묘사 어휘
 - [[autonomous-factory|Autonomous Factory (자율공장)]] — 공정 지식을 검증 가능한 행동으로
 - [[work-network-data-governance|Work Network 데이터 정비 원칙]] — 원문·추출·확정 분리
 - [[ax-internalization|AX Internalization (AI Transformation)]]
