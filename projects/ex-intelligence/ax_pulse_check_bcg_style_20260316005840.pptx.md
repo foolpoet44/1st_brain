@@ -9,7 +9,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <!-- Slide number: 1 -->
 
-![pre[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]coded.png](Image0.jpg)
+![preencoded.png](Image0.jpg)
 1
 LG PRI
 
@@ -195,7 +195,7 @@ NLP 감성 분석 및
 
 Front-End / LG EP SSO
 
-Supabase / Postgre[[Understand-Anything/understand-anything-plugin/skills/understand/languages/sql.md|sql]]
+Supabase / PostgreSQL
 
 Sentiment Model / Edge Function
 
@@ -621,7 +621,7 @@ LG PRI HR Intelligence Report
 
 NOW
 1월
-1월[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ja.md|ja]]n
+1월Jan
 2월
 2월Feb
 3월

@@ -7,7 +7,7 @@ processed_date: 2026-09-30
 processed_note: "stage-a already_reflected → wiki/concepts/fde-talent-model.md"
 ---
 
-# 현장의 해결사, FDE(Field Deploym[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/[[open-design/[[Understand-Anything/understand-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]s/[[AGENTS.md|AGENTS]].md|AGENTS]]/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]t Engineer) 인재 모델
+# 현장의 해결사, FDE(Field Deployment Engineer) 인재 모델
 
 ## 1. AX의 환상과 현실의 간극
 

@@ -9,12 +9,12 @@ type: Resource
 ### Extracted Code (bash)
 
 ```bash
-# [[CLAUDE.md|CLAUDE]] Code settings.json에 추가
+# Claude Code settings.json에 추가
 export ANTHROPIC_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export ANTHROPIC_API_KEY=sk-your-dashscope-key
 
 # 또는 claude code 실행 시
-claude --model qw[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]3-coder-480b-a35b-inst[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]ct
+claude --model qwen3-coder-480b-a35b-instruct
 ```
 
 ### Extracted Code (text)

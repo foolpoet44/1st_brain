@@ -2,9 +2,9 @@
 type: Resource
 ---
 
-﻿# Extracted [[Understand-Anything/understand-anything-plugin/hooks/auto-update-prompt.md|auto-update-prompt]] [[projects/worldmonitor/docs/user-requests.md|user-requests]] Conv: def84761-820a-4f4d-9ba6-3a3c51fb647a
+﻿# Extracted Knowledge from Conv: def84761-820a-4f4d-9ba6-3a3c51fb647a
 
-**[[projects/worldmonitor/todos/057-pending-p3-framework-selector-id-collision-datestamp.md|057-pending-p3-framework-selector-id-collision-datestamp]]**: 2026-01-27T09:36:57.477415Z
+**Date**: 2026-01-27T09:36:57.477415Z
 
 ### Extracted Code (text)
 

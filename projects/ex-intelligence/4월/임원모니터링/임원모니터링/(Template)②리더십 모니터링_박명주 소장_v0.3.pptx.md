@@ -220,7 +220,7 @@ L&P Task
 김은한 선임
 [레이저기술파트]
 
-[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/ja.md|ja]]nss[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]] Stefan 책임
+Janssen Stefan 책임
 이태호 책임
 한정윤 연구원
 

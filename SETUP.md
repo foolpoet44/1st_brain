@@ -3,7 +3,7 @@ type: Note
 ---
 
 status: Active
-# [[SETUP.md|SETUP]]
+# CSP-Brain Setup Guide
 
 > MacBook Air M5에서 처음부터 세팅하는 가이드
 
@@ -16,7 +16,7 @@ status: Active
 # https://obsidian.md 에서 다운로드
 
 # 2. csp-brain 폴더를 다운로드한 위치 확인
-# ([[CLAUDE.md|CLAUDE]].ai에서 다운로드한 zip을 풀어서)
+# (claude.ai에서 다운로드한 zip을 풀어서)
 # 추천 위치: ~/csp-brain
 
 # 3. Obsidian 실행 → "Open folder as vault" → ~/csp-brain 선택
@@ -69,7 +69,7 @@ git commit -m "init: csp-brain v2.0 — obsidian hybrid"
 # https://github.com/new
 # 이름: csp-brain
 # Visibility: Private
-# [[README.md|README]] 초기화 체크 해제!
+# README 초기화 체크 해제!
 
 # 리모트 연결 & 푸시
 git remote add origin https://github.com/[YOUR-USERNAME]/csp-brain.git

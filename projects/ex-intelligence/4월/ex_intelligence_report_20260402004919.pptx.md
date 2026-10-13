@@ -41,10 +41,10 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <!-- Slide number: 8 -->
 
-![pre[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]coded.png](Image0.jpg)
+![preencoded.png](Image0.jpg)
 
 ![preencoded.png](Image1.jpg)
-[[projects/ex-intelligence/README.md|README]]
+EX Intelligence
 LG PRI EXG팀 · 2026
 
 Working Backwards Essay

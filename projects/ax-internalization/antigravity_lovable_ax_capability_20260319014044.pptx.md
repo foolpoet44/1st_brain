@@ -9,7 +9,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 
 <!-- Slide number: 1 -->
 
-![pre[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]coded.png](Image0.jpg)
+![preencoded.png](Image0.jpg)
 Part 02
 AX Strategy & Roadmap
 
@@ -55,7 +55,7 @@ CSP 개인 프로젝트 워크플로우
 ![preencoded.png](Image6.jpg)
 
 ![preencoded.png](Image13.jpg)
-[[CLAUDE.md|CLAUDE]] Code
+Claude Code
 
 Backend & Core
 활용 영역
@@ -510,7 +510,7 @@ Account Management
 보안 수칙 체크리스트
 
 ![preencoded.png](Image14.jpg)
-Antigravity의 [[GEMINI.md|GEMINI]] 3 Pro 한도 관리 및 동기화를 위해 개인 Gmail 계정을 교육용으로 활용합니다.
+Antigravity의 Gemini 3 Pro 한도 관리 및 동기화를 위해 개인 Gmail 계정을 교육용으로 활용합니다.
 ANTIGRAVITY_SECURITY_GUIDELINES
 CONFIDENTIAL
 

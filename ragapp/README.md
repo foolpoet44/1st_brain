@@ -3,7 +3,7 @@ type: Note
 status: Active
 ---
 
-## Single RAGApp deploym[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t
+## Single RAGApp deployment
 
 ## Features
 
@@ -17,7 +17,7 @@ MODEL=llama3 docker-compose up
 
 If you don't specify the `MODEL` variable, the default model used is `phi3`, which is less capable than `llama3` but faster to download.
 
-> _Note_: The `[[SETUP.md|SETUP]]` container in the `docker-compose.yml` file will download the selected model into the [`ollama`](./ollama/) folder - this will take a few minutes.
+> _Note_: The `setup` container in the `docker-compose.yml` file will download the selected model into the [`ollama`](./ollama/) folder - this will take a few minutes.
 
 #### Add tracking script:
 
@@ -25,7 +25,7 @@ To track user sessions on the chat, you can add any tracking script to the chat 
 Example, using [Clarity](https://clarity.microsoft.com/):
 
 ```shell
-TRACKING_SNIPPET='<script type="text/[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ja.md|ja]]vascript">
+TRACKING_SNIPPET='<script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;

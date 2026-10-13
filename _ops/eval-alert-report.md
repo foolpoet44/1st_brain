@@ -41,7 +41,7 @@ Eval Score = Link(0.6) + Freshness(0.53) + Type(20.0) + Active(0.07) = 21.2
 2. 일괄 frontmatter 추가 스크립트 실행
 3. wikilink 자동 생성
 
-```[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/python.md|python]]
+```python
 # 매핑 규칙 예시
 dir_type_map = {
     'inbox/': 'Note',
@@ -62,7 +62,7 @@ dir_type_map = {
 **접근법**:
 
 1. 최근 30 일 수정 문서에 `status: Active` 추가
-2. 주요 MOC (Map of Cont[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]t) 문서 생성
+2. 주요 MOC (Map of Content) 문서 생성
 3. 데일리 노트 자동 연결
 
 ### 3 단계: 링크 밀도 향상 (우선순위: 하)

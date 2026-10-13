@@ -9,13 +9,13 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]-name/
+skill-name/
 ├── SKILL.md (필수)
 │   ├── YAML 메타데이터 (name, description)
 │   └── Markdown 사용 설명서
 └── 번들 리소스 (선택)
     ├── scripts/      - 실행 가능한 코드 (Python/Bash)
-    ├── refer[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ces/   - 참조 문서
+    ├── references/   - 참조 문서
     └── assets/       - 출력에 사용되는 파일 (템플릿, 아이콘 등)
 ```
 
