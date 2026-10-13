@@ -15,7 +15,7 @@ HR 임원의
 높이는 전략
 EX
 
-INTELLIG[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/en.md|en]]CE
+INTELLIGENCE
 ORGANIZATIONAL DECISION SYSTEM
 
 "결정이 필요한 사람에게, 필요한 정보를, 필요한 시점에"
@@ -30,7 +30,7 @@ LG PRI EXG팀 | 4월 킥오프 승인 보고 | 2026년 3월
 CIA 메타포 — 구조적 동형성이 설득의 근거다
 LG PRI EXG팀
 
-핵심 메시지 CIA의 핵심 철학 '수집 → 분석 → 브리핑'은 [[projects/ex-intelligence/README.md|README]]의 작동 원리와 문자 그대로 동일하다 — 이것은 비유가 아니라 설명이다
+핵심 메시지 CIA의 핵심 철학 '수집 → 분석 → 브리핑'은 EX Intelligence의 작동 원리와 문자 그대로 동일하다 — 이것은 비유가 아니라 설명이다
 CIA 정보 체계
 EX Intelligence 체계
 

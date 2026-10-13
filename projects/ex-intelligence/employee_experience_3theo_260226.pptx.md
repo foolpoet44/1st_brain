@@ -12,7 +12,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 EX
 2026
 직원경험
-(Employee Experi[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce) 3대 핵심이론
+(Employee Experience) 3대 핵심이론
 
 ![preencoded.png](Image3.jpg)
 
@@ -59,7 +59,7 @@ WHO
 
 ![preencoded.png](Image5.jpg)
 동일한 환경에서도 경험이 달라지는 이유 설명
-Ref: Deloitte Global Human Capital Trends (2016-2017), [[Understand-Anything/understand-anything-plugin/skills/understand/locales/ja.md|ja]]cob Morgan (2017)
+Ref: Deloitte Global Human Capital Trends (2016-2017), Jacob Morgan (2017)
 
 ![preencoded.png](Image6.jpg)
 03
@@ -87,7 +87,7 @@ HOW
 THEORY 01
 
 자기결정이론 (Self-Determination Theory)
-Source: Deci & Ryan (1985, 2000) / [[Understand-Anything/understand-anything-plugin/skills/understand/locales/zh.md|zh]]ang et al. (2025)
+Source: Deci & Ryan (1985, 2000) / Zhang et al. (2025)
 Intrinsic Motivation
 
 ![preencoded.png](Image0.jpg)
