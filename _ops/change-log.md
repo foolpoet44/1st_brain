@@ -4143,3 +4143,13 @@ status: Active
 4. sync_brain.sh 실행으로 Git 동기화
 
 ---
+
+---
+## [2026-10-13] 인식 상태 표시 1단계 — 확인된 것과 해석한 것을 나눠 쓰기 시작 [ops/knowledge]
+
+### CSP_Taste_OKF 의 confirmed/inferred/unknown 구분을 위키 전체 규칙으로 도입
+
+- 무엇이 바뀌었나: `.claude/rules/epistemic-status.md` 를 신설했다. 세 가지 표시의 정의, 출처별 기본값, 승격 규칙(`CSP 확인 YYYY-MM-DD` 기록이 있어야 inferred → confirmed)을 담았다. CLAUDE.md §5 에는 frontmatter 필드 `generated`·`evidence` 와 표시 규칙을, Protocol 3 LINT 에는 표시율 보고와 "승격 기록 없는 confirmed" 점검을 추가했다. 링크 부스팅으로 깨져 있던 `templates/wiki-note.md` 는 확인/해석/모름 세 소절이 들어간 형식으로 복구했다. 시범으로 `vibe-coding`·`knowledge-capitalization` 두 편의 Compiled Truth 를 출처별로 나눴다. 삭제한 내용은 없다.
+- 왜 중요한가: 지금까지 Compiled Truth 는 CSP 의 말, 원문의 사실, AI 의 해석이 같은 목소리로 섞여 있었다. 그래서 AI 의 해석이 시간이 지나며 사실로 굳을 수 있었다. 시범 두 편에서만 이미 두 가지가 드러났다. `knowledge-capitalization` 의 정의는 누가 썼는지 알 수 없고, Timeline 이 말하는 `scripts/brain_build.py` 는 저장소에 존재하지 않는다.
+- 영향 범위: 앞으로 새로 만들거나 고치는 wiki/projects 문서. 기존 120 편은 소급하지 않는다. 기준선은 표시율 0% → 5.6%(2/36) 로 `_ops/lint-log.md` 에 기록했다. 별건으로, 7-27 링크 부스팅 손상이 wiki 25 편을 포함해 약 430 개 파일에 있음을 발견해 lint-log 에 기록했다.
+- 다음 확인: CSP 가 `knowledge-capitalization` 정의를 직접 썼는지 확인(→ confirmed 승격). 링크 부스팅 손상 일괄 복원을 별도 작업으로 할지 결정. 2단계(취향 묶음을 `personal/taste/` 에 비공개 편입)로 진행.
