@@ -45,7 +45,7 @@ type: Resource
 │
 ├─ 📂 00. 앱 자동 폴더/ (디폴트 폴더 구역)
 │  ├─ Zoom/ (Zoom 녹화/파일 자동 저장)
-│  ├─ [[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]ogle Meet 녹화본/ (있다면)
+│  ├─ Google Meet 녹화본/ (있다면)
 │  └─ 기타 앱 폴더/
 │
 ├─ 📂 1. 프로젝트/
@@ -89,7 +89,7 @@ type: Resource
 │     ├─ deps/
 │     ├─ .bin/
 │     ├─ src/
-│     ├─ compon[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ts/
+│     ├─ components/
 │     ├─ hooks/
 │     ├─ pages/
 │     ├─ services/
@@ -132,5 +132,5 @@ pip install -r requirements.txt
 # 2. Google Cloud Console에서 credentials.json 다운로드
 
 # 3. 실행
-[[Understand-Anything/understand-anything-plugin/skills/understand/languages/python.md|python]] organize_drive.py
+python organize_drive.py
 ```

@@ -8,7 +8,7 @@ status: Active
 tags: [archive, conversation]
 ---
 
-# Op[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]Claw gateway port conflict resolution
+# OpenClaw gateway port conflict resolution
 
 **날짜**: 2026-04-03 23:58
 
@@ -34,7 +34,7 @@ If the gateway is supervised, stop it with: openclaw gateway stop
 2026-04-03T23:55:57.256Z - Another process is listening on this port.
 Error: exit status 1
 
-## [[CLAUDE.md|CLAUDE]] (Message 2)
+## Claude (Message 2)
 
 이 에러를 분석해보면, 핵심 문제는 하나입니다. **포트 18789가 이미 사용 중**이에요.
 
@@ -301,7 +301,7 @@ PPID가 `1` — 즉 **init(launchd) 자식 프로세스**예요. launchd가 직�
 숨겨진 plist 파일을 직접 찾아봅시다:
 
 ```bash
-find ~/Library/Launch[[AGENTS.md|AGENTS]] -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
+find ~/Library/LaunchAgents -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
 find /Library/LaunchAgents -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
 find /Library/LaunchDaemons -name "*openclaw*" -o -name "*moltbot*" -o -name "*gateway*" 2>/dev/null
 ```

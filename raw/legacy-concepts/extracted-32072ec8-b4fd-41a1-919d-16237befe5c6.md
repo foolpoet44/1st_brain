@@ -9,7 +9,7 @@ type: Resource
 ### Extracted Code (text)
 
 ```text
-[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]]ContextLoader.ts → src/lib/
+skillContextLoader.ts → src/lib/
 route.ts              → src/app/api/chat/
-ChatWidget.tsx        → src/compon[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ts/
+ChatWidget.tsx        → src/components/
 ```

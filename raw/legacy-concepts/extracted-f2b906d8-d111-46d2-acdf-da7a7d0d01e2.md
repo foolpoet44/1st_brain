@@ -13,13 +13,13 @@ type: Resource
 │              Orchestrator (Node.js / Python)         │
 │                                                      │
 │  ┌──────────┐    limit    ┌───────────────────────┐  │
-│  │ [[CLAUDE.md|CLAUDE]]   │ ──detected──▶  Model Router          │  │
+│  │ Claude   │ ──detected──▶  Model Router          │  │
 │  │  Code    │             │  (Fallback Manager)   │  │
 │  │ (Primary)│             └───────────┬───────────┘  │
 │  └──────────┘                         │              │
 │                          ┌────────────▼────────────┐ │
 │                          │  Free / Alt Models      │ │
-│                          │  - [[GEMINI.md|GEMINI]] 2.0 Flash     │ │
+│                          │  - Gemini 2.0 Flash     │ │
 │                          │  - Ollama (local)       │ │
 │                          │  - Groq (free tier)     │ │
 │                          └─────────────────────────┘ │
@@ -45,7 +45,7 @@ run_with_fallback() {
   exit_code=$?
 
   # Rate limit 감지 (exit code 또는 stderr 패턴)
-  if echo "$result" | grep -q "rate_limit\|usage_limit\|529\|overloaded"; th[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]
+  if echo "$result" | grep -q "rate_limit\|usage_limit\|529\|overloaded"; then
     echo "[FALLBACK] Switching to $FALLBACK_MODEL..."
     result=$(claude --model $FALLBACK_MODEL -p "$prompt" 2>&1)
     exit_code=$?

@@ -10,7 +10,7 @@ status: Active
 ```
 raw/archive/
 ├── conversations/    ← 원본 JSON 파일 (483 개, 114MB)
-├── md/               ← 변환된 [[Understand-Anything/understand-anything-plugin/skills/understand/languages/markdown.md|markdown]] 파일 (483 개)
+├── md/               ← 변환된 Markdown 파일 (483 개)
 │   ├── 2024/         ← 2024 년 대화
 │   ├── 2025/         ← 2025 년 대화
 │   └── 2026/         ← 2026 년 대화
@@ -27,7 +27,7 @@ raw/archive/
 
 각 Markdown 파일은 다음 구조를 가집니다:
 
-```[[Understand-Anything/understand-anything-plugin/skills/understand/languages/yaml.md|yaml]]
+```yaml
 ---
 title: [대화 제목]
 date: YYYY-MM-DD
@@ -46,7 +46,7 @@ tags: [archive, conversation]
 ## Human (Message 1)
 [내용]
 
-## [[CLAUDE.md|CLAUDE]] (Message 2)
+## Claude (Message 2)
 [내용]
 
 ---

@@ -10,7 +10,7 @@ processed: true
 
 # EX Insight Mining Pipeline — 설계서
 
-귀납적 의미 클러스터링 × 연역적 프레임워크 평정의 교차 분석 BP Signal Intellig[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce의 **Triage 모듈**로 끼워지는 텍스트 인사이트 발굴 엔진
+귀납적 의미 클러스터링 × 연역적 프레임워크 평정의 교차 분석 BP Signal Intelligence의 **Triage 모듈**로 끼워지는 텍스트 인사이트 발굴 엔진
 
 ## 0\. 이 문서의 자리
 
@@ -231,7 +231,7 @@ create table ex_insights (
 ## 5\. Triage 에이전트 통합 (상위 명세서 §4.3 확장)
 
 ```
-# [[AGENTS.md|AGENTS]]/triage_agent.md (발췌)
+# agents/triage_agent.md (발췌)
 - 트리거: status = triaged_pending
 - 호출: EX Insight Mining Pipeline (단계 ①~⑥)
 - 판단 골자:
