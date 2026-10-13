@@ -109,3 +109,16 @@ status: Active
 - 조치:
   - 변경 가시성 로그와 weekly/dashboard는 정상 작동 확인
   - 고립 문서와 `dev/` 폴더는 별도 정리 대상으로 보류
+
+---
+
+## LINT-LOG: 2026-10-13 — 링크 부스팅 손상 일괄 복원
+
+> 2026-07-27 Hermes Agent 의 링크 부스터(`fecec41`·`82164c3`·`7a51a3e`·`694e697`)가 본문 문자열을 무관한 파일 링크로 바꾼 손상을 CSP 결정으로 일괄 복원했다.
+
+- **손상의 모양.** 단어 일부를 링크로 치환(`Compiled Truth` → `Compiled T[[…ru.md|ru]]th`, `www.notion.so` → `www.[[wiki/tools/notion.md|notion]].so`)했다. 대소문자도 바꿨다(`Claude` → `[[CLAUDE.md|CLAUDE]]`, `skill_manage` → `SKILL_manage`). 제목 줄 전체를 자기 링크로 덮기도 했다(`# SOUL.md - The Synaptic Orchestrator…` → `# [[SOUL.md|SOUL]]`). 그래서 링크를 푸는 것만으로는 원문이 돌아오지 않는다.
+- **복원 방법.** 손상 커밋이 바꾼 줄을 직전 판본의 줄과 짝지어 "손상 줄 → 원래 줄" 사전(965 쌍)을 만들었다. 그 뒤 현재 파일에서 손상 줄과 정확히 같은 줄만 되돌렸다(`scripts/restore_link_boost_lines.py`). 이후에 정상적으로 편집되어 사전과 어긋난 줄은 링크만 풀었다(`scripts/restore_link_boost_unwrap.py`). 원본이 없는 파일 몇 개는 사람이 줄 단위로 고쳤다.
+- **결과.** 487 개 파일, 1,089 줄 복원. 손상 커밋 외에는 손대지 않은 파일 442 개는 손상 이전 판본의 줄이 **하나도 빠짐없이** 돌아왔다(검산 442/442). 부스터가 함께 넣은 `type`/`status` 머리말 정보는 정당한 변경이라 유지했다.
+- **의도적으로 남긴 것.** 손상을 *설명하는* 기록(`_ops/bridge-log.md` 675 행, `_ops/change-log.md`, `scripts/fix_wikilinks.py` 주석, 저녁 성찰 인용)은 원문 그대로 두었다. `templates/wiki-note.md` 는 PR #28 에서 새로 쓰므로 제외했다.
+- **원문을 알 수 없어 추정한 곳 (3 곳).** `inbox/notes/2026-07-14.md` 제목은 처음부터 손상된 채 만들어져 "README 생성 SKILL"로, `무제.md` 의 URL 은 `claude.ai` 로, `변재민 등.md` 711 행의 `SKILLii` 는 대소문자를 알 수 없어 그대로 두었다.
+- **덤으로 확인한 것.** 첫 시도의 보조 스크립트가 `git ls-files` 를 그대로 읽어 한글 이름 파일을 전부 건너뛰었다. 10-11 저녁 성찰이 지적한 것과 같은 함정이다. `-z` 옵션으로 고쳤다.

@@ -12,11 +12,11 @@ status: Active
 
 | 카테고리          | 문서 수 |
 | ----------------- | ------- |
-| Uncate[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/languages/go.md|go]]rized     | 138     |
+| Uncategorized     | 138     |
 | Pulse_EX          | 81      |
 | Strategy_Planning | 57      |
 | AX_DX             | 46      |
-| Refer[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce         | 16      |
+| Reference         | 16      |
 | HR_Data           | 10      |
 | Weekly_Report     | 4       |
 | Meeting_Notes     | 3       |

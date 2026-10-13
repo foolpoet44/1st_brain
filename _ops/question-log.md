@@ -3,9 +3,9 @@ type: Note
 status: Active
 ---
 
-[[open-[[open-design/plugins/_official/design-systems/apple/DESIGN.md|DESIGN]]/specs/current/status.md|status]]: Active
+status: Active
 
-# [[_ops/question-log.md|question-log]]
+# Question Log
 
 위키 기반 질문과 답변 기록입니다.
 
