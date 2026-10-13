@@ -112,6 +112,7 @@ Use kebab-case: `my-note-title.md`. One note per file.
 - Add or modify relationships without breaking existing wikilinks.
 - Create and edit saved views in `views/`.
 - Update `AGENTS.md` only when the user asks for vault-level guidance changes.
+- When writing the Evening Reflect (`outputs/daily-reflect/REFLECT_YYYY-MM-DD.md`), follow `.claude/rules/evening-reflect-writing.md`: the reader is a non-developer, so start with three plain-language summary lines, keep the main body under 3,000 characters with no commit hashes, commands, function names or rule codes, and move all technical evidence to a closing 「기술 부록」 section. This overrides any other reflect style guidance.
 
 ## What agents should avoid
 

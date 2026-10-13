@@ -31,3 +31,4 @@ type: Meeting
 - `digest` → 주간 다이제스트 생성
 - `sync` → Notion 양방향 연동
 - `generate` → 콘텐츠 자동 생성
+- `reflect` → 저녁 성찰 — 문체는 `evening-reflect-writing.md` (비개발자 독자 기준)
