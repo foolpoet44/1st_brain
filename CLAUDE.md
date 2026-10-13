@@ -108,6 +108,9 @@ csp-brain/                     ← Obsidian Vault Root = Git Repo Root
 │   ├── drafts/                ← 초안 (보고서, 에세이)
 │   └── weekly/                ← 주간 다이제스트
 │
+├── personal/                  ← 🔒 개인 영역. Pages·지식 색인 발행 제외
+│   └── taste/                 ← 취향 묶음 (personal-taste 규칙)
+│
 ├── _ops/                      ← 운영 메타데이터 (로그)
 ├── templates/                 ← 옵시디언/생성용 템플릿
 └── scripts/                   ← 자동화 스크립트
@@ -122,6 +125,7 @@ csp-brain/                     ← Obsidian Vault Root = Git Repo Root
 | projects/ | ✅ Timeline에 메모 추가 가능 | ✅ Compiled Truth 갱신 |
 | outputs/  | ✅ 읽기                      | ✅ 생성                |
 | \_ops/    | ❌                           | ✅ 로그 기록           |
+| personal/ | ✅ 직접 수정·확인            | ✅ 정리·병합 (외부 인용 금지) |
 | CLAUDE.md | ❌                           | ✅ 유지보수            |
 
 ---

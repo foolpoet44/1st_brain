@@ -4143,3 +4143,13 @@ status: Active
 4. sync_brain.sh 실행으로 Git 동기화
 
 ---
+
+---
+## [2026-10-13] 취향 묶음 편입 (2단계) — personal/taste/ 비공개 영역 신설 [ops/knowledge]
+
+### OKF v1.0 + Taste Profile v1.2(HTML)를 비공개 마크다운 묶음 하나로 병합
+
+- 무엇이 바뀌었나: `personal/taste/` 를 새로 만들었다. 개념 9 편, 운영법, 색인, 출처 대장, 변경 이력이 들어 있다. 두 출처를 저장소 형식(Compiled Truth + 인식 상태 + Timeline)으로 병합했고 원본은 `_sources/` 에 보존했다. CSP 결정은 세 가지다. Taste Statement 는 v1.2 문장으로 확정했다. 이적은 교차 근거 2 건으로 [confirmed] 승격했다. 공개 위키 후보였던 `vibe-to-prompt-music` 은 이 묶음으로 옮겼다. `personal/` 은 `_config.yml` 과 지식 색인 생성기 두 곳에서 발행을 막았다. `.claude/rules/personal-taste.md`(외부 인용 금지, 첫 문장은 CSP가, 원자료 금지)도 신설했다.
+- 왜 중요한가: 취향은 언제든 고칠 수 있는 가설이어야 가치가 있다. 공개되는 순간 AI의 추정이 본인의 말로 읽히고, 고쳐 쓰기도 어려워진다. 같은 사람을 다른 창으로 본 두 문서를 한 곳으로 모았기 때문에 앞으로 서로 다른 말을 하지 않는다.
+- 영향 범위: 새 폴더 `personal/`, `_config.yml`, `_ops/scripts/gen_knowledge_index.py`, CLAUDE.md §3(폴더 구조·읽기/쓰기 표), 규칙 파일. 공개 위키는 변화 없음(PR #26 쪽에서 `vibe-to-prompt-music` 삭제를 별도로 반영).
+- 다음 확인: Pages 재발행 후 `personal/` 경로가 404인지, 지식 색인 문서 수에 포함되지 않았는지 확인. 첫 캡처 카드는 `inbox/taste/` 에 CSP 가 직접 쓴다.
