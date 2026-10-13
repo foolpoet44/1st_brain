@@ -19,6 +19,8 @@ status: Active
 - 소급 일괄 표시는 하지 않는다. 새로 만들거나 Compiled Truth 를 고치는 문서부터 늘어난다.
 - 시범 2 편에서 나온 사실: `knowledge-capitalization` 의 정의·원칙은 이관 문서라 작성 주체가 [unknown]이고, Timeline 이 언급한 `scripts/brain_build.py` 는 저장소와 이력 어디에도 없다.
 
+- **2026-10-13 갱신**: `autonomous-factory`·`work-network-data-governance` 에 표시 적용 → 표시 보유 4 / Compiled Truth 보유 40 = **10.0%** (PR #26 편입 2 편 추가, `vibe-to-prompt-music` 은 비공개 묶음으로 이전).
+
 ### 별건 발견 — 링크 부스팅 손상 (수정 보류, CSP 확인 필요)
 
 - 2026-07-27 Hermes Agent 의 `chore: bulk update - Type assignment, link boosting` 커밋(`82164c3`) 계열이 단어 일부를 위키링크로 치환했다. 예: `Compiled Truth` → `Compiled T[[Understand-Anything/…|ru]]th`, `Table of Contents` → `Cont[[…]]ts`.
