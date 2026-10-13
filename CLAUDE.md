@@ -109,6 +109,9 @@ csp-brain/                     ← Obsidian Vault Root = Git Repo Root
 │   ├── drafts/                ← 초안 (보고서, 에세이)
 │   └── weekly/                ← 주간 다이제스트
 │
+├── personal/                  ← 🔒 개인 영역. Pages·지식 색인 발행 제외
+│   └── taste/                 ← 취향 묶음 (personal-taste 규칙)
+│
 ├── _ops/                      ← 운영 메타데이터 (로그)
 ├── templates/                 ← 옵시디언/생성용 템플릿
 └── scripts/                   ← 자동화 스크립트
@@ -123,6 +126,7 @@ csp-brain/                     ← Obsidian Vault Root = Git Repo Root
 | projects/ | ✅ Timeline에 메모 추가 가능 | ✅ Compiled Truth 갱신 |
 | outputs/  | ✅ 읽기                      | ✅ 생성                |
 | \_ops/    | ❌                           | ✅ 로그 기록           |
+| personal/ | ✅ 직접 수정·확인            | ✅ 정리·병합 (외부 인용 금지) |
 | CLAUDE.md | ❌                           | ✅ 유지보수            |
 
 ---
@@ -202,8 +206,14 @@ type: concept | framework | tool | project | decision | signal
 status: seed | growing | mature | archived
 tags: [관련태그]
 aliases: [대체명칭]
+generated: {by: ai-assisted-ingest | csp | legacy-migration | unknown, at: YYYY-MM-DD}
+evidence: confirmed | mixed | inferred
 ---
 ```
+
+### 인식 상태 표시 (2026-10-13)
+
+Compiled Truth의 소절이나 문장에 `[confirmed]`(CSP 직접 진술·원문 확인) · `[inferred]`(AI 해석·연결·추정) · `[unknown]`(근거 부족)을 붙인다. `inferred`는 Timeline에 `CSP 확인 YYYY-MM-DD` 한 줄이 생기기 전에는 `confirmed`로 올리지 않는다. 새로 만들거나 Compiled Truth를 고치는 문서부터 적용하고, 기존 문서는 일괄 소급하지 않는다. INGEST도 이 규칙의 출처별 기본값을 따른다. 상세는 `.claude/rules/epistemic-status.md`.
 
 ### 백링크 규칙
 
@@ -283,8 +293,10 @@ Google Drive(내 드라이브)는 원본 창고이고, Vault에는 마크다운 
 2. Compiled Truth가 6주 이상 갱신 안 된 문서 찾기
 3. 모순되는 정보가 있는 문서 쌍 찾기
 4. frontmatter 누락/불일치 찾기
-5. 결과를 _ops/lint-log.md에 기록
-6. 수정 제안을 CSP에게 보고
+5. 인식 상태: Compiled Truth 보유 문서 중 표시가 있는 비율, generated/evidence 기록 비율 보고
+6. AI 대화·AI 해석이 출처인데 [confirmed]로 적힌 문장 찾기 (승격 기록 없는 confirmed)
+7. 결과를 _ops/lint-log.md에 기록
+8. 수정 제안을 CSP에게 보고
 ```
 
 ### Protocol 4: DIGEST — 주간 다이제스트

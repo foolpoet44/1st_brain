@@ -31,6 +31,8 @@ NOPUBLISH_DIRS = {
     "Understand-Anything", "open-design", "temp_skill", "tmp_deploy",
     # vault 복제본 · 미처리 원자료
     "dev", "dev2", "sync", "syncs", "sy", "raw", "inbox",
+    # 개인 영역 (취향 묶음 등) — 절대 발행하지 않음
+    "personal",
     # 코드 · 앱 (지식 문서 아님)
     "Toss", "ragapp", "harness",
     # 템플릿(플레이스홀더 {{ }}) · 사고 로그
