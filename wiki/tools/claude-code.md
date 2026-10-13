@@ -8,9 +8,9 @@ tags: [ai, tool, coding]
 aliases: []
 ---
 
-# [[CLAUDE.md|CLAUDE]] Code
+# Claude Code
 
-## Compiled T[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]th
+## Compiled Truth
 
 Anthropic 의 Claude 모델과 연동된 CLI 기반 코딩 에이전트.
 

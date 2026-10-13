@@ -8,7 +8,7 @@ tags: [documentation, workflow]
 aliases: [컴파일드 트루스, 타임라인]
 ---
 
-# Compiled T[[Understand-Anything/understand-anything-plu[[Understand-Anything/understand-anything-plugin/skills/understand/frameworks/gin.md|gin]]/skills/understand/locales/ru.md|ru]]th + Timeline
+# Compiled Truth + Timeline
 
 ## Compiled Truth
 
@@ -22,7 +22,7 @@ aliases: [컴파일드 트루스, 타임라인]
 
 **Timeline:**
 
-- app[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]d-only 증거 기록
+- append-only 증거 기록
 - 절대 삭제하거나 수정하지 않음
 - "어떻게 여기까지 왔는가"
 
