@@ -7,7 +7,7 @@ status: Active
 tags: [daily, change-sensing]
 ---
 
-# [[[[open-design/specs/current/skills-and-design-[[open-design/plugins/_official/examples/html-ppt/references/full-decks.md|full-decks]].md|skills-and-design-templates]]/daily-note.md|daily-note]]
+# {{date}}
 
 ## 오늘 새로 들어온 것
 

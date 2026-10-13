@@ -7,15 +7,15 @@ category: Knowledge_Base
 tags: [auto_generated, zavis_brain, continuous_sync]
 ---
 
-<!-- [[open-design/plugins/_official/examples/simple-deck/references/layouts.md|layouts]] number: 1 -->
+<!-- Slide number: 1 -->
 
 ![](Picture2.jpg)
 
-<!-- [[open-design/design-templates/simple-deck/references/layouts.md|layouts]] number: 2 -->
+<!-- Slide number: 2 -->
 
 ![](Picture2.jpg)
 
-<!-- [[open-design/design-templates/guizang-ppt/README.en.md|README.en]] number: 3 -->
+<!-- Slide number: 3 -->
 
 ![](Picture2.jpg)
 

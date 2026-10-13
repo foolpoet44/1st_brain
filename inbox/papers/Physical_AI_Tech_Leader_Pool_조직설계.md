@@ -16,7 +16,7 @@ processed: true
 
 # **1. 목표 및 전제**
 
-[[Understand-Anything[[Understand-Anything/understand-anything-plugin/skills/understand/SKILL.md|SKILL]]-anything-plugin/skills/understand-knowledge/SKILL.md|SKILL]] Ontology(ESCO 기반 커스터마이징)를 활용해 Physical AI 영역의 사내 인재 30명을 LV3(숙련) 이상으로 육성하는 것이 목표입니다. 외부 채용 없이 100% 내부 인원의 리스킬링으로 확보하며, 이 문서는 Pool 내부의 헤드카운트·구조·시퀀싱·예산만 다룹니다 (Pool을 관장하는 상위 조직/리더십 설계는 범위 밖).
+Skill Ontology(ESCO 기반 커스터마이징)를 활용해 Physical AI 영역의 사내 인재 30명을 LV3(숙련) 이상으로 육성하는 것이 목표입니다. 외부 채용 없이 100% 내부 인원의 리스킬링으로 확보하며, 이 문서는 Pool 내부의 헤드카운트·구조·시퀀싱·예산만 다룹니다 (Pool을 관장하는 상위 조직/리더십 설계는 범위 밖).
 
 **전제 조건**
 
@@ -40,7 +40,7 @@ processed: true
 
 |                                                    트랙                                                     |    LV3    | LV4 | LV5 | 합계 |
 | :---------------------------------------------------------------------------------------------------------: | :-------: | :-: | :-: | :--: | --- |
-| ① 인지·센싱 (Perception & S[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md | en]]sing) |  4  |  1  |  1   | 6   |
+| ① 인지·센싱 (Perception & Sensing) |  4  |  1  |  1   | 6   |
 |                                  ② 제어·구동 (Motion Control & Actuation)                                   |     4     |  2  |  0  |  6   |
 |                             ③ 시뮬레이션·디지털트윈 (Simulation & Digital Twin)                             |     3     |  2  |  1  |  6   |
 |                                         ④ 인간-로봇 상호작용 (HRI)                                          |     4     |  2  |  0  |  6   |

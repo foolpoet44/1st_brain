@@ -32,7 +32,7 @@ status: Active
 ### ~~2026-04-14 — [태그: memories/migrated]~~
 
 - **분배 완료**:
-  - `projects/ex-intellig[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]ce/[[README.md|README]].md`
+  - `projects/ex-intelligence/README.md`
   - `projects/pulse-check/README.md`
   - `projects/ai--솔로프레너/README.md`
   - `projects/escon/README.md`
@@ -41,7 +41,7 @@ status: Active
   - `concepts/data-sensing.md`
   - `concepts/weak-signal-theory.md`
   - `concepts/ax-internalization.md`
-- **내용 요약**: 17년차 HR 전문가의 AX 전략, EX Intelligence 아키텍처, 24/7 코드 팩토리 인프라 등 레거시 memories.[[Understand-Anything/understand-anything-plugin/skills/understand/languages/json.md|json]] 전체 이식 완료.
+- **내용 요약**: 17년차 HR 전문가의 AX 전략, EX Intelligence 아키텍처, 24/7 코드 팩토리 인프라 등 레거시 memories.json 전체 이식 완료.
 
 ---
 

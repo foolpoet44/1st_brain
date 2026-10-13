@@ -41,7 +41,7 @@ AX 기반 Pulse Check 전환 시 기대 효과
 조직의 상태를 1년에 단 1회 ‘사진 한 장’으로만 본다
 계절·프로젝트 사이클·리더 교체 등 변동 요인이 반영되지 않는다.
 몰입 지수가 연중 어느 시점에 무너졌는지 추적 불가.
-② Tr[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]d 추적 → 동적 조직 이해
+② Trend 추적 → 동적 조직 이해
 Engagement Index의 월별 궤적으로 변화 원인 추론 가능.
 HR 개입 효과를 데이터로 입증·피드백하는 선순환 구조.
 
@@ -147,7 +147,7 @@ Self-Determination Theory
 
 역할 외 자발적 행동 증가.
 동료(OCBI) 및 조직(OCBO) 지향.
-Vi[[Understand-Anything/understand-anything-plugin/skills/understand/languages/go.md|go]]r
+Vigor
 Dedication
 Absorption
 
@@ -471,7 +471,7 @@ DB화
 Risk 분석에 따른 행동 방침 제안
 Analysis · Modeling
 강점 · 기회 도출
-Storage · St[[Understand-Anything/understand-anything-plugin/skills/understand/locales/ru.md|ru]]cturing · Metadata
+Storage · Structuring · Metadata
 Pulse Data Capture
 
 → 리더의 행동 가이드 및 리더십 개선 000

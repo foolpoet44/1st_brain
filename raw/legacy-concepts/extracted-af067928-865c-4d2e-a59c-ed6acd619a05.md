@@ -15,7 +15,7 @@ interface CompanyOKR {
   keyResults: ["AI 활용도 20% 증가"]
 }
 
-// 당신이 구현하는 Implem[[Understand-Anything/understand-anything-plugin/skills/understand/locales/en.md|en]]tation
+// 당신이 구현하는 Implementation
 class DepartmentOKR implements CompanyOKR {
   objective: "AX 내재화를 통한 생산성 향상"
   keyResults: [
@@ -26,7 +26,7 @@ class DepartmentOKR implements CompanyOKR {
 }
 ```
 
-### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/python.md|python]])
+### Extracted Code (python)
 
 ```python
 # OKR 데이터 모델 (Notion Database)
@@ -86,7 +86,7 @@ interface ProgressUpdate {
 }
 ```
 
-### Extracted Code ([[Understand-Anything/understand-anything-plugin/skills/understand/languages/markdown.md|markdown]])
+### Extracted Code (markdown)
 
 ```markdown
 Properties:

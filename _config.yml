@@ -28,6 +28,8 @@ exclude:
   - sy/
   - raw/
   - inbox/
+  # 개인 영역 (취향 묶음 등) — 절대 발행하지 않음. gen_knowledge_index.py 의 NOPUBLISH_DIRS 와 짝
+  - personal/
   # 코드 · 앱 (지식 문서 아님)
   - Toss/
   - ragapp/

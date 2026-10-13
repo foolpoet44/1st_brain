@@ -7,7 +7,7 @@ tags: [auto_generated, zavis_brain, continuous_sync]
 status: Active
 ---
 
-<!-- [[open-design/plugins/_official/examples/simple-deck/references/layouts.md|layouts]] number: 1 -->
+<!-- Slide number: 1 -->
 
 ![](그림6.jpg)
 

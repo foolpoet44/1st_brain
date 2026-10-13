@@ -4,6 +4,29 @@ type: Note
 
 status: Active
 
+## LINT-LOG: 2026-10-13 — 인식 상태 기준선 (1단계 도입)
+
+> `.claude/rules/epistemic-status.md` 도입 시점의 기준선. 앞으로 LINT 는 이 표와 비교해 보고한다.
+
+| 항목 | 도입 전 | 시범 적용 후 |
+| :-- | --: | --: |
+| wiki 문서 (`_index.md` 제외) | 122 | 122 |
+| Compiled Truth 구조 보유 | 36 | 36 |
+| 인식 상태 표시 보유 | 0 | 2 (`vibe-coding`, `knowledge-capitalization`) |
+| `generated` 기록 보유 | 0 | 2 |
+| 표시율 (표시 보유 / Compiled Truth 보유) | 0% | 5.6% |
+
+- 소급 일괄 표시는 하지 않는다. 새로 만들거나 Compiled Truth 를 고치는 문서부터 늘어난다.
+- 시범 2 편에서 나온 사실: `knowledge-capitalization` 의 정의·원칙은 이관 문서라 작성 주체가 [unknown]이고, Timeline 이 언급한 `scripts/brain_build.py` 는 저장소와 이력 어디에도 없다.
+
+### 별건 발견 — 링크 부스팅 손상 (수정 보류, CSP 확인 필요)
+
+- 2026-07-27 Hermes Agent 의 `chore: bulk update - Type assignment, link boosting` 커밋(`82164c3`) 계열이 단어 일부를 위키링크로 치환했다. 예: `Compiled Truth` → `Compiled T[[Understand-Anything/…|ru]]th`, `Table of Contents` → `Cont[[…]]ts`.
+- 영향: `[[Understand-Anything/understand-anything-plu` 문자열 보유 파일이 저장소 전체 약 430 개, 그중 `wiki/` 25 편, `projects/` 44, `outputs/` 55, `raw/` 241, `templates/` 3.
+- 조치: 이번에는 `templates/wiki-note.md` 만 복구했다(같은 커밋에서 새 필드를 넣느라 직접 다시 썼다). 나머지는 손상 이전 판본과 대조해 자동 복원할 수 있지만 범위가 커서 별도 작업으로 제안한다.
+
+---
+
 ## LINT-LOG: 2026-06-27 (wiki-scoped)
 
 > 대시보드 고아 탐지가 레포 전체를 스캔해 루트 스크래치 파일(`2605.md`, `KNOWLEDGE_PULSE.md` 등)을 오탐하던 문제를 발견. `wiki/`만 정밀 스캔하니 실제 구조적 부채가 드러남.
@@ -109,3 +132,16 @@ status: Active
 - 조치:
   - 변경 가시성 로그와 weekly/dashboard는 정상 작동 확인
   - 고립 문서와 `dev/` 폴더는 별도 정리 대상으로 보류
+
+---
+
+## LINT-LOG: 2026-10-13 — 링크 부스팅 손상 일괄 복원
+
+> 2026-07-27 Hermes Agent 의 링크 부스터(`fecec41`·`82164c3`·`7a51a3e`·`694e697`)가 본문 문자열을 무관한 파일 링크로 바꾼 손상을 CSP 결정으로 일괄 복원했다.
+
+- **손상의 모양.** 단어 일부를 링크로 치환(`Compiled Truth` → `Compiled T[[…ru.md|ru]]th`, `www.notion.so` → `www.[[wiki/tools/notion.md|notion]].so`)했다. 대소문자도 바꿨다(`Claude` → `[[CLAUDE.md|CLAUDE]]`, `skill_manage` → `SKILL_manage`). 제목 줄 전체를 자기 링크로 덮기도 했다(`# SOUL.md - The Synaptic Orchestrator…` → `# [[SOUL.md|SOUL]]`). 그래서 링크를 푸는 것만으로는 원문이 돌아오지 않는다.
+- **복원 방법.** 손상 커밋이 바꾼 줄을 직전 판본의 줄과 짝지어 "손상 줄 → 원래 줄" 사전(965 쌍)을 만들었다. 그 뒤 현재 파일에서 손상 줄과 정확히 같은 줄만 되돌렸다(`scripts/restore_link_boost_lines.py`). 이후에 정상적으로 편집되어 사전과 어긋난 줄은 링크만 풀었다(`scripts/restore_link_boost_unwrap.py`). 원본이 없는 파일 몇 개는 사람이 줄 단위로 고쳤다.
+- **결과.** 487 개 파일, 1,089 줄 복원. 손상 커밋 외에는 손대지 않은 파일 442 개는 손상 이전 판본의 줄이 **하나도 빠짐없이** 돌아왔다(검산 442/442). 부스터가 함께 넣은 `type`/`status` 머리말 정보는 정당한 변경이라 유지했다.
+- **의도적으로 남긴 것.** 손상을 *설명하는* 기록(`_ops/bridge-log.md` 675 행, `_ops/change-log.md`, `scripts/fix_wikilinks.py` 주석, 저녁 성찰 인용)은 원문 그대로 두었다. `templates/wiki-note.md` 는 PR #28 에서 새로 쓰므로 제외했다.
+- **원문을 알 수 없어 추정한 곳 (3 곳).** `inbox/notes/2026-07-14.md` 제목은 처음부터 손상된 채 만들어져 "README 생성 SKILL"로, `무제.md` 의 URL 은 `claude.ai` 로, `변재민 등.md` 711 행의 `SKILLii` 는 대소문자를 알 수 없어 그대로 두었다.
+- **덤으로 확인한 것.** 첫 시도의 보조 스크립트가 `git ls-files` 를 그대로 읽어 한글 이름 파일을 전부 건너뛰었다. 10-11 저녁 성찰이 지적한 것과 같은 함정이다. `-z` 옵션으로 고쳤다.
