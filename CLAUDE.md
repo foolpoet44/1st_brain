@@ -250,6 +250,7 @@ Google Drive(내 드라이브)는 원본 창고이고, Vault에는 마크다운 
        gdrive_created, gdrive_modified, imported) → 곧바로 Protocol 1 INGEST
    b) xlsx/pptx 대용량 → 개인정보 없는 시트·장만 발췌 (import_scope 에 명시)
    c) Human Gate: 실명·이메일·평가·명단 등 개인 식별 운영 데이터 → 수입 안 함, gated
+   c') 개인 취향 신호(좋아하는 음악·유머·작품에 대한 반응) → wiki/ 가 아니라 personal/taste/ 또는 inbox/taste/ 캡처 카드로 (비공개, .claude/rules/personal-taste.md)
    d) skip: 바로가기·이미지·zip·동일 제목 중복본(먼저 생긴 것 하나만)
 4. 관찰: modifiedTime >= observe_since 이고 당일 생성이 아닌 파일을 메타데이터로만 훑어
    _ops/gdrive-watch.md 에 그날 섹션(주제 묶음 · 반복 신호 · 중복/게이트 소견 · 내일 볼 것) 추가

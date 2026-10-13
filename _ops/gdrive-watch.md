@@ -18,7 +18,7 @@ status: Active
 | :-- | :-- | :-- |
 | Autonomous Factory — 공정 지식을 검증 가능한 행동으로 전환하는 시스템 | 편입 | [[autonomous-factory]] 신규 + `projects/physical-ai-talent` MERGE |
 | Work_Network_데이터정비_ACT0019_20261012_추론보충.xlsx | 부분 편입 | `00_관리원칙` 시트만 → [[work-network-data-governance]] 신규. 01~08 시트는 실명·이메일 포함 → **gated** |
-| 긱스 〈짝사랑〉 유튜브 질문 (AI 대화) | 편입 | [[vibe-to-prompt-music]] 신규 |
+| 긱스 〈짝사랑〉 유튜브 질문 (AI 대화) | 편입 | `personal/taste/concepts/vibe-to-prompt-music.md` (비공개 — 10-13 공개 위키에서 이전) |
 | "앞단의 시작하는 기타리프가 좋은데…" (AI 대화) | 편입 | 위 문서와 짝으로 병합 |
 | pending_self_2026-1_20261012.xlsx | **gated** | AF 1기 본인평가 미제출 8 명 운영 명단(케이스ID·소속). 지식이 아니라 운영 데이터 + 식별 가능성 → 수입 안 함 |
 | Autonomous_Factory_32명_개인과제…261002 - 복사.xlsx | skip | Drive 바로가기(shortcut). 원본은 10-02 파일 |
