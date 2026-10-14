@@ -1,7 +1,7 @@
 ---
 title: [Signal] 2026-08-10: 자본의 심리학 — 분산의 복귀와 시장 중립의 시대
 created: 2026-08-10
-P26-08-23
+updated: 2026-08-25
 status: growing
 type: signal
 date: 2026-08-10

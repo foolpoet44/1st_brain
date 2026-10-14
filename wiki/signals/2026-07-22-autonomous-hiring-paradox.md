@@ -1,7 +1,7 @@
 ---
 title: [Signal] 2026-07-22: 자율 채용의 역설 - '신뢰의 위임'과 '인간성의 상실' 사이
 created: 2026-07-22
-P26-08-23
+updated: 2026-08-25
 status: growing
 type: signal
 date: 2026-07-22
