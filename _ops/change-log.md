@@ -26,6 +26,7 @@
 
 - 다음 확인:
   1. `deploy-visual.yml` 에 `fetch-depth: 0` 승인 — **CSP 확인 필요.** 효과 설명 자료를 새로 만들 필요가 없다(10-16 11:10 KST 실측). 7일째 미승인이면 네 칸이 하루 더 거짓을 적는다.
+     **사전 등록 1번은 당일 채점됐다** — 성찰 커밋 `c08de8b` push 가 펄스 `49ca6a9`(19:20 KST)을 깨웠고, `events` 40건 서명이 이 성찰 커밋으로 교체되며 `action` 전건 `A`, `inbox_oldest_days` **0**, `recent_activity` 124, `health` 65, `median_age_days` 151 로 전건 적중했다. 서명 회전 기전이 이틀 연속 재현됐다. 실측 전문은 성찰 부록 「사후 실측」 절.
   2. 승인 후 2차 시험: `recent_activity` 가 124 아래 두 자릿수로 내려가고 `events` 고유 서명 2 이상·`action` 에 `M` 혼재, 반면 `health`·`orphans`·`stale`·`frontmatter_ok` 는 불변 — 오염 경계선 검증.
   3. 머리말 필수필드 결측 29편 중 4편 이상 보수 시 `frontmatter_ok` 99+ · `health` 66 — 5일째 미시험이 되는지.
   4. 드라이브 수집(공백 엿새)을 자동 실행으로 올릴지, 넉 주째 복습 1순위 `agentic-recruitment-proxy`(173일)를 고칠지 보관으로 내릴지 — 둘 다 **CSP 확인 필요.**
