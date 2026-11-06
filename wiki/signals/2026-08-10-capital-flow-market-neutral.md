@@ -90,9 +90,9 @@ source: HFR, AlternativeSoft, BOK, Fed FOMC
 
 ## 4. CSP-Brain 연계 (Synthesize)
 
-### 4.1. [[Economic Freedom]] 의 재해석: '자본의 자유'에서 '생존의 자유'로
+### 4.1. [[economic-freedom|Economic Freedom]] 의 재해석: '자본의 자유'에서 '생존의 자유'로
 
-기존 [[Economic Freedom]] 개념은 "자본이 자유롭게 이동할 수 있는 권리"를 강조했다. 그러나 2026 년의 신호는 이를 넘어선다. **진정한 경제적 자유는 "모든 시장 조건에서 생존할 수 있는 자유"**다.
+기존 [[economic-freedom|Economic Freedom]] 개념은 "자본이 자유롭게 이동할 수 있는 권리"를 강조했다. 그러나 2026 년의 신호는 이를 넘어선다. **진정한 경제적 자유는 "모든 시장 조건에서 생존할 수 있는 자유"**다.
 
 - **자본의 자유 (과거)**: 규제 없는 이동, 방향성 베팅.
 - **생존의 자유 (현재)**: 시장 중립, 분산 투자, 리스크 패리티.

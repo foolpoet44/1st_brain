@@ -8,7 +8,7 @@ date: 2026-05-21
 tags: [context-engineering, knowledge-management, llm, pkm, corpus]
 related_to:
   [
-    "[[csp-brain]]",
+    "[[csp-brain-system|csp-brain]]",
     "[[7-layer-architecture]]",
     "[[MASTER_PLAN_2026-05-21_Hermes_CSP_Integration]]",
   ]

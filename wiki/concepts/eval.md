@@ -4,7 +4,7 @@ created: 2026-06-27
 updated: 2026-06-27
 type: concept
 status: growing
-related_to: "[[csp-brain]]"
+related_to: "[[csp-brain-system|csp-brain]]"
 tags: [ai-eval, ax, internal-ip, quality-assurance]
 ---
 
@@ -38,4 +38,4 @@ tags: [ai-eval, ax, internal-ip, quality-assurance]
 
 ---
 
-**관련 문서**: [[csp-brain]], [[8-cluster-model]], [[knowledge-metabolism]]
+**관련 문서**: [[csp-brain-system|csp-brain]], [[8-cluster-model]], [[knowledge-metabolism]]

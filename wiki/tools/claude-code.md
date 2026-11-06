@@ -25,7 +25,7 @@ Anthropic 의 Claude 모델과 연동된 CLI 기반 코딩 에이전트.
 
 - csp-brain Vault 의 지식 운영 에이전트
 - INGEST, LINT, DIGEST, BRIDGE 프로토콜 실행
-- [[Vibe Coding]] 의 주요 도구
+- [[vibe-coding|Vibe Coding]] 의 주요 도구
 
 ---
 

@@ -96,7 +96,7 @@ Untitled
   - **23%** → Quant Multi-Strat (양적 다중 전략)
   - **단일 방향성 전략 (Directional) 은 Top 5 중 1 개만 진입** (Equity Sector Long/Short, 24%)
 - **핵심 통찰**: **"자본은 더 이상 '상승장'을 예측하지 않는다. 모든 시장에서 생존하는 '베타 제거'를 선택한다."**
-- **Vault 연결**: [[Economic Freedom]], [[bp-signal-intelligence]]
+- **Vault 연결**: [[economic-freedom|Economic Freedom]], [[bp-signal-intelligence]]
 
 ### 신호 2: "풍요 속의 가뭄" — 원/달...
 

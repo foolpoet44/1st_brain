@@ -73,7 +73,7 @@ processed_note: MERGE — wiki/signals/ 에 편입 완료
 
 ## 3. 지식 체계와의 연결 (Vault Integration)
 
-### [[Economic Freedom]] 아키텍처 확장
+### [[economic-freedom|Economic Freedom]] 아키텍처 확장
 
 오늘의 4 신호는 **자본시장의 Trust Ladder 3 단계**를 체현합니다:
 

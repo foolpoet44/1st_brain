@@ -108,5 +108,5 @@ decision_fatigue_mitigation:
 ---
 
 **시냅스 파일 경로:** `wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.md`  
-**연결된 노드:** [[agentic-recruitment-proxy]], [[fde-talent-model]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]], [[hr-tech-briefing-2026-07-29]]  
+**연결된 노드:** [[agentic-recruitment-proxy]], [[fde-talent-model]], [[bp-signal-intelligence]], [[hr-conceptual-atoms]], [[HR_TECH_BRIEFING_2026-07-29|hr-tech-briefing-2026-07-29]]  
 **대시보드:** http://localhost:8080
