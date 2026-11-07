@@ -28,7 +28,7 @@ aliases: []
 - obsidian-git — Git 자동화
 - QuickAdd — 빠른 캡처
 
-[[Notion]] 과의 이중 뇌 모델에서 **작업뇌** 역할.
+[[notion|Notion]] 과의 이중 뇌 모델에서 **작업뇌** 역할.
 
 ---
 
