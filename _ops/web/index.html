@@ -465,7 +465,16 @@
           ` · 7일 내 갱신 ${mb.updated_7d ?? 0}건 · 중위 문서나이 ${mb.median_age_days ?? 0}일` +
           (arch
             ? ` · <span class="text-purple-400">아카이브 대기 ${arch}건</span>`
-            : "");
+            : "") +
+          // 저녁 성찰 결근 칸(2026-11-15 신설): 글을 쓴 날과 아무도 쓰지 않은 날을 구별한다.
+          // health 산식에는 들어가지 않는다 — 산식 반영은 CSP 판단 대기.
+          (() => {
+            const rf = mb.reflect;
+            if (!rf) return "";
+            return rf.yesterday_ok
+              ? `<br/><span class="text-gray-400">저녁 기록</span>: 어제(${rf.yesterday}) <span class="text-emerald-400">있음</span> · 연속 ${rf.streak_days}일 · 누적 ${rf.total}일`
+              : `<br/><span class="text-gray-400">저녁 기록</span>: 어제(${rf.yesterday}) <span class="text-red-400 font-bold">없음 ⚠</span> · 마지막 ${rf.last_date ?? "-"} (${rf.gap_days ?? "-"}일 전) · 누적 ${rf.total}일`;
+          })();
       }
 
       // Action Queue: 관측 → 일감. Issue 프리필 링크가 루프를 닫는 '운동신경'이다.

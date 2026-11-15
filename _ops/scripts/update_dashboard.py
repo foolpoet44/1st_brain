@@ -243,6 +243,48 @@ class WikiAnalyzer:
         }
 
 
+
+def reflect_presence(today=None):
+    """
+    저녁 성찰(outputs/daily-reflect/REFLECT_YYYY-MM-DD.md)의 '어제 기록 유무'를 잰다.
+
+    왜 세는가: 2026-11-13 에 15일 연속 이어진 저녁 기록이 끊겼는데도 계기판 점수는
+    전날과 같았다. 글을 쓴 날과 아무도 쓰지 않은 날이 지표에서 구별되지 않았다.
+    결근을 세는 칸이 없으면 결근은 사건이 아니라 침묵이 된다. 그래서 칸을 만든다.
+
+    주의: 이 값은 health 산식에 들어가지 않는다(산식 반영은 CSP 판단 대기).
+    """
+    d = ROOT / "outputs/daily-reflect"
+    dates = sorted(
+        m.group(1)
+        for f in d.glob("REFLECT_*.md")
+        # 접미사(_EVENING, _SUMMARY, _hermes 등)가 붙은 과거 9편도 같은 날짜로 센다.
+        # 엄격한 이름만 세면 그 9일은 '기록 없음'으로 오판된다.
+        for m in [re.match(r"REFLECT_(\d{4}-\d{2}-\d{2})(?:_.+)?\.md$", f.name)]
+        if m
+    )
+    uniq = sorted(set(dates))   # 같은 날짜의 본편·보충편을 한 날로 센다
+    today = today or datetime.now().strftime("%Y-%m-%d")
+    yesterday = (datetime.strptime(today, "%Y-%m-%d") - timedelta(days=1)).strftime("%Y-%m-%d")
+    last = uniq[-1] if uniq else None
+    # 마지막 기록부터 거꾸로 이어지는 연속 일수
+    streak = 0
+    if uniq:
+        have = set(uniq)
+        cur = datetime.strptime(last, "%Y-%m-%d")
+        while cur.strftime("%Y-%m-%d") in have:
+            streak += 1
+            cur -= timedelta(days=1)
+    return {
+        "yesterday": yesterday,
+        "yesterday_ok": yesterday in set(uniq),
+        "last_date": last,
+        "gap_days": days_since(last) if last else None,
+        "streak_days": streak,
+        "total": len(uniq),
+    }
+
+
 def count_md(path):
     try:
         return len([f for f in os.listdir(path) if f.endswith(".md") and f != "_index.md"])
@@ -472,6 +514,8 @@ def build():
         "inbox_oldest_days": max(inbox_ages) if inbox_ages else 0,
         "median_age_days": ages[len(ages) // 2] if ages else 0,
         "updated_7d": activity_7d,
+        # 저녁 성찰 결근 칸(2026-11-15 신설). health 산식에는 넣지 않는다.
+        "reflect": reflect_presence(),
     }
 
     # 그래프(위키 한정)
