@@ -474,6 +474,19 @@
             return rf.yesterday_ok
               ? `<br/><span class="text-gray-400">저녁 기록</span>: 어제(${rf.yesterday}) <span class="text-emerald-400">있음</span> · 연속 ${rf.streak_days}일 · 누적 ${rf.total}일`
               : `<br/><span class="text-gray-400">저녁 기록</span>: 어제(${rf.yesterday}) <span class="text-red-400 font-bold">없음 ⚠</span> · 마지막 ${rf.last_date ?? "-"} (${rf.gap_days ?? "-"}일 전) · 누적 ${rf.total}일`;
+          })() +
+          // 입구 수집 정지 칸(2026-11-17 신설): 수집이 멈춘 날도 적체는 0 으로 보인다.
+          // 멈춘 일수와 '관찰 전용 보류' 편수를 따로 적는다. health 산식에는 들어가지 않는다.
+          (() => {
+            const ik = mb.intake;
+            if (!ik || !ik.last_run) return "";
+            const stale = (ik.gap_days ?? 0) >= 2;
+            const hold = ik.observed_only
+              ? ` · <span class="text-yellow-500">관찰 전용 보류 ${ik.observed_only}편</span>`
+              : "";
+            return stale
+              ? `<br/><span class="text-gray-400">입구 수집</span>: 마지막 ${ik.last_run} <span class="text-red-400 font-bold">(${ik.gap_days}일째 정지 ⚠)</span>${hold}`
+              : `<br/><span class="text-gray-400">입구 수집</span>: 마지막 ${ik.last_run} <span class="text-emerald-400">(${ik.gap_days}일 전)</span>${hold}`;
           })();
       }
 

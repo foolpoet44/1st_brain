@@ -285,6 +285,46 @@ def reflect_presence(today=None):
     }
 
 
+def intake_presence(today=None):
+    """
+    입구(드라이브 일일 수집)가 언제 마지막으로 돌았는지, 그리고 '관찰 전용 보류'가
+    몇 편인지 잰다.
+
+    왜 세는가: 2026-11-17 측정에서 Protocol 1-b(드라이브 일일 수집)는 2026-10-12 에
+    한 번 돌고 36일간 재가동되지 않았는데, 같은 날 계기판의 입구 지표는 '적체 0'을
+    보고했다. 0 의 근거는 inbox 전편에 처리 완료 표시가 붙어 있다는 사실이고,
+    그중 2편의 표시 쪽지에는 '편입 보류(관찰 전용)'가 적혀 있다. 표시를 세는 지표는
+    표시의 뜻을 읽지 않는다. 수집이 멈춘 일수와 보류 편수를 따로 센다.
+
+    주의: 이 값은 health 산식에 들어가지 않는다(산식 반영은 CSP 판단 대기).
+    """
+    state, last_day = ROOT / "_ops/gdrive-state.json", None
+    try:
+        last_day = json.loads(state.read_text(encoding="utf-8")).get("last_day")
+    except Exception:
+        last_day = None
+    observed = []
+    inbox = ROOT / "inbox"
+    if inbox.exists():
+        for f in inbox.rglob("*.md"):
+            try:
+                head = f.read_text(encoding="utf-8", errors="ignore")[:800]
+            except OSError:
+                continue
+            if "ingest_disposition: observed" in head:
+                observed.append(str(f.relative_to(ROOT)))
+    gap = days_since(last_day) if last_day else None
+    if today and last_day:  # 과거 재현 검증용 경로
+        gap = (datetime.strptime(today, "%Y-%m-%d")
+               - datetime.strptime(last_day, "%Y-%m-%d")).days
+    return {
+        "last_run": last_day,
+        "gap_days": gap,
+        "observed_only": len(observed),
+        "observed_files": observed,
+    }
+
+
 def count_md(path):
     try:
         return len([f for f in os.listdir(path) if f.endswith(".md") and f != "_index.md"])
@@ -516,6 +556,8 @@ def build():
         "updated_7d": activity_7d,
         # 저녁 성찰 결근 칸(2026-11-15 신설). health 산식에는 넣지 않는다.
         "reflect": reflect_presence(),
+        # 입구 수집 정지 칸(2026-11-17 신설). 같은 이유로 health 산식에는 넣지 않는다.
+        "intake": {k: v for k, v in intake_presence().items() if k != "observed_files"},
     }
 
     # 그래프(위키 한정)
