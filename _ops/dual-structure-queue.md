@@ -1,12 +1,12 @@
 ---
 title: 이중구조 결손 명단 — 요약·기록 둘 다 없는 위키 문서
 created: 2026-11-16
-updated: 2026-11-18
+updated: 2026-11-19
 type: ops
 status: Active
 generated:
   by: ai-assisted-ingest
-  at: 2026-11-18
+  at: 2026-11-19
 evidence: confirmed
 ---
 
@@ -22,7 +22,8 @@ evidence: confirmed
 | :-- | :-- | :-- | --: |
 | 2026-11-16 | `wiki/concepts/knowledge-graph-as-map.md` | 점수 B 1위(자기 인용·목차 제외) | 57 → 56 |
 | 2026-11-17 | `wiki/concepts/execution-surface.md` | 점수 B 2위 | 56 → 55 |
-| 2026-11-18 | `wiki/concepts/skillopt.md` | **점수 D 1위**(집행분까지 제외) | 55 → **54** |
+| 2026-11-18 | `wiki/concepts/skillopt.md` | **점수 D 1위**(집행분까지 제외) | 55 → 54 |
+| 2026-11-19 | `wiki/concepts/agent-friendly-redesign.md` | 점수 D 1위 (816) — **저장된 도구 `_ops/scripts/ledger.py` 로 산출** | 54 → **53** |
 
 ## 순위 기준 — 왜 세 갈래로 가르는가
 
@@ -48,75 +49,78 @@ evidence: confirmed
 | 그 밖 | 6 | 2% |
 | **합계** | **290** | 100% |
 
-## 명단 (점수 D 내림차순, 2026-11-18 기계 재산출)
+## 명단 (점수 D 내림차순, 2026-11-19 `_ops/scripts/ledger.py` 산출)
 
-| # | 문서 | 마지막 갱신 | 미갱신일 | 원문 본문 | 머리말 | 집행분 | 목차 | 자기 인용 | 점수 D | 점수 B |
-| --: | :-- | :-- | --: | --: | --: | --: | --: | --: | --: | --: |
-| 1 | `wiki/concepts/agent-friendly-redesign.md` | 2026-04-29 | 203 | 1 | 2 | 0 | 1 | 0 | 812 | 812 |
-| 2 | `wiki/concepts/maximal-knowledge-exactness.md` | 2026-04-29 | 203 | 1 | 1 | 2 | 0 | 3 | 609 | 1015 |
-| 3 | `wiki/concepts/token-maxing.md` | 2026-04-29 | 203 | 1 | 1 | 0 | 0 | 0 | 609 | 609 |
-| 4 | `wiki/concepts/codegraph-efficiency.md` | 2026-04-29 | 203 | 1 | 0 | 1 | 0 | 2 | 406 | 609 |
-| 5 | `wiki/concepts/8-cluster-model.md` | 2026-04-29 | 203 | 1 | 0 | 0 | 1 | 1 | 406 | 406 |
-| 6 | `wiki/concepts/digital-unconscious.md` | 2026-04-29 | 203 | 1 | 0 | 0 | 1 | 1 | 406 | 406 |
-| 7 | `wiki/concepts/memo-architecture.md` | 2026-04-29 | 203 | 0 | 1 | 0 | 1 | 0 | 406 | 406 |
-| 8 | `wiki/frameworks/weak-signal-ansoff.md` | 2026-04-29 | 203 | 0 | 1 | 0 | 1 | 4 | 406 | 406 |
-| 9 | `wiki/concepts/eval.md` | 2026-06-27 | 144 | 1 | 0 | 1 | 1 | 4 | 288 | 432 |
-| 10 | `wiki/concepts/ai-evaluation-system.md` | 2026-06-27 | 144 | 1 | 0 | 0 | 1 | 2 | 288 | 288 |
-| 11 | `wiki/concepts/constructed-fit.md` | 2026-04-29 | 203 | 0 | 0 | 2 | 1 | 0 | 203 | 609 |
-| 12 | `wiki/concepts/durable-execution.md` | 2026-04-29 | 203 | 0 | 0 | 2 | 1 | 38 | 203 | 609 |
-| 13 | `wiki/protocols/validation-protocol.md` | 2026-04-29 | 203 | 0 | 0 | 2 | 1 | 0 | 203 | 609 |
-| 14 | `wiki/concepts/contextual-ingestion.md` | 2026-04-29 | 203 | 0 | 0 | 1 | 1 | 6 | 203 | 406 |
-| 15 | `wiki/concepts/gemini-spark.md` | 2026-04-29 | 203 | 0 | 0 | 1 | 1 | 0 | 203 | 406 |
-| 16 | `wiki/concepts/meta-harnessing.md` | 2026-04-29 | 203 | 0 | 0 | 1 | 1 | 2 | 203 | 406 |
-| 17 | `wiki/signals/talent-market-disruption.md` | 2026-04-29 | 203 | 0 | 0 | 1 | 1 | 1 | 203 | 406 |
-| 18 | `wiki/concepts/antigravity-2-0.md` | 2026-04-29 | 203 | 0 | 0 | 0 | 1 | 0 | 203 | 203 |
-| 19 | `wiki/concepts/automated-ontology-generation.md` | 2026-04-29 | 203 | 0 | 0 | 0 | 1 | 1 | 203 | 203 |
-| 20 | `wiki/concepts/competency-question.md` | 2026-04-29 | 203 | 0 | 0 | 0 | 1 | 1 | 203 | 203 |
-| 21 | `wiki/concepts/failed-pattern-trading.md` | 2026-04-29 | 203 | 0 | 0 | 0 | 1 | 0 | 203 | 203 |
-| 22 | `wiki/concepts/hermes-pi-philosophy.md` | 2026-04-29 | 203 | 0 | 0 | 0 | 1 | 29 | 203 | 203 |
-| 23 | `wiki/concepts/knowledge-synthesis-steps.md` | 2026-04-29 | 203 | 0 | 0 | 0 | 1 | 0 | 203 | 203 |
-| 24 | `wiki/concepts/linkedin-agent-automation-20260525.md` | 2026-04-29 | 203 | 0 | 0 | 0 | 1 | 0 | 203 | 203 |
-| 25 | `wiki/signals/transportation-ai-pivot.md` | 2026-04-29 | 203 | 0 | 0 | 0 | 1 | 0 | 203 | 203 |
-| 26 | `wiki/signals/2026-05-20-google-io-sign-of-agentic-shift.md` | 2026-05-20 | 182 | 0 | 0 | 0 | 1 | 1 | 182 | 182 |
-| 27 | `wiki/concepts/context-corpus.md` | 2026-05-21 | 181 | 0 | 0 | 0 | 1 | 1 | 181 | 181 |
-| 28 | `wiki/signals/2026-05-30-claude-opus-4-8-detailed-harnessing.md` | 2026-05-30 | 172 | 0 | 0 | 0 | 1 | 2 | 172 | 172 |
-| 29 | `wiki/signals/2026-05-30-claude-opus-4-8-launch-and-prompting-shift.md` | 2026-05-30 | 172 | 0 | 0 | 0 | 1 | 2 | 172 | 172 |
-| 30 | `wiki/signals/2026-05-30-hs-top-failure-long-strategy.md` | 2026-05-30 | 172 | 0 | 0 | 0 | 1 | 2 | 172 | 172 |
-| 31 | `wiki/signals/2026-05-30-josh-kim-ai-native-company-record.md` | 2026-05-30 | 172 | 0 | 0 | 0 | 1 | 2 | 172 | 172 |
-| 32 | `wiki/signals/2026-05-30-obelisk-sqlite-durable-execution.md` | 2026-05-30 | 172 | 0 | 0 | 0 | 1 | 1 | 172 | 172 |
-| 33 | `wiki/signals/2026-05-30-automated-task-packaging.md` | 2026-05-31 | 171 | 0 | 0 | 1 | 1 | 2 | 171 | 342 |
-| 34 | `wiki/concepts/gbrain-personal-ai-os.md` | 2026-05-31 | 171 | 0 | 0 | 0 | 1 | 0 | 171 | 171 |
-| 35 | `wiki/signals/2026-05-30-db-schema-knowledge-automation.md` | 2026-05-31 | 171 | 0 | 0 | 0 | 1 | 2 | 171 | 171 |
-| 36 | `wiki/signals/2026-05-30-dynamic-workflow-harness.md` | 2026-05-31 | 171 | 0 | 0 | 0 | 1 | 2 | 171 | 171 |
-| 37 | `wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.md` | 2026-06-03 | 168 | 0 | 0 | 0 | 1 | 1 | 168 | 168 |
-| 38 | `wiki/signals/2026-06-13-agentic-ta-mainstream-shift.md` | 2026-06-13 | 158 | 0 | 0 | 0 | 1 | 2 | 158 | 158 |
-| 39 | `wiki/signals/2026-06-13-hermes-agent-infrastructure-shift.md` | 2026-06-13 | 158 | 0 | 0 | 0 | 1 | 1 | 158 | 158 |
-| 40 | `wiki/signals/2026-06-15-agentic-ta-reset.md` | 2026-06-15 | 156 | 0 | 0 | 0 | 1 | 1 | 156 | 156 |
-| 41 | `wiki/signals/2026-06-22-agentic-orchestration-shift.md` | 2026-06-22 | 149 | 0 | 0 | 0 | 1 | 1 | 149 | 149 |
-| 42 | `wiki/signals/2026-06-25-hr-performance-architect-pivot.md` | 2026-06-25 | 146 | 0 | 0 | 0 | 1 | 1 | 146 | 146 |
-| 43 | `wiki/signals/2026-06-27-autonomous-talent-agency-shift.md` | 2026-06-27 | 144 | 0 | 0 | 1 | 1 | 2 | 144 | 288 |
-| 44 | `wiki/concepts/graph-rag.md` | 2026-07-02 | 139 | 0 | 0 | 2 | 1 | 1 | 139 | 417 |
-| 45 | `wiki/signals/2026-07-06-dawn-of-hr-superagents.md` | 2026-07-06 | 135 | 0 | 0 | 0 | 0 | 2 | 135 | 135 |
-| 46 | `wiki/briefings/HR_TECH_PSYCH_2026-07-31.md` | —(날짜 칸 없음) | — | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| 47 | `wiki/concepts/agentic-roi.md` | —(날짜 칸 없음) | — | 1 | 0 | 1 | 0 | 73 | 0 | 0 |
-| 48 | `wiki/concepts/aihr-design-framework-tom-sdm.md` | —(날짜 칸 없음) | — | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| 49 | `wiki/people/duckjung-kim.md` | —(날짜 칸 없음) | — | 0 | 2 | 0 | 0 | 1 | 0 | 0 |
-| 50 | `wiki/signals/2026-07-11-deepwiki-post.md` | —(날짜 칸 없음) | — | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| 51 | `wiki/signals/hr-tech/2026-07-30-agentic-adoption.md` | —(날짜 칸 없음) | — | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| 52 | `wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.md` | —(날짜 칸 없음) | — | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| 53 | `wiki/synapses/IO_PSYCHOLOGY_SYNAPSE_2026-07-30.md` | —(날짜 칸 없음) | — | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 54 | `wiki/tools/deepwiki.md` | —(날짜 칸 없음) | — | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
+> **2026-11-19 부터 이 표는 손이 아니라 저장된 도구가 만든다.** `python3 _ops/scripts/ledger.py --date YYYY-MM-DD`
+> 모집단·인용을 세는 자리·검색어가 전부 그 파일 안에 주석과 함께 있다. 정의를 바꾸려면 파일을 고치고, 고친 사실을 그날 성찰에 적는다.
 
-## 판독 (2026-11-18)
+| # | 문서 | 마지막 갱신 | 미갱신일 | 본문 | 머리말 | 집행분 | 점수 D | 점수 B |
+| --: | :-- | :-- | --: | --: | --: | --: | --: | --: |
+| 1 | `wiki/concepts/maximal-knowledge-exactness.md` | 2026-04-29 | 204 | 1 | 1 | 2 | 612 | 1020 |
+| 2 | `wiki/concepts/token-maxing.md` | 2026-04-29 | 204 | 1 | 1 | 0 | 612 | 612 |
+| 3 | `wiki/concepts/8-cluster-model.md` | 2026-04-29 | 204 | 1 | 0 | 0 | 408 | 408 |
+| 4 | `wiki/concepts/codegraph-efficiency.md` | 2026-04-29 | 204 | 1 | 0 | 1 | 408 | 612 |
+| 5 | `wiki/concepts/digital-unconscious.md` | 2026-04-29 | 204 | 1 | 0 | 0 | 408 | 408 |
+| 6 | `wiki/concepts/memo-architecture.md` | 2026-04-29 | 204 | 0 | 1 | 0 | 408 | 408 |
+| 7 | `wiki/concepts/ai-evaluation-system.md` | 2026-06-27 | 145 | 1 | 0 | 0 | 290 | 290 |
+| 8 | `wiki/concepts/eval.md` | 2026-06-27 | 145 | 1 | 0 | 1 | 290 | 435 |
+| 9 | `wiki/concepts/antigravity-2-0.md` | 2026-04-29 | 204 | 0 | 0 | 0 | 204 | 204 |
+| 10 | `wiki/concepts/automated-ontology-generation.md` | 2026-04-29 | 204 | 0 | 0 | 0 | 204 | 204 |
+| 11 | `wiki/concepts/competency-question.md` | 2026-04-29 | 204 | 0 | 0 | 0 | 204 | 204 |
+| 12 | `wiki/concepts/constructed-fit.md` | 2026-04-29 | 204 | 0 | 0 | 3 | 204 | 816 |
+| 13 | `wiki/concepts/contextual-ingestion.md` | 2026-04-29 | 204 | 0 | 0 | 1 | 204 | 408 |
+| 14 | `wiki/concepts/durable-execution.md` | 2026-04-29 | 204 | 0 | 0 | 3 | 204 | 816 |
+| 15 | `wiki/concepts/failed-pattern-trading.md` | 2026-04-29 | 204 | 0 | 0 | 0 | 204 | 204 |
+| 16 | `wiki/concepts/gemini-spark.md` | 2026-04-29 | 204 | 0 | 0 | 1 | 204 | 408 |
+| 17 | `wiki/concepts/hermes-pi-philosophy.md` | 2026-04-29 | 204 | 0 | 0 | 0 | 204 | 204 |
+| 18 | `wiki/concepts/knowledge-synthesis-steps.md` | 2026-04-29 | 204 | 0 | 0 | 0 | 204 | 204 |
+| 19 | `wiki/concepts/linkedin-agent-automation-20260525.md` | 2026-04-29 | 204 | 0 | 0 | 1 | 204 | 408 |
+| 20 | `wiki/concepts/meta-harnessing.md` | 2026-04-29 | 204 | 0 | 0 | 1 | 204 | 408 |
+| 21 | `wiki/frameworks/weak-signal-ansoff.md` | 2026-04-29 | 204 | 0 | 0 | 0 | 204 | 204 |
+| 22 | `wiki/protocols/validation-protocol.md` | 2026-04-29 | 204 | 0 | 0 | 4 | 204 | 1020 |
+| 23 | `wiki/signals/talent-market-disruption.md` | 2026-04-29 | 204 | 0 | 0 | 3 | 204 | 816 |
+| 24 | `wiki/signals/transportation-ai-pivot.md` | 2026-04-29 | 204 | 0 | 0 | 0 | 204 | 204 |
+| 25 | `wiki/signals/2026-05-20-google-io-sign-of-agentic-shift.md` | 2026-05-20 | 183 | 0 | 0 | 0 | 183 | 183 |
+| 26 | `wiki/concepts/context-corpus.md` | 2026-05-21 | 182 | 0 | 0 | 0 | 182 | 182 |
+| 27 | `wiki/signals/2026-05-30-claude-opus-4-8-detailed-harnessing.md` | 2026-05-30 | 173 | 0 | 0 | 0 | 173 | 173 |
+| 28 | `wiki/signals/2026-05-30-claude-opus-4-8-launch-and-prompting-shift.md` | 2026-05-30 | 173 | 0 | 0 | 0 | 173 | 173 |
+| 29 | `wiki/signals/2026-05-30-hs-top-failure-long-strategy.md` | 2026-05-30 | 173 | 0 | 0 | 0 | 173 | 173 |
+| 30 | `wiki/signals/2026-05-30-josh-kim-ai-native-company-record.md` | 2026-05-30 | 173 | 0 | 0 | 0 | 173 | 173 |
+| 31 | `wiki/signals/2026-05-30-obelisk-sqlite-durable-execution.md` | 2026-05-30 | 173 | 0 | 0 | 0 | 173 | 173 |
+| 32 | `wiki/concepts/gbrain-personal-ai-os.md` | 2026-05-31 | 172 | 0 | 0 | 0 | 172 | 172 |
+| 33 | `wiki/signals/2026-05-30-automated-task-packaging.md` | 2026-05-31 | 172 | 0 | 0 | 1 | 172 | 344 |
+| 34 | `wiki/signals/2026-05-30-db-schema-knowledge-automation.md` | 2026-05-31 | 172 | 0 | 0 | 0 | 172 | 172 |
+| 35 | `wiki/signals/2026-05-30-dynamic-workflow-harness.md` | 2026-05-31 | 172 | 0 | 0 | 0 | 172 | 172 |
+| 36 | `wiki/signals/2026-06-03-logicrag-lazy-graph-reasoning.md` | 2026-06-03 | 169 | 0 | 0 | 0 | 169 | 169 |
+| 37 | `wiki/signals/2026-06-13-agentic-ta-mainstream-shift.md` | 2026-06-13 | 159 | 0 | 0 | 0 | 159 | 159 |
+| 38 | `wiki/signals/2026-06-13-hermes-agent-infrastructure-shift.md` | 2026-06-13 | 159 | 0 | 0 | 0 | 159 | 159 |
+| 39 | `wiki/signals/2026-06-15-agentic-ta-reset.md` | 2026-06-15 | 157 | 0 | 0 | 0 | 157 | 157 |
+| 40 | `wiki/signals/2026-06-22-agentic-orchestration-shift.md` | 2026-06-22 | 150 | 0 | 0 | 0 | 150 | 150 |
+| 41 | `wiki/signals/2026-06-25-hr-performance-architect-pivot.md` | 2026-06-25 | 147 | 0 | 0 | 0 | 147 | 147 |
+| 42 | `wiki/signals/2026-06-27-autonomous-talent-agency-shift.md` | 2026-06-27 | 145 | 0 | 0 | 2 | 145 | 435 |
+| 43 | `wiki/concepts/graph-rag.md` | 2026-07-02 | 140 | 0 | 0 | 2 | 140 | 420 |
+| 44 | `wiki/signals/2026-07-06-dawn-of-hr-superagents.md` | 2026-07-06 | 136 | 0 | 0 | 0 | 136 | 136 |
+| 45 | `wiki/briefings/HR_TECH_PSYCH_2026-07-31.md` | — | — | 0 | 0 | 0 | 0 | 0 |
+| 46 | `wiki/concepts/agentic-roi.md` | — | — | 1 | 0 | 1 | 0 | 0 |
+| 47 | `wiki/concepts/aihr-design-framework-tom-sdm.md` | — | — | 0 | 0 | 0 | 0 | 0 |
+| 48 | `wiki/people/duckjung-kim.md` | — | — | 0 | 2 | 0 | 0 | 0 |
+| 49 | `wiki/signals/2026-07-11-deepwiki-post.md` | — | — | 0 | 0 | 0 | 0 | 0 |
+| 50 | `wiki/signals/hr-tech/2026-07-30-agentic-adoption.md` | — | — | 0 | 0 | 0 | 0 | 0 |
+| 51 | `wiki/synapse/HR_TECH_PSYCHOLOGY_2026-07-29.md` | — | — | 0 | 0 | 0 | 0 | 0 |
+| 52 | `wiki/synapses/IO_PSYCHOLOGY_SYNAPSE_2026-07-30.md` | — | — | 0 | 0 | 0 | 0 | 0 |
+| 53 | `wiki/tools/deepwiki.md` | — | — | 1 | 0 | 0 | 0 | 0 |
 
-- 전체 **54편**. 지식 영역 인용 37건의 출처는 원문 본문 10 · 머리말 8 · **집행분 19** 다. 즉 **절반이 넘는 인용을 본 성찰이 직접 썼다.** 2026-11-17 성찰은 이 중 1건만 적발했다.
-- 집행분을 걷어 내면 지식 영역 인용이 **0 인 문서가 41편**(전체의 76%)이다. 어제 보고한 31편은 집행분을 인용으로 세고 있었다.
-- 집행분 19건은 14편의 문서에 걸려 있고, 그 출처는 본 성찰이 요약을 신설한 소수의 문서다 — `knowledge-graph-as-map`(5건) · `2026-05-30-harness-is-not-just-a-leash`(4건) · `agentic-engineering`·`agentic-recruitment-proxy`·`rlm-forge`(각 2건) 등.
-- **금일 집행이 다시 엣지를 그렸다.** `skillopt` 의 새 요약이 [[validation-protocol]] 을 인용했고, 그 문서의 집행분은 1 → 2 가 됐다. 점수 D 는 집행분을 세지 않으므로 순위는 움직이지 않았다 — 기준 교체의 효과를 당일에 확인했다.
+합계: 본문 9 · 머리말 5 · 집행분 27 · 지식 인용 0편 42/53
+
+## 판독 (2026-11-19)
+
+- 전체 **53편**. 지식 영역 인용은 원문 본문 9 · 머리말 5 · 집행분 27 이다. 집행분을 걷어 내면 지식 인용이 **0 인 문서가 42편**(전체의 79%)이다.
+- **같은 줄이 세 값으로 산출됐다.** 「머리말 인용」 합계는 2026-11-18 자 표에 8, 금일 범위를 저장소 전체로 잡은 1차 집계에서 10, 위키로 한정한 저장 도구에서 7(집행 전) 이었다. 숫자가 흔들린 것이 아니라 **모집단 정의가 저장되지 않아 매일 다시 만들어졌다.** 2026-11-19 부터 정의는 `ledger.py` 에 고정된다.
+- 금일 집행도 엣지를 그렸다. 새 요약이 결손 문서 3편을 인용해 집행분이 23 → 27 로 늘었다. 점수 D 는 집행분을 세지 않으므로 **순위 변동 0** — 기준 교체의 효과가 이틀째 확인됐다.
 - 날짜 칸(`updated`)이 없어 나이를 셀 수 없는 문서 **9편**은 점수가 0 으로 깔린다(2026-11-11 적발 결함, 미해소).
 
 ## 갱신 규칙
 
-- 집행(요약·기록 신설)이 일어난 날마다 이 명단을 **기계로** 다시 산출한다. 줄어든 편수와 남은 편수를 함께 적는다.
+- 집행(요약·기록 신설)이 일어난 날마다 이 명단을 **저장된 도구(`_ops/scripts/ledger.py`)로** 다시 산출한다. 세션 안에서 즉석으로 만든 집계로 이 표를 갱신하지 않는다. 줄어든 편수와 남은 편수를 함께 적는다.
 - 인용은 **출처 갈래를 함께** 센다. 갈래를 합쳐 하나의 숫자로 보고하지 않는다.
 - 명단에서 문서가 빠지는 경우는 두 가지뿐이다 — ① 이중구조를 갖춤 ② `processed: true` 로 종결 선언. 그 밖의 이유로 사라지면 그것이 사고다.
