@@ -153,11 +153,20 @@ def silence(today):
     # 같은 날짜의 본편·보충편(_EVENING 등 접미사 9편)은 한 편으로 묶는다.
     # 계기판의 reflect_presence() 와 같은 정의를 쓴다. 편수 세는 법이 둘이면
     # '공백 2편'이 서로 다른 날짜 폭을 가리킨다.
+    #
+    # 2026-11-22 수정 — 기준일이 공백 칸을 지배하지 않았다.
+    #   이전 동작: --date 는 '나이' 칸만 바꾸고, '공백'은 디스크의 현재 파일 전부로 셌다.
+    #   그래서 --date 로 과거를 지정해도 산출값은 언제나 '지금'이었고, 과거에 기록된
+    #   '기준일 D 침묵 N 건'은 어떤 인자로도 재현되지 않았다(실측: 2026-11-21 기록값 5건,
+    #   같은 인자 재실행 7건). 기준일 이후 성찰을 모집단에서 제외해 D 시점을 재현한다.
+    #   모집단의 마지막 날짜를 함께 반환해, 라벨이 측정 기간과 어긋나면 드러나게 한다.
     files = sorted(glob.glob(os.path.join(ROOT, REFLECT_GLOB)))
     byday = {}
     for f in files:
         m = re.match(r'REFLECT_(\d{4}-\d{2}-\d{2})(?:_.+)?\.md$', os.path.basename(f))
         if not m:
+            continue
+        if m.group(1) > today.isoformat():   # 기준일 이후는 보지 않는다
             continue
         byday.setdefault(m.group(1), []).append(read(f))
     texts = [(d, '\n'.join(v)) for d, v in sorted(byday.items())]
@@ -179,7 +188,7 @@ def silence(today):
         out.append(dict(n=n, name=name, born=born,
                         age=(today - datetime.date.fromisoformat(born)).days,
                         last=last, gap=gap, silent=gap >= SILENT_THRESHOLD, unmeasured=False))
-    return out, len(texts)
+    return out, len(texts), (texts[-1][0] if texts else '—')
 
 
 def main():
@@ -199,8 +208,8 @@ def main():
     tot = {k: sum(r[k] for r in rows) for k in ('body', 'fmlink', 'execd')}
     zero = sum(1 for r in rows if r['body'] + r['fmlink'] == 0)
     print(f"\n합계: 본문 {tot['body']} · 머리말 {tot['fmlink']} · 집행분 {tot['execd']} · 지식 인용 0편 {zero}/{len(rows)}")
-    items, nref = silence(today)
-    print(f'\n# 침묵 — 성찰 {nref}편 기준 (기준일 {today})\n')
+    items, nref, lastday = silence(today)
+    print(f'\n# 침묵 — 성찰 {nref}편 기준 (기준일 {today} · 모집단 마지막 날짜 {lastday})\n')
     print('| # | 항목 | 최초 진단 | 나이 | 최종 언급 | 공백 |')
     print('| --: | :-- | :-- | --: | :-- | --: |')
     for it in items:
